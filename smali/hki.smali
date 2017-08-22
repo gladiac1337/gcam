@@ -199,6 +199,8 @@
 
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
+    const-string v1, "Pixel XL2"
+
     invoke-direct {p0, v0, v1}, Lhki;->a(ILjava/lang/Object;)V
 
     iget-object v0, p0, Lhki;->a:Lhjw;

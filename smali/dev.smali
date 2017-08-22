@@ -798,7 +798,7 @@
 
     move-result v0
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     if-eqz v0, :cond_c
 
@@ -856,6 +856,8 @@
     invoke-virtual {v0}, Lcom/google/android/apps/camera/util/ApiHelper;->isNexus6()Z
 
     move-result v0
+
+    const/4 v0, 0x0
 
     if-eqz v0, :cond_e
 
@@ -1078,6 +1080,8 @@
     invoke-virtual {v0}, Lcom/google/android/apps/camera/util/ApiHelper;->isNexus6P()Z
 
     move-result v0
+
+    const/4 v0, 0x1
 
     if-eqz v0, :cond_13
 

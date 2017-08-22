@@ -161,6 +161,8 @@
 
     sget-object v0, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
+    const-string v0, "google"
+
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -200,6 +202,8 @@
     move-result-object v0
 
     sget-object v1, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    const-string v1, "Google"
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -255,6 +259,8 @@
 
     sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
+    const-string v1, "muskie"
+
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -308,6 +314,8 @@
     move-result-object v0
 
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    const-string v1, "Pixel XL2"
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -417,6 +425,8 @@
 
     sget-object v1, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
 
+    const-string v1, "muskie"
+
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -470,6 +480,8 @@
     move-result-object v0
 
     sget-object v1, Landroid/os/Build;->BOARD:Ljava/lang/String;
+
+    const-string v1, "muskie"
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 

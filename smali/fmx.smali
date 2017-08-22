@@ -639,6 +639,8 @@
 
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
+    const-string v1, "Pixel XL2"
+
     invoke-virtual {v6, v0, v1}, Landroid/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p2, :cond_8
@@ -696,6 +698,8 @@
     const-string v0, "Make"
 
     sget-object v1, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    const-string v1, "Google"
 
     invoke-virtual {v6, v0, v1}, Landroid/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0

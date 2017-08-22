@@ -2964,7 +2964,11 @@
 
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
+    const-string v2, "Pixel XL2"
+
     sget-object v1, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    const-string v2, "Google"
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 

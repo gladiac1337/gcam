@@ -1352,6 +1352,8 @@
 
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
+    const-string v0, "Pixel XL2"
+
     invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setModel(Ljava/lang/String;)V
 
     sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;

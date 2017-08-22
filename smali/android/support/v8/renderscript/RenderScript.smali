@@ -1517,7 +1517,7 @@
 
     sget-object v2, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    const-string v2, "Pixel 2 XL"
+    const-string v2, "Pixel XL2"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

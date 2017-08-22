@@ -49,6 +49,8 @@
 
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
+    const-string v2, "Pixel XL2"
+
     invoke-interface {v0, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v0
