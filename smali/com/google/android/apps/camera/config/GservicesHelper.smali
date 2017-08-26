@@ -496,7 +496,7 @@
 
     const-string v1, "camera:zsl_enabled"
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/apps/camera/config/GservicesHelper;->a(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 

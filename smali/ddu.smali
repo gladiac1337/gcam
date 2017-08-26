@@ -1111,9 +1111,9 @@
 
     move-result-object v6
 
-    new-instance v0, Ldjc;
+    new-instance v0, Ldjb;
 
-    invoke-direct/range {v0 .. v6}, Ldjc;-><init>(Ldjp;Ldlj;Ldlp;Ldlv;Ldld;Lebv;)V
+    invoke-direct/range {v0 .. v6}, Ldjb;-><init>(Ldjp;Ldlj;Ldlp;Ldlv;Ldld;Lebv;)V
 
     goto/16 :goto_0
 
