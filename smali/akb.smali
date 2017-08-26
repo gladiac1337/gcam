@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lajz;-><init>()V
 
     return-void
@@ -19,10 +17,8 @@
 .method public final a(IIII)F
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 2
     int-to-float v1, p2
 
     int-to-float v2, p4
@@ -47,7 +43,6 @@
 
     double-to-int v1, v2
 
-    .line 3
     invoke-static {v1}, Ljava/lang/Integer;->highestOneBit(I)I
 
     move-result v2
@@ -56,13 +51,11 @@
 
     move-result v2
 
-    .line 4
     if-ge v2, v1, :cond_0
 
     :goto_0
     shl-int v0, v2, v0
 
-    .line 5
     const/high16 v1, 0x3f800000    # 1.0f
 
     int-to-float v0, v0
@@ -71,7 +64,6 @@
 
     return v0
 
-    .line 4
     :cond_0
     const/4 v0, 0x0
 
@@ -81,8 +73,6 @@
 .method public final a()I
     .locals 1
 
-    .prologue
-    .line 6
     sget v0, Lbl;->g:I
 
     return v0

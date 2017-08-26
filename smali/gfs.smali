@@ -13,14 +13,10 @@
 .method public constructor <init>(Lgft;Lhji;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgfs;->a:Lgft;
 
-    .line 3
     const-string v0, "Settings"
 
     invoke-interface {p2, v0}, Lhji;->a(Ljava/lang/String;)Lhjh;
@@ -29,7 +25,6 @@
 
     iput-object v0, p0, Lgfs;->b:Lhjh;
 
-    .line 4
     return-void
 .end method
 
@@ -38,8 +33,6 @@
 .method public final a(Ljava/lang/String;I)Lavm;
     .locals 1
 
-    .prologue
-    .line 5
     const-string v0, "default_scope"
 
     invoke-virtual {p0, v0, p1, p2}, Lgfs;->a(Ljava/lang/String;Ljava/lang/String;I)Lavm;
@@ -52,8 +45,6 @@
 .method public final a(Ljava/lang/String;Ljava/lang/String;)Lavm;
     .locals 1
 
-    .prologue
-    .line 12
     const-string v0, "default_scope"
 
     invoke-virtual {p0, v0, p1, p2}, Lgfs;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lavm;
@@ -66,8 +57,6 @@
 .method public final a(Ljava/lang/String;Ljava/lang/String;I)Lavm;
     .locals 3
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lgfs;->a:Lgft;
 
     invoke-virtual {v0, p1, p2}, Lgft;->f(Ljava/lang/String;Ljava/lang/String;)Z
@@ -76,7 +65,6 @@
 
     if-nez v0, :cond_0
 
-    .line 7
     iget-object v0, p0, Lgfs;->b:Lhjh;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -145,12 +133,10 @@
 
     invoke-interface {v0, v1}, Lhjh;->d(Ljava/lang/String;)V
 
-    .line 8
     iget-object v0, p0, Lgfs;->a:Lgft;
 
     invoke-virtual {v0, p1, p2, p3}, Lgft;->a(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 10
     :cond_0
     new-instance v0, Lgfk;
 
@@ -158,15 +144,12 @@
 
     invoke-direct {v0, v1, p1, p2}, Lgfk;-><init>(Lgft;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 11
     return-object v0
 .end method
 
 .method public final a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lavm;
     .locals 3
 
-    .prologue
-    .line 14
     iget-object v0, p0, Lgfs;->a:Lgft;
 
     invoke-virtual {v0, p1, p2}, Lgft;->f(Ljava/lang/String;Ljava/lang/String;)Z
@@ -175,7 +158,6 @@
 
     if-nez v0, :cond_0
 
-    .line 15
     iget-object v0, p0, Lgfs;->b:Lhjh;
 
     invoke-static {p3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -254,12 +236,10 @@
 
     invoke-interface {v0, v1}, Lhjh;->d(Ljava/lang/String;)V
 
-    .line 16
     iget-object v0, p0, Lgfs;->a:Lgft;
 
     invoke-virtual {v0, p1, p2, p3}, Lgft;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 17
     :cond_0
     invoke-virtual {p0, p1, p2}, Lgfs;->b(Ljava/lang/String;Ljava/lang/String;)Lavm;
 
@@ -271,8 +251,6 @@
 .method public final a(Ljava/lang/String;Ljava/lang/String;Z)Lavm;
     .locals 3
 
-    .prologue
-    .line 19
     iget-object v0, p0, Lgfs;->a:Lgft;
 
     invoke-virtual {v0, p1, p2}, Lgft;->f(Ljava/lang/String;Ljava/lang/String;)Z
@@ -281,7 +259,6 @@
 
     if-nez v0, :cond_0
 
-    .line 20
     iget-object v0, p0, Lgfs;->b:Lhjh;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -350,12 +327,10 @@
 
     invoke-interface {v0, v1}, Lhjh;->d(Ljava/lang/String;)V
 
-    .line 21
     iget-object v0, p0, Lgfs;->a:Lgft;
 
     invoke-virtual {v0, p1, p2, p3}, Lgft;->b(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 23
     :cond_0
     new-instance v0, Lgfh;
 
@@ -363,15 +338,12 @@
 
     invoke-direct {v0, v1, p1, p2}, Lgfh;-><init>(Lgft;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 24
     return-object v0
 .end method
 
 .method public final a(Ljava/lang/String;Z)Lavm;
     .locals 1
 
-    .prologue
-    .line 18
     const-string v0, "default_scope"
 
     invoke-virtual {p0, v0, p1, p2}, Lgfs;->a(Ljava/lang/String;Ljava/lang/String;Z)Lavm;
@@ -384,8 +356,6 @@
 .method public final b(Ljava/lang/String;Ljava/lang/String;)Lavm;
     .locals 2
 
-    .prologue
-    .line 13
     new-instance v0, Lgfv;
 
     iget-object v1, p0, Lgfs;->a:Lgft;

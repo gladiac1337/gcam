@@ -18,17 +18,12 @@
 .method public constructor <init>(Landroid/content/res/AssetManager;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Labu;->b:Landroid/content/res/AssetManager;
 
-    .line 3
     iput-object p2, p0, Labu;->a:Ljava/lang/String;
 
-    .line 4
     return-void
 .end method
 
@@ -40,17 +35,13 @@
 .method public final a()V
     .locals 1
 
-    .prologue
-    .line 14
     iget-object v0, p0, Labu;->c:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
-    .line 19
     :goto_0
     return-void
 
-    .line 16
     :cond_0
     :try_start_0
     iget-object v0, p0, Labu;->c:Ljava/lang/Object;
@@ -61,7 +52,6 @@
 
     goto :goto_0
 
-    .line 19
     :catch_0
     move-exception v0
 
@@ -71,8 +61,6 @@
 .method public final a(Laaf;Labw;)V
     .locals 3
 
-    .prologue
-    .line 5
     :try_start_0
     iget-object v0, p0, Labu;->b:Landroid/content/res/AssetManager;
 
@@ -86,20 +74,16 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 12
     iget-object v0, p0, Labu;->c:Ljava/lang/Object;
 
     invoke-interface {p2, v0}, Labw;->a(Ljava/lang/Object;)V
 
-    .line 13
     :goto_0
     return-void
 
-    .line 7
     :catch_0
     move-exception v0
 
-    .line 8
     const-string v1, "AssetPathFetcher"
 
     const/4 v2, 0x3
@@ -110,14 +94,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 9
     const-string v1, "AssetPathFetcher"
 
     const-string v2, "Failed to load data from asset manager"
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 10
     :cond_0
     invoke-interface {p2, v0}, Labw;->a(Ljava/lang/Exception;)V
 
@@ -130,16 +112,12 @@
 .method public final b()V
     .locals 0
 
-    .prologue
-    .line 20
     return-void
 .end method
 
 .method public final c()Labf;
     .locals 1
 
-    .prologue
-    .line 21
     sget-object v0, Labf;->a:Labf;
 
     return-object v0

@@ -18,17 +18,12 @@
 .method public constructor <init>(Ljava/lang/String;Laha;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lahb;->a:Ljava/lang/String;
 
-    .line 3
     iput-object p2, p0, Lahb;->b:Laha;
 
-    .line 4
     return-void
 .end method
 
@@ -37,20 +32,15 @@
 .method public final a()V
     .locals 1
 
-    .prologue
-    .line 24
     :try_start_0
     iget-object v0, p0, Lahb;->c:Ljava/lang/Object;
 
-    .line 25
     check-cast v0, Ljava/io/InputStream;
 
-    .line 26
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 29
     :goto_0
     return-void
 
@@ -63,12 +53,9 @@
 .method public final a(Laaf;Labw;)V
     .locals 4
 
-    .prologue
-    .line 5
     :try_start_0
     iget-object v0, p0, Lahb;->a:Ljava/lang/String;
 
-    .line 7
     const-string v1, "data:image"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -77,7 +64,6 @@
 
     if-nez v1, :cond_0
 
-    .line 8
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Not a valid image data URL."
@@ -88,18 +74,14 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 21
     :catch_0
     move-exception v0
 
-    .line 22
     invoke-interface {p2, v0}, Labw;->a(Ljava/lang/Exception;)V
 
-    .line 23
     :goto_0
     return-void
 
-    .line 9
     :cond_0
     const/16 v1, 0x2c
 
@@ -108,12 +90,10 @@
 
     move-result v1
 
-    .line 10
     const/4 v2, -0x1
 
     if-ne v1, v2, :cond_1
 
-    .line 11
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Missing comma in data URL."
@@ -122,7 +102,6 @@
 
     throw v0
 
-    .line 12
     :cond_1
     const/4 v2, 0x0
 
@@ -130,7 +109,6 @@
 
     move-result-object v2
 
-    .line 13
     const-string v3, ";base64"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -139,7 +117,6 @@
 
     if-nez v2, :cond_2
 
-    .line 14
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Not a base64 image data URL."
@@ -148,7 +125,6 @@
 
     throw v0
 
-    .line 15
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
@@ -156,22 +132,18 @@
 
     move-result-object v0
 
-    .line 16
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
     move-result-object v0
 
-    .line 17
     new-instance v1, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v1, v0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 18
     iput-object v1, p0, Lahb;->c:Ljava/lang/Object;
 
-    .line 19
     iget-object v0, p0, Lahb;->c:Ljava/lang/Object;
 
     invoke-interface {p2, v0}, Labw;->a(Ljava/lang/Object;)V
@@ -184,16 +156,12 @@
 .method public final b()V
     .locals 0
 
-    .prologue
-    .line 30
     return-void
 .end method
 
 .method public final c()Labf;
     .locals 1
 
-    .prologue
-    .line 33
     sget-object v0, Labf;->a:Labf;
 
     return-object v0
@@ -202,10 +170,7 @@
 .method public final d()Ljava/lang/Class;
     .locals 1
 
-    .prologue
-    .line 31
     const-class v0, Ljava/io/InputStream;
 
-    .line 32
     return-object v0
 .end method

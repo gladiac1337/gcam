@@ -7,11 +7,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     return-void
 .end method
 
@@ -20,8 +17,6 @@
 .method public a(Lkz;)Lky;
     .locals 1
 
-    .prologue
-    .line 8
     const/4 v0, 0x0
 
     return-object v0
@@ -39,8 +34,6 @@
 .method public a(ILandroid/view/KeyEvent;)Z
     .locals 1
 
-    .prologue
-    .line 13
     const/4 v0, 0x0
 
     return v0
@@ -52,16 +45,12 @@
 .method public b(Ljava/lang/CharSequence;)V
     .locals 0
 
-    .prologue
-    .line 15
     return-void
 .end method
 
 .method public b(Z)V
     .locals 0
 
-    .prologue
-    .line 4
     return-void
 .end method
 
@@ -71,16 +60,12 @@
 .method public c(Z)V
     .locals 0
 
-    .prologue
-    .line 5
     return-void
 .end method
 
 .method public d(Z)V
     .locals 0
 
-    .prologue
-    .line 7
     return-void
 .end method
 
@@ -90,8 +75,6 @@
 .method public e()Landroid/content/Context;
     .locals 1
 
-    .prologue
-    .line 3
     const/4 v0, 0x0
 
     return-object v0
@@ -100,16 +83,12 @@
 .method public f()V
     .locals 0
 
-    .prologue
-    .line 6
     return-void
 .end method
 
 .method public g()Z
     .locals 1
 
-    .prologue
-    .line 9
     const/4 v0, 0x0
 
     return v0
@@ -118,8 +97,6 @@
 .method public h()Z
     .locals 1
 
-    .prologue
-    .line 10
     const/4 v0, 0x0
 
     return v0
@@ -128,8 +105,6 @@
 .method public i()Z
     .locals 1
 
-    .prologue
-    .line 11
     const/4 v0, 0x0
 
     return v0
@@ -138,8 +113,6 @@
 .method public j()Z
     .locals 1
 
-    .prologue
-    .line 12
     const/4 v0, 0x0
 
     return v0
@@ -148,8 +121,6 @@
 .method public k()Z
     .locals 1
 
-    .prologue
-    .line 14
     const/4 v0, 0x0
 
     return v0
@@ -158,8 +129,6 @@
 .method l()Z
     .locals 1
 
-    .prologue
-    .line 16
     const/4 v0, 0x0
 
     return v0
@@ -168,7 +137,5 @@
 .method m()V
     .locals 0
 
-    .prologue
-    .line 17
     return-void
 .end method

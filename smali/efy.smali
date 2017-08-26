@@ -23,11 +23,8 @@
 .method public constructor <init>(Leez;Ljava/util/concurrent/Executor;Lfmb;Lefe;Lfon;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x0
@@ -36,21 +33,15 @@
 
     iput-object v0, p0, Lefy;->g:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 3
     iput-object p1, p0, Lefy;->a:Leez;
 
-    .line 4
     iput-object p2, p0, Lefy;->b:Ljava/util/concurrent/Executor;
 
-    .line 5
     iput-object p3, p0, Lefy;->d:Lfmb;
 
-    .line 6
     iput-object p4, p0, Lefy;->e:Lefe;
 
-    .line 7
     iput-object p5, p0, Lefy;->f:Lfon;
 
-    .line 8
     return-void
 .end method

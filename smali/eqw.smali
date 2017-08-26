@@ -14,8 +14,6 @@
 .method constructor <init>(Leqv;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leqw;->a:Leqv;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,19 +26,14 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 2
     check-cast p1, Ljava/lang/Float;
 
-    .line 3
     iget-object v0, p0, Leqw;->a:Leqv;
 
     iget-object v0, v0, Leqv;->a:Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;
 
-    .line 4
     iget-object v0, v0, Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;->c:Ljava/util/List;
 
-    .line 5
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -58,14 +51,12 @@
 
     check-cast v0, Lerb;
 
-    .line 6
     invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
     invoke-interface {v0}, Lerb;->a()V
 
     goto :goto_0
 
-    .line 8
     :cond_0
     return-void
 .end method

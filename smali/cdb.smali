@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public final a()Lcda;
     .locals 2
 
-    .prologue
-    .line 2
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "INVALID_NODE doesn\'t support operations"
@@ -36,8 +32,6 @@
 .method public final a(I)Ljava/util/List;
     .locals 2
 
-    .prologue
-    .line 8
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "INVALID_NODE doesn\'t support operations"
@@ -50,8 +44,6 @@
 .method public final a(Lfqu;)V
     .locals 2
 
-    .prologue
-    .line 7
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "INVALID_NODE doesn\'t support operations"
@@ -64,8 +56,6 @@
 .method public final b()Lcda;
     .locals 2
 
-    .prologue
-    .line 3
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "INVALID_NODE doesn\'t support operations"
@@ -78,8 +68,6 @@
 .method public final c()Lfqu;
     .locals 2
 
-    .prologue
-    .line 4
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "INVALID_NODE doesn\'t support operations"
@@ -92,8 +80,6 @@
 .method public final d()Z
     .locals 2
 
-    .prologue
-    .line 5
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "INVALID_NODE doesn\'t support operations"
@@ -106,8 +92,6 @@
 .method public final e()V
     .locals 2
 
-    .prologue
-    .line 6
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "INVALID_NODE doesn\'t support operations"

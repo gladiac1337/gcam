@@ -11,8 +11,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lghc;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -25,8 +23,6 @@
 .method public final onLongPress(Landroid/view/MotionEvent;)V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lghc;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$000(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Landroid/graphics/RectF;
@@ -55,12 +51,10 @@
 
     if-nez v0, :cond_1
 
-    .line 6
     :cond_0
     :goto_0
     return-void
 
-    .line 4
     :cond_1
     iget-object v0, p0, Lghc;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
@@ -86,7 +80,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lghc;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$300(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Lghr;

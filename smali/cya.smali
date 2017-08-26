@@ -14,8 +14,6 @@
 .method constructor <init>(Lcxx;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcya;->a:Lcxx;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,22 +26,16 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 8
     sget-object v0, Lcxx;->c:Ljava/lang/String;
 
-    .line 9
     const-string v1, "onMediaRecorderError"
 
     invoke-static {v0, v1}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     iget-object v0, p0, Lcya;->a:Lcxx;
 
-    .line 11
     invoke-virtual {v0}, Lcxx;->k()V
 
-    .line 12
     iget-object v0, p0, Lcya;->a:Lcxx;
 
     invoke-static {v0}, Lcxx;->a(Lcxx;)Lhkr;
@@ -52,50 +44,38 @@
 
     invoke-interface {v0}, Lhkr;->b()V
 
-    .line 13
     return-void
 .end method
 
 .method public final a_(Z)V
     .locals 2
 
-    .prologue
-    .line 14
     iget-object v0, p0, Lcya;->a:Lcxx;
 
-    .line 15
     iget-object v0, v0, Lcxx;->e:Lhic;
 
-    .line 16
     new-instance v1, Lcyb;
 
     invoke-direct {v1, p0, p1}, Lcyb;-><init>(Lcya;Z)V
 
     invoke-virtual {v0, v1}, Lhic;->execute(Ljava/lang/Runnable;)V
 
-    .line 17
     return-void
 .end method
 
 .method public final b()V
     .locals 2
 
-    .prologue
-    .line 2
     sget-object v0, Lcxx;->c:Ljava/lang/String;
 
-    .line 3
     const-string v1, "onCameraError"
 
     invoke-static {v0, v1}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lcya;->a:Lcxx;
 
-    .line 5
     invoke-virtual {v0}, Lcxx;->k()V
 
-    .line 6
     iget-object v0, p0, Lcya;->a:Lcxx;
 
     invoke-static {v0}, Lcxx;->a(Lcxx;)Lhkr;
@@ -106,6 +86,5 @@
 
     invoke-interface {v0, v1}, Lhkr;->a(Ljava/lang/Throwable;)V
 
-    .line 7
     return-void
 .end method

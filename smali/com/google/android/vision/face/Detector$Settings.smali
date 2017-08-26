@@ -23,37 +23,30 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/android/vision/face/Detector$Settings;->mModelFilesLocation:I
 
-    .line 9
     new-instance v0, Lcom/google/android/vision/face/Detector$DetectionSettings;
 
     invoke-direct {v0}, Lcom/google/android/vision/face/Detector$DetectionSettings;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/vision/face/Detector$Settings;->mDetectionSettings:Lcom/google/android/vision/face/Detector$DetectionSettings;
 
-    .line 10
     new-instance v0, Lcom/google/android/vision/face/Detector$TrackingSettings;
 
     invoke-direct {v0}, Lcom/google/android/vision/face/Detector$TrackingSettings;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/vision/face/Detector$Settings;->mTrackingSettings:Lcom/google/android/vision/face/Detector$TrackingSettings;
 
-    .line 11
     new-instance v0, Lcom/google/android/vision/face/Detector$ClassificationSettings;
 
     invoke-direct {v0}, Lcom/google/android/vision/face/Detector$ClassificationSettings;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/vision/face/Detector$Settings;->mClassificationSettings:Lcom/google/android/vision/face/Detector$ClassificationSettings;
 
-    .line 12
     return-void
 .end method
 
@@ -62,8 +55,6 @@
 .method public getClassificationSettings()Lcom/google/android/vision/face/Detector$ClassificationSettings;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lcom/google/android/vision/face/Detector$Settings;->mClassificationSettings:Lcom/google/android/vision/face/Detector$ClassificationSettings;
 
     return-object v0
@@ -72,8 +63,6 @@
 .method public getDetectionSettings()Lcom/google/android/vision/face/Detector$DetectionSettings;
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lcom/google/android/vision/face/Detector$Settings;->mDetectionSettings:Lcom/google/android/vision/face/Detector$DetectionSettings;
 
     return-object v0
@@ -82,8 +71,6 @@
 .method getModelFilesLocation()I
     .locals 1
 
-    .prologue
-    .line 6
     iget v0, p0, Lcom/google/android/vision/face/Detector$Settings;->mModelFilesLocation:I
 
     return v0
@@ -92,8 +79,6 @@
 .method public getTrackingSettings()Lcom/google/android/vision/face/Detector$TrackingSettings;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcom/google/android/vision/face/Detector$Settings;->mTrackingSettings:Lcom/google/android/vision/face/Detector$TrackingSettings;
 
     return-object v0
@@ -102,10 +87,7 @@
 .method public setModelFilesLocation(I)V
     .locals 0
 
-    .prologue
-    .line 4
     iput p1, p0, Lcom/google/android/vision/face/Detector$Settings;->mModelFilesLocation:I
 
-    .line 5
     return-void
 .end method

@@ -39,8 +39,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 21
     const-string v0, "DualCamChart"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -55,22 +53,16 @@
 .method public constructor <init>(Lavm;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Leuf;-><init>()V
 
-    .line 2
     iput-object p1, p0, Leug;->n:Lavm;
 
-    .line 3
     return-void
 .end method
 
 .method static synthetic a(Leug;)Lavm;
     .locals 1
 
-    .prologue
-    .line 20
     iget-object v0, p0, Leug;->n:Lavm;
 
     return-object v0
@@ -81,18 +73,14 @@
 .method public a(Lilp;Lfbt;Ldee;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lghg;Lger;Lgpv;Lilc;)V
     .locals 2
 
-    .prologue
-    .line 4
     invoke-interface {p1}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lfde;
 
-    .line 5
     iget-object v1, v0, Lfde;->f:Lgmu;
 
-    .line 7
     const v0, 0x7f0e00e1
 
     invoke-virtual {v1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -103,10 +91,8 @@
 
     iput-object v0, p0, Leug;->b:Lgat;
 
-    .line 8
     iput-object p2, p0, Leug;->c:Lfbt;
 
-    .line 9
     const v0, 0x7f0e00e0
 
     invoke-virtual {v1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -117,7 +103,6 @@
 
     iput-object v0, p0, Leug;->f:Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;
 
-    .line 10
     const v0, 0x7f0e00d7
 
     invoke-virtual {v1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -128,22 +113,16 @@
 
     iput-object v0, p0, Leug;->g:Lcom/google/android/apps/camera/gridlines/view/GridLinesUi;
 
-    .line 11
     iput-object p3, p0, Leug;->h:Ldee;
 
-    .line 12
     iput-object p4, p0, Leug;->i:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
-    .line 13
     iput-object p5, p0, Leug;->j:Lghg;
 
-    .line 14
     iput-object p6, p0, Leug;->k:Lger;
 
-    .line 15
     iput-object p7, p0, Leug;->l:Lgpv;
 
-    .line 16
     const v0, 0x7f0e00e9
 
     invoke-virtual {v1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -154,7 +133,6 @@
 
     iput-object v0, p0, Leug;->e:Landroid/widget/ImageButton;
 
-    .line 17
     const v0, 0x7f0e00ea
 
     invoke-virtual {v1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -165,9 +143,7 @@
 
     iput-object v0, p0, Leug;->d:Lcom/google/android/apps/camera/legacy/app/ui/toyboxmenu/ToyboxMenuButton;
 
-    .line 18
     iput-object p8, p0, Leug;->m:Lilc;
 
-    .line 19
     return-void
 .end method

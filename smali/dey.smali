@@ -15,44 +15,32 @@
 .method private constructor <init>(Ldez;Ldez;Ldez;)V
     .locals 0
 
-    .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9
     iput-object p2, p0, Ldey;->b:Ldez;
 
-    .line 10
     iput-object p1, p0, Ldey;->a:Ldez;
 
-    .line 11
     iput-object p3, p0, Ldey;->c:Ldez;
 
-    .line 12
     return-void
 .end method
 
 .method public static a()Ldey;
     .locals 2
 
-    .prologue
-    .line 1
     sget-object v0, Ldez;->a:Ldez;
 
-    .line 2
     new-instance v1, Ldey;
 
     invoke-direct {v1, v0, v0, v0}, Ldey;-><init>(Ldez;Ldez;Ldez;)V
 
-    .line 3
     return-object v1
 .end method
 
 .method public static a(Ldez;)Ldey;
     .locals 3
 
-    .prologue
-    .line 4
     new-instance v0, Ldey;
 
     sget-object v1, Ldez;->a:Ldez;
@@ -69,8 +57,6 @@
 .method public final b(Ldez;)Ldey;
     .locals 3
 
-    .prologue
-    .line 5
     new-instance v0, Ldey;
 
     iget-object v1, p0, Ldey;->b:Ldez;
@@ -85,8 +71,6 @@
 .method public final c(Ldez;)Ldey;
     .locals 3
 
-    .prologue
-    .line 6
     new-instance v0, Ldey;
 
     iget-object v1, p0, Ldey;->a:Ldez;
@@ -101,8 +85,6 @@
 .method public final d(Ldez;)Ldey;
     .locals 3
 
-    .prologue
-    .line 7
     new-instance v0, Ldey;
 
     iget-object v1, p0, Ldey;->a:Ldez;
@@ -117,8 +99,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 13
     iget-object v0, p0, Ldey;->a:Ldez;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

@@ -29,7 +29,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -40,7 +39,6 @@
 
     const/4 v4, 0x0
 
-    .line 6
     new-instance v0, Landroid/support/v8/renderscript/Sampler$Value;
 
     const-string v1, "NEAREST"
@@ -49,7 +47,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Sampler$Value;->NEAREST:Landroid/support/v8/renderscript/Sampler$Value;
 
-    .line 7
     new-instance v0, Landroid/support/v8/renderscript/Sampler$Value;
 
     const-string v1, "LINEAR"
@@ -58,7 +55,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Sampler$Value;->LINEAR:Landroid/support/v8/renderscript/Sampler$Value;
 
-    .line 8
     new-instance v0, Landroid/support/v8/renderscript/Sampler$Value;
 
     const-string v1, "LINEAR_MIP_LINEAR"
@@ -67,7 +63,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Sampler$Value;->LINEAR_MIP_LINEAR:Landroid/support/v8/renderscript/Sampler$Value;
 
-    .line 9
     new-instance v0, Landroid/support/v8/renderscript/Sampler$Value;
 
     const-string v1, "LINEAR_MIP_NEAREST"
@@ -78,7 +73,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Sampler$Value;->LINEAR_MIP_NEAREST:Landroid/support/v8/renderscript/Sampler$Value;
 
-    .line 10
     new-instance v0, Landroid/support/v8/renderscript/Sampler$Value;
 
     const-string v1, "WRAP"
@@ -87,7 +81,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Sampler$Value;->WRAP:Landroid/support/v8/renderscript/Sampler$Value;
 
-    .line 11
     new-instance v0, Landroid/support/v8/renderscript/Sampler$Value;
 
     const-string v1, "CLAMP"
@@ -98,7 +91,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Sampler$Value;->CLAMP:Landroid/support/v8/renderscript/Sampler$Value;
 
-    .line 12
     new-instance v0, Landroid/support/v8/renderscript/Sampler$Value;
 
     const-string v1, "MIRRORED_REPEAT"
@@ -111,7 +103,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Sampler$Value;->MIRRORED_REPEAT:Landroid/support/v8/renderscript/Sampler$Value;
 
-    .line 13
     const/4 v0, 0x7
 
     new-array v0, v0, [Landroid/support/v8/renderscript/Sampler$Value;
@@ -156,22 +147,16 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 4
     iput p3, p0, Landroid/support/v8/renderscript/Sampler$Value;->mID:I
 
-    .line 5
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Landroid/support/v8/renderscript/Sampler$Value;
     .locals 1
 
-    .prologue
-    .line 2
     const-class v0, Landroid/support/v8/renderscript/Sampler$Value;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -186,8 +171,6 @@
 .method public static values()[Landroid/support/v8/renderscript/Sampler$Value;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Landroid/support/v8/renderscript/Sampler$Value;->$VALUES:[Landroid/support/v8/renderscript/Sampler$Value;
 
     invoke-virtual {v0}, [Landroid/support/v8/renderscript/Sampler$Value;->clone()Ljava/lang/Object;

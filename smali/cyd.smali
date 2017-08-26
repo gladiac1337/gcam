@@ -11,8 +11,6 @@
 .method constructor <init>(Lcxx;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcyd;->a:Lcxx;
 
     invoke-direct {p0}, Lghs;-><init>()V
@@ -25,59 +23,44 @@
 .method public final a()V
     .locals 8
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcyd;->a:Lcxx;
 
-    .line 3
     iget-object v1, v0, Lcxx;->h:Ljava/lang/Object;
 
-    .line 4
     monitor-enter v1
 
-    .line 5
     :try_start_0
     iget-object v0, p0, Lcyd;->a:Lcxx;
 
-    .line 6
     iget-object v0, v0, Lcxx;->l:Lcym;
 
-    .line 7
     if-eqz v0, :cond_1
 
-    .line 8
     iget-object v0, p0, Lcyd;->a:Lcxx;
 
-    .line 9
     iget-object v0, v0, Lcxx;->l:Lcym;
 
-    .line 11
     iget-object v2, v0, Lcym;->E:Ljava/lang/Object;
 
     monitor-enter v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 12
     :try_start_1
     iget-object v3, v0, Lcym;->I:Lcwt;
 
     if-eqz v3, :cond_0
 
-    .line 13
     iget-object v0, v0, Lcym;->I:Lcwt;
 
-    .line 14
     invoke-static {}, Lhic;->a()V
 
-    .line 15
     iget-object v3, v0, Lcwt;->m:Ljava/lang/Object;
 
     monitor-enter v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 16
     :try_start_2
     iget-object v4, v0, Lcwt;->u:Lcxi;
 
@@ -89,12 +72,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 17
     monitor-exit v3
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 44
     :cond_0
     :goto_0
     :try_start_3
@@ -102,28 +83,22 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 45
     :cond_1
     :try_start_4
     monitor-exit v1
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 46
     iget-object v0, p0, Lcyd;->a:Lcxx;
 
-    .line 47
     iget-object v0, v0, Lcxx;->i:Lepj;
 
-    .line 48
     iget-object v0, v0, Lepj;->z:Lfbt;
 
     invoke-virtual {v0}, Lfbt;->a()V
 
-    .line 49
     return-void
 
-    .line 18
     :cond_2
     :try_start_5
     iget-object v4, v0, Lcwt;->u:Lcxi;
@@ -132,10 +107,8 @@
 
     if-ne v4, v5, :cond_4
 
-    .line 19
     invoke-virtual {v0}, Lcwt;->e()Liwe;
 
-    .line 43
     :cond_3
     :goto_1
     monitor-exit v3
@@ -152,7 +125,6 @@
     :try_start_6
     throw v0
 
-    .line 44
     :catchall_1
     move-exception v0
 
@@ -163,7 +135,6 @@
     :try_start_7
     throw v0
 
-    .line 45
     :catchall_2
     move-exception v0
 
@@ -173,7 +144,6 @@
 
     throw v0
 
-    .line 20
     :cond_4
     :try_start_8
     iget-object v4, v0, Lcwt;->u:Lcxi;
@@ -182,30 +152,25 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 22
     iget-object v4, v0, Lcwt;->m:Ljava/lang/Object;
 
     monitor-enter v4
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 23
     :try_start_9
     iget-boolean v5, v0, Lcwt;->p:Z
 
     if-eqz v5, :cond_5
 
-    .line 24
     const/4 v5, 0x0
 
     iput-boolean v5, v0, Lcwt;->p:Z
 
-    .line 25
     monitor-exit v4
 
     goto :goto_1
 
-    .line 42
     :catchall_3
     move-exception v0
 
@@ -218,86 +183,70 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_0
 
-    .line 26
     :cond_5
     :try_start_b
     sget-object v5, Lcxi;->c:Lcxi;
 
     iput-object v5, v0, Lcwt;->u:Lcxi;
 
-    .line 27
     sget-object v5, Lcwt;->a:Ljava/lang/String;
 
     const-string v6, "startRecording"
 
     invoke-static {v5, v6}, Lbgj;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 28
     iget-object v5, v0, Lcwt;->f:Lfgo;
 
     invoke-interface {v5}, Lfgo;->a()V
 
-    .line 29
     iget-object v5, v0, Lcwt;->e:Lbwh;
 
     invoke-interface {v5}, Lbwh;->a()V
 
-    .line 30
     iget-object v5, v0, Lcwt;->i:Lcys;
 
     invoke-virtual {v5}, Lcys;->a()V
 
-    .line 31
     iget-object v5, v0, Lcwt;->j:Lcyv;
 
     invoke-interface {v5}, Lcyv;->a()V
 
-    .line 32
     iget-object v5, v0, Lcwt;->h:Lcyi;
 
-    .line 33
     const/4 v6, 0x0
 
     const/4 v7, 0x0
 
     invoke-virtual {v5, v6, v7}, Lcyi;->a(ZZ)V
 
-    .line 34
     iget-object v6, v5, Lcyi;->g:Lbhd;
 
     invoke-virtual {v6}, Lbhd;->a()V
 
-    .line 35
     iget-object v6, v5, Lcyi;->e:Lezt;
 
     invoke-interface {v6}, Lezt;->C()V
 
-    .line 36
     iget-object v6, v5, Lcyi;->b:Lfao;
 
     invoke-interface {v6}, Lfao;->e()V
 
-    .line 37
     iget-object v6, v5, Lcyi;->a:Lerq;
 
     const/4 v7, 0x1
 
     invoke-interface {v6, v7}, Lerq;->a(Z)V
 
-    .line 38
     iget-object v5, v5, Lcyi;->h:Lepj;
 
-    .line 39
     iget-object v5, v5, Lepj;->J:Lffi;
 
-    .line 40
     iget-object v5, v5, Lffi;->b:Landroid/view/View;
 
     const/16 v6, 0x8
 
     invoke-virtual {v5, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 41
     iget-object v5, v0, Lcwt;->c:Ljava/util/concurrent/Executor;
 
     new-instance v6, Lcxb;
@@ -306,7 +255,6 @@
 
     invoke-interface {v5, v6}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 42
     monitor-exit v4
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_3

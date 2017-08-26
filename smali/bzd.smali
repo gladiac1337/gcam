@@ -13,11 +13,8 @@
 .method public constructor <init>(Landroid/widget/FrameLayout;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Lbyv;-><init>(Landroid/widget/FrameLayout;)V
 
-    .line 2
     const v0, 0x7f0e00cc
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -28,7 +25,6 @@
 
     iput-object v0, p0, Lbzd;->p:Landroid/widget/TextView;
 
-    .line 3
     const v0, 0x7f0e00cd
 
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
@@ -39,7 +35,6 @@
 
     iput-object v0, p0, Lbzd;->q:Landroid/widget/TextView;
 
-    .line 4
     return-void
 .end method
 
@@ -48,7 +43,5 @@
 .method public final b(Z)V
     .locals 0
 
-    .prologue
-    .line 5
     return-void
 .end method

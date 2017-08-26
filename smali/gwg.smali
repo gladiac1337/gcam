@@ -69,13 +69,10 @@
 .method public static a(Landroid/support/v4/app/FragmentActivity;)Lgwg;
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     const-string v0, "Must be called from main thread of process"
 
-    .line 2
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v2
@@ -92,7 +89,6 @@
 
     throw v1
 
-    .line 3
     :cond_0
     invoke-virtual {v1}, Landroid/support/v4/app/FragmentActivity;->getSupportFragmentManager()Landroid/support/v4/app/FragmentManager;
 
@@ -212,8 +208,6 @@
 .method private final c(ILcom/google/android/gms/common/ConnectionResult;)V
     .locals 2
 
-    .prologue
-    .line 12
     const-string v0, "GmsSupportLifecycleFrag"
 
     const-string v1, "Unresolved error while connecting client. Stopping auto-manage."
@@ -230,7 +224,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 13
     iget-object v0, p0, Lgwg;->d:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -245,7 +238,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 14
     iget-object v1, v0, Lgwh;->b:Lgvt;
 
     invoke-virtual {v1, v0}, Lgvt;->b(Lgvx;)V
@@ -254,7 +246,6 @@
 
     invoke-virtual {v0}, Lgvt;->d()V
 
-    .line 15
     :cond_0
     invoke-virtual {p0}, Lgwg;->c()V
 
@@ -392,19 +383,14 @@
 .method public a()Lgvj;
     .locals 1
 
-    .prologue
-    .line 16
     sget-object v0, Lgvj;->c:Lgvj;
 
-    .line 17
     return-object v0
 .end method
 
 .method public a(ILcom/google/android/gms/common/ConnectionResult;)V
     .locals 4
 
-    .prologue
-    .line 18
     const-string v0, "GmsSupportLifecycleFrag"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -413,15 +399,12 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 19
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 20
     iget-object v3, p2, Lcom/google/android/gms/common/ConnectionResult;->d:Ljava/lang/String;
 
-    .line 21
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -432,10 +415,8 @@
 
     move-result-object v2
 
-    .line 22
     iget v3, p2, Lcom/google/android/gms/common/ConnectionResult;->b:I
 
-    .line 23
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -446,10 +427,8 @@
 
     move-result-object v2
 
-    .line 24
     iget v3, p2, Lcom/google/android/gms/common/ConnectionResult;->b:I
 
-    .line 25
     invoke-static {v3}, Lgvl;->a(I)Ljava/lang/String;
 
     move-result-object v3
@@ -468,7 +447,6 @@
 
     move-result-object v2
 
-    .line 26
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
@@ -560,8 +538,6 @@
 .method public dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
     .locals 4
 
-    .prologue
-    .line 9
     invoke-super {p0, p1, p2, p3, p4}, Landroid/support/v4/app/Fragment;->dump(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
     const/4 v0, 0x0
@@ -585,7 +561,6 @@
 
     check-cast v0, Lgwh;
 
-    .line 10
     invoke-virtual {p3, p1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v2
@@ -626,7 +601,6 @@
 
     invoke-virtual {v0, v2, p2, p3, p4}, Lgvt;->a(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 11
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
@@ -785,8 +759,6 @@
 .method public onSaveInstanceState(Landroid/os/Bundle;)V
     .locals 2
 
-    .prologue
-    .line 4
     invoke-super {p0, p1}, Landroid/support/v4/app/Fragment;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     const-string v0, "resolving_error"
@@ -809,20 +781,16 @@
 
     iget-object v1, p0, Lgwg;->f:Lcom/google/android/gms/common/ConnectionResult;
 
-    .line 5
     iget v1, v1, Lcom/google/android/gms/common/ConnectionResult;->b:I
 
-    .line 6
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string v0, "failed_resolution"
 
     iget-object v1, p0, Lgwg;->f:Lcom/google/android/gms/common/ConnectionResult;
 
-    .line 7
     iget-object v1, v1, Lcom/google/android/gms/common/ConnectionResult;->c:Landroid/app/PendingIntent;
 
-    .line 8
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     :cond_0

@@ -14,8 +14,6 @@
 .method constructor <init>(Lgoj;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgol;->a:Lgoj;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,30 +26,23 @@
 .method public final onPrepared(Landroid/media/MediaPlayer;)V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgol;->a:Lgoj;
 
     iget-object v0, v0, Lgoj;->a:Lgof;
 
-    .line 3
     iget-boolean v0, v0, Lgof;->j:Z
 
-    .line 4
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lgol;->a:Lgoj;
 
     iget-object v0, v0, Lgoj;->a:Lgof;
 
     invoke-virtual {v0}, Lgir;->X()V
 
-    .line 7
     :goto_0
     return-void
 
-    .line 6
     :cond_0
     iget-object v0, p0, Lgol;->a:Lgoj;
 

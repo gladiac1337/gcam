@@ -22,8 +22,6 @@
 .method constructor <init>(Lzh;Ljava/lang/RuntimeException;Ljava/lang/String;II)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lzk;->e:Lzh;
 
     iput-object p2, p0, Lzk;->a:Ljava/lang/RuntimeException;
@@ -44,14 +42,10 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lzk;->e:Lzh;
 
-    .line 3
     iget-object v0, v0, Lzh;->a:Lzm;
 
-    .line 4
     iget-object v1, p0, Lzk;->a:Ljava/lang/RuntimeException;
 
     iget-object v2, p0, Lzk;->b:Ljava/lang/String;
@@ -62,6 +56,5 @@
 
     invoke-interface {v0, v1, v2, v3, v4}, Lzm;->a(Ljava/lang/RuntimeException;Ljava/lang/String;II)V
 
-    .line 5
     return-void
 .end method

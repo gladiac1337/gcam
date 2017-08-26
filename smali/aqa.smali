@@ -20,25 +20,20 @@
 .method public constructor <init>(Lapf;Lapp;Lapq;Lapu;Lfsj;Lbhg;Lgow;Lgou;Lhic;Lape;Lfsq;Lavm;Lavm;)V
     .locals 9
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v3, Lhib;
 
     invoke-direct {v3}, Lhib;-><init>()V
 
     iput-object v3, p0, Laqa;->a:Lhib;
 
-    .line 3
     invoke-interface/range {p11 .. p11}, Lfsq;->p()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 4
     invoke-interface/range {p11 .. p11}, Lfsq;->q()Z
 
     move-result v3
@@ -48,24 +43,19 @@
     :cond_0
     const/4 v3, 0x1
 
-    .line 5
     :goto_0
     invoke-static {v3}, Lid;->a(Z)V
 
-    .line 6
     iput-object p1, p0, Laqa;->b:Lapf;
 
-    .line 7
     move-object/from16 v0, p7
 
     iput-object v0, p0, Laqa;->c:Lgow;
 
-    .line 8
     move-object/from16 v0, p8
 
     iput-object v0, p0, Laqa;->d:Lgou;
 
-    .line 9
     move-object/from16 v0, p10
 
     move-object/from16 v1, p12
@@ -76,32 +66,27 @@
 
     move-result-object v4
 
-    .line 10
     invoke-interface/range {p11 .. p11}, Lfsq;->p()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 12
     move-object/from16 v0, p12
 
     invoke-virtual {p4, v0}, Lapu;->a(Lavm;)Lapk;
 
     move-result-object v3
 
-    .line 13
     iget-object v5, p0, Laqa;->a:Lhib;
 
     invoke-virtual {v5, v3}, Lhib;->a(Lhiz;)Lhiz;
 
-    .line 14
     :cond_1
     invoke-interface/range {p11 .. p11}, Lfsq;->b()Lhmr;
 
     move-result-object v8
 
-    .line 15
     new-instance v3, Laql;
 
     invoke-direct {v3, v4, p3, p5, v8}, Laql;-><init>(Lapo;Lapq;Lfsj;Lhmr;)V
@@ -110,7 +95,6 @@
 
     invoke-virtual {v0, v3}, Lgow;->a(Lgpf;)V
 
-    .line 16
     new-instance v3, Laqe;
 
     move-object v5, p3
@@ -125,10 +109,8 @@
 
     invoke-virtual {v0, v3}, Lgou;->a(Lgpd;)V
 
-    .line 17
     invoke-virtual {p1}, Lapf;->a()V
 
-    .line 18
     iget-object v3, p0, Laqa;->a:Lhib;
 
     move-object/from16 v0, p12
@@ -139,14 +121,12 @@
 
     invoke-virtual {v3, v4}, Lhib;->a(Lhiz;)Lhiz;
 
-    .line 19
     iget-object v3, p0, Laqa;->a:Lhib;
 
     new-instance v4, Laqb;
 
     invoke-direct {v4, p3}, Laqb;-><init>(Lapq;)V
 
-    .line 20
     move-object/from16 v0, p13
 
     move-object/from16 v1, p9
@@ -155,13 +135,10 @@
 
     move-result-object v4
 
-    .line 21
     invoke-virtual {v3, v4}, Lhib;->a(Lhiz;)Lhiz;
 
-    .line 22
     return-void
 
-    .line 4
     :cond_2
     const/4 v3, 0x0
 
@@ -173,30 +150,23 @@
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 23
     iget-object v0, p0, Laqa;->a:Lhib;
 
     invoke-virtual {v0}, Lhib;->close()V
 
-    .line 24
     iget-object v0, p0, Laqa;->b:Lapf;
 
     invoke-virtual {v0}, Lapf;->a()V
 
-    .line 25
     iget-object v0, p0, Laqa;->c:Lgow;
 
-    .line 26
     const/4 v1, 0x0
 
     iput-object v1, v0, Lgow;->a:Lgpf;
 
-    .line 27
     iget-object v0, p0, Laqa;->d:Lgou;
 
     invoke-virtual {v0}, Lgou;->c()V
 
-    .line 28
     return-void
 .end method

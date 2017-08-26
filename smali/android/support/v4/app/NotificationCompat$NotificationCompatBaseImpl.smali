@@ -10,11 +10,8 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     return-void
 .end method
 
@@ -23,8 +20,6 @@
 .method public build(Landroid/support/v4/app/NotificationCompat$Builder;Landroid/support/v4/app/NotificationCompat$BuilderExtender;)Landroid/app/Notification;
     .locals 16
 
-    .prologue
-    .line 3
     new-instance v2, Landroid/support/v4/app/NotificationCompat$NotificationCompatBaseImpl$BuilderBase;
 
     move-object/from16 v0, p1
@@ -35,7 +30,6 @@
 
     iget-object v4, v0, Landroid/support/v4/app/NotificationCompat$Builder;->mNotification:Landroid/app/Notification;
 
-    .line 4
     invoke-virtual/range {p1 .. p1}, Landroid/support/v4/app/NotificationCompat$Builder;->resolveTitle()Ljava/lang/CharSequence;
 
     move-result-object v5
@@ -82,7 +76,6 @@
 
     invoke-direct/range {v2 .. v15}, Landroid/support/v4/app/NotificationCompat$NotificationCompatBaseImpl$BuilderBase;-><init>(Landroid/content/Context;Landroid/app/Notification;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/widget/RemoteViews;ILandroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/graphics/Bitmap;IIZ)V
 
-    .line 5
     move-object/from16 v0, p2
 
     move-object/from16 v1, p1
@@ -97,8 +90,6 @@
 .method public getAction(Landroid/app/Notification;I)Landroid/support/v4/app/NotificationCompat$Action;
     .locals 1
 
-    .prologue
-    .line 6
     const/4 v0, 0x0
 
     return-object v0
@@ -107,8 +98,6 @@
 .method public getActionsFromParcelableArrayList(Ljava/util/ArrayList;)[Landroid/support/v4/app/NotificationCompat$Action;
     .locals 1
 
-    .prologue
-    .line 7
     const/4 v0, 0x0
 
     return-object v0
@@ -117,8 +106,6 @@
 .method public getBundleForUnreadConversation(Landroid/support/v4/app/NotificationCompatBase$UnreadConversation;)Landroid/os/Bundle;
     .locals 1
 
-    .prologue
-    .line 9
     const/4 v0, 0x0
 
     return-object v0
@@ -127,8 +114,6 @@
 .method public getParcelableArrayListForActions([Landroid/support/v4/app/NotificationCompat$Action;)Ljava/util/ArrayList;
     .locals 1
 
-    .prologue
-    .line 8
     const/4 v0, 0x0
 
     return-object v0
@@ -137,8 +122,6 @@
 .method public getUnreadConversationFromBundle(Landroid/os/Bundle;Landroid/support/v4/app/NotificationCompatBase$UnreadConversation$Factory;Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput$Factory;)Landroid/support/v4/app/NotificationCompatBase$UnreadConversation;
     .locals 1
 
-    .prologue
-    .line 10
     const/4 v0, 0x0
 
     return-object v0

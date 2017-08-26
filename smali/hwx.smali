@@ -17,14 +17,12 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x2
 
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 4
     new-instance v0, Lhwx;
 
     const-string v1, "FIXED_FPS"
@@ -33,7 +31,6 @@
 
     sput-object v0, Lhwx;->a:Lhwx;
 
-    .line 5
     new-instance v0, Lhwx;
 
     const-string v1, "SMART_BURST"
@@ -42,7 +39,6 @@
 
     sput-object v0, Lhwx;->b:Lhwx;
 
-    .line 6
     new-instance v0, Lhwx;
 
     const-string v1, "HYBRID_BURST"
@@ -51,7 +47,6 @@
 
     sput-object v0, Lhwx;->c:Lhwx;
 
-    .line 7
     const/4 v0, 0x3
 
     new-array v0, v0, [Lhwx;
@@ -76,8 +71,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -86,8 +79,6 @@
 .method public static values()[Lhwx;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lhwx;->d:[Lhwx;
 
     invoke-virtual {v0}, [Lhwx;->clone()Ljava/lang/Object;
@@ -104,8 +95,6 @@
 .method public final a()Z
     .locals 1
 
-    .prologue
-    .line 3
     sget-object v0, Lhwx;->b:Lhwx;
 
     if-eq p0, v0, :cond_0

@@ -79,9 +79,6 @@
 .method public final b(Lgwe;)Lgwe;
     .locals 3
 
-    .prologue
-    .line 1
-    .line 2
     :try_start_0
     iget-object v0, p0, Lgwq;->a:Lgxk;
 
@@ -129,11 +126,9 @@
 
     invoke-interface {p1, v0}, Lgxi;->a(Lcom/google/android/gms/common/api/Status;)V
 
-    .line 3
     :goto_0
     return-object p1
 
-    .line 2
     :cond_0
     invoke-interface {p1, v0}, Lgxi;->a(Lgvr;)V
     :try_end_0
@@ -141,7 +136,6 @@
 
     goto :goto_0
 
-    .line 3
     :catch_0
     move-exception v0
 
@@ -159,13 +153,10 @@
 .method public final b()Z
     .locals 2
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lgwq;->a:Lgxk;
 
     iget-object v0, v0, Lgxk;->m:Lgxd;
 
-    .line 5
     iget-object v1, v0, Lgxd;->b:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -174,7 +165,6 @@
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 6
     iget-object v0, p0, Lgwq;->a:Lgxk;
 
     const/4 v1, 0x0

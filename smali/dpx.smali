@@ -35,10 +35,7 @@
 .method public final a(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 1
     const-string v0, "Applying Gouda"
 
-    .line 2
     return-object v0
 .end method

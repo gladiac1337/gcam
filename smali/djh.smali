@@ -14,8 +14,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 9
     new-instance v0, Ldjh;
 
     invoke-direct {v0}, Ldjh;-><init>()V
@@ -28,8 +26,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,8 +36,6 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 5
 
-    .prologue
-    .line 2
     const/4 v0, 0x2
 
     new-array v0, v0, [Lfvb;
@@ -54,7 +48,6 @@
 
     const/4 v4, 0x3
 
-    .line 3
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -71,7 +64,6 @@
 
     const/4 v4, 0x4
 
-    .line 4
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -80,7 +72,6 @@
 
     aput-object v2, v0, v1
 
-    .line 5
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -89,16 +80,13 @@
 
     move-result-object v0
 
-    .line 6
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 7
     invoke-static {v0, v1}, Ldt;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lfvg;
 
-    .line 8
     return-object v0
 .end method

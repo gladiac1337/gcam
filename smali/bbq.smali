@@ -41,10 +41,8 @@
 .method public final run()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x0
 
-    .line 1
     iget-object v1, p0, Lbbq;->a:Lbbp;
 
     iget-object v0, p0, Lbbq;->b:Landroid/view/Surface;
@@ -55,32 +53,26 @@
 
     iget-object v4, p0, Lbbq;->e:Liwp;
 
-    .line 2
     sget-object v5, Lbbp;->a:Ljava/lang/String;
 
     const-string v6, "Execute CameraCaptureSession-creation task on camera handler thread."
 
     invoke-static {v5, v6}, Lbgj;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3
     new-instance v5, Ljava/util/LinkedList;
 
     invoke-direct {v5}, Ljava/util/LinkedList;-><init>()V
 
-    .line 4
     invoke-interface {v5, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 5
     invoke-interface {v5, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 6
     invoke-virtual {v3}, Lilc;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7
     invoke-virtual {v3}, Lilc;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -89,7 +81,6 @@
 
     invoke-interface {v5, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 8
     :cond_0
     :try_start_0
     iget-object v0, v1, Lbbp;->b:Lhol;
@@ -104,11 +95,9 @@
     :try_end_0
     .catch Lhks; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 13
     :goto_0
     return-void
 
-    .line 11
     :catch_0
     move-exception v0
 
@@ -118,7 +107,6 @@
 
     invoke-static {v0, v1}, Lbgj;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     invoke-virtual {v4, v7}, Liuj;->a(Ljava/lang/Object;)Z
 
     goto :goto_0

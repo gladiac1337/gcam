@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public final synthetic a(Lhwy;)Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 2
     new-instance v0, Lidi;
 
     const/4 v1, 0x1
@@ -40,6 +36,5 @@
 
     invoke-direct {v0, v1}, Lidi;-><init>([Lidj;)V
 
-    .line 3
     return-object v0
 .end method

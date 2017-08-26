@@ -18,20 +18,14 @@
 .method constructor <init>(Ldi;Laoy;Lapb;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Laoz;->c:Ldi;
 
-    .line 3
     iput-object p2, p0, Laoz;->a:Laoy;
 
-    .line 4
     iput-object p3, p0, Laoz;->b:Lapb;
 
-    .line 5
     return-void
 .end method
 
@@ -40,25 +34,20 @@
 .method public final a()Ljava/lang/Object;
     .locals 5
 
-    .prologue
-    .line 6
     iget-object v0, p0, Laoz;->c:Ldi;
 
     invoke-interface {v0}, Ldi;->a()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 7
     if-nez v1, :cond_0
 
-    .line 8
     iget-object v0, p0, Laoz;->a:Laoy;
 
     invoke-interface {v0}, Laoy;->a()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 9
     const-string v0, "FactoryPools"
 
     const/4 v2, 0x2
@@ -69,7 +58,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 10
     const-string v0, "FactoryPools"
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -110,7 +98,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     :cond_0
     instance-of v0, v1, Lapa;
 
@@ -118,7 +105,6 @@
 
     move-object v0, v1
 
-    .line 12
     check-cast v0, Lapa;
 
     invoke-interface {v0}, Lapa;->a_()Lapc;
@@ -127,10 +113,8 @@
 
     const/4 v2, 0x0
 
-    .line 13
     iput-boolean v2, v0, Lapc;->a:Z
 
-    .line 14
     :cond_1
     return-object v1
 .end method
@@ -138,15 +122,12 @@
 .method public final a(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 15
     instance-of v0, p1, Lapa;
 
     if-eqz v0, :cond_0
 
     move-object v0, p1
 
-    .line 16
     check-cast v0, Lapa;
 
     invoke-interface {v0}, Lapa;->a_()Lapc;
@@ -155,16 +136,13 @@
 
     const/4 v1, 0x1
 
-    .line 17
     iput-boolean v1, v0, Lapc;->a:Z
 
-    .line 18
     :cond_0
     iget-object v0, p0, Laoz;->b:Lapb;
 
     invoke-interface {v0, p1}, Lapb;->a(Ljava/lang/Object;)V
 
-    .line 19
     iget-object v0, p0, Laoz;->c:Ldi;
 
     invoke-interface {v0, p1}, Ldi;->a(Ljava/lang/Object;)Z

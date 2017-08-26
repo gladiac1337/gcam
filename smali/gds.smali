@@ -18,8 +18,6 @@
 .method constructor <init>(Lilp;Lhic;Lfng;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgds;->a:Lilp;
 
     iput-object p2, p0, Lgds;->b:Lhic;
@@ -36,8 +34,6 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgds;->a:Lilp;
 
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
@@ -46,13 +42,11 @@
 
     check-cast v0, Lgdn;
 
-    .line 3
     iget-object v1, p0, Lgds;->b:Lhic;
 
     iget-object v2, p0, Lgds;->c:Lfng;
 
     invoke-static {v1, v2, v0}, Lkk;->a(Lhic;Lfng;Lfny;)V
 
-    .line 4
     return-void
 .end method

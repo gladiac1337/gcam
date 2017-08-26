@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,25 +20,20 @@
 .method public final handleMessage(Landroid/os/Message;)Z
     .locals 2
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 2
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-ne v0, v1, :cond_0
 
-    .line 3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Laei;
 
-    .line 4
     invoke-interface {v0}, Laei;->d()V
 
     move v0, v1
 
-    .line 6
     :goto_0
     return v0
 

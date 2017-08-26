@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 10
     const-string v0, "0123456789ABCDEF"
 
     invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
@@ -27,15 +25,12 @@
 .method public static a([B)Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 1
     array-length v0, p0
 
     shl-int/lit8 v0, v0, 0x1
 
     new-array v1, v0, [C
 
-    .line 2
     const/4 v0, 0x0
 
     :goto_0
@@ -43,10 +38,8 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 3
     aget-byte v2, p0, v0
 
-    .line 4
     sget-object v3, Lhpv;->a:[C
 
     shr-int/lit8 v4, v2, 0x4
@@ -55,31 +48,26 @@
 
     aget-char v3, v3, v4
 
-    .line 5
     sget-object v4, Lhpv;->a:[C
 
     and-int/lit8 v2, v2, 0xf
 
     aget-char v2, v4, v2
 
-    .line 6
     shl-int/lit8 v4, v0, 0x1
 
     aput-char v3, v1, v4
 
-    .line 7
     shl-int/lit8 v3, v0, 0x1
 
     add-int/lit8 v3, v3, 0x1
 
     aput-char v2, v1, v3
 
-    .line 8
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 9
     :cond_0
     new-instance v0, Ljava/lang/String;
 

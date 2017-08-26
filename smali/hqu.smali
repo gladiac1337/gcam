@@ -22,26 +22,18 @@
 .method public constructor <init>(Ljava/lang/Object;Lhrc;Ljava/util/concurrent/Executor;Lhro;Lhse;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lhqu;->a:Ljava/lang/Object;
 
-    .line 3
     iput-object p3, p0, Lhqu;->b:Ljava/util/concurrent/Executor;
 
-    .line 4
     iput-object p4, p0, Lhqu;->c:Lhro;
 
-    .line 5
     iput-object p2, p0, Lhqu;->d:Lhrc;
 
-    .line 6
     iput-object p5, p0, Lhqu;->e:Lhse;
 
-    .line 7
     return-void
 .end method
 
@@ -50,8 +42,6 @@
 .method public final run()V
     .locals 6
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lhqu;->a:Ljava/lang/Object;
 
     iget-object v1, p0, Lhqu;->d:Lhrc;
@@ -62,16 +52,13 @@
 
     iget-object v4, p0, Lhqu;->e:Lhse;
 
-    .line 10
     :try_start_0
     invoke-interface {v1, v0, v2}, Lhrc;->a(Ljava/lang/Object;Ljava/util/concurrent/Executor;)Lhqy;
 
     move-result-object v0
 
-    .line 11
     sget-object v1, Liwj;->a:Liwj;
 
-    .line 12
     new-instance v2, Lhqw;
 
     invoke-direct {v2, v3}, Lhqw;-><init>(Lhro;)V
@@ -86,38 +73,30 @@
 
     sget-object v1, Lhqe;->a:Lhqe;
 
-    .line 13
     invoke-interface {v0, v1}, Lhqy;->a(Lhpy;)V
     :try_end_0
     .catch Lhra; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 23
     :goto_0
     return-void
 
-    .line 15
     :catch_0
     move-exception v0
 
-    .line 16
     invoke-virtual {v3, v0}, Lhro;->a(Lhra;)Z
 
     goto :goto_0
 
-    .line 18
     :catch_1
     move-exception v0
 
-    .line 20
     invoke-static {v0}, Lhra;->a(Ljava/lang/Throwable;)Lhra;
 
     move-result-object v0
 
-    .line 21
     check-cast v0, Lhra;
 
-    .line 22
     invoke-virtual {v3, v0}, Lhro;->a(Lhra;)Z
 
     goto :goto_0
@@ -126,8 +105,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lhqu;->d:Lhrc;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

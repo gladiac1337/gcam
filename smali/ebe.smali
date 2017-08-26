@@ -14,8 +14,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 13
     const-string v0, "BrightnessMtrMetric"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -26,14 +24,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lebe;->a:I
 
-    .line 3
     return-void
 .end method
 
@@ -42,8 +36,6 @@
 .method public final a(Lhop;)F
     .locals 5
 
-    .prologue
-    .line 4
     :try_start_0
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->SENSOR_EXPOSURE_TIME:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -59,7 +51,6 @@
 
     long-to-float v1, v0
 
-    .line 5
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->SENSOR_SENSITIVITY:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p1, v0}, Lhop;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -74,7 +65,6 @@
 
     int-to-float v2, v0
 
-    .line 6
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_POST_RAW_SENSITIVITY_BOOST:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p1, v0}, Lhop;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -89,14 +79,12 @@
 
     int-to-float v0, v0
 
-    .line 7
     const/high16 v3, 0x42c80000    # 100.0f
 
     div-float/2addr v0, v3
 
     mul-float/2addr v2, v0
 
-    .line 8
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->LENS_APERTURE:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p1, v0}, Lhop;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -109,7 +97,6 @@
 
     move-result v0
 
-    .line 9
     const v3, 0x4ed693a5    # 1.80000013E9f
 
     iget v4, p0, Lebe;->a:I
@@ -128,7 +115,6 @@
 
     div-float/2addr v0, v1
 
-    .line 12
     :goto_0
     return v0
 

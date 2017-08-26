@@ -11,14 +11,10 @@
 .method public constructor <init>(Lavm;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Lawx;-><init>(Lavm;)V
 
-    .line 2
     iput-object p1, p0, Lelv;->a:Lavm;
 
-    .line 3
     return-void
 .end method
 
@@ -27,18 +23,14 @@
 .method protected final synthetic b(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 4
     check-cast p1, Lgbc;
 
-    .line 5
     invoke-virtual {p1}, Lgbc;->ordinal()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Unknown WB output value"
@@ -47,7 +39,6 @@
 
     throw v0
 
-    .line 6
     :pswitch_0
     const/4 v0, 0x1
 
@@ -55,11 +46,9 @@
 
     move-result-object v0
 
-    .line 10
     :goto_0
     return-object v0
 
-    .line 7
     :pswitch_1
     const/4 v0, 0x6
 
@@ -69,7 +58,6 @@
 
     goto :goto_0
 
-    .line 8
     :pswitch_2
     const/4 v0, 0x5
 
@@ -79,7 +67,6 @@
 
     goto :goto_0
 
-    .line 9
     :pswitch_3
     const/4 v0, 0x2
 
@@ -89,7 +76,6 @@
 
     goto :goto_0
 
-    .line 10
     :pswitch_4
     const/4 v0, 0x3
 
@@ -99,7 +85,6 @@
 
     goto :goto_0
 
-    .line 5
     nop
 
     :pswitch_data_0
@@ -115,18 +100,14 @@
 .method protected final synthetic c(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 12
     check-cast p1, Ljava/lang/Integer;
 
-    .line 13
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 19
     :pswitch_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -136,39 +117,32 @@
 
     throw v0
 
-    .line 14
     :pswitch_1
     sget-object v0, Lgbc;->a:Lgbc;
 
-    .line 18
     :goto_0
     return-object v0
 
-    .line 15
     :pswitch_2
     sget-object v0, Lgbc;->b:Lgbc;
 
     goto :goto_0
 
-    .line 16
     :pswitch_3
     sget-object v0, Lgbc;->c:Lgbc;
 
     goto :goto_0
 
-    .line 17
     :pswitch_4
     sget-object v0, Lgbc;->d:Lgbc;
 
     goto :goto_0
 
-    .line 18
     :pswitch_5
     sget-object v0, Lgbc;->e:Lgbc;
 
     goto :goto_0
 
-    .line 13
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

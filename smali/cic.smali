@@ -35,11 +35,8 @@
 .method public constructor <init>(Lgmu;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const v0, 0x7f0e00f0
 
     invoke-virtual {p1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -50,7 +47,6 @@
 
     iput-object v0, p0, Lcic;->a:Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/PeekableFilmstripLayout;
 
-    .line 3
     const v0, 0x7f0e00f3
 
     invoke-virtual {p1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -61,7 +57,6 @@
 
     iput-object v0, p0, Lcic;->b:Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/FilmstripView;
 
-    .line 4
     const v0, 0x7f0e00f2
 
     invoke-virtual {p1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -72,7 +67,6 @@
 
     iput-object v0, p0, Lcic;->c:Landroid/widget/FrameLayout;
 
-    .line 5
     const v0, 0x7f0e0115
 
     invoke-virtual {p1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -83,7 +77,6 @@
 
     iput-object v0, p0, Lcic;->d:Landroid/widget/LinearLayout;
 
-    .line 6
     const v0, 0x7f0e00f9
 
     invoke-virtual {p1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -94,7 +87,6 @@
 
     iput-object v0, p0, Lcic;->e:Landroid/widget/LinearLayout;
 
-    .line 7
     const v0, 0x7f0e00fb
 
     invoke-virtual {p1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -105,7 +97,6 @@
 
     iput-object v0, p0, Lcic;->f:Landroid/widget/ImageView;
 
-    .line 8
     const v0, 0x7f0e00fc
 
     invoke-virtual {p1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -116,7 +107,6 @@
 
     iput-object v0, p0, Lcic;->g:Landroid/widget/TextView;
 
-    .line 9
     const v0, 0x7f0e00fa
 
     invoke-virtual {p1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -127,7 +117,6 @@
 
     iput-object v0, p0, Lcic;->h:Landroid/widget/ProgressBar;
 
-    .line 10
     const v0, 0x7f0e019d
 
     invoke-virtual {p1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -138,7 +127,6 @@
 
     iput-object v0, p0, Lcic;->i:Landroid/view/ViewGroup;
 
-    .line 11
     const v0, 0x7f0e019e
 
     invoke-virtual {p1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -149,7 +137,6 @@
 
     iput-object v0, p0, Lcic;->j:Landroid/view/View;
 
-    .line 12
     const v0, 0x7f0e00f7
 
     invoke-virtual {p1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -160,7 +147,6 @@
 
     iput-object v0, p0, Lcic;->k:Landroid/widget/TextView;
 
-    .line 13
     const v0, 0x7f0e00f4
 
     invoke-virtual {p1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -171,7 +157,6 @@
 
     iput-object v0, p0, Lcic;->l:Landroid/view/View;
 
-    .line 14
     const v0, 0x7f0e0124
 
     invoke-virtual {p1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -182,6 +167,5 @@
 
     iput-object v0, p0, Lcic;->m:Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/FilmstripShortTallBottomBarBackground;
 
-    .line 15
     return-void
 .end method

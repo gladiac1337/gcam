@@ -7,22 +7,16 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     return-void
 .end method
 
 .method public static addAction(Landroid/app/Notification$Builder;Landroid/support/v4/app/NotificationCompatBase$Action;)V
     .locals 5
 
-    .prologue
-    .line 3
     new-instance v1, Landroid/app/Notification$Action$Builder;
 
-    .line 4
     invoke-virtual {p1}, Landroid/support/v4/app/NotificationCompatBase$Action;->getIcon()I
 
     move-result v0
@@ -37,19 +31,16 @@
 
     invoke-direct {v1, v0, v2, v3}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    .line 5
     invoke-virtual {p1}, Landroid/support/v4/app/NotificationCompatBase$Action;->getRemoteInputs()[Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 7
     invoke-virtual {p1}, Landroid/support/v4/app/NotificationCompatBase$Action;->getRemoteInputs()[Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;
 
     move-result-object v0
 
-    .line 8
     invoke-static {v0}, Landroid/support/v4/app/RemoteInputCompatApi20;->fromCompat([Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;)[Landroid/app/RemoteInput;
 
     move-result-object v2
@@ -63,15 +54,12 @@
 
     aget-object v4, v2, v0
 
-    .line 9
     invoke-virtual {v1, v4}, Landroid/app/Notification$Action$Builder;->addRemoteInput(Landroid/app/RemoteInput;)Landroid/app/Notification$Action$Builder;
 
-    .line 10
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 11
     :cond_0
     invoke-virtual {p1}, Landroid/support/v4/app/NotificationCompatBase$Action;->getExtras()Landroid/os/Bundle;
 
@@ -79,7 +67,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 12
     new-instance v0, Landroid/os/Bundle;
 
     invoke-virtual {p1}, Landroid/support/v4/app/NotificationCompatBase$Action;->getExtras()Landroid/os/Bundle;
@@ -88,32 +75,25 @@
 
     invoke-direct {v0, v2}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
-    .line 14
     :goto_1
     const-string v2, "android.support.allowGeneratedReplies"
 
-    .line 15
     invoke-virtual {p1}, Landroid/support/v4/app/NotificationCompatBase$Action;->getAllowGeneratedReplies()Z
 
     move-result v3
 
-    .line 16
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 17
     invoke-virtual {v1, v0}, Landroid/app/Notification$Action$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/Notification$Action$Builder;
 
-    .line 18
     invoke-virtual {v1}, Landroid/app/Notification$Action$Builder;->build()Landroid/app/Notification$Action;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/app/Notification$Builder;->addAction(Landroid/app/Notification$Action;)Landroid/app/Notification$Builder;
 
-    .line 19
     return-void
 
-    .line 13
     :cond_1
     new-instance v0, Landroid/os/Bundle;
 
@@ -125,8 +105,6 @@
 .method public static getAction(Landroid/app/Notification;ILandroid/support/v4/app/NotificationCompatBase$Action$Factory;Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput$Factory;)Landroid/support/v4/app/NotificationCompatBase$Action;
     .locals 1
 
-    .prologue
-    .line 20
     iget-object v0, p0, Landroid/app/Notification;->actions:[Landroid/app/Notification$Action;
 
     aget-object v0, v0, p1
@@ -141,19 +119,14 @@
 .method private static getActionCompatFromAction(Landroid/app/Notification$Action;Landroid/support/v4/app/NotificationCompatBase$Action$Factory;Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput$Factory;)Landroid/support/v4/app/NotificationCompatBase$Action;
     .locals 8
 
-    .prologue
-    .line 21
-    .line 22
     invoke-virtual {p0}, Landroid/app/Notification$Action;->getRemoteInputs()[Landroid/app/RemoteInput;
 
     move-result-object v0
 
-    .line 23
     invoke-static {v0, p2}, Landroid/support/v4/app/RemoteInputCompatApi20;->toCompat([Landroid/app/RemoteInput;Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput$Factory;)[Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;
 
     move-result-object v5
 
-    .line 24
     invoke-virtual {p0}, Landroid/app/Notification$Action;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
@@ -164,14 +137,12 @@
 
     move-result v7
 
-    .line 25
     iget v1, p0, Landroid/app/Notification$Action;->icon:I
 
     iget-object v2, p0, Landroid/app/Notification$Action;->title:Ljava/lang/CharSequence;
 
     iget-object v3, p0, Landroid/app/Notification$Action;->actionIntent:Landroid/app/PendingIntent;
 
-    .line 26
     invoke-virtual {p0}, Landroid/app/Notification$Action;->getExtras()Landroid/os/Bundle;
 
     move-result-object v4
@@ -180,7 +151,6 @@
 
     move-object v0, p1
 
-    .line 27
     invoke-interface/range {v0 .. v7}, Landroid/support/v4/app/NotificationCompatBase$Action$Factory;->build(ILjava/lang/CharSequence;Landroid/app/PendingIntent;Landroid/os/Bundle;[Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;[Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;Z)Landroid/support/v4/app/NotificationCompatBase$Action;
 
     move-result-object v0
@@ -191,11 +161,8 @@
 .method private static getActionFromActionCompat(Landroid/support/v4/app/NotificationCompatBase$Action;)Landroid/app/Notification$Action;
     .locals 5
 
-    .prologue
-    .line 28
     new-instance v1, Landroid/app/Notification$Action$Builder;
 
-    .line 29
     invoke-virtual {p0}, Landroid/support/v4/app/NotificationCompatBase$Action;->getIcon()I
 
     move-result v0
@@ -210,14 +177,12 @@
 
     invoke-direct {v1, v0, v2, v3}, Landroid/app/Notification$Action$Builder;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    .line 30
     invoke-virtual {p0}, Landroid/support/v4/app/NotificationCompatBase$Action;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 31
     new-instance v0, Landroid/os/Bundle;
 
     invoke-virtual {p0}, Landroid/support/v4/app/NotificationCompatBase$Action;->getExtras()Landroid/os/Bundle;
@@ -226,35 +191,27 @@
 
     invoke-direct {v0, v2}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
-    .line 33
     :goto_0
     const-string v2, "android.support.allowGeneratedReplies"
 
-    .line 34
     invoke-virtual {p0}, Landroid/support/v4/app/NotificationCompatBase$Action;->getAllowGeneratedReplies()Z
 
     move-result v3
 
-    .line 35
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 36
     invoke-virtual {v1, v0}, Landroid/app/Notification$Action$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/Notification$Action$Builder;
 
-    .line 37
     invoke-virtual {p0}, Landroid/support/v4/app/NotificationCompatBase$Action;->getRemoteInputs()[Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;
 
     move-result-object v0
 
-    .line 38
     if-eqz v0, :cond_1
 
-    .line 39
     invoke-static {v0}, Landroid/support/v4/app/RemoteInputCompatApi20;->fromCompat([Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;)[Landroid/app/RemoteInput;
 
     move-result-object v2
 
-    .line 40
     array-length v3, v2
 
     const/4 v0, 0x0
@@ -264,15 +221,12 @@
 
     aget-object v4, v2, v0
 
-    .line 41
     invoke-virtual {v1, v4}, Landroid/app/Notification$Action$Builder;->addRemoteInput(Landroid/app/RemoteInput;)Landroid/app/Notification$Action$Builder;
 
-    .line 42
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 32
     :cond_0
     new-instance v0, Landroid/os/Bundle;
 
@@ -280,7 +234,6 @@
 
     goto :goto_0
 
-    .line 43
     :cond_1
     invoke-virtual {v1}, Landroid/app/Notification$Action$Builder;->build()Landroid/app/Notification$Action;
 
@@ -292,18 +245,13 @@
 .method public static getActionsFromParcelableArrayList(Ljava/util/ArrayList;Landroid/support/v4/app/NotificationCompatBase$Action$Factory;Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput$Factory;)[Landroid/support/v4/app/NotificationCompatBase$Action;
     .locals 3
 
-    .prologue
-    .line 44
     if-nez p0, :cond_0
 
-    .line 45
     const/4 v0, 0x0
 
-    .line 51
     :goto_0
     return-object v0
 
-    .line 46
     :cond_0
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
@@ -313,7 +261,6 @@
 
     move-result-object v2
 
-    .line 47
     const/4 v0, 0x0
 
     move v1, v0
@@ -323,21 +270,18 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 48
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/Notification$Action;
 
-    .line 49
     invoke-static {v0, p1, p2}, Landroid/support/v4/app/NotificationCompatApi20;->getActionCompatFromAction(Landroid/app/Notification$Action;Landroid/support/v4/app/NotificationCompatBase$Action$Factory;Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput$Factory;)Landroid/support/v4/app/NotificationCompatBase$Action;
 
     move-result-object v0
 
     aput-object v0, v2, v1
 
-    .line 50
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
@@ -347,25 +291,19 @@
     :cond_1
     move-object v0, v2
 
-    .line 51
     goto :goto_0
 .end method
 
 .method public static getParcelableArrayListForActions([Landroid/support/v4/app/NotificationCompatBase$Action;)Ljava/util/ArrayList;
     .locals 4
 
-    .prologue
-    .line 52
     if-nez p0, :cond_1
 
-    .line 53
     const/4 v0, 0x0
 
-    .line 58
     :cond_0
     return-object v0
 
-    .line 54
     :cond_1
     new-instance v0, Ljava/util/ArrayList;
 
@@ -373,7 +311,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 55
     array-length v2, p0
 
     const/4 v1, 0x0
@@ -383,14 +320,12 @@
 
     aget-object v3, p0, v1
 
-    .line 56
     invoke-static {v3}, Landroid/support/v4/app/NotificationCompatApi20;->getActionFromActionCompat(Landroid/support/v4/app/NotificationCompatBase$Action;)Landroid/app/Notification$Action;
 
     move-result-object v3
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 57
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0

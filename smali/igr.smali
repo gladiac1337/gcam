@@ -14,23 +14,18 @@
 .method public constructor <init>(Lije;)V
     .locals 6
 
-    .prologue
     const/4 v4, 0x2
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     iget-object v0, p1, Lije;->C:[I
 
-    .line 5
     array-length v0, v0
 
     if-gt v0, v4, :cond_0
@@ -40,39 +35,30 @@
     :goto_0
     invoke-static {v0}, Lid;->a(Z)V
 
-    .line 7
     iget-object v0, p1, Lije;->C:[I
 
-    .line 11
     array-length v3, v0
 
     if-ne v3, v4, :cond_1
 
-    .line 12
     aget v2, v0, v2
 
-    .line 13
     aget v0, v0, v1
 
-    .line 16
     :goto_1
     new-instance v3, Lijd;
 
     invoke-direct {v3, v2, v0, v1}, Lijd;-><init>(IIZ)V
 
-    .line 17
     iput-object v3, p0, Ligr;->a:Lijd;
 
-    .line 18
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 5
     goto :goto_0
 
-    .line 15
     :cond_1
     aget v0, v0, v2
 
@@ -90,8 +76,6 @@
 .method public final a(Lcom/google/android/libraries/smartburst/utils/Feature;Lcom/google/android/libraries/smartburst/utils/Feature;)F
     .locals 14
 
-    .prologue
-    .line 19
     iget-object v4, p0, Ligr;->a:Lijd;
 
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/utils/Feature;->getValues()[F
@@ -102,17 +86,14 @@
 
     move-result-object v2
 
-    .line 20
     const-string v0, "hist1"
 
     invoke-static {v1, v0}, Lid;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 21
     const-string v0, "hist2"
 
     invoke-static {v1, v0}, Lid;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 22
     array-length v0, v1
 
     iget v3, v4, Lijd;->b:I
@@ -130,7 +111,6 @@
 
     invoke-static {v0, v3}, Lid;->a(ZLjava/lang/Object;)V
 
-    .line 23
     array-length v0, v2
 
     iget v3, v4, Lijd;->b:I
@@ -148,15 +128,12 @@
 
     invoke-static {v0, v3}, Lid;->a(ZLjava/lang/Object;)V
 
-    .line 25
     iget-object v0, v4, Lijd;->e:[[F
 
     array-length v0, v0
 
-    .line 26
     add-int/lit8 v5, v0, -0x1
 
-    .line 27
     iget-object v3, v4, Lijd;->e:[[F
 
     array-length v6, v3
@@ -168,29 +145,24 @@
 
     aget-object v7, v3, v0
 
-    .line 28
     const/4 v8, 0x0
 
     invoke-static {v7, v8}, Ljava/util/Arrays;->fill([FF)V
 
-    .line 29
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 22
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 23
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 30
     :cond_2
     const/4 v0, 0x0
 
@@ -203,24 +175,20 @@
 
     if-ge v0, v3, :cond_5
 
-    .line 31
     aget v3, v1, v0
 
     aget v6, v2, v0
 
     sub-float/2addr v3, v6
 
-    .line 32
     add-int/lit8 v6, v0, 0x1
 
-    .line 33
     const/4 v7, 0x0
 
     cmpl-float v7, v3, v7
 
     if-lez v7, :cond_4
 
-    .line 34
     iget-object v7, v4, Lijd;->e:[[F
 
     const/4 v8, 0x0
@@ -229,14 +197,12 @@
 
     aput v3, v7, v6
 
-    .line 37
     :cond_3
     :goto_4
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 35
     :cond_4
     const/4 v7, 0x0
 
@@ -244,7 +210,6 @@
 
     if-gez v7, :cond_3
 
-    .line 36
     iget-object v7, v4, Lijd;->e:[[F
 
     aget-object v6, v7, v6
@@ -255,7 +220,6 @@
 
     goto :goto_4
 
-    .line 38
     :cond_5
     const/4 v0, 0x1
 
@@ -264,7 +228,6 @@
     :goto_5
     if-ge v3, v5, :cond_d
 
-    .line 39
     iget-object v0, v4, Lijd;->e:[[F
 
     const/4 v1, 0x0
@@ -279,14 +242,12 @@
 
     if-eqz v0, :cond_c
 
-    .line 41
     iget v0, v4, Lijd;->b:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_8
 
-    .line 42
     iget v0, v4, Lijd;->c:I
 
     iget-boolean v1, v4, Lijd;->d:Z
@@ -299,7 +260,6 @@
     :goto_6
     move-object v1, v0
 
-    .line 60
     check-cast v1, Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -322,7 +282,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 61
     iget-object v7, v4, Lijd;->e:[[F
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
@@ -339,7 +298,6 @@
 
     if-lez v7, :cond_7
 
-    .line 62
     iget-object v7, v4, Lijd;->e:[[F
 
     aget-object v7, v7, v3
@@ -354,7 +312,6 @@
 
     goto :goto_7
 
-    .line 43
     :cond_8
     iget v0, v4, Lijd;->c:I
 
@@ -362,7 +319,6 @@
 
     if-ne v0, v1, :cond_9
 
-    .line 44
     iget v0, v4, Lijd;->b:I
 
     const/4 v1, 0x0
@@ -373,7 +329,6 @@
 
     goto :goto_6
 
-    .line 45
     :cond_9
     iget v6, v4, Lijd;->b:I
 
@@ -381,22 +336,18 @@
 
     iget-boolean v8, v4, Lijd;->d:Z
 
-    .line 46
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 47
     add-int/lit8 v1, v3, -0x1
 
     rem-int v9, v1, v7
 
-    .line 48
     add-int/lit8 v1, v3, -0x1
 
     div-int v10, v1, v7
 
-    .line 49
     add-int/lit8 v1, v9, -0x1
 
     move v2, v1
@@ -406,17 +357,14 @@
 
     if-gt v2, v1, :cond_6
 
-    .line 50
     invoke-static {v2, v7, v8}, Lijd;->b(IIZ)I
 
     move-result v11
 
-    .line 51
     const/4 v1, -0x1
 
     if-eq v11, v1, :cond_b
 
-    .line 52
     add-int/lit8 v1, v10, -0x1
 
     :goto_9
@@ -424,39 +372,33 @@
 
     if-gt v1, v12, :cond_b
 
-    .line 53
     const/4 v12, 0x0
 
     invoke-static {v1, v6, v12}, Lijd;->b(IIZ)I
 
     move-result v12
 
-    .line 54
     const/4 v13, -0x1
 
     if-eq v12, v13, :cond_a
 
-    .line 55
     mul-int/2addr v12, v7
 
     add-int/2addr v12, v11
 
     add-int/lit8 v12, v12, 0x1
 
-    .line 56
     invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v12
 
     invoke-virtual {v0, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 57
     :cond_a
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_9
 
-    .line 58
     :cond_b
     add-int/lit8 v1, v2, 0x1
 
@@ -464,7 +406,6 @@
 
     goto :goto_8
 
-    .line 64
     :cond_c
     add-int/lit8 v0, v3, 0x1
 
@@ -472,7 +413,6 @@
 
     goto/16 :goto_5
 
-    .line 65
     :cond_d
     iget-object v0, v4, Lijd;->a:Lijh;
 
@@ -482,10 +422,8 @@
 
     move-result v2
 
-    .line 66
     const/4 v1, 0x0
 
-    .line 67
     const/4 v0, 0x0
 
     :goto_a
@@ -495,7 +433,6 @@
 
     if-ge v0, v3, :cond_e
 
-    .line 68
     iget-object v3, v4, Lijd;->e:[[F
 
     const/4 v5, 0x0
@@ -506,12 +443,10 @@
 
     add-float/2addr v1, v3
 
-    .line 69
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_a
 
-    .line 70
     :cond_e
     const/high16 v0, 0x3f000000    # 0.5f
 
@@ -519,6 +454,5 @@
 
     sub-float v0, v1, v0
 
-    .line 71
     return v0
 .end method

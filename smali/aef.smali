@@ -15,14 +15,10 @@
 .method public constructor <init>(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;Ljava/util/List;Ldi;)V
     .locals 5
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p5, p0, Laef;->a:Ldi;
 
-    .line 3
     invoke-static {p4}, Lhco;->a(Ljava/util/Collection;)Ljava/util/Collection;
 
     move-result-object v0
@@ -31,12 +27,10 @@
 
     iput-object v0, p0, Laef;->b:Ljava/util/List;
 
-    .line 4
     invoke-virtual {p1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5
     invoke-virtual {p2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v1
@@ -121,15 +115,12 @@
 
     iput-object v0, p0, Laef;->c:Ljava/lang/String;
 
-    .line 6
     return-void
 .end method
 
 .method private final a(Labx;Labq;IILadf;Ljava/util/List;)Laei;
     .locals 18
 
-    .prologue
-    .line 12
     move-object/from16 v0, p0
 
     iget-object v4, v0, Laef;->b:Ljava/util/List;
@@ -138,10 +129,8 @@
 
     move-result v17
 
-    .line 13
     const/4 v13, 0x0
 
-    .line 14
     const/4 v4, 0x0
 
     move/from16 v16, v4
@@ -153,7 +142,6 @@
 
     if-ge v0, v1, :cond_a
 
-    .line 15
     move-object/from16 v0, p0
 
     iget-object v4, v0, Laef;->b:Ljava/util/List;
@@ -168,7 +156,6 @@
 
     check-cast v12, Lade;
 
-    .line 17
     :try_start_0
     move-object/from16 v0, p1
 
@@ -182,7 +169,6 @@
 
     move-result-object v4
 
-    .line 20
     invoke-interface {v4}, Laei;->b()Ljava/lang/Object;
 
     move-result-object v5
@@ -191,10 +177,8 @@
 
     move-result-object v10
 
-    .line 22
     const/4 v9, 0x0
 
-    .line 24
     move-object/from16 v0, p5
 
     iget-object v5, v0, Ladf;->a:Labf;
@@ -203,7 +187,6 @@
 
     if-eq v5, v6, :cond_e
 
-    .line 25
     move-object/from16 v0, p5
 
     iget-object v5, v0, Ladf;->b:Lacx;
@@ -214,15 +197,12 @@
 
     move-result-object v9
 
-    .line 26
     move-object/from16 v0, p5
 
     iget-object v5, v0, Ladf;->b:Lacx;
 
-    .line 27
     iget-object v5, v5, Lacx;->e:Laad;
 
-    .line 28
     move-object/from16 v0, p5
 
     iget-object v6, v0, Ladf;->b:Lacx;
@@ -239,7 +219,6 @@
 
     move-result-object v14
 
-    .line 29
     :goto_1
     invoke-virtual {v4, v14}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -247,10 +226,8 @@
 
     if-nez v5, :cond_0
 
-    .line 30
     invoke-interface {v4}, Laei;->d()V
 
-    .line 31
     :cond_0
     move-object/from16 v0, p5
 
@@ -258,13 +235,10 @@
 
     iget-object v4, v4, Lacx;->a:Lacw;
 
-    .line 32
     iget-object v4, v4, Lacw;->c:Laad;
 
-    .line 33
     iget-object v4, v4, Laad;->b:Laag;
 
-    .line 35
     iget-object v4, v4, Laag;->b:Lamy;
 
     invoke-interface {v14}, Laei;->a()Ljava/lang/Class;
@@ -279,24 +253,19 @@
 
     const/4 v4, 0x1
 
-    .line 36
     :goto_2
     if-eqz v4, :cond_3
 
-    .line 37
     move-object/from16 v0, p5
 
     iget-object v4, v0, Ladf;->b:Lacx;
 
     iget-object v4, v4, Lacx;->a:Lacw;
 
-    .line 38
     iget-object v4, v4, Lacw;->c:Laad;
 
-    .line 39
     iget-object v4, v4, Laad;->b:Laag;
 
-    .line 41
     iget-object v4, v4, Laag;->b:Lamy;
 
     invoke-interface {v14}, Laei;->a()Ljava/lang/Class;
@@ -307,10 +276,8 @@
 
     move-result-object v4
 
-    .line 42
     if-eqz v4, :cond_2
 
-    .line 46
     move-object/from16 v0, p5
 
     iget-object v5, v0, Ladf;->b:Lacx;
@@ -325,7 +292,6 @@
 
     move-object v6, v5
 
-    .line 50
     :goto_3
     move-object/from16 v0, p5
 
@@ -339,17 +305,14 @@
 
     iget-object v7, v5, Lacx;->q:Labm;
 
-    .line 51
     invoke-virtual {v4}, Lacw;->a()Ljava/util/List;
 
     move-result-object v8
 
-    .line 52
     invoke-interface {v8}, Ljava/util/List;->size()I
 
     move-result v11
 
-    .line 53
     const/4 v4, 0x0
 
     move v5, v4
@@ -357,14 +320,12 @@
     :goto_4
     if-ge v5, v11, :cond_5
 
-    .line 54
     invoke-interface {v8, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lahx;
 
-    .line 55
     iget-object v4, v4, Lahx;->a:Labm;
 
     invoke-interface {v4, v7}, Labm;->equals(Ljava/lang/Object;)Z
@@ -373,16 +334,13 @@
 
     if-eqz v4, :cond_4
 
-    .line 56
     const/4 v4, 0x1
 
-    .line 59
     :goto_5
     if-nez v4, :cond_6
 
     const/4 v4, 0x1
 
-    .line 60
     :goto_6
     move-object/from16 v0, p5
 
@@ -400,10 +358,8 @@
 
     if-eqz v4, :cond_d
 
-    .line 61
     if-nez v15, :cond_7
 
-    .line 62
     new-instance v4, Laah;
 
     invoke-interface {v14}, Laei;->b()Ljava/lang/Object;
@@ -420,22 +376,18 @@
     :try_end_0
     .catch Laec; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 79
     :catch_0
     move-exception v4
 
-    .line 80
     move-object/from16 v0, p6
 
     invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     move-object v4, v13
 
-    .line 81
     :goto_7
     if-nez v4, :cond_b
 
-    .line 82
     add-int/lit8 v5, v16, 0x1
 
     move/from16 v16, v5
@@ -444,13 +396,11 @@
 
     goto/16 :goto_0
 
-    .line 35
     :cond_1
     const/4 v4, 0x0
 
     goto :goto_2
 
-    .line 44
     :cond_2
     :try_start_1
     new-instance v4, Laah;
@@ -463,11 +413,9 @@
 
     throw v4
 
-    .line 47
     :cond_3
     const/4 v4, 0x0
 
-    .line 48
     sget-object v5, Labh;->c:Labh;
 
     move-object v15, v4
@@ -476,7 +424,6 @@
 
     goto :goto_3
 
-    .line 57
     :cond_4
     add-int/lit8 v4, v5, 0x1
 
@@ -484,25 +431,21 @@
 
     goto :goto_4
 
-    .line 58
     :cond_5
     const/4 v4, 0x0
 
     goto :goto_5
 
-    .line 59
     :cond_6
     const/4 v4, 0x0
 
     goto :goto_6
 
-    .line 63
     :cond_7
     sget-object v4, Labh;->a:Labh;
 
     if-ne v6, v4, :cond_8
 
-    .line 64
     new-instance v4, Lact;
 
     move-object/from16 v0, p5
@@ -521,29 +464,23 @@
 
     move-object v5, v4
 
-    .line 68
     :goto_8
     invoke-static {v14}, Laeg;->a(Laei;)Laeg;
 
     move-result-object v4
 
-    .line 69
     move-object/from16 v0, p5
 
     iget-object v6, v0, Ladf;->b:Lacx;
 
     iget-object v6, v6, Lacx;->c:Lacz;
 
-    .line 70
     iput-object v5, v6, Lacz;->a:Labm;
 
-    .line 71
     iput-object v15, v6, Lacz;->b:Labs;
 
-    .line 72
     iput-object v4, v6, Lacz;->c:Laeg;
 
-    .line 76
     :goto_9
     iget-object v5, v12, Lade;->a:Lals;
 
@@ -553,13 +490,11 @@
 
     goto :goto_7
 
-    .line 65
     :cond_8
     sget-object v4, Labh;->b:Labh;
 
     if-ne v6, v4, :cond_9
 
-    .line 66
     new-instance v4, Laek;
 
     move-object/from16 v0, p5
@@ -598,7 +533,6 @@
 
     goto :goto_8
 
-    .line 67
     :cond_9
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
@@ -643,11 +577,9 @@
     :cond_a
     move-object v4, v13
 
-    .line 83
     :cond_b
     if-nez v4, :cond_c
 
-    .line 84
     new-instance v4, Laec;
 
     move-object/from16 v0, p0
@@ -664,7 +596,6 @@
 
     throw v4
 
-    .line 85
     :cond_c
     return-object v4
 
@@ -684,8 +615,6 @@
 .method public final a(Labx;Labq;IILadf;)Laei;
     .locals 7
 
-    .prologue
-    .line 7
     iget-object v0, p0, Laef;->a:Ldi;
 
     invoke-interface {v0}, Ldi;->a()Ljava/lang/Object;
@@ -706,7 +635,6 @@
 
     move-object v5, p5
 
-    .line 8
     :try_start_0
     invoke-direct/range {v0 .. v6}, Laef;->a(Labx;Labq;IILadf;Ljava/util/List;)Laei;
     :try_end_0
@@ -714,15 +642,12 @@
 
     move-result-object v0
 
-    .line 9
     iget-object v1, p0, Laef;->a:Ldi;
 
     invoke-interface {v1, v6}, Ldi;->a(Ljava/lang/Object;)Z
 
-    .line 10
     return-object v0
 
-    .line 11
     :catchall_0
     move-exception v0
 
@@ -736,13 +661,10 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 86
     iget-object v0, p0, Laef;->b:Ljava/util/List;
 
     iget-object v1, p0, Laef;->b:Ljava/util/List;
 
-    .line 87
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -791,6 +713,5 @@
 
     move-result-object v0
 
-    .line 88
     return-object v0
 .end method

@@ -14,14 +14,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     sget-object v0, Lany;->b:Laoc;
 
-    .line 4
     iput-object v0, p0, Laap;->a:Laoc;
 
     return-void
@@ -30,8 +26,6 @@
 .method public constructor <init>(B)V
     .locals 0
 
-    .prologue
-    .line 9
     invoke-direct {p0}, Laap;-><init>()V
 
     return-void
@@ -40,8 +34,6 @@
 .method public constructor <init>(C)V
     .locals 0
 
-    .prologue
-    .line 10
     invoke-direct {p0}, Laap;-><init>()V
 
     return-void
@@ -52,8 +44,6 @@
 .method protected final a()Laap;
     .locals 2
 
-    .prologue
-    .line 5
     :try_start_0
     invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
@@ -65,11 +55,9 @@
 
     return-object v0
 
-    .line 6
     :catch_0
     move-exception v0
 
-    .line 7
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -80,8 +68,6 @@
 .method protected final synthetic clone()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 8
     invoke-virtual {p0}, Laap;->a()Laap;
 
     move-result-object v0

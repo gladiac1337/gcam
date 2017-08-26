@@ -11,14 +11,10 @@
 .method public constructor <init>(Ljava/io/OutputStream;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lhqg;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lhup;->a:Ljava/io/OutputStream;
 
-    .line 3
     return-void
 .end method
 
@@ -27,11 +23,8 @@
 .method public final synthetic b(Ljava/lang/Object;)V
     .locals 7
 
-    .prologue
-    .line 4
     check-cast p1, Ljava/util/List;
 
-    .line 5
     :try_start_0
     iget-object v3, p0, Lhup;->a:Ljava/io/OutputStream;
     :try_end_0
@@ -39,14 +32,11 @@
 
     const/4 v1, 0x0
 
-    .line 7
     :try_start_1
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
     invoke-static {v3}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     const/4 v0, 0x0
 
     move v2, v0
@@ -58,27 +48,22 @@
 
     if-ge v2, v0, :cond_2
 
-    .line 10
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [B
 
-    .line 11
     if-eqz v0, :cond_0
 
-    .line 12
     invoke-virtual {v3, v0}, Ljava/io/OutputStream;->write([B)V
 
-    .line 14
     add-int/lit8 v0, v2, 0x1
 
     move v2, v0
 
     goto :goto_0
 
-    .line 13
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -115,7 +100,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 17
     :catch_0
     move-exception v0
 
@@ -124,7 +108,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 18
     :catchall_0
     move-exception v1
 
@@ -152,11 +135,9 @@
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 20
     :catch_1
     move-exception v0
 
-    .line 21
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Could not encode GIF data"
@@ -165,7 +146,6 @@
 
     throw v1
 
-    .line 15
     :cond_2
     :try_start_5
     invoke-virtual {v3}, Ljava/io/OutputStream;->flush()V
@@ -173,17 +153,14 @@
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 16
     if-eqz v3, :cond_3
 
     :try_start_6
     invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
 
-    .line 19
     :cond_3
     return-void
 
-    .line 18
     :catch_2
     move-exception v2
 

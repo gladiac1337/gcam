@@ -17,10 +17,8 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 3
     new-instance v0, Litu;
 
     const-string v2, "OWNED_BY_ENCLOSING_CLASS"
@@ -29,7 +27,6 @@
 
     sput-object v0, Litt;->b:Litt;
 
-    .line 4
     new-instance v0, Litw;
 
     const-string v2, "LOCAL_CLASS_HAS_NO_OWNER"
@@ -38,7 +35,6 @@
 
     sput-object v0, Litt;->c:Litt;
 
-    .line 5
     const/4 v0, 0x2
 
     new-array v0, v0, [Litt;
@@ -55,7 +51,6 @@
 
     sput-object v0, Litt;->d:[Litt;
 
-    .line 6
     new-instance v0, Litv;
 
     invoke-direct {v0, v1}, Litv;-><init>(B)V
@@ -64,14 +59,12 @@
 
     move-result-object v0
 
-    .line 7
     invoke-virtual {v0}, Ljava/lang/Class;->getGenericSuperclass()Ljava/lang/reflect/Type;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/reflect/ParameterizedType;
 
-    .line 8
     invoke-static {}, Litt;->values()[Litt;
 
     move-result-object v2
@@ -83,7 +76,6 @@
 
     aget-object v4, v2, v1
 
-    .line 9
     const-class v5, Litv;
 
     invoke-virtual {v4, v5}, Litt;->a(Ljava/lang/Class;)Ljava/lang/Class;
@@ -96,18 +88,15 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 13
     sput-object v4, Litt;->a:Litt;
 
     return-void
 
-    .line 11
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 12
     :cond_1
     new-instance v0, Ljava/lang/AssertionError;
 
@@ -119,8 +108,6 @@
 .method constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -129,8 +116,6 @@
 .method public static values()[Litt;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Litt;->d:[Litt;
 
     invoke-virtual {v0}, [Litt;->clone()Ljava/lang/Object;

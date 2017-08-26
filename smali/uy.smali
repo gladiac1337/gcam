@@ -20,8 +20,6 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Luy;->a:Ljava/lang/String;
 
     iput-object p2, p0, Luy;->b:Ljava/lang/String;
@@ -40,8 +38,6 @@
 .method public final a()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Luy;->a:Ljava/lang/String;
 
     return-object v0
@@ -50,8 +46,6 @@
 .method public final b()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Luy;->b:Ljava/lang/String;
 
     return-object v0
@@ -60,8 +54,6 @@
 .method public final c()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Luy;->c:Ljava/lang/String;
 
     return-object v0
@@ -70,8 +62,6 @@
 .method public final d()Lvd;
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Luy;->d:Lvd;
 
     return-object v0
@@ -80,18 +70,14 @@
 .method public final toString()Ljava/lang/String;
     .locals 6
 
-    .prologue
-    .line 6
     iget-object v0, p0, Luy;->b:Ljava/lang/String;
 
     iget-object v1, p0, Luy;->c:Ljava/lang/String;
 
     iget-object v2, p0, Luy;->a:Ljava/lang/String;
 
-    .line 7
     iget-object v3, p0, Luy;->d:Lvd;
 
-    .line 8
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
@@ -178,6 +164,5 @@
 
     move-result-object v0
 
-    .line 9
     return-object v0
 .end method

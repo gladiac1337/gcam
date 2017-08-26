@@ -24,46 +24,34 @@
 .method private constructor <init>(Lidz;)V
     .locals 3
 
-    .prologue
     const/high16 v2, 0x7fc00000    # NaNf
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lief;->a:Lidz;
 
-    .line 3
     iput v1, p0, Lief;->b:F
 
-    .line 4
     const/high16 v0, -0x40800000    # -1.0f
 
     iput v0, p0, Lief;->c:F
 
-    .line 5
     iput v1, p0, Lief;->d:F
 
-    .line 6
     iput v2, p0, Lief;->e:F
 
-    .line 7
     iput v2, p0, Lief;->f:F
 
-    .line 8
     return-void
 .end method
 
 .method public constructor <init>(Lidz;B)V
     .locals 0
 
-    .prologue
-    .line 9
     invoke-direct {p0, p1}, Lief;-><init>(Lidz;)V
 
-    .line 10
     return-void
 .end method
 
@@ -72,8 +60,6 @@
 .method public final a(J)Lijj;
     .locals 5
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lief;->a:Lidz;
 
     invoke-interface {v0, p1, p2}, Lidz;->a(J)Lijj;
@@ -84,17 +70,14 @@
 
     move-result v0
 
-    .line 12
     iget v1, p0, Lief;->e:F
 
     cmpg-float v1, v0, v1
 
     if-gez v1, :cond_0
 
-    .line 13
     iget v0, p0, Lief;->e:F
 
-    .line 14
     :cond_0
     iget v1, p0, Lief;->f:F
 
@@ -102,10 +85,8 @@
 
     if-lez v1, :cond_1
 
-    .line 15
     iget v0, p0, Lief;->f:F
 
-    .line 16
     :cond_1
     iget v1, p0, Lief;->d:F
 
@@ -115,7 +96,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 17
     float-to-double v0, v0
 
     iget v2, p0, Lief;->d:F
@@ -128,17 +108,14 @@
 
     double-to-float v0, v0
 
-    .line 18
     invoke-static {v0}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 19
     const/4 v0, 0x0
 
-    .line 20
     :cond_2
     iget v1, p0, Lief;->c:F
 
@@ -148,7 +125,6 @@
 
     add-float/2addr v0, v1
 
-    .line 21
     new-instance v1, Lijg;
 
     invoke-direct {v1, v0}, Lijg;-><init>(F)V
@@ -159,47 +135,36 @@
 .method public final a()V
     .locals 1
 
-    .prologue
-    .line 26
     iget-object v0, p0, Lief;->a:Lidz;
 
     invoke-interface {v0}, Lidz;->a()V
 
-    .line 27
     return-void
 .end method
 
 .method public final b(J)V
     .locals 1
 
-    .prologue
-    .line 22
     iget-object v0, p0, Lief;->a:Lidz;
 
     invoke-interface {v0, p1, p2}, Lidz;->b(J)V
 
-    .line 23
     return-void
 .end method
 
 .method public final c(J)V
     .locals 1
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lief;->a:Lidz;
 
     invoke-interface {v0, p1, p2}, Lidz;->c(J)V
 
-    .line 25
     return-void
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 9
 
-    .prologue
-    .line 28
     const-string v0, "PolynomialScoreTransformer[scorer="
 
     iget-object v1, p0, Lief;->a:Lidz;

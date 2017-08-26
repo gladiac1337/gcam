@@ -13,62 +13,49 @@
 .method public constructor <init>(Lenz;)V
     .locals 1
 
-    .prologue
-    .line 46
     iput-object p1, p0, Lgjg;->b:Lenz;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     new-instance v0, Limz;
 
     invoke-direct {v0}, Limz;-><init>()V
 
-    .line 49
     iput-object v0, p0, Lgjg;->a:Limz;
 
-    .line 50
     return-void
 .end method
 
 .method private final declared-synchronized a(Landroid/content/ContentResolver;Landroid/content/ContentValues;)V
     .locals 2
 
-    .prologue
-    .line 51
     monitor-enter p0
 
     :try_start_0
     sget-object v0, Landroid/provider/MediaStore$Images$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 52
     invoke-static {v0}, Landroid/content/ContentProviderOperation;->newInsert(Landroid/net/Uri;)Landroid/content/ContentProviderOperation$Builder;
 
     move-result-object v0
 
-    .line 53
     invoke-virtual {v0, p2}, Landroid/content/ContentProviderOperation$Builder;->withValues(Landroid/content/ContentValues;)Landroid/content/ContentProviderOperation$Builder;
 
     move-result-object v0
 
-    .line 54
     invoke-virtual {v0}, Landroid/content/ContentProviderOperation$Builder;->build()Landroid/content/ContentProviderOperation;
 
     move-result-object v0
 
-    .line 55
     iget-object v1, p0, Lgjg;->a:Limz;
 
     invoke-virtual {v1, p1, v0}, Limz;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 56
     monitor-exit p0
 
     return-void
 
-    .line 51
     :catchall_0
     move-exception v0
 
@@ -82,8 +69,6 @@
 .method public final declared-synchronized a()Ljava/util/List;
     .locals 6
 
-    .prologue
-    .line 26
     monitor-enter p0
 
     :try_start_0
@@ -91,7 +76,6 @@
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 27
     iget-object v0, p0, Lgjg;->a:Limz;
 
     invoke-virtual {v0}, Limz;->e()Ljava/util/Set;
@@ -116,24 +100,20 @@
 
     check-cast v0, Landroid/content/ContentResolver;
 
-    .line 28
     iget-object v3, p0, Lgjg;->a:Limz;
 
     invoke-virtual {v3, v0}, Limz;->b(Ljava/lang/Object;)Ljava/util/Set;
 
     move-result-object v3
 
-    .line 29
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 30
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 31
     :try_start_1
     const-string v3, "media"
 
@@ -141,7 +121,6 @@
 
     move-result-object v3
 
-    .line 32
     array-length v4, v3
 
     const/4 v0, 0x0
@@ -151,7 +130,6 @@
 
     aget-object v5, v3, v0
 
-    .line 33
     iget-object v5, v5, Landroid/content/ContentProviderResult;->uri:Landroid/net/Uri;
 
     invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -160,20 +138,16 @@
     .catch Landroid/content/OperationApplicationException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 34
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 36
     :catch_0
     move-exception v0
 
-    .line 37
     :try_start_2
     sget-object v3, Lenz;->a:Ljava/lang/String;
 
-    .line 38
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -212,7 +186,6 @@
 
     goto :goto_0
 
-    .line 26
     :catchall_0
     move-exception v0
 
@@ -220,15 +193,12 @@
 
     throw v0
 
-    .line 40
     :catch_1
     move-exception v0
 
-    .line 41
     :try_start_3
     sget-object v3, Lenz;->a:Ljava/lang/String;
 
-    .line 42
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -265,7 +235,6 @@
 
     goto :goto_0
 
-    .line 44
     :cond_1
     iget-object v0, p0, Lgjg;->a:Limz;
 
@@ -273,7 +242,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 45
     monitor-exit p0
 
     return-object v1
@@ -282,73 +250,55 @@
 .method public final a(Landroid/content/ContentResolver;Ljava/lang/String;JLilc;ILjava/lang/String;IILgje;)V
     .locals 3
 
-    .prologue
-    .line 1
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p7}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2
     new-instance v1, Lfpc;
 
     iget-object v2, p0, Lgjg;->b:Lenz;
 
-    .line 3
     iget-object v2, v2, Lenz;->b:Lfpa;
 
-    .line 4
     invoke-direct {v1, v2}, Lfpc;-><init>(Lfpa;)V
 
-    .line 6
     iput-object v0, v1, Lfpc;->a:Ljava/io/File;
 
-    .line 10
     iput-object p5, v1, Lfpc;->b:Lilc;
 
-    .line 13
     invoke-virtual {v1, p10}, Lfpc;->a(Lgje;)Lfpc;
 
     move-result-object v0
 
-    .line 14
     invoke-static {p6}, Lhix;->a(I)Lhix;
 
     move-result-object v1
 
-    .line 15
     iput-object v1, v0, Lfpc;->c:Lhix;
 
-    .line 17
     new-instance v1, Lhja;
 
     invoke-direct {v1, p8, p9}, Lhja;-><init>(II)V
 
-    .line 18
     invoke-virtual {v0, v1}, Lfpc;->a(Lhja;)Lfpc;
 
     move-result-object v0
 
-    .line 19
     invoke-virtual {v0, p3, p4}, Lfpc;->a(J)Lfpc;
 
     move-result-object v0
 
-    .line 20
     invoke-virtual {v0, p2}, Lfpc;->a(Ljava/lang/String;)Lfpc;
 
     move-result-object v0
 
-    .line 21
     invoke-virtual {v0}, Lfpc;->a()Lfoz;
 
     move-result-object v0
 
-    .line 22
     iget-object v0, v0, Lfoz;->a:Landroid/content/ContentValues;
 
-    .line 24
     invoke-direct {p0, p1, v0}, Lgjg;->a(Landroid/content/ContentResolver;Landroid/content/ContentValues;)V
 
-    .line 25
     return-void
 .end method

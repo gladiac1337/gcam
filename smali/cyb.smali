@@ -29,21 +29,15 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lcyb;->a:Lcya;
 
     iget-boolean v1, p0, Lcyb;->b:Z
 
-    .line 2
     iget-object v0, v0, Lcya;->a:Lcxx;
 
-    .line 3
     iget-object v0, v0, Lcxx;->j:Lcyi;
 
-    .line 4
     invoke-virtual {v0, v1}, Lcyi;->d(Z)V
 
-    .line 5
     return-void
 .end method

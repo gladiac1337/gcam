@@ -26,11 +26,8 @@
 .method protected final synthetic b(Lgvr;)V
     .locals 11
 
-    .prologue
-    .line 1
     check-cast p1, Lhdm;
 
-    .line 2
     new-instance v8, Lhdh;
 
     invoke-direct {v8, p0}, Lhdh;-><init>(Lgwf;)V
@@ -39,7 +36,6 @@
 
     iget-object v1, p0, Lhdc;->c:Lhcv;
 
-    .line 3
     iget-object v10, p1, Lhdm;->g:Lhdk;
 
     monitor-enter v10
@@ -47,22 +43,18 @@
     :try_start_0
     iget-object v3, p1, Lhdm;->g:Lhdk;
 
-    .line 4
     iget-object v4, v3, Lhdk;->a:Lhdp;
 
-    .line 5
     iget-object v4, v4, Lhdp;->a:Lhda;
 
     invoke-static {v4}, Lhda;->a(Lhda;)V
 
-    .line 6
     invoke-virtual {v3, v1}, Lhdk;->a(Lhcv;)Lhdu;
 
     move-result-object v5
 
     iget-object v1, v3, Lhdk;->a:Lhdp;
 
-    .line 7
     iget-object v1, v1, Lhdp;->a:Lhda;
 
     invoke-virtual {v1}, Lhda;->i()Landroid/os/IInterface;
@@ -75,12 +67,10 @@
 
     move-object v9, v0
 
-    .line 8
     invoke-static {v2}, Lcom/google/android/gms/location/internal/LocationRequestInternal;->a(Lcom/google/android/gms/location/LocationRequest;)Lcom/google/android/gms/location/internal/LocationRequestInternal;
 
     move-result-object v4
 
-    .line 9
     new-instance v1, Lcom/google/android/gms/location/internal/LocationRequestUpdateData;
 
     const/4 v2, 0x1
@@ -101,10 +91,8 @@
 
     invoke-direct/range {v1 .. v8}, Lcom/google/android/gms/location/internal/LocationRequestUpdateData;-><init>(IILcom/google/android/gms/location/internal/LocationRequestInternal;Landroid/os/IBinder;Landroid/app/PendingIntent;Landroid/os/IBinder;Landroid/os/IBinder;)V
 
-    .line 10
     invoke-virtual {v9, v1}, Lhdj;->a(Lcom/google/android/gms/location/internal/LocationRequestUpdateData;)V
 
-    .line 11
     monitor-exit v10
 
     return-void

@@ -21,28 +21,19 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/legacy/app/burst/editor/grid/BurstImageView;FFFLandroid/graphics/Rect;Landroid/graphics/Rect;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbyr;->a:Lcom/google/android/apps/camera/legacy/app/burst/editor/grid/BurstImageView;
 
-    .line 3
     iput p4, p0, Lbyr;->d:F
 
-    .line 4
     iput p2, p0, Lbyr;->b:F
 
-    .line 5
     iput p3, p0, Lbyr;->c:F
 
-    .line 6
     iput-object p5, p0, Lbyr;->e:Landroid/graphics/Rect;
 
-    .line 7
     iput-object p6, p0, Lbyr;->f:Landroid/graphics/Rect;
 
-    .line 8
     return-void
 .end method

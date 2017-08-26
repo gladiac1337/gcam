@@ -17,12 +17,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 3
     new-instance v0, Labg;
 
     const-string v1, "PREFER_ARGB_8888"
@@ -31,7 +29,6 @@
 
     sput-object v0, Labg;->a:Labg;
 
-    .line 4
     new-instance v0, Labg;
 
     const-string v1, "PREFER_RGB_565"
@@ -40,7 +37,6 @@
 
     sput-object v0, Labg;->c:Labg;
 
-    .line 5
     const/4 v0, 0x2
 
     new-array v0, v0, [Labg;
@@ -55,7 +51,6 @@
 
     sput-object v0, Labg;->d:[Labg;
 
-    .line 6
     sget-object v0, Labg;->a:Labg;
 
     sput-object v0, Labg;->b:Labg;
@@ -66,8 +61,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -76,8 +69,6 @@
 .method public static values()[Labg;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Labg;->d:[Labg;
 
     invoke-virtual {v0}, [Labg;->clone()Ljava/lang/Object;

@@ -11,8 +11,6 @@
 .method public constructor <init>(Landroid/support/design/widget/FloatingActionButton;)V
     .locals 0
 
-    .prologue
-    .line 4
     iput-object p1, p0, Lsl;->a:Landroid/support/design/widget/FloatingActionButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,8 +23,6 @@
 .method public final a()F
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lsl;->a:Landroid/support/design/widget/FloatingActionButton;
 
     invoke-virtual {v0}, Landroid/support/design/widget/FloatingActionButton;->a()I
@@ -45,12 +41,9 @@
 .method public final a(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lsl;->a:Landroid/support/design/widget/FloatingActionButton;
 
     invoke-static {v0, p1}, Landroid/support/design/widget/FloatingActionButton;->a(Landroid/support/design/widget/FloatingActionButton;Landroid/graphics/drawable/Drawable;)V
 
-    .line 3
     return-void
 .end method

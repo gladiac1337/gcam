@@ -25,8 +25,6 @@
 .method public constructor <init>(Lhcv;Landroid/os/Looper;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lhdu;-><init>()V
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
@@ -61,8 +59,6 @@
 .method public final a(Landroid/location/Location;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lhdu;->a:Landroid/os/Handler;
 
     if-nez v0, :cond_0

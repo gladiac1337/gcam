@@ -14,11 +14,8 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/16 v0, 0x8
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
@@ -35,19 +32,14 @@
 .method public final synthetic a([BLjava/lang/Object;Ljava/security/MessageDigest;)V
     .locals 4
 
-    .prologue
-    .line 3
     check-cast p2, Ljava/lang/Long;
 
-    .line 4
     invoke-virtual {p3, p1}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 5
     iget-object v1, p0, Laks;->a:Ljava/nio/ByteBuffer;
 
     monitor-enter v1
 
-    .line 6
     :try_start_0
     iget-object v0, p0, Laks;->a:Ljava/nio/ByteBuffer;
 
@@ -55,7 +47,6 @@
 
     invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 7
     iget-object v0, p0, Laks;->a:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
@@ -72,7 +63,6 @@
 
     invoke-virtual {p3, v0}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 8
     monitor-exit v1
 
     return-void

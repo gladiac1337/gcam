@@ -18,36 +18,26 @@
 .method public constructor <init>(Lihq;Lihm;)V
     .locals 1
 
-    .prologue
-    .line 1
     const/high16 v0, -0x800000    # Float.NEGATIVE_INFINITY
 
     invoke-direct {p0, p1, p2, v0}, Lied;-><init>(Lihq;Lihm;F)V
 
-    .line 2
     return-void
 .end method
 
 .method public constructor <init>(Lihq;Lihm;F)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     iput-object p1, p0, Lied;->a:Lihq;
 
-    .line 6
     iput-object p2, p0, Lied;->b:Lihm;
 
-    .line 7
     iput p3, p0, Lied;->c:F
 
-    .line 8
     return-void
 .end method
 
@@ -56,15 +46,12 @@
 .method public final a(J)Lijj;
     .locals 3
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lied;->a:Lihq;
 
     invoke-virtual {v0, p1, p2}, Lihq;->a(J)Lihe;
 
     move-result-object v0
 
-    .line 10
     iget-object v1, p0, Lied;->b:Lihm;
 
     invoke-virtual {v0, v1}, Lihe;->b(Lihm;)Z
@@ -73,7 +60,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 11
     new-instance v1, Lijg;
 
     iget-object v2, p0, Lied;->b:Lihm;
@@ -92,7 +78,6 @@
 
     move-object v0, v1
 
-    .line 12
     :goto_0
     return-object v0
 
@@ -109,32 +94,24 @@
 .method public final a()V
     .locals 0
 
-    .prologue
-    .line 15
     return-void
 .end method
 
 .method public final b(J)V
     .locals 0
 
-    .prologue
-    .line 13
     return-void
 .end method
 
 .method public final c(J)V
     .locals 0
 
-    .prologue
-    .line 14
     return-void
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 16
     const-string v0, "MetadataFrameScorer[key="
 
     iget-object v1, p0, Lied;->b:Lihm;

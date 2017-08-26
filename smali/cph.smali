@@ -18,8 +18,6 @@
 .method constructor <init>(Lcoy;Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcph;->c:Lcoy;
 
     const/4 v0, 0x0
@@ -38,43 +36,32 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 2
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcph;->c:Lcoy;
 
-    .line 5
     iget-object v0, v0, Lcoy;->x:Lghx;
 
-    .line 6
     invoke-interface {v0}, Lghx;->a()V
 
-    .line 7
     iget-object v0, p0, Lcph;->c:Lcoy;
 
-    .line 8
     iget-object v0, v0, Lcoy;->E:Lcev;
 
-    .line 9
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcev;->a(Z)V
 
-    .line 10
     iget-object v0, p0, Lcph;->b:Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->d()V
 
-    .line 12
     :cond_0
     return-object p1
 .end method

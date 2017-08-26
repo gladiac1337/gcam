@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Larj;-><init>()V
 
     return-void
@@ -19,7 +17,5 @@
 .method public final a()V
     .locals 0
 
-    .prologue
-    .line 2
     return-void
 .end method

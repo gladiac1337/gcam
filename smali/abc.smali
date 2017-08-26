@@ -31,30 +31,23 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x0
 
     iput-object v0, p0, Labc;->a:[I
 
-    .line 3
     iput v1, p0, Labc;->b:I
 
-    .line 4
     iput v1, p0, Labc;->c:I
 
-    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Labc;->e:Ljava/util/List;
 
-    .line 6
     return-void
 .end method

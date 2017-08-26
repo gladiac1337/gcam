@@ -18,8 +18,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 14
     const-string v0, "CdrMediaRecPauseRsm"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -34,14 +32,10 @@
 .method public constructor <init>(Lbdp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbdz;->b:Lbdp;
 
-    .line 3
     return-void
 .end method
 
@@ -50,8 +44,6 @@
 .method public final a()V
     .locals 4
 
-    .prologue
-    .line 4
     :try_start_0
     iget-object v0, p0, Lbdz;->b:Lbdp;
 
@@ -59,15 +51,12 @@
     :try_end_0
     .catch Lbdk; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8
     :goto_0
     return-void
 
-    .line 6
     :catch_0
     move-exception v0
 
-    .line 7
     sget-object v1, Lbdz;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -110,8 +99,6 @@
 .method public final b()V
     .locals 4
 
-    .prologue
-    .line 9
     :try_start_0
     iget-object v0, p0, Lbdz;->b:Lbdp;
 
@@ -119,15 +106,12 @@
     :try_end_0
     .catch Lbdk; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 13
     :goto_0
     return-void
 
-    .line 11
     :catch_0
     move-exception v0
 
-    .line 12
     sget-object v1, Lbdz;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

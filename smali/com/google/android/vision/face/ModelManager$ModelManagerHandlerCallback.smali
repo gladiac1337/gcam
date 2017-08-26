@@ -14,8 +14,6 @@
 .method private constructor <init>(Lcom/google/android/vision/face/ModelManager;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/vision/face/ModelManager$ModelManagerHandlerCallback;->this$0:Lcom/google/android/vision/face/ModelManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,8 +24,6 @@
 .method synthetic constructor <init>(Lcom/google/android/vision/face/ModelManager;Lcom/google/android/vision/face/ModelManager$1;)V
     .locals 0
 
-    .prologue
-    .line 11
     invoke-direct {p0, p1}, Lcom/google/android/vision/face/ModelManager$ModelManagerHandlerCallback;-><init>(Lcom/google/android/vision/face/ModelManager;)V
 
     return-void
@@ -38,28 +34,23 @@
 .method public handleMessage(Landroid/os/Message;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 2
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 9
     const-string v0, "ModelManager"
 
     const-string v1, "Unhandled message"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 3
     :pswitch_0
     iget-object v1, p0, Lcom/google/android/vision/face/ModelManager$ModelManagerHandlerCallback;->this$0:Lcom/google/android/vision/face/ModelManager;
 
@@ -67,7 +58,6 @@
 
     goto :goto_0
 
-    .line 5
     :pswitch_1
     iget-object v1, p0, Lcom/google/android/vision/face/ModelManager$ModelManagerHandlerCallback;->this$0:Lcom/google/android/vision/face/ModelManager;
 
@@ -75,7 +65,6 @@
 
     goto :goto_0
 
-    .line 7
     :pswitch_2
     iget-object v1, p0, Lcom/google/android/vision/face/ModelManager$ModelManagerHandlerCallback;->this$0:Lcom/google/android/vision/face/ModelManager;
 
@@ -85,7 +74,6 @@
 
     goto :goto_0
 
-    .line 2
     nop
 
     :pswitch_data_0

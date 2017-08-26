@@ -33,8 +33,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 85
     new-instance v0, Ljava/lang/ThreadLocal;
 
     invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
@@ -47,33 +45,26 @@
 .method constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;I)V
     .locals 3
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mBackings:Ljava/util/Set;
 
-    .line 40
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mFrameSlots:Ljava/util/Map;
 
-    .line 41
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mRunner:Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;
 
-    .line 42
     packed-switch p2, :pswitch_data_0
 
-    .line 49
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const/16 v1, 0x1f
@@ -106,7 +97,6 @@
 
     throw v0
 
-    .line 43
     :pswitch_0
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCacheNone;
 
@@ -114,11 +104,9 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mCache:Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCache;
 
-    .line 48
     :goto_0
     return-void
 
-    .line 45
     :pswitch_1
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCacheLru;
 
@@ -128,7 +116,6 @@
 
     goto :goto_0
 
-    .line 47
     :pswitch_2
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCacheLfu;
 
@@ -138,7 +125,6 @@
 
     goto :goto_0
 
-    .line 42
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -150,8 +136,6 @@
 .method static synthetic access$100([I[I)Z
     .locals 1
 
-    .prologue
-    .line 84
     invoke-static {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->dimensionsCompatible([I[I)Z
 
     move-result v0
@@ -162,8 +146,6 @@
 .method private assertInGraphRun()V
     .locals 2
 
-    .prologue
-    .line 81
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mRunner:Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;
 
     if-eqz v0, :cond_0
@@ -184,7 +166,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 82
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -194,7 +175,6 @@
 
     throw v0
 
-    .line 83
     :cond_1
     return-void
 .end method
@@ -202,8 +182,6 @@
 .method private assertNotRunning()V
     .locals 2
 
-    .prologue
-    .line 78
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mRunner:Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;
 
     if-eqz v0, :cond_0
@@ -216,7 +194,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 79
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Attempting to modify FrameManager while graph is running!"
@@ -225,7 +202,6 @@
 
     throw v0
 
-    .line 80
     :cond_0
     return-void
 .end method
@@ -233,8 +209,6 @@
 .method public static attachToThread()V
     .locals 3
 
-    .prologue
-    .line 2
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;
 
     const/4 v1, 0x0
@@ -245,15 +219,12 @@
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->attachManagerToThread()V
 
-    .line 3
     return-void
 .end method
 
 .method public static current()Lcom/google/android/libraries/smartburst/filterfw/FrameManager;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mCurrentFrameManager:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -268,22 +239,17 @@
 .method public static detachFromThread()V
     .locals 3
 
-    .prologue
-    .line 4
     sget-object v1, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mCurrentFrameManager:Ljava/lang/ThreadLocal;
 
     monitor-enter v1
 
-    .line 5
     :try_start_0
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->current()Lcom/google/android/libraries/smartburst/filterfw/FrameManager;
 
     move-result-object v0
 
-    .line 6
     if-nez v0, :cond_0
 
-    .line 7
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v2, "No FrameManager attached to current thread!"
@@ -292,7 +258,6 @@
 
     throw v0
 
-    .line 10
     :catchall_0
     move-exception v0
 
@@ -302,19 +267,16 @@
 
     throw v0
 
-    .line 8
     :cond_0
     :try_start_1
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->destroyBackings()V
 
-    .line 9
     sget-object v0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mCurrentFrameManager:Ljava/lang/ThreadLocal;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    .line 10
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -325,8 +287,6 @@
 .method private static dimensionsCompatible([I[I)Z
     .locals 1
 
-    .prologue
-    .line 77
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
@@ -354,11 +314,8 @@
 .method public addFrameSlot(Ljava/lang/String;Lcom/google/android/libraries/smartburst/filterfw/FrameType;I)V
     .locals 2
 
-    .prologue
-    .line 19
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->assertNotRunning()V
 
-    .line 20
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mFrameSlots:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -367,37 +324,29 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$FrameSlot;
 
-    .line 21
     if-eqz v0, :cond_0
 
-    .line 22
     invoke-virtual {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->removeFrameSlot(Ljava/lang/String;)V
 
-    .line 23
     :cond_0
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$FrameSlot;
 
     invoke-direct {v0, p2, p3}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$FrameSlot;-><init>(Lcom/google/android/libraries/smartburst/filterfw/FrameType;I)V
 
-    .line 24
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mFrameSlots:Ljava/util/Map;
 
     invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 25
     return-void
 .end method
 
 .method attachManagerToThread()V
     .locals 3
 
-    .prologue
-    .line 72
     sget-object v1, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mCurrentFrameManager:Ljava/lang/ThreadLocal;
 
     monitor-enter v1
 
-    .line 73
     :try_start_0
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->current()Lcom/google/android/libraries/smartburst/filterfw/FrameManager;
 
@@ -405,7 +354,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 74
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v2, "FrameManager already attached to current thread!"
@@ -414,7 +362,6 @@
 
     throw v0
 
-    .line 76
     :catchall_0
     move-exception v0
 
@@ -424,14 +371,12 @@
 
     throw v0
 
-    .line 75
     :cond_0
     :try_start_1
     sget-object v0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mCurrentFrameManager:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0, p0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
-    .line 76
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -442,21 +387,16 @@
 .method public clearCache()V
     .locals 1
 
-    .prologue
-    .line 36
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mCache:Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCache;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCache;->clear()V
 
-    .line 37
     return-void
 .end method
 
 .method destroyBackings()V
     .locals 2
 
-    .prologue
-    .line 58
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mBackings:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -476,31 +416,25 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
-    .line 59
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->destroy()V
 
     goto :goto_0
 
-    .line 61
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mBackings:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    .line 62
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mCache:Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCache;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCache;->clear()V
 
-    .line 63
     return-void
 .end method
 
 .method fetchBacking(II[II)Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
     .locals 1
 
-    .prologue
-    .line 50
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mCache:Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCache;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCache;->fetchBacking(II[II)Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
@@ -513,11 +447,8 @@
 .method public fetchFrame(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/Frame;
     .locals 1
 
-    .prologue
-    .line 34
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->assertInGraphRun()V
 
-    .line 35
     invoke-virtual {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->getSlot(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/FrameManager$FrameSlot;
 
     move-result-object v0
@@ -532,8 +463,6 @@
 .method public getCacheSize()I
     .locals 1
 
-    .prologue
-    .line 15
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mCache:Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCache;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCache;->getSize()I
@@ -546,8 +475,6 @@
 .method public getContext()Lcom/google/android/libraries/smartburst/filterfw/MffContext;
     .locals 1
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mRunner:Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;->getContext()Lcom/google/android/libraries/smartburst/filterfw/MffContext;
@@ -560,8 +487,6 @@
 .method public getRunner()Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;
     .locals 1
 
-    .prologue
-    .line 12
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mRunner:Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;
 
     return-object v0
@@ -570,8 +495,6 @@
 .method getSlot(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/FrameManager$FrameSlot;
     .locals 3
 
-    .prologue
-    .line 64
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mFrameSlots:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -580,10 +503,8 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$FrameSlot;
 
-    .line 65
     if-nez v0, :cond_0
 
-    .line 66
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -624,7 +545,6 @@
 
     throw v0
 
-    .line 67
     :cond_0
     return-object v0
 .end method
@@ -632,15 +552,12 @@
 .method public importFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;)Lcom/google/android/libraries/smartburst/filterfw/Frame;
     .locals 4
 
-    .prologue
-    .line 16
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/Frame;->isReadOnly()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 17
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -685,7 +602,6 @@
 
     throw v0
 
-    .line 18
     :cond_0
     invoke-virtual {p1, p0}, Lcom/google/android/libraries/smartburst/filterfw/Frame;->makeCpuCopy(Lcom/google/android/libraries/smartburst/filterfw/FrameManager;)Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
@@ -697,8 +613,6 @@
 .method onBackingAvailable(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;)V
     .locals 1
 
-    .prologue
-    .line 54
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->shouldCache()Z
 
     move-result v0
@@ -713,16 +627,13 @@
 
     if-nez v0, :cond_1
 
-    .line 55
     :cond_0
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->destroy()V
 
-    .line 56
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mBackings:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 57
     :cond_1
     return-void
 .end method
@@ -730,16 +641,12 @@
 .method onBackingCreated(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;)V
     .locals 1
 
-    .prologue
-    .line 51
     if-eqz p1, :cond_0
 
-    .line 52
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mBackings:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 53
     :cond_0
     return-void
 .end method
@@ -747,8 +654,6 @@
 .method onBeginRun()V
     .locals 2
 
-    .prologue
-    .line 68
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mFrameSlots:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -772,12 +677,10 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$FrameSlot;
 
-    .line 69
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$FrameSlot;->markWritable()V
 
     goto :goto_0
 
-    .line 71
     :cond_0
     return-void
 .end method
@@ -785,54 +688,41 @@
 .method public removeFrameSlot(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 26
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->assertNotRunning()V
 
-    .line 27
     invoke-virtual {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->getSlot(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/FrameManager$FrameSlot;
 
     move-result-object v0
 
-    .line 28
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$FrameSlot;->releaseFrame()V
 
-    .line 29
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mFrameSlots:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 30
     return-void
 .end method
 
 .method public setCacheSize(I)V
     .locals 1
 
-    .prologue
-    .line 13
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->mCache:Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCache;
 
     invoke-virtual {v0, p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCache;->setSize(I)V
 
-    .line 14
     return-void
 .end method
 
 .method public storeFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 31
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->assertInGraphRun()V
 
-    .line 32
     invoke-virtual {p0, p2}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->getSlot(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/FrameManager$FrameSlot;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$FrameSlot;->assignFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;)V
 
-    .line 33
     return-void
 .end method

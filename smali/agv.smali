@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,29 +18,22 @@
 .method private static a(Ljava/nio/ByteBuffer;Ljava/io/File;)Z
     .locals 4
 
-    .prologue
-    .line 2
     const/4 v0, 0x0
 
-    .line 3
     :try_start_0
     invoke-static {p0, p1}, Laoj;->a(Ljava/nio/ByteBuffer;Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4
     const/4 v0, 0x1
 
-    .line 9
     :cond_0
     :goto_0
     return v0
 
-    .line 6
     :catch_0
     move-exception v1
 
-    .line 7
     const-string v2, "ByteBufferEncoder"
 
     const/4 v3, 0x3
@@ -53,7 +44,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 8
     const-string v2, "ByteBufferEncoder"
 
     const-string v3, "Failed to write data"
@@ -68,8 +58,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;Ljava/io/File;Labq;)Z
     .locals 1
 
-    .prologue
-    .line 10
     check-cast p1, Ljava/nio/ByteBuffer;
 
     invoke-static {p1, p2}, Lagv;->a(Ljava/nio/ByteBuffer;Ljava/io/File;)Z

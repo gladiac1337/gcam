@@ -18,8 +18,5 @@
 .method public final synthetic b(Lcom/google/android/gms/common/api/Status;)Lgwb;
     .locals 0
 
-    .prologue
-    .line 1
-    .line 2
     return-object p1
 .end method

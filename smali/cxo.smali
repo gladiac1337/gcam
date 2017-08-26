@@ -30,8 +30,6 @@
 .method constructor <init>(Lcxk;Lilc;Latr;Lhmr;Lcyi;Lcys;Liwe;Lbav;Lhin;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcxo;->i:Lcxk;
 
     iput-object p2, p0, Lcxo;->a:Lilc;
@@ -60,23 +58,18 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 35
 
-    .prologue
-    .line 2
     move-object/from16 v3, p1
 
     check-cast v3, Lazb;
 
-    .line 3
     invoke-static {v3}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     new-instance v1, Lcym;
 
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcxo;->a:Lilc;
 
-    .line 5
     invoke-virtual {v2}, Lilc;->b()Ljava/lang/Object;
 
     move-result-object v2
@@ -91,7 +84,6 @@
 
     iget-object v5, v0, Lcxo;->i:Lcxk;
 
-    .line 6
     invoke-static {v5}, Lcxk;->b(Lcxk;)Lavm;
 
     move-result-object v5
@@ -100,7 +92,6 @@
 
     iget-object v6, v0, Lcxo;->i:Lcxk;
 
-    .line 7
     invoke-static {v6}, Lcxk;->c(Lcxk;)Lhkr;
 
     move-result-object v6
@@ -109,15 +100,12 @@
 
     iget-object v7, v0, Lcxo;->i:Lcxk;
 
-    .line 8
     iget-object v7, v7, Lcxk;->b:Ljava/util/concurrent/Executor;
 
-    .line 9
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lcxo;->i:Lcxk;
 
-    .line 10
     invoke-static {v8}, Lcxk;->d(Lcxk;)Lfhs;
 
     move-result-object v8
@@ -126,10 +114,8 @@
 
     iget-object v9, v0, Lcxo;->i:Lcxk;
 
-    .line 11
     iget-object v9, v9, Lcxk;->c:Lhic;
 
-    .line 12
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcxo;->c:Lhmr;
@@ -138,7 +124,6 @@
 
     iget-object v11, v0, Lcxo;->i:Lcxk;
 
-    .line 13
     invoke-static {v11}, Lcxk;->e(Lcxk;)Lbwh;
 
     move-result-object v11
@@ -147,62 +132,50 @@
 
     iget-object v12, v0, Lcxo;->i:Lcxk;
 
-    .line 14
     iget-object v12, v12, Lcxk;->d:Lcci;
 
-    .line 15
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcxo;->i:Lcxk;
 
-    .line 16
     iget-object v13, v13, Lcxk;->e:Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;
 
-    .line 17
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcxo;->i:Lcxk;
 
-    .line 18
     iget-object v14, v14, Lcxk;->f:Lfgo;
 
-    .line 19
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcxo;->i:Lcxk;
 
-    .line 20
     iget-object v15, v15, Lcxk;->g:Lcct;
 
-    .line 21
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcxo;->i:Lcxk;
 
     move-object/from16 v16, v0
 
-    .line 22
     move-object/from16 v0, v16
 
     iget-object v0, v0, Lcxk;->h:Lcxp;
 
     move-object/from16 v16, v0
 
-    .line 23
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcxo;->i:Lcxk;
 
     move-object/from16 v17, v0
 
-    .line 24
     move-object/from16 v0, v17
 
     iget-object v0, v0, Lcxk;->i:Lcxw;
 
     move-object/from16 v17, v0
 
-    .line 25
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcxo;->d:Lcyi;
@@ -221,77 +194,66 @@
 
     move-object/from16 v20, v0
 
-    .line 26
     move-object/from16 v0, v20
 
     iget-object v0, v0, Lcxk;->k:Lcyv;
 
     move-object/from16 v20, v0
 
-    .line 27
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcxo;->i:Lcxk;
 
     move-object/from16 v21, v0
 
-    .line 28
     move-object/from16 v0, v21
 
     iget-object v0, v0, Lcxk;->l:Lfqm;
 
     move-object/from16 v21, v0
 
-    .line 29
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcxo;->i:Lcxk;
 
     move-object/from16 v22, v0
 
-    .line 30
     move-object/from16 v0, v22
 
     iget-object v0, v0, Lcxk;->m:Lezh;
 
     move-object/from16 v22, v0
 
-    .line 31
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcxo;->i:Lcxk;
 
     move-object/from16 v23, v0
 
-    .line 32
     move-object/from16 v0, v23
 
     iget-object v0, v0, Lcxk;->n:Lghx;
 
     move-object/from16 v23, v0
 
-    .line 33
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcxo;->i:Lcxk;
 
     move-object/from16 v24, v0
 
-    .line 34
     move-object/from16 v0, v24
 
     iget-object v0, v0, Lcxk;->o:Lbhd;
 
     move-object/from16 v24, v0
 
-    .line 35
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcxo;->i:Lcxk;
 
     move-object/from16 v25, v0
 
-    .line 36
     invoke-static/range {v25 .. v25}, Lcxk;->f(Lcxk;)Lgfd;
 
     move-result-object v25
@@ -302,56 +264,48 @@
 
     move-object/from16 v26, v0
 
-    .line 37
     move-object/from16 v0, v26
 
     iget-object v0, v0, Lcxk;->p:Lfpe;
 
     move-object/from16 v26, v0
 
-    .line 38
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcxo;->i:Lcxk;
 
     move-object/from16 v27, v0
 
-    .line 39
     move-object/from16 v0, v27
 
     iget-object v0, v0, Lcxk;->q:Lgjf;
 
     move-object/from16 v27, v0
 
-    .line 40
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcxo;->i:Lcxk;
 
     move-object/from16 v28, v0
 
-    .line 41
     move-object/from16 v0, v28
 
     iget-object v0, v0, Lcxk;->r:Lbst;
 
     move-object/from16 v28, v0
 
-    .line 42
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcxo;->i:Lcxk;
 
     move-object/from16 v29, v0
 
-    .line 43
     move-object/from16 v0, v29
 
     iget-object v0, v0, Lcxk;->s:Lapl;
 
     move-object/from16 v29, v0
 
-    .line 44
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcxo;->f:Liwe;
@@ -364,28 +318,24 @@
 
     move-object/from16 v31, v0
 
-    .line 45
     move-object/from16 v0, v31
 
     iget-object v0, v0, Lcxk;->t:Lgnf;
 
     move-object/from16 v31, v0
 
-    .line 46
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcxo;->i:Lcxk;
 
     move-object/from16 v32, v0
 
-    .line 47
     move-object/from16 v0, v32
 
     iget-object v0, v0, Lcxk;->j:Lcyu;
 
     move-object/from16 v32, v0
 
-    .line 48
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcxo;->g:Lbav;
@@ -400,6 +350,5 @@
 
     invoke-direct/range {v1 .. v34}, Lcym;-><init>(Layw;Lazb;Latr;Lavm;Lhkr;Ljava/util/concurrent/Executor;Lfhs;Lhic;Lhmr;Lbwh;Lcci;Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;Lfgo;Lcct;Lcxp;Lcxw;Lcyi;Lcys;Lcyv;Lfqm;Lezh;Lghx;Lbhd;Lgfd;Lfpe;Lgjf;Lbst;Lapl;Liwe;Lgnf;Lcyu;Lbav;Lhin;)V
 
-    .line 49
     return-object v1
 .end method

@@ -21,8 +21,6 @@
 .method public constructor <init>(B)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lhed;-><init>()V
 
     return-void
@@ -33,8 +31,6 @@
 .method public a(Lcom/google/android/gms/signin/internal/SignInResponse;)V
     .locals 0
 
-    .prologue
-    .line 2
     return-void
 .end method
 

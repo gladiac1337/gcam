@@ -19,8 +19,6 @@
 .method constructor <init>(Left;I[BLefv;[ILefv;Liwe;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p3, p0, Lefq;->i:[B
 
     iput-object p4, p0, Lefq;->a:Lefv;
@@ -41,8 +39,6 @@
 .method public final run()V
     .locals 10
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lefq;->i:[B
 
     iget-object v1, p0, Lefq;->a:Lefv;
@@ -55,12 +51,10 @@
 
     iget-object v3, p0, Lefq;->j:[I
 
-    .line 3
     invoke-static {v0, v1, v2, v3}, Lefq;->a([BII[I)[B
 
     move-result-object v5
 
-    .line 4
     iget-wide v2, p0, Lefq;->e:J
 
     iget-object v4, p0, Lefq;->b:Lefv;
@@ -71,10 +65,8 @@
 
     invoke-virtual/range {v1 .. v6}, Lefq;->a(JLefv;[BI)V
 
-    .line 6
     sget-object v0, Liku;->a:Liku;
 
-    .line 7
     iget-object v1, p0, Lefq;->b:Lefv;
 
     iget-object v2, p0, Lefq;->k:Liwe;
@@ -83,7 +75,6 @@
 
     move-result-object v9
 
-    .line 8
     iget-object v0, p0, Lefq;->h:Lgcf;
 
     invoke-interface {v0}, Lgcf;->n()Lfrh;
@@ -92,7 +83,6 @@
 
     invoke-interface {v0, v9}, Lfrh;->a(Lcom/google/android/libraries/camera/exif/ExifInterface;)V
 
-    .line 9
     iget-object v4, p0, Lefq;->h:Lgcf;
 
     iget-object v0, p0, Lefq;->b:Lefv;
@@ -107,26 +97,20 @@
 
     iget-object v0, v0, Lefv;->a:Lhix;
 
-    .line 10
     iget v8, v0, Lhix;->e:I
 
-    .line 12
     invoke-static/range {v4 .. v9}, Lkk;->a(Lgcf;[BIIILcom/google/android/libraries/camera/exif/ExifInterface;)Liwe;
 
     move-result-object v0
 
-    .line 13
     new-instance v1, Lefr;
 
     invoke-direct {v1, p0}, Lefr;-><init>(Lefq;)V
 
-    .line 14
     sget-object v2, Liwj;->a:Liwj;
 
-    .line 15
     invoke-static {v0, v1, v2}, Livs;->a(Liwe;Livr;Ljava/util/concurrent/Executor;)V
 
-    .line 16
     iget-object v0, p0, Lefq;->k:Liwe;
 
     invoke-interface {v0}, Liwe;->isDone()Z
@@ -135,18 +119,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 17
     :try_start_0
     iget-object v0, p0, Lefq;->h:Lgcf;
 
-    .line 18
     invoke-interface {v0}, Lgcf;->n()Lfrh;
 
     move-result-object v1
 
     iget-object v0, p0, Lefq;->k:Liwe;
 
-    .line 19
     invoke-interface {v0}, Liwe;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -159,7 +140,6 @@
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 20
     iget-object v0, p0, Lefq;->h:Lgcf;
 
     invoke-interface {v0}, Lgcf;->n()Lfrh;
@@ -168,26 +148,21 @@
 
     invoke-interface {v0}, Lfrh;->b()V
 
-    .line 38
     :goto_0
     return-void
 
-    .line 23
     :catch_0
     move-exception v0
 
     :try_start_1
     sget-object v0, Lefp;->a:Ljava/lang/String;
 
-    .line 24
     const-string v1, "CaptureResults not added to photoCaptureDoneEvent event due to Interrupted Exception."
 
-    .line 25
     invoke-static {v0, v1}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 26
     iget-object v0, p0, Lefq;->h:Lgcf;
 
     invoke-interface {v0}, Lgcf;->n()Lfrh;
@@ -198,22 +173,18 @@
 
     goto :goto_0
 
-    .line 29
     :catch_1
     move-exception v0
 
     :try_start_2
     sget-object v0, Lefp;->a:Ljava/lang/String;
 
-    .line 30
     const-string v1, "CaptureResults not added to photoCaptureDoneEvent event due to Execution Exception."
 
-    .line 31
     invoke-static {v0, v1}, Lbgj;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 32
     iget-object v0, p0, Lefq;->h:Lgcf;
 
     invoke-interface {v0}, Lgcf;->n()Lfrh;
@@ -224,7 +195,6 @@
 
     goto :goto_0
 
-    .line 34
     :catchall_0
     move-exception v0
 
@@ -238,16 +208,13 @@
 
     throw v0
 
-    .line 35
     :cond_0
     sget-object v0, Lefp;->a:Ljava/lang/String;
 
-    .line 36
     const-string v1, "CaptureResults unavailable to photoCaptureDoneEvent event."
 
     invoke-static {v0, v1}, Lbgj;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 37
     iget-object v0, p0, Lefq;->h:Lgcf;
 
     invoke-interface {v0}, Lgcf;->n()Lfrh;

@@ -22,8 +22,6 @@
 .method constructor <init>(Lgvt;Landroid/content/Intent;Landroid/graphics/Bitmap;Landroid/app/Activity;)V
     .locals 1
 
-    .prologue
-    .line 3
     iput-object p2, p0, Lhaf;->b:Landroid/content/Intent;
 
     const/4 v0, 0x0
@@ -42,8 +40,6 @@
 .method protected final a(Lhaj;)V
     .locals 6
 
-    .prologue
-    .line 4
     :try_start_0
     iget-object v0, p0, Lhaf;->b:Landroid/content/Intent;
 
@@ -61,7 +57,6 @@
 
     invoke-direct {v2, p0}, Lhad;-><init>(Lhaf;)V
 
-    .line 5
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v3
@@ -124,11 +119,9 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 8
     :goto_2
     return-void
 
-    .line 5
     :cond_0
     const/4 v0, 0x0
 
@@ -151,7 +144,6 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 6
     :catch_0
     move-exception v0
 
@@ -161,15 +153,12 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 7
     sget-object v0, Lhac;->a:Lcom/google/android/gms/common/api/Status;
 
-    .line 8
     invoke-virtual {p0, v0}, Lhaf;->a(Lcom/google/android/gms/common/api/Status;)V
 
     goto :goto_2
 
-    .line 5
     :cond_1
     const/4 v0, 0x0
 
@@ -184,8 +173,5 @@
 .method protected final synthetic b(Lcom/google/android/gms/common/api/Status;)Lgwb;
     .locals 0
 
-    .prologue
-    .line 1
-    .line 2
     return-object p1
 .end method

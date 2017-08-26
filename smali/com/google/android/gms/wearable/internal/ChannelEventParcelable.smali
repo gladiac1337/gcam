@@ -65,8 +65,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 7
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "ChannelEventParcelable[versionCode="
@@ -99,14 +97,12 @@
 
     iget v0, p0, Lcom/google/android/gms/wearable/internal/ChannelEventParcelable;->c:I
 
-    .line 8
     packed-switch v0, :pswitch_data_0
 
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 9
     :goto_0
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -120,14 +116,12 @@
 
     iget v0, p0, Lcom/google/android/gms/wearable/internal/ChannelEventParcelable;->d:I
 
-    .line 10
     packed-switch v0, :pswitch_data_1
 
     invoke-static {v0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 11
     :goto_1
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -157,7 +151,6 @@
 
     return-object v0
 
-    .line 8
     :pswitch_0
     const-string v0, "CHANNEL_OPENED"
 
@@ -178,7 +171,6 @@
 
     goto :goto_0
 
-    .line 10
     :pswitch_4
     const-string v0, "CLOSE_REASON_DISCONNECTED"
 
@@ -199,7 +191,6 @@
 
     goto :goto_1
 
-    .line 8
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -208,7 +199,6 @@
         :pswitch_2
     .end packed-switch
 
-    .line 10
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_7
@@ -221,16 +211,12 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 1
-    .line 3
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lkk;->l(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 4
     const/4 v1, 0x1
 
     iget v2, p0, Lcom/google/android/gms/wearable/internal/ChannelEventParcelable;->a:I
@@ -261,9 +247,7 @@
 
     invoke-static {p1, v1, v2}, Lkk;->c(Landroid/os/Parcel;II)V
 
-    .line 5
     invoke-static {p1, v0}, Lkk;->m(Landroid/os/Parcel;I)V
 
-    .line 6
     return-void
 .end method

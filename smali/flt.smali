@@ -13,8 +13,6 @@
 .method public constructor <init>(Lfhx;Lflq;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lflt;->b:Lfhx;
 
     iput-object p2, p0, Lflt;->a:Lflq;

@@ -19,8 +19,6 @@
 .method private constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lgxz;Landroid/os/Bundle;Lgvw;Lgvx;)V
     .locals 7
 
-    .prologue
-    .line 1
     const/16 v3, 0x2c
 
     move-object v0, p0
@@ -45,10 +43,8 @@
 
     iput-object p4, p0, Lhef;->h:Landroid/os/Bundle;
 
-    .line 2
     iget-object v0, p3, Lgxz;->h:Ljava/lang/Integer;
 
-    .line 3
     iput-object v0, p0, Lhef;->i:Ljava/lang/Integer;
 
     return-void
@@ -57,25 +53,18 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lgxz;Lgvw;Lgvx;)V
     .locals 7
 
-    .prologue
-    .line 4
-    .line 6
     iget-object v0, p3, Lgxz;->g:Lhcr;
 
-    .line 8
     iget-object v1, p3, Lgxz;->h:Ljava/lang/Integer;
 
-    .line 9
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
     const-string v2, "com.google.android.gms.signin.internal.clientRequestedAccount"
 
-    .line 10
     const/4 v3, 0x0
 
-    .line 11
     invoke-virtual {v4, v2, v3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
     if-eqz v1, :cond_0
@@ -93,26 +82,20 @@
 
     const-string v1, "com.google.android.gms.signin.internal.offlineAccessRequested"
 
-    .line 12
     iget-boolean v2, v0, Lhcr;->b:Z
 
-    .line 13
     invoke-virtual {v4, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const-string v1, "com.google.android.gms.signin.internal.idTokenRequested"
 
-    .line 14
     iget-boolean v2, v0, Lhcr;->c:Z
 
-    .line 15
     invoke-virtual {v4, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const-string v1, "com.google.android.gms.signin.internal.serverClientId"
 
-    .line 16
     iget-object v2, v0, Lhcr;->d:Ljava/lang/String;
 
-    .line 17
     invoke-virtual {v4, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "com.google.android.gms.signin.internal.usePromptModeForAuthCode"
@@ -123,26 +106,20 @@
 
     const-string v1, "com.google.android.gms.signin.internal.forceCodeForRefreshToken"
 
-    .line 18
     iget-boolean v2, v0, Lhcr;->e:Z
 
-    .line 19
     invoke-virtual {v4, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     const-string v1, "com.google.android.gms.signin.internal.hostedDomain"
 
-    .line 20
     iget-object v2, v0, Lhcr;->f:Ljava/lang/String;
 
-    .line 21
     invoke-virtual {v4, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "com.google.android.gms.signin.internal.waitForAccessTokenRefresh"
 
-    .line 22
     iget-boolean v0, v0, Lhcr;->g:Z
 
-    .line 23
     invoke-virtual {v4, v1, v0}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     :cond_1
@@ -158,7 +135,6 @@
 
     move-object v6, p5
 
-    .line 24
     invoke-direct/range {v0 .. v6}, Lhef;-><init>(Landroid/content/Context;Landroid/os/Looper;Lgxz;Landroid/os/Bundle;Lgvw;Lgvx;)V
 
     return-void
@@ -169,18 +145,13 @@
 .method protected final synthetic a(Landroid/os/IBinder;)Landroid/os/IInterface;
     .locals 2
 
-    .prologue
-    .line 49
-    .line 51
     if-nez p1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 52
     :goto_0
     return-object v0
 
-    .line 51
     :cond_0
     const-string v0, "com.google.android.gms.signin.internal.ISignInService"
 
@@ -209,10 +180,8 @@
 .method public final a(Lgyt;Z)V
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 25
     :try_start_0
     invoke-virtual {p0}, Lhef;->i()Landroid/os/IInterface;
 
@@ -226,7 +195,6 @@
 
     move-result v3
 
-    .line 26
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v4
@@ -277,11 +245,9 @@
 
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 27
     :goto_1
     return-void
 
-    .line 26
     :cond_1
     const/4 v2, 0x0
 
@@ -298,7 +264,6 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 27
     :catch_0
     move-exception v0
 
@@ -314,15 +279,12 @@
 .method public final a(Lhec;)V
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 31
     const-string v0, "Expecting a valid ISignInCallbacks"
 
     invoke-static {p1, v0}, Lkk;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 33
     :try_start_0
     new-instance v2, Landroid/accounts/Account;
 
@@ -332,7 +294,6 @@
 
     invoke-direct {v2, v0, v3}, Landroid/accounts/Account;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 34
     const-string v0, "<<default account>>"
 
     iget-object v3, v2, Landroid/accounts/Account;->name:Ljava/lang/String;
@@ -343,15 +304,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 35
     iget-object v0, p0, Lgyd;->c:Landroid/content/Context;
 
-    .line 36
     invoke-static {v0}, Lguy;->a(Landroid/content/Context;)Lguy;
 
     move-result-object v0
 
-    .line 37
     const-string v3, "defaultGoogleSignInAccount"
 
     invoke-virtual {v0, v3}, Lguy;->b(Ljava/lang/String;)Ljava/lang/String;
@@ -362,7 +320,6 @@
 
     move-result-object v0
 
-    .line 38
     :goto_0
     new-instance v3, Lcom/google/android/gms/common/internal/ResolveAccountRequest;
 
@@ -374,7 +331,6 @@
 
     invoke-direct {v3, v2, v4, v0}, Lcom/google/android/gms/common/internal/ResolveAccountRequest;-><init>(Landroid/accounts/Account;ILcom/google/android/gms/auth/api/signin/GoogleSignInAccount;)V
 
-    .line 39
     invoke-virtual {p0}, Lhef;->i()Landroid/os/IInterface;
 
     move-result-object v0
@@ -385,7 +341,6 @@
 
     invoke-direct {v2, v3}, Lcom/google/android/gms/signin/internal/SignInRequest;-><init>(Lcom/google/android/gms/common/internal/ResolveAccountRequest;)V
 
-    .line 40
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v3
@@ -435,11 +390,9 @@
 
     invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
 
-    .line 41
     :goto_1
     return-void
 
-    .line 40
     :catchall_0
     move-exception v0
 
@@ -451,7 +404,6 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 41
     :catch_0
     move-exception v0
 
@@ -516,17 +468,12 @@
 .method protected final g()Landroid/os/Bundle;
     .locals 3
 
-    .prologue
-    .line 42
     iget-object v0, p0, Lhef;->g:Lgxz;
 
-    .line 43
     iget-object v0, v0, Lgxz;->e:Ljava/lang/String;
 
-    .line 45
     iget-object v1, p0, Lgyd;->c:Landroid/content/Context;
 
-    .line 46
     invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -543,10 +490,8 @@
 
     iget-object v2, p0, Lhef;->g:Lgxz;
 
-    .line 47
     iget-object v2, v2, Lgxz;->e:Ljava/lang/String;
 
-    .line 48
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
@@ -570,8 +515,6 @@
 .method public final y_()V
     .locals 5
 
-    .prologue
-    .line 28
     :try_start_0
     invoke-virtual {p0}, Lhef;->i()Landroid/os/IInterface;
 
@@ -585,7 +528,6 @@
 
     move-result v1
 
-    .line 29
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
@@ -620,11 +562,9 @@
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
-    .line 30
     :goto_0
     return-void
 
-    .line 29
     :catchall_0
     move-exception v0
 
@@ -636,7 +576,6 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 30
     :catch_0
     move-exception v0
 

@@ -16,58 +16,46 @@
 .method public constructor <init>(Lhir;)V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lhph;->b:Ljava/util/HashSet;
 
-    .line 3
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
     const/16 v1, 0x8
 
-    .line 5
     new-instance v2, Lhpi;
 
     invoke-direct {v2, p0, p1}, Lhpi;-><init>(Lhph;Lhir;)V
 
-    .line 6
     invoke-static {v0, v1, v2}, Lkk;->a(Ljava/util/NavigableMap;ILhir;)Ljava/util/NavigableMap;
 
     move-result-object v0
 
-    .line 7
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lkk;->a(Ljava/util/NavigableMap;Ljava/lang/Object;)Ljava/util/NavigableMap;
 
     move-result-object v0
 
-    .line 8
     iput-object v0, p0, Lhph;->a:Ljava/util/NavigableMap;
 
-    .line 9
     return-void
 .end method
 
 .method private final a()Ljava/util/Set;
     .locals 3
 
-    .prologue
-    .line 18
     iget-object v1, p0, Lhph;->a:Ljava/util/NavigableMap;
 
     monitor-enter v1
 
-    .line 19
     :try_start_0
     iget-object v0, p0, Lhph;->a:Ljava/util/NavigableMap;
 
@@ -85,7 +73,6 @@
 
     return-object v0
 
-    .line 20
     :catchall_0
     move-exception v0
 
@@ -101,35 +88,28 @@
 .method public final a(Lhir;)Lhiz;
     .locals 5
 
-    .prologue
-    .line 10
     iget-object v1, p0, Lhph;->a:Ljava/util/NavigableMap;
 
     monitor-enter v1
 
-    .line 11
     :try_start_0
     invoke-direct {p0}, Lhph;->a()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 12
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 13
     const/4 v0, 0x0
 
     monitor-exit v1
 
-    .line 16
     :goto_0
     return-object v0
 
-    .line 14
     :cond_0
     invoke-interface {p1, v0}, Lhir;->a(Ljava/util/Set;)Ljava/lang/Object;
 
@@ -141,7 +121,6 @@
 
     move-result-wide v2
 
-    .line 15
     iget-object v0, p0, Lhph;->b:Ljava/util/HashSet;
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -150,7 +129,6 @@
 
     invoke-virtual {v0, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 16
     iget-object v0, p0, Lhph;->a:Ljava/util/NavigableMap;
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -167,7 +145,6 @@
 
     goto :goto_0
 
-    .line 17
     :catchall_0
     move-exception v0
 
@@ -181,13 +158,10 @@
 .method final synthetic a(Lhir;Ljava/util/Set;)Ljava/lang/Long;
     .locals 2
 
-    .prologue
-    .line 21
     iget-object v1, p0, Lhph;->a:Ljava/util/NavigableMap;
 
     monitor-enter v1
 
-    .line 22
     :try_start_0
     iget-object v0, p0, Lhph;->b:Ljava/util/HashSet;
 
@@ -205,7 +179,6 @@
 
     return-object v0
 
-    .line 23
     :catchall_0
     move-exception v0
 

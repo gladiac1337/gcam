@@ -27,32 +27,26 @@
 .method private constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mTargetShaders:Ljava/util/HashMap;
 
-    .line 3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mTargetTextures:Ljava/util/HashMap;
 
-    .line 4
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mContextClients:Ljava/util/HashMap;
 
-    .line 5
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
@@ -65,8 +59,6 @@
 .method synthetic constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer;Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$1;)V
     .locals 0
 
-    .prologue
-    .line 57
     invoke-direct {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;-><init>(Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer;)V
 
     return-void
@@ -77,8 +69,6 @@
 .method protected clientsForContext(Ljavax/microedition/khronos/egl/EGLContext;)Ljava/util/Set;
     .locals 2
 
-    .prologue
-    .line 30
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mContextClients:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -87,20 +77,16 @@
 
     check-cast v0, Ljava/util/Set;
 
-    .line 31
     if-nez v0, :cond_0
 
-    .line 32
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 33
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mContextClients:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 34
     :cond_0
     return-object v0
 .end method
@@ -108,8 +94,6 @@
 .method protected createClientShader()Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
     .locals 1
 
-    .prologue
-    .line 54
     const/4 v0, 0x0
 
     return-object v0
@@ -118,8 +102,6 @@
 .method protected createClientTexture()Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
     .locals 1
 
-    .prologue
-    .line 55
     const/4 v0, 0x0
 
     return-object v0
@@ -131,19 +113,14 @@
 .method public initWithRunner(Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CameraRunnable;)V
     .locals 0
 
-    .prologue
-    .line 6
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mRunner:Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CameraRunnable;
 
-    .line 7
     return-void
 .end method
 
 .method public isFrontMirrored()Z
     .locals 1
 
-    .prologue
-    .line 56
     const/4 v0, 0x1
 
     return v0
@@ -152,8 +129,6 @@
 .method protected onCleanupContext(Ljavax/microedition/khronos/egl/EGLContext;)V
     .locals 2
 
-    .prologue
-    .line 36
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mTargetTextures:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -162,7 +137,6 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
 
-    .line 37
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mTargetShaders:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -171,27 +145,21 @@
 
     check-cast v1, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
-    .line 38
     if-eqz v0, :cond_0
 
-    .line 39
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/TextureSource;->release()V
 
-    .line 40
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mTargetTextures:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 41
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 42
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mTargetShaders:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 43
     :cond_1
     return-void
 .end method
@@ -199,41 +167,32 @@
 .method protected onRegisterClient(Lcom/google/android/libraries/smartburst/filterfw/VideoFrameConsumer;Ljavax/microedition/khronos/egl/EGLContext;)V
     .locals 0
 
-    .prologue
-    .line 35
     return-void
 .end method
 
 .method public onUpdateCameraOrientation(I)V
     .locals 1
 
-    .prologue
-    .line 24
     rem-int/lit16 v0, p1, 0xb4
 
     if-eqz v0, :cond_0
 
-    .line 25
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mCameraHeight:I
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mOutWidth:I
 
-    .line 26
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mCameraWidth:I
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mOutHeight:I
 
-    .line 29
     :goto_0
     return-void
 
-    .line 27
     :cond_0
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mCameraWidth:I
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mOutWidth:I
 
-    .line 28
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mCameraHeight:I
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mOutHeight:I
@@ -244,29 +203,22 @@
 .method public registerClient(Lcom/google/android/libraries/smartburst/filterfw/VideoFrameConsumer;)V
     .locals 2
 
-    .prologue
-    .line 11
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;->currentContext()Ljavax/microedition/khronos/egl/EGLContext;
 
     move-result-object v0
 
-    .line 12
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->clientsForContext(Ljavax/microedition/khronos/egl/EGLContext;)Ljava/util/Set;
 
     move-result-object v1
 
-    .line 13
     invoke-interface {v1, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 14
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mClients:Ljava/util/Vector;
 
     invoke-virtual {v1, p1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 15
     invoke-virtual {p0, p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->onRegisterClient(Lcom/google/android/libraries/smartburst/filterfw/VideoFrameConsumer;Ljavax/microedition/khronos/egl/EGLContext;)V
 
-    .line 16
     return-void
 .end method
 
@@ -276,14 +228,10 @@
 .method public setCameraSize(II)V
     .locals 0
 
-    .prologue
-    .line 8
     iput p1, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mCameraWidth:I
 
-    .line 9
     iput p2, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mCameraHeight:I
 
-    .line 10
     return-void
 .end method
 
@@ -293,8 +241,6 @@
 .method protected shaderForContext(Ljavax/microedition/khronos/egl/EGLContext;)Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
     .locals 2
 
-    .prologue
-    .line 49
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mTargetShaders:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -303,20 +249,16 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
-    .line 50
     if-nez v0, :cond_0
 
-    .line 51
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->createClientShader()Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     move-result-object v0
 
-    .line 52
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mTargetShaders:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 53
     :cond_0
     return-object v0
 .end method
@@ -324,8 +266,6 @@
 .method protected textureForContext(Ljavax/microedition/khronos/egl/EGLContext;)Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
     .locals 2
 
-    .prologue
-    .line 44
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mTargetTextures:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -334,20 +274,16 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
 
-    .line 45
     if-nez v0, :cond_0
 
-    .line 46
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->createClientTexture()Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
 
     move-result-object v0
 
-    .line 47
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mTargetTextures:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 48
     :cond_0
     return-object v0
 .end method
@@ -355,37 +291,29 @@
 .method public unregisterClient(Lcom/google/android/libraries/smartburst/filterfw/VideoFrameConsumer;)V
     .locals 2
 
-    .prologue
-    .line 17
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;->currentContext()Ljavax/microedition/khronos/egl/EGLContext;
 
     move-result-object v0
 
-    .line 18
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->clientsForContext(Ljavax/microedition/khronos/egl/EGLContext;)Ljava/util/Set;
 
     move-result-object v1
 
-    .line 19
     invoke-interface {v1, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 20
     invoke-interface {v1}, Ljava/util/Set;->isEmpty()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 21
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->onCleanupContext(Ljavax/microedition/khronos/egl/EGLContext;)V
 
-    .line 22
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->mClients:Ljava/util/Vector;
 
     invoke-virtual {v0, p1}, Ljava/util/Vector;->remove(Ljava/lang/Object;)Z
 
-    .line 23
     return-void
 .end method
 

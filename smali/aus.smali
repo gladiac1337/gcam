@@ -16,8 +16,6 @@
 .method constructor <init>(Laur;Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Laus;->b:Laur;
 
     iput-object p2, p0, Laus;->a:Ljava/lang/Object;
@@ -32,8 +30,6 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Laus;->b:Laur;
 
     iget-object v0, v0, Laur;->a:Lawz;
@@ -42,6 +38,5 @@
 
     invoke-interface {v0, v1}, Lawz;->a(Ljava/lang/Object;)V
 
-    .line 3
     return-void
 .end method

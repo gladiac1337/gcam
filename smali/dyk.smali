@@ -16,8 +16,6 @@
 .method constructor <init>(Ldyj;Z)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldyk;->b:Ldyj;
 
     iput-boolean p2, p0, Ldyk;->a:Z
@@ -32,15 +30,12 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 7
 
-    .prologue
     const/4 v5, 0x1
 
     const/4 v6, 0x0
 
-    .line 2
     check-cast p1, Ldhs;
 
-    .line 3
     new-array v0, v5, [Lfvg;
 
     new-array v1, v5, [Lfvb;
@@ -51,7 +46,6 @@
 
     const/4 v4, 0x2
 
-    .line 4
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -60,7 +54,6 @@
 
     aput-object v2, v1, v6
 
-    .line 5
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
@@ -69,25 +62,20 @@
 
     move-result-object v1
 
-    .line 6
     aput-object v1, v0, v6
 
-    .line 7
     invoke-virtual {p1, v0}, Ldhs;->a([Lfvg;)Ldhs;
 
     move-result-object v1
 
-    .line 8
     iget-boolean v0, p0, Ldyk;->a:Z
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Ldyk;->b:Ldyj;
 
-    .line 9
     iget-object v0, v0, Ldyj;->a:Lfsq;
 
-    .line 10
     invoke-interface {v0}, Lfsq;->s_()Z
 
     move-result v0
@@ -96,20 +84,16 @@
 
     move-object v0, v1
 
-    .line 20
     :goto_0
     return-object v0
 
-    .line 12
     :cond_0
     iget-boolean v0, p0, Ldyk;->a:Z
 
     if-eqz v0, :cond_1
 
-    .line 13
     const/4 v0, 0x5
 
-    .line 15
     :goto_1
     new-array v2, v5, [Lfvg;
 
@@ -119,7 +103,6 @@
 
     sget-object v5, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 16
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -128,7 +111,6 @@
 
     aput-object v4, v3, v6
 
-    .line 17
     invoke-static {v3}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -137,17 +119,14 @@
 
     move-result-object v0
 
-    .line 18
     aput-object v0, v2, v6
 
-    .line 19
     invoke-virtual {v1, v2}, Ldhs;->a([Lfvg;)Ldhs;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 14
     :cond_1
     const/4 v0, 0x3
 

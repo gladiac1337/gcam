@@ -14,8 +14,6 @@
 .method constructor <init>(Laaq;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Laar;->a:Laaq;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,64 +24,47 @@
 .method private final a()Ljava/lang/Void;
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 2
     iget-object v1, p0, Laar;->a:Laaq;
 
     monitor-enter v1
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Laar;->a:Laaq;
 
-    .line 4
     iget-object v0, v0, Laaq;->c:Ljava/io/Writer;
 
-    .line 5
     if-nez v0, :cond_0
 
-    .line 6
     monitor-exit v1
 
-    .line 17
     :goto_0
     return-object v3
 
-    .line 7
     :cond_0
     iget-object v0, p0, Laar;->a:Laaq;
 
-    .line 8
     invoke-virtual {v0}, Laaq;->c()V
 
-    .line 9
     iget-object v0, p0, Laar;->a:Laaq;
 
-    .line 10
     invoke-virtual {v0}, Laaq;->b()Z
 
     move-result v0
 
-    .line 11
     if-eqz v0, :cond_1
 
-    .line 12
     iget-object v0, p0, Laar;->a:Laaq;
 
-    .line 13
     invoke-virtual {v0}, Laaq;->a()V
 
-    .line 14
     iget-object v0, p0, Laar;->a:Laaq;
 
-    .line 15
     const/4 v2, 0x0
 
     iput v2, v0, Laaq;->d:I
 
-    .line 16
     :cond_1
     monitor-exit v1
 
@@ -104,8 +85,6 @@
 .method public final synthetic call()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 18
     invoke-direct {p0}, Laar;->a()Ljava/lang/Void;
 
     move-result-object v0

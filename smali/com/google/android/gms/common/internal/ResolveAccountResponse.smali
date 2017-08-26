@@ -65,20 +65,16 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 13
     if-ne p0, p1, :cond_1
 
-    .line 17
     :cond_0
     :goto_0
     return v0
 
-    .line 13
     :cond_1
     instance-of v2, p1, Lcom/google/android/gms/common/internal/ResolveAccountResponse;
 
@@ -101,21 +97,18 @@
 
     if-eqz v2, :cond_3
 
-    .line 14
     iget-object v2, p0, Lcom/google/android/gms/common/internal/ResolveAccountResponse;->a:Landroid/os/IBinder;
 
     invoke-static {v2}, Lgyu;->a(Landroid/os/IBinder;)Lgyt;
 
     move-result-object v2
 
-    .line 16
     iget-object v3, p1, Lcom/google/android/gms/common/internal/ResolveAccountResponse;->a:Landroid/os/IBinder;
 
     invoke-static {v3}, Lgyu;->a(Landroid/os/IBinder;)Lgyt;
 
     move-result-object v3
 
-    .line 17
     invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -131,16 +124,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 1
-    .line 3
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lkk;->l(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 4
     const/4 v1, 0x1
 
     iget v2, p0, Lcom/google/android/gms/common/internal/ResolveAccountResponse;->e:I
@@ -155,31 +144,23 @@
 
     const/4 v1, 0x3
 
-    .line 5
     iget-object v2, p0, Lcom/google/android/gms/common/internal/ResolveAccountResponse;->b:Lcom/google/android/gms/common/ConnectionResult;
 
-    .line 6
     invoke-static {p1, v1, v2, p2}, Lkk;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
     const/4 v1, 0x4
 
-    .line 7
     iget-boolean v2, p0, Lcom/google/android/gms/common/internal/ResolveAccountResponse;->c:Z
 
-    .line 8
     invoke-static {p1, v1, v2}, Lkk;->a(Landroid/os/Parcel;IZ)V
 
     const/4 v1, 0x5
 
-    .line 9
     iget-boolean v2, p0, Lcom/google/android/gms/common/internal/ResolveAccountResponse;->d:Z
 
-    .line 10
     invoke-static {p1, v1, v2}, Lkk;->a(Landroid/os/Parcel;IZ)V
 
-    .line 11
     invoke-static {p1, v0}, Lkk;->m(Landroid/os/Parcel;I)V
 
-    .line 12
     return-void
 .end method

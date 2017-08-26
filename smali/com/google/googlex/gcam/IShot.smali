@@ -13,25 +13,18 @@
 .method protected constructor <init>(JZ)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-boolean p3, p0, Lcom/google/googlex/gcam/IShot;->swigCMemOwn:Z
 
-    .line 3
     iput-wide p1, p0, Lcom/google/googlex/gcam/IShot;->swigCPtr:J
 
-    .line 4
     return-void
 .end method
 
 .method protected static getCPtr(Lcom/google/googlex/gcam/IShot;)J
     .locals 2
 
-    .prologue
-    .line 5
     if-nez p0, :cond_0
 
     const-wide/16 v0, 0x0
@@ -50,8 +43,6 @@
 .method public AddFrameMetadataForLogging(Lcom/google/googlex/gcam/FrameMetadata;)Z
     .locals 6
 
-    .prologue
-    .line 26
     iget-wide v0, p0, Lcom/google/googlex/gcam/IShot;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/FrameMetadata;->getCPtr(Lcom/google/googlex/gcam/FrameMetadata;)J
@@ -72,8 +63,6 @@
 .method public declared-synchronized AddMeteringFrame(Lcom/google/googlex/gcam/FrameMetadata;JLcom/google/googlex/gcam/RawWriteView;Lcom/google/googlex/gcam/SpatialGainMap;)Z
     .locals 14
 
-    .prologue
-    .line 18
     monitor-enter p0
 
     :try_start_0
@@ -122,8 +111,6 @@
 .method public declared-synchronized AddMeteringFrame(Lcom/google/googlex/gcam/FrameMetadata;JLcom/google/googlex/gcam/YuvWriteView;JLcom/google/googlex/gcam/RawWriteView;Lcom/google/googlex/gcam/SpatialGainMap;)Z
     .locals 21
 
-    .prologue
-    .line 17
     monitor-enter p0
 
     :try_start_0
@@ -182,8 +169,6 @@
 .method public declared-synchronized AddPayloadFrame(Lcom/google/googlex/gcam/FrameMetadata;JLcom/google/googlex/gcam/RawWriteView;JLcom/google/googlex/gcam/InterleavedWriteViewU16;Lcom/google/googlex/gcam/SpatialGainMap;)Z
     .locals 21
 
-    .prologue
-    .line 25
     monitor-enter p0
 
     :try_start_0
@@ -242,8 +227,6 @@
 .method public declared-synchronized BeginMeteringFrames(Lcom/google/googlex/gcam/BurstSpec;)V
     .locals 6
 
-    .prologue
-    .line 15
     monitor-enter p0
 
     :try_start_0
@@ -261,12 +244,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 16
     monitor-exit p0
 
     return-void
 
-    .line 15
     :catchall_0
     move-exception v0
 
@@ -278,8 +259,6 @@
 .method public declared-synchronized BeginPayloadFrames(Lcom/google/googlex/gcam/BurstSpec;)V
     .locals 6
 
-    .prologue
-    .line 23
     monitor-enter p0
 
     :try_start_0
@@ -297,12 +276,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 24
     monitor-exit p0
 
     return-void
 
-    .line 23
     :catchall_0
     move-exception v0
 
@@ -314,8 +291,6 @@
 .method public declared-synchronized BuildPayloadBurstSpec(Lcom/google/googlex/gcam/AeResults;)Lcom/google/googlex/gcam/BurstSpec;
     .locals 7
 
-    .prologue
-    .line 22
     monitor-enter p0
 
     :try_start_0
@@ -356,8 +331,6 @@
 .method public declared-synchronized ComputeAeResults(ZLcom/google/googlex/gcam/FrameMetadata;Lcom/google/googlex/gcam/RawWriteView;Lcom/google/googlex/gcam/SpatialGainMap;)Lcom/google/googlex/gcam/AeResults;
     .locals 14
 
-    .prologue
-    .line 21
     monitor-enter p0
 
     :try_start_0
@@ -412,8 +385,6 @@
 .method public declared-synchronized EndMeteringFrames()Lcom/google/googlex/gcam/BurstSpec;
     .locals 4
 
-    .prologue
-    .line 20
     monitor-enter p0
 
     :try_start_0
@@ -446,8 +417,6 @@
 .method public declared-synchronized EndMeteringFrames(F)Lcom/google/googlex/gcam/BurstSpec;
     .locals 4
 
-    .prologue
-    .line 19
     monitor-enter p0
 
     :try_start_0
@@ -480,8 +449,6 @@
 .method public declared-synchronized EndPayloadFrames(Lcom/google/googlex/gcam/ClientExifMetadata;Lcom/google/googlex/gcam/StringVector;Lcom/google/googlex/gcam/StringVector;)Z
     .locals 12
 
-    .prologue
-    .line 27
     monitor-enter p0
 
     :try_start_0
@@ -528,8 +495,6 @@
 .method public declared-synchronized GetMeteringBurstSpec()Lcom/google/googlex/gcam/BurstSpec;
     .locals 4
 
-    .prologue
-    .line 14
     monitor-enter p0
 
     :try_start_0
@@ -562,10 +527,8 @@
 .method public declared-synchronized delete()V
     .locals 4
 
-    .prologue
     const-wide/16 v2, 0x0
 
-    .line 8
     monitor-enter p0
 
     :try_start_0
@@ -575,22 +538,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 9
     iget-boolean v0, p0, Lcom/google/googlex/gcam/IShot;->swigCMemOwn:Z
 
     if-eqz v0, :cond_0
 
-    .line 10
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/googlex/gcam/IShot;->swigCMemOwn:Z
 
-    .line 11
     iget-wide v0, p0, Lcom/google/googlex/gcam/IShot;->swigCPtr:J
 
     invoke-static {v0, v1}, Lcom/google/googlex/gcam/GcamModuleJNI;->delete_IShot(J)V
 
-    .line 12
     :cond_0
     const-wide/16 v0, 0x0
 
@@ -598,13 +557,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 13
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 8
     :catchall_0
     move-exception v0
 
@@ -616,19 +573,14 @@
 .method protected finalize()V
     .locals 0
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Lcom/google/googlex/gcam/IShot;->delete()V
 
-    .line 7
     return-void
 .end method
 
 .method public declared-synchronized save()Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__SaveInfo;
     .locals 4
 
-    .prologue
-    .line 29
     monitor-enter p0
 
     :try_start_0
@@ -640,7 +592,6 @@
 
     move-result-wide v2
 
-    .line 30
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -666,7 +617,6 @@
 
     goto :goto_0
 
-    .line 29
     :catchall_0
     move-exception v0
 
@@ -678,8 +628,6 @@
 .method public declared-synchronized shot_id()I
     .locals 2
 
-    .prologue
-    .line 28
     monitor-enter p0
 
     :try_start_0
@@ -706,8 +654,6 @@
 .method public declared-synchronized shot_params()Lcom/google/googlex/gcam/ShotParams;
     .locals 4
 
-    .prologue
-    .line 32
     monitor-enter p0
 
     :try_start_0
@@ -740,8 +686,6 @@
 .method public declared-synchronized static_metadata()Lcom/google/googlex/gcam/StaticMetadata;
     .locals 4
 
-    .prologue
-    .line 33
     monitor-enter p0
 
     :try_start_0
@@ -774,8 +718,6 @@
 .method public declared-synchronized tuning()Lcom/google/googlex/gcam/Tuning;
     .locals 4
 
-    .prologue
-    .line 31
     monitor-enter p0
 
     :try_start_0

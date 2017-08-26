@@ -11,8 +11,6 @@
 .method constructor <init>(Lcv;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcw;->c:Lcv;
 
     invoke-direct {p0}, Ldb;-><init>()V
@@ -25,8 +23,6 @@
 .method protected final a()I
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcw;->c:Lcv;
 
     iget v0, v0, Lcv;->b:I
@@ -37,8 +33,6 @@
 .method protected final a(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lcw;->c:Lcv;
 
     invoke-virtual {v0, p1}, Lcv;->a(Ljava/lang/Object;)I
@@ -51,8 +45,6 @@
 .method protected final a(II)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lcw;->c:Lcv;
 
     iget-object v0, v0, Lcv;->a:[Ljava/lang/Object;
@@ -65,8 +57,6 @@
 .method protected final a(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 9
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "not a map"
@@ -79,34 +69,26 @@
 .method protected final a(I)V
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lcw;->c:Lcv;
 
     invoke-virtual {v0, p1}, Lcv;->a(I)Ljava/lang/Object;
 
-    .line 11
     return-void
 .end method
 
 .method protected final a(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lcw;->c:Lcv;
 
     invoke-virtual {v0, p1}, Lcv;->add(Ljava/lang/Object;)Z
 
-    .line 8
     return-void
 .end method
 
 .method protected final b(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lcw;->c:Lcv;
 
     invoke-virtual {v0, p1}, Lcv;->a(Ljava/lang/Object;)I
@@ -119,8 +101,6 @@
 .method protected final b()Ljava/util/Map;
     .locals 2
 
-    .prologue
-    .line 6
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "not a map"
@@ -133,12 +113,9 @@
 .method protected final c()V
     .locals 1
 
-    .prologue
-    .line 12
     iget-object v0, p0, Lcw;->c:Lcv;
 
     invoke-virtual {v0}, Lcv;->clear()V
 
-    .line 13
     return-void
 .end method

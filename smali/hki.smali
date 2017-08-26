@@ -11,13 +11,9 @@
 .method constructor <init>(I)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    .line 2
     iput p1, p0, Lhki;->a:I
 
-    .line 3
     return-void
 .end method

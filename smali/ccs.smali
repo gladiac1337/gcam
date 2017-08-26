@@ -7,11 +7,8 @@
 .method public constructor <init>(Landroid/net/Uri;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Lfqz;-><init>(Landroid/net/Uri;)V
 
-    .line 2
     return-void
 .end method
 
@@ -20,8 +17,6 @@
 .method public final a()Lccr;
     .locals 19
 
-    .prologue
-    .line 3
     new-instance v3, Lccr;
 
     move-object/from16 v0, p0
@@ -78,8 +73,6 @@
 .method public final synthetic b()Lfqy;
     .locals 1
 
-    .prologue
-    .line 4
     invoke-virtual {p0}, Lccs;->a()Lccr;
 
     move-result-object v0

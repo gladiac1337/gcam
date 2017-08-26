@@ -43,31 +43,26 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x3
 
     const/4 v1, 0x2
 
-    .line 309
     sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
     sput-object v0, Loc;->c:Landroid/graphics/PorterDuff$Mode;
 
-    .line 310
     new-instance v0, Loe;
 
     invoke-direct {v0}, Loe;-><init>()V
 
     sput-object v0, Loc;->e:Loe;
 
-    .line 311
     new-array v0, v2, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Loc;->f:[I
 
-    .line 312
     const/4 v0, 0x7
 
     new-array v0, v0, [I
@@ -76,7 +71,6 @@
 
     sput-object v0, Loc;->g:[I
 
-    .line 313
     const/16 v0, 0xa
 
     new-array v0, v0, [I
@@ -85,21 +79,18 @@
 
     sput-object v0, Loc;->h:[I
 
-    .line 314
     new-array v0, v2, [I
 
     fill-array-data v0, :array_3
 
     sput-object v0, Loc;->i:[I
 
-    .line 315
     new-array v0, v1, [I
 
     fill-array-data v0, :array_4
 
     sput-object v0, Loc;->j:[I
 
-    .line 316
     new-array v0, v1, [I
 
     fill-array-data v0, :array_5
@@ -108,7 +99,6 @@
 
     return-void
 
-    .line 311
     nop
 
     :array_0
@@ -118,7 +108,6 @@
         0x7f020000
     .end array-data
 
-    .line 312
     :array_1
     .array-data 4
         0x7f020016
@@ -130,7 +119,6 @@
         0x7f02001b
     .end array-data
 
-    .line 313
     :array_2
     .array-data 4
         0x7f02004d
@@ -145,7 +133,6 @@
         0x7f02004c
     .end array-data
 
-    .line 314
     :array_3
     .array-data 4
         0x7f020034
@@ -153,14 +140,12 @@
         0x7f020033
     .end array-data
 
-    .line 315
     :array_4
     .array-data 4
         0x7f020044
         0x7f020051
     .end array-data
 
-    .line 316
     :array_5
     .array-data 4
         0x7f020003
@@ -171,18 +156,14 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Loc;->a:Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava/util/WeakHashMap;
 
     const/4 v1, 0x0
@@ -191,15 +172,12 @@
 
     iput-object v0, p0, Loc;->b:Ljava/util/WeakHashMap;
 
-    .line 4
     return-void
 .end method
 
 .method private static a(Landroid/util/TypedValue;)J
     .locals 4
 
-    .prologue
-    .line 97
     iget v0, p0, Landroid/util/TypedValue;->assetCookie:I
 
     int-to-long v0, v0
@@ -220,11 +198,8 @@
 .method private static a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
     .locals 3
 
-    .prologue
-    .line 297
     sget-object v0, Loc;->e:Loe;
 
-    .line 298
     invoke-static {p0, p1}, Loe;->a(ILandroid/graphics/PorterDuff$Mode;)I
 
     move-result v1
@@ -239,18 +214,14 @@
 
     check-cast v0, Landroid/graphics/PorterDuffColorFilter;
 
-    .line 300
     if-nez v0, :cond_0
 
-    .line 301
     new-instance v0, Landroid/graphics/PorterDuffColorFilter;
 
     invoke-direct {v0, p0, p1}, Landroid/graphics/PorterDuffColorFilter;-><init>(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 302
     sget-object v1, Loc;->e:Loe;
 
-    .line 303
     invoke-static {p0, p1}, Loe;->a(ILandroid/graphics/PorterDuff$Mode;)I
 
     move-result v2
@@ -261,7 +232,6 @@
 
     invoke-virtual {v1, v2, v0}, Loe;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 304
     :cond_0
     return-object v0
 .end method
@@ -269,38 +239,30 @@
 .method private final a(Landroid/content/Context;J)Landroid/graphics/drawable/Drawable;
     .locals 4
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 138
     iget-object v3, p0, Loc;->a:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 139
     :try_start_0
     iget-object v0, p0, Loc;->b:Ljava/util/WeakHashMap;
 
-    .line 140
     invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcz;
 
-    .line 141
     if-nez v0, :cond_0
 
-    .line 142
     monitor-exit v3
 
     move-object v0, v2
 
-    .line 150
     :goto_0
     return-object v0
 
-    .line 143
     :cond_0
     invoke-virtual {v0, p2, p3}, Lcz;->a(J)Ljava/lang/Object;
 
@@ -308,20 +270,16 @@
 
     check-cast v1, Ljava/lang/ref/WeakReference;
 
-    .line 144
     if-eqz v1, :cond_2
 
-    .line 145
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/graphics/drawable/Drawable$ConstantState;
 
-    .line 146
     if-eqz v1, :cond_1
 
-    .line 147
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -334,7 +292,6 @@
 
     goto :goto_0
 
-    .line 149
     :catchall_0
     move-exception v0
 
@@ -344,12 +301,10 @@
 
     throw v0
 
-    .line 148
     :cond_1
     :try_start_1
     invoke-virtual {v0, p2, p3}, Lcz;->b(J)V
 
-    .line 149
     :cond_2
     monitor-exit v3
     :try_end_1
@@ -357,35 +312,28 @@
 
     move-object v0, v2
 
-    .line 150
     goto :goto_0
 .end method
 
 .method public static a()Loc;
     .locals 3
 
-    .prologue
-    .line 5
     sget-object v0, Loc;->d:Loc;
 
     if-nez v0, :cond_0
 
-    .line 6
     new-instance v0, Loc;
 
     invoke-direct {v0}, Loc;-><init>()V
 
-    .line 7
     sput-object v0, Loc;->d:Loc;
 
-    .line 8
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x18
 
     if-ge v1, v2, :cond_0
 
-    .line 9
     const-string v1, "vector"
 
     new-instance v2, Log;
@@ -394,14 +342,12 @@
 
     invoke-direct {v0, v1, v2}, Loc;->a(Ljava/lang/String;Lof;)V
 
-    .line 10
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0xb
 
     if-lt v1, v2, :cond_0
 
-    .line 11
     const-string v1, "animated-vector"
 
     new-instance v2, Lod;
@@ -410,7 +356,6 @@
 
     invoke-direct {v0, v1, v2}, Loc;->a(Ljava/lang/String;Lof;)V
 
-    .line 12
     :cond_0
     sget-object v0, Loc;->d:Loc;
 
@@ -420,20 +365,16 @@
 .method private static a(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
     .locals 1
 
-    .prologue
-    .line 305
     invoke-static {p0}, Lpv;->b(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 306
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     move-result-object p0
 
-    .line 307
     :cond_0
     if-nez p2, :cond_1
 
@@ -446,43 +387,36 @@
 
     invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 308
     return-void
 .end method
 
 .method static a(Landroid/graphics/drawable/Drawable;Lsy;[I)V
     .locals 3
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 282
     invoke-static {p0}, Lpv;->b(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 283
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     if-eq v0, p0, :cond_1
 
-    .line 284
     const-string v0, "AppCompatDrawableManager"
 
     const-string v1, "Mutated drawable is not the same instance as the input."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 296
     :cond_0
     :goto_0
     return-void
 
-    .line 286
     :cond_1
     iget-boolean v0, p1, Lsy;->d:Z
 
@@ -492,7 +426,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 287
     :cond_2
     iget-boolean v0, p1, Lsy;->d:Z
 
@@ -507,18 +440,15 @@
 
     iget-object v2, p1, Lsy;->b:Landroid/graphics/PorterDuff$Mode;
 
-    .line 288
     :goto_2
     if-eqz v0, :cond_3
 
     if-nez v2, :cond_6
 
-    .line 292
     :cond_3
     :goto_3
     invoke-virtual {p0, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 294
     :goto_4
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -526,7 +456,6 @@
 
     if-gt v0, v1, :cond_0
 
-    .line 295
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     goto :goto_0
@@ -534,7 +463,6 @@
     :cond_4
     move-object v0, v1
 
-    .line 287
     goto :goto_1
 
     :cond_5
@@ -542,7 +470,6 @@
 
     goto :goto_2
 
-    .line 290
     :cond_6
     const/4 v1, 0x0
 
@@ -550,14 +477,12 @@
 
     move-result v0
 
-    .line 291
     invoke-static {v0, v2}, Loc;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
 
     move-result-object v1
 
     goto :goto_3
 
-    .line 293
     :cond_7
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->clearColorFilter()V
 
@@ -567,33 +492,27 @@
 .method private final a(Ljava/lang/String;Lof;)V
     .locals 1
 
-    .prologue
-    .line 192
     iget-object v0, p0, Loc;->m:Lct;
 
     if-nez v0, :cond_0
 
-    .line 193
     new-instance v0, Lct;
 
     invoke-direct {v0}, Lct;-><init>()V
 
     iput-object v0, p0, Loc;->m:Lct;
 
-    .line 194
     :cond_0
     iget-object v0, p0, Loc;->m:Lct;
 
     invoke-virtual {v0, p1, p2}, Lct;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 195
     return-void
 .end method
 
 .method static a(Landroid/content/Context;ILandroid/graphics/drawable/Drawable;)Z
     .locals 7
 
-    .prologue
     const v2, 0x1010031
 
     const/4 v3, -0x1
@@ -602,10 +521,8 @@
 
     const/4 v0, 0x1
 
-    .line 162
     sget-object v5, Loc;->c:Landroid/graphics/PorterDuff$Mode;
 
-    .line 166
     sget-object v4, Loc;->f:[I
 
     invoke-static {v4, p1}, Loc;->a([II)Z
@@ -614,7 +531,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 167
     const v2, 0x7f010092
 
     move v4, v2
@@ -625,47 +541,38 @@
 
     move v2, v3
 
-    .line 183
     :goto_0
     if-eqz v5, :cond_6
 
-    .line 184
     invoke-static {p2}, Lpv;->b(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 185
     invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     move-result-object p2
 
-    .line 186
     :cond_0
     invoke-static {p0, v4}, Lsw;->a(Landroid/content/Context;I)I
 
     move-result v1
 
-    .line 187
     invoke-static {v1, v6}, Loc;->a(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuffColorFilter;
 
     move-result-object v1
 
     invoke-virtual {p2, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 188
     if-eq v2, v3, :cond_1
 
-    .line 189
     invoke-virtual {p2, v2}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 191
     :cond_1
     :goto_1
     return v0
 
-    .line 169
     :cond_2
     sget-object v4, Loc;->h:[I
 
@@ -675,7 +582,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 170
     const v2, 0x7f010093
 
     move v4, v2
@@ -686,10 +592,8 @@
 
     move v2, v3
 
-    .line 171
     goto :goto_0
 
-    .line 172
     :cond_3
     sget-object v4, Loc;->i:[I
 
@@ -699,7 +603,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 175
     sget-object v4, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
 
     move v5, v0
@@ -712,16 +615,13 @@
 
     goto :goto_0
 
-    .line 176
     :cond_4
     const v4, 0x7f020028
 
     if-ne p1, v4, :cond_5
 
-    .line 177
     const v4, 0x1010030
 
-    .line 179
     const v2, 0x42233333    # 40.8f
 
     invoke-static {v2}, Ljava/lang/Math;->round(F)I
@@ -734,7 +634,6 @@
 
     goto :goto_0
 
-    .line 180
     :cond_5
     const v4, 0x7f020011
 
@@ -748,13 +647,11 @@
 
     move v2, v3
 
-    .line 182
     goto :goto_0
 
     :cond_6
     move v0, v1
 
-    .line 191
     goto :goto_1
 
     :cond_7
@@ -772,21 +669,16 @@
 .method private final a(Landroid/content/Context;JLandroid/graphics/drawable/Drawable;)Z
     .locals 4
 
-    .prologue
-    .line 151
     invoke-virtual {p4}, Landroid/graphics/drawable/Drawable;->getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
 
     move-result-object v1
 
-    .line 152
     if-eqz v1, :cond_1
 
-    .line 153
     iget-object v2, p0, Loc;->a:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 154
     :try_start_0
     iget-object v0, p0, Loc;->b:Ljava/util/WeakHashMap;
 
@@ -796,20 +688,16 @@
 
     check-cast v0, Lcz;
 
-    .line 155
     if-nez v0, :cond_0
 
-    .line 156
     new-instance v0, Lcz;
 
     invoke-direct {v0}, Lcz;-><init>()V
 
-    .line 157
     iget-object v3, p0, Loc;->b:Ljava/util/WeakHashMap;
 
     invoke-virtual {v3, p1, v0}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 158
     :cond_0
     new-instance v3, Ljava/lang/ref/WeakReference;
 
@@ -817,17 +705,13 @@
 
     invoke-virtual {v0, p2, p3, v3}, Lcz;->a(JLjava/lang/Object;)V
 
-    .line 159
     monitor-exit v2
 
-    .line 160
     const/4 v0, 0x1
 
-    .line 161
     :goto_0
     return v0
 
-    .line 159
     :catchall_0
     move-exception v0
 
@@ -837,7 +721,6 @@
 
     throw v0
 
-    .line 161
     :cond_1
     const/4 v0, 0x0
 
@@ -847,10 +730,8 @@
 .method private static a([II)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 196
     array-length v2, p0
 
     move v1, v0
@@ -860,17 +741,13 @@
 
     aget v3, p0, v1
 
-    .line 197
     if-ne v3, p1, :cond_1
 
-    .line 198
     const/4 v0, 0x1
 
-    .line 200
     :cond_0
     return v0
 
-    .line 199
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
@@ -880,7 +757,6 @@
 .method private static c(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
     .locals 9
 
-    .prologue
     const/4 v1, 0x4
 
     const/4 v8, 0x3
@@ -891,67 +767,54 @@
 
     const/4 v5, 0x0
 
-    .line 269
     new-array v0, v1, [[I
 
-    .line 270
     new-array v1, v1, [I
 
-    .line 271
     const v2, 0x7f010094
 
     invoke-static {p0, v2}, Lsw;->a(Landroid/content/Context;I)I
 
     move-result v2
 
-    .line 272
     const v3, 0x7f010095
 
     invoke-static {p0, v3}, Lsw;->c(Landroid/content/Context;I)I
 
     move-result v3
 
-    .line 273
     sget-object v4, Lsw;->a:[I
 
     aput-object v4, v0, v5
 
-    .line 274
     aput v3, v1, v5
 
-    .line 275
     sget-object v3, Lsw;->c:[I
 
     aput-object v3, v0, v6
 
-    .line 276
     invoke-static {v2, p1}, Lbo;->a(II)I
 
     move-result v3
 
     aput v3, v1, v6
 
-    .line 277
     sget-object v3, Lsw;->b:[I
 
     aput-object v3, v0, v7
 
-    .line 278
     invoke-static {v2, p1}, Lbo;->a(II)I
 
     move-result v2
 
     aput v2, v1, v7
 
-    .line 279
     sget-object v2, Lsw;->e:[I
 
     aput-object v2, v0, v8
 
-    .line 280
     aput p1, v1, v8
 
-    .line 281
     new-instance v2, Landroid/content/res/ColorStateList;
 
     invoke-direct {v2, v0, v1}, Landroid/content/res/ColorStateList;-><init>([[I[I)V
@@ -964,14 +827,12 @@
 .method final a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
     .locals 9
 
-    .prologue
     const/4 v1, 0x0
 
     const/4 v8, 0x2
 
     const/4 v7, 0x1
 
-    .line 98
     iget-object v0, p0, Loc;->m:Lct;
 
     if-eqz v0, :cond_c
@@ -984,12 +845,10 @@
 
     if-nez v0, :cond_c
 
-    .line 99
     iget-object v0, p0, Loc;->n:Ldm;
 
     if-eqz v0, :cond_2
 
-    .line 100
     iget-object v0, p0, Loc;->n:Ldm;
 
     invoke-virtual {v0, p2}, Ldm;->a(I)Ljava/lang/Object;
@@ -998,7 +857,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 101
     const-string v2, "appcompat_skip_skip"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1011,7 +869,6 @@
 
     iget-object v2, p0, Loc;->m:Lct;
 
-    .line 102
     invoke-virtual {v2, v0}, Lct;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1021,12 +878,10 @@
     :cond_0
     move-object v0, v1
 
-    .line 137
     :cond_1
     :goto_0
     return-object v0
 
-    .line 105
     :cond_2
     new-instance v0, Ldm;
 
@@ -1034,50 +889,40 @@
 
     iput-object v0, p0, Loc;->n:Ldm;
 
-    .line 106
     :cond_3
     iget-object v0, p0, Loc;->o:Landroid/util/TypedValue;
 
     if-nez v0, :cond_4
 
-    .line 107
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
     iput-object v0, p0, Loc;->o:Landroid/util/TypedValue;
 
-    .line 108
     :cond_4
     iget-object v2, p0, Loc;->o:Landroid/util/TypedValue;
 
-    .line 109
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 110
     invoke-virtual {v0, p2, v2, v7}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
 
-    .line 111
     invoke-static {v2}, Loc;->a(Landroid/util/TypedValue;)J
 
     move-result-wide v4
 
-    .line 112
     invoke-direct {p0, p1, v4, v5}, Loc;->a(Landroid/content/Context;J)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 113
     if-eqz v1, :cond_5
 
     move-object v0, v1
 
-    .line 114
     goto :goto_0
 
-    .line 115
     :cond_5
     iget-object v3, v2, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
 
@@ -1097,18 +942,15 @@
 
     if-eqz v3, :cond_8
 
-    .line 116
     :try_start_0
     invoke-virtual {v0, p2}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
     move-result-object v3
 
-    .line 117
     invoke-static {v3}, Landroid/util/Xml;->asAttributeSet(Lorg/xmlpull/v1/XmlPullParser;)Landroid/util/AttributeSet;
 
     move-result-object v6
 
-    .line 118
     :cond_6
     invoke-interface {v3}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -1118,11 +960,9 @@
 
     if-ne v0, v7, :cond_6
 
-    .line 119
     :cond_7
     if-eq v0, v8, :cond_9
 
-    .line 120
     new-instance v0, Lorg/xmlpull/v1/XmlPullParserException;
 
     const-string v2, "No start tag found"
@@ -1133,11 +973,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 132
     :catch_0
     move-exception v0
 
-    .line 133
     const-string v2, "AppCompatDrawableManager"
 
     const-string v3, "Exception while inflating drawable"
@@ -1147,11 +985,9 @@
     :cond_8
     move-object v0, v1
 
-    .line 134
     :goto_1
     if-nez v0, :cond_1
 
-    .line 135
     iget-object v1, p0, Loc;->n:Ldm;
 
     const-string v2, "appcompat_skip_skip"
@@ -1160,19 +996,16 @@
 
     goto :goto_0
 
-    .line 121
     :cond_9
     :try_start_1
     invoke-interface {v3}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 122
     iget-object v7, p0, Loc;->n:Ldm;
 
     invoke-virtual {v7, p2, v0}, Ldm;->b(ILjava/lang/Object;)V
 
-    .line 123
     iget-object v7, p0, Loc;->m:Lct;
 
     invoke-virtual {v7, v0}, Lct;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1181,29 +1014,23 @@
 
     check-cast v0, Lof;
 
-    .line 124
     if-eqz v0, :cond_a
 
-    .line 126
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v7
 
-    .line 127
     invoke-interface {v0, p1, v3, v6, v7}, Lof;->a(Landroid/content/Context;Lorg/xmlpull/v1/XmlPullParser;Landroid/util/AttributeSet;Landroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 128
     :cond_a
     if-eqz v1, :cond_b
 
-    .line 129
     iget v0, v2, Landroid/util/TypedValue;->changingConfigurations:I
 
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setChangingConfigurations(I)V
 
-    .line 130
     invoke-direct {p0, p1, v4, v5, v1}, Loc;->a(Landroid/content/Context;JLandroid/graphics/drawable/Drawable;)Z
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -1211,20 +1038,17 @@
     :cond_b
     move-object v0, v1
 
-    .line 131
     goto :goto_1
 
     :cond_c
     move-object v0, v1
 
-    .line 137
     goto/16 :goto_0
 .end method
 
 .method public final a(Landroid/content/Context;IZ)Landroid/graphics/drawable/Drawable;
     .locals 11
 
-    .prologue
     const/high16 v10, 0x1020000
 
     const v9, 0x7f010093
@@ -1235,33 +1059,26 @@
 
     const/4 v2, 0x0
 
-    .line 13
-    .line 14
     iget-boolean v0, p0, Loc;->p:Z
 
     if-nez v0, :cond_3
 
-    .line 15
     iput-boolean v3, p0, Loc;->p:Z
 
-    .line 17
     const v0, 0x7f020052
 
     invoke-virtual {p0, p1, v0, v2}, Loc;->a(Landroid/content/Context;IZ)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 19
     if-eqz v0, :cond_1
 
-    .line 20
     instance-of v1, v0, Laq;
 
     if-nez v1, :cond_0
 
     const-string v1, "android.graphics.drawable.VectorDrawable"
 
-    .line 21
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -1279,15 +1096,12 @@
     :cond_0
     move v0, v3
 
-    .line 22
     :goto_0
     if-nez v0, :cond_3
 
-    .line 23
     :cond_1
     iput-boolean v2, p0, Loc;->p:Z
 
-    .line 24
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "This app has been built with an incorrect configuration. Please configure your build for VectorDrawableCompat."
@@ -1299,137 +1113,110 @@
     :cond_2
     move v0, v2
 
-    .line 21
     goto :goto_0
 
-    .line 25
     :cond_3
     invoke-virtual {p0, p1, p2}, Loc;->a(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 26
     if-nez v1, :cond_7
 
-    .line 28
     iget-object v0, p0, Loc;->o:Landroid/util/TypedValue;
 
     if-nez v0, :cond_4
 
-    .line 29
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
     iput-object v0, p0, Loc;->o:Landroid/util/TypedValue;
 
-    .line 30
     :cond_4
     iget-object v1, p0, Loc;->o:Landroid/util/TypedValue;
 
-    .line 31
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
     invoke-virtual {v0, p2, v1, v3}, Landroid/content/res/Resources;->getValue(ILandroid/util/TypedValue;Z)V
 
-    .line 32
     invoke-static {v1}, Loc;->a(Landroid/util/TypedValue;)J
 
     move-result-wide v4
 
-    .line 33
     invoke-direct {p0, p1, v4, v5}, Loc;->a(Landroid/content/Context;J)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 34
     if-nez v0, :cond_6
 
-    .line 35
     const v6, 0x7f02000e
 
     if-ne p2, v6, :cond_5
 
-    .line 36
     new-instance v0, Landroid/graphics/drawable/LayerDrawable;
 
     const/4 v6, 0x2
 
     new-array v6, v6, [Landroid/graphics/drawable/Drawable;
 
-    .line 37
     const v7, 0x7f02000d
 
     invoke-virtual {p0, p1, v7, v2}, Loc;->a(Landroid/content/Context;IZ)Landroid/graphics/drawable/Drawable;
 
     move-result-object v7
 
-    .line 38
     aput-object v7, v6, v2
 
-    .line 39
     const v7, 0x7f02000f
 
     invoke-virtual {p0, p1, v7, v2}, Loc;->a(Landroid/content/Context;IZ)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    .line 40
     aput-object v2, v6, v3
 
     invoke-direct {v0, v6}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
 
-    .line 41
     :cond_5
     if-eqz v0, :cond_6
 
-    .line 42
     iget v1, v1, Landroid/util/TypedValue;->changingConfigurations:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setChangingConfigurations(I)V
 
-    .line 43
     invoke-direct {p0, p1, v4, v5, v0}, Loc;->a(Landroid/content/Context;JLandroid/graphics/drawable/Drawable;)Z
 
     :cond_6
     move-object v1, v0
 
-    .line 46
     :cond_7
     if-nez v1, :cond_8
 
-    .line 47
     invoke-static {p1, p2}, Lba;->getDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 48
     :cond_8
     if-eqz v1, :cond_b
 
-    .line 50
     invoke-virtual {p0, p1, p2}, Loc;->b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
-    .line 51
     if-eqz v0, :cond_d
 
-    .line 52
     invoke-static {v1}, Lpv;->b(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v2
 
     if-eqz v2, :cond_9
 
-    .line 53
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 55
     :cond_9
     sget-object v2, Lbs;->a:Lid;
 
@@ -1437,40 +1224,30 @@
 
     move-result-object v1
 
-    .line 57
     invoke-static {v1, v0}, Lbs;->a(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
 
-    .line 59
     const/4 v0, 0x0
 
-    .line 60
     const v2, 0x7f020042
 
     if-ne p2, v2, :cond_a
 
-    .line 61
     sget-object v0, Landroid/graphics/PorterDuff$Mode;->MULTIPLY:Landroid/graphics/PorterDuff$Mode;
 
-    .line 64
     :cond_a
     if-eqz v0, :cond_b
 
-    .line 65
     invoke-static {v1, v0}, Lbs;->a(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
 
-    .line 94
     :cond_b
     :goto_1
     if-eqz v1, :cond_c
 
-    .line 95
     invoke-static {v1}, Lpv;->a(Landroid/graphics/drawable/Drawable;)V
 
-    .line 96
     :cond_c
     return-object v1
 
-    .line 66
     :cond_d
     const v0, 0x7f02003f
 
@@ -1478,61 +1255,50 @@
 
     move-object v0, v1
 
-    .line 67
     check-cast v0, Landroid/graphics/drawable/LayerDrawable;
 
-    .line 68
     invoke-virtual {v0, v10}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    .line 69
     invoke-static {p1, v8}, Lsw;->a(Landroid/content/Context;I)I
 
     move-result v3
 
     sget-object v4, Loc;->c:Landroid/graphics/PorterDuff$Mode;
 
-    .line 70
     invoke-static {v2, v3, v4}, Loc;->a(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 71
     const v2, 0x102000f
 
     invoke-virtual {v0, v2}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    .line 72
     invoke-static {p1, v8}, Lsw;->a(Landroid/content/Context;I)I
 
     move-result v3
 
     sget-object v4, Loc;->c:Landroid/graphics/PorterDuff$Mode;
 
-    .line 73
     invoke-static {v2, v3, v4}, Loc;->a(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 74
     const v2, 0x102000d
 
     invoke-virtual {v0, v2}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 75
     invoke-static {p1, v9}, Lsw;->a(Landroid/content/Context;I)I
 
     move-result v2
 
     sget-object v3, Loc;->c:Landroid/graphics/PorterDuff$Mode;
 
-    .line 76
     invoke-static {v0, v2, v3}, Loc;->a(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
 
     goto :goto_1
 
-    .line 77
     :cond_e
     const v0, 0x7f020036
 
@@ -1549,72 +1315,59 @@
     :cond_f
     move-object v0, v1
 
-    .line 78
     check-cast v0, Landroid/graphics/drawable/LayerDrawable;
 
-    .line 79
     invoke-virtual {v0, v10}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    .line 80
     invoke-static {p1, v8}, Lsw;->c(Landroid/content/Context;I)I
 
     move-result v3
 
     sget-object v4, Loc;->c:Landroid/graphics/PorterDuff$Mode;
 
-    .line 81
     invoke-static {v2, v3, v4}, Loc;->a(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 82
     const v2, 0x102000f
 
     invoke-virtual {v0, v2}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v2
 
-    .line 83
     invoke-static {p1, v9}, Lsw;->a(Landroid/content/Context;I)I
 
     move-result v3
 
     sget-object v4, Loc;->c:Landroid/graphics/PorterDuff$Mode;
 
-    .line 84
     invoke-static {v2, v3, v4}, Loc;->a(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 85
     const v2, 0x102000d
 
     invoke-virtual {v0, v2}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 86
     invoke-static {p1, v9}, Lsw;->a(Landroid/content/Context;I)I
 
     move-result v2
 
     sget-object v3, Loc;->c:Landroid/graphics/PorterDuff$Mode;
 
-    .line 87
     invoke-static {v0, v2, v3}, Loc;->a(Landroid/graphics/drawable/Drawable;ILandroid/graphics/PorterDuff$Mode;)V
 
     goto :goto_1
 
-    .line 89
     :cond_10
     invoke-static {p1, p2, v1}, Loc;->a(Landroid/content/Context;ILandroid/graphics/drawable/Drawable;)Z
 
     move-result v0
 
-    .line 90
     if-nez v0, :cond_b
 
     if-eqz p3, :cond_b
 
-    .line 91
     const/4 v1, 0x0
 
     goto/16 :goto_1
@@ -1623,7 +1376,6 @@
 .method final b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
     .locals 8
 
-    .prologue
     const/4 v2, 0x3
 
     const v7, 0x7f010096
@@ -1634,13 +1386,10 @@
 
     const/4 v4, 0x0
 
-    .line 201
-    .line 202
     iget-object v0, p0, Loc;->l:Ljava/util/WeakHashMap;
 
     if-eqz v0, :cond_5
 
-    .line 203
     iget-object v0, p0, Loc;->l:Ljava/util/WeakHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/WeakHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1649,7 +1398,6 @@
 
     check-cast v0, Ldm;
 
-    .line 204
     if-eqz v0, :cond_4
 
     invoke-virtual {v0, p2}, Ldm;->a(I)Ljava/lang/Object;
@@ -1658,39 +1406,32 @@
 
     check-cast v0, Landroid/content/res/ColorStateList;
 
-    .line 207
     :goto_0
     if-nez v0, :cond_3
 
-    .line 208
     const v1, 0x7f020012
 
     if-ne p2, v1, :cond_6
 
-    .line 209
     const v0, 0x7f0c0233
 
     invoke-static {p1, v0}, Lkt;->a(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
-    .line 259
     :goto_1
     if-eqz v1, :cond_2
 
-    .line 261
     iget-object v0, p0, Loc;->l:Ljava/util/WeakHashMap;
 
     if-nez v0, :cond_0
 
-    .line 262
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
     iput-object v0, p0, Loc;->l:Ljava/util/WeakHashMap;
 
-    .line 263
     :cond_0
     iget-object v0, p0, Loc;->l:Ljava/util/WeakHashMap;
 
@@ -1700,49 +1441,40 @@
 
     check-cast v0, Ldm;
 
-    .line 264
     if-nez v0, :cond_1
 
-    .line 265
     new-instance v0, Ldm;
 
     invoke-direct {v0}, Ldm;-><init>()V
 
-    .line 266
     iget-object v2, p0, Loc;->l:Ljava/util/WeakHashMap;
 
     invoke-virtual {v2, p1, v0}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 267
     :cond_1
     invoke-virtual {v0, p2, v1}, Ldm;->b(ILjava/lang/Object;)V
 
     :cond_2
     move-object v0, v1
 
-    .line 268
     :cond_3
     return-object v0
 
-    .line 204
     :cond_4
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 205
     :cond_5
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 210
     :cond_6
     const v1, 0x7f020043
 
     if-ne p2, v1, :cond_7
 
-    .line 211
     const v0, 0x7f0c0236
 
     invoke-static {p1, v0}, Lkt;->a(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
@@ -1751,24 +1483,19 @@
 
     goto :goto_1
 
-    .line 212
     :cond_7
     const v1, 0x7f020042
 
     if-ne p2, v1, :cond_9
 
-    .line 214
     new-array v0, v2, [[I
 
-    .line 215
     new-array v2, v2, [I
 
-    .line 216
     invoke-static {p1, v7}, Lsw;->b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
-    .line 217
     if-eqz v1, :cond_8
 
     invoke-virtual {v1}, Landroid/content/res/ColorStateList;->isStateful()Z
@@ -1777,12 +1504,10 @@
 
     if-eqz v3, :cond_8
 
-    .line 218
     sget-object v3, Lsw;->a:[I
 
     aput-object v3, v0, v4
 
-    .line 219
     aget-object v3, v0, v4
 
     invoke-virtual {v1, v3, v4}, Landroid/content/res/ColorStateList;->getColorForState([II)I
@@ -1791,12 +1516,10 @@
 
     aput v3, v2, v4
 
-    .line 220
     sget-object v3, Lsw;->d:[I
 
     aput-object v3, v0, v5
 
-    .line 221
     const v3, 0x7f010093
 
     invoke-static {p1, v3}, Lsw;->a(Landroid/content/Context;I)I
@@ -1805,19 +1528,16 @@
 
     aput v3, v2, v5
 
-    .line 222
     sget-object v3, Lsw;->e:[I
 
     aput-object v3, v0, v6
 
-    .line 223
     invoke-virtual {v1}, Landroid/content/res/ColorStateList;->getDefaultColor()I
 
     move-result v1
 
     aput v1, v2, v6
 
-    .line 231
     :goto_2
     new-instance v1, Landroid/content/res/ColorStateList;
 
@@ -1825,25 +1545,21 @@
 
     goto :goto_1
 
-    .line 225
     :cond_8
     sget-object v1, Lsw;->a:[I
 
     aput-object v1, v0, v4
 
-    .line 226
     invoke-static {p1, v7}, Lsw;->c(Landroid/content/Context;I)I
 
     move-result v1
 
     aput v1, v2, v4
 
-    .line 227
     sget-object v1, Lsw;->d:[I
 
     aput-object v1, v0, v5
 
-    .line 228
     const v1, 0x7f010093
 
     invoke-static {p1, v1}, Lsw;->a(Landroid/content/Context;I)I
@@ -1852,12 +1568,10 @@
 
     aput v1, v2, v5
 
-    .line 229
     sget-object v1, Lsw;->e:[I
 
     aput-object v1, v0, v6
 
-    .line 230
     invoke-static {p1, v7}, Lsw;->a(Landroid/content/Context;I)I
 
     move-result v1
@@ -1866,62 +1580,51 @@
 
     goto :goto_2
 
-    .line 233
     :cond_9
     const v1, 0x7f020007
 
     if-ne p2, v1, :cond_a
 
-    .line 235
     const v0, 0x7f010095
 
-    .line 236
     invoke-static {p1, v0}, Lsw;->a(Landroid/content/Context;I)I
 
     move-result v0
 
-    .line 237
     invoke-static {p1, v0}, Loc;->c(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
     goto/16 :goto_1
 
-    .line 239
     :cond_a
     const v1, 0x7f020002
 
     if-ne p2, v1, :cond_b
 
-    .line 241
     invoke-static {p1, v4}, Loc;->c(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
     goto/16 :goto_1
 
-    .line 243
     :cond_b
     const v1, 0x7f020006
 
     if-ne p2, v1, :cond_c
 
-    .line 245
     const v0, 0x7f010091
 
-    .line 246
     invoke-static {p1, v0}, Lsw;->a(Landroid/content/Context;I)I
 
     move-result v0
 
-    .line 247
     invoke-static {p1, v0}, Loc;->c(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
     goto/16 :goto_1
 
-    .line 249
     :cond_c
     const v1, 0x7f020040
 
@@ -1931,7 +1634,6 @@
 
     if-ne p2, v1, :cond_e
 
-    .line 250
     :cond_d
     const v0, 0x7f0c0235
 
@@ -1941,7 +1643,6 @@
 
     goto/16 :goto_1
 
-    .line 251
     :cond_e
     sget-object v1, Loc;->g:[I
 
@@ -1951,7 +1652,6 @@
 
     if-eqz v1, :cond_f
 
-    .line 252
     const v0, 0x7f010092
 
     invoke-static {p1, v0}, Lsw;->b(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
@@ -1960,7 +1660,6 @@
 
     goto/16 :goto_1
 
-    .line 253
     :cond_f
     sget-object v1, Loc;->j:[I
 
@@ -1970,7 +1669,6 @@
 
     if-eqz v1, :cond_10
 
-    .line 254
     const v0, 0x7f0c0232
 
     invoke-static {p1, v0}, Lkt;->a(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
@@ -1979,7 +1677,6 @@
 
     goto/16 :goto_1
 
-    .line 255
     :cond_10
     sget-object v1, Loc;->k:[I
 
@@ -1989,7 +1686,6 @@
 
     if-eqz v1, :cond_11
 
-    .line 256
     const v0, 0x7f0c0231
 
     invoke-static {p1, v0}, Lkt;->a(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
@@ -1998,13 +1694,11 @@
 
     goto/16 :goto_1
 
-    .line 257
     :cond_11
     const v1, 0x7f02003d
 
     if-ne p2, v1, :cond_12
 
-    .line 258
     const v0, 0x7f0c0234
 
     invoke-static {p1, v0}, Lkt;->a(Landroid/content/Context;I)Landroid/content/res/ColorStateList;

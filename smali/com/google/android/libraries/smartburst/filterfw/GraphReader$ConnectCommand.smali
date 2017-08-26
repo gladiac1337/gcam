@@ -20,23 +20,16 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$ConnectCommand;->mSourceFilter:Ljava/lang/String;
 
-    .line 3
     iput-object p2, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$ConnectCommand;->mSourcePort:Ljava/lang/String;
 
-    .line 4
     iput-object p3, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$ConnectCommand;->mTargetFilter:Ljava/lang/String;
 
-    .line 5
     iput-object p4, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$ConnectCommand;->mTargetPort:Ljava/lang/String;
 
-    .line 6
     return-void
 .end method
 
@@ -45,8 +38,6 @@
 .method public compileToJava(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Lcom/google/android/libraries/smartburst/filterfw/GraphReader$GraphFactorySource;)V
     .locals 4
 
-    .prologue
-    .line 9
     const-string v0, "builder.connect(%s, \"%s\", %s, \"%s\");"
 
     const/4 v1, 0x4
@@ -83,15 +74,12 @@
 
     invoke-virtual {p2, v0}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$GraphFactorySource;->addBuildCommand(Ljava/lang/String;)V
 
-    .line 10
     return-void
 .end method
 
 .method public execute(Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;)V
     .locals 5
 
-    .prologue
-    .line 7
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->getBuilder()Lcom/google/android/libraries/smartburst/filterfw/FilterGraph$Builder;
 
     move-result-object v0
@@ -106,6 +94,5 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/google/android/libraries/smartburst/filterfw/FilterGraph$Builder;->connect(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8
     return-void
 .end method

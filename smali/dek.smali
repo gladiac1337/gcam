@@ -18,28 +18,20 @@
 .method private constructor <init>(Lilp;Lilp;Lilp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldek;->a:Lilp;
 
-    .line 3
     iput-object p2, p0, Ldek;->b:Lilp;
 
-    .line 4
     iput-object p3, p0, Ldek;->c:Lilp;
 
-    .line 5
     return-void
 .end method
 
 .method public static a(Lilp;Lilp;Lilp;)Lilp;
     .locals 1
 
-    .prologue
-    .line 6
     new-instance v0, Ldek;
 
     invoke-direct {v0, p0, p1, p2}, Ldek;-><init>(Lilp;Lilp;Lilp;)V
@@ -52,12 +44,8 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 7
-    .line 8
     iget-object v0, p0, Ldek;->a:Lilp;
 
-    .line 9
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -68,40 +56,28 @@
 
     iget-object v2, p0, Ldek;->c:Lilp;
 
-    .line 13
     iget-object v3, v0, Lcom/google/android/apps/camera/util/ApiHelper;->b:Lhnx;
 
-    .line 14
     iget-boolean v3, v3, Lhnx;->b:Z
 
-    .line 15
     if-nez v3, :cond_0
 
-    .line 16
     iget-object v3, v0, Lcom/google/android/apps/camera/util/ApiHelper;->b:Lhnx;
 
-    .line 17
     iget-boolean v3, v3, Lhnx;->d:Z
 
-    .line 18
     if-nez v3, :cond_0
 
-    .line 19
     iget-object v3, v0, Lcom/google/android/apps/camera/util/ApiHelper;->b:Lhnx;
 
-    .line 20
     iget-boolean v3, v3, Lhnx;->f:Z
 
-    .line 21
     if-nez v3, :cond_0
 
-    .line 22
     iget-object v3, v0, Lcom/google/android/apps/camera/util/ApiHelper;->b:Lhnx;
 
-    .line 23
     iget-boolean v3, v3, Lhnx;->g:Z
 
-    .line 24
     if-nez v3, :cond_0
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/util/ApiHelper;->b()Z
@@ -113,43 +89,35 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 25
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 26
     invoke-interface {v2}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ldew;
 
-    .line 28
     :goto_1
     new-instance v1, Ldfa;
 
     invoke-direct {v1, v0}, Ldfa;-><init>(Ldew;)V
 
-    .line 29
     const-string v0, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 30
     invoke-static {v1, v0}, Ldt;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ldew;
 
-    .line 31
     return-object v0
 
-    .line 24
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 27
     :cond_2
     invoke-interface {v1}, Lilp;->a()Ljava/lang/Object;
 

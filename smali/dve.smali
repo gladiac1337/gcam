@@ -25,10 +25,7 @@
 .method public final a()Liwe;
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Ldve;->a:Liwp;
 
-    .line 2
     return-object v0
 .end method

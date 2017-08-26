@@ -21,19 +21,14 @@
 .method public constructor <init>(Lhji;Lavm;Leab;Leaf;Ldxu;Ldyb;)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldxa;->a:Lhji;
 
-    .line 3
     iput-object p2, p0, Ldxa;->b:Lavm;
 
-    .line 4
     new-instance v0, Ldys;
 
     const/4 v1, 0x4
@@ -46,7 +41,6 @@
 
     iput-object v0, p0, Ldxa;->c:Ldvk;
 
-    .line 5
     new-instance v0, Ldys;
 
     const/4 v1, 0x5
@@ -57,7 +51,6 @@
 
     iput-object v0, p0, Ldxa;->d:Ldvk;
 
-    .line 6
     new-instance v0, Ldys;
 
     const/4 v1, 0x6
@@ -70,9 +63,7 @@
 
     iput-object v0, p0, Ldxa;->e:Ldvk;
 
-    .line 7
     iput-object p6, p0, Ldxa;->f:Ldyb;
 
-    .line 8
     return-void
 .end method

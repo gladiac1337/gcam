@@ -26,40 +26,28 @@
 .method private constructor <init>(Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldpd;->a:Lilp;
 
-    .line 3
     iput-object p2, p0, Ldpd;->b:Lilp;
 
-    .line 4
     iput-object p3, p0, Ldpd;->c:Lilp;
 
-    .line 5
     iput-object p4, p0, Ldpd;->d:Lilp;
 
-    .line 6
     iput-object p5, p0, Ldpd;->e:Lilp;
 
-    .line 7
     iput-object p6, p0, Ldpd;->f:Lilp;
 
-    .line 8
     iput-object p7, p0, Ldpd;->g:Lilp;
 
-    .line 9
     return-void
 .end method
 
 .method public static a(Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;)Lilp;
     .locals 8
 
-    .prologue
-    .line 10
     new-instance v0, Ldpd;
 
     move-object v1, p0
@@ -86,12 +74,8 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 8
 
-    .prologue
-    .line 11
-    .line 12
     iget-object v0, p0, Ldpd;->a:Lilp;
 
-    .line 13
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -100,7 +84,6 @@
 
     iget-object v0, p0, Ldpd;->b:Lilp;
 
-    .line 14
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -109,7 +92,6 @@
 
     iget-object v0, p0, Ldpd;->c:Lilp;
 
-    .line 15
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -118,7 +100,6 @@
 
     iget-object v0, p0, Ldpd;->d:Lilp;
 
-    .line 16
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v4
@@ -127,7 +108,6 @@
 
     iget-object v0, p0, Ldpd;->e:Lilp;
 
-    .line 17
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -136,7 +116,6 @@
 
     iget-object v0, p0, Ldpd;->f:Lilp;
 
-    .line 18
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -147,26 +126,22 @@
 
     iget-object v0, p0, Ldpd;->g:Lilp;
 
-    .line 19
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lefe;
 
-    .line 21
     new-instance v0, Ldpq;
 
     invoke-direct/range {v0 .. v6}, Ldpq;-><init>(Lhji;Lffx;Leek;Lfyx;Lefe;Ldqd;)V
 
-    .line 22
     new-instance v1, Ldtr;
 
     new-instance v2, Ldox;
 
     const/16 v3, 0x23
 
-    .line 23
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -179,16 +154,13 @@
 
     invoke-direct {v1, v2, v7}, Ldtr;-><init>(Ldqd;Ldua;)V
 
-    .line 24
     const-string v0, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 25
     invoke-static {v1, v0}, Ldt;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ldqd;
 
-    .line 26
     return-object v0
 .end method

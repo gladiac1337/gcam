@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 10
     new-instance v0, Laro;
 
     invoke-direct {v0}, Laro;-><init>()V
@@ -36,17 +34,12 @@
 .method public constructor <init>(Lhic;Lasa;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lasc;->c:Lhic;
 
-    .line 3
     iput-object p2, p0, Lasc;->d:Lasa;
 
-    .line 4
     return-void
 .end method
 
@@ -55,8 +48,6 @@
 .method public final a(Larg;)Larz;
     .locals 2
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lasc;->a:Larz;
 
     if-eqz v0, :cond_0
@@ -71,7 +62,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 6
     :cond_0
     iget-object v0, p0, Lasc;->d:Lasa;
 
@@ -81,7 +71,6 @@
 
     iput-object v0, p0, Lasc;->a:Larz;
 
-    .line 7
     iget-object v0, p0, Lasc;->c:Lhic;
 
     new-instance v1, Lasd;
@@ -90,10 +79,8 @@
 
     invoke-virtual {v0, v1}, Lhic;->execute(Ljava/lang/Runnable;)V
 
-    .line 8
     iget-object v0, p0, Lasc;->a:Larz;
 
-    .line 9
     :goto_0
     return-object v0
 

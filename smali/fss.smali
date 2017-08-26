@@ -16,28 +16,20 @@
 .method private constructor <init>(Lhmm;)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lfss;->a:Lhmm;
 
-    .line 4
     return-void
 .end method
 
 .method public constructor <init>(Lhmm;Lcom/google/android/apps/camera/util/ApiHelper;)V
     .locals 0
 
-    .prologue
-    .line 12
     invoke-direct {p0, p1}, Lfss;-><init>(Lhmm;)V
 
-    .line 13
     iput-object p2, p0, Lfss;->b:Lcom/google/android/apps/camera/util/ApiHelper;
 
-    .line 14
     return-void
 .end method
 
@@ -46,8 +38,6 @@
 .method public final a(Lhmp;)Lfsq;
     .locals 3
 
-    .prologue
-    .line 1
     new-instance v0, Lfsr;
 
     invoke-virtual {p0, p1}, Lfss;->b(Lhmp;)Lhml;
@@ -64,8 +54,6 @@
 .method public final a()Lhmp;
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lfss;->a:Lhmm;
 
     invoke-interface {v0}, Lhmm;->a()Lhmp;
@@ -78,8 +66,6 @@
 .method public final a(Lhmr;)Z
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lfss;->a:Lhmm;
 
     invoke-interface {v0, p1}, Lhmm;->a(Lhmr;)Z
@@ -92,8 +78,6 @@
 .method public final b(Lhmp;)Lhml;
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lfss;->a:Lhmm;
 
     invoke-interface {v0, p1}, Lhmm;->b(Lhmp;)Lhml;
@@ -106,8 +90,6 @@
 .method public final b(Lhmr;)Lhmp;
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lfss;->a:Lhmm;
 
     invoke-interface {v0, p1}, Lhmm;->b(Lhmr;)Lhmp;
@@ -120,8 +102,6 @@
 .method public final b()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lfss;->a:Lhmm;
 
     invoke-interface {v0}, Lhmm;->b()Ljava/util/List;
@@ -134,8 +114,6 @@
 .method public final c()Z
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lfss;->a:Lhmm;
 
     invoke-interface {v0}, Lhmm;->c()Z
@@ -148,8 +126,6 @@
 .method public final d()Z
     .locals 1
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lfss;->a:Lhmm;
 
     invoke-interface {v0}, Lhmm;->d()Z

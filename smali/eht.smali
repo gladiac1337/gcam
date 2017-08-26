@@ -48,73 +48,52 @@
 .method public constructor <init>(Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Leht;->a:Lilp;
 
-    .line 3
     iput-object p2, p0, Leht;->b:Lilp;
 
-    .line 4
     iput-object p3, p0, Leht;->c:Lilp;
 
-    .line 5
     iput-object p4, p0, Leht;->d:Lilp;
 
-    .line 6
     iput-object p5, p0, Leht;->e:Lilp;
 
-    .line 7
     iput-object p6, p0, Leht;->f:Lilp;
 
-    .line 8
     iput-object p7, p0, Leht;->g:Lilp;
 
-    .line 9
     iput-object p8, p0, Leht;->h:Lilp;
 
-    .line 10
     iput-object p9, p0, Leht;->i:Lilp;
 
-    .line 11
     iput-object p10, p0, Leht;->j:Lilp;
 
-    .line 12
     iput-object p11, p0, Leht;->k:Lilp;
 
-    .line 13
     iput-object p12, p0, Leht;->l:Lilp;
 
-    .line 14
     iput-object p13, p0, Leht;->m:Lilp;
 
-    .line 15
     iput-object p14, p0, Leht;->n:Lilp;
 
-    .line 16
     move-object/from16 v0, p15
 
     iput-object v0, p0, Leht;->o:Lilp;
 
-    .line 17
     move-object/from16 v0, p16
 
     iput-object v0, p0, Leht;->p:Lilp;
 
-    .line 18
     move-object/from16 v0, p17
 
     iput-object v0, p0, Leht;->q:Lilp;
 
-    .line 19
     move-object/from16 v0, p18
 
     iput-object v0, p0, Leht;->r:Lilp;
 
-    .line 20
     return-void
 .end method
 
@@ -123,14 +102,10 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 29
 
-    .prologue
-    .line 21
-    .line 22
     move-object/from16 v0, p0
 
     iget-object v1, v0, Leht;->a:Lilp;
 
-    .line 23
     invoke-interface {v1}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -141,7 +116,6 @@
 
     iget-object v2, v0, Leht;->b:Lilp;
 
-    .line 24
     invoke-interface {v2}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -152,7 +126,6 @@
 
     iget-object v3, v0, Leht;->c:Lilp;
 
-    .line 25
     invoke-interface {v3}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -163,14 +136,12 @@
 
     iget-object v4, v0, Leht;->d:Lilp;
 
-    .line 26
     invoke-interface {v4}, Lilp;->a()Ljava/lang/Object;
 
     move-object/from16 v0, p0
 
     iget-object v4, v0, Leht;->e:Lilp;
 
-    .line 27
     invoke-interface {v4}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v4
@@ -181,7 +152,6 @@
 
     iget-object v5, v0, Leht;->f:Lilp;
 
-    .line 28
     invoke-interface {v5}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v5
@@ -192,7 +162,6 @@
 
     iget-object v6, v0, Leht;->g:Lilp;
 
-    .line 29
     invoke-interface {v6}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -203,7 +172,6 @@
 
     iget-object v7, v0, Leht;->h:Lilp;
 
-    .line 30
     invoke-interface {v7}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v9
@@ -214,7 +182,6 @@
 
     iget-object v7, v0, Leht;->i:Lilp;
 
-    .line 31
     invoke-interface {v7}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v12
@@ -225,7 +192,6 @@
 
     iget-object v7, v0, Leht;->j:Lilp;
 
-    .line 32
     invoke-interface {v7}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v17
@@ -236,7 +202,6 @@
 
     iget-object v7, v0, Leht;->k:Lilp;
 
-    .line 33
     invoke-interface {v7}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v18
@@ -247,7 +212,6 @@
 
     iget-object v7, v0, Leht;->l:Lilp;
 
-    .line 34
     invoke-interface {v7}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v19
@@ -258,7 +222,6 @@
 
     iget-object v7, v0, Leht;->m:Lilp;
 
-    .line 35
     invoke-interface {v7}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v20
@@ -269,7 +232,6 @@
 
     iget-object v7, v0, Leht;->n:Lilp;
 
-    .line 36
     invoke-interface {v7}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v14
@@ -280,7 +242,6 @@
 
     iget-object v7, v0, Leht;->o:Lilp;
 
-    .line 37
     invoke-interface {v7}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v25
@@ -291,7 +252,6 @@
 
     iget-object v7, v0, Leht;->p:Lilp;
 
-    .line 38
     invoke-interface {v7}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v26
@@ -302,7 +262,6 @@
 
     iget-object v7, v0, Leht;->q:Lilp;
 
-    .line 39
     invoke-interface {v7}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v27
@@ -313,24 +272,20 @@
 
     iget-object v7, v0, Leht;->r:Lilp;
 
-    .line 40
     invoke-interface {v7}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v28
 
     check-cast v28, Lerg;
 
-    .line 43
     invoke-static {v1, v5}, Leje;->a(Landroid/content/Context;Lgjc;)Lejd;
 
     move-result-object v10
 
-    .line 44
     new-instance v1, Lejh;
 
     invoke-direct/range {v1 .. v6}, Lejh;-><init>(Landroid/content/ContentResolver;Lgjh;Lgjk;Lgjc;Lgjf;)V
 
-    .line 45
     new-instance v7, Legz;
 
     move-object v8, v5
@@ -341,7 +296,6 @@
 
     invoke-direct/range {v7 .. v14}, Legz;-><init>(Lgjc;Leir;Lejd;Lejh;Ljava/util/concurrent/Executor;Lgjf;Lgmh;)V
 
-    .line 46
     new-instance v15, Lehg;
 
     new-instance v22, Lhic;
@@ -360,16 +314,13 @@
 
     invoke-direct/range {v15 .. v28}, Lehg;-><init>(Legy;Leif;Leiz;Leio;Legv;Lejd;Lhic;Lhpu;Lgmh;Lhjz;Lfrh;Lgch;Lgfe;)V
 
-    .line 47
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 48
     invoke-static {v15, v1}, Ldt;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lgfd;
 
-    .line 49
     return-object v1
 .end method

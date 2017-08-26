@@ -25,8 +25,6 @@
 .method constructor <init>(Lhbp;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhbt;->a:Lhbp;
 
     invoke-direct {p0}, Lhbt;-><init>()V
@@ -39,8 +37,6 @@
 .method public final a(Lcom/google/android/gms/common/api/Status;)V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lhbt;->a:Lhbp;
 
     invoke-virtual {v0, p1}, Lhbp;->a(Lgwb;)V

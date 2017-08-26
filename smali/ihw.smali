@@ -14,26 +14,20 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 12
     const-string v0, "([a-zA-Z0-9]+)_([0-9]+)_BURST(\\d+)(_COVER)?(_[0-9])?\\.(JPG|jpg)"
 
-    .line 13
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
     sput-object v0, Lihw;->a:Ljava/util/regex/Pattern;
 
-    .line 14
     return-void
 .end method
 
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,8 +38,6 @@
 .method public final a(Ljava/util/regex/Matcher;)J
     .locals 2
 
-    .prologue
-    .line 3
     new-instance v0, Liie;
 
     const-string v1, "timestamp"
@@ -58,8 +50,6 @@
 .method public final a()Ljava/util/regex/Pattern;
     .locals 1
 
-    .prologue
-    .line 2
     sget-object v0, Lihw;->a:Ljava/util/regex/Pattern;
 
     return-object v0
@@ -68,18 +58,14 @@
 .method public final b(Ljava/util/regex/Matcher;)I
     .locals 2
 
-    .prologue
-    .line 4
     const/4 v0, 0x2
 
     invoke-virtual {p1, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5
     if-nez v0, :cond_0
 
-    .line 6
     new-instance v0, Liie;
 
     const-string v1, "timestamp"
@@ -88,7 +74,6 @@
 
     throw v0
 
-    .line 7
     :cond_0
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -100,15 +85,12 @@
 .method public final c(Ljava/util/regex/Matcher;)Z
     .locals 1
 
-    .prologue
-    .line 8
     const/4 v0, 0x4
 
     invoke-virtual {p1, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 9
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
@@ -125,15 +107,12 @@
 .method public final d(Ljava/util/regex/Matcher;)Z
     .locals 2
 
-    .prologue
-    .line 10
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 11
     const-string v1, "XTR"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z

@@ -7,8 +7,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 9
     const-string v0, "CameraDeviceMod"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -19,8 +17,6 @@
 .method public static a()Lhjn;
     .locals 1
 
-    .prologue
-    .line 1
     invoke-static {}, Lcdw;->a()Lhjn;
 
     move-result-object v0
@@ -31,23 +27,18 @@
 .method public static a(Lhjq;Lhic;Lfmw;)Lhjq;
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Lcei;
 
     invoke-direct {v0, p0}, Lcei;-><init>(Lhjq;)V
 
     invoke-static {p1, p2, v0}, Lkk;->a(Lhic;Lfmw;Lfny;)V
 
-    .line 3
     return-object p0
 .end method
 
 .method public static b()Landroid/os/Handler;
     .locals 3
 
-    .prologue
-    .line 4
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "GcaCameraHandler"
@@ -56,10 +47,8 @@
 
     invoke-direct {v0, v1, v2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
-    .line 5
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 6
     new-instance v1, Landroid/os/Handler;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -74,8 +63,6 @@
 .method public static c()Ljava/util/concurrent/Executor;
     .locals 1
 
-    .prologue
-    .line 7
     const-string v0, "GCA-CM-Exec"
 
     invoke-static {v0}, Lkk;->n(Ljava/lang/String;)Ljava/util/concurrent/ExecutorService;
@@ -88,10 +75,8 @@
 .method public static d()Ljava/util/concurrent/Semaphore;
     .locals 2
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 8
     new-instance v0, Ljava/util/concurrent/Semaphore;
 
     invoke-direct {v0, v1, v1}, Ljava/util/concurrent/Semaphore;-><init>(IZ)V

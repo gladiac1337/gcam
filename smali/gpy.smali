@@ -29,20 +29,15 @@
 .method public final onLongClick(Landroid/view/View;)Z
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgpy;->a:Lgpw;
 
     iget-boolean v1, p0, Lgpy;->b:Z
 
-    .line 2
     iget-object v0, v0, Lgpw;->b:Lgqe;
 
     invoke-virtual {v0, v1}, Lgqe;->b(Z)V
 
-    .line 3
     const/4 v0, 0x1
 
-    .line 4
     return v0
 .end method

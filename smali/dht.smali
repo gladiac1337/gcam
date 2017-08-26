@@ -14,8 +14,6 @@
 .method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldht;->a:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,11 +26,8 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 2
     check-cast p1, Ljava/util/List;
 
-    .line 3
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -50,7 +45,6 @@
 
     check-cast v0, Lfvg;
 
-    .line 4
     iget-object v2, p0, Ldht;->a:Ljava/util/List;
 
     invoke-static {v0}, Lavn;->a(Ljava/lang/Object;)Lavm;
@@ -61,7 +55,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     new-instance v0, Ldhs;
 
@@ -69,6 +62,5 @@
 
     invoke-direct {v0, v1}, Ldhs;-><init>(Ljava/util/Collection;)V
 
-    .line 7
     return-object v0
 .end method

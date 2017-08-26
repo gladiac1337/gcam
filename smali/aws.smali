@@ -14,8 +14,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,8 +22,6 @@
 .method private final declared-synchronized a(Ljava/util/List;)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 2
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -35,7 +31,6 @@
 
     move-result-object v1
 
-    .line 3
     const/4 v0, 0x1
 
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -48,14 +43,12 @@
 
     move-result v0
 
-    .line 4
     iget-object v2, p0, Laws;->a:Ljava/lang/Object;
 
     if-eqz v2, :cond_0
 
     if-nez v0, :cond_1
 
-    .line 5
     :cond_0
     iput-object v1, p0, Laws;->a:Ljava/lang/Object;
     :try_end_0
@@ -63,7 +56,6 @@
 
     move-object v0, v1
 
-    .line 7
     :goto_0
     monitor-exit p0
 
@@ -77,7 +69,6 @@
 
     goto :goto_0
 
-    .line 2
     :catchall_0
     move-exception v0
 
@@ -91,8 +82,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 8
     check-cast p1, Ljava/util/List;
 
     invoke-direct {p0, p1}, Laws;->a(Ljava/util/List;)Ljava/lang/Object;

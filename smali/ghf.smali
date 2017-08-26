@@ -11,8 +11,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lghf;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
@@ -25,13 +23,10 @@
 .method public final getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
     .locals 2
 
-    .prologue
-    .line 2
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 3
     iget-object v1, p0, Lghf;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-static {v1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$000(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Landroid/graphics/RectF;
@@ -40,7 +35,6 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/RectF;->round(Landroid/graphics/Rect;)V
 
-    .line 4
     iget-object v1, p0, Lghf;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-static {v1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$3800(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)I
@@ -51,6 +45,5 @@
 
     invoke-virtual {p2, v0, v1}, Landroid/graphics/Outline;->setRoundRect(Landroid/graphics/Rect;F)V
 
-    .line 5
     return-void
 .end method

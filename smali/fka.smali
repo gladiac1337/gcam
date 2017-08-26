@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 42
     const-string v0, "IncrementalAligner"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -37,13 +35,10 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/ArrayBlockingQueue;
 
     const/16 v1, 0x32
@@ -52,22 +47,18 @@
 
     iput-object v0, p0, Lfka;->a:Ljava/util/concurrent/ArrayBlockingQueue;
 
-    .line 3
     iput-boolean v2, p0, Lfka;->b:Z
 
-    .line 4
     const/4 v0, 0x0
 
     iput-object v0, p0, Lfka;->d:Lfmb;
 
-    .line 5
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     iput-object v0, p0, Lfka;->e:Ljava/lang/Boolean;
 
-    .line 6
     return-void
 .end method
 
@@ -76,8 +67,6 @@
 .method public final declared-synchronized a(Lfmb;)V
     .locals 2
 
-    .prologue
-    .line 34
     monitor-enter p0
 
     :try_start_0
@@ -93,7 +82,6 @@
 
     if-nez v0, :cond_1
 
-    .line 35
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -105,7 +93,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 34
     :catchall_0
     move-exception v0
 
@@ -113,12 +100,10 @@
 
     throw v0
 
-    .line 36
     :cond_1
     :try_start_1
     iput-object p1, p0, Lfka;->d:Lfmb;
 
-    .line 37
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -127,12 +112,10 @@
 
     iput-object v0, p0, Lfka;->e:Ljava/lang/Boolean;
 
-    .line 38
     invoke-super {p0}, Ljava/lang/Thread;->interrupt()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 39
     monitor-exit p0
 
     return-void
@@ -141,27 +124,22 @@
 .method public final interrupt()V
     .locals 2
 
-    .prologue
-    .line 40
     iget-object v0, p0, Lfka;->a:Ljava/util/concurrent/ArrayBlockingQueue;
 
     const-string v1, "Poison Pill"
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/ArrayBlockingQueue;->add(Ljava/lang/Object;)Z
 
-    .line 41
     return-void
 .end method
 
 .method public final run()V
     .locals 8
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    .line 7
     :cond_0
     invoke-virtual {p0}, Lfka;->isInterrupted()Z
 
@@ -169,12 +147,10 @@
 
     if-nez v0, :cond_2
 
-    .line 8
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 9
     :try_start_0
     iget-object v0, p0, Lfka;->a:Ljava/util/concurrent/ArrayBlockingQueue;
 
@@ -184,15 +160,12 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 10
     const/4 v4, 0x1
 
     iput-boolean v4, p0, Lfka;->b:Z
 
-    .line 11
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 12
     :goto_0
     iget-object v0, p0, Lfka;->a:Ljava/util/concurrent/ArrayBlockingQueue;
 
@@ -202,7 +175,6 @@
 
     if-nez v0, :cond_1
 
-    .line 13
     iget-object v0, p0, Lfka;->a:Ljava/util/concurrent/ArrayBlockingQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ArrayBlockingQueue;->take()Ljava/lang/Object;
@@ -223,7 +195,6 @@
     :cond_1
     move-object v0, v1
 
-    .line 17
     check-cast v0, Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -243,7 +214,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 18
     const-string v6, "Poison Pill"
 
     invoke-virtual {v6, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -254,14 +224,11 @@
 
     move v0, v2
 
-    .line 27
     :goto_2
     iput-boolean v3, p0, Lfka;->b:Z
 
-    .line 28
     if-eqz v0, :cond_0
 
-    .line 29
     :cond_2
     sget-object v0, Lfka;->c:Ljava/lang/String;
 
@@ -269,19 +236,16 @@
 
     invoke-static {v0, v1}, Lbgj;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 30
     iget-object v0, p0, Lfka;->d:Lfmb;
 
     if-eqz v0, :cond_3
 
-    .line 31
     iget-object v0, p0, Lfka;->d:Lfmb;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, v1}, Lfmb;->a(Ljava/lang/Object;)V
 
-    .line 32
     :cond_3
     sget-object v0, Lfka;->c:Ljava/lang/String;
 
@@ -289,10 +253,8 @@
 
     invoke-static {v0, v1}, Lbgj;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 33
     return-void
 
-    .line 21
     :cond_4
     iget-object v6, p0, Lfka;->e:Ljava/lang/Boolean;
 
@@ -304,10 +266,8 @@
 
     move v0, v2
 
-    .line 23
     goto :goto_2
 
-    .line 24
     :cond_5
     const-string v6, "Processing file "
 
@@ -323,13 +283,11 @@
 
     invoke-virtual {v6, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 25
     :goto_3
     invoke-static {}, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->s()V
 
     goto :goto_1
 
-    .line 24
     :cond_6
     new-instance v1, Ljava/lang/String;
 

@@ -7,8 +7,6 @@
 .method private constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCache;-><init>(Lcom/google/android/libraries/smartburst/filterfw/FrameManager$1;)V
@@ -19,8 +17,6 @@
 .method synthetic constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/FrameManager$1;)V
     .locals 0
 
-    .prologue
-    .line 7
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCacheNone;-><init>()V
 
     return-void
@@ -31,8 +27,6 @@
 .method public cacheBacking(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;)Z
     .locals 1
 
-    .prologue
-    .line 3
     const/4 v0, 0x0
 
     return v0
@@ -41,16 +35,12 @@
 .method public clear()V
     .locals 0
 
-    .prologue
-    .line 4
     return-void
 .end method
 
 .method public fetchBacking(II[II)Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
     .locals 1
 
-    .prologue
-    .line 2
     const/4 v0, 0x0
 
     return-object v0
@@ -59,8 +49,6 @@
 .method public getSize()I
     .locals 1
 
-    .prologue
-    .line 5
     const/4 v0, 0x0
 
     return v0
@@ -69,8 +57,6 @@
 .method public getSizeLeft()I
     .locals 1
 
-    .prologue
-    .line 6
     const/4 v0, 0x0
 
     return v0

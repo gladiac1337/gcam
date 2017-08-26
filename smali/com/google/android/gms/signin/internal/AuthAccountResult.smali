@@ -100,16 +100,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 1
-    .line 3
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lkk;->l(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 4
     const/4 v1, 0x1
 
     iget v2, p0, Lcom/google/android/gms/signin/internal/AuthAccountResult;->a:I
@@ -118,23 +114,17 @@
 
     const/4 v1, 0x2
 
-    .line 5
     iget v2, p0, Lcom/google/android/gms/signin/internal/AuthAccountResult;->b:I
 
-    .line 6
     invoke-static {p1, v1, v2}, Lkk;->c(Landroid/os/Parcel;II)V
 
     const/4 v1, 0x3
 
-    .line 7
     iget-object v2, p0, Lcom/google/android/gms/signin/internal/AuthAccountResult;->c:Landroid/content/Intent;
 
-    .line 8
     invoke-static {p1, v1, v2, p2}, Lkk;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    .line 9
     invoke-static {p1, v0}, Lkk;->m(Landroid/os/Parcel;I)V
 
-    .line 10
     return-void
 .end method

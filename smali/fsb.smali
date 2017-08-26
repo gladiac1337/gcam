@@ -18,8 +18,6 @@
 .method protected constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,8 +28,6 @@
 .method public a(Lfsh;)I
     .locals 2
 
-    .prologue
-    .line 8
     iget v0, p0, Lfsb;->b:I
 
     invoke-interface {p1}, Lfsh;->b()I
@@ -40,14 +36,11 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 9
     const/4 v0, -0x1
 
-    .line 12
     :goto_0
     return v0
 
-    .line 10
     :cond_0
     iget v0, p0, Lfsb;->b:I
 
@@ -57,12 +50,10 @@
 
     if-le v0, v1, :cond_1
 
-    .line 11
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 12
     :cond_1
     iget-object v0, p0, Lfsb;->c:Ljava/util/Date;
 
@@ -82,19 +73,14 @@
 .method public a(Ljava/util/Date;)V
     .locals 0
 
-    .prologue
-    .line 4
     iput-object p1, p0, Lfsb;->c:Ljava/util/Date;
 
-    .line 5
     return-void
 .end method
 
 .method public a()Z
     .locals 1
 
-    .prologue
-    .line 2
     iget-boolean v0, p0, Lfsb;->a:Z
 
     return v0
@@ -103,8 +89,6 @@
 .method public b()I
     .locals 1
 
-    .prologue
-    .line 3
     iget v0, p0, Lfsb;->b:I
 
     return v0
@@ -113,8 +97,6 @@
 .method public c()Ljava/util/Date;
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lfsb;->c:Ljava/util/Date;
 
     return-object v0
@@ -123,8 +105,6 @@
 .method public synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 13
     check-cast p1, Lfsh;
 
     invoke-virtual {p0, p1}, Lfsb;->a(Lfsh;)I
@@ -137,8 +117,6 @@
 .method public d()Landroid/view/View$OnClickListener;
     .locals 1
 
-    .prologue
-    .line 7
     const/4 v0, 0x0
 
     return-object v0

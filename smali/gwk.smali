@@ -86,8 +86,6 @@
 .method private final b(Lgwb;)V
     .locals 4
 
-    .prologue
-    .line 5
     iput-object p1, p0, Lgwk;->g:Lgwb;
 
     iget-object v0, p0, Lgwk;->d:Ljava/util/concurrent/CountDownLatch;
@@ -104,12 +102,10 @@
 
     iget-object v0, p0, Lgwk;->b:Lgwl;
 
-    .line 6
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Lgwl;->removeMessages(I)V
 
-    .line 7
     iget-boolean v0, p0, Lgwk;->i:Z
 
     if-nez v0, :cond_0
@@ -142,15 +138,12 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    .line 8
     sget-object v3, Lhbj;->a:Lhbq;
 
-    .line 9
     invoke-virtual {v3}, Lhbq;->b()V
 
     goto :goto_0
 
-    .line 10
     :cond_1
     iget-object v0, p0, Lgwk;->e:Ljava/util/ArrayList;
 
@@ -279,10 +272,8 @@
 .method public final a(Lgwa;)V
     .locals 3
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 1
     iget-boolean v0, p0, Lgwk;->h:Z
 
     if-nez v0, :cond_0
@@ -313,25 +304,20 @@
 
     invoke-interface {v0}, Lgwb;->a()Lcom/google/android/gms/common/api/Status;
 
-    .line 2
     sget-object v0, Lhbj;->a:Lhbq;
 
-    .line 3
     invoke-virtual {v0}, Lhbq;->b()V
 
-    .line 4
     :goto_1
     monitor-exit v1
 
     return-void
 
-    .line 1
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 4
     :cond_1
     iget-object v0, p0, Lgwk;->e:Ljava/util/ArrayList;
 

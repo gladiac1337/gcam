@@ -13,19 +13,14 @@
 .method public constructor <init>(Lidz;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lieq;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lifj;->a:Lidz;
 
-    .line 3
     const/4 v0, 0x5
 
     iput v0, p0, Lifj;->b:I
 
-    .line 4
     return-void
 .end method
 
@@ -34,32 +29,26 @@
 .method public final a(Liel;)Liel;
     .locals 14
 
-    .prologue
     const-wide/16 v10, -0x1
 
-    .line 5
     invoke-virtual {p1}, Liel;->d()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 23
     :goto_0
     return-object p1
 
-    .line 7
     :cond_0
     invoke-static {p1}, Lkk;->d(Ljava/lang/Iterable;)Ljava/util/ArrayList;
 
     move-result-object v1
 
-    .line 8
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 10
     :goto_1
     invoke-interface {v9}, Ljava/util/List;->size()I
 
@@ -75,12 +64,10 @@
 
     if-nez v0, :cond_2
 
-    .line 12
     const/high16 v3, -0x800000    # Float.NEGATIVE_INFINITY
 
     move-object v0, v1
 
-    .line 13
     check-cast v0, Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -108,7 +95,6 @@
 
     move-result-wide v4
 
-    .line 14
     iget-object v2, p0, Lifj;->a:Lidz;
 
     invoke-interface {v2, v4, v5}, Lidz;->a(J)Lijj;
@@ -119,7 +105,6 @@
 
     move-result v2
 
-    .line 15
     cmpl-float v13, v2, v3
 
     if-lez v13, :cond_3
@@ -131,23 +116,19 @@
 
     move v4, v8
 
-    .line 18
     goto :goto_2
 
-    .line 19
     :cond_1
     cmp-long v0, v6, v10
 
     if-eqz v0, :cond_2
 
-    .line 20
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
     invoke-interface {v9, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 21
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -156,7 +137,6 @@
 
     goto :goto_1
 
-    .line 23
     :cond_2
     new-instance p1, Liel;
 
@@ -175,8 +155,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 24
     const-string v0, "TopNScoreSegmentFilter[scorer="
 
     iget-object v1, p0, Lifj;->a:Lidz;

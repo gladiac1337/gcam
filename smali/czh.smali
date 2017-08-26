@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 17
     const-string v0, "Vid2SnapshotSize"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -27,8 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,10 +33,8 @@
 .method public static a(Lbav;Lhin;Ljava/util/List;)Lilc;
     .locals 8
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 2
     sget-object v0, Lhin;->h:Lhin;
 
     if-ne p1, v0, :cond_3
@@ -49,13 +43,11 @@
 
     move v1, v0
 
-    .line 3
     :goto_0
     new-instance v0, Lhja;
 
     invoke-direct {v0, v2, v2}, Lhja;-><init>(II)V
 
-    .line 4
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -76,7 +68,6 @@
 
     check-cast v0, Lhja;
 
-    .line 5
     sget-object v4, Lczh;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -113,12 +104,10 @@
 
     invoke-static {v4, v5}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
     invoke-static {v0}, Lhip;->a(Lhja;)Lhip;
 
     move-result-object v4
 
-    .line 7
     invoke-virtual {p1}, Lhin;->b()Lhja;
 
     move-result-object v5
@@ -133,14 +122,12 @@
 
     if-eqz v4, :cond_6
 
-    .line 8
     if-nez v1, :cond_1
 
     sget-object v4, Lbav;->b:Lbav;
 
     if-ne p0, v4, :cond_2
 
-    .line 9
     :cond_1
     invoke-virtual {v0}, Lhja;->b()J
 
@@ -154,7 +141,6 @@
 
     if-gtz v4, :cond_0
 
-    .line 10
     :cond_2
     invoke-virtual {v0}, Lhja;->b()J
 
@@ -171,16 +157,13 @@
     :goto_2
     move-object v2, v0
 
-    .line 12
     goto :goto_1
 
     :cond_3
     move v1, v2
 
-    .line 2
     goto :goto_0
 
-    .line 13
     :cond_4
     invoke-virtual {v2}, Lhja;->b()J
 
@@ -192,10 +175,8 @@
 
     if-nez v0, :cond_5
 
-    .line 14
     sget-object v0, Liku;->a:Liku;
 
-    .line 16
     :goto_3
     return-object v0
 

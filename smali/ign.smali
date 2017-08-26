@@ -24,19 +24,14 @@
 .method public constructor <init>(Lidz;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lign;->c:J
 
-    .line 3
     iput-object p1, p0, Lign;->e:Lidz;
 
-    .line 4
     return-void
 .end method
 
@@ -45,23 +40,18 @@
 .method public final a(J)Z
     .locals 9
 
-    .prologue
     const-wide/16 v6, 0x0
 
-    .line 5
     iget-wide v0, p0, Lign;->c:J
 
     cmp-long v0, v0, v6
 
     if-gez v0, :cond_0
 
-    .line 6
     iput-wide p1, p0, Lign;->c:J
 
-    .line 7
     iput-wide p1, p0, Lign;->d:J
 
-    .line 8
     :cond_0
     iget-wide v0, p0, Lign;->c:J
 
@@ -69,13 +59,10 @@
 
     iput-wide v0, p0, Lign;->a:J
 
-    .line 9
     iput-wide p1, p0, Lign;->c:J
 
-    .line 10
     iget-object v0, p0, Lign;->e:Lidz;
 
-    .line 11
     invoke-interface {v0, p1, p2}, Lidz;->a(J)Lijj;
 
     move-result-object v0
@@ -84,7 +71,6 @@
 
     move-result v0
 
-    .line 12
     const/4 v1, 0x0
 
     const v2, 0x3e99999a    # 0.3f
@@ -97,12 +83,10 @@
 
     move-result v0
 
-    .line 13
     iget-wide v2, p0, Lign;->d:J
 
     sub-long v2, p1, v2
 
-    .line 14
     iget-wide v4, p0, Lign;->f:J
 
     long-to-float v1, v2
@@ -115,13 +99,10 @@
 
     iput-wide v0, p0, Lign;->f:J
 
-    .line 15
     const/4 v0, 0x0
 
-    .line 16
     iput-wide v6, p0, Lign;->b:J
 
-    .line 17
     iget-wide v2, p0, Lign;->f:J
 
     const-wide/32 v4, 0xfe502a
@@ -130,21 +111,16 @@
 
     if-lez v1, :cond_1
 
-    .line 18
     iput-wide p1, p0, Lign;->d:J
 
-    .line 19
     iget-wide v0, p0, Lign;->f:J
 
     iput-wide v0, p0, Lign;->b:J
 
-    .line 20
     iput-wide v6, p0, Lign;->f:J
 
-    .line 21
     const/4 v0, 0x1
 
-    .line 22
     :cond_1
     return v0
 .end method
@@ -152,8 +128,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 23
     const-string v0, "VariableSamplingRateFrameFilter[range="
 
     iget-object v1, p0, Lign;->e:Lidz;

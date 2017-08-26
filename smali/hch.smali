@@ -18,8 +18,6 @@
 .method public constructor <init>(Lgvt;Landroid/net/Uri;)V
     .locals 0
 
-    .prologue
-    .line 4
     iput-object p2, p0, Lhch;->b:Landroid/net/Uri;
 
     invoke-direct {p0, p1}, Lhch;-><init>(Lgvt;)V
@@ -32,17 +30,14 @@
 .method protected final a(Landroid/content/Context;Lhcf;)V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
-    .line 5
     new-instance v0, Lhci;
 
     invoke-direct {v0, p0}, Lhci;-><init>(Lgwf;)V
 
     iget-object v1, p0, Lhch;->b:Landroid/net/Uri;
 
-    .line 7
     const-string v2, "com.google.android.gms"
 
     invoke-virtual {p1, v2, v1, v6}, Landroid/content/Context;->grantUriPermission(Ljava/lang/String;Landroid/net/Uri;I)V
@@ -51,7 +46,6 @@
 
     invoke-direct {v2, p1, v1, v0}, Lhcg;-><init>(Landroid/content/Context;Landroid/net/Uri;Lhcd;)V
 
-    .line 8
     :try_start_0
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
     :try_end_0
@@ -131,38 +125,29 @@
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_0
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 9
     :catch_0
     move-exception v0
 
-    .line 10
     invoke-virtual {p1, v1, v6}, Landroid/content/Context;->revokeUriPermission(Landroid/net/Uri;I)V
 
-    .line 11
     throw v0
 
     :catch_1
     move-exception v0
 
-    .line 12
     invoke-virtual {p1, v1, v6}, Landroid/content/Context;->revokeUriPermission(Landroid/net/Uri;I)V
 
-    .line 13
     throw v0
 .end method
 
 .method protected final synthetic b(Lcom/google/android/gms/common/api/Status;)Lgwb;
     .locals 2
 
-    .prologue
-    .line 1
-    .line 2
     new-instance v0, Lhdz;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p1, v1}, Lhdz;-><init>(Lcom/google/android/gms/common/api/Status;Landroid/content/Intent;)V
 
-    .line 3
     return-object v0
 .end method

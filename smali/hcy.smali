@@ -16,9 +16,6 @@
 .method public final synthetic a(Landroid/content/Context;Landroid/os/Looper;Lgxz;Ljava/lang/Object;Lgvw;Lgvx;)Lgvr;
     .locals 7
 
-    .prologue
-    .line 1
-    .line 2
     new-instance v0, Lhdm;
 
     const-string v5, "locationServices"
@@ -35,6 +32,5 @@
 
     invoke-direct/range {v0 .. v6}, Lhdm;-><init>(Landroid/content/Context;Landroid/os/Looper;Lgvw;Lgvx;Ljava/lang/String;Lgxz;)V
 
-    .line 3
     return-object v0
 .end method

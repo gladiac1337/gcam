@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 8
     const/4 v0, 0x0
 
     sput-object v0, Lhvs;->a:Ljava/lang/String;
@@ -23,8 +21,6 @@
 .method public static a()Ljava/io/File;
     .locals 2
 
-    .prologue
-    .line 1
     const-string v0, "sb.eval.logdirpath"
 
     const-string v1, ""
@@ -33,7 +29,6 @@
 
     move-result-object v0
 
-    .line 2
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -44,13 +39,10 @@
 .method public static b()Z
     .locals 2
 
-    .prologue
-    .line 3
     invoke-static {}, Lhvs;->a()Ljava/io/File;
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
@@ -77,13 +69,10 @@
 .method public static c()Z
     .locals 2
 
-    .prologue
-    .line 5
     sget-object v0, Lhvs;->a:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 6
     const-string v0, "sb.debugtracking"
 
     const-string v1, "false"
@@ -94,7 +83,6 @@
 
     sput-object v0, Lhvs;->a:Ljava/lang/String;
 
-    .line 7
     :cond_0
     sget-object v0, Lhvs;->a:Ljava/lang/String;
 

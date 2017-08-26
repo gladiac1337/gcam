@@ -56,13 +56,10 @@
 .method public final a(Landroid/os/Bundle;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lgwm;->a()V
 
     iget-object v1, p0, Lgwm;->b:Lgxk;
 
-    .line 2
     iget-object v0, v1, Lgxk;->a:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -93,8 +90,6 @@
 .method public final a(Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 4
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Lgwm;->a()V
 
     iget-object v1, p0, Lgwm;->b:Lgxk;
@@ -103,7 +98,6 @@
 
     iget v2, p0, Lgwm;->c:I
 
-    .line 4
     iget-object v3, v1, Lgxk;->a:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v3}, Ljava/util/concurrent/locks/Lock;->lock()V

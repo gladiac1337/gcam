@@ -11,22 +11,16 @@
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lkx;->a:Landroid/content/Context;
 
-    .line 4
     return-void
 .end method
 
 .method public static a(Landroid/content/Context;)Lkx;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Lkx;
 
     invoke-direct {v0, p0}, Lkx;-><init>(Landroid/content/Context;)V
@@ -39,7 +33,6 @@
 .method public final a()I
     .locals 8
 
-    .prologue
     const/16 v7, 0x3c0
 
     const/16 v6, 0x2d0
@@ -50,7 +43,6 @@
 
     const/16 v3, 0x1e0
 
-    .line 5
     iget-object v0, p0, Lkx;->a:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -61,16 +53,12 @@
 
     move-result-object v0
 
-    .line 6
     iget v1, v0, Landroid/content/res/Configuration;->screenWidthDp:I
 
-    .line 7
     iget v2, v0, Landroid/content/res/Configuration;->screenHeightDp:I
 
-    .line 8
     iget v0, v0, Landroid/content/res/Configuration;->smallestScreenWidthDp:I
 
-    .line 9
     if-gt v0, v4, :cond_1
 
     if-gt v1, v4, :cond_1
@@ -84,15 +72,12 @@
 
     if-le v2, v7, :cond_2
 
-    .line 10
     :cond_1
     const/4 v0, 0x5
 
-    .line 15
     :goto_0
     return v0
 
-    .line 11
     :cond_2
     const/16 v0, 0x1f4
 
@@ -107,24 +92,20 @@
 
     if-le v2, v5, :cond_5
 
-    .line 12
     :cond_4
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 13
     :cond_5
     const/16 v0, 0x168
 
     if-lt v1, v0, :cond_6
 
-    .line 14
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 15
     :cond_6
     const/4 v0, 0x2
 
@@ -134,8 +115,6 @@
 .method public final b()Z
     .locals 2
 
-    .prologue
-    .line 16
     iget-object v0, p0, Lkx;->a:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;

@@ -14,8 +14,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lggx;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 4
 
-    .prologue
-    .line 2
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -40,7 +36,6 @@
 
     move-result v0
 
-    .line 3
     iget-object v1, p0, Lggx;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-static {v1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$800(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Landroid/graphics/Paint;
@@ -57,7 +52,6 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 4
     iget-object v1, p0, Lggx;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-static {v1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$1100(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Landroid/graphics/Paint;
@@ -82,11 +76,9 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 5
     iget-object v0, p0, Lggx;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->invalidate()V
 
-    .line 6
     return-void
 .end method

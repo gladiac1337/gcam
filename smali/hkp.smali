@@ -11,8 +11,6 @@
 .method constructor <init>(Lhko;Lhol;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhkp;->a:Lhko;
 
     invoke-direct {p0, p2}, Lhoq;-><init>(Lhol;)V
@@ -25,21 +23,16 @@
 .method public final close()V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lhkp;->a:Lhko;
 
     invoke-virtual {v0}, Lhko;->close()V
 
-    .line 3
     return-void
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 4
     const-string v0, "VirtualCameraDevice"
 
     return-object v0

@@ -39,17 +39,12 @@
 .method public constructor <init>(Landroid/graphics/PointF;I)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     iput-object p1, p0, Lcom/google/android/vision/face/Landmark;->mPosition:Landroid/graphics/PointF;
 
-    .line 5
     iput p2, p0, Lcom/google/android/vision/face/Landmark;->mCategory:I
 
-    .line 6
     return-void
 .end method
 
@@ -58,8 +53,6 @@
 .method public getCategory()I
     .locals 1
 
-    .prologue
-    .line 2
     iget v0, p0, Lcom/google/android/vision/face/Landmark;->mCategory:I
 
     return v0
@@ -68,8 +61,6 @@
 .method public getPosition()Landroid/graphics/PointF;
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lcom/google/android/vision/face/Landmark;->mPosition:Landroid/graphics/PointF;
 
     return-object v0

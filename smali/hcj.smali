@@ -21,14 +21,10 @@
 .method protected final synthetic b(Lgvr;)V
     .locals 2
 
-    .prologue
-    .line 1
     check-cast p1, Lhck;
 
-    .line 3
     iget-object v1, p1, Lgyd;->c:Landroid/content/Context;
 
-    .line 4
     invoke-virtual {p1}, Lhck;->i()Landroid/os/IInterface;
 
     move-result-object v0
@@ -37,6 +33,5 @@
 
     invoke-virtual {p0, v1, v0}, Lhcj;->a(Landroid/content/Context;Lhcf;)V
 
-    .line 5
     return-void
 .end method

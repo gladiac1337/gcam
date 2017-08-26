@@ -15,26 +15,21 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 18
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 19
     new-instance v0, Ldz;
 
     invoke-direct {v0}, Ldz;-><init>()V
 
     sput-object v0, Ldy;->c:Lea;
 
-    .line 21
     :goto_0
     return-void
 
-    .line 20
     :cond_0
     new-instance v0, Lea;
 
@@ -48,15 +43,12 @@
 .method static a(Landroid/view/LayoutInflater;Landroid/view/LayoutInflater$Factory2;)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
-    .line 1
     sget-boolean v0, Ldy;->b:Z
 
     if-nez v0, :cond_0
 
-    .line 2
     :try_start_0
     const-class v0, Landroid/view/LayoutInflater;
 
@@ -66,7 +58,6 @@
 
     move-result-object v0
 
-    .line 3
     sput-object v0, Ldy;->a:Ljava/lang/reflect/Field;
 
     const/4 v1, 0x1
@@ -75,17 +66,14 @@
     :try_end_0
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 9
     :goto_0
     sput-boolean v4, Ldy;->b:Z
 
-    .line 10
     :cond_0
     sget-object v0, Ldy;->a:Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_1
 
-    .line 11
     :try_start_1
     sget-object v0, Ldy;->a:Ljava/lang/reflect/Field;
 
@@ -93,16 +81,13 @@
     :try_end_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 15
     :cond_1
     :goto_1
     return-void
 
-    .line 5
     :catch_0
     move-exception v0
 
-    .line 6
     const-string v1, "LayoutInflaterCompatHC"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -113,7 +98,6 @@
 
     const-class v3, Landroid/view/LayoutInflater;
 
-    .line 7
     invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -132,16 +116,13 @@
 
     move-result-object v2
 
-    .line 8
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
 
-    .line 13
     :catch_1
     move-exception v0
 
-    .line 14
     const-string v1, "LayoutInflaterCompatHC"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -172,12 +153,9 @@
 .method public static b(Landroid/view/LayoutInflater;Landroid/view/LayoutInflater$Factory2;)V
     .locals 1
 
-    .prologue
-    .line 16
     sget-object v0, Ldy;->c:Lea;
 
     invoke-virtual {v0, p0, p1}, Lea;->a(Landroid/view/LayoutInflater;Landroid/view/LayoutInflater$Factory2;)V
 
-    .line 17
     return-void
 .end method

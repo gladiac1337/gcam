@@ -13,30 +13,22 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
     const/high16 v0, -0x80000000
 
-    .line 1
     invoke-direct {p0, v0, v0}, Lanp;-><init>(II)V
 
-    .line 2
     return-void
 .end method
 
 .method public constructor <init>(II)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Lank;-><init>()V
 
-    .line 4
     iput p1, p0, Lanp;->a:I
 
-    .line 5
     iput p2, p0, Lanp;->b:I
 
-    .line 6
     return-void
 .end method
 
@@ -45,8 +37,6 @@
 .method public final a(Lanq;)V
     .locals 5
 
-    .prologue
-    .line 7
     iget v0, p0, Lanp;->a:I
 
     iget v1, p0, Lanp;->b:I
@@ -57,7 +47,6 @@
 
     if-nez v0, :cond_0
 
-    .line 8
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     iget v1, p0, Lanp;->a:I
@@ -104,7 +93,6 @@
 
     throw v0
 
-    .line 9
     :cond_0
     iget v0, p0, Lanp;->a:I
 
@@ -112,14 +100,11 @@
 
     invoke-interface {p1, v0, v1}, Lanq;->a(II)V
 
-    .line 10
     return-void
 .end method
 
 .method public final b(Lanq;)V
     .locals 0
 
-    .prologue
-    .line 11
     return-void
 .end method

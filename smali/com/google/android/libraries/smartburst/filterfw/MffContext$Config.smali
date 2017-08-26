@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 8
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/MffContext$Config$Builder;
 
     invoke-direct {v0}, Lcom/google/android/libraries/smartburst/filterfw/MffContext$Config$Builder;-><init>()V
@@ -39,47 +37,38 @@
 .method private constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext$Config$Builder;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lcom/google/android/libraries/smartburst/filterfw/MffContext$Config$Builder;->access$000(Lcom/google/android/libraries/smartburst/filterfw/MffContext$Config$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MffContext$Config;->requireCamera:Z
 
-    .line 3
     invoke-static {p1}, Lcom/google/android/libraries/smartburst/filterfw/MffContext$Config$Builder;->access$100(Lcom/google/android/libraries/smartburst/filterfw/MffContext$Config$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MffContext$Config;->requireOpenGL:Z
 
-    .line 4
     invoke-static {p1}, Lcom/google/android/libraries/smartburst/filterfw/MffContext$Config$Builder;->access$200(Lcom/google/android/libraries/smartburst/filterfw/MffContext$Config$Builder;)Landroid/view/SurfaceView;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MffContext$Config;->dummySurface:Landroid/view/SurfaceView;
 
-    .line 5
     invoke-static {p1}, Lcom/google/android/libraries/smartburst/filterfw/MffContext$Config$Builder;->access$300(Lcom/google/android/libraries/smartburst/filterfw/MffContext$Config$Builder;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MffContext$Config;->forceNoGL:Z
 
-    .line 6
     return-void
 .end method
 
 .method synthetic constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext$Config$Builder;Lcom/google/android/libraries/smartburst/filterfw/MffContext$1;)V
     .locals 0
 
-    .prologue
-    .line 7
     invoke-direct {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/MffContext$Config;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext$Config$Builder;)V
 
     return-void

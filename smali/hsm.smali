@@ -13,23 +13,16 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;Ljava/util/List;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     invoke-static {p2}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     iput-object p1, p0, Lhsm;->a:Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
 
-    .line 5
     iput-object p2, p0, Lhsm;->b:Ljava/util/List;
 
-    .line 6
     return-void
 .end method
 
@@ -38,8 +31,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 7
     const-string v0, "FeatureExtractionGraph[target-count="
 
     iget-object v1, p0, Lhsm;->b:Ljava/util/List;

@@ -13,8 +13,6 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
-    .line 14
     invoke-static {}, Lcom/google/googlex/gcam/GcamModuleJNI;->new_FrameMetadata()J
 
     move-result-wide v0
@@ -23,32 +21,24 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/FrameMetadata;-><init>(JZ)V
 
-    .line 15
     return-void
 .end method
 
 .method protected constructor <init>(JZ)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-boolean p3, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCMemOwn:Z
 
-    .line 3
     iput-wide p1, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
-    .line 4
     return-void
 .end method
 
 .method protected static getCPtr(Lcom/google/googlex/gcam/FrameMetadata;)J
     .locals 2
 
-    .prologue
-    .line 5
     if-nez p0, :cond_0
 
     const-wide/16 v0, 0x0
@@ -67,8 +57,6 @@
 .method public AppliedOverallGain()F
     .locals 2
 
-    .prologue
-    .line 42
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_AppliedOverallGain(JLcom/google/googlex/gcam/FrameMetadata;)F
@@ -81,8 +69,6 @@
 .method public Check(Ljava/lang/String;IZLcom/google/googlex/gcam/SWIGTYPE_p_gcam__LogSaver;)Z
     .locals 8
 
-    .prologue
-    .line 26
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {p4}, Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__LogSaver;->getCPtr(Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__LogSaver;)J
@@ -107,21 +93,16 @@
 .method public Clear()V
     .locals 2
 
-    .prologue
-    .line 16
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_Clear(JLcom/google/googlex/gcam/FrameMetadata;)V
 
-    .line 17
     return-void
 .end method
 
 .method public DeserializeFromString(Lcom/google/googlex/gcam/SWIGTYPE_p_p_char;I)Z
     .locals 6
 
-    .prologue
-    .line 22
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/SWIGTYPE_p_p_char;->getCPtr(Lcom/google/googlex/gcam/SWIGTYPE_p_p_char;)J
@@ -142,8 +123,6 @@
 .method public DesiredOverallGain()F
     .locals 2
 
-    .prologue
-    .line 43
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_DesiredOverallGain(JLcom/google/googlex/gcam/FrameMetadata;)F
@@ -156,8 +135,6 @@
 .method public Equals(Lcom/google/googlex/gcam/FrameMetadata;)Z
     .locals 6
 
-    .prologue
-    .line 23
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/FrameMetadata;->getCPtr(Lcom/google/googlex/gcam/FrameMetadata;)J
@@ -178,8 +155,6 @@
 .method public GetCurrentTet()F
     .locals 2
 
-    .prologue
-    .line 24
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_GetCurrentTet(JLcom/google/googlex/gcam/FrameMetadata;)F
@@ -192,8 +167,6 @@
 .method public GetFinalDesiredTet()F
     .locals 2
 
-    .prologue
-    .line 25
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_GetFinalDesiredTet(JLcom/google/googlex/gcam/FrameMetadata;)F
@@ -206,21 +179,16 @@
 .method public Print(II)V
     .locals 2
 
-    .prologue
-    .line 18
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1, p2}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_Print(JLcom/google/googlex/gcam/FrameMetadata;II)V
 
-    .line 19
     return-void
 .end method
 
 .method public SerializeToString(Lcom/google/googlex/gcam/SWIGTYPE_p_std__string;I)V
     .locals 6
 
-    .prologue
-    .line 20
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/SWIGTYPE_p_std__string;->getCPtr(Lcom/google/googlex/gcam/SWIGTYPE_p_std__string;)J
@@ -233,17 +201,14 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_SerializeToString(JLcom/google/googlex/gcam/FrameMetadata;JI)V
 
-    .line 21
     return-void
 .end method
 
 .method public declared-synchronized delete()V
     .locals 4
 
-    .prologue
     const-wide/16 v2, 0x0
 
-    .line 8
     monitor-enter p0
 
     :try_start_0
@@ -253,22 +218,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 9
     iget-boolean v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCMemOwn:Z
 
     if-eqz v0, :cond_0
 
-    .line 10
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCMemOwn:Z
 
-    .line 11
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1}, Lcom/google/googlex/gcam/GcamModuleJNI;->delete_FrameMetadata(J)V
 
-    .line 12
     :cond_0
     const-wide/16 v0, 0x0
 
@@ -276,13 +237,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 13
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 8
     :catchall_0
     move-exception v0
 
@@ -294,19 +253,14 @@
 .method protected finalize()V
     .locals 0
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Lcom/google/googlex/gcam/FrameMetadata;->delete()V
 
-    .line 7
     return-void
 .end method
 
 .method public getActual_analog_gain()F
     .locals 2
 
-    .prologue
-    .line 32
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_actual_analog_gain_get(JLcom/google/googlex/gcam/FrameMetadata;)F
@@ -319,8 +273,6 @@
 .method public getActual_exposure_time_ms()F
     .locals 2
 
-    .prologue
-    .line 29
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_actual_exposure_time_ms_get(JLcom/google/googlex/gcam/FrameMetadata;)F
@@ -333,15 +285,12 @@
 .method public getAe()Lcom/google/googlex/gcam/AeMetadata;
     .locals 4
 
-    .prologue
-    .line 106
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_ae_get(JLcom/google/googlex/gcam/FrameMetadata;)J
 
     move-result-wide v2
 
-    .line 107
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -366,15 +315,12 @@
 .method public getAf()Lcom/google/googlex/gcam/AfMetadata;
     .locals 4
 
-    .prologue
-    .line 114
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_af_get(JLcom/google/googlex/gcam/FrameMetadata;)J
 
     move-result-wide v2
 
-    .line 115
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -399,8 +345,6 @@
 .method public getApplied_digital_gain()F
     .locals 2
 
-    .prologue
-    .line 35
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_applied_digital_gain_get(JLcom/google/googlex/gcam/FrameMetadata;)F
@@ -413,15 +357,12 @@
 .method public getAwb()Lcom/google/googlex/gcam/AwbMetadata;
     .locals 4
 
-    .prologue
-    .line 110
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_awb_get(JLcom/google/googlex/gcam/FrameMetadata;)J
 
     move-result-wide v2
 
-    .line 111
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -446,8 +387,6 @@
 .method public getBlack_levels_bayer()[F
     .locals 2
 
-    .prologue
-    .line 97
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_black_levels_bayer_get(JLcom/google/googlex/gcam/FrameMetadata;)[F
@@ -460,15 +399,12 @@
 .method public getCapture_errors()Lcom/google/googlex/gcam/StringVector;
     .locals 4
 
-    .prologue
-    .line 84
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_capture_errors_get(JLcom/google/googlex/gcam/FrameMetadata;)J
 
     move-result-wide v2
 
-    .line 85
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -493,15 +429,12 @@
 .method public getCapture_warnings()Lcom/google/googlex/gcam/StringVector;
     .locals 4
 
-    .prologue
-    .line 80
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_capture_warnings_get(JLcom/google/googlex/gcam/FrameMetadata;)J
 
     move-result-wide v2
 
-    .line 81
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -526,8 +459,6 @@
 .method public getControl_mode()I
     .locals 2
 
-    .prologue
-    .line 103
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_control_mode_get(JLcom/google/googlex/gcam/FrameMetadata;)I
@@ -540,8 +471,6 @@
 .method public getDesired_overall_digital_gain()F
     .locals 2
 
-    .prologue
-    .line 41
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_desired_overall_digital_gain_get(JLcom/google/googlex/gcam/FrameMetadata;)F
@@ -554,8 +483,6 @@
 .method public getDng_noise_model_bayer()[Lcom/google/googlex/gcam/DngNoiseModel;
     .locals 2
 
-    .prologue
-    .line 94
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_dng_noise_model_bayer_get(JLcom/google/googlex/gcam/FrameMetadata;)[J
@@ -574,15 +501,12 @@
 .method public getFaces()Lcom/google/googlex/gcam/FaceInfoVector;
     .locals 4
 
-    .prologue
-    .line 76
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_faces_get(JLcom/google/googlex/gcam/FrameMetadata;)J
 
     move-result-wide v2
 
-    .line 77
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -607,8 +531,6 @@
 .method public getFlash()I
     .locals 2
 
-    .prologue
-    .line 46
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_flash_get(JLcom/google/googlex/gcam/FrameMetadata;)I
@@ -621,8 +543,6 @@
 .method public getFocus_distance_diopters()F
     .locals 2
 
-    .prologue
-    .line 100
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_focus_distance_diopters_get(JLcom/google/googlex/gcam/FrameMetadata;)F
@@ -635,8 +555,6 @@
 .method public getLens_state()I
     .locals 2
 
-    .prologue
-    .line 118
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_lens_state_get(JLcom/google/googlex/gcam/FrameMetadata;)I
@@ -649,8 +567,6 @@
 .method public getNeutral_point()[F
     .locals 2
 
-    .prologue
-    .line 57
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_neutral_point_get(JLcom/google/googlex/gcam/FrameMetadata;)[F
@@ -663,8 +579,6 @@
 .method public getPost_raw_digital_gain()F
     .locals 2
 
-    .prologue
-    .line 38
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_post_raw_digital_gain_get(JLcom/google/googlex/gcam/FrameMetadata;)F
@@ -677,8 +591,6 @@
 .method public getScene_flicker()I
     .locals 2
 
-    .prologue
-    .line 91
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_scene_flicker_get(JLcom/google/googlex/gcam/FrameMetadata;)I
@@ -691,8 +603,6 @@
 .method public getSensor_id()I
     .locals 2
 
-    .prologue
-    .line 88
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_sensor_id_get(JLcom/google/googlex/gcam/FrameMetadata;)I
@@ -705,8 +615,6 @@
 .method public getSensor_temp()I
     .locals 2
 
-    .prologue
-    .line 63
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_sensor_temp_get(JLcom/google/googlex/gcam/FrameMetadata;)I
@@ -719,8 +627,6 @@
 .method public getSharpness()F
     .locals 2
 
-    .prologue
-    .line 60
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_sharpness_get(JLcom/google/googlex/gcam/FrameMetadata;)F
@@ -733,8 +639,6 @@
 .method public getTimestamp_ns()J
     .locals 2
 
-    .prologue
-    .line 66
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_timestamp_ns_get(JLcom/google/googlex/gcam/FrameMetadata;)J
@@ -747,15 +651,12 @@
 .method public getTonemap()Lcom/google/googlex/gcam/Tonemap;
     .locals 4
 
-    .prologue
-    .line 69
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_tonemap_get(JLcom/google/googlex/gcam/FrameMetadata;)J
 
     move-result-wide v2
 
-    .line 70
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -780,8 +681,6 @@
 .method public getWas_black_level_locked()Z
     .locals 2
 
-    .prologue
-    .line 73
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_was_black_level_locked_get(JLcom/google/googlex/gcam/FrameMetadata;)Z
@@ -794,15 +693,12 @@
 .method public getWb_capture()Lcom/google/googlex/gcam/AwbInfo;
     .locals 4
 
-    .prologue
-    .line 49
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_wb_capture_get(JLcom/google/googlex/gcam/FrameMetadata;)J
 
     move-result-wide v2
 
-    .line 50
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -827,15 +723,12 @@
 .method public getWb_ideal()Lcom/google/googlex/gcam/AwbInfo;
     .locals 4
 
-    .prologue
-    .line 53
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_wb_ideal_get(JLcom/google/googlex/gcam/FrameMetadata;)J
 
     move-result-wide v2
 
-    .line 54
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -860,34 +753,26 @@
 .method public setActual_analog_gain(F)V
     .locals 2
 
-    .prologue
-    .line 30
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_actual_analog_gain_set(JLcom/google/googlex/gcam/FrameMetadata;F)V
 
-    .line 31
     return-void
 .end method
 
 .method public setActual_exposure_time_ms(F)V
     .locals 2
 
-    .prologue
-    .line 27
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_actual_exposure_time_ms_set(JLcom/google/googlex/gcam/FrameMetadata;F)V
 
-    .line 28
     return-void
 .end method
 
 .method public setAe(Lcom/google/googlex/gcam/AeMetadata;)V
     .locals 6
 
-    .prologue
-    .line 104
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/AeMetadata;->getCPtr(Lcom/google/googlex/gcam/AeMetadata;)J
@@ -900,15 +785,12 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_ae_set(JLcom/google/googlex/gcam/FrameMetadata;JLcom/google/googlex/gcam/AeMetadata;)V
 
-    .line 105
     return-void
 .end method
 
 .method public setAf(Lcom/google/googlex/gcam/AfMetadata;)V
     .locals 6
 
-    .prologue
-    .line 112
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/AfMetadata;->getCPtr(Lcom/google/googlex/gcam/AfMetadata;)J
@@ -921,28 +803,22 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_af_set(JLcom/google/googlex/gcam/FrameMetadata;JLcom/google/googlex/gcam/AfMetadata;)V
 
-    .line 113
     return-void
 .end method
 
 .method public setApplied_digital_gain(F)V
     .locals 2
 
-    .prologue
-    .line 33
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_applied_digital_gain_set(JLcom/google/googlex/gcam/FrameMetadata;F)V
 
-    .line 34
     return-void
 .end method
 
 .method public setAwb(Lcom/google/googlex/gcam/AwbMetadata;)V
     .locals 6
 
-    .prologue
-    .line 108
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/AwbMetadata;->getCPtr(Lcom/google/googlex/gcam/AwbMetadata;)J
@@ -955,28 +831,22 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_awb_set(JLcom/google/googlex/gcam/FrameMetadata;JLcom/google/googlex/gcam/AwbMetadata;)V
 
-    .line 109
     return-void
 .end method
 
 .method public setBlack_levels_bayer([F)V
     .locals 2
 
-    .prologue
-    .line 95
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_black_levels_bayer_set(JLcom/google/googlex/gcam/FrameMetadata;[F)V
 
-    .line 96
     return-void
 .end method
 
 .method public setCapture_errors(Lcom/google/googlex/gcam/StringVector;)V
     .locals 6
 
-    .prologue
-    .line 82
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/StringVector;->getCPtr(Lcom/google/googlex/gcam/StringVector;)J
@@ -989,15 +859,12 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_capture_errors_set(JLcom/google/googlex/gcam/FrameMetadata;JLcom/google/googlex/gcam/StringVector;)V
 
-    .line 83
     return-void
 .end method
 
 .method public setCapture_warnings(Lcom/google/googlex/gcam/StringVector;)V
     .locals 6
 
-    .prologue
-    .line 78
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/StringVector;->getCPtr(Lcom/google/googlex/gcam/StringVector;)J
@@ -1010,41 +877,32 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_capture_warnings_set(JLcom/google/googlex/gcam/FrameMetadata;JLcom/google/googlex/gcam/StringVector;)V
 
-    .line 79
     return-void
 .end method
 
 .method public setControl_mode(I)V
     .locals 2
 
-    .prologue
-    .line 101
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_control_mode_set(JLcom/google/googlex/gcam/FrameMetadata;I)V
 
-    .line 102
     return-void
 .end method
 
 .method public setDesired_overall_digital_gain(F)V
     .locals 2
 
-    .prologue
-    .line 39
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_desired_overall_digital_gain_set(JLcom/google/googlex/gcam/FrameMetadata;F)V
 
-    .line 40
     return-void
 .end method
 
 .method public setDng_noise_model_bayer([Lcom/google/googlex/gcam/DngNoiseModel;)V
     .locals 3
 
-    .prologue
-    .line 92
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/DngNoiseModel;->cArrayUnwrap([Lcom/google/googlex/gcam/DngNoiseModel;)[J
@@ -1053,15 +911,12 @@
 
     invoke-static {v0, v1, p0, v2}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_dng_noise_model_bayer_set(JLcom/google/googlex/gcam/FrameMetadata;[J)V
 
-    .line 93
     return-void
 .end method
 
 .method public setFaces(Lcom/google/googlex/gcam/FaceInfoVector;)V
     .locals 6
 
-    .prologue
-    .line 74
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/FaceInfoVector;->getCPtr(Lcom/google/googlex/gcam/FaceInfoVector;)J
@@ -1074,145 +929,112 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_faces_set(JLcom/google/googlex/gcam/FrameMetadata;JLcom/google/googlex/gcam/FaceInfoVector;)V
 
-    .line 75
     return-void
 .end method
 
 .method public setFlash(I)V
     .locals 2
 
-    .prologue
-    .line 44
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_flash_set(JLcom/google/googlex/gcam/FrameMetadata;I)V
 
-    .line 45
     return-void
 .end method
 
 .method public setFocus_distance_diopters(F)V
     .locals 2
 
-    .prologue
-    .line 98
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_focus_distance_diopters_set(JLcom/google/googlex/gcam/FrameMetadata;F)V
 
-    .line 99
     return-void
 .end method
 
 .method public setLens_state(I)V
     .locals 2
 
-    .prologue
-    .line 116
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_lens_state_set(JLcom/google/googlex/gcam/FrameMetadata;I)V
 
-    .line 117
     return-void
 .end method
 
 .method public setNeutral_point([F)V
     .locals 2
 
-    .prologue
-    .line 55
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_neutral_point_set(JLcom/google/googlex/gcam/FrameMetadata;[F)V
 
-    .line 56
     return-void
 .end method
 
 .method public setPost_raw_digital_gain(F)V
     .locals 2
 
-    .prologue
-    .line 36
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_post_raw_digital_gain_set(JLcom/google/googlex/gcam/FrameMetadata;F)V
 
-    .line 37
     return-void
 .end method
 
 .method public setScene_flicker(I)V
     .locals 2
 
-    .prologue
-    .line 89
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_scene_flicker_set(JLcom/google/googlex/gcam/FrameMetadata;I)V
 
-    .line 90
     return-void
 .end method
 
 .method public setSensor_id(I)V
     .locals 2
 
-    .prologue
-    .line 86
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_sensor_id_set(JLcom/google/googlex/gcam/FrameMetadata;I)V
 
-    .line 87
     return-void
 .end method
 
 .method public setSensor_temp(I)V
     .locals 2
 
-    .prologue
-    .line 61
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_sensor_temp_set(JLcom/google/googlex/gcam/FrameMetadata;I)V
 
-    .line 62
     return-void
 .end method
 
 .method public setSharpness(F)V
     .locals 2
 
-    .prologue
-    .line 58
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_sharpness_set(JLcom/google/googlex/gcam/FrameMetadata;F)V
 
-    .line 59
     return-void
 .end method
 
 .method public setTimestamp_ns(J)V
     .locals 3
 
-    .prologue
-    .line 64
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1, p2}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_timestamp_ns_set(JLcom/google/googlex/gcam/FrameMetadata;J)V
 
-    .line 65
     return-void
 .end method
 
 .method public setTonemap(Lcom/google/googlex/gcam/Tonemap;)V
     .locals 6
 
-    .prologue
-    .line 67
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/Tonemap;->getCPtr(Lcom/google/googlex/gcam/Tonemap;)J
@@ -1225,28 +1047,22 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_tonemap_set(JLcom/google/googlex/gcam/FrameMetadata;JLcom/google/googlex/gcam/Tonemap;)V
 
-    .line 68
     return-void
 .end method
 
 .method public setWas_black_level_locked(Z)V
     .locals 2
 
-    .prologue
-    .line 71
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_was_black_level_locked_set(JLcom/google/googlex/gcam/FrameMetadata;Z)V
 
-    .line 72
     return-void
 .end method
 
 .method public setWb_capture(Lcom/google/googlex/gcam/AwbInfo;)V
     .locals 6
 
-    .prologue
-    .line 47
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/AwbInfo;->getCPtr(Lcom/google/googlex/gcam/AwbInfo;)J
@@ -1259,15 +1075,12 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_wb_capture_set(JLcom/google/googlex/gcam/FrameMetadata;JLcom/google/googlex/gcam/AwbInfo;)V
 
-    .line 48
     return-void
 .end method
 
 .method public setWb_ideal(Lcom/google/googlex/gcam/AwbInfo;)V
     .locals 6
 
-    .prologue
-    .line 51
     iget-wide v0, p0, Lcom/google/googlex/gcam/FrameMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/AwbInfo;->getCPtr(Lcom/google/googlex/gcam/AwbInfo;)J
@@ -1280,6 +1093,5 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->FrameMetadata_wb_ideal_set(JLcom/google/googlex/gcam/FrameMetadata;JLcom/google/googlex/gcam/AwbInfo;)V
 
-    .line 52
     return-void
 .end method

@@ -158,11 +158,8 @@
 .method private final g()V
     .locals 3
 
-    .prologue
-    .line 19
     iget-object v1, p0, Lgws;->a:Lgxk;
 
-    .line 20
     iget-object v0, v1, Lgxk;->a:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -192,10 +189,8 @@
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 21
     sget-object v0, Lgxn;->a:Ljava/util/concurrent/ExecutorService;
 
-    .line 22
     new-instance v1, Lgwt;
 
     invoke-direct {v1, p0}, Lgwt;-><init>(Lgws;)V
@@ -263,7 +258,6 @@
 
     goto :goto_0
 
-    .line 20
     :catchall_0
     move-exception v0
 
@@ -273,7 +267,6 @@
 
     throw v0
 
-    .line 22
     :cond_2
     iget-object v0, p0, Lgws;->p:Landroid/os/Bundle;
 
@@ -359,10 +352,8 @@
 .method public final a()V
     .locals 8
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     iget-object v0, p0, Lgws;->a:Lgxk;
 
     iget-object v0, v0, Lgxk;->g:Ljava/util/Map;
@@ -487,26 +478,20 @@
 
     iget-object v1, v1, Lgxk;->m:Lgxd;
 
-    .line 2
     invoke-static {v1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
 
-    .line 3
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 4
     iput-object v1, v0, Lgxz;->h:Ljava/lang/Integer;
 
-    .line 5
     new-instance v5, Lgxa;
 
-    .line 6
     invoke-direct {v5, p0}, Lgxa;-><init>(Lgws;)V
 
-    .line 7
     iget-object v0, p0, Lgws;->t:Lgvq;
 
     iget-object v1, p0, Lgws;->c:Landroid/content/Context;
@@ -515,20 +500,16 @@
 
     iget-object v2, v2, Lgxk;->m:Lgxd;
 
-    .line 8
     iget-object v2, v2, Lgxd;->c:Landroid/os/Looper;
 
-    .line 9
     iget-object v3, p0, Lgws;->j:Lgxz;
 
     iget-object v4, p0, Lgws;->j:Lgxz;
 
-    .line 10
     iget-object v4, v4, Lgxz;->g:Lhcr;
 
     move-object v6, v5
 
-    .line 11
     invoke-virtual/range {v0 .. v6}, Lgvq;->a(Landroid/content/Context;Landroid/os/Looper;Lgxz;Ljava/lang/Object;Lgvw;Lgvx;)Lgvr;
 
     move-result-object v0
@@ -550,10 +531,8 @@
 
     iget-object v0, p0, Lgws;->u:Ljava/util/ArrayList;
 
-    .line 12
     sget-object v1, Lgxn;->a:Ljava/util/concurrent/ExecutorService;
 
-    .line 13
     new-instance v2, Lgwv;
 
     invoke-direct {v2, p0, v7}, Lgwv;-><init>(Lgws;Ljava/util/Map;)V
@@ -726,7 +705,6 @@
 .method final b(Lcom/google/android/gms/common/ConnectionResult;Lgvo;I)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
     const v3, 0x7fffffff
@@ -735,17 +713,14 @@
 
     const/4 v0, 0x1
 
-    .line 23
     const/4 v2, 0x2
 
     if-eq p3, v2, :cond_2
 
     invoke-virtual {p2}, Lgvo;->a()Lgvq;
 
-    .line 24
     if-ne p3, v0, :cond_0
 
-    .line 25
     invoke-virtual {p1}, Lcom/google/android/gms/common/ConnectionResult;->a()Z
 
     move-result v2
@@ -754,7 +729,6 @@
 
     move v2, v0
 
-    .line 30
     :goto_0
     if-eqz v2, :cond_5
 
@@ -767,7 +741,6 @@
 
     if-ge v3, v2, :cond_5
 
-    .line 31
     :cond_1
     :goto_1
     if-eqz v0, :cond_2
@@ -789,16 +762,13 @@
 
     return-void
 
-    .line 26
     :cond_3
     iget v2, p1, Lcom/google/android/gms/common/ConnectionResult;->b:I
 
-    .line 28
     invoke-static {v4, v2, v4}, Lgvj;->a(Landroid/content/Context;ILjava/lang/String;)Landroid/content/Intent;
 
     move-result-object v2
 
-    .line 29
     if-eqz v2, :cond_4
 
     move v2, v0
@@ -813,7 +783,6 @@
     :cond_5
     move v0, v1
 
-    .line 30
     goto :goto_1
 .end method
 
@@ -1006,18 +975,14 @@
 .method final e()V
     .locals 4
 
-    .prologue
-    .line 14
     iget v0, p0, Lgws;->o:I
 
     if-eqz v0, :cond_1
 
-    .line 18
     :cond_0
     :goto_0
     return-void
 
-    .line 14
     :cond_1
     iget-boolean v0, p0, Lgws;->e:Z
 
@@ -1027,7 +992,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 15
     :cond_2
     new-instance v1, Ljava/util/ArrayList;
 
@@ -1115,10 +1079,8 @@
 
     iget-object v0, p0, Lgws;->u:Ljava/util/ArrayList;
 
-    .line 16
     sget-object v2, Lgxn;->a:Ljava/util/concurrent/ExecutorService;
 
-    .line 17
     new-instance v3, Lgwx;
 
     invoke-direct {v3, p0, v1}, Lgwx;-><init>(Lgws;Ljava/util/ArrayList;)V

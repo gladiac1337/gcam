@@ -17,28 +17,20 @@
 .method public constructor <init>(Landroid/view/View;Landroid/graphics/Paint;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbmk;->c:Landroid/view/View;
 
-    .line 3
     iput-object p2, p0, Lbmk;->d:Landroid/graphics/Paint;
 
-    .line 4
     return-void
 .end method
 
 .method public constructor <init>(Landroid/view/View;Landroid/graphics/Paint;B)V
     .locals 0
 
-    .prologue
-    .line 15
     invoke-direct {p0, p1, p2}, Lbmk;-><init>(Landroid/view/View;Landroid/graphics/Paint;)V
 
-    .line 16
     return-void
 .end method
 
@@ -47,26 +39,20 @@
 .method public final a(I)V
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lbmk;->d:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 6
     return-void
 .end method
 
 .method public a(Landroid/graphics/Canvas;Landroid/graphics/RectF;)V
     .locals 6
 
-    .prologue
-    .line 17
     iget-boolean v0, p0, Lbmk;->b:Z
 
     if-nez v0, :cond_0
 
-    .line 18
     iget v1, p2, Landroid/graphics/RectF;->left:F
 
     iget v0, p2, Landroid/graphics/RectF;->top:F
@@ -93,7 +79,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 19
     :cond_0
     return-void
 .end method
@@ -101,8 +86,6 @@
 .method public final b(I)Landroid/animation/Animator;
     .locals 3
 
-    .prologue
-    .line 7
     const/4 v0, 0x2
 
     new-array v0, v0, [I
@@ -121,29 +104,24 @@
 
     move-result-object v0
 
-    .line 8
     new-instance v1, Lbml;
 
     invoke-direct {v1, p0}, Lbml;-><init>(Lbmk;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 9
     new-instance v1, Lbmm;
 
     invoke-direct {v1, p0}, Lbmm;-><init>(Lbmk;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 10
     return-object v0
 .end method
 
 .method public final c(I)Landroid/animation/Animator;
     .locals 3
 
-    .prologue
-    .line 11
     const/4 v0, 0x2
 
     new-array v0, v0, [I
@@ -166,20 +144,17 @@
 
     move-result-object v0
 
-    .line 12
     new-instance v1, Lbmn;
 
     invoke-direct {v1, p0}, Lbmn;-><init>(Lbmk;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 13
     new-instance v1, Lbmo;
 
     invoke-direct {v1, p0}, Lbmo;-><init>(Lbmk;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 14
     return-object v0
 .end method

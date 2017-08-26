@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$2;->this$0:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$2;->this$0:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
@@ -44,12 +40,10 @@
 
     invoke-static {v1, v0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->access$402(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;F)F
 
-    .line 3
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
     move-result v0
 
-    .line 4
     iget-object v1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$2;->this$0:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;
 
     const/high16 v2, 0x3f000000    # 0.5f
@@ -62,11 +56,9 @@
 
     invoke-static {v1, v0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->access$502(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;F)F
 
-    .line 5
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$2;->this$0:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->invalidate()V
 
-    .line 6
     return-void
 .end method

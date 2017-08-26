@@ -31,13 +31,10 @@
 .method public constructor <init>(Ljava/util/concurrent/Executor;Lgmh;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x2
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -46,13 +43,10 @@
 
     iput-object v0, p0, Ldqs;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 3
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     iput-object p1, p0, Ldqs;->a:Ljava/util/concurrent/Executor;
 
-    .line 5
     new-instance v0, Latr;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -63,24 +57,20 @@
 
     iput-object v0, p0, Ldqs;->e:Lavm;
 
-    .line 6
     iput-object p2, p0, Ldqs;->b:Lgmh;
 
-    .line 7
     new-instance v0, Lege;
 
     invoke-direct {v0}, Lege;-><init>()V
 
     iput-object v0, p0, Ldqs;->c:Legh;
 
-    .line 8
     new-instance v0, Lfxa;
 
     invoke-direct {v0, v2}, Lfxa;-><init>(I)V
 
     iput-object v0, p0, Ldqs;->d:Lfxa;
 
-    .line 9
     return-void
 .end method
 
@@ -89,8 +79,6 @@
 .method public final a()Lavm;
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Ldqs;->e:Lavm;
 
     return-object v0
@@ -99,11 +87,8 @@
 .method public final synthetic a(Ljava/lang/Object;)Liwe;
     .locals 2
 
-    .prologue
-    .line 47
     check-cast p1, Lgcl;
 
-    .line 48
     iget-object v0, p1, Lgcl;->b:Lhoz;
 
     invoke-interface {v0}, Lhoz;->h_()I
@@ -114,12 +99,10 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 49
     iget-object v0, p1, Lgcl;->b:Lhoz;
 
     invoke-interface {v0}, Lhoz;->close()V
 
-    .line 50
     new-instance v0, Lhks;
 
     const-string v1, "Only YUV_420_888 images are supported"
@@ -130,11 +113,9 @@
 
     move-result-object v0
 
-    .line 52
     :goto_0
     return-object v0
 
-    .line 51
     :cond_0
     iget-object v0, p0, Ldqs;->d:Lfxa;
 
@@ -152,30 +133,24 @@
 .method final a(Lgcl;I)[B
     .locals 9
 
-    .prologue
-    .line 15
     iget-object v0, p1, Lgcl;->e:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v0
 
-    .line 16
     iget-object v1, p1, Lgcl;->e:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
 
     move-result v1
 
-    .line 17
     mul-int/lit8 v0, v0, 0x3
 
     mul-int v3, v0, v1
 
-    .line 18
     div-int/lit8 v4, v3, 0x2
 
-    .line 19
     iget-object v0, p0, Ldqs;->c:Legh;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -188,7 +163,6 @@
 
     const/4 v1, 0x0
 
-    .line 20
     :try_start_0
     invoke-virtual {v5}, Legi;->a()Ljava/lang/Object;
 
@@ -196,10 +170,8 @@
 
     check-cast v0, Ljava/nio/ByteBuffer;
 
-    .line 21
     if-nez v0, :cond_0
 
-    .line 22
     new-instance v0, Ljava/lang/RuntimeException;
 
     const/16 v2, 0x35
@@ -235,7 +207,6 @@
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 45
     :catch_0
     move-exception v0
 
@@ -244,7 +215,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 46
     :catchall_0
     move-exception v1
 
@@ -265,7 +235,6 @@
     :goto_1
     throw v0
 
-    .line 23
     :cond_0
     :try_start_3
     iget-object v2, p1, Lgcl;->b:Lhoz;
@@ -274,21 +243,16 @@
 
     iget-object v7, p1, Lgcl;->c:Lhix;
 
-    .line 24
     iget v7, v7, Lhix;->e:I
 
-    .line 25
     invoke-static {v2, v0, p2, v6, v7}, Lcom/android/camera/util/JpegUtilNative;->a(Lhoz;Ljava/nio/ByteBuffer;ILandroid/graphics/Rect;I)I
 
     move-result v2
 
-    .line 26
     if-le v2, v4, :cond_4
 
-    .line 27
     invoke-virtual {v5}, Legi;->close()V
 
-    .line 28
     iget-object v0, p0, Ldqs;->c:Legh;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -297,17 +261,14 @@
 
     invoke-virtual {v0, v2}, Legh;->c(Ljava/lang/Object;)Legi;
 
-    .line 29
     invoke-virtual {v5}, Legi;->a()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/nio/ByteBuffer;
 
-    .line 30
     if-nez v0, :cond_1
 
-    .line 31
     new-instance v0, Ljava/lang/RuntimeException;
 
     const/16 v2, 0x35
@@ -340,13 +301,11 @@
 
     throw v0
 
-    .line 46
     :catchall_1
     move-exception v0
 
     goto :goto_0
 
-    .line 32
     :cond_1
     iget-object v2, p1, Lgcl;->b:Lhoz;
 
@@ -354,10 +313,8 @@
 
     iget-object v4, p1, Lgcl;->c:Lhix;
 
-    .line 33
     iget v4, v4, Lhix;->e:I
 
-    .line 34
     invoke-static {v2, v0, p2, v3, v4}, Lcom/android/camera/util/JpegUtilNative;->a(Lhoz;Ljava/nio/ByteBuffer;ILandroid/graphics/Rect;I)I
 
     move-result v2
@@ -368,11 +325,9 @@
 
     move v0, v8
 
-    .line 35
     :goto_2
     if-gtz v0, :cond_2
 
-    .line 36
     new-instance v2, Ljava/lang/RuntimeException;
 
     const/16 v3, 0x39
@@ -399,38 +354,30 @@
 
     throw v2
 
-    .line 37
     :cond_2
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 38
     invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 39
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 40
     new-array v0, v0, [B
 
-    .line 41
     invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 43
     invoke-virtual {v5}, Legi;->close()V
 
-    .line 44
     return-object v0
 
-    .line 46
     :catch_1
     move-exception v2
 
@@ -456,10 +403,8 @@
 .method public final close()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 11
     iget-object v0, p0, Ldqs;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -470,12 +415,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 12
     iget-object v0, p0, Ldqs;->d:Lfxa;
 
     invoke-virtual {v0}, Lfxa;->close()V
 
-    .line 13
     iget-object v0, p0, Ldqs;->e:Lavm;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -484,7 +427,6 @@
 
     invoke-interface {v0, v1}, Lavm;->a(Ljava/lang/Object;)V
 
-    .line 14
     :cond_0
     return-void
 .end method

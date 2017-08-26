@@ -18,11 +18,8 @@
 .method protected constructor <init>(Ljava/lang/String;I)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -33,13 +30,10 @@
 
     iput-object v0, p0, Lhtx;->c:Ljava/lang/String;
 
-    .line 3
     iput-object p1, p0, Lhtx;->a:Ljava/lang/String;
 
-    .line 4
     iput p2, p0, Lhtx;->b:I
 
-    .line 5
     return-void
 .end method
 
@@ -48,8 +42,6 @@
 .method public final a()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lhtx;->a:Ljava/lang/String;
 
     return-object v0
@@ -58,8 +50,6 @@
 .method public final b()I
     .locals 1
 
-    .prologue
-    .line 7
     iget v0, p0, Lhtx;->b:I
 
     return v0
@@ -68,8 +58,6 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lhtx;->c:Ljava/lang/String;
 
     iget-object v1, p0, Lhtx;->a:Ljava/lang/String;

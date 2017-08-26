@@ -29,24 +29,18 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, -0x1
 
     iput v0, p0, Lja;->j:I
 
-    .line 3
     iput-object p1, p0, Lja;->a:Landroid/content/Context;
 
-    .line 4
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lja;->f:Z
 
-    .line 5
     const-string v0, "layout_inflater"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -57,6 +51,5 @@
 
     iput-object v0, p0, Lja;->b:Landroid/view/LayoutInflater;
 
-    .line 6
     return-void
 .end method

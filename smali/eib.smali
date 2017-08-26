@@ -37,8 +37,6 @@
 .method public final call()Ljava/lang/Object;
     .locals 6
 
-    .prologue
-    .line 1
     iget-object v0, p0, Leib;->a:Lehz;
 
     iget-object v1, p0, Leib;->b:Lgje;
@@ -47,7 +45,6 @@
 
     iget-object v3, p0, Leib;->d:Lilc;
 
-    .line 2
     iget-object v4, v0, Lehz;->c:Lgjj;
 
     iget-object v5, v0, Lehz;->g:Ljava/lang/String;
@@ -56,11 +53,9 @@
 
     move-result-object v1
 
-    .line 3
     iget-object v0, v0, Lehz;->b:Lgiz;
 
     invoke-interface {v0, v1, v2, v3}, Lgiz;->a(Ljava/io/File;Ljava/io/InputStream;Lilc;)J
 
-    .line 5
     return-object v1
 .end method

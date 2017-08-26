@@ -20,8 +20,6 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;Luv;)V
     .locals 0
 
-    .prologue
-    .line 2
     iput-object p1, p0, Lvl;->a:Ljava/lang/String;
 
     iput-object p2, p0, Lvl;->b:Ljava/lang/String;
@@ -40,8 +38,6 @@
 .method public final a()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lvl;->c:Ljava/lang/Object;
 
     return-object v0

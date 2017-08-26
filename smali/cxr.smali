@@ -7,8 +7,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 8
     const-string v0, "Video2HfrModule"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -19,14 +17,10 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/util/ApiHelper;Lazo;Lfde;Lbow;Lbsi;Lhjq;Lghx;Landroid/content/ContentResolver;Lhkr;Lcom/google/android/apps/camera/config/GservicesHelper;Ljava/util/concurrent/Executor;Lgmp;Lfhs;Lhic;Lbwh;Lcci;Landroid/content/res/Resources;Lfgo;Lgft;Lcct;Lfcu;Lfdc;Lilp;Lfqm;Lezh;Lavm;Lfax;Lelv;Ldee;Lbhf;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lghg;Lcyv;Leks;Lavm;Lesr;Lbhd;Lhjz;Lgfd;Lfpe;Lgjf;Lbst;Lapl;Lgnf;)V
     .locals 48
 
-    .prologue
-    .line 1
     sget-object v4, Lbav;->c:Lbav;
 
-    .line 2
     sget-object v30, Liku;->a:Liku;
 
-    .line 4
     move-object/from16 v0, p30
 
     iget-object v0, v0, Lbhf;->a:Lavm;
@@ -121,9 +115,7 @@
 
     move-object/from16 v47, p44
 
-    .line 6
     invoke-direct/range {v1 .. v47}, Lcxx;-><init>(Lcom/google/android/apps/camera/util/ApiHelper;Lazo;Lbav;Lfde;Lbow;Lbsi;Lhjq;Lghx;Landroid/content/ContentResolver;Lhkr;Lcom/google/android/apps/camera/config/GservicesHelper;Ljava/util/concurrent/Executor;Lfhs;Lgmp;Lhic;Lbwh;Lcci;Landroid/content/res/Resources;Lfgo;Lgft;Lcct;Lfcu;Lfdc;Lilp;Lfqm;Lezh;Lavm;Lfax;Lilc;Lelv;Ldee;Lavm;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lghg;Lcyv;Leks;Lavm;Lesr;Lbhd;Lhjz;Lgfd;Lfpe;Lgjf;Lbst;Lapl;Lgnf;)V
 
-    .line 7
     return-void
 .end method

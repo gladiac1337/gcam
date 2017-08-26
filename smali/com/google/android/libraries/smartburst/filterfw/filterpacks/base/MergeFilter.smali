@@ -19,29 +19,22 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/Filter;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
 
-    .line 2
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MergeFilter;->mMode:I
 
-    .line 3
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MergeFilter;->mPortScores:[J
 
-    .line 4
     return-void
 .end method
 
 .method private final initScores()V
     .locals 4
 
-    .prologue
-    .line 40
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MergeFilter;->getConnectedInputPorts()[Lcom/google/android/libraries/smartburst/filterfw/InputPort;
 
     move-result-object v0
@@ -52,7 +45,6 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MergeFilter;->mPortScores:[J
 
-    .line 41
     const/4 v0, 0x0
 
     :goto_0
@@ -62,19 +54,16 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 42
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MergeFilter;->mPortScores:[J
 
     const-wide/high16 v2, -0x8000000000000000L
 
     aput-wide v2, v1, v0
 
-    .line 43
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 44
     :cond_0
     return-void
 .end method
@@ -82,13 +71,10 @@
 .method private final updateScore(I)V
     .locals 6
 
-    .prologue
-    .line 34
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MergeFilter;->mMode:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 39
     new-instance v0, Ljava/lang/RuntimeException;
 
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MergeFilter;->mMode:I
@@ -123,7 +109,6 @@
 
     throw v0
 
-    .line 35
     :pswitch_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MergeFilter;->mPortScores:[J
 
@@ -135,11 +120,9 @@
 
     aput-wide v2, v0, p1
 
-    .line 38
     :goto_0
     return-void
 
-    .line 37
     :pswitch_1
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MergeFilter;->mPortScores:[J
 
@@ -155,7 +138,6 @@
 
     goto :goto_0
 
-    .line 34
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -168,8 +150,6 @@
 .method public final getSignature()Lcom/google/android/libraries/smartburst/filterfw/Signature;
     .locals 4
 
-    .prologue
-    .line 9
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     invoke-direct {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;-><init>()V
@@ -178,7 +158,6 @@
 
     const/4 v2, 0x2
 
-    .line 10
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->any()Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v3
@@ -187,33 +166,26 @@
 
     move-result-object v0
 
-    .line 11
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->disallowOtherOutputs()Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 12
     return-object v0
 .end method
 
 .method public final onInputPortAttached(Lcom/google/android/libraries/smartburst/filterfw/InputPort;)V
     .locals 1
 
-    .prologue
-    .line 13
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->setWaitsForFrame(Z)V
 
-    .line 14
     return-void
 .end method
 
 .method public final onInputPortOpen(Lcom/google/android/libraries/smartburst/filterfw/InputPort;)V
     .locals 1
 
-    .prologue
-    .line 15
     const-string v0, "output"
 
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MergeFilter;->getConnectedOutputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/OutputPort;
@@ -222,37 +194,28 @@
 
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->attachToOutputPort(Lcom/google/android/libraries/smartburst/filterfw/OutputPort;)V
 
-    .line 16
     return-void
 .end method
 
 .method protected final onOpen()V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MergeFilter;->initScores()V
 
-    .line 18
     return-void
 .end method
 
 .method protected final onProcess()V
     .locals 8
 
-    .prologue
-    .line 19
     const-wide/high16 v2, -0x8000000000000000L
 
-    .line 20
     const/4 v1, -0x1
 
-    .line 21
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MergeFilter;->getConnectedInputPorts()[Lcom/google/android/libraries/smartburst/filterfw/InputPort;
 
     move-result-object v6
 
-    .line 22
     const/4 v0, 0x0
 
     :goto_0
@@ -260,7 +223,6 @@
 
     if-ge v0, v4, :cond_1
 
-    .line 23
     aget-object v4, v6, v0
 
     invoke-virtual {v4}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->hasFrame()Z
@@ -269,12 +231,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 24
     iget-object v4, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MergeFilter;->mPortScores:[J
 
     aget-wide v4, v4, v0
 
-    .line 25
     cmp-long v7, v4, v2
 
     if-ltz v7, :cond_0
@@ -283,24 +243,20 @@
 
     move-wide v2, v4
 
-    .line 28
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 29
     :cond_1
     if-ltz v1, :cond_2
 
-    .line 30
     aget-object v0, v6, v1
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->pullFrame()Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
     move-result-object v0
 
-    .line 31
     const-string v2, "output"
 
     invoke-virtual {p0, v2}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MergeFilter;->getConnectedOutputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/OutputPort;
@@ -309,10 +265,8 @@
 
     invoke-virtual {v2, v0}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->pushFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;)V
 
-    .line 32
     invoke-direct {p0, v1}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MergeFilter;->updateScore(I)V
 
-    .line 33
     :cond_2
     return-void
 .end method
@@ -320,15 +274,12 @@
 .method public final setMergeMode(I)V
     .locals 2
 
-    .prologue
-    .line 5
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MergeFilter;->isRunning()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 6
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Cannot update merge mode while running!"
@@ -337,10 +288,8 @@
 
     throw v0
 
-    .line 7
     :cond_0
     iput p1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MergeFilter;->mMode:I
 
-    .line 8
     return-void
 .end method

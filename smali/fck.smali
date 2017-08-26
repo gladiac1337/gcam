@@ -14,8 +14,6 @@
 .method constructor <init>(Lfcj;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfck;->a:Lfcj;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,14 +26,11 @@
 .method public final run()V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lfck;->a:Lfcj;
 
     iget-object v0, v0, Lfcj;->a:Lfch;
 
     invoke-virtual {v0}, Lgir;->M()V
 
-    .line 3
     return-void
 .end method

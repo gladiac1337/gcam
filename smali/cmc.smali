@@ -20,8 +20,6 @@
 .method constructor <init>(Lcmb;Lhoz;Lcom/google/android/libraries/camera/exif/ExifInterface;Lcmf;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcmc;->d:Lcmb;
 
     iput-object p2, p0, Lcmc;->a:Lhoz;
@@ -40,19 +38,14 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 6
 
-    .prologue
-    .line 12
     check-cast p1, Ldpl;
 
-    .line 13
     iget-object v0, p0, Lcmc;->a:Lhoz;
 
     invoke-interface {v0}, Lhoz;->close()V
 
-    .line 15
     iget-object v0, p1, Ldpl;->d:Lcom/google/android/libraries/camera/exif/ExifInterface;
 
-    .line 17
     new-instance v1, Lhlh;
 
     iget-object v2, p0, Lcmc;->b:Lcom/google/android/libraries/camera/exif/ExifInterface;
@@ -61,7 +54,6 @@
 
     sget v2, Lcom/google/android/libraries/camera/exif/ExifInterface;->a:I
 
-    .line 18
     invoke-virtual {v0, v2}, Lcom/google/android/libraries/camera/exif/ExifInterface;->d(I)Lhlf;
 
     move-result-object v2
@@ -74,7 +66,6 @@
 
     sget v3, Lcom/google/android/libraries/camera/exif/ExifInterface;->b:I
 
-    .line 19
     invoke-virtual {v0, v3}, Lcom/google/android/libraries/camera/exif/ExifInterface;->d(I)Lhlf;
 
     move-result-object v3
@@ -85,7 +76,6 @@
 
     long-to-int v3, v4
 
-    .line 20
     invoke-static {v0}, Lhky;->a(Lcom/google/android/libraries/camera/exif/ExifInterface;)Lhky;
 
     move-result-object v0
@@ -94,71 +84,51 @@
 
     move-result-object v0
 
-    .line 21
     sget-object v4, Liku;->a:Liku;
 
-    .line 22
     invoke-virtual {v1, v2, v3, v0, v4}, Lhlh;->a(IILhix;Lilc;)V
 
-    .line 23
     iget-object v0, p0, Lcmc;->d:Lcmb;
 
     iget-object v0, v0, Lcmb;->a:Lclq;
 
-    .line 24
     iget-object v1, p1, Ldpl;->b:[B
 
-    .line 26
     iget-object v2, p1, Ldpl;->e:Lhja;
 
-    .line 28
     iget v3, p1, Ldpl;->c:I
 
-    .line 29
     iget-object v4, p0, Lcmc;->b:Lcom/google/android/libraries/camera/exif/ExifInterface;
 
     iget-object v5, p0, Lcmc;->c:Lcmf;
 
-    .line 30
     invoke-static/range {v0 .. v5}, Lclq;->a(Lclq;[BLhja;ILcom/google/android/libraries/camera/exif/ExifInterface;Lcmf;)V
 
-    .line 31
     return-void
 .end method
 
 .method public final a(Ljava/lang/Throwable;)V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcmc;->a:Lhoz;
 
     invoke-interface {v0}, Lhoz;->close()V
 
-    .line 3
     iget-object v0, p0, Lcmc;->c:Lcmf;
 
-    .line 4
     iget-object v0, v0, Lcmf;->a:Ldvs;
 
-    .line 5
     iget-object v0, v0, Ldvs;->c:Ldvr;
 
-    .line 6
     invoke-virtual {v0}, Ldvr;->b()V
 
-    .line 7
     iget-object v0, p0, Lcmc;->c:Lcmf;
 
-    .line 8
     iget-object v0, v0, Lcmf;->a:Ldvs;
 
-    .line 9
     iget-object v0, v0, Ldvs;->d:Ldvt;
 
-    .line 10
     invoke-virtual {v0}, Ldvt;->close()V
 
-    .line 11
     return-void
 .end method

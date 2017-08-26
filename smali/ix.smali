@@ -14,8 +14,6 @@
 .method public constructor <init>(Landroid/support/v7/app/AlertController;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lix;->a:Landroid/support/v7/app/AlertController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lix;->a:Landroid/support/v7/app/AlertController;
 
     iget-object v0, v0, Landroid/support/v7/app/AlertController;->u:Landroid/os/Handler;
@@ -44,9 +40,7 @@
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 4
     return-void
 .end method

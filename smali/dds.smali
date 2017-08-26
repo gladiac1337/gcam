@@ -21,7 +21,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x4
 
     const/4 v5, 0x3
@@ -32,7 +31,6 @@
 
     const/4 v2, 0x0
 
-    .line 11
     new-instance v0, Ldds;
 
     const-string v1, "ZSL"
@@ -41,7 +39,6 @@
 
     sput-object v0, Ldds;->a:Ldds;
 
-    .line 12
     new-instance v0, Ldds;
 
     const-string v1, "LEGACY_JPEG"
@@ -50,7 +47,6 @@
 
     sput-object v0, Ldds;->b:Ldds;
 
-    .line 13
     new-instance v0, Ldds;
 
     const-string v1, "LIMITED_JPEG"
@@ -59,7 +55,6 @@
 
     sput-object v0, Ldds;->c:Ldds;
 
-    .line 14
     new-instance v0, Ldds;
 
     const-string v1, "ZSL_REPROCESSING"
@@ -68,7 +63,6 @@
 
     sput-object v0, Ldds;->d:Ldds;
 
-    .line 15
     new-instance v0, Ldds;
 
     const-string v1, "NEXUS_2015"
@@ -77,7 +71,6 @@
 
     sput-object v0, Ldds;->e:Ldds;
 
-    .line 16
     const/4 v0, 0x5
 
     new-array v0, v0, [Ldds;
@@ -110,8 +103,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -120,18 +111,13 @@
 .method public static a(I)Lilc;
     .locals 1
 
-    .prologue
-    .line 3
     packed-switch p0, :pswitch_data_0
 
-    .line 9
     sget-object v0, Liku;->a:Liku;
 
-    .line 10
     :goto_0
     return-object v0
 
-    .line 4
     :pswitch_0
     sget-object v0, Ldds;->a:Ldds;
 
@@ -141,7 +127,6 @@
 
     goto :goto_0
 
-    .line 5
     :pswitch_1
     sget-object v0, Ldds;->b:Ldds;
 
@@ -151,7 +136,6 @@
 
     goto :goto_0
 
-    .line 6
     :pswitch_2
     sget-object v0, Ldds;->c:Ldds;
 
@@ -161,7 +145,6 @@
 
     goto :goto_0
 
-    .line 7
     :pswitch_3
     sget-object v0, Ldds;->c:Ldds;
 
@@ -171,7 +154,6 @@
 
     goto :goto_0
 
-    .line 8
     :pswitch_4
     sget-object v0, Ldds;->d:Ldds;
 
@@ -181,7 +163,6 @@
 
     goto :goto_0
 
-    .line 3
     nop
 
     :pswitch_data_0
@@ -197,8 +178,6 @@
 .method public static values()[Ldds;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Ldds;->f:[Ldds;
 
     invoke-virtual {v0}, [Ldds;->clone()Ljava/lang/Object;

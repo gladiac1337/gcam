@@ -19,10 +19,8 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 10
     new-instance v0, Litz;
 
     const-string v1, "JAVA6"
@@ -31,7 +29,6 @@
 
     sput-object v0, Lity;->c:Lity;
 
-    .line 11
     new-instance v0, Liua;
 
     const-string v1, "JAVA7"
@@ -40,7 +37,6 @@
 
     sput-object v0, Lity;->a:Lity;
 
-    .line 12
     new-instance v0, Liub;
 
     const-string v1, "JAVA8"
@@ -49,7 +45,6 @@
 
     sput-object v0, Lity;->d:Lity;
 
-    .line 13
     const/4 v0, 0x3
 
     new-array v0, v0, [Lity;
@@ -72,7 +67,6 @@
 
     sput-object v0, Lity;->e:[Lity;
 
-    .line 14
     const-class v0, Ljava/lang/reflect/AnnotatedElement;
 
     const-class v1, Ljava/lang/reflect/TypeVariable;
@@ -83,16 +77,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 15
     sget-object v0, Lity;->d:Lity;
 
     sput-object v0, Lity;->b:Lity;
 
-    .line 19
     :goto_0
     return-void
 
-    .line 16
     :cond_0
     new-instance v0, Litk;
 
@@ -106,14 +97,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 17
     sget-object v0, Lity;->a:Lity;
 
     sput-object v0, Lity;->b:Lity;
 
     goto :goto_0
 
-    .line 18
     :cond_1
     sget-object v0, Lity;->c:Lity;
 
@@ -125,8 +114,6 @@
 .method constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -135,8 +122,6 @@
 .method public static values()[Lity;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lity;->e:[Lity;
 
     invoke-virtual {v0}, [Lity;->clone()Ljava/lang/Object;
@@ -153,13 +138,10 @@
 .method final a([Ljava/lang/reflect/Type;)Link;
     .locals 4
 
-    .prologue
-    .line 4
     new-instance v1, Linm;
 
     invoke-direct {v1}, Linm;-><init>()V
 
-    .line 6
     array-length v2, p1
 
     const/4 v0, 0x0
@@ -169,19 +151,16 @@
 
     aget-object v3, p1, v0
 
-    .line 7
     invoke-virtual {p0, v3}, Lity;->b(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
 
     move-result-object v3
 
     invoke-virtual {v1, v3}, Linm;->c(Ljava/lang/Object;)Linm;
 
-    .line 8
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 9
     :cond_0
     invoke-virtual {v1}, Linm;->a()Link;
 
@@ -199,8 +178,6 @@
 .method c(Ljava/lang/reflect/Type;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 3
     invoke-static {p1}, Litr;->b(Ljava/lang/reflect/Type;)Ljava/lang/String;
 
     move-result-object v0

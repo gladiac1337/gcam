@@ -20,8 +20,6 @@
 .method constructor <init>(Lcxk;Lcom/google/android/apps/camera/legacy/app/stats/CameraDeviceInstrumentationSession;Liwp;Lhmp;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcxl;->d:Lcxk;
 
     iput-object p2, p0, Lcxl;->a:Lcom/google/android/apps/camera/legacy/app/stats/CameraDeviceInstrumentationSession;
@@ -40,8 +38,6 @@
 .method public final a()V
     .locals 5
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lcxl;->b:Liwp;
 
     invoke-virtual {v0}, Liuj;->isDone()Z
@@ -50,7 +46,6 @@
 
     if-nez v0, :cond_0
 
-    .line 7
     iget-object v0, p0, Lcxl;->b:Liwp;
 
     new-instance v1, Lhks;
@@ -99,7 +94,6 @@
 
     invoke-virtual {v0, v1}, Liuj;->a(Ljava/lang/Throwable;)Z
 
-    .line 8
     :cond_0
     return-void
 .end method
@@ -107,11 +101,8 @@
 .method public final a(I)V
     .locals 5
 
-    .prologue
-    .line 12
     sget-object v0, Lcxk;->a:Ljava/lang/String;
 
-    .line 13
     const/16 v1, 0x29
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -134,12 +125,10 @@
 
     invoke-static {v0, v1}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 14
     const/4 v0, 0x4
 
     if-ne p1, v0, :cond_1
 
-    .line 15
     iget-object v0, p0, Lcxl;->d:Lcxk;
 
     invoke-static {v0}, Lcxk;->a(Lcxk;)Lbdl;
@@ -148,12 +137,10 @@
 
     invoke-interface {v0}, Lbdl;->b()V
 
-    .line 18
     :cond_0
     :goto_0
     return-void
 
-    .line 16
     :cond_1
     iget-object v0, p0, Lcxl;->b:Liwp;
 
@@ -163,7 +150,6 @@
 
     if-nez v0, :cond_0
 
-    .line 17
     iget-object v0, p0, Lcxl;->b:Liwp;
 
     new-instance v1, Lhks;
@@ -218,33 +204,26 @@
 .method public final a(Lhol;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcxl;->a:Lcom/google/android/apps/camera/legacy/app/stats/CameraDeviceInstrumentationSession;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/legacy/app/stats/CameraDeviceInstrumentationSession;->c()V
 
-    .line 3
     new-instance v0, Ledh;
 
     iget-object v1, p0, Lcxl;->a:Lcom/google/android/apps/camera/legacy/app/stats/CameraDeviceInstrumentationSession;
 
     invoke-direct {v0, p1, v1}, Ledh;-><init>(Lhol;Lcom/google/android/apps/camera/legacy/app/stats/CameraDeviceInstrumentationSession;)V
 
-    .line 4
     iget-object v1, p0, Lcxl;->b:Liwp;
 
     invoke-virtual {v1, v0}, Liuj;->a(Ljava/lang/Object;)Z
 
-    .line 5
     return-void
 .end method
 
 .method public final b()V
     .locals 5
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lcxl;->b:Liwp;
 
     invoke-virtual {v0}, Liuj;->isDone()Z
@@ -253,7 +232,6 @@
 
     if-nez v0, :cond_0
 
-    .line 10
     iget-object v0, p0, Lcxl;->b:Liwp;
 
     new-instance v1, Lhks;
@@ -302,7 +280,6 @@
 
     invoke-virtual {v0, v1}, Liuj;->a(Ljava/lang/Throwable;)Z
 
-    .line 11
     :cond_0
     return-void
 .end method

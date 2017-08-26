@@ -32,49 +32,34 @@
 .method private constructor <init>(Liyb;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lebb;->a:Liyb;
 
-    .line 3
     iput-object p2, p0, Lebb;->b:Lilp;
 
-    .line 4
     iput-object p3, p0, Lebb;->c:Lilp;
 
-    .line 5
     iput-object p4, p0, Lebb;->d:Lilp;
 
-    .line 6
     iput-object p5, p0, Lebb;->e:Lilp;
 
-    .line 7
     iput-object p6, p0, Lebb;->f:Lilp;
 
-    .line 8
     iput-object p7, p0, Lebb;->g:Lilp;
 
-    .line 9
     iput-object p8, p0, Lebb;->h:Lilp;
 
-    .line 10
     iput-object p9, p0, Lebb;->i:Lilp;
 
-    .line 11
     iput-object p10, p0, Lebb;->j:Lilp;
 
-    .line 12
     return-void
 .end method
 
 .method public static a(Liyb;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;)Lilp;
     .locals 11
 
-    .prologue
-    .line 13
     new-instance v0, Lebb;
 
     move-object v1, p0
@@ -107,16 +92,12 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 11
 
-    .prologue
-    .line 14
-    .line 15
     iget-object v10, p0, Lebb;->a:Liyb;
 
     new-instance v0, Leba;
 
     iget-object v1, p0, Lebb;->b:Lilp;
 
-    .line 16
     invoke-interface {v1}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -125,7 +106,6 @@
 
     iget-object v2, p0, Lebb;->c:Lilp;
 
-    .line 17
     invoke-interface {v2}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -134,7 +114,6 @@
 
     iget-object v3, p0, Lebb;->d:Lilp;
 
-    .line 18
     invoke-interface {v3}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -143,7 +122,6 @@
 
     iget-object v4, p0, Lebb;->e:Lilp;
 
-    .line 19
     invoke-interface {v4}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v4
@@ -152,7 +130,6 @@
 
     iget-object v5, p0, Lebb;->f:Lilp;
 
-    .line 20
     invoke-interface {v5}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v5
@@ -161,7 +138,6 @@
 
     iget-object v6, p0, Lebb;->g:Lilp;
 
-    .line 21
     invoke-interface {v6}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -170,7 +146,6 @@
 
     iget-object v7, p0, Lebb;->h:Lilp;
 
-    .line 22
     invoke-interface {v7}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v7
@@ -179,7 +154,6 @@
 
     iget-object v8, p0, Lebb;->i:Lilp;
 
-    .line 23
     invoke-interface {v8}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v8
@@ -188,7 +162,6 @@
 
     iget-object v9, p0, Lebb;->j:Lilp;
 
-    .line 24
     invoke-interface {v9}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v9
@@ -197,13 +170,11 @@
 
     invoke-direct/range {v0 .. v9}, Leba;-><init>(Lfsq;Ldzq;Lavm;Lavm;Lavm;Lavm;Lavm;Lddp;Ldee;)V
 
-    .line 25
     invoke-static {v10, v0}, Lkk;->a(Liyb;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Leba;
 
-    .line 26
     return-object v0
 .end method

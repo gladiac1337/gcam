@@ -14,25 +14,18 @@
 .method private constructor <init>([Lieo;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Liej;->a:[Lieo;
 
-    .line 4
     return-void
 .end method
 
 .method public static varargs a([Lieo;)Liej;
     .locals 1
 
-    .prologue
-    .line 5
     new-instance v0, Liej;
 
     invoke-direct {v0, p0}, Liej;-><init>([Lieo;)V
@@ -45,9 +38,6 @@
 .method public final a(Ljava/util/List;)Ljava/util/List;
     .locals 4
 
-    .prologue
-    .line 6
-    .line 7
     iget-object v1, p0, Liej;->a:[Lieo;
 
     array-length v2, v1
@@ -59,17 +49,14 @@
 
     aget-object v3, v1, v0
 
-    .line 8
     invoke-interface {v3, p1}, Lieo;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object p1
 
-    .line 9
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 10
     :cond_0
     return-object p1
 .end method
@@ -77,8 +64,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 11
     const-string v0, "ChainedSegmenter[segmenters="
 
     iget-object v1, p0, Liej;->a:[Lieo;

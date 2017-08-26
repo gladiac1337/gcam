@@ -15,16 +15,12 @@
 .method public constructor <init>(Ljava/util/List;J)V
     .locals 10
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -36,17 +32,14 @@
     :goto_0
     const-string v2, "Summary timestamps should not be empty"
 
-    .line 5
     invoke-static {v0, v2}, Lid;->a(ZLjava/lang/Object;)V
 
-    .line 6
     new-instance v0, Landroid/util/LongSparseArray;
 
     invoke-direct {v0}, Landroid/util/LongSparseArray;-><init>()V
 
     iput-object v0, p0, Lbzu;->a:Landroid/util/LongSparseArray;
 
-    .line 7
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -57,7 +50,6 @@
 
     move-result-wide v2
 
-    .line 8
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -79,17 +71,14 @@
 
     move-result-wide v4
 
-    .line 9
     sub-long v6, v4, v2
 
     const-wide/32 v8, 0xf4240
 
     div-long/2addr v6, v8
 
-    .line 10
     add-long/2addr v6, p2
 
-    .line 11
     iget-object v0, p0, Lbzu;->a:Landroid/util/LongSparseArray;
 
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -103,14 +92,11 @@
     :cond_0
     move v0, v1
 
-    .line 4
     goto :goto_0
 
-    .line 13
     :cond_1
     iget-object v0, p0, Lbzu;->a:Landroid/util/LongSparseArray;
 
-    .line 14
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -133,9 +119,7 @@
 
     iput-wide v0, p0, Lbzu;->b:J
 
-    .line 15
     iput-wide p2, p0, Lbzu;->c:J
 
-    .line 16
     return-void
 .end method

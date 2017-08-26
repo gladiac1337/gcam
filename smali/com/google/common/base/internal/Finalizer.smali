@@ -24,8 +24,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 48
     const-class v0, Lcom/google/common/base/internal/Finalizer;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -38,7 +36,6 @@
 
     sput-object v0, Lcom/google/common/base/internal/Finalizer;->a:Ljava/util/logging/Logger;
 
-    .line 49
     invoke-static {}, Lcom/google/common/base/internal/Finalizer;->b()Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -51,32 +48,24 @@
 .method private constructor <init>(Ljava/lang/Class;Ljava/lang/ref/ReferenceQueue;Ljava/lang/ref/PhantomReference;)V
     .locals 1
 
-    .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     iput-object p2, p0, Lcom/google/common/base/internal/Finalizer;->d:Ljava/lang/ref/ReferenceQueue;
 
-    .line 16
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/google/common/base/internal/Finalizer;->b:Ljava/lang/ref/WeakReference;
 
-    .line 17
     iput-object p3, p0, Lcom/google/common/base/internal/Finalizer;->c:Ljava/lang/ref/PhantomReference;
 
-    .line 18
     return-void
 .end method
 
 .method private final a()Ljava/lang/reflect/Method;
     .locals 3
 
-    .prologue
-    .line 36
     iget-object v0, p0, Lcom/google/common/base/internal/Finalizer;->b:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -85,13 +74,10 @@
 
     check-cast v0, Ljava/lang/Class;
 
-    .line 37
     if-nez v0, :cond_0
 
-    .line 38
     const/4 v0, 0x0
 
-    .line 39
     :goto_0
     return-object v0
 
@@ -111,11 +97,9 @@
 
     goto :goto_0
 
-    .line 40
     :catch_0
     move-exception v0
 
-    .line 41
     new-instance v1, Ljava/lang/AssertionError;
 
     invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -126,38 +110,30 @@
 .method private final a(Ljava/lang/ref/Reference;)Z
     .locals 8
 
-    .prologue
     const/4 v6, 0x0
 
-    .line 24
     invoke-direct {p0}, Lcom/google/common/base/internal/Finalizer;->a()Ljava/lang/reflect/Method;
 
     move-result-object v7
 
-    .line 25
     if-nez v7, :cond_0
 
     move v0, v6
 
-    .line 35
     :goto_0
     return v0
 
-    .line 27
     :cond_0
     invoke-virtual {p1}, Ljava/lang/ref/Reference;->clear()V
 
-    .line 28
     iget-object v0, p0, Lcom/google/common/base/internal/Finalizer;->c:Ljava/lang/ref/PhantomReference;
 
     if-ne p1, v0, :cond_1
 
     move v0, v6
 
-    .line 29
     goto :goto_0
 
-    .line 30
     :cond_1
     const/4 v0, 0x0
 
@@ -168,7 +144,6 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 34
     :goto_1
     iget-object v0, p0, Lcom/google/common/base/internal/Finalizer;->d:Ljava/lang/ref/ReferenceQueue;
 
@@ -178,16 +153,13 @@
 
     if-nez p1, :cond_0
 
-    .line 35
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 32
     :catch_0
     move-exception v5
 
-    .line 33
     sget-object v0, Lcom/google/common/base/internal/Finalizer;->a:Ljava/util/logging/Logger;
 
     sget-object v1, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
@@ -206,8 +178,6 @@
 .method private static b()Ljava/lang/reflect/Field;
     .locals 5
 
-    .prologue
-    .line 42
     :try_start_0
     const-class v0, Ljava/lang/Thread;
 
@@ -217,18 +187,15 @@
 
     move-result-object v0
 
-    .line 43
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 47
     :goto_0
     return-object v0
 
-    .line 46
     :catch_0
     move-exception v0
 
@@ -244,7 +211,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Ljava/util/logging/Logger;->logp(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 47
     const/4 v0, 0x0
 
     goto :goto_0
@@ -253,8 +219,6 @@
 .method public static startFinalizer(Ljava/lang/Class;Ljava/lang/ref/ReferenceQueue;Ljava/lang/ref/PhantomReference;)V
     .locals 7
 
-    .prologue
-    .line 1
     invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -267,7 +231,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Expected com.google.common.base.FinalizableReference."
@@ -276,18 +239,15 @@
 
     throw v0
 
-    .line 3
     :cond_0
     new-instance v0, Lcom/google/common/base/internal/Finalizer;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/google/common/base/internal/Finalizer;-><init>(Ljava/lang/Class;Ljava/lang/ref/ReferenceQueue;Ljava/lang/ref/PhantomReference;)V
 
-    .line 4
     new-instance v6, Ljava/lang/Thread;
 
     invoke-direct {v6, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 5
     const-class v0, Lcom/google/common/base/internal/Finalizer;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -296,18 +256,15 @@
 
     invoke-virtual {v6, v0}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
-    .line 6
     const/4 v0, 0x1
 
     invoke-virtual {v6, v0}, Ljava/lang/Thread;->setDaemon(Z)V
 
-    .line 7
     :try_start_0
     sget-object v0, Lcom/google/common/base/internal/Finalizer;->e:Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_1
 
-    .line 8
     sget-object v0, Lcom/google/common/base/internal/Finalizer;->e:Ljava/lang/reflect/Field;
 
     const/4 v1, 0x0
@@ -316,19 +273,15 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 12
     :cond_1
     :goto_0
     invoke-virtual {v6}, Ljava/lang/Thread;->start()V
 
-    .line 13
     return-void
 
-    .line 10
     :catch_0
     move-exception v5
 
-    .line 11
     sget-object v0, Lcom/google/common/base/internal/Finalizer;->a:Ljava/util/logging/Logger;
 
     sget-object v1, Ljava/util/logging/Level;->INFO:Ljava/util/logging/Level;
@@ -349,8 +302,6 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 19
     :cond_0
     :goto_0
     :try_start_0
@@ -368,10 +319,8 @@
 
     if-nez v0, :cond_0
 
-    .line 20
     return-void
 
-    .line 23
     :catch_0
     move-exception v0
 

@@ -14,18 +14,14 @@
 .method constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Laje;->a:Landroid/content/Context;
 
-    .line 3
     return-void
 .end method
 
@@ -34,18 +30,14 @@
 .method public final synthetic a(Ljava/lang/Object;IILabq;)Lahx;
     .locals 5
 
-    .prologue
-    .line 8
     check-cast p1, Landroid/net/Uri;
 
-    .line 9
     invoke-static {p2, p3}, Lkk;->b(II)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 10
     sget-object v0, Lakr;->a:Labn;
 
     invoke-virtual {p4, v0}, Labq;->a(Labn;)Ljava/lang/Object;
@@ -54,7 +46,6 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    .line 11
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
@@ -69,11 +60,9 @@
 
     const/4 v0, 0x1
 
-    .line 12
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 13
     new-instance v0, Lahx;
 
     new-instance v1, Laoi;
@@ -82,7 +71,6 @@
 
     iget-object v2, p0, Laje;->a:Landroid/content/Context;
 
-    .line 14
     new-instance v3, Lacp;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -95,35 +83,27 @@
 
     move-result-object v2
 
-    .line 15
     invoke-direct {v0, v1, v2}, Lahx;-><init>(Labm;Labv;)V
 
-    .line 17
     :goto_1
     return-object v0
 
-    .line 11
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 16
     :cond_1
     const/4 v0, 0x0
 
-    .line 17
     goto :goto_1
 .end method
 
 .method public final synthetic a(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 4
     check-cast p1, Landroid/net/Uri;
 
-    .line 6
     invoke-static {p1}, Lkk;->a(Landroid/net/Uri;)Z
 
     move-result v0
@@ -138,14 +118,11 @@
 
     const/4 v0, 0x1
 
-    .line 7
     :goto_0
     return v0
 
-    .line 6
     :cond_0
     const/4 v0, 0x0
 
-    .line 7
     goto :goto_0
 .end method

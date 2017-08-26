@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method public static a(Z)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 4
     if-eqz p0, :cond_0
 
     const-string v0, "1"
@@ -35,8 +31,6 @@
 .method public static b(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 2
     const-string v0, "_preferences_camera_"
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -71,8 +65,6 @@
 .method public static c(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 3
     const-string v0, "_preferences_camera_"
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

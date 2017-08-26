@@ -13,23 +13,16 @@
 .method public constructor <init>(Lieo;Lhsz;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     invoke-static {p2}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     iput-object p1, p0, Lhta;->a:Lieo;
 
-    .line 5
     iput-object p2, p0, Lhta;->b:Lhsz;
 
-    .line 6
     return-void
 .end method
 
@@ -38,8 +31,6 @@
 .method public toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 7
     const-string v0, "ArtifactSpec[segmenter="
 
     iget-object v1, p0, Lhta;->a:Lieo;

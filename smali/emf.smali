@@ -18,8 +18,6 @@
 .method constructor <init>(Lhic;Lfng;Lemz;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lemf;->a:Lhic;
 
     iput-object p2, p0, Lemf;->b:Lfng;
@@ -36,8 +34,6 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lemf;->a:Lhic;
 
     iget-object v1, p0, Lemf;->b:Lfng;
@@ -46,6 +42,5 @@
 
     invoke-static {v0, v1, v2}, Lkk;->a(Lhic;Lfng;Lfny;)V
 
-    .line 3
     return-void
 .end method

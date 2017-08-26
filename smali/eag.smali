@@ -20,8 +20,6 @@
 .method constructor <init>(Ldex;Lfug;Ldjz;Lhiz;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leag;->a:Ldex;
 
     iput-object p2, p0, Leag;->b:Lfug;
@@ -40,33 +38,26 @@
 .method public final close()V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Leag;->a:Ldex;
 
     invoke-interface {v0}, Ldex;->close()V
 
-    .line 3
     iget-object v0, p0, Leag;->b:Lfug;
 
     invoke-interface {v0}, Lfug;->close()V
 
-    .line 4
     iget-object v0, p0, Leag;->c:Ldjz;
 
     invoke-interface {v0}, Ldjz;->close()V
 
-    .line 5
     iget-object v0, p0, Leag;->d:Lhiz;
 
     if-eqz v0, :cond_0
 
-    .line 6
     iget-object v0, p0, Leag;->d:Lhiz;
 
     invoke-interface {v0}, Lhiz;->close()V
 
-    .line 7
     :cond_0
     return-void
 .end method

@@ -14,11 +14,8 @@
 .method constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x1
@@ -35,8 +32,6 @@
 .method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 3
 
-    .prologue
-    .line 3
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Ljava/lang/StringBuilder;

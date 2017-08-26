@@ -14,14 +14,10 @@
 .method public constructor <init>(Landroid/hardware/camera2/CaptureResult;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lhlp;->a:Landroid/hardware/camera2/CaptureResult;
 
-    .line 3
     return-void
 .end method
 
@@ -30,8 +26,6 @@
 .method public final a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lhlp;->a:Landroid/hardware/camera2/CaptureResult;
 
     invoke-virtual {v0, p1}, Landroid/hardware/camera2/CaptureResult;->get(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -44,8 +38,6 @@
 .method public final a()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lhlp;->a:Landroid/hardware/camera2/CaptureResult;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/CaptureResult;->getKeys()Ljava/util/List;
@@ -58,8 +50,6 @@
 .method public final c()Lhoo;
     .locals 2
 
-    .prologue
-    .line 6
     new-instance v0, Lhlo;
 
     iget-object v1, p0, Lhlp;->a:Landroid/hardware/camera2/CaptureResult;
@@ -76,8 +66,6 @@
 .method public final d()J
     .locals 2
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lhlp;->a:Landroid/hardware/camera2/CaptureResult;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/CaptureResult;->getFrameNumber()J

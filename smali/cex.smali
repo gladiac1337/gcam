@@ -16,8 +16,6 @@
 .method public constructor <init>(Lhph;Lhir;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcex;->a:Lhph;
 
     iput-object p2, p0, Lcex;->b:Lhir;
@@ -32,8 +30,6 @@
 .method public final a()Lfwx;
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcex;->a:Lhph;
 
     iget-object v1, p0, Lcex;->b:Lhir;

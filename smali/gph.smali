@@ -43,28 +43,22 @@
 .method public constructor <init>(Lgpk;Lgpa;Lgpg;Lgpd;Lgpf;Lgpe;Lgoy;Lgoz;)V
     .locals 4
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lgpi;
 
     invoke-direct {v0, p0}, Lgpi;-><init>(Lgph;)V
 
     iput-object v0, p0, Lgph;->p:Landroid/view/GestureDetector$OnGestureListener;
 
-    .line 3
     new-instance v0, Lgpj;
 
     invoke-direct {v0, p0}, Lgpj;-><init>(Lgph;)V
 
     iput-object v0, p0, Lgph;->q:Landroid/view/ScaleGestureDetector$OnScaleGestureListener;
 
-    .line 4
     iget-object v0, p0, Lgph;->p:Landroid/view/GestureDetector$OnGestureListener;
 
-    .line 5
     new-instance v1, Landroid/view/GestureDetector;
 
     iget-object v2, p1, Lgpk;->a:Landroid/content/Context;
@@ -73,13 +67,10 @@
 
     invoke-direct {v1, v2, v0, v3}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;Landroid/os/Handler;)V
 
-    .line 6
     iput-object v1, p0, Lgph;->a:Landroid/view/GestureDetector;
 
-    .line 7
     iget-object v0, p0, Lgph;->q:Landroid/view/ScaleGestureDetector$OnScaleGestureListener;
 
-    .line 9
     new-instance v1, Landroid/view/ScaleGestureDetector;
 
     iget-object v2, p1, Lgpk;->a:Landroid/content/Context;
@@ -88,17 +79,14 @@
 
     invoke-direct {v1, v2, v0, v3}, Landroid/view/ScaleGestureDetector;-><init>(Landroid/content/Context;Landroid/view/ScaleGestureDetector$OnScaleGestureListener;Landroid/os/Handler;)V
 
-    .line 10
     iput-object v1, p0, Lgph;->b:Landroid/view/ScaleGestureDetector;
 
-    .line 11
     iget-object v0, p0, Lgph;->b:Landroid/view/ScaleGestureDetector;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/ScaleGestureDetector;->setQuickScaleEnabled(Z)V
 
-    .line 12
     invoke-static {p2}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -107,7 +95,6 @@
 
     iput-object v0, p0, Lgph;->c:Lgpa;
 
-    .line 13
     invoke-static {p3}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -116,7 +103,6 @@
 
     iput-object v0, p0, Lgph;->d:Lgpg;
 
-    .line 14
     invoke-static {p4}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -125,7 +111,6 @@
 
     iput-object v0, p0, Lgph;->f:Lgpd;
 
-    .line 15
     invoke-static {p5}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -134,7 +119,6 @@
 
     iput-object v0, p0, Lgph;->g:Lgpf;
 
-    .line 16
     invoke-static {p6}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -143,7 +127,6 @@
 
     iput-object v0, p0, Lgph;->h:Lgpe;
 
-    .line 17
     invoke-static {p7}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -152,15 +135,12 @@
 
     iput-object v0, p0, Lgph;->i:Lgoy;
 
-    .line 18
     iput-object p8, p0, Lgph;->e:Lgoz;
 
-    .line 19
     sget v0, Lbl;->bz:I
 
     iput v0, p0, Lgph;->j:I
 
-    .line 20
     return-void
 .end method
 
@@ -169,22 +149,17 @@
 .method public final a()Lgpb;
     .locals 2
 
-    .prologue
-    .line 21
     iget v0, p0, Lgph;->j:I
 
     sget v1, Lbl;->bA:I
 
     if-ne v0, v1, :cond_0
 
-    .line 22
     iget-object v0, p0, Lgph;->c:Lgpa;
 
-    .line 25
     :goto_0
     return-object v0
 
-    .line 23
     :cond_0
     iget v0, p0, Lgph;->j:I
 
@@ -192,12 +167,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 24
     iget-object v0, p0, Lgph;->d:Lgpg;
 
     goto :goto_0
 
-    .line 25
     :cond_1
     sget-object v0, Lgpb;->h:Lgpb;
 

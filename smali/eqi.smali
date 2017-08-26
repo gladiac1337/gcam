@@ -35,8 +35,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 34
     const-string v0, "DoubleTwistCntrlr"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -45,7 +43,6 @@
 
     sput-object v0, Leqi;->b:Ljava/lang/String;
 
-    .line 35
     const/4 v0, 0x4
 
     new-array v0, v0, [J
@@ -70,29 +67,22 @@
 .method private constructor <init>(Landroid/content/Context;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lgfb;Leqk;)V
     .locals 2
 
-    .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Leqi;->i:Z
 
-    .line 6
     iput-object p3, p0, Leqi;->c:Lgfb;
 
-    .line 7
     iput-object p4, p0, Leqi;->g:Leqk;
 
-    .line 8
     invoke-virtual {p4}, Leqk;->a()Z
 
     move-result v0
 
     iput-boolean v0, p0, Leqi;->f:Z
 
-    .line 9
     const-string v0, "vibrator"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -101,22 +91,18 @@
 
     check-cast v0, Landroid/os/Vibrator;
 
-    .line 10
     new-instance v1, Leqj;
 
     invoke-direct {v1, p0, v0, p2}, Leqj;-><init>(Leqi;Landroid/os/Vibrator;Lcom/google/android/apps/camera/bottombar/BottomBarController;)V
 
     iput-object v1, p0, Leqi;->d:Landroid/hardware/SensorEventListener;
 
-    .line 11
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lhjz;)V
     .locals 2
 
-    .prologue
-    .line 1
     new-instance v0, Lgfb;
 
     invoke-direct {v0, p1}, Lgfb;-><init>(Landroid/content/Context;)V
@@ -127,18 +113,14 @@
 
     invoke-direct {p0, p1, p2, v0, v1}, Leqi;-><init>(Landroid/content/Context;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lgfb;Leqk;)V
 
-    .line 2
     iput-object p3, p0, Leqi;->h:Lhjz;
 
-    .line 3
     return-void
 .end method
 
 .method static synthetic a(Leqi;)Lhjz;
     .locals 1
 
-    .prologue
-    .line 33
     iget-object v0, p0, Leqi;->h:Lhjz;
 
     return-object v0
@@ -149,8 +131,6 @@
 .method public final G()V
     .locals 2
 
-    .prologue
-    .line 21
     iget-object v0, p0, Leqi;->g:Leqk;
 
     invoke-virtual {v0}, Leqk;->a()Z
@@ -159,7 +139,6 @@
 
     iput-boolean v0, p0, Leqi;->f:Z
 
-    .line 22
     iget-boolean v0, p0, Leqi;->f:Z
 
     if-eqz v0, :cond_0
@@ -168,45 +147,37 @@
 
     if-eqz v0, :cond_0
 
-    .line 23
     iget-object v0, p0, Leqi;->c:Lgfb;
 
     iget-object v1, p0, Leqi;->d:Landroid/hardware/SensorEventListener;
 
     invoke-virtual {v0, v1}, Lgfb;->a(Landroid/hardware/SensorEventListener;)Z
 
-    .line 24
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Leqi;->i:Z
 
-    .line 25
     return-void
 .end method
 
 .method public final H()V
     .locals 2
 
-    .prologue
-    .line 26
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Leqi;->i:Z
 
-    .line 27
     iget-boolean v0, p0, Leqi;->e:Z
 
     if-eqz v0, :cond_0
 
-    .line 28
     iget-object v0, p0, Leqi;->c:Lgfb;
 
     iget-object v1, p0, Leqi;->d:Landroid/hardware/SensorEventListener;
 
     invoke-virtual {v0, v1}, Lgfb;->b(Landroid/hardware/SensorEventListener;)V
 
-    .line 29
     :cond_0
     return-void
 .end method
@@ -214,50 +185,40 @@
 .method public final I()V
     .locals 2
 
-    .prologue
-    .line 30
     iget-object v0, p0, Leqi;->c:Lgfb;
 
     iget-object v1, p0, Leqi;->d:Landroid/hardware/SensorEventListener;
 
     invoke-virtual {v0, v1}, Lgfb;->b(Landroid/hardware/SensorEventListener;)V
 
-    .line 31
     const/4 v0, 0x0
 
     iput-object v0, p0, Leqi;->d:Landroid/hardware/SensorEventListener;
 
-    .line 32
     return-void
 .end method
 
 .method public final a(Z)Z
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 12
     iget-boolean v1, p0, Leqi;->i:Z
 
     if-eqz v1, :cond_0
 
-    .line 20
     :goto_0
     return v0
 
-    .line 14
     :cond_0
     iput-boolean p1, p0, Leqi;->e:Z
 
-    .line 15
     iget-boolean v1, p0, Leqi;->f:Z
 
     if-eqz v1, :cond_1
 
     if-eqz p1, :cond_1
 
-    .line 16
     sget-object v0, Leqi;->b:Ljava/lang/String;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -294,7 +255,6 @@
 
     invoke-static {v0, v1}, Lbgj;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 17
     iget-object v0, p0, Leqi;->c:Lgfb;
 
     iget-object v1, p0, Leqi;->d:Landroid/hardware/SensorEventListener;
@@ -305,7 +265,6 @@
 
     goto :goto_0
 
-    .line 18
     :cond_1
     sget-object v1, Leqi;->b:Ljava/lang/String;
 
@@ -343,7 +302,6 @@
 
     invoke-static {v1, v2}, Lbgj;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 19
     iget-object v1, p0, Leqi;->c:Lgfb;
 
     iget-object v2, p0, Leqi;->d:Landroid/hardware/SensorEventListener;

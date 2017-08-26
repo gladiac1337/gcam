@@ -18,8 +18,6 @@
 .method constructor <init>(Lima;Ljava/util/Iterator;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Limb;->c:Lima;
 
     iput-object p2, p0, Limb;->b:Ljava/util/Iterator;
@@ -34,8 +32,6 @@
 .method public final hasNext()Z
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Limb;->b:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -48,8 +44,6 @@
 .method public final next()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Limb;->b:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -60,7 +54,6 @@
 
     iput-object v0, p0, Limb;->a:Ljava/util/Map$Entry;
 
-    .line 4
     iget-object v0, p0, Limb;->a:Ljava/util/Map$Entry;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -73,21 +66,17 @@
 .method public final remove()V
     .locals 3
 
-    .prologue
-    .line 5
     iget-object v0, p0, Limb;->a:Ljava/util/Map$Entry;
 
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
 
-    .line 6
     :goto_0
     const-string v1, "no calls to next() since the last call to remove()"
 
     invoke-static {v0, v1}, Lid;->b(ZLjava/lang/Object;)V
 
-    .line 7
     iget-object v0, p0, Limb;->a:Ljava/util/Map$Entry;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -96,12 +85,10 @@
 
     check-cast v0, Ljava/util/Collection;
 
-    .line 8
     iget-object v1, p0, Limb;->b:Ljava/util/Iterator;
 
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
 
-    .line 9
     iget-object v1, p0, Limb;->c:Lima;
 
     iget-object v1, v1, Lima;->a:Lilw;
@@ -112,13 +99,10 @@
 
     invoke-static {v1, v2}, Lilw;->b(Lilw;I)I
 
-    .line 10
     invoke-interface {v0}, Ljava/util/Collection;->clear()V
 
-    .line 11
     return-void
 
-    .line 5
     :cond_0
     const/4 v0, 0x0
 

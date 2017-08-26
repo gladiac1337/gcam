@@ -15,21 +15,16 @@
 .method public constructor <init>(Lgiq;Ljava/util/Set;)V
     .locals 4
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgiy;->b:Lgiq;
 
-    .line 3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lgiy;->a:Ljava/util/HashMap;
 
-    .line 4
     invoke-interface {p2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -47,7 +42,6 @@
 
     check-cast v0, Ljava/lang/Class;
 
-    .line 5
     iget-object v2, p0, Lgiy;->a:Ljava/util/HashMap;
 
     const/4 v3, 0x0
@@ -60,7 +54,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     return-void
 .end method
@@ -70,15 +63,12 @@
 .method public final a(Ljava/lang/Class;Z)V
     .locals 4
 
-    .prologue
-    .line 15
     iget-object v0, p0, Lgiy;->a:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 16
     invoke-virtual {p1}, Ljava/lang/Class;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -117,10 +107,8 @@
 
     move-result-object v1
 
-    .line 17
     invoke-static {v0, v1}, Lid;->a(ZLjava/lang/Object;)V
 
-    .line 18
     iget-object v0, p0, Lgiy;->a:Ljava/util/HashMap;
 
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -129,40 +117,32 @@
 
     invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 19
     return-void
 .end method
 
 .method public final a(Z)V
     .locals 1
 
-    .prologue
-    .line 8
     iget-boolean v0, p0, Lgiy;->c:Z
 
     if-ne p1, v0, :cond_0
 
-    .line 14
     :goto_0
     return-void
 
-    .line 10
     :cond_0
     iput-boolean p1, p0, Lgiy;->c:Z
 
-    .line 11
     iget-boolean v0, p0, Lgiy;->c:Z
 
     if-eqz v0, :cond_1
 
-    .line 12
     iget-object v0, p0, Lgiy;->b:Lgiq;
 
     invoke-interface {v0}, Lgiq;->a()V
 
     goto :goto_0
 
-    .line 13
     :cond_1
     iget-object v0, p0, Lgiy;->b:Lgiq;
 

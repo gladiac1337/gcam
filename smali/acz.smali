@@ -15,8 +15,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,8 +25,6 @@
 .method final a()Z
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lacz;->c:Laeg;
 
     if-eqz v0, :cond_0

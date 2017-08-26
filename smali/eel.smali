@@ -16,8 +16,6 @@
 .method constructor <init>(Leek;Leew;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leel;->b:Leek;
 
     iput-object p2, p0, Leel;->a:Leew;
@@ -32,22 +30,16 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Leel;->b:Leek;
 
-    .line 3
     iget-object v0, v0, Leek;->f:Leex;
 
-    .line 4
     iget-object v1, p0, Leel;->a:Leew;
 
-    .line 5
     iget-object v2, v0, Leex;->a:Ljava/util/List;
 
     monitor-enter v2
 
-    .line 6
     :try_start_0
     iget-object v3, v0, Leex;->a:Ljava/util/List;
 
@@ -57,17 +49,14 @@
 
     if-eqz v3, :cond_0
 
-    .line 7
     iget-object v3, v0, Leex;->a:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 8
     iget-object v3, v0, Leex;->b:Ljava/util/HashMap;
 
     invoke-virtual {v3, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     iget-object v0, v0, Leex;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -94,17 +83,14 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 12
     :goto_0
     monitor-exit v2
 
     return-void
 
-    .line 10
     :cond_0
     iget-object v0, v0, Leex;->a:Ljava/util/List;
 
-    .line 11
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -131,7 +117,6 @@
 
     goto :goto_0
 
-    .line 12
     :catchall_0
     move-exception v0
 

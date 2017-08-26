@@ -27,7 +27,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -38,7 +37,6 @@
 
     const/4 v3, 0x0
 
-    .line 3
     new-instance v0, Lze;
 
     const-string v1, "AUTO"
@@ -47,7 +45,6 @@
 
     sput-object v0, Lze;->a:Lze;
 
-    .line 4
     new-instance v0, Lze;
 
     const-string v1, "CLOUDY_DAYLIGHT"
@@ -56,7 +53,6 @@
 
     sput-object v0, Lze;->b:Lze;
 
-    .line 5
     new-instance v0, Lze;
 
     const-string v1, "DAYLIGHT"
@@ -65,7 +61,6 @@
 
     sput-object v0, Lze;->c:Lze;
 
-    .line 6
     new-instance v0, Lze;
 
     const-string v1, "FLUORESCENT"
@@ -74,7 +69,6 @@
 
     sput-object v0, Lze;->d:Lze;
 
-    .line 7
     new-instance v0, Lze;
 
     const-string v1, "INCANDESCENT"
@@ -83,7 +77,6 @@
 
     sput-object v0, Lze;->e:Lze;
 
-    .line 8
     new-instance v0, Lze;
 
     const-string v1, "SHADE"
@@ -94,7 +87,6 @@
 
     sput-object v0, Lze;->f:Lze;
 
-    .line 9
     new-instance v0, Lze;
 
     const-string v1, "TWILIGHT"
@@ -105,7 +97,6 @@
 
     sput-object v0, Lze;->g:Lze;
 
-    .line 10
     new-instance v0, Lze;
 
     const-string v1, "WARM_FLUORESCENT"
@@ -116,7 +107,6 @@
 
     sput-object v0, Lze;->h:Lze;
 
-    .line 11
     const/16 v0, 0x8
 
     new-array v0, v0, [Lze;
@@ -167,8 +157,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -177,8 +165,6 @@
 .method public static values()[Lze;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lze;->i:[Lze;
 
     invoke-virtual {v0}, [Lze;->clone()Ljava/lang/Object;

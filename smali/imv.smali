@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Limu;-><init>()V
 
     return-void
@@ -25,23 +23,18 @@
 .method public add(ILjava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 2
     invoke-virtual {p0}, Limv;->a()Ljava/util/List;
 
     move-result-object v0
 
     invoke-interface {v0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 3
     return-void
 .end method
 
 .method public addAll(ILjava/util/Collection;)Z
     .locals 1
 
-    .prologue
-    .line 4
     invoke-virtual {p0}, Limv;->a()Ljava/util/List;
 
     move-result-object v0
@@ -56,8 +49,6 @@
 .method public synthetic b()Ljava/util/Collection;
     .locals 1
 
-    .prologue
-    .line 15
     invoke-virtual {p0}, Limv;->a()Ljava/util/List;
 
     move-result-object v0
@@ -68,8 +59,6 @@
 .method public synthetic c()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 16
     invoke-virtual {p0}, Limv;->a()Ljava/util/List;
 
     move-result-object v0
@@ -80,8 +69,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 13
     if-eq p1, p0, :cond_0
 
     invoke-virtual {p0}, Limv;->a()Ljava/util/List;
@@ -109,8 +96,6 @@
 .method public get(I)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 5
     invoke-virtual {p0}, Limv;->a()Ljava/util/List;
 
     move-result-object v0
@@ -125,8 +110,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 14
     invoke-virtual {p0}, Limv;->a()Ljava/util/List;
 
     move-result-object v0
@@ -141,8 +124,6 @@
 .method public indexOf(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Limv;->a()Ljava/util/List;
 
     move-result-object v0
@@ -157,8 +138,6 @@
 .method public lastIndexOf(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 7
     invoke-virtual {p0}, Limv;->a()Ljava/util/List;
 
     move-result-object v0
@@ -173,8 +152,6 @@
 .method public listIterator()Ljava/util/ListIterator;
     .locals 1
 
-    .prologue
-    .line 8
     invoke-virtual {p0}, Limv;->a()Ljava/util/List;
 
     move-result-object v0
@@ -189,8 +166,6 @@
 .method public listIterator(I)Ljava/util/ListIterator;
     .locals 1
 
-    .prologue
-    .line 9
     invoke-virtual {p0}, Limv;->a()Ljava/util/List;
 
     move-result-object v0
@@ -205,8 +180,6 @@
 .method public remove(I)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 10
     invoke-virtual {p0}, Limv;->a()Ljava/util/List;
 
     move-result-object v0
@@ -221,8 +194,6 @@
 .method public set(ILjava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 11
     invoke-virtual {p0}, Limv;->a()Ljava/util/List;
 
     move-result-object v0
@@ -237,8 +208,6 @@
 .method public subList(II)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 12
     invoke-virtual {p0}, Limv;->a()Ljava/util/List;
 
     move-result-object v0

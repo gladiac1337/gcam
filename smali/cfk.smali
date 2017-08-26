@@ -37,8 +37,6 @@
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 5
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lcfk;->a:Lcfh;
 
     iget-object v1, p0, Lcfk;->b:Landroid/app/Activity;
@@ -47,14 +45,12 @@
 
     iget-object v3, p0, Lcfk;->d:Ljava/lang/Exception;
 
-    .line 2
     new-instance v4, Lfft;
 
     invoke-direct {v4, v1}, Lfft;-><init>(Landroid/app/Activity;)V
 
     invoke-virtual {v4, v2, v3}, Lfft;->a(ILjava/lang/Exception;)V
 
-    .line 3
     iget-object v0, v0, Lcfh;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -63,10 +59,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
-    .line 5
     :cond_0
     return-void
 .end method

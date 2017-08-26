@@ -29,17 +29,13 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Leni;->a:Lenh;
 
     iget-object v1, p0, Leni;->b:Lcom/google/common/logging/nano/eventprotos$CameraEvent;
 
-    .line 2
     iget-object v0, v0, Lenh;->a:Lfoe;
 
     invoke-interface {v0, v1}, Lfoe;->a(Lcom/google/common/logging/nano/eventprotos$CameraEvent;)V
 
-    .line 3
     return-void
 .end method

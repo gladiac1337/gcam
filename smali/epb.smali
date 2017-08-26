@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 5
     const-string v0, "TinyPlanetRS"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -33,18 +31,14 @@
 .method constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Landroid/support/v8/renderscript/RenderScript;->create(Landroid/content/Context;)Landroid/support/v8/renderscript/RenderScript;
 
     move-result-object v0
 
     iput-object v0, p0, Lepb;->b:Landroid/support/v8/renderscript/RenderScript;
 
-    .line 3
     new-instance v0, Lvm;
 
     iget-object v1, p0, Lepb;->b:Landroid/support/v8/renderscript/RenderScript;
@@ -53,6 +47,5 @@
 
     iput-object v0, p0, Lepb;->c:Lvm;
 
-    .line 4
     return-void
 .end method

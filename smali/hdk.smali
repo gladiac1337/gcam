@@ -42,20 +42,15 @@
 .method public final a()Landroid/location/Location;
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhdk;->a:Lhdp;
 
-    .line 2
     iget-object v0, v0, Lhdp;->a:Lhda;
 
     invoke-static {v0}, Lhda;->a(Lhda;)V
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Lhdk;->a:Lhdp;
 
-    .line 4
     iget-object v0, v0, Lhdp;->a:Lhda;
 
     invoke-virtual {v0}, Lhda;->i()Landroid/os/IInterface;
@@ -64,7 +59,6 @@
 
     check-cast v0, Lhdj;
 
-    .line 5
     iget-object v1, p0, Lhdk;->d:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;

@@ -11,16 +11,12 @@
 .method public constructor <init>(Ligb;)V
     .locals 4
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Lidu;-><init>(Ligb;)V
 
-    .line 2
     const/4 v0, 0x1
 
     invoke-static {v0}, Lid;->a(Z)V
 
-    .line 3
     const-wide v0, 0x41fa13b860000000L    # 7.0E9
 
     const-wide/high16 v2, 0x4000000000000000L    # 2.0
@@ -35,7 +31,6 @@
 
     iput v0, p0, Lidw;->d:F
 
-    .line 4
     return-void
 .end method
 
@@ -44,16 +39,12 @@
 .method public final a(J)Lijj;
     .locals 7
 
-    .prologue
-    .line 5
     const/4 v0, 0x0
 
-    .line 6
     iget-object v2, p0, Lidw;->c:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 7
     :try_start_0
     iget-object v1, p0, Lidw;->a:Ljava/util/TreeSet;
 
@@ -80,7 +71,6 @@
 
     move-result-wide v4
 
-    .line 8
     sub-long/2addr v4, p1
 
     long-to-float v0, v4
@@ -89,7 +79,6 @@
 
     div-float/2addr v0, v4
 
-    .line 9
     float-to-double v4, v1
 
     neg-float v1, v0
@@ -108,23 +97,19 @@
 
     move v1, v0
 
-    .line 10
     goto :goto_0
 
-    .line 11
     :cond_0
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 12
     new-instance v0, Lijg;
 
     invoke-direct {v0, v1}, Lijg;-><init>(F)V
 
     return-object v0
 
-    .line 11
     :catchall_0
     move-exception v0
 

@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 18
     const-string v0, "RegionStatsCalculator"
 
     const/4 v1, 0x2
@@ -33,23 +31,18 @@
 
     sput-boolean v0, Lcom/google/android/libraries/smartburst/filterfw/imageutils/RegionStatsCalculator;->mLogVerbose:Z
 
-    .line 19
     const-string v0, "filterframework_jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 20
     return-void
 .end method
 
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x2
 
     new-array v0, v0, [F
@@ -62,8 +55,6 @@
 .method private static clamp(III)I
     .locals 0
 
-    .prologue
-    .line 17
     if-ge p0, p1, :cond_0
 
     :goto_0
@@ -90,27 +81,22 @@
 .method public calcMeanAndStd(Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer2D;Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;Z)Lcom/google/android/libraries/smartburst/filterfw/imageutils/RegionStatsCalculator$Statistics;
     .locals 11
 
-    .prologue
     const/4 v10, 0x1
 
     const/4 v9, 0x0
 
-    .line 3
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer2D;->getWidth()I
 
     move-result v2
 
-    .line 4
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer2D;->getHeight()I
 
     move-result v0
 
-    .line 5
     invoke-virtual {p2}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->getEnclosingRectF()Landroid/graphics/RectF;
 
     move-result-object v1
 
-    .line 6
     iget v3, v1, Landroid/graphics/RectF;->left:F
 
     int-to-float v4, v2
@@ -125,7 +111,6 @@
 
     move-result v3
 
-    .line 7
     iget v4, v1, Landroid/graphics/RectF;->top:F
 
     int-to-float v5, v0
@@ -140,7 +125,6 @@
 
     move-result v4
 
-    .line 8
     iget v5, v1, Landroid/graphics/RectF;->right:F
 
     int-to-float v6, v2
@@ -155,7 +139,6 @@
 
     move-result v5
 
-    .line 9
     iget v1, v1, Landroid/graphics/RectF;->bottom:F
 
     int-to-float v6, v0
@@ -170,15 +153,12 @@
 
     move-result v6
 
-    .line 10
     invoke-virtual {p1, v10}, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer2D;->lockBytes(I)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
-    .line 11
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 12
     iget-object v7, p0, Lcom/google/android/libraries/smartburst/filterfw/imageutils/RegionStatsCalculator;->mStats:[F
 
     move-object v0, p0
@@ -187,15 +167,12 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/google/android/libraries/smartburst/filterfw/imageutils/RegionStatsCalculator;->regionscore(Ljava/nio/ByteBuffer;IIIII[FZ)V
 
-    .line 13
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer2D;->unlock()V
 
-    .line 14
     sget-boolean v0, Lcom/google/android/libraries/smartburst/filterfw/imageutils/RegionStatsCalculator;->mLogVerbose:Z
 
     if-eqz v0, :cond_0
 
-    .line 15
     const-string v0, "RegionStatsCalculator"
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/imageutils/RegionStatsCalculator;->mStats:[F
@@ -238,7 +215,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 16
     :cond_0
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/imageutils/RegionStatsCalculator$Statistics;
 

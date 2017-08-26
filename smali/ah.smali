@@ -33,7 +33,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/16 v6, 0x9
 
     const/4 v5, 0x2
@@ -44,14 +43,12 @@
 
     const/4 v2, 0x4
 
-    .line 1
     new-array v0, v6, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lah;->a:[I
 
-    .line 2
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -60,7 +57,6 @@
 
     sput-object v0, Lah;->b:[I
 
-    .line 3
     const/16 v0, 0xe
 
     new-array v0, v0, [I
@@ -69,14 +65,12 @@
 
     sput-object v0, Lah;->c:[I
 
-    .line 4
     new-array v0, v5, [I
 
     fill-array-data v0, :array_3
 
     sput-object v0, Lah;->d:[I
 
-    .line 5
     new-array v0, v4, [I
 
     const v1, 0x1010199
@@ -85,21 +79,18 @@
 
     sput-object v0, Lah;->e:[I
 
-    .line 6
     new-array v0, v5, [I
 
     fill-array-data v0, :array_4
 
     sput-object v0, Lah;->f:[I
 
-    .line 7
     new-array v0, v6, [I
 
     fill-array-data v0, :array_5
 
     sput-object v0, Lah;->g:[I
 
-    .line 8
     new-array v0, v4, [I
 
     const v1, 0x10102e2
@@ -108,28 +99,24 @@
 
     sput-object v0, Lah;->h:[I
 
-    .line 9
     new-array v0, v2, [I
 
     fill-array-data v0, :array_6
 
     sput-object v0, Lah;->i:[I
 
-    .line 10
     new-array v0, v2, [I
 
     fill-array-data v0, :array_7
 
     sput-object v0, Lah;->j:[I
 
-    .line 11
     new-array v0, v2, [I
 
     fill-array-data v0, :array_8
 
     sput-object v0, Lah;->k:[I
 
-    .line 12
     const/4 v0, 0x5
 
     new-array v0, v0, [I
@@ -140,7 +127,6 @@
 
     return-void
 
-    .line 1
     :array_0
     .array-data 4
         0x1010003
@@ -154,7 +140,6 @@
         0x1010403
     .end array-data
 
-    .line 2
     :array_1
     .array-data 4
         0x1010003
@@ -167,7 +152,6 @@
         0x101045b
     .end array-data
 
-    .line 3
     :array_2
     .array-data 4
         0x1010003
@@ -186,21 +170,18 @@
         0x101051e
     .end array-data
 
-    .line 4
     :array_3
     .array-data 4
         0x1010003
         0x1010405
     .end array-data
 
-    .line 6
     :array_4
     .array-data 4
         0x1010003
         0x10101cd
     .end array-data
 
-    .line 7
     :array_5
     .array-data 4
         0x1010141
@@ -214,7 +195,6 @@
         0x111009c
     .end array-data
 
-    .line 9
     :array_6
     .array-data 4
         0x10102de
@@ -223,7 +203,6 @@
         0x10102e1
     .end array-data
 
-    .line 10
     :array_7
     .array-data 4
         0x1010024
@@ -232,7 +211,6 @@
         0x10104d8
     .end array-data
 
-    .line 11
     :array_8
     .array-data 4
         0x10102e1
@@ -241,7 +219,6 @@
         0x1010475
     .end array-data
 
-    .line 12
     :array_9
     .array-data 4
         0x10103fc

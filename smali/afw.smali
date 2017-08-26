@@ -17,30 +17,23 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/app/ActivityManager;Lafy;FFIFF)V
     .locals 11
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lafw;->d:Landroid/content/Context;
 
-    .line 4
     invoke-static {p2}, Lafw;->a(Landroid/app/ActivityManager;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 5
     div-int/lit8 p6, p6, 0x2
 
-    .line 6
     :cond_0
     move/from16 v0, p6
 
     iput v0, p0, Lafw;->c:I
 
-    .line 8
     invoke-virtual {p2}, Landroid/app/ActivityManager;->getMemoryClass()I
 
     move-result v1
@@ -49,41 +42,33 @@
 
     shl-int/lit8 v1, v1, 0xa
 
-    .line 9
     invoke-static {p2}, Lafw;->a(Landroid/app/ActivityManager;)Z
 
     move-result v2
 
-    .line 10
     int-to-float v1, v1
 
     if-eqz v2, :cond_2
 
-    .line 11
     :goto_0
     mul-float v1, v1, p8
 
-    .line 12
     invoke-static {v1}, Ljava/lang/Math;->round(F)I
 
     move-result v2
 
-    .line 15
     iget-object v1, p3, Lafy;->a:Landroid/util/DisplayMetrics;
 
     iget v1, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 17
     iget-object v3, p3, Lafy;->a:Landroid/util/DisplayMetrics;
 
     iget v3, v3, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    .line 18
     mul-int/2addr v1, v3
 
     shl-int/lit8 v1, v1, 0x2
 
-    .line 19
     int-to-float v3, v1
 
     mul-float v3, v3, p5
@@ -92,7 +77,6 @@
 
     move-result v3
 
-    .line 20
     int-to-float v1, v1
 
     mul-float/2addr v1, p4
@@ -101,23 +85,18 @@
 
     move-result v1
 
-    .line 21
     iget v4, p0, Lafw;->c:I
 
     sub-int v4, v2, v4
 
-    .line 22
     add-int v5, v1, v3
 
     if-gt v5, v4, :cond_3
 
-    .line 23
     iput v1, p0, Lafw;->b:I
 
-    .line 24
     iput v3, p0, Lafw;->a:I
 
-    .line 28
     :goto_1
     const-string v4, "MemorySizeCalculator"
 
@@ -129,26 +108,22 @@
 
     if-eqz v4, :cond_1
 
-    .line 29
     const-string v4, "MemorySizeCalculator"
 
     iget v5, p0, Lafw;->b:I
 
-    .line 30
     invoke-direct {p0, v5}, Lafw;->a(I)Ljava/lang/String;
 
     move-result-object v5
 
     iget v6, p0, Lafw;->a:I
 
-    .line 31
     invoke-direct {p0, v6}, Lafw;->a(I)Ljava/lang/String;
 
     move-result-object v6
 
     iget v7, p0, Lafw;->c:I
 
-    .line 32
     invoke-direct {p0, v7}, Lafw;->a(I)Ljava/lang/String;
 
     move-result-object v7
@@ -159,18 +134,15 @@
 
     const/4 v1, 0x1
 
-    .line 33
     :goto_2
     invoke-direct {p0, v2}, Lafw;->a(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 34
     invoke-virtual {p2}, Landroid/app/ActivityManager;->getMemoryClass()I
 
     move-result v3
 
-    .line 35
     invoke-static {p2}, Lafw;->a(Landroid/app/ActivityManager;)Z
 
     move-result v8
@@ -293,20 +265,16 @@
 
     move-result-object v1
 
-    .line 36
     invoke-static {v4, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 37
     :cond_1
     return-void
 
     :cond_2
     move/from16 p8, p7
 
-    .line 11
     goto/16 :goto_0
 
-    .line 25
     :cond_3
     int-to-float v4, v4
 
@@ -314,7 +282,6 @@
 
     div-float/2addr v4, v5
 
-    .line 26
     mul-float v5, v4, p4
 
     invoke-static {v5}, Ljava/lang/Math;->round(F)I
@@ -323,7 +290,6 @@
 
     iput v5, p0, Lafw;->b:I
 
-    .line 27
     mul-float v4, v4, p5
 
     invoke-static {v4}, Ljava/lang/Math;->round(F)I
@@ -334,7 +300,6 @@
 
     goto/16 :goto_1
 
-    .line 32
     :cond_4
     const/4 v1, 0x0
 
@@ -344,8 +309,6 @@
 .method private final a(I)Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 38
     iget-object v0, p0, Lafw;->d:Landroid/content/Context;
 
     int-to-long v2, p1
@@ -360,20 +323,16 @@
 .method private static a(Landroid/app/ActivityManager;)Z
     .locals 2
 
-    .prologue
-    .line 39
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_0
 
-    .line 40
     invoke-virtual {p0}, Landroid/app/ActivityManager;->isLowRamDevice()Z
 
     move-result v0
 
-    .line 41
     :goto_0
     return v0
 

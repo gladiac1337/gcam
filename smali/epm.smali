@@ -16,8 +16,6 @@
 .method constructor <init>(Leqn;Lcgs;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lepm;->a:Leqn;
 
     iput-object p2, p0, Lepm;->b:Lcgs;
@@ -32,23 +30,17 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lepm;->a:Leqn;
 
     iget-object v1, p0, Lepm;->b:Lcgs;
 
-    .line 3
     invoke-static {}, Lhic;->a()V
 
-    .line 4
     iget-object v0, v0, Leqn;->f:Lbgr;
 
     invoke-virtual {v0}, Lbgr;->a()Z
 
-    .line 5
     invoke-interface {v1}, Lcgs;->f()V
 
-    .line 6
     return-void
 .end method

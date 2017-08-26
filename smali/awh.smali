@@ -13,8 +13,6 @@
 .method constructor <init>(Lavm;Lhpz;Lhpz;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p2, p0, Lawh;->a:Lhpz;
 
     iput-object p3, p0, Lawh;->b:Lhpz;
@@ -29,8 +27,6 @@
 .method protected final b(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lawh;->b:Lhpz;
 
     invoke-interface {v0, p1}, Lhpz;->a(Ljava/lang/Object;)Ljava/lang/Object;
@@ -43,8 +39,6 @@
 .method protected final c(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lawh;->a:Lhpz;
 
     invoke-interface {v0, p1}, Lhpz;->a(Ljava/lang/Object;)Ljava/lang/Object;

@@ -7,19 +7,14 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     return-void
 .end method
 
 .method private static a(Landroid/media/CamcorderProfile;)Lbcx;
-    .locals 12
+    .locals 13
 
-    .prologue
-    .line 22
     iget v1, p0, Landroid/media/CamcorderProfile;->audioBitRate:I
 
     iget v2, p0, Landroid/media/CamcorderProfile;->audioChannels:I
@@ -42,24 +37,29 @@
 
     iget v11, p0, Landroid/media/CamcorderProfile;->videoFrameWidth:I
 
-    .line 23
+    const v12, 0x870
+
+    if-eq v9, v12, :cond_0
+
+    const v12, 0x1e
+
+    if-ne v10, v12, :cond_0
+
+    const v10, 0x3c
+
+    :cond_0
     new-instance v0, Lbcz;
 
     invoke-direct/range {v0 .. v11}, Lbcz;-><init>(IIIIIIIIIII)V
 
-    .line 24
     return-object v0
 .end method
 
 .method public static a(Lhmp;Lbcy;)Lbcx;
     .locals 2
 
-    .prologue
-    .line 6
-    .line 7
     iget-object v0, p0, Lhmp;->b:Ljava/lang/String;
 
-    .line 8
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
@@ -68,32 +68,24 @@
 
     move-result v0
 
-    .line 9
     iget v1, p1, Lbcy;->a:I
 
-    .line 10
     invoke-static {v0, v1}, Landroid/media/CamcorderProfile;->get(II)Landroid/media/CamcorderProfile;
 
     move-result-object v0
 
-    .line 11
     invoke-static {v0}, Lbcu;->a(Landroid/media/CamcorderProfile;)Lbcx;
 
     move-result-object v0
 
-    .line 12
     return-object v0
 .end method
 
 .method public static a(Lhmp;Lbcw;)Z
     .locals 2
 
-    .prologue
-    .line 1
-    .line 2
     iget-object v0, p0, Lhmp;->b:Ljava/lang/String;
 
-    .line 3
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
@@ -102,10 +94,8 @@
 
     move-result v0
 
-    .line 4
     iget v1, p1, Lbcw;->a:I
 
-    .line 5
     invoke-static {v0, v1}, Landroid/media/CamcorderProfile;->hasProfile(II)Z
 
     move-result v0
@@ -116,12 +106,8 @@
 .method public static b(Lhmp;Lbcw;)Lbcx;
     .locals 2
 
-    .prologue
-    .line 13
-    .line 14
     iget-object v0, p0, Lhmp;->b:Ljava/lang/String;
 
-    .line 15
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
@@ -130,19 +116,15 @@
 
     move-result v0
 
-    .line 16
     iget v1, p1, Lbcw;->a:I
 
-    .line 17
     invoke-static {v0, v1}, Landroid/media/CamcorderProfile;->get(II)Landroid/media/CamcorderProfile;
 
     move-result-object v0
 
-    .line 18
     invoke-static {v0}, Lbcu;->a(Landroid/media/CamcorderProfile;)Lbcx;
 
     move-result-object v0
 
-    .line 19
     return-object v0
 .end method

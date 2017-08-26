@@ -157,8 +157,6 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lcom/google/android/gms/feedback/FileTeleporter;->c:Landroid/os/ParcelFileDescriptor;
 
     if-nez v0, :cond_0
@@ -195,7 +193,6 @@
 
     invoke-static {v1}, Lcom/google/android/gms/feedback/FileTeleporter;->a(Ljava/io/Closeable;)V
 
-    .line 3
     :cond_0
     const/16 v0, 0x4f45
 
@@ -203,7 +200,6 @@
 
     move-result v0
 
-    .line 4
     const/4 v1, 0x1
 
     iget v2, p0, Lcom/google/android/gms/feedback/FileTeleporter;->b:I
@@ -228,13 +224,10 @@
 
     invoke-static {p1, v1, v2}, Lkk;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    .line 5
     invoke-static {p1, v0}, Lkk;->m(Landroid/os/Parcel;I)V
 
-    .line 6
     return-void
 
-    .line 1
     :catch_0
     move-exception v0
 

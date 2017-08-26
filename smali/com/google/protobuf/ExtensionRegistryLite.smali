@@ -11,16 +11,12 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 10
     sput-boolean v1, Lcom/google/protobuf/ExtensionRegistryLite;->a:Z
 
-    .line 11
     invoke-static {}, Lcom/google/protobuf/ExtensionRegistryLite;->a()Ljava/lang/Class;
 
-    .line 12
     new-instance v0, Lcom/google/protobuf/ExtensionRegistryLite;
 
     invoke-direct {v0, v1}, Lcom/google/protobuf/ExtensionRegistryLite;-><init>(B)V
@@ -31,38 +27,28 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 6
     return-void
 .end method
 
 .method constructor <init>(B)V
     .locals 0
 
-    .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
-    .line 9
     return-void
 .end method
 
 .method private static a()Ljava/lang/Class;
     .locals 1
 
-    .prologue
-    .line 1
     :try_start_0
     const-string v0, "com.google.protobuf.Extension"
 
@@ -72,7 +58,6 @@
 
     move-result-object v0
 
-    .line 3
     :goto_0
     return-object v0
 

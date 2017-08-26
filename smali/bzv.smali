@@ -21,7 +21,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x4
 
     const/4 v5, 0x3
@@ -32,7 +31,6 @@
 
     const/4 v2, 0x0
 
-    .line 14
     new-instance v0, Lbzv;
 
     const-string v1, "COLLAGE"
@@ -41,7 +39,6 @@
 
     sput-object v0, Lbzv;->a:Lbzv;
 
-    .line 15
     new-instance v0, Lbzv;
 
     const-string v1, "ANIMATION"
@@ -50,7 +47,6 @@
 
     sput-object v0, Lbzv;->b:Lbzv;
 
-    .line 16
     new-instance v0, Lbzv;
 
     const-string v1, "PHOTO_BOOTH"
@@ -59,7 +55,6 @@
 
     sput-object v0, Lbzv;->c:Lbzv;
 
-    .line 17
     new-instance v0, Lbzv;
 
     const-string v1, "GROUP_SMILES"
@@ -68,7 +63,6 @@
 
     sput-object v0, Lbzv;->d:Lbzv;
 
-    .line 18
     new-instance v0, Lbzv;
 
     const-string v1, "VFR_VIDEO"
@@ -77,7 +71,6 @@
 
     sput-object v0, Lbzv;->e:Lbzv;
 
-    .line 19
     const/4 v0, 0x5
 
     new-array v0, v0, [Lbzv;
@@ -110,8 +103,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -120,22 +111,17 @@
 .method public static a(Ljava/lang/String;)Lbzv;
     .locals 4
 
-    .prologue
-    .line 3
     invoke-static {p0}, Lhtd;->a(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4
     sget-object v0, Lbzv;->a:Lbzv;
 
-    .line 12
     :goto_0
     return-object v0
 
-    .line 5
     :cond_0
     invoke-static {p0}, Lhtd;->b(Ljava/lang/String;)Z
 
@@ -143,12 +129,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 6
     sget-object v0, Lbzv;->b:Lbzv;
 
     goto :goto_0
 
-    .line 7
     :cond_1
     const-string v0, "AllSmiles"
 
@@ -158,12 +142,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 8
     sget-object v0, Lbzv;->d:Lbzv;
 
     goto :goto_0
 
-    .line 9
     :cond_2
     const-string v0, "Collage_PhotoBooth"
 
@@ -173,12 +155,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 10
     sget-object v0, Lbzv;->c:Lbzv;
 
     goto :goto_0
 
-    .line 11
     :cond_3
     const-string v0, "Video_VFR"
 
@@ -188,12 +168,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 12
     sget-object v0, Lbzv;->e:Lbzv;
 
     goto :goto_0
 
-    .line 13
     :cond_4
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -229,8 +207,6 @@
 .method public static values()[Lbzv;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lbzv;->f:[Lbzv;
 
     invoke-virtual {v0}, [Lbzv;->clone()Ljava/lang/Object;

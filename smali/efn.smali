@@ -18,8 +18,6 @@
 .method constructor <init>(Lefm;Lefv;Lefv;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lefn;->c:Lefm;
 
     iput-object p2, p0, Lefn;->a:Lefv;
@@ -36,18 +34,14 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 7
 
-    .prologue
-    .line 3
     check-cast p1, Lilc;
 
-    .line 4
     invoke-virtual {p1}, Lilc;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v1, p0, Lefn;->c:Lefm;
 
     iget-object v0, p0, Lefn;->c:Lefm;
@@ -56,7 +50,6 @@
 
     iget-object v4, p0, Lefn;->b:Lefv;
 
-    .line 6
     invoke-virtual {p1}, Lilc;->b()Ljava/lang/Object;
 
     move-result-object v5
@@ -65,10 +58,8 @@
 
     sget v6, Lbl;->aw:I
 
-    .line 7
     invoke-virtual/range {v1 .. v6}, Lefm;->a(JLefv;Landroid/net/Uri;I)V
 
-    .line 8
     :cond_0
     return-void
 .end method
@@ -76,7 +67,5 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 0
 
-    .prologue
-    .line 2
     return-void
 .end method

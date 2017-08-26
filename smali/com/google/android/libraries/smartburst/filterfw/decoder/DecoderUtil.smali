@@ -17,8 +17,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,8 +25,6 @@
 .method public static isAudioFormat(Landroid/media/MediaFormat;)Z
     .locals 2
 
-    .prologue
-    .line 2
     const-string v0, "mime"
 
     invoke-virtual {p0, v0}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -47,8 +43,6 @@
 .method public static isSupportedVideoFormat(Landroid/media/MediaFormat;)Z
     .locals 2
 
-    .prologue
-    .line 3
     const-string v0, "mime"
 
     invoke-virtual {p0, v0}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;

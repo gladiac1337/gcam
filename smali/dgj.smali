@@ -14,8 +14,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 5
     new-instance v0, Ldgj;
 
     invoke-direct {v0}, Ldgj;-><init>()V
@@ -28,8 +26,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,8 +36,6 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 2
     const/4 v0, 0x4
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -50,13 +44,11 @@
 
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 3
     invoke-static {v0, v1}, Ldt;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 4
     return-object v0
 .end method

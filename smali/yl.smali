@@ -16,8 +16,6 @@
 .method constructor <init>(Lyg;Z)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lyl;->b:Lyg;
 
     iput-boolean p2, p0, Lyl;->a:Z
@@ -32,10 +30,8 @@
 .method public final run()V
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 2
     iget-object v0, p0, Lyl;->b:Lyg;
 
     invoke-virtual {v0}, Lyg;->h()Landroid/os/Handler;
@@ -57,12 +53,10 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 3
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 2
     goto :goto_0
 .end method

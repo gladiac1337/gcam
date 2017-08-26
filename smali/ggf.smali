@@ -16,8 +16,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lggf;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     iput p2, p0, Lggf;->a:I
@@ -32,16 +30,12 @@
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lggf;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
-    .line 3
     invoke-static {v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$2200(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Landroid/animation/ArgbEvaluator;
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
     move-result v1
@@ -62,7 +56,6 @@
 
     move-result-object v3
 
-    .line 5
     invoke-virtual {v0, v1, v2, v3}, Landroid/animation/ArgbEvaluator;->evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -73,7 +66,6 @@
 
     move-result v0
 
-    .line 6
     iget-object v1, p0, Lggf;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-static {v1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$2300(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Landroid/graphics/Paint;
@@ -82,7 +74,6 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 7
     iget-object v0, p0, Lggf;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$1100(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Landroid/graphics/Paint;
@@ -107,11 +98,9 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 8
     iget-object v0, p0, Lggf;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->invalidate()V
 
-    .line 9
     return-void
 .end method

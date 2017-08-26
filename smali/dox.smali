@@ -16,17 +16,12 @@
 .method public constructor <init>(Ldqd;Ljava/util/Set;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldox;->b:Ldqd;
 
-    .line 3
     iput-object p2, p0, Ldox;->a:Ljava/util/Set;
 
-    .line 4
     return-void
 .end method
 
@@ -35,8 +30,6 @@
 .method public final a()Lavm;
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Ldox;->b:Ldqd;
 
     invoke-interface {v0}, Ldqd;->a()Lavm;
@@ -49,8 +42,6 @@
 .method public final a(Ldvs;)Ldqe;
     .locals 2
 
-    .prologue
-    .line 5
     new-instance v0, Ldoy;
 
     iget-object v1, p0, Ldox;->b:Ldqd;
@@ -67,21 +58,16 @@
 .method public final b(Ldvs;)Ldqe;
     .locals 2
 
-    .prologue
-    .line 6
     iget-object v0, p0, Ldox;->b:Ldqd;
 
     invoke-interface {v0, p1}, Ldqd;->b(Ldvs;)Ldqe;
 
     move-result-object v1
 
-    .line 7
     if-nez v1, :cond_0
 
-    .line 8
     const/4 v0, 0x0
 
-    .line 9
     :goto_0
     return-object v0
 
@@ -96,8 +82,6 @@
 .method public final b()Lduu;
     .locals 1
 
-    .prologue
-    .line 11
     iget-object v0, p0, Ldox;->b:Ldqd;
 
     invoke-interface {v0}, Ldqd;->b()Lduu;

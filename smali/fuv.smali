@@ -16,8 +16,6 @@
 .method constructor <init>(Ljava/util/Set;Lfvk;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfuv;->a:Ljava/util/Set;
 
     iput-object p2, p0, Lfuv;->b:Lfvk;
@@ -32,16 +30,12 @@
 .method public final a()V
     .locals 0
 
-    .prologue
-    .line 2
     return-void
 .end method
 
 .method public final b()Ljava/util/Set;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lfuv;->a:Ljava/util/Set;
 
     return-object v0
@@ -50,8 +44,6 @@
 .method public final c()Lfvk;
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lfuv;->b:Lfvk;
 
     return-object v0

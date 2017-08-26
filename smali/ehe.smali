@@ -14,8 +14,6 @@
 .method constructor <init>(Leha;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lehe;->a:Leha;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final declared-synchronized a(Landroid/net/Uri;)V
     .locals 5
 
-    .prologue
-    .line 5
     monitor-enter p0
 
     :try_start_0
@@ -37,22 +33,18 @@
 
     invoke-static {v0}, Leha;->b(Leha;)I
 
-    .line 6
     iget-object v0, p0, Lehe;->a:Leha;
 
-    .line 8
     iget-object v1, v0, Leha;->h:Lehf;
 
     sget-object v2, Lehf;->b:Lehf;
 
     if-eq v1, v2, :cond_1
 
-    .line 9
     const-string v1, "Ignoring updateStackedProgressMessage. CaptureSession is not started."
 
     invoke-virtual {v0, v1}, Leha;->b(Ljava/lang/String;)V
 
-    .line 17
     :goto_0
     iget-object v0, p0, Lehe;->a:Leha;
 
@@ -62,7 +54,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 18
     iget-object v0, p0, Lehe;->a:Leha;
 
     invoke-static {v0}, Leha;->a(Leha;)Lf;
@@ -73,13 +64,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 19
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 11
     :cond_1
     const v1, 0x7f110064
 
@@ -92,7 +81,6 @@
 
     iget v4, v0, Leha;->k:I
 
-    .line 12
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -103,7 +91,6 @@
 
     iget-object v4, v0, Leha;->j:Ljava/util/Map;
 
-    .line 13
     invoke-interface {v4}, Ljava/util/Map;->size()I
 
     move-result v4
@@ -114,15 +101,12 @@
 
     aput-object v4, v2, v3
 
-    .line 14
     invoke-static {v1, v2}, Lkk;->a(I[Ljava/lang/Object;)Lgld;
 
     move-result-object v1
 
-    .line 15
     invoke-virtual {v0, v1}, Leha;->a(Lgld;)V
 
-    .line 16
     const/high16 v1, 0x42c80000    # 100.0f
 
     iget v2, v0, Leha;->k:I
@@ -149,7 +133,6 @@
 
     goto :goto_0
 
-    .line 5
     :catchall_0
     move-exception v0
 
@@ -161,8 +144,6 @@
 .method public final declared-synchronized a(Landroid/net/Uri;Laky;II)V
     .locals 1
 
-    .prologue
-    .line 2
     monitor-enter p0
 
     :try_start_0
@@ -174,7 +155,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lehe;->a:Leha;
 
     invoke-static {v0}, Leha;->a(Leha;)Lf;
@@ -185,13 +165,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 2
     :catchall_0
     move-exception v0
 
@@ -203,8 +181,6 @@
 .method public final declared-synchronized b(Landroid/net/Uri;)V
     .locals 5
 
-    .prologue
-    .line 20
     monitor-enter p0
 
     :try_start_0
@@ -212,22 +188,18 @@
 
     invoke-static {v0}, Leha;->b(Leha;)I
 
-    .line 21
     iget-object v0, p0, Lehe;->a:Leha;
 
-    .line 23
     iget-object v1, v0, Leha;->h:Lehf;
 
     sget-object v2, Lehf;->b:Lehf;
 
     if-eq v1, v2, :cond_1
 
-    .line 24
     const-string v1, "Ignoring updateStackedProgressMessage. CaptureSession is not started."
 
     invoke-virtual {v0, v1}, Leha;->b(Ljava/lang/String;)V
 
-    .line 32
     :goto_0
     iget-object v0, p0, Lehe;->a:Leha;
 
@@ -237,7 +209,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 33
     iget-object v0, p0, Lehe;->a:Leha;
 
     invoke-static {v0}, Leha;->a(Leha;)Lf;
@@ -248,13 +219,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 34
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 26
     :cond_1
     const v1, 0x7f110064
 
@@ -267,7 +236,6 @@
 
     iget v4, v0, Leha;->k:I
 
-    .line 27
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -278,7 +246,6 @@
 
     iget-object v4, v0, Leha;->j:Ljava/util/Map;
 
-    .line 28
     invoke-interface {v4}, Ljava/util/Map;->size()I
 
     move-result v4
@@ -289,15 +256,12 @@
 
     aput-object v4, v2, v3
 
-    .line 29
     invoke-static {v1, v2}, Lkk;->a(I[Ljava/lang/Object;)Lgld;
 
     move-result-object v1
 
-    .line 30
     invoke-virtual {v0, v1}, Leha;->a(Lgld;)V
 
-    .line 31
     const/high16 v1, 0x42c80000    # 100.0f
 
     iget v2, v0, Leha;->k:I
@@ -324,7 +288,6 @@
 
     goto :goto_0
 
-    .line 20
     :catchall_0
     move-exception v0
 

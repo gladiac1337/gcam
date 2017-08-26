@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,16 +18,12 @@
 .method private static a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ldo;
     .locals 2
 
-    .prologue
-    .line 2
     invoke-virtual {p0, p1}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
     move-result-object v0
 
-    .line 3
     if-eqz v0, :cond_0
 
-    .line 4
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "superState must be null"
@@ -38,7 +32,6 @@
 
     throw v0
 
-    .line 5
     :cond_0
     sget-object v0, Ldo;->b:Ldo;
 
@@ -50,24 +43,18 @@
 .method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 10
-    .line 11
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Ldp;->a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ldo;
 
     move-result-object v0
 
-    .line 12
     return-object v0
 .end method
 
 .method public final synthetic createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 6
     invoke-static {p1, p2}, Ldp;->a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ldo;
 
     move-result-object v0
@@ -78,11 +65,7 @@
 .method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 7
-    .line 8
     new-array v0, p1, [Ldo;
 
-    .line 9
     return-object v0
 .end method

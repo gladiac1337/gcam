@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 16
     const-string v0, "US-ASCII"
 
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
@@ -21,7 +19,6 @@
 
     sput-object v0, Laay;->a:Ljava/nio/charset/Charset;
 
-    .line 17
     const-string v0, "UTF-8"
 
     invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
@@ -32,25 +29,20 @@
 .method static a(Ljava/io/Closeable;)V
     .locals 1
 
-    .prologue
-    .line 11
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 15
     :goto_0
     return-void
 
-    .line 13
     :catch_0
     move-exception v0
 
     throw v0
 
-    .line 15
     :catch_1
     move-exception v0
 
@@ -60,16 +52,12 @@
 .method static a(Ljava/io/File;)V
     .locals 5
 
-    .prologue
-    .line 1
     invoke-virtual {p0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v1
 
-    .line 2
     if-nez v1, :cond_0
 
-    .line 3
     new-instance v0, Ljava/io/IOException;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -108,7 +96,6 @@
 
     throw v0
 
-    .line 4
     :cond_0
     array-length v2, v1
 
@@ -119,17 +106,14 @@
 
     aget-object v3, v1, v0
 
-    .line 5
     invoke-virtual {v3}, Ljava/io/File;->isDirectory()Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 6
     invoke-static {v3}, Laay;->a(Ljava/io/File;)V
 
-    .line 7
     :cond_1
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
@@ -137,7 +121,6 @@
 
     if-nez v4, :cond_2
 
-    .line 8
     new-instance v0, Ljava/io/IOException;
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -176,13 +159,11 @@
 
     throw v0
 
-    .line 9
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 10
     :cond_3
     return-void
 .end method

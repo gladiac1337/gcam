@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 7
     new-instance v0, Lzx;
 
     const-string v1, "SysProps"
@@ -27,8 +25,6 @@
 .method public static a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 1
     :try_start_0
     const-string v0, "android.os.SystemProperties"
 
@@ -36,7 +32,6 @@
 
     move-result-object v0
 
-    .line 2
     const-string v1, "get"
 
     const/4 v2, 0x2
@@ -59,7 +54,6 @@
 
     move-result-object v0
 
-    .line 3
     const/4 v1, 0x0
 
     const/4 v2, 0x2
@@ -82,15 +76,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6
     :goto_0
     return-object v0
 
-    .line 4
     :catch_0
     move-exception v0
 
-    .line 5
     sget-object v1, Lzy;->a:Lzx;
 
     const-string v2, "Exception while getting system property: "
@@ -99,6 +90,5 @@
 
     move-object v0, p1
 
-    .line 6
     goto :goto_0
 .end method

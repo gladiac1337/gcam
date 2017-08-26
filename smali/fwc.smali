@@ -16,17 +16,12 @@
 .method public constructor <init>(Landroid/hardware/camera2/CaptureResult$Key;Linu;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lfwc;->a:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 3
     iput-object p2, p0, Lfwc;->b:Linu;
 
-    .line 4
     return-void
 .end method
 
@@ -35,8 +30,6 @@
 .method public final b(Lhop;)Z
     .locals 2
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lfwc;->b:Linu;
 
     iget-object v1, p0, Lfwc;->a:Landroid/hardware/camera2/CaptureResult$Key;

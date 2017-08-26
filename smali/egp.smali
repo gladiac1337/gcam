@@ -18,8 +18,6 @@
 .method constructor <init>(Legl;Lhev;Ljava/lang/Runnable;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Legp;->c:Legl;
 
     iput-object p2, p0, Legp;->a:Lhev;
@@ -36,30 +34,21 @@
 .method public final run()V
     .locals 10
 
-    .prologue
-    .line 2
     :try_start_0
     iget-object v0, p0, Legp;->c:Legl;
 
-    .line 3
     iget-object v0, v0, Legl;->c:Lgvt;
 
-    .line 4
     if-eqz v0, :cond_5
 
-    .line 5
     iget-object v0, p0, Legp;->c:Legl;
 
-    .line 6
     iget-object v2, v0, Legl;->c:Lgvt;
 
-    .line 7
     iget-object v3, p0, Legp;->a:Lhev;
 
-    .line 8
     iget-object v0, v3, Lhev;->b:Lheq;
 
-    .line 9
     new-instance v1, Lhav;
 
     invoke-direct {v1}, Lhav;-><init>()V
@@ -78,7 +67,6 @@
 
     invoke-direct {v5, v1, v4}, Lhau;-><init>(Lhav;Ljava/util/List;)V
 
-    .line 10
     iget-object v0, v3, Lhev;->a:Lcom/google/android/gms/wearable/PutDataRequest;
 
     iget-object v1, v5, Lhau;->a:Lhav;
@@ -87,10 +75,8 @@
 
     move-result-object v1
 
-    .line 11
     iput-object v1, v0, Lcom/google/android/gms/wearable/PutDataRequest;->b:[B
 
-    .line 12
     iget-object v0, v5, Lhau;->b:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -140,24 +126,19 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 22
     :catch_0
     move-exception v0
 
-    .line 23
     sget-object v1, Legl;->a:Ljava/lang/String;
 
-    .line 24
     const-string v2, "Error setting data item"
 
     invoke-static {v1, v2, v0}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 25
     :cond_0
     :goto_1
     return-void
 
-    .line 12
     :cond_1
     if-nez v0, :cond_2
 
@@ -235,39 +216,32 @@
     :cond_4
     iget-object v0, v3, Lhev;->a:Lcom/google/android/gms/wearable/PutDataRequest;
 
-    .line 14
     new-instance v1, Lhhe;
 
     invoke-direct {v1, v2, v0}, Lhhe;-><init>(Lgvt;Lcom/google/android/gms/wearable/PutDataRequest;)V
 
     invoke-virtual {v2, v1}, Lgvt;->a(Lgwe;)Lgwe;
 
-    .line 15
     sget-object v0, Legl;->a:Ljava/lang/String;
 
-    .line 16
     const-string v1, "Sent data to Wear device"
 
     invoke-static {v0, v1}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 19
     :goto_2
     iget-object v0, p0, Legp;->b:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 20
     iget-object v0, p0, Legp;->b:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
     goto :goto_1
 
-    .line 17
     :cond_5
     sget-object v0, Legl;->a:Ljava/lang/String;
 
-    .line 18
     const-string v1, "Could not set data item. API is null"
 
     invoke-static {v0, v1}, Lbgj;->e(Ljava/lang/String;Ljava/lang/String;)V

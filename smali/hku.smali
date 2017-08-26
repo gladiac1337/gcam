@@ -17,28 +17,22 @@
 .method public constructor <init>(Ljava/nio/ByteOrder;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x5
 
     new-array v0, v0, [Lhli;
 
     iput-object v0, p0, Lhku;->a:[Lhli;
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lhku;->c:Ljava/util/ArrayList;
 
-    .line 4
     iput-object p1, p0, Lhku;->d:Ljava/nio/ByteOrder;
 
-    .line 5
     return-void
 .end method
 
@@ -47,16 +41,12 @@
 .method public final a(Lhlf;)Lhlf;
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 16
     if-eqz p1, :cond_1
 
-    .line 18
     iget v1, p1, Lhlf;->e:I
 
-    .line 21
     if-eqz p1, :cond_1
 
     invoke-static {v1}, Lhlf;->a(I)Z
@@ -65,31 +55,25 @@
 
     if-eqz v2, :cond_1
 
-    .line 23
     iget-object v0, p0, Lhku;->a:[Lhli;
 
     aget-object v0, v0, v1
 
-    .line 24
     if-nez v0, :cond_0
 
-    .line 25
     new-instance v0, Lhli;
 
     invoke-direct {v0, v1}, Lhli;-><init>(I)V
 
-    .line 26
     iget-object v2, p0, Lhku;->a:[Lhli;
 
     aput-object v0, v2, v1
 
-    .line 28
     :cond_0
     invoke-virtual {v0, p1}, Lhli;->a(Lhlf;)Lhlf;
 
     move-result-object v0
 
-    .line 31
     :cond_1
     return-object v0
 .end method
@@ -97,25 +81,18 @@
 .method protected final a(Lhli;)V
     .locals 2
 
-    .prologue
-    .line 12
     iget-object v0, p0, Lhku;->a:[Lhli;
 
-    .line 13
     iget v1, p1, Lhli;->a:I
 
-    .line 14
     aput-object p1, v0, v1
 
-    .line 15
     return-void
 .end method
 
 .method protected final a()Z
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lhku;->b:[B
 
     if-eqz v0, :cond_0
@@ -134,8 +111,6 @@
 .method protected final a(I)[B
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lhku;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -150,20 +125,16 @@
 .method protected final b(I)Lhli;
     .locals 1
 
-    .prologue
-    .line 9
     invoke-static {p1}, Lhlf;->a(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 10
     iget-object v0, p0, Lhku;->a:[Lhli;
 
     aget-object v0, v0, p1
 
-    .line 11
     :goto_0
     return-object v0
 
@@ -176,8 +147,6 @@
 .method protected final b()Z
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lhku;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -200,15 +169,12 @@
 .method protected final c()Ljava/util/List;
     .locals 9
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 32
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 33
     iget-object v4, p0, Lhku;->a:[Lhli;
 
     array-length v5, v4
@@ -220,15 +186,12 @@
 
     aget-object v0, v4, v2
 
-    .line 34
     if-eqz v0, :cond_1
 
-    .line 35
     invoke-virtual {v0}, Lhli;->a()[Lhlf;
 
     move-result-object v6
 
-    .line 36
     array-length v7, v6
 
     move v0, v1
@@ -238,19 +201,15 @@
 
     aget-object v8, v6, v0
 
-    .line 37
     if-eqz v8, :cond_0
 
-    .line 38
     invoke-virtual {v3, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 39
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 40
     :cond_1
     add-int/lit8 v0, v2, 0x1
 
@@ -258,7 +217,6 @@
 
     goto :goto_0
 
-    .line 41
     :cond_2
     return-object v3
 .end method
@@ -266,34 +224,27 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 42
     if-ne p0, p1, :cond_1
 
     move v3, v4
 
-    .line 63
     :cond_0
     :goto_0
     return v3
 
-    .line 44
     :cond_1
     if-eqz p1, :cond_0
 
-    .line 46
     instance-of v0, p1, Lhku;
 
     if-eqz v0, :cond_0
 
-    .line 47
     check-cast p1, Lhku;
 
-    .line 48
     iget-object v0, p1, Lhku;->d:Ljava/nio/ByteOrder;
 
     iget-object v1, p0, Lhku;->d:Ljava/nio/ByteOrder;
@@ -302,7 +253,6 @@
 
     iget-object v0, p1, Lhku;->c:Ljava/util/ArrayList;
 
-    .line 49
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -319,7 +269,6 @@
 
     iget-object v1, p0, Lhku;->b:[B
 
-    .line 50
     invoke-static {v0, v1}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result v0
@@ -328,7 +277,6 @@
 
     move v2, v3
 
-    .line 52
     :goto_1
     iget-object v0, p0, Lhku;->c:Ljava/util/ArrayList;
 
@@ -338,7 +286,6 @@
 
     if-ge v2, v0, :cond_2
 
-    .line 53
     iget-object v0, p1, Lhku;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -361,7 +308,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 55
     add-int/lit8 v0, v2, 0x1
 
     move v2, v0
@@ -371,23 +317,19 @@
     :cond_2
     move v0, v3
 
-    .line 56
     :goto_2
     const/4 v1, 0x5
 
     if-ge v0, v1, :cond_4
 
-    .line 57
     invoke-virtual {p1, v0}, Lhku;->b(I)Lhli;
 
     move-result-object v1
 
-    .line 58
     invoke-virtual {p0, v0}, Lhku;->b(I)Lhli;
 
     move-result-object v2
 
-    .line 59
     if-eqz v1, :cond_3
 
     invoke-virtual {v1, v2}, Lhli;->equals(Ljava/lang/Object;)Z
@@ -396,7 +338,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 61
     :cond_3
     add-int/lit8 v0, v0, 0x1
 
@@ -405,15 +346,12 @@
     :cond_4
     move v3, v4
 
-    .line 62
     goto :goto_0
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    .prologue
-    .line 64
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -422,7 +360,6 @@
 
     iget-object v2, p0, Lhku;->a:[Lhli;
 
-    .line 65
     invoke-static {v2}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v2
@@ -459,11 +396,9 @@
 
     aput-object v2, v0, v1
 
-    .line 66
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 67
     return v0
 .end method

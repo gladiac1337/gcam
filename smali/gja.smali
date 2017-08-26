@@ -20,8 +20,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 32
     const-string v0, "CameraFileUtil"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -36,8 +34,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -46,8 +42,6 @@
 .method private static synthetic a(Ljava/lang/Throwable;Ljava/lang/AutoCloseable;)V
     .locals 1
 
-    .prologue
-    .line 31
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -76,10 +70,8 @@
 .method public final a(Ljava/io/File;Ljava/nio/ByteBuffer;)I
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 23
     :try_start_0
     new-instance v2, Ljava/io/FileOutputStream;
 
@@ -87,7 +79,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 24
     :try_start_1
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
@@ -100,7 +91,6 @@
 
     move-result v0
 
-    .line 25
     const/4 v1, 0x0
 
     :try_start_2
@@ -108,10 +98,8 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 26
     return v0
 
-    .line 27
     :catch_0
     move-exception v0
 
@@ -120,7 +108,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 28
     :catchall_0
     move-exception v1
 
@@ -141,17 +128,14 @@
     :catch_1
     move-exception v0
 
-    .line 29
     sget-object v1, Lgja;->a:Ljava/lang/String;
 
     const-string v2, "Failed to write data"
 
     invoke-static {v1, v2, v0}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 30
     throw v0
 
-    .line 28
     :catchall_1
     move-exception v0
 
@@ -161,10 +145,8 @@
 .method public final a(Ljava/io/File;Ljava/io/InputStream;)J
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 15
     :try_start_0
     new-instance v2, Ljava/io/FileOutputStream;
 
@@ -172,7 +154,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 16
     :try_start_1
     invoke-static {p2, v2}, Liqk;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)J
     :try_end_1
@@ -181,7 +162,6 @@
 
     move-result-wide v0
 
-    .line 17
     const/4 v3, 0x0
 
     :try_start_2
@@ -189,10 +169,8 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 18
     return-wide v0
 
-    .line 19
     :catch_0
     move-exception v1
 
@@ -201,7 +179,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 20
     :catchall_0
     move-exception v0
 
@@ -215,29 +192,24 @@
     :catch_1
     move-exception v0
 
-    .line 21
     sget-object v1, Lgja;->a:Ljava/lang/String;
 
     const-string v2, "Failed to write data"
 
     invoke-static {v1, v2, v0}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 22
     throw v0
 .end method
 
 .method public final a(Ljava/io/File;Ljava/io/InputStream;Lilc;)J
     .locals 5
 
-    .prologue
-    .line 2
     invoke-virtual {p3}, Lilc;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 3
     invoke-virtual {p3}, Lilc;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -248,12 +220,10 @@
 
     move-result-object v1
 
-    .line 4
     if-eqz p2, :cond_0
 
     if-nez v1, :cond_1
 
-    .line 5
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -263,27 +233,21 @@
 
     throw v0
 
-    .line 6
     :cond_1
     invoke-virtual {v0, v1}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(Ljava/lang/String;)Ljava/io/OutputStream;
 
     move-result-object v0
 
-    .line 7
     invoke-static {p2, v0}, Lcom/google/android/libraries/camera/exif/ExifInterface;->b(Ljava/io/InputStream;Ljava/io/OutputStream;)V
 
-    .line 8
     invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
 
-    .line 9
     invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
-    .line 10
     invoke-virtual {p1}, Ljava/io/File;->length()J
 
     move-result-wide v0
 
-    .line 12
     :goto_0
     const-wide/16 v2, 0x0
 
@@ -291,7 +255,6 @@
 
     if-gtz v2, :cond_3
 
-    .line 13
     new-instance v2, Ljava/io/IOException;
 
     const/16 v3, 0x44
@@ -318,7 +281,6 @@
 
     throw v2
 
-    .line 11
     :cond_2
     invoke-virtual {p0, p1, p2}, Lgja;->a(Ljava/io/File;Ljava/io/InputStream;)J
 
@@ -326,7 +288,6 @@
 
     goto :goto_0
 
-    .line 14
     :cond_3
     return-wide v0
 .end method

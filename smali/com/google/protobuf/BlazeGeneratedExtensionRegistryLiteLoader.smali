@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lcom/google/protobuf/java_com_google_android_apps_camera_branches_lava__GoogleCameraRelease_alldpi_ba99bb5GeneratedExtensionRegistryLite$Loader;-><init>()V
 
     return-void

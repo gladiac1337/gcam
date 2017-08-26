@@ -26,8 +26,6 @@
 .method private constructor <init>()V
     .locals 4
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     invoke-static {}, Lgzd;->b()I
@@ -38,20 +36,16 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 13
     :goto_0
     return-void
 
-    .line 1
     :cond_0
     sget-object v0, Lgze;->a:Lhbv;
 
-    .line 2
     invoke-virtual {v0}, Lhbv;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 3
     check-cast v0, Ljava/lang/String;
 
     if-nez v0, :cond_1
@@ -59,12 +53,10 @@
     :goto_1
     sget-object v0, Lgze;->b:Lhbv;
 
-    .line 4
     invoke-virtual {v0}, Lhbv;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 5
     check-cast v0, Ljava/lang/String;
 
     if-nez v0, :cond_2
@@ -72,12 +64,10 @@
     :goto_2
     sget-object v0, Lgze;->c:Lhbv;
 
-    .line 6
     invoke-virtual {v0}, Lhbv;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 7
     check-cast v0, Ljava/lang/String;
 
     if-nez v0, :cond_3
@@ -85,12 +75,10 @@
     :goto_3
     sget-object v0, Lgze;->d:Lhbv;
 
-    .line 8
     invoke-virtual {v0}, Lhbv;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 9
     check-cast v0, Ljava/lang/String;
 
     if-nez v0, :cond_4
@@ -100,12 +88,10 @@
 
     sget-object v0, Lgze;->e:Lhbv;
 
-    .line 10
     invoke-virtual {v0}, Lhbv;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 11
     check-cast v0, Ljava/lang/Long;
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
@@ -118,12 +104,10 @@
 
     sget-object v0, Lgze;->e:Lhbv;
 
-    .line 12
     invoke-virtual {v0}, Lhbv;->a()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 13
     check-cast v0, Ljava/lang/Long;
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
@@ -134,7 +118,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     const-string v1, ","
 
@@ -146,7 +129,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_2
     const-string v1, ","
 
@@ -158,7 +140,6 @@
 
     goto :goto_2
 
-    .line 7
     :cond_3
     const-string v1, ","
 
@@ -170,7 +151,6 @@
 
     goto :goto_3
 
-    .line 9
     :cond_4
     const-string v1, ","
 
@@ -278,13 +258,10 @@
 .method private static b()I
     .locals 1
 
-    .prologue
-    .line 15
     sget-object v0, Lgzd;->c:Ljava/lang/Integer;
 
     if-nez v0, :cond_0
 
-    .line 16
     :try_start_0
     sget v0, Lgzf;->a:I
 
@@ -330,8 +307,6 @@
         }
     .end annotation
 
-    .prologue
-    .line 14
     invoke-virtual {p1, p2}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
     invoke-static {p2}, Lgzd;->a(Landroid/content/ServiceConnection;)Ljava/lang/String;

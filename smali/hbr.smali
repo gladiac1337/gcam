@@ -30,18 +30,13 @@
 .method protected final synthetic a(Landroid/os/IBinder;)Landroid/os/IInterface;
     .locals 2
 
-    .prologue
-    .line 1
-    .line 3
     if-nez p1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 4
     :goto_0
     return-object v0
 
-    .line 3
     :cond_0
     const-string v0, "com.google.android.gms.clearcut.internal.IClearcutLoggerService"
 

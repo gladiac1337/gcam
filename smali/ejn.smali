@@ -17,25 +17,18 @@
 .method public constructor <init>(Lejd;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lejn;->a:Lejd;
 
-    .line 3
     iput-object p2, p0, Lejn;->b:Ljava/lang/String;
 
-    .line 4
     iput-object p3, p0, Lejn;->c:Ljava/lang/String;
 
-    .line 5
     const/4 v0, 0x0
 
     iput-object v0, p0, Lejn;->d:Ljava/io/File;
 
-    .line 6
     return-void
 .end method
 
@@ -44,10 +37,8 @@
 .method public final declared-synchronized a()Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 7
     monitor-enter p0
 
     :try_start_0
@@ -57,13 +48,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 13
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 9
     :cond_0
     :try_start_1
     iget-object v1, p0, Lejn;->a:Lejd;
@@ -83,7 +72,6 @@
 
     goto :goto_0
 
-    .line 12
     :catch_0
     move-exception v0
 
@@ -91,7 +79,6 @@
 
     goto :goto_0
 
-    .line 7
     :catchall_0
     move-exception v0
 
@@ -103,8 +90,6 @@
 .method public final declared-synchronized b()Z
     .locals 1
 
-    .prologue
-    .line 14
     monitor-enter p0
 
     :try_start_0
@@ -137,8 +122,6 @@
 .method public final declared-synchronized c()Ljava/io/File;
     .locals 1
 
-    .prologue
-    .line 15
     monitor-enter p0
 
     :try_start_0

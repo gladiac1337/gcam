@@ -25,16 +25,11 @@
 .method public final run()V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgrc;->a:Lgrb;
 
-    .line 2
     iget-object v0, v0, Lgrb;->a:Lgqy;
 
-    .line 3
     invoke-virtual {v0}, Lgqy;->p()V
 
-    .line 4
     return-void
 .end method

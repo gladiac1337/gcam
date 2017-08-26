@@ -18,8 +18,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 10
     const-string v0, "CMHardwareSpec"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -30,11 +28,8 @@
 .method constructor <init>(Lddr;Lfss;Lcnf;Lfsq;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -43,10 +38,8 @@
 
     iput-object v0, p0, Lcqg;->a:Lddr;
 
-    .line 3
     invoke-static {p2}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     invoke-static {p3}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -55,7 +48,6 @@
 
     iput-object v0, p0, Lcqg;->b:Lcnf;
 
-    .line 5
     invoke-static {p4}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -64,7 +56,6 @@
 
     iput-object v0, p0, Lcqg;->c:Lfsq;
 
-    .line 6
     return-void
 .end method
 
@@ -73,8 +64,6 @@
 .method public final a()Z
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lcqg;->c:Lfsq;
 
     invoke-interface {v0}, Lfsq;->g()Z
@@ -87,8 +76,6 @@
 .method public final b()Z
     .locals 2
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lcqg;->a:Lddr;
 
     iget-object v1, p0, Lcqg;->b:Lcnf;
@@ -117,8 +104,6 @@
 .method public final c()Z
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lcqg;->c:Lfsq;
 
     invoke-interface {v0}, Lfsq;->f()Z

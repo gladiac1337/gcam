@@ -17,14 +17,10 @@
 .method public constructor <init>(Z)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-boolean p1, p0, Lcom/google/android/libraries/smartburst/filterfw/imageutils/RgbToHsvConverter;->mIsOpenGLSupported:Z
 
-    .line 3
     iget-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/imageutils/RgbToHsvConverter;->mIsOpenGLSupported:Z
 
     if-eqz v0, :cond_0
@@ -38,10 +34,8 @@
     :goto_0
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/imageutils/RgbToHsvConverter;->mShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
-    .line 4
     return-void
 
-    .line 3
     :cond_0
     const/4 v0, 0x0
 
@@ -53,22 +47,17 @@
 .method public convertImage(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)V
     .locals 4
 
-    .prologue
-    .line 5
     iget-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/imageutils/RgbToHsvConverter;->mIsOpenGLSupported:Z
 
     if-eqz v0, :cond_0
 
-    .line 6
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/imageutils/RgbToHsvConverter;->mShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->process(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)V
 
-    .line 14
     :goto_0
     return-void
 
-    .line 7
     :cond_0
     const/4 v0, 0x1
 
@@ -76,14 +65,12 @@
 
     move-result-object v0
 
-    .line 8
     const/4 v1, 0x2
 
     invoke-virtual {p2, v1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->lockBytes(I)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
-    .line 10
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->getWidth()I
 
     move-result v2
@@ -92,13 +79,10 @@
 
     move-result v3
 
-    .line 11
     invoke-static {v0, v1, v2, v3}, Lcom/google/android/libraries/smartburst/filterfw/ColorSpace;->convertRgba8888ToHsva8888(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;II)V
 
-    .line 12
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->unlock()V
 
-    .line 13
     invoke-virtual {p2}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->unlock()V
 
     goto :goto_0

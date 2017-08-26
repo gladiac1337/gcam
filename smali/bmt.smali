@@ -11,13 +11,10 @@
 .method public constructor <init>([FZZ)V
     .locals 3
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0, v1, p2, p3}, Lbmr;-><init>(ZZZ)V
 
-    .line 2
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -26,7 +23,6 @@
 
     iput-object v0, p0, Lbmt;->j:[F
 
-    .line 3
     if-nez p2, :cond_0
 
     array-length v0, p1
@@ -48,13 +44,11 @@
     :goto_0
     invoke-static {v0}, Lid;->b(Z)V
 
-    .line 4
     return-void
 
     :cond_2
     move v0, v1
 
-    .line 3
     goto :goto_0
 .end method
 
@@ -63,19 +57,16 @@
 .method public final a(Landroid/graphics/RectF;)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x2
 
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 5
     iget-boolean v0, p0, Lbmt;->h:Z
 
     if-nez v0, :cond_0
 
-    .line 6
     invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
 
     move-result v0
@@ -92,7 +83,6 @@
 
     iput v0, p0, Lbmt;->a:I
 
-    .line 7
     invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
 
     move-result v0
@@ -109,7 +99,6 @@
 
     iput v0, p0, Lbmt;->b:I
 
-    .line 8
     invoke-virtual {p1}, Landroid/graphics/RectF;->height()F
 
     move-result v0
@@ -126,7 +115,6 @@
 
     iput v0, p0, Lbmt;->c:I
 
-    .line 9
     invoke-virtual {p1}, Landroid/graphics/RectF;->height()F
 
     move-result v0
@@ -143,11 +131,9 @@
 
     iput v0, p0, Lbmt;->d:I
 
-    .line 16
     :goto_0
     return-void
 
-    .line 10
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
 
@@ -165,7 +151,6 @@
 
     iput v0, p0, Lbmt;->a:I
 
-    .line 11
     invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
 
     move-result v0
@@ -182,7 +167,6 @@
 
     iput v0, p0, Lbmt;->e:I
 
-    .line 12
     invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
 
     move-result v0
@@ -199,7 +183,6 @@
 
     iput v0, p0, Lbmt;->b:I
 
-    .line 13
     invoke-virtual {p1}, Landroid/graphics/RectF;->height()F
 
     move-result v0
@@ -216,7 +199,6 @@
 
     iput v0, p0, Lbmt;->c:I
 
-    .line 14
     invoke-virtual {p1}, Landroid/graphics/RectF;->height()F
 
     move-result v0
@@ -233,7 +215,6 @@
 
     iput v0, p0, Lbmt;->f:I
 
-    .line 15
     invoke-virtual {p1}, Landroid/graphics/RectF;->height()F
 
     move-result v0

@@ -18,20 +18,14 @@
 .method public constructor <init>(Liyb;Lilp;Lilp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lfst;->a:Liyb;
 
-    .line 3
     iput-object p2, p0, Lfst;->b:Lilp;
 
-    .line 4
     iput-object p3, p0, Lfst;->c:Lilp;
 
-    .line 5
     return-void
 .end method
 
@@ -40,16 +34,12 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 6
-    .line 7
     iget-object v2, p0, Lfst;->a:Liyb;
 
     new-instance v3, Lfss;
 
     iget-object v0, p0, Lfst;->b:Lilp;
 
-    .line 8
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -66,13 +56,11 @@
 
     invoke-direct {v3, v0, v1}, Lfss;-><init>(Lhmm;Lcom/google/android/apps/camera/util/ApiHelper;)V
 
-    .line 9
     invoke-static {v2, v3}, Lkk;->a(Liyb;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lfss;
 
-    .line 10
     return-object v0
 .end method

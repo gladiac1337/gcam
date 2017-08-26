@@ -18,11 +18,8 @@
 .method constructor <init>([B)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lipz;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -31,7 +28,6 @@
 
     iput-object v0, p0, Liqa;->a:[B
 
-    .line 3
     return-void
 .end method
 
@@ -40,8 +36,6 @@
 .method public final a()I
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Liqa;->a:[B
 
     array-length v0, v0
@@ -54,12 +48,10 @@
 .method final a(Lipz;)Z
     .locals 6
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v1, 0x0
 
-    .line 17
     iget-object v0, p0, Liqa;->a:[B
 
     array-length v0, v0
@@ -72,7 +64,6 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 23
     :goto_0
     return v1
 
@@ -81,7 +72,6 @@
 
     move v2, v3
 
-    .line 20
     :goto_1
     iget-object v4, p0, Liqa;->a:[B
 
@@ -89,7 +79,6 @@
 
     if-ge v0, v4, :cond_2
 
-    .line 21
     iget-object v4, p0, Liqa;->a:[B
 
     aget-byte v4, v4, v0
@@ -107,7 +96,6 @@
     :goto_2
     and-int/2addr v2, v4
 
-    .line 22
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -115,25 +103,21 @@
     :cond_1
     move v4, v1
 
-    .line 21
     goto :goto_2
 
     :cond_2
     move v1, v2
 
-    .line 23
     goto :goto_0
 .end method
 
 .method public final b()I
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 6
     iget-object v0, p0, Liqa;->a:[B
 
     array-length v0, v0
@@ -153,7 +137,6 @@
 
     invoke-static {v0, v3, v4}, Lid;->b(ZLjava/lang/String;I)V
 
-    .line 7
     iget-object v0, p0, Liqa;->a:[B
 
     aget-byte v0, v0, v2
@@ -199,21 +182,18 @@
     :cond_0
     move v0, v2
 
-    .line 6
     goto :goto_0
 .end method
 
 .method public final c()J
     .locals 9
 
-    .prologue
     const/16 v8, 0x8
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 8
     iget-object v0, p0, Liqa;->a:[B
 
     array-length v0, v0
@@ -231,7 +211,6 @@
 
     invoke-static {v0, v3, v4}, Lid;->b(ZLjava/lang/String;I)V
 
-    .line 10
     iget-object v0, p0, Liqa;->a:[B
 
     aget-byte v0, v0, v2
@@ -240,7 +219,6 @@
 
     int-to-long v2, v0
 
-    .line 11
     :goto_1
     iget-object v0, p0, Liqa;->a:[B
 
@@ -252,7 +230,6 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 12
     iget-object v0, p0, Liqa;->a:[B
 
     aget-byte v0, v0, v1
@@ -269,7 +246,6 @@
 
     or-long/2addr v2, v4
 
-    .line 13
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
@@ -277,10 +253,8 @@
     :cond_0
     move v0, v2
 
-    .line 8
     goto :goto_0
 
-    .line 15
     :cond_1
     return-wide v2
 .end method
@@ -288,8 +262,6 @@
 .method public final d()[B
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Liqa;->a:[B
 
     invoke-virtual {v0}, [B->clone()Ljava/lang/Object;
@@ -304,8 +276,6 @@
 .method final e()[B
     .locals 1
 
-    .prologue
-    .line 16
     iget-object v0, p0, Liqa;->a:[B
 
     return-object v0

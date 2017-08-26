@@ -32,11 +32,8 @@
 .method public constructor <init>(Lhji;Lffx;Leek;Lfyx;Lefe;Ldqd;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const-string v0, "LSRprcssngIS"
 
     invoke-interface {p1, v0}, Lhji;->a(Ljava/lang/String;)Lhjh;
@@ -45,16 +42,12 @@
 
     iput-object v0, p0, Ldpq;->a:Lhjh;
 
-    .line 3
     iput-object p2, p0, Ldpq;->e:Lffx;
 
-    .line 4
     iput-object p6, p0, Ldpq;->g:Ldqd;
 
-    .line 5
     iput-object p3, p0, Ldpq;->b:Leek;
 
-    .line 6
     const-string v0, "LuckyShotEx"
 
     invoke-static {v0}, Lkk;->m(Ljava/lang/String;)Ljava/util/concurrent/ExecutorService;
@@ -63,16 +56,12 @@
 
     iput-object v0, p0, Ldpq;->c:Ljava/util/concurrent/Executor;
 
-    .line 8
     iget-object v0, p4, Lfyx;->d:Landroid/graphics/Rect;
 
-    .line 9
     iput-object v0, p0, Ldpq;->d:Landroid/graphics/Rect;
 
-    .line 10
     iput-object p5, p0, Ldpq;->f:Lefe;
 
-    .line 11
     return-void
 .end method
 
@@ -81,8 +70,6 @@
 .method public final a()Lavm;
     .locals 1
 
-    .prologue
-    .line 16
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -99,15 +86,12 @@
 .method public final a(Ldvs;)Ldqe;
     .locals 6
 
-    .prologue
-    .line 12
     iget-object v0, p0, Ldpq;->g:Ldqd;
 
     invoke-interface {v0, p1}, Ldqd;->a(Ldvs;)Ldqe;
 
     move-result-object v3
 
-    .line 13
     new-instance v0, Ldpr;
 
     iget-object v4, p0, Ldpq;->e:Lffx;
@@ -126,15 +110,12 @@
 .method public final b(Ldvs;)Ldqe;
     .locals 6
 
-    .prologue
-    .line 14
     iget-object v0, p0, Ldpq;->g:Ldqd;
 
     invoke-interface {v0, p1}, Ldqd;->b(Ldvs;)Ldqe;
 
     move-result-object v3
 
-    .line 15
     new-instance v0, Ldpr;
 
     iget-object v4, p0, Ldpq;->e:Lffx;
@@ -153,8 +134,6 @@
 .method public final b()Lduu;
     .locals 1
 
-    .prologue
-    .line 17
     iget-object v0, p0, Ldpq;->g:Ldqd;
 
     invoke-interface {v0}, Ldqd;->b()Lduu;

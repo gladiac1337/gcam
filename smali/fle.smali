@@ -83,311 +83,260 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/16 v0, 0x10
 
     new-array v0, v0, [D
 
     iput-object v0, p0, Lfle;->a:[D
 
-    .line 3
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->b:Lfjl;
 
-    .line 4
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->d:Lfjl;
 
-    .line 5
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->e:Lfjl;
 
-    .line 6
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->f:Lfjl;
 
-    .line 7
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->g:Lfjl;
 
-    .line 8
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->h:Lfjl;
 
-    .line 9
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->i:Lfjl;
 
-    .line 10
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->j:Lfjl;
 
-    .line 11
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->k:Lfjl;
 
-    .line 12
     new-instance v0, Lfjo;
 
     invoke-direct {v0}, Lfjo;-><init>()V
 
     iput-object v0, p0, Lfle;->l:Lfjo;
 
-    .line 13
     new-instance v0, Lfjo;
 
     invoke-direct {v0}, Lfjo;-><init>()V
 
     iput-object v0, p0, Lfle;->m:Lfjo;
 
-    .line 14
     new-instance v0, Lfjo;
 
     invoke-direct {v0}, Lfjo;-><init>()V
 
     iput-object v0, p0, Lfle;->n:Lfjo;
 
-    .line 15
     new-instance v0, Lfjo;
 
     invoke-direct {v0}, Lfjo;-><init>()V
 
     iput-object v0, p0, Lfle;->o:Lfjo;
 
-    .line 16
     new-instance v0, Lfjo;
 
     invoke-direct {v0}, Lfjo;-><init>()V
 
     iput-object v0, p0, Lfle;->p:Lfjo;
 
-    .line 17
     new-instance v0, Lfjo;
 
     invoke-direct {v0}, Lfjo;-><init>()V
 
     iput-object v0, p0, Lfle;->q:Lfjo;
 
-    .line 18
     new-instance v0, Lfjo;
 
     invoke-direct {v0}, Lfjo;-><init>()V
 
     iput-object v0, p0, Lfle;->r:Lfjo;
 
-    .line 19
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lfle;->u:Z
 
-    .line 20
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lfle;->w:Z
 
-    .line 21
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->x:Lfjl;
 
-    .line 22
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->y:Lfjl;
 
-    .line 23
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->z:Lfjl;
 
-    .line 24
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->A:Lfjl;
 
-    .line 25
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->B:Lfjl;
 
-    .line 26
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->C:Lfjl;
 
-    .line 27
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->D:Lfjl;
 
-    .line 28
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->E:Lfjl;
 
-    .line 29
     new-instance v0, Lfjo;
 
     invoke-direct {v0}, Lfjo;-><init>()V
 
     iput-object v0, p0, Lfle;->F:Lfjo;
 
-    .line 30
     new-instance v0, Lfjo;
 
     invoke-direct {v0}, Lfjo;-><init>()V
 
     iput-object v0, p0, Lfle;->G:Lfjo;
 
-    .line 31
     new-instance v0, Lfjo;
 
     invoke-direct {v0}, Lfjo;-><init>()V
 
     iput-object v0, p0, Lfle;->H:Lfjo;
 
-    .line 32
     new-instance v0, Lfjo;
 
     invoke-direct {v0}, Lfjo;-><init>()V
 
-    .line 33
     new-instance v0, Lfjo;
 
     invoke-direct {v0}, Lfjo;-><init>()V
 
-    .line 34
     new-instance v0, Lfjo;
 
     invoke-direct {v0}, Lfjo;-><init>()V
 
-    .line 35
     new-instance v0, Lfjo;
 
     invoke-direct {v0}, Lfjo;-><init>()V
 
-    .line 36
     new-instance v0, Lfjo;
 
     invoke-direct {v0}, Lfjo;-><init>()V
 
-    .line 37
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
-    .line 38
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
-    .line 39
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
-    .line 40
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
-    .line 41
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
-    .line 42
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->I:Lfjl;
 
-    .line 43
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->J:Lfjl;
 
-    .line 44
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
     iput-object v0, p0, Lfle;->K:Lfjl;
 
-    .line 45
     new-instance v0, Lfjl;
 
     invoke-direct {v0}, Lfjl;-><init>()V
 
-    .line 46
     invoke-virtual {p0}, Lfle;->a()V
 
-    .line 47
     return-void
 .end method
 
 .method private final a(Lfjl;Lfjo;)V
     .locals 3
 
-    .prologue
-    .line 205
     iget-object v0, p0, Lfle;->q:Lfjo;
 
     iget-object v1, p0, Lfle;->n:Lfjo;
 
     invoke-static {p1, v0, v1}, Lfjl;->a(Lfjl;Lfjo;Lfjo;)V
 
-    .line 206
     iget-object v0, p0, Lfle;->n:Lfjo;
 
     iget-object v1, p0, Lfle;->m:Lfjo;
@@ -396,27 +345,22 @@
 
     invoke-static {v0, v1, v2}, Lfli;->a(Lfjo;Lfjo;Lfjl;)V
 
-    .line 207
     iget-object v0, p0, Lfle;->K:Lfjl;
 
     invoke-static {v0, p2}, Lfli;->a(Lfjl;Lfjo;)V
 
-    .line 208
     return-void
 .end method
 
 .method private final c()V
     .locals 3
 
-    .prologue
-    .line 200
     iget-object v0, p0, Lfle;->d:Lfjl;
 
     iget-object v1, p0, Lfle;->I:Lfjl;
 
     invoke-virtual {v0, v1}, Lfjl;->b(Lfjl;)V
 
-    .line 201
     iget-object v0, p0, Lfle;->e:Lfjl;
 
     iget-object v1, p0, Lfle;->I:Lfjl;
@@ -425,7 +369,6 @@
 
     invoke-static {v0, v1, v2}, Lfjl;->a(Lfjl;Lfjl;Lfjl;)V
 
-    .line 202
     iget-object v0, p0, Lfle;->d:Lfjl;
 
     iget-object v1, p0, Lfle;->J:Lfjl;
@@ -434,12 +377,10 @@
 
     invoke-static {v0, v1, v2}, Lfjl;->a(Lfjl;Lfjl;Lfjl;)V
 
-    .line 203
     iget-object v0, p0, Lfle;->d:Lfjl;
 
     invoke-virtual {v0}, Lfjl;->b()V
 
-    .line 204
     return-void
 .end method
 
@@ -448,116 +389,94 @@
 .method public final a()V
     .locals 10
 
-    .prologue
     const-wide/16 v0, 0x0
 
     const-wide/high16 v8, 0x3ff0000000000000L    # 1.0
 
     const-wide/16 v2, 0x0
 
-    .line 48
     iput-wide v0, p0, Lfle;->s:J
 
-    .line 49
     iput-wide v0, p0, Lfle;->c:J
 
-    .line 50
     iget-object v0, p0, Lfle;->b:Lfjl;
 
     invoke-virtual {v0}, Lfjl;->b()V
 
-    .line 51
     iget-object v0, p0, Lfle;->d:Lfjl;
 
     invoke-virtual {v0}, Lfjl;->b()V
 
-    .line 52
     iget-object v0, p0, Lfle;->e:Lfjl;
 
     invoke-virtual {v0}, Lfjl;->a()V
 
-    .line 53
     iget-object v0, p0, Lfle;->e:Lfjl;
 
     const-wide/high16 v4, 0x4039000000000000L    # 25.0
 
     invoke-virtual {v0, v4, v5}, Lfjl;->a(D)V
 
-    .line 54
     iget-object v0, p0, Lfle;->f:Lfjl;
 
     invoke-virtual {v0}, Lfjl;->a()V
 
-    .line 55
     iget-object v0, p0, Lfle;->f:Lfjl;
 
     invoke-virtual {v0, v8, v9}, Lfjl;->a(D)V
 
-    .line 56
     iget-object v0, p0, Lfle;->g:Lfjl;
 
     invoke-virtual {v0}, Lfjl;->a()V
 
-    .line 57
     iget-object v0, p0, Lfle;->g:Lfjl;
 
     const-wide/high16 v4, 0x3fb0000000000000L    # 0.0625
 
     invoke-virtual {v0, v4, v5}, Lfjl;->a(D)V
 
-    .line 58
     iget-object v0, p0, Lfle;->h:Lfjl;
 
     invoke-virtual {v0}, Lfjl;->a()V
 
-    .line 59
     iget-object v0, p0, Lfle;->h:Lfjl;
 
     const-wide/high16 v4, 0x3fe2000000000000L    # 0.5625
 
     invoke-virtual {v0, v4, v5}, Lfjl;->a(D)V
 
-    .line 60
     iget-object v0, p0, Lfle;->i:Lfjl;
 
     invoke-virtual {v0}, Lfjl;->a()V
 
-    .line 61
     iget-object v0, p0, Lfle;->j:Lfjl;
 
     invoke-virtual {v0}, Lfjl;->a()V
 
-    .line 62
     iget-object v0, p0, Lfle;->k:Lfjl;
 
     invoke-virtual {v0}, Lfjl;->a()V
 
-    .line 63
     iget-object v0, p0, Lfle;->l:Lfjo;
 
     invoke-virtual {v0}, Lfjo;->a()V
 
-    .line 64
     iget-object v0, p0, Lfle;->m:Lfjo;
 
     invoke-virtual {v0}, Lfjo;->a()V
 
-    .line 65
     iget-object v0, p0, Lfle;->n:Lfjo;
 
     invoke-virtual {v0}, Lfjo;->a()V
 
-    .line 66
     iget-object v0, p0, Lfle;->o:Lfjo;
 
     invoke-virtual {v0}, Lfjo;->a()V
 
-    .line 67
     iget-object v0, p0, Lfle;->p:Lfjo;
 
     invoke-virtual {v0}, Lfjo;->a()V
 
-    .line 68
     iget-object v1, p0, Lfle;->q:Lfjo;
 
     const-wide v6, 0x40239eb851eb851fL    # 9.81
@@ -566,7 +485,6 @@
 
     invoke-virtual/range {v1 .. v7}, Lfjo;->a(DDD)V
 
-    .line 69
     iget-object v1, p0, Lfle;->r:Lfjo;
 
     move-wide v4, v8
@@ -575,15 +493,12 @@
 
     invoke-virtual/range {v1 .. v7}, Lfjo;->a(DDD)V
 
-    .line 70
     return-void
 .end method
 
 .method public final declared-synchronized a(D)V
     .locals 23
 
-    .prologue
-    .line 82
     monitor-enter p0
 
     :try_start_0
@@ -591,10 +506,8 @@
 
     move-result-wide v2
 
-    .line 83
     sub-double v2, p1, v2
 
-    .line 84
     const-wide v4, 0x4066800000000000L    # 180.0
 
     div-double v4, v2, v4
@@ -607,7 +520,6 @@
 
     move-result-wide v4
 
-    .line 85
     const-wide v6, 0x4066800000000000L    # 180.0
 
     div-double/2addr v2, v6
@@ -620,7 +532,6 @@
 
     move-result-wide v2
 
-    .line 86
     const/4 v6, 0x3
 
     new-array v0, v6, [[D
@@ -683,12 +594,10 @@
 
     aput-object v3, v20, v2
 
-    .line 87
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lfle;->x:Lfjl;
 
-    .line 88
     const/4 v2, 0x0
 
     aget-object v2, v20, v2
@@ -763,7 +672,6 @@
 
     invoke-virtual/range {v3 .. v21}, Lfjl;->a(DDDDDDDDD)V
 
-    .line 89
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lfle;->b:Lfjl;
@@ -780,12 +688,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 90
     monitor-exit p0
 
     return-void
 
-    .line 82
     :catchall_0
     move-exception v2
 
@@ -793,7 +699,6 @@
 
     throw v2
 
-    .line 86
     nop
 
     :array_0
@@ -807,8 +712,6 @@
 .method public final declared-synchronized a([FJ)V
     .locals 8
 
-    .prologue
-    .line 91
     monitor-enter p0
 
     :try_start_0
@@ -820,7 +723,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 92
     iget-wide v0, p0, Lfle;->s:J
 
     sub-long v0, p2, v0
@@ -831,21 +733,18 @@
 
     mul-float/2addr v0, v1
 
-    .line 93
     const v1, 0x3d23d70a    # 0.04f
 
     cmpl-float v1, v0, v1
 
     if-lez v1, :cond_3
 
-    .line 94
     iget-boolean v0, p0, Lfle;->w:Z
 
     if-eqz v0, :cond_2
 
     iget v0, p0, Lfle;->t:F
 
-    .line 103
     :cond_0
     :goto_0
     iget-object v1, p0, Lfle;->o:Lfjo;
@@ -882,21 +781,18 @@
 
     invoke-virtual/range {v1 .. v7}, Lfjo;->a(DDD)V
 
-    .line 104
     iget-object v1, p0, Lfle;->o:Lfjo;
 
     iget-object v2, p0, Lfle;->d:Lfjl;
 
     invoke-static {v1, v2}, Lfli;->a(Lfjo;Lfjl;)V
 
-    .line 105
     iget-object v1, p0, Lfle;->y:Lfjl;
 
     iget-object v2, p0, Lfle;->b:Lfjl;
 
     invoke-virtual {v1, v2}, Lfjl;->a(Lfjl;)V
 
-    .line 106
     iget-object v1, p0, Lfle;->d:Lfjl;
 
     iget-object v2, p0, Lfle;->b:Lfjl;
@@ -905,31 +801,26 @@
 
     invoke-static {v1, v2, v3}, Lfjl;->a(Lfjl;Lfjl;Lfjl;)V
 
-    .line 107
     iget-object v1, p0, Lfle;->b:Lfjl;
 
     iget-object v2, p0, Lfle;->y:Lfjl;
 
     invoke-virtual {v1, v2}, Lfjl;->a(Lfjl;)V
 
-    .line 108
     invoke-direct {p0}, Lfle;->c()V
 
-    .line 109
     iget-object v1, p0, Lfle;->z:Lfjl;
 
     iget-object v2, p0, Lfle;->f:Lfjl;
 
     invoke-virtual {v1, v2}, Lfjl;->a(Lfjl;)V
 
-    .line 110
     iget-object v1, p0, Lfle;->z:Lfjl;
 
     mul-float/2addr v0, v0
 
     float-to-double v2, v0
 
-    .line 111
     iget-object v0, v1, Lfjl;->a:[D
 
     const/4 v4, 0x0
@@ -940,7 +831,6 @@
 
     aput-wide v6, v0, v4
 
-    .line 112
     iget-object v0, v1, Lfjl;->a:[D
 
     const/4 v4, 0x1
@@ -951,7 +841,6 @@
 
     aput-wide v6, v0, v4
 
-    .line 113
     iget-object v0, v1, Lfjl;->a:[D
 
     const/4 v4, 0x2
@@ -962,7 +851,6 @@
 
     aput-wide v6, v0, v4
 
-    .line 114
     iget-object v0, v1, Lfjl;->a:[D
 
     const/4 v4, 0x3
@@ -973,7 +861,6 @@
 
     aput-wide v6, v0, v4
 
-    .line 115
     iget-object v0, v1, Lfjl;->a:[D
 
     const/4 v4, 0x4
@@ -984,7 +871,6 @@
 
     aput-wide v6, v0, v4
 
-    .line 116
     iget-object v0, v1, Lfjl;->a:[D
 
     const/4 v4, 0x5
@@ -995,7 +881,6 @@
 
     aput-wide v6, v0, v4
 
-    .line 117
     iget-object v0, v1, Lfjl;->a:[D
 
     const/4 v4, 0x6
@@ -1006,7 +891,6 @@
 
     aput-wide v6, v0, v4
 
-    .line 118
     iget-object v0, v1, Lfjl;->a:[D
 
     const/4 v4, 0x7
@@ -1017,7 +901,6 @@
 
     aput-wide v6, v0, v4
 
-    .line 119
     iget-object v0, v1, Lfjl;->a:[D
 
     const/16 v1, 0x8
@@ -1028,12 +911,10 @@
 
     aput-wide v2, v0, v1
 
-    .line 120
     iget-object v0, p0, Lfle;->e:Lfjl;
 
     iget-object v1, p0, Lfle;->z:Lfjl;
 
-    .line 121
     iget-object v2, v0, Lfjl;->a:[D
 
     const/4 v3, 0x0
@@ -1050,7 +931,6 @@
 
     aput-wide v4, v2, v3
 
-    .line 122
     iget-object v2, v0, Lfjl;->a:[D
 
     const/4 v3, 0x1
@@ -1067,7 +947,6 @@
 
     aput-wide v4, v2, v3
 
-    .line 123
     iget-object v2, v0, Lfjl;->a:[D
 
     const/4 v3, 0x2
@@ -1084,7 +963,6 @@
 
     aput-wide v4, v2, v3
 
-    .line 124
     iget-object v2, v0, Lfjl;->a:[D
 
     const/4 v3, 0x3
@@ -1101,7 +979,6 @@
 
     aput-wide v4, v2, v3
 
-    .line 125
     iget-object v2, v0, Lfjl;->a:[D
 
     const/4 v3, 0x4
@@ -1118,7 +995,6 @@
 
     aput-wide v4, v2, v3
 
-    .line 126
     iget-object v2, v0, Lfjl;->a:[D
 
     const/4 v3, 0x5
@@ -1135,7 +1011,6 @@
 
     aput-wide v4, v2, v3
 
-    .line 127
     iget-object v2, v0, Lfjl;->a:[D
 
     const/4 v3, 0x6
@@ -1152,7 +1027,6 @@
 
     aput-wide v4, v2, v3
 
-    .line 128
     iget-object v2, v0, Lfjl;->a:[D
 
     const/4 v3, 0x7
@@ -1169,7 +1043,6 @@
 
     aput-wide v4, v2, v3
 
-    .line 129
     iget-object v0, v0, Lfjl;->a:[D
 
     const/16 v2, 0x8
@@ -1186,39 +1059,32 @@
 
     aput-wide v4, v0, v2
 
-    .line 130
     :cond_1
     iput-wide p2, p0, Lfle;->s:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 131
     monitor-exit p0
 
     return-void
 
-    .line 94
     :cond_2
     const v0, 0x3c23d70a    # 0.01f
 
     goto/16 :goto_0
 
-    .line 96
     :cond_3
     :try_start_1
     iget-boolean v1, p0, Lfle;->u:Z
 
     if-nez v1, :cond_4
 
-    .line 97
     iput v0, p0, Lfle;->t:F
 
-    .line 98
     const/4 v1, 0x1
 
     iput v1, p0, Lfle;->v:I
 
-    .line 99
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lfle;->u:Z
@@ -1227,7 +1093,6 @@
 
     goto/16 :goto_0
 
-    .line 91
     :catchall_0
     move-exception v0
 
@@ -1235,7 +1100,6 @@
 
     throw v0
 
-    .line 100
     :cond_4
     const v1, 0x3f733333    # 0.95f
 
@@ -1252,7 +1116,6 @@
 
     iput v1, p0, Lfle;->t:F
 
-    .line 101
     iget v1, p0, Lfle;->v:I
 
     add-int/lit8 v1, v1, 0x1
@@ -1267,7 +1130,6 @@
 
     if-lez v1, :cond_0
 
-    .line 102
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lfle;->w:Z
@@ -1280,14 +1142,12 @@
 .method public final b()D
     .locals 12
 
-    .prologue
     const/4 v6, 0x2
 
     const-wide/16 v0, 0x0
 
     const-wide v10, 0x4076800000000000L    # 360.0
 
-    .line 71
     iget-object v2, p0, Lfle;->b:Lfjl;
 
     const/4 v3, 0x0
@@ -1296,7 +1156,6 @@
 
     move-result-wide v2
 
-    .line 72
     iget-object v4, p0, Lfle;->b:Lfjl;
 
     const/4 v5, 0x1
@@ -1305,7 +1164,6 @@
 
     move-result-wide v4
 
-    .line 73
     mul-double v6, v2, v2
 
     mul-double v8, v4, v4
@@ -1316,19 +1174,16 @@
 
     move-result-wide v6
 
-    .line 74
     const-wide v8, 0x3fb999999999999aL    # 0.1
 
     cmpg-double v6, v6, v8
 
     if-gez v6, :cond_1
 
-    .line 81
     :cond_0
     :goto_0
     return-wide v0
 
-    .line 76
     :cond_1
     const-wide v6, -0x3fa9800000000000L    # -90.0
 
@@ -1346,21 +1201,17 @@
 
     sub-double v2, v6, v2
 
-    .line 77
     cmpg-double v0, v2, v0
 
     if-gez v0, :cond_2
 
-    .line 78
     add-double v0, v2, v10
 
-    .line 79
     :goto_1
     cmpl-double v2, v0, v10
 
     if-ltz v2, :cond_0
 
-    .line 80
     sub-double/2addr v0, v10
 
     goto :goto_0
@@ -1374,8 +1225,6 @@
 .method public final declared-synchronized b([FJ)V
     .locals 30
 
-    .prologue
-    .line 132
     monitor-enter p0
 
     :try_start_0
@@ -1403,7 +1252,6 @@
 
     invoke-virtual/range {v5 .. v11}, Lfjo;->a(DDD)V
 
-    .line 133
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lfle;->c:J
@@ -1414,7 +1262,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 134
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfle;->b:Lfjl;
@@ -1427,7 +1274,6 @@
 
     invoke-direct {v0, v4, v5}, Lfle;->a(Lfjl;Lfjo;)V
 
-    .line 135
     const/4 v4, 0x0
 
     :goto_0
@@ -1435,23 +1281,18 @@
 
     if-ge v4, v5, :cond_2
 
-    .line 136
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lfle;->H:Lfjo;
 
-    .line 137
     invoke-virtual {v5}, Lfjo;->a()V
 
-    .line 139
     if-nez v4, :cond_0
 
-    .line 140
     const-wide v6, 0x3e7ad7f29abcaf48L    # 1.0E-7
 
     iput-wide v6, v5, Lfjo;->a:D
 
-    .line 144
     :goto_1
     move-object/from16 v0, p0
 
@@ -1459,7 +1300,6 @@
 
     invoke-static {v5, v6}, Lfli;->a(Lfjo;Lfjl;)V
 
-    .line 145
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lfle;->A:Lfjl;
@@ -1474,7 +1314,6 @@
 
     invoke-static {v5, v6, v7}, Lfjl;->a(Lfjl;Lfjl;Lfjl;)V
 
-    .line 146
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lfle;->B:Lfjl;
@@ -1487,12 +1326,10 @@
 
     invoke-direct {v0, v5, v6}, Lfle;->a(Lfjl;Lfjo;)V
 
-    .line 147
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lfle;->F:Lfjo;
 
-    .line 148
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lfle;->l:Lfjo;
@@ -1501,7 +1338,6 @@
 
     iget-object v5, v0, Lfle;->G:Lfjo;
 
-    .line 149
     iget-wide v6, v11, Lfjo;->a:D
 
     iget-wide v8, v10, Lfjo;->a:D
@@ -1522,7 +1358,6 @@
 
     invoke-virtual/range {v5 .. v11}, Lfjo;->a(DDD)V
 
-    .line 150
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lfle;->G:Lfjo;
@@ -1531,7 +1366,6 @@
 
     invoke-virtual {v5, v6, v7}, Lfjo;->a(D)V
 
-    .line 151
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lfle;->j:Lfjl;
@@ -1542,18 +1376,15 @@
 
     invoke-virtual {v5, v4, v6}, Lfjl;->a(ILfjo;)V
 
-    .line 152
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 141
     :cond_0
     const/4 v6, 0x1
 
     if-ne v4, v6, :cond_1
 
-    .line 142
     const-wide v6, 0x3e7ad7f29abcaf48L    # 1.0E-7
 
     iput-wide v6, v5, Lfjo;->b:D
@@ -1562,7 +1393,6 @@
 
     goto :goto_1
 
-    .line 132
     :catchall_0
     move-exception v4
 
@@ -1570,7 +1400,6 @@
 
     throw v4
 
-    .line 143
     :cond_1
     const-wide v6, 0x3e7ad7f29abcaf48L    # 1.0E-7
 
@@ -1579,7 +1408,6 @@
 
     goto :goto_1
 
-    .line 153
     :cond_2
     move-object/from16 v0, p0
 
@@ -1591,7 +1419,6 @@
 
     invoke-virtual {v4, v5}, Lfjl;->b(Lfjl;)V
 
-    .line 154
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfle;->e:Lfjl;
@@ -1606,7 +1433,6 @@
 
     invoke-static {v4, v5, v6}, Lfjl;->a(Lfjl;Lfjl;Lfjl;)V
 
-    .line 155
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfle;->j:Lfjl;
@@ -1621,7 +1447,6 @@
 
     invoke-static {v4, v5, v6}, Lfjl;->a(Lfjl;Lfjl;Lfjl;)V
 
-    .line 156
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfle;->E:Lfjl;
@@ -1634,7 +1459,6 @@
 
     iget-object v6, v0, Lfle;->i:Lfjl;
 
-    .line 157
     iget-object v7, v6, Lfjl;->a:[D
 
     const/4 v8, 0x0
@@ -1655,7 +1479,6 @@
 
     aput-wide v10, v7, v8
 
-    .line 158
     iget-object v7, v6, Lfjl;->a:[D
 
     const/4 v8, 0x1
@@ -1676,7 +1499,6 @@
 
     aput-wide v10, v7, v8
 
-    .line 159
     iget-object v7, v6, Lfjl;->a:[D
 
     const/4 v8, 0x2
@@ -1697,7 +1519,6 @@
 
     aput-wide v10, v7, v8
 
-    .line 160
     iget-object v7, v6, Lfjl;->a:[D
 
     const/4 v8, 0x3
@@ -1718,7 +1539,6 @@
 
     aput-wide v10, v7, v8
 
-    .line 161
     iget-object v7, v6, Lfjl;->a:[D
 
     const/4 v8, 0x4
@@ -1739,7 +1559,6 @@
 
     aput-wide v10, v7, v8
 
-    .line 162
     iget-object v7, v6, Lfjl;->a:[D
 
     const/4 v8, 0x5
@@ -1760,7 +1579,6 @@
 
     aput-wide v10, v7, v8
 
-    .line 163
     iget-object v7, v6, Lfjl;->a:[D
 
     const/4 v8, 0x6
@@ -1781,7 +1599,6 @@
 
     aput-wide v10, v7, v8
 
-    .line 164
     iget-object v7, v6, Lfjl;->a:[D
 
     const/4 v8, 0x7
@@ -1802,7 +1619,6 @@
 
     aput-wide v10, v7, v8
 
-    .line 165
     iget-object v6, v6, Lfjl;->a:[D
 
     const/16 v7, 0x8
@@ -1823,7 +1639,6 @@
 
     aput-wide v4, v6, v7
 
-    .line 166
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfle;->i:Lfjl;
@@ -1832,7 +1647,6 @@
 
     iget-object v5, v0, Lfle;->C:Lfjl;
 
-    .line 168
     const/4 v6, 0x0
 
     const/4 v7, 0x0
@@ -1885,7 +1699,6 @@
 
     const/4 v9, 0x1
 
-    .line 169
     invoke-virtual {v4, v8, v9}, Lfjl;->a(II)D
 
     move-result-wide v8
@@ -1936,7 +1749,6 @@
 
     const/4 v9, 0x2
 
-    .line 170
     invoke-virtual {v4, v8, v9}, Lfjl;->a(II)D
 
     move-result-wide v8
@@ -1983,19 +1795,16 @@
 
     add-double/2addr v6, v8
 
-    .line 172
     const-wide/16 v8, 0x0
 
     cmpl-double v8, v6, v8
 
     if-eqz v8, :cond_3
 
-    .line 173
     const-wide/high16 v8, 0x3ff0000000000000L    # 1.0
 
     div-double v22, v8, v6
 
-    .line 174
     iget-object v6, v4, Lfjl;->a:[D
 
     const/4 v7, 0x4
@@ -2340,7 +2149,6 @@
 
     invoke-virtual/range {v5 .. v23}, Lfjl;->a(DDDDDDDDD)V
 
-    .line 175
     :cond_3
     move-object/from16 v0, p0
 
@@ -2352,7 +2160,6 @@
 
     invoke-virtual {v4, v5}, Lfjl;->b(Lfjl;)V
 
-    .line 176
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfle;->D:Lfjl;
@@ -2367,7 +2174,6 @@
 
     invoke-static {v4, v5, v6}, Lfjl;->a(Lfjl;Lfjl;Lfjl;)V
 
-    .line 177
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfle;->e:Lfjl;
@@ -2382,7 +2188,6 @@
 
     invoke-static {v4, v5, v6}, Lfjl;->a(Lfjl;Lfjl;Lfjl;)V
 
-    .line 178
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfle;->k:Lfjl;
@@ -2397,7 +2202,6 @@
 
     invoke-static {v4, v5, v6}, Lfjl;->a(Lfjl;Lfjo;Lfjo;)V
 
-    .line 179
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfle;->k:Lfjl;
@@ -2412,14 +2216,12 @@
 
     invoke-static {v4, v5, v6}, Lfjl;->a(Lfjl;Lfjl;Lfjl;)V
 
-    .line 180
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfle;->D:Lfjl;
 
     invoke-virtual {v4}, Lfjl;->b()V
 
-    .line 181
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfle;->D:Lfjl;
@@ -2428,7 +2230,6 @@
 
     iget-object v5, v0, Lfle;->C:Lfjl;
 
-    .line 182
     iget-object v6, v4, Lfjl;->a:[D
 
     const/4 v7, 0x0
@@ -2445,7 +2246,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 183
     iget-object v6, v4, Lfjl;->a:[D
 
     const/4 v7, 0x1
@@ -2462,7 +2262,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 184
     iget-object v6, v4, Lfjl;->a:[D
 
     const/4 v7, 0x2
@@ -2479,7 +2278,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 185
     iget-object v6, v4, Lfjl;->a:[D
 
     const/4 v7, 0x3
@@ -2496,7 +2294,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 186
     iget-object v6, v4, Lfjl;->a:[D
 
     const/4 v7, 0x4
@@ -2513,7 +2310,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 187
     iget-object v6, v4, Lfjl;->a:[D
 
     const/4 v7, 0x5
@@ -2530,7 +2326,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 188
     iget-object v6, v4, Lfjl;->a:[D
 
     const/4 v7, 0x6
@@ -2547,7 +2342,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 189
     iget-object v6, v4, Lfjl;->a:[D
 
     const/4 v7, 0x7
@@ -2564,7 +2358,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 190
     iget-object v4, v4, Lfjl;->a:[D
 
     const/16 v6, 0x8
@@ -2581,7 +2374,6 @@
 
     aput-wide v8, v4, v6
 
-    .line 191
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfle;->D:Lfjl;
@@ -2596,7 +2388,6 @@
 
     invoke-static {v4, v5, v6}, Lfjl;->a(Lfjl;Lfjl;Lfjl;)V
 
-    .line 192
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfle;->e:Lfjl;
@@ -2607,7 +2398,6 @@
 
     invoke-virtual {v4, v5}, Lfjl;->a(Lfjl;)V
 
-    .line 193
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfle;->p:Lfjo;
@@ -2618,7 +2408,6 @@
 
     invoke-static {v4, v5}, Lfli;->a(Lfjo;Lfjl;)V
 
-    .line 194
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfle;->d:Lfjl;
@@ -2633,10 +2422,8 @@
 
     invoke-static {v4, v5, v6}, Lfjl;->a(Lfjl;Lfjl;Lfjl;)V
 
-    .line 195
     invoke-direct/range {p0 .. p0}, Lfle;->c()V
 
-    .line 198
     :goto_2
     move-wide/from16 v0, p2
 
@@ -2646,12 +2433,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 199
     monitor-exit p0
 
     return-void
 
-    .line 197
     :cond_4
     :try_start_2
     move-object/from16 v0, p0

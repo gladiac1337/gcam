@@ -25,8 +25,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 97
     const-string v0, "PanoMetadata"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -41,76 +39,54 @@
 .method private constructor <init>(II)V
     .locals 1
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
-    .line 11
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
-    .line 12
     iput-boolean v0, p0, Lfrc;->b:Z
 
-    .line 13
     iput p1, p0, Lfrc;->c:I
 
-    .line 14
     iput p2, p0, Lfrc;->d:I
 
-    .line 15
     iput p1, p0, Lfrc;->e:I
 
-    .line 16
     iput p2, p0, Lfrc;->f:I
 
-    .line 17
     iput-boolean v0, p0, Lfrc;->g:Z
 
-    .line 18
     return-void
 .end method
 
 .method private constructor <init>(ZIIII)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-boolean p1, p0, Lfrc;->b:Z
 
-    .line 3
     iput p2, p0, Lfrc;->c:I
 
-    .line 4
     iput p3, p0, Lfrc;->d:I
 
-    .line 5
     iput p4, p0, Lfrc;->e:I
 
-    .line 6
     iput p5, p0, Lfrc;->f:I
 
-    .line 7
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lfrc;->g:Z
 
-    .line 8
     return-void
 .end method
 
 .method private static a(Lud;Ljava/lang/String;)I
     .locals 1
 
-    .prologue
-    .line 90
     const-string v0, "http://ns.google.com/photos/1.0/panorama/"
 
     invoke-interface {p0, v0, p1}, Lud;->c(Ljava/lang/String;Ljava/lang/String;)Z
@@ -119,7 +95,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 91
     const-string v0, "http://ns.google.com/photos/1.0/panorama/"
 
     invoke-interface {p0, v0, p1}, Lud;->e(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Integer;
@@ -130,7 +105,6 @@
 
     move-result v0
 
-    .line 92
     :goto_0
     return v0
 
@@ -143,28 +117,23 @@
 .method private static a(Lfrb;)Lfrc;
     .locals 15
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v11, 0x0
 
     const/4 v2, 0x0
 
-    .line 20
     invoke-virtual {p0}, Lfrb;->a()Ljava/io/InputStream;
 
     move-result-object v0
 
-    .line 21
     if-nez v0, :cond_0
 
     move-object v0, v11
 
-    .line 89
     :goto_0
     return-object v0
 
-    .line 23
     :cond_0
     invoke-static {v0}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -172,41 +141,33 @@
 
     check-cast v0, Ljava/io/InputStream;
 
-    .line 30
     invoke-static {v0}, Lfqo;->a(Ljava/io/InputStream;)Lud;
 
     move-result-object v8
 
-    .line 31
     :try_start_0
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 35
     :goto_1
     if-eqz v8, :cond_a
 
-    .line 36
     :try_start_1
     const-string v0, "FirstPhotoDate"
 
     invoke-static {v8, v0}, Lfrc;->b(Lud;Ljava/lang/String;)Ljava/util/Calendar;
 
-    .line 37
     const-string v0, "LastPhotoDate"
 
     invoke-static {v8, v0}, Lfrc;->b(Lud;Ljava/lang/String;)Ljava/util/Calendar;
 
-    .line 38
     const-string v0, "SourcePhotosCount"
 
     invoke-static {v8, v0}, Lfrc;->a(Lud;Ljava/lang/String;)I
 
-    .line 39
     const-string v0, "ProjectionType"
 
-    .line 40
     const-string v3, "http://ns.google.com/photos/1.0/panorama/"
 
     invoke-interface {v8, v3, v0}, Lud;->c(Ljava/lang/String;Ljava/lang/String;)Z
@@ -215,16 +176,13 @@
 
     if-eqz v3, :cond_1
 
-    .line 41
     const-string v3, "http://ns.google.com/photos/1.0/panorama/"
 
     invoke-interface {v8, v3, v0}, Lud;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 42
     :cond_1
     const-string v0, "UsePanoramaViewer"
 
-    .line 43
     const-string v3, "http://ns.google.com/photos/1.0/panorama/"
 
     invoke-interface {v8, v3, v0}, Lud;->c(Ljava/lang/String;Ljava/lang/String;)Z
@@ -233,7 +191,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 44
     const-string v3, "http://ns.google.com/photos/1.0/panorama/"
 
     invoke-interface {v8, v3, v0}, Lud;->d(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Boolean;
@@ -246,7 +203,6 @@
 
     move-result v7
 
-    .line 47
     :goto_2
     :try_start_2
     const-string v0, "CroppedAreaImageWidthPixels"
@@ -257,7 +213,6 @@
 
     move-result v6
 
-    .line 48
     :try_start_3
     const-string v0, "CroppedAreaImageHeightPixels"
 
@@ -267,7 +222,6 @@
 
     move-result v5
 
-    .line 49
     :try_start_4
     const-string v0, "FullPanoWidthPixels"
 
@@ -277,7 +231,6 @@
 
     move-result v4
 
-    .line 50
     :try_start_5
     const-string v0, "FullPanoHeightPixels"
 
@@ -287,42 +240,33 @@
 
     move-result v3
 
-    .line 51
     :try_start_6
     const-string v0, "CroppedAreaLeftPixels"
 
     invoke-static {v8, v0}, Lfrc;->a(Lud;Ljava/lang/String;)I
 
-    .line 52
     const-string v0, "CroppedAreaTopPixels"
 
     invoke-static {v8, v0}, Lfrc;->a(Lud;Ljava/lang/String;)I
 
-    .line 53
     const-string v0, "LargestValidInteriorRectLeft"
 
     invoke-static {v8, v0}, Lfrc;->a(Lud;Ljava/lang/String;)I
 
-    .line 54
     const-string v0, "LargestValidInteriorRectTop"
 
     invoke-static {v8, v0}, Lfrc;->a(Lud;Ljava/lang/String;)I
 
-    .line 55
     const-string v0, "LargestValidInteriorRectWidth"
 
-    .line 56
     invoke-static {v8, v0}, Lfrc;->a(Lud;Ljava/lang/String;)I
 
-    .line 57
     const-string v0, "LargestValidInteriorRectHeight"
 
-    .line 58
     invoke-static {v8, v0}, Lfrc;->a(Lud;Ljava/lang/String;)I
     :try_end_6
     .catch Lub; {:try_start_6 .. :try_end_6} :catch_7
 
-    .line 59
     if-lez v6, :cond_3
 
     if-lez v5, :cond_3
@@ -346,16 +290,13 @@
 
     move v3, v0
 
-    .line 62
     :goto_4
     new-instance v4, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v4}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 63
     iput-boolean v1, v4, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 64
     invoke-virtual {p0}, Lfrb;->a()Ljava/io/InputStream;
 
     move-result-object v0
@@ -366,37 +307,29 @@
 
     check-cast v0, Ljava/io/InputStream;
 
-    .line 65
     invoke-static {v0, v11, v4}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 66
     :try_start_7
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_2
 
-    .line 70
     :goto_5
     iget v13, v4, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    .line 71
     iget v14, v4, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    .line 72
     mul-int/lit8 v0, v14, 0x2
 
     if-ne v0, v13, :cond_4
 
     move v0, v1
 
-    .line 74
     :goto_6
     if-nez v3, :cond_9
 
-    .line 75
     if-eqz v0, :cond_5
 
-    .line 76
     sget-object v0, Lfrc;->a:Ljava/lang/String;
 
     const-string v2, "Could not parse pano metadata for file. Filling in 360 defaults."
@@ -405,7 +338,6 @@
 
     move v12, v1
 
-    .line 79
     :goto_7
     int-to-double v0, v13
 
@@ -413,14 +345,12 @@
 
     div-double/2addr v0, v2
 
-    .line 80
     int-to-double v2, v9
 
     int-to-double v4, v8
 
     div-double/2addr v2, v4
 
-    .line 81
     if-nez v12, :cond_6
 
     const-wide v4, 0x3f50624dd2f1a9fcL    # 0.001
@@ -431,7 +361,6 @@
 
     if-nez v0, :cond_6
 
-    .line 82
     sget-object v0, Lfrc;->a:Ljava/lang/String;
 
     const-string v1, "Pano metadata does not match file dimensions."
@@ -440,14 +369,11 @@
 
     move-object v0, v11
 
-    .line 83
     goto/16 :goto_0
 
-    .line 33
     :catch_0
     move-exception v0
 
-    .line 34
     sget-object v3, Lfrc;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -489,13 +415,11 @@
     :cond_2
     move v7, v2
 
-    .line 45
     goto/16 :goto_2
 
     :cond_3
     move v0, v2
 
-    .line 59
     goto :goto_3
 
     :catch_1
@@ -526,11 +450,9 @@
 
     goto/16 :goto_4
 
-    .line 68
     :catch_2
     move-exception v0
 
-    .line 69
     sget-object v5, Lfrc;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -572,16 +494,13 @@
     :cond_4
     move v0, v2
 
-    .line 72
     goto/16 :goto_6
 
     :cond_5
     move-object v0, v11
 
-    .line 78
     goto/16 :goto_0
 
-    .line 84
     :cond_6
     if-nez v12, :cond_7
 
@@ -601,7 +520,6 @@
 
     if-nez v0, :cond_7
 
-    .line 85
     sget-object v0, Lfrc;->a:Ljava/lang/String;
 
     const-string v1, "Pano metadata invalid: Full pano dimension not 2:1."
@@ -610,21 +528,17 @@
 
     move-object v0, v11
 
-    .line 86
     goto/16 :goto_0
 
-    .line 87
     :cond_7
     if-eqz v12, :cond_8
 
-    .line 88
     new-instance v0, Lfrc;
 
     invoke-direct {v0, v13, v14}, Lfrc;-><init>(II)V
 
     goto/16 :goto_0
 
-    .line 89
     :cond_8
     new-instance v0, Lfrc;
 
@@ -741,8 +655,6 @@
 .method public static a(Ljava/lang/String;)Lfrc;
     .locals 1
 
-    .prologue
-    .line 19
     new-instance v0, Lfrb;
 
     invoke-direct {v0, p0}, Lfrb;-><init>(Ljava/lang/String;)V
@@ -757,8 +669,6 @@
 .method private static a(DDD)Z
     .locals 2
 
-    .prologue
-    .line 96
     sub-double v0, p0, p2
 
     invoke-static {v0, v1}, Ljava/lang/Math;->abs(D)D
@@ -783,8 +693,6 @@
 .method private static b(Lud;Ljava/lang/String;)Ljava/util/Calendar;
     .locals 1
 
-    .prologue
-    .line 93
     const-string v0, "http://ns.google.com/photos/1.0/panorama/"
 
     invoke-interface {p0, v0, p1}, Lud;->c(Ljava/lang/String;Ljava/lang/String;)Z
@@ -793,14 +701,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 94
     const-string v0, "http://ns.google.com/photos/1.0/panorama/"
 
     invoke-interface {p0, v0, p1}, Lud;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 95
     :goto_0
     return-object v0
 

@@ -13,14 +13,10 @@
 .method constructor <init>(Ljava/util/Set;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lhib;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lfxn;->a:Ljava/util/Set;
 
-    .line 3
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -29,7 +25,6 @@
 
     iput-object v0, p0, Lfxn;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 4
     return-void
 .end method
 
@@ -38,8 +33,6 @@
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lfxn;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -50,11 +43,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 11
     :goto_0
     return-void
 
-    .line 7
     :cond_0
     iget-object v0, p0, Lfxn;->a:Ljava/util/Set;
 
@@ -75,12 +66,10 @@
 
     check-cast v0, Lfxm;
 
-    .line 8
     invoke-virtual {v0}, Lfxm;->run()V
 
     goto :goto_1
 
-    .line 10
     :cond_1
     invoke-super {p0}, Lhib;->close()V
 

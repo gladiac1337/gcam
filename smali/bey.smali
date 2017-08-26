@@ -19,12 +19,10 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 5
     new-instance v0, Lbey;
 
     const-string v1, "SURFACE"
@@ -35,7 +33,6 @@
 
     sput-object v0, Lbey;->a:Lbey;
 
-    .line 6
     new-instance v0, Lbey;
 
     const-string v1, "YUV_FLEXIBLE"
@@ -46,7 +43,6 @@
 
     sput-object v0, Lbey;->c:Lbey;
 
-    .line 7
     const/4 v0, 0x2
 
     new-array v0, v0, [Lbey;
@@ -67,22 +63,16 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput p3, p0, Lbey;->b:I
 
-    .line 4
     return-void
 .end method
 
 .method public static values()[Lbey;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lbey;->d:[Lbey;
 
     invoke-virtual {v0}, [Lbey;->clone()Ljava/lang/Object;

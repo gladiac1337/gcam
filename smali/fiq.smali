@@ -16,8 +16,6 @@
 .method constructor <init>(Lfhx;I)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfiq;->b:Lfhx;
 
     const v0, 0x7f110177
@@ -34,8 +32,6 @@
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lfiq;->b:Lfhx;
 
     invoke-static {v0}, Lfhx;->a(Lfhx;)Lbqs;
@@ -66,6 +62,5 @@
 
     invoke-interface {v0, v1}, Lbqs;->a(Ljava/lang/String;)V
 
-    .line 3
     return-void
 .end method

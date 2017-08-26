@@ -19,8 +19,6 @@
 .method constructor <init>(Leor;Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/String;JLjava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leox;->e:Leor;
 
     iput-object p2, p0, Leox;->a:Ljava/util/concurrent/atomic/AtomicReference;
@@ -41,28 +39,20 @@
 .method protected final synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 19
-    .line 20
     iget-object v0, p0, Leox;->e:Leor;
 
-    .line 21
     invoke-virtual {v0}, Leor;->a()Leoz;
 
     move-result-object v0
 
-    .line 22
     return-object v0
 .end method
 
 .method protected final synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 5
 
-    .prologue
-    .line 9
     check-cast p1, Leoz;
 
-    .line 10
     iget-object v0, p0, Leox;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -83,7 +73,6 @@
 
     iget v4, p1, Leoz;->b:I
 
-    .line 11
     invoke-static {v3, v4}, Lhja;->a(II)Lhja;
 
     move-result-object v3
@@ -92,26 +81,20 @@
 
     invoke-direct {v2, v3, v4}, Lgfg;-><init>(Lhja;Lgje;)V
 
-    .line 12
     invoke-interface {v0, v1, v2}, Lgcf;->a(Ljava/io/InputStream;Lgfg;)Liwe;
 
     move-result-object v0
 
-    .line 13
     iget-object v1, p0, Leox;->e:Leor;
 
-    .line 14
     iget-object v1, v1, Leor;->e:Landroid/app/ProgressDialog;
 
-    .line 15
     invoke-virtual {v1}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 16
     iget-object v1, p0, Leox;->e:Leor;
 
     invoke-virtual {v1}, Leor;->dismiss()V
 
-    .line 17
     new-instance v1, Leoy;
 
     iget-object v2, p0, Leox;->a:Ljava/util/concurrent/atomic/AtomicReference;
@@ -124,24 +107,20 @@
 
     invoke-interface {v0, v1, v2}, Liwe;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    .line 18
     return-void
 .end method
 
 .method protected final onPreExecute()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x0
 
     const/4 v6, 0x0
 
-    .line 2
     iget-object v0, p0, Leox;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     iget-object v1, p0, Leox;->e:Leor;
 
-    .line 3
     invoke-static {v1}, Leor;->a(Leor;)Lgfd;
 
     move-result-object v1
@@ -154,10 +133,8 @@
 
     move-result-object v1
 
-    .line 4
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 5
     iget-object v0, p0, Leox;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -174,7 +151,6 @@
 
     invoke-interface {v0, v1, v2}, Lejj;->a(Lhja;Lgff;)V
 
-    .line 6
     iget-object v0, p0, Leox;->e:Leor;
 
     iget-object v1, p0, Leox;->e:Leor;
@@ -191,9 +167,7 @@
 
     move-result-object v1
 
-    .line 7
     iput-object v1, v0, Leor;->e:Landroid/app/ProgressDialog;
 
-    .line 8
     return-void
 .end method

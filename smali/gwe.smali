@@ -46,8 +46,6 @@
 .method public constructor <init>(Lgvt;)V
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lgvb;->a:Lgvs;
 
     invoke-direct {p0, v0, p1}, Lgwe;-><init>(Lgvs;Lgvt;)V
@@ -58,12 +56,8 @@
 .method public constructor <init>(Lgvt;B)V
     .locals 1
 
-    .prologue
-    .line 2
-    .line 3
     sget-object v0, Lhcx;->a:Lgvs;
 
-    .line 4
     invoke-direct {p0, v0, p1}, Lgwe;-><init>(Lgvs;Lgvt;)V
 
     return-void
@@ -72,8 +66,6 @@
 .method public constructor <init>(Lgvt;C)V
     .locals 1
 
-    .prologue
-    .line 5
     sget-object v0, Lhex;->c:Lgvs;
 
     invoke-direct {p0, v0, p1}, Lgwe;-><init>(Lgvs;Lgvt;)V
@@ -84,12 +76,8 @@
 .method public constructor <init>(Lgvt;S)V
     .locals 1
 
-    .prologue
-    .line 6
-    .line 7
     sget-object v0, Lgzq;->a:Lgvs;
 
-    .line 8
     invoke-direct {p0, v0, p1}, Lgwe;-><init>(Lgvs;Lgvt;)V
 
     return-void
@@ -205,9 +193,6 @@
 .method public synthetic b(Lcom/google/android/gms/common/api/Status;)Lgwb;
     .locals 0
 
-    .prologue
-    .line 9
-    .line 10
     return-object p1
 .end method
 

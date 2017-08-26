@@ -16,8 +16,6 @@
 .method protected constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lipw;-><init>()V
 
     return-void
@@ -26,20 +24,14 @@
 .method protected constructor <init>(II)V
     .locals 0
 
-    .prologue
-    .line 4
     invoke-direct {p0}, Lipx;-><init>()V
 
-    .line 5
     invoke-static {p2, p1}, Lid;->b(II)I
 
-    .line 6
     iput p1, p0, Lipx;->a:I
 
-    .line 7
     iput p2, p0, Lipx;->b:I
 
-    .line 8
     return-void
 .end method
 
@@ -53,8 +45,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 2
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -65,8 +55,6 @@
 .method public hasNext()Z
     .locals 2
 
-    .prologue
-    .line 9
     iget v0, p0, Lipx;->b:I
 
     iget v1, p0, Lipx;->a:I
@@ -87,8 +75,6 @@
 .method public hasPrevious()Z
     .locals 1
 
-    .prologue
-    .line 14
     iget v0, p0, Lipx;->b:I
 
     if-lez v0, :cond_0
@@ -107,22 +93,18 @@
 .method public next()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 10
     invoke-virtual {p0}, Lipx;->hasNext()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 11
     new-instance v0, Ljava/util/NoSuchElementException;
 
     invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
     throw v0
 
-    .line 12
     :cond_0
     iget v0, p0, Lipx;->b:I
 
@@ -140,8 +122,6 @@
 .method public nextIndex()I
     .locals 1
 
-    .prologue
-    .line 13
     iget v0, p0, Lipx;->b:I
 
     return v0
@@ -150,22 +130,18 @@
 .method public previous()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 15
     invoke-virtual {p0}, Lipx;->hasPrevious()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 16
     new-instance v0, Ljava/util/NoSuchElementException;
 
     invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
 
     throw v0
 
-    .line 17
     :cond_0
     iget v0, p0, Lipx;->b:I
 
@@ -183,8 +159,6 @@
 .method public previousIndex()I
     .locals 1
 
-    .prologue
-    .line 18
     iget v0, p0, Lipx;->b:I
 
     add-int/lit8 v0, v0, -0x1
@@ -197,8 +171,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 3
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

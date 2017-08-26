@@ -14,8 +14,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgge;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,23 +26,18 @@
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgge;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
-    .line 3
     invoke-static {v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$2200(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Landroid/animation/ArgbEvaluator;
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
     move-result v1
 
     iget-object v2, p0, Lgge;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
-    .line 5
     invoke-static {v2}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$2000(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)I
 
     move-result v2
@@ -55,7 +48,6 @@
 
     iget-object v3, p0, Lgge;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
-    .line 6
     invoke-static {v3}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$2100(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)I
 
     move-result v3
@@ -64,7 +56,6 @@
 
     move-result-object v3
 
-    .line 7
     invoke-virtual {v0, v1, v2, v3}, Landroid/animation/ArgbEvaluator;->evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -75,7 +66,6 @@
 
     move-result v0
 
-    .line 8
     iget-object v1, p0, Lgge;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-static {v1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$2300(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Landroid/graphics/Paint;
@@ -84,6 +74,5 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 9
     return-void
 .end method

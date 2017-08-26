@@ -11,10 +11,8 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
-    .line 5
     const/16 v2, 0x11
 
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -34,15 +32,12 @@
     :cond_0
     sput-wide v0, Laoo;->a:D
 
-    .line 6
     return-void
 .end method
 
 .method public static a(J)D
     .locals 4
 
-    .prologue
-    .line 4
     invoke-static {}, Laoo;->a()J
 
     move-result-wide v0
@@ -64,20 +59,16 @@
         value = 0x11
     .end annotation
 
-    .prologue
-    .line 1
     const/16 v0, 0x11
 
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-gt v0, v1, :cond_0
 
-    .line 2
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v0
 
-    .line 3
     :goto_0
     return-wide v0
 

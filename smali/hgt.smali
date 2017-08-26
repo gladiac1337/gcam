@@ -28,16 +28,12 @@
 .method private static a(Lgxr;)V
     .locals 1
 
-    .prologue
-    .line 6
     if-eqz p0, :cond_0
 
-    .line 7
     const/4 v0, 0x0
 
     iput-object v0, p0, Lgxr;->b:Ljava/lang/Object;
 
-    .line 8
     :cond_0
     return-void
 .end method
@@ -107,20 +103,16 @@
 .method public final a(Lcom/google/android/gms/wearable/internal/MessageEventParcelable;)V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhgt;->a:Lgxr;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lhgt;->a:Lgxr;
 
-    .line 2
     new-instance v1, Lgxt;
 
     invoke-direct {v1, p1}, Lgxt;-><init>(Lcom/google/android/gms/wearable/internal/MessageEventParcelable;)V
 
-    .line 4
     const-string v2, "Notifier must not be null"
 
     invoke-static {v1, v2}, Lkk;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -137,7 +129,6 @@
 
     invoke-virtual {v0, v1}, Lgxs;->sendMessage(Landroid/os/Message;)Z
 
-    .line 5
     :cond_0
     return-void
 .end method

@@ -54,8 +54,6 @@
 .method public final a(Landroid/content/ServiceConnection;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lgyq;->h:Lgyo;
 
     invoke-static {v0}, Lgyo;->c(Lgyo;)Lgzd;
@@ -68,10 +66,8 @@
 
     invoke-virtual {v0}, Lgyp;->a()Landroid/content/Intent;
 
-    .line 5
     invoke-static {p1}, Lgzd;->a(Landroid/content/ServiceConnection;)Ljava/lang/String;
 
-    .line 6
     iget-object v0, p0, Lgyq;->b:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
@@ -85,8 +81,6 @@
         value = 0xe
     .end annotation
 
-    .prologue
-    .line 1
     const/4 v0, 0x3
 
     iput v0, p0, Lgyq;->c:I
@@ -109,7 +103,6 @@
 
     iget-object v2, p0, Lgyq;->a:Lgyr;
 
-    .line 2
     invoke-static {v0, v1}, Lgzd;->a(Landroid/content/Context;Landroid/content/Intent;)Z
 
     move-result v3
@@ -124,7 +117,6 @@
 
     const/4 v0, 0x0
 
-    .line 3
     :cond_0
     :goto_0
     iput-boolean v0, p0, Lgyq;->d:Z
@@ -160,7 +152,6 @@
     :goto_1
     return-void
 
-    .line 2
     :cond_2
     const/16 v3, 0x81
 

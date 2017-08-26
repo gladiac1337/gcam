@@ -13,18 +13,12 @@
 .method constructor <init>(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;)V
     .locals 0
 
-    .prologue
-    .line 1
-    .line 2
     invoke-direct {p0}, Live;-><init>()V
 
-    .line 3
     iput-object p1, p0, Livf;->a:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    .line 4
     iput-object p2, p0, Livf;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    .line 5
     return-void
 .end method
 
@@ -33,8 +27,6 @@
 .method final a(Livd;)I
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Livf;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->decrementAndGet(Ljava/lang/Object;)I
@@ -47,14 +39,11 @@
 .method final a(Livd;Ljava/util/Set;)V
     .locals 2
 
-    .prologue
-    .line 6
     iget-object v0, p0, Livf;->a:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, v1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 7
     return-void
 .end method

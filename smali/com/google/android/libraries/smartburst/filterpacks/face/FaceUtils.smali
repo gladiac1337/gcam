@@ -27,8 +27,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 129
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/imageutils/ImageCropper;
 
     const/4 v1, 0x0
@@ -37,20 +35,16 @@
 
     sput-object v0, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceUtils;->IMAGE_CROPPER:Lcom/google/android/libraries/smartburst/filterfw/imageutils/ImageCropper;
 
-    .line 130
     const-string v0, "smartburst-jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 131
     return-void
 .end method
 
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -62,15 +56,12 @@
 .method public static cropFace(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;Lcom/google/android/vision/face/Face;Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)V
     .locals 6
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 122
     sget-object v0, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceUtils;->IMAGE_CROPPER:Lcom/google/android/libraries/smartburst/filterfw/imageutils/ImageCropper;
 
     if-nez v0, :cond_0
 
-    .line 123
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Image cropper has already been released"
@@ -79,23 +70,19 @@
 
     throw v0
 
-    .line 124
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->getWidth()I
 
     move-result v0
 
-    .line 125
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->getHeight()I
 
     move-result v1
 
-    .line 126
     invoke-static {p1, v0, v1}, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceUtils;->getFaceQuad(Lcom/google/android/vision/face/Face;II)Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
     move-result-object v2
 
-    .line 127
     sget-object v0, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceUtils;->IMAGE_CROPPER:Lcom/google/android/libraries/smartburst/filterfw/imageutils/ImageCropper;
 
     move-object v1, p0
@@ -106,27 +93,20 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/google/android/libraries/smartburst/filterfw/imageutils/ImageCropper;->cropImage(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;ZZ)V
 
-    .line 128
     return-void
 .end method
 
 .method public static getAverageFaceImageDistance(Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;II)F
     .locals 9
 
-    .prologue
-    .line 2
     invoke-static {p0}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     invoke-static {p2}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     invoke-static {p3}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -142,7 +122,6 @@
     :goto_0
     invoke-static {v0}, Lid;->b(Z)V
 
-    .line 7
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -158,7 +137,6 @@
     :goto_1
     invoke-static {v0}, Lid;->b(Z)V
 
-    .line 8
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -174,10 +152,8 @@
     :goto_2
     invoke-static {v0}, Lid;->b(Z)V
 
-    .line 9
     const/4 v1, 0x0
 
-    .line 10
     const/4 v0, 0x0
 
     move v2, v0
@@ -191,22 +167,18 @@
 
     if-ge v2, v0, :cond_5
 
-    .line 11
     const/4 v5, 0x0
 
-    .line 12
     invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/vision/face/Face;
 
-    .line 13
     invoke-static {p4, p5, v0}, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceUtils;->getFaceDimension(IILcom/google/android/vision/face/Face;)Lijt;
 
     move-result-object v6
 
-    .line 14
     const/4 v1, 0x0
 
     move v4, v1
@@ -218,14 +190,12 @@
 
     if-ge v4, v1, :cond_7
 
-    .line 15
     invoke-interface {p1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/google/android/vision/face/Face;
 
-    .line 16
     invoke-virtual {v0}, Lcom/google/android/vision/face/Face;->getTrackId()I
 
     move-result v7
@@ -236,29 +206,24 @@
 
     if-ne v7, v8, :cond_3
 
-    .line 17
     const/4 v5, 0x1
 
-    .line 18
     invoke-static {p4, p5, v1}, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceUtils;->getFaceDimension(IILcom/google/android/vision/face/Face;)Lijt;
 
     move-result-object v7
 
-    .line 19
     invoke-interface {p2, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/nio/ByteBuffer;
 
-    .line 20
     invoke-interface {p3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/nio/ByteBuffer;
 
-    .line 21
     invoke-static {v0, v6, v1, v7}, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceUtils;->getFaceImageDistance(Ljava/nio/ByteBuffer;Lijt;Ljava/nio/ByteBuffer;Lijt;)F
 
     move-result v0
@@ -267,36 +232,29 @@
 
     move v0, v5
 
-    .line 24
     :goto_5
     if-nez v0, :cond_4
 
-    .line 25
     const/high16 v0, 0x7f800000    # Float.POSITIVE_INFINITY
 
-    .line 27
     :goto_6
     return v0
 
-    .line 6
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 7
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 8
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_2
 
-    .line 23
     :cond_3
     add-int/lit8 v1, v4, 0x1
 
@@ -304,7 +262,6 @@
 
     goto :goto_4
 
-    .line 26
     :cond_4
     add-int/lit8 v0, v2, 0x1
 
@@ -314,7 +271,6 @@
 
     goto :goto_3
 
-    .line 27
     :cond_5
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
@@ -348,20 +304,16 @@
 .method public static getAverageFacialExpressionScoreDistance(Ljava/util/List;Ljava/util/List;)F
     .locals 8
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v6, 0x0
 
     const/4 v3, 0x0
 
-    .line 42
     invoke-static {p0}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 43
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 44
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -381,7 +333,6 @@
 
     move v5, v6
 
-    .line 46
     :goto_1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
@@ -391,7 +342,6 @@
 
     move v1, v3
 
-    .line 48
     :goto_2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -399,7 +349,6 @@
 
     if-ge v1, v0, :cond_5
 
-    .line 49
     invoke-interface {p0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -422,7 +371,6 @@
 
     if-ne v7, v0, :cond_2
 
-    .line 52
     invoke-interface {p0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -435,7 +383,6 @@
 
     check-cast v1, Lcom/google/android/vision/face/Face;
 
-    .line 53
     invoke-static {v0, v1}, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceUtils;->getFacialExpressionScoreDistance(Lcom/google/android/vision/face/Face;Lcom/google/android/vision/face/Face;)F
 
     move-result v0
@@ -444,14 +391,11 @@
 
     move v0, v2
 
-    .line 56
     :goto_3
     if-nez v0, :cond_3
 
-    .line 57
     const v6, 0x7f7fffff    # Float.MAX_VALUE
 
-    .line 59
     :cond_0
     :goto_4
     return v6
@@ -459,10 +403,8 @@
     :cond_1
     move v0, v3
 
-    .line 44
     goto :goto_0
 
-    .line 55
     :cond_2
     add-int/lit8 v0, v1, 0x1
 
@@ -470,7 +412,6 @@
 
     goto :goto_2
 
-    .line 58
     :cond_3
     add-int/lit8 v0, v4, 0x1
 
@@ -480,7 +421,6 @@
 
     goto :goto_1
 
-    .line 59
     :cond_4
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
@@ -509,14 +449,10 @@
 .method public static getAverageJoyScore(Ljava/util/List;FFF)F
     .locals 3
 
-    .prologue
-    .line 86
     invoke-static {p0}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 87
     const/4 v0, 0x0
 
-    .line 88
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -536,7 +472,6 @@
 
     check-cast v0, Lcom/google/android/vision/face/Face;
 
-    .line 89
     invoke-static {v0, p1, p2, p3}, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceUtils;->getJoyScore(Lcom/google/android/vision/face/Face;FFF)F
 
     move-result v0
@@ -545,10 +480,8 @@
 
     move v1, v0
 
-    .line 90
     goto :goto_0
 
-    .line 91
     :cond_0
     invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
@@ -556,7 +489,6 @@
 
     if-nez v0, :cond_1
 
-    .line 92
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -565,7 +497,6 @@
 
     div-float/2addr v1, v0
 
-    .line 93
     :cond_1
     return v1
 .end method
@@ -573,17 +504,14 @@
 .method private static getFaceDimension(IILcom/google/android/vision/face/Face;)Lijt;
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 28
     invoke-static {p2, p0, p1}, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceUtils;->getFaceQuad(Lcom/google/android/vision/face/Face;II)Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
     move-result-object v0
 
-    .line 29
     const/4 v1, 0x2
 
     new-array v1, v1, [I
@@ -596,7 +524,6 @@
 
     move-result-object v0
 
-    .line 30
     aget v1, v0, v2
 
     aget v0, v0, v3
@@ -611,20 +538,14 @@
 .method public static getFaceImageDistance(Ljava/nio/ByteBuffer;Lijt;Ljava/nio/ByteBuffer;Lijt;)F
     .locals 6
 
-    .prologue
-    .line 31
     invoke-static {p0}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 32
     invoke-static {p2}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 33
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 34
     invoke-static {p3}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 35
     iget v0, p1, Lijt;->a:I
 
     if-lez v0, :cond_0
@@ -641,7 +562,6 @@
 
     if-gtz v0, :cond_1
 
-    .line 36
     :cond_0
     const-string v0, "FaceUtils"
 
@@ -655,7 +575,6 @@
 
     iget v4, p1, Lijt;->a:I
 
-    .line 37
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -676,7 +595,6 @@
 
     iget v4, p3, Lijt;->a:I
 
-    .line 38
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -693,17 +611,14 @@
 
     aput-object v4, v2, v3
 
-    .line 39
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 40
     const/high16 v0, 0x7f800000    # Float.POSITIVE_INFINITY
 
-    .line 41
     :goto_0
     return v0
 
@@ -730,13 +645,10 @@
 .method public static getFaceQuad(Lcom/google/android/vision/face/Face;II)Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
     .locals 1
 
-    .prologue
-    .line 94
     invoke-static {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceUtils;->getFaceRect(Lcom/google/android/vision/face/Face;II)Landroid/graphics/RectF;
 
     move-result-object v0
 
-    .line 95
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->fromRect(Landroid/graphics/RectF;)Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
     move-result-object v0
@@ -747,7 +659,6 @@
 .method public static getFaceRect(Lcom/google/android/vision/face/Face;II)Landroid/graphics/RectF;
     .locals 7
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
@@ -756,7 +667,6 @@
 
     const/4 v5, 0x0
 
-    .line 96
     if-lez p1, :cond_0
 
     move v0, v1
@@ -764,13 +674,11 @@
     :goto_0
     invoke-static {v0}, Lid;->a(Z)V
 
-    .line 97
     if-lez p2, :cond_1
 
     :goto_1
     invoke-static {v1}, Lid;->a(Z)V
 
-    .line 98
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-virtual {p0}, Lcom/google/android/vision/face/Face;->getCoreFeaturesBoundingBox()Landroid/graphics/RectF;
@@ -779,7 +687,6 @@
 
     invoke-direct {v0, v1}, Landroid/graphics/RectF;-><init>(Landroid/graphics/RectF;)V
 
-    .line 99
     iget v1, v0, Landroid/graphics/RectF;->left:F
 
     int-to-float v2, p1
@@ -788,7 +695,6 @@
 
     iput v1, v0, Landroid/graphics/RectF;->left:F
 
-    .line 100
     iget v1, v0, Landroid/graphics/RectF;->right:F
 
     int-to-float v2, p1
@@ -797,7 +703,6 @@
 
     iput v1, v0, Landroid/graphics/RectF;->right:F
 
-    .line 101
     iget v1, v0, Landroid/graphics/RectF;->top:F
 
     int-to-float v2, p2
@@ -806,7 +711,6 @@
 
     iput v1, v0, Landroid/graphics/RectF;->top:F
 
-    .line 102
     iget v1, v0, Landroid/graphics/RectF;->bottom:F
 
     int-to-float v2, p2
@@ -815,7 +719,6 @@
 
     iput v1, v0, Landroid/graphics/RectF;->bottom:F
 
-    .line 103
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->fromRect(Landroid/graphics/RectF;)Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
     move-result-object v0
@@ -826,7 +729,6 @@
 
     move-result-object v0
 
-    .line 104
     new-instance v1, Landroid/graphics/RectF;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->topLeft()Landroid/graphics/PointF;
@@ -839,7 +741,6 @@
 
     move-result v2
 
-    .line 105
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->topLeft()Landroid/graphics/PointF;
 
     move-result-object v3
@@ -850,7 +751,6 @@
 
     move-result v3
 
-    .line 106
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->bottomRight()Landroid/graphics/PointF;
 
     move-result-object v4
@@ -861,7 +761,6 @@
 
     move-result v4
 
-    .line 107
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->bottomRight()Landroid/graphics/PointF;
 
     move-result-object v0
@@ -874,37 +773,30 @@
 
     invoke-direct {v1, v2, v3, v4, v0}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 108
     return-object v1
 
     :cond_0
     move v0, v2
 
-    .line 96
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 97
     goto :goto_1
 .end method
 
 .method public static getFacialExpressionScoreDistance(Lcom/google/android/vision/face/Face;Lcom/google/android/vision/face/Face;)F
     .locals 5
 
-    .prologue
     const v4, 0x3ecccccd    # 0.4f
 
     const/4 v1, 0x0
 
-    .line 60
     invoke-static {p0}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 61
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 63
     invoke-virtual {p0}, Lcom/google/android/vision/face/Face;->getIsLeftEyeOpenScore()F
 
     move-result v0
@@ -921,7 +813,6 @@
 
     if-lez v0, :cond_2
 
-    .line 65
     invoke-virtual {p0}, Lcom/google/android/vision/face/Face;->getIsLeftEyeOpenScore()F
 
     move-result v0
@@ -932,7 +823,6 @@
 
     sub-float/2addr v0, v2
 
-    .line 67
     :goto_0
     invoke-virtual {p0}, Lcom/google/android/vision/face/Face;->getIsRightEyeOpenScore()F
 
@@ -950,19 +840,16 @@
 
     if-lez v2, :cond_1
 
-    .line 68
     invoke-virtual {p0}, Lcom/google/android/vision/face/Face;->getIsRightEyeOpenScore()F
 
     move-result v2
 
-    .line 69
     invoke-virtual {p1}, Lcom/google/android/vision/face/Face;->getIsRightEyeOpenScore()F
 
     move-result v3
 
     sub-float/2addr v2, v3
 
-    .line 71
     :goto_1
     invoke-virtual {p0}, Lcom/google/android/vision/face/Face;->getIsSmilingScore()F
 
@@ -980,7 +867,6 @@
 
     if-lez v3, :cond_0
 
-    .line 72
     invoke-virtual {p0}, Lcom/google/android/vision/face/Face;->getIsSmilingScore()F
 
     move-result v1
@@ -991,7 +877,6 @@
 
     sub-float/2addr v1, v3
 
-    .line 73
     :cond_0
     mul-float/2addr v0, v0
 
@@ -1035,10 +920,8 @@
 .method public static getJoyScore(FFFFFF)F
     .locals 2
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 83
     cmpl-float v1, p0, v0
 
     if-ltz v1, :cond_0
@@ -1051,7 +934,6 @@
 
     if-ltz v1, :cond_0
 
-    .line 84
     mul-float v0, p0, p3
 
     mul-float v1, p1, p4
@@ -1062,7 +944,6 @@
 
     add-float/2addr v0, v1
 
-    .line 85
     :cond_0
     return v0
 .end method
@@ -1070,21 +951,16 @@
 .method public static getJoyScore(Lcom/google/android/vision/face/Face;FFF)F
     .locals 6
 
-    .prologue
-    .line 78
     invoke-static {p0}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 79
     invoke-virtual {p0}, Lcom/google/android/vision/face/Face;->getIsLeftEyeOpenScore()F
 
     move-result v0
 
-    .line 80
     invoke-virtual {p0}, Lcom/google/android/vision/face/Face;->getIsRightEyeOpenScore()F
 
     move-result v1
 
-    .line 81
     invoke-virtual {p0}, Lcom/google/android/vision/face/Face;->getIsSmilingScore()F
 
     move-result v2
@@ -1095,7 +971,6 @@
 
     move v5, p3
 
-    .line 82
     invoke-static/range {v0 .. v5}, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceUtils;->getJoyScore(FFFFFF)F
 
     move-result v0
@@ -1106,13 +981,10 @@
 .method public static getScaledBoundingBox(Lcom/google/android/vision/face/Face;F)Landroid/graphics/Rect;
     .locals 5
 
-    .prologue
-    .line 114
     invoke-static {p0, p1}, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceUtils;->getScaledBoundingBoxF(Lcom/google/android/vision/face/Face;F)Landroid/graphics/RectF;
 
     move-result-object v0
 
-    .line 115
     new-instance v1, Landroid/graphics/Rect;
 
     iget v2, v0, Landroid/graphics/RectF;->left:F
@@ -1135,24 +1007,20 @@
 
     iget v0, v0, Landroid/graphics/RectF;->bottom:F
 
-    .line 116
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
 
     move-result v0
 
     invoke-direct {v1, v2, v3, v4, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 117
     return-object v1
 .end method
 
 .method public static getScaledBoundingBoxF(Lcom/google/android/vision/face/Face;F)Landroid/graphics/RectF;
     .locals 6
 
-    .prologue
     const/high16 v5, 0x40000000    # 2.0f
 
-    .line 109
     invoke-virtual {p0}, Lcom/google/android/vision/face/Face;->getPosition()Landroid/graphics/PointF;
 
     move-result-object v0
@@ -1169,7 +1037,6 @@
 
     mul-float/2addr v0, p1
 
-    .line 110
     invoke-virtual {p0}, Lcom/google/android/vision/face/Face;->getPosition()Landroid/graphics/PointF;
 
     move-result-object v1
@@ -1186,7 +1053,6 @@
 
     mul-float/2addr v1, p1
 
-    .line 111
     invoke-virtual {p0}, Lcom/google/android/vision/face/Face;->getPosition()Landroid/graphics/PointF;
 
     move-result-object v2
@@ -1203,7 +1069,6 @@
 
     mul-float/2addr v2, p1
 
-    .line 112
     invoke-virtual {p0}, Lcom/google/android/vision/face/Face;->getPosition()Landroid/graphics/PointF;
 
     move-result-object v3
@@ -1220,7 +1085,6 @@
 
     mul-float/2addr v3, p1
 
-    .line 113
     new-instance v4, Landroid/graphics/RectF;
 
     invoke-direct {v4, v0, v1, v2, v3}, Landroid/graphics/RectF;-><init>(FFFF)V
@@ -1231,8 +1095,6 @@
 .method public static getScaledLandmarkPosition(Lcom/google/android/vision/face/Landmark;F)Landroid/graphics/PointF;
     .locals 3
 
-    .prologue
-    .line 118
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-virtual {p0}, Lcom/google/android/vision/face/Landmark;->getPosition()Landroid/graphics/PointF;
@@ -1243,7 +1105,6 @@
 
     mul-float/2addr v1, p1
 
-    .line 119
     invoke-virtual {p0}, Lcom/google/android/vision/face/Landmark;->getPosition()Landroid/graphics/PointF;
 
     move-result-object v2
@@ -1254,15 +1115,12 @@
 
     invoke-direct {v0, v1, v2}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 120
     return-object v0
 .end method
 
 .method public static hasAllLandmarks(Lcom/google/android/vision/face/Face;)Z
     .locals 2
 
-    .prologue
-    .line 74
     invoke-virtual {p0}, Lcom/google/android/vision/face/Face;->getLandmarks()Ljava/util/List;
 
     move-result-object v0
@@ -1289,10 +1147,8 @@
 .method public static hasAllProbabilities(Lcom/google/android/vision/face/Face;)Z
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 75
     invoke-virtual {p0}, Lcom/google/android/vision/face/Face;->getIsLeftEyeOpenScore()F
 
     move-result v0
@@ -1309,7 +1165,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 76
     invoke-virtual {p0}, Lcom/google/android/vision/face/Face;->getIsSmilingScore()F
 
     move-result v0
@@ -1320,23 +1175,18 @@
 
     const/4 v0, 0x1
 
-    .line 77
     :goto_0
     return v0
 
-    .line 76
     :cond_0
     const/4 v0, 0x0
 
-    .line 77
     goto :goto_0
 .end method
 
 .method private static limitToInRange(FFF)F
     .locals 1
 
-    .prologue
-    .line 121
     invoke-static {p0, p2}, Ljava/lang/Math;->min(FF)F
 
     move-result v0

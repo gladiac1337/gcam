@@ -11,26 +11,21 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 22
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 23
     new-instance v0, Lfm;
 
     invoke-direct {v0}, Lfm;-><init>()V
 
     sput-object v0, Lfl;->a:Lfn;
 
-    .line 27
     :goto_0
     return-void
 
-    .line 24
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -38,7 +33,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 25
     new-instance v0, Lfn;
 
     const/4 v1, 0x0
@@ -49,7 +43,6 @@
 
     goto :goto_0
 
-    .line 26
     :cond_1
     new-instance v0, Lfn;
 
@@ -63,21 +56,16 @@
 .method public static a(Landroid/view/ViewParent;Landroid/view/View;I)V
     .locals 1
 
-    .prologue
-    .line 10
     instance-of v0, p0, Leh;
 
     if-nez v0, :cond_0
 
-    .line 11
     if-nez p2, :cond_0
 
-    .line 12
     sget-object v0, Lfl;->a:Lfn;
 
     invoke-virtual {v0, p0, p1}, Lfn;->a(Landroid/view/ViewParent;Landroid/view/View;)V
 
-    .line 13
     :cond_0
     return-void
 .end method
@@ -85,16 +73,12 @@
 .method public static a(Landroid/view/ViewParent;Landroid/view/View;IIIII)V
     .locals 7
 
-    .prologue
-    .line 14
     instance-of v0, p0, Leh;
 
     if-nez v0, :cond_0
 
-    .line 15
     if-nez p6, :cond_0
 
-    .line 16
     sget-object v0, Lfl;->a:Lfn;
 
     move-object v1, p0
@@ -111,7 +95,6 @@
 
     invoke-virtual/range {v0 .. v6}, Lfn;->a(Landroid/view/ViewParent;Landroid/view/View;IIII)V
 
-    .line 17
     :cond_0
     return-void
 .end method
@@ -119,16 +102,12 @@
 .method public static a(Landroid/view/ViewParent;Landroid/view/View;II[II)V
     .locals 6
 
-    .prologue
-    .line 18
     instance-of v0, p0, Leh;
 
     if-nez v0, :cond_0
 
-    .line 19
     if-nez p5, :cond_0
 
-    .line 20
     sget-object v0, Lfl;->a:Lfn;
 
     move-object v1, p0
@@ -143,7 +122,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lfn;->a(Landroid/view/ViewParent;Landroid/view/View;II[I)V
 
-    .line 21
     :cond_0
     return-void
 .end method
@@ -151,28 +129,22 @@
 .method public static a(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/View;II)Z
     .locals 1
 
-    .prologue
-    .line 1
     instance-of v0, p0, Leh;
 
     if-eqz v0, :cond_0
 
-    .line 2
     check-cast p0, Leh;
 
     invoke-interface {p0}, Leh;->a()Z
 
     move-result v0
 
-    .line 5
     :goto_0
     return v0
 
-    .line 3
     :cond_0
     if-nez p4, :cond_1
 
-    .line 4
     sget-object v0, Lfl;->a:Lfn;
 
     invoke-virtual {v0, p0, p1, p2, p3}, Lfn;->a(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/View;I)Z
@@ -181,7 +153,6 @@
 
     goto :goto_0
 
-    .line 5
     :cond_1
     const/4 v0, 0x0
 
@@ -191,21 +162,16 @@
 .method public static b(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/View;II)V
     .locals 1
 
-    .prologue
-    .line 6
     instance-of v0, p0, Leh;
 
     if-nez v0, :cond_0
 
-    .line 7
     if-nez p4, :cond_0
 
-    .line 8
     sget-object v0, Lfl;->a:Lfn;
 
     invoke-virtual {v0, p0, p1, p2, p3}, Lfn;->b(Landroid/view/ViewParent;Landroid/view/View;Landroid/view/View;I)V
 
-    .line 9
     :cond_0
     return-void
 .end method

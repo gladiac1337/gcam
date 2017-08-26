@@ -16,32 +16,24 @@
 .method public constructor <init>(Lblb;Landroid/content/UriMatcher;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbll;->a:Lblb;
 
-    .line 3
     iput-object p2, p0, Lbll;->b:Landroid/content/UriMatcher;
 
-    .line 4
     return-void
 .end method
 
 .method private static a([Ljava/lang/String;Ljava/util/List;)Landroid/database/Cursor;
     .locals 11
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 26
     new-instance v4, Landroid/database/MatrixCursor;
 
     invoke-direct {v4, p0}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 27
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -59,23 +51,19 @@
 
     check-cast v0, Lbkx;
 
-    .line 28
     array-length v1, p0
 
     new-array v6, v1, [Ljava/lang/Object;
 
     move v1, v2
 
-    .line 29
     :goto_1
     array-length v3, p0
 
     if-ge v1, v3, :cond_2
 
-    .line 30
     aget-object v7, p0, v1
 
-    .line 31
     const/4 v3, -0x1
 
     invoke-virtual {v7}, Ljava/lang/String;->hashCode()I
@@ -88,7 +76,6 @@
     :goto_2
     packed-switch v3, :pswitch_data_0
 
-    .line 43
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "invalid projection: "
@@ -112,7 +99,6 @@
 
     throw v1
 
-    .line 31
     :sswitch_0
     const-string v8, "media_store_id"
 
@@ -152,7 +138,6 @@
 
     goto :goto_2
 
-    .line 32
     :pswitch_0
     invoke-interface {v0}, Lbkx;->a()Lfpk;
 
@@ -168,7 +153,6 @@
 
     aput-object v3, v6, v1
 
-    .line 33
     sget-object v3, Lbkq;->a:Ljava/lang/String;
 
     aget-object v8, v6, v1
@@ -227,29 +211,24 @@
 
     invoke-static {v3, v7}, Lbgj;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 44
     :goto_4
     add-int/lit8 v1, v1, 0x1
 
     goto/16 :goto_1
 
-    .line 35
     :pswitch_1
     invoke-interface {v0}, Lbkx;->b()Lgqx;
 
     move-result-object v3
 
-    .line 36
     iget v3, v3, Lgqx;->c:I
 
-    .line 37
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     aput-object v3, v6, v1
 
-    .line 38
     sget-object v3, Lbkq;->a:Ljava/lang/String;
 
     aget-object v8, v6, v1
@@ -310,7 +289,6 @@
 
     goto :goto_4
 
-    .line 40
     :pswitch_2
     invoke-interface {v0}, Lbkx;->c()I
 
@@ -322,7 +300,6 @@
 
     aput-object v3, v6, v1
 
-    .line 41
     sget-object v3, Lbkq;->a:Ljava/lang/String;
 
     aget-object v8, v6, v1
@@ -383,7 +360,6 @@
 
     goto/16 :goto_4
 
-    .line 43
     :cond_1
     new-instance v0, Ljava/lang/String;
 
@@ -391,17 +367,14 @@
 
     goto/16 :goto_3
 
-    .line 45
     :cond_2
     invoke-virtual {v4, v6}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
-    .line 47
     :cond_3
     return-object v4
 
-    .line 31
     nop
 
     :sswitch_data_0
@@ -424,8 +397,6 @@
 .method public final a(Landroid/net/Uri;[Ljava/lang/String;)Landroid/database/Cursor;
     .locals 8
 
-    .prologue
-    .line 5
     sget-object v0, Lbkq;->a:Ljava/lang/String;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -462,14 +433,12 @@
 
     invoke-static {v0, v1}, Lbgj;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
     invoke-static {p2}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Ljava/lang/String;
 
-    .line 7
     iget-object v1, p0, Lbll;->b:Landroid/content/UriMatcher;
 
     invoke-virtual {v1, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
@@ -478,7 +447,6 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 24
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -517,7 +485,6 @@
 
     throw v0
 
-    .line 8
     :pswitch_0
     sget-object v1, Lbkq;->a:Ljava/lang/String;
 
@@ -525,14 +492,12 @@
 
     invoke-static {v1, v2}, Lbgj;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     iget-object v1, p0, Lbll;->a:Lblb;
 
     invoke-virtual {v1}, Lblb;->a()Ljava/util/List;
 
     move-result-object v1
 
-    .line 25
     :goto_0
     invoke-static {v0, v1}, Lbll;->a([Ljava/lang/String;Ljava/util/List;)Landroid/database/Cursor;
 
@@ -540,13 +505,11 @@
 
     return-object v0
 
-    .line 13
     :pswitch_1
     invoke-static {p1}, Lkk;->c(Landroid/net/Uri;)J
 
     move-result-wide v4
 
-    .line 14
     sget-object v1, Lbkq;->a:Ljava/lang/String;
 
     const/16 v2, 0x4e
@@ -571,26 +534,22 @@
 
     invoke-static {v1, v2}, Lbgj;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 16
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 17
     iget-object v1, p0, Lbll;->a:Lblb;
 
     invoke-virtual {v1, v4, v5}, Lblb;->a(J)Lilc;
 
     move-result-object v1
 
-    .line 18
     invoke-virtual {v1}, Lilc;->a()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 19
     sget-object v3, Lbkq;->a:Ljava/lang/String;
 
     const/16 v6, 0x3e
@@ -615,7 +574,6 @@
 
     invoke-static {v3, v4}, Lbgj;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 20
     invoke-virtual {v1}, Lilc;->b()Ljava/lang/Object;
 
     move-result-object v1
@@ -627,10 +585,8 @@
     :cond_0
     move-object v1, v2
 
-    .line 23
     goto :goto_0
 
-    .line 7
     :pswitch_data_0
     .packed-switch 0x7
         :pswitch_0

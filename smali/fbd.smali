@@ -14,8 +14,6 @@
 .method public constructor <init>(Lfbm;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfbd;->a:Lfbm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,41 +26,30 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 2
     iget-object v1, p0, Lfbd;->a:Lfbm;
 
-    .line 3
     iget-object v1, v1, Lfbm;->b:Lhjz;
 
-    .line 4
     const/4 v2, 0x2
 
     invoke-interface {v1, v2, v0}, Lhjz;->a(II)V
 
-    .line 5
     iget-object v1, p0, Lfbd;->a:Lfbm;
 
-    .line 6
     iget-object v1, v1, Lfbm;->f:Lfbn;
 
-    .line 7
     invoke-virtual {v1}, Lfbn;->a()Z
 
     move-result v1
 
-    .line 8
     iget-object v2, p0, Lfbd;->a:Lfbm;
 
-    .line 9
     iget-object v2, v2, Lfbm;->e:Lfbl;
 
-    .line 10
     invoke-interface {v2}, Lfbl;->r()V
 
-    .line 11
     iget-object v2, p0, Lfbd;->a:Lfbm;
 
     const/4 v3, 0x0
@@ -72,10 +59,8 @@
     :goto_0
     invoke-virtual {v2, v3, v0}, Lfbm;->b(FZ)V
 
-    .line 12
     return-void
 
-    .line 11
     :cond_0
     const/4 v0, 0x0
 

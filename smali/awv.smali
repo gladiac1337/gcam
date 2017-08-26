@@ -14,8 +14,6 @@
 .method constructor <init>(Lawu;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lawv;->a:Lawu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,14 +26,10 @@
 .method public final a(Lawz;Ljava/util/concurrent/Executor;)Lhiz;
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lawv;->a:Lawu;
 
-    .line 3
     iget-object v0, v0, Lawu;->a:Lavm;
 
-    .line 4
     new-instance v1, Laww;
 
     invoke-direct {v1, p0, p1}, Laww;-><init>(Lawv;Lawz;)V
@@ -50,24 +44,18 @@
 .method public final a()Ljava/lang/Object;
     .locals 5
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lawv;->a:Lawu;
 
     iget-object v1, p0, Lawv;->a:Lawu;
 
-    .line 6
     iget-object v1, v1, Lawu;->a:Lavm;
 
-    .line 7
     invoke-interface {v1}, Lavm;->a()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 9
     if-nez v1, :cond_0
 
-    .line 10
     new-instance v1, Ljava/lang/NullPointerException;
 
     iget-object v0, v0, Lawu;->a:Lavm;
@@ -114,23 +102,19 @@
 
     throw v1
 
-    .line 11
     :cond_0
     invoke-virtual {v0, v1}, Lawu;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 12
     if-nez v2, :cond_1
 
-    .line 13
     new-instance v2, Ljava/lang/NullPointerException;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 14
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -191,7 +175,6 @@
 
     throw v2
 
-    .line 16
     :cond_1
     return-object v2
 .end method

@@ -21,38 +21,30 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/FilmstripView;Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/PeekableFilmstripLayout;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcfu;
 
     invoke-direct {v0, p0}, Lcfu;-><init>(Lcft;)V
 
     iput-object v0, p0, Lcft;->e:Landroid/view/View$OnClickListener;
 
-    .line 3
     new-instance v0, Lcfv;
 
     invoke-direct {v0, p0}, Lcfv;-><init>(Lcft;)V
 
     iput-object v0, p0, Lcft;->f:Landroid/view/View$OnClickListener;
 
-    .line 4
     iput-object p1, p0, Lcft;->a:Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/FilmstripView;
 
-    .line 5
     iput-object p2, p0, Lcft;->d:Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/PeekableFilmstripLayout;
 
-    .line 6
     iget-object v0, p0, Lcft;->d:Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/PeekableFilmstripLayout;
 
     invoke-static {v0}, Lgmu;->a(Landroid/view/View;)Lgmu;
 
     move-result-object v1
 
-    .line 7
     const v0, 0x7f0e00f6
 
     invoke-virtual {v1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -63,7 +55,6 @@
 
     iput-object v0, p0, Lcft;->b:Landroid/widget/Button;
 
-    .line 8
     const v0, 0x7f0e00f8
 
     invoke-virtual {v1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -74,21 +65,18 @@
 
     iput-object v0, p0, Lcft;->c:Landroid/widget/Button;
 
-    .line 9
     iget-object v0, p0, Lcft;->b:Landroid/widget/Button;
 
     iget-object v1, p0, Lcft;->e:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 10
     iget-object v0, p0, Lcft;->c:Landroid/widget/Button;
 
     iget-object v1, p0, Lcft;->f:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 11
     return-void
 .end method
 
@@ -97,19 +85,15 @@
 .method public final a()V
     .locals 2
 
-    .prologue
     const/16 v1, 0x8
 
-    .line 12
     iget-object v0, p0, Lcft;->b:Landroid/widget/Button;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 13
     iget-object v0, p0, Lcft;->c:Landroid/widget/Button;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 14
     return-void
 .end method

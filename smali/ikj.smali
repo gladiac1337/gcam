@@ -14,11 +14,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -33,21 +30,16 @@
 .method public final a(Liki;)Liki;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Likj;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 4
     return-object p1
 .end method
 
 .method public final a(Ljava/lang/AutoCloseable;)Liki;
     .locals 1
 
-    .prologue
-    .line 5
     invoke-static {p1}, Lkk;->a(Ljava/lang/AutoCloseable;)Liki;
 
     move-result-object v0
@@ -62,8 +54,6 @@
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 6
     iget-object v0, p0, Likj;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -83,12 +73,10 @@
 
     check-cast v0, Liki;
 
-    .line 7
     invoke-interface {v0}, Liki;->close()V
 
     goto :goto_0
 
-    .line 9
     :cond_0
     return-void
 .end method
@@ -96,16 +84,12 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 10
-    .line 11
     iget-object v0, p0, Likj;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 12
     const/16 v1, 0x21
 
     new-instance v2, Ljava/lang/StringBuilder;

@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,11 +20,8 @@
 .method public final synthetic a(Lhwy;)Ljava/lang/Object;
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
-    .line 2
-    .line 3
     const-class v0, Lidz;
 
     const-string v1, "post_proc_quality_metric"
@@ -37,7 +32,6 @@
 
     check-cast v0, Lidz;
 
-    .line 4
     new-array v2, v5, [Lieo;
 
     const/4 v3, 0x0
@@ -46,7 +40,6 @@
 
     const-string v4, "continuous_action"
 
-    .line 5
     invoke-virtual {p1, v1, v4}, Lhwy;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
@@ -71,11 +64,9 @@
 
     aput-object v3, v2, v1
 
-    .line 6
     invoke-static {v2}, Liej;->a([Lieo;)Liej;
 
     move-result-object v0
 
-    .line 7
     return-object v0
 .end method

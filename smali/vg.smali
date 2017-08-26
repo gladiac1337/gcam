@@ -7,18 +7,14 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lvf;-><init>()V
 
-    .line 2
     const/16 v0, 0x18
 
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Lvg;->a(IZ)V
 
-    .line 3
     return-void
 .end method
 
@@ -27,8 +23,6 @@
 .method protected final c()I
     .locals 1
 
-    .prologue
-    .line 4
     const/16 v0, 0x3d
 
     return v0

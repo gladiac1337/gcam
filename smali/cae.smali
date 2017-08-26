@@ -15,8 +15,6 @@
 .method constructor <init>(Lcad;Ljava/io/File;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcae;->c:Lcad;
 
     iput-object p2, p0, Lcae;->a:Ljava/io/File;
@@ -31,8 +29,6 @@
 .method private static synthetic a(Ljava/lang/Throwable;Ljava/lang/AutoCloseable;)V
     .locals 1
 
-    .prologue
-    .line 14
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -61,13 +57,10 @@
 .method public final synthetic b(Ljava/lang/Object;)V
     .locals 7
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 2
     check-cast p1, Liaw;
 
-    .line 3
     iget-object v0, p0, Lcae;->c:Lcad;
 
     iget-object v0, v0, Lcad;->i:Lias;
@@ -76,11 +69,9 @@
 
     move-result-object v3
 
-    .line 4
     :try_start_0
     iget-object v0, p0, Lcae;->a:Ljava/io/File;
 
-    .line 5
     invoke-static {v0}, Lid;->c(Ljava/io/File;)Ljava/io/OutputStream;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
@@ -88,7 +79,6 @@
 
     move-result-object v4
 
-    .line 7
     :try_start_1
     invoke-interface {v3}, Liav;->e()Ljava/lang/Object;
 
@@ -105,7 +95,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
-    .line 8
     const/4 v0, 0x0
 
     :try_start_2
@@ -114,16 +103,13 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 10
     if-eqz v3, :cond_0
 
     invoke-static {v2, v3}, Lcae;->a(Ljava/lang/Throwable;Ljava/lang/AutoCloseable;)V
 
-    .line 13
     :cond_0
     return-void
 
-    .line 9
     :catch_0
     move-exception v0
 
@@ -132,7 +118,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 10
     :catchall_0
     move-exception v1
 
@@ -151,7 +136,6 @@
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 11
     :catch_1
     move-exception v0
 
@@ -160,7 +144,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 12
     :catchall_1
     move-exception v1
 
@@ -181,7 +164,6 @@
 
     goto :goto_1
 
-    .line 10
     :catchall_3
     move-exception v0
 

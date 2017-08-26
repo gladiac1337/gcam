@@ -23,8 +23,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 45
     const-string v0, "MainActivityLayout"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -35,16 +33,12 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 2
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->a:Lepq;
 
-    .line 3
     const-string v0, "window"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -55,12 +49,10 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->c:Landroid/view/WindowManager;
 
-    .line 5
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 6
     iget-object v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->c:Landroid/view/WindowManager;
 
     invoke-interface {v1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
@@ -69,7 +61,6 @@
 
     invoke-virtual {v1, v0}, Landroid/view/Display;->getRealMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 7
     iget v1, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
     iget v2, v0, Landroid/util/DisplayMetrics;->widthPixels:I
@@ -78,7 +69,6 @@
 
     move-result v1
 
-    .line 8
     iget v2, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
     iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
@@ -87,14 +77,12 @@
 
     move-result v0
 
-    .line 9
     shl-int/lit8 v0, v0, 0x2
 
     div-int/lit8 v0, v0, 0x3
 
     sub-int v0, v1, v0
 
-    .line 10
     invoke-virtual {p0}, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -105,15 +93,12 @@
 
     move-result v1
 
-    .line 11
     invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v0
 
-    .line 12
     iput v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->f:I
 
-    .line 13
     return-void
 .end method
 
@@ -122,11 +107,8 @@
 .method protected onFinishInflate()V
     .locals 1
 
-    .prologue
-    .line 14
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    .line 15
     const v0, 0x7f0e00a6
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->findViewById(I)Landroid/view/View;
@@ -137,18 +119,14 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->e:Lcom/google/android/apps/camera/bottombar/BottomBar;
 
-    .line 16
     return-void
 .end method
 
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 3
 
-    .prologue
-    .line 40
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->b:Leqm;
 
-    .line 41
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v1
@@ -157,7 +135,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 43
     iget-object v0, v0, Leqm;->a:Lgat;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
@@ -174,7 +151,6 @@
 
     invoke-interface {v0, v1, v2}, Lgat;->a(II)V
 
-    .line 44
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -186,11 +162,8 @@
 .method protected onLayout(ZIIII)V
     .locals 2
 
-    .prologue
-    .line 32
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 33
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->d:Lgls;
 
     sget-object v1, Lgls;->a:Lgls;
@@ -203,7 +176,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 34
     :cond_0
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->e:Lcom/google/android/apps/camera/bottombar/BottomBar;
 
@@ -213,11 +185,9 @@
 
     invoke-virtual {v0, p2, v1, p4, p5}, Lcom/google/android/apps/camera/bottombar/BottomBar;->layout(IIII)V
 
-    .line 38
     :goto_0
     return-void
 
-    .line 35
     :cond_1
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->d:Lgls;
 
@@ -225,7 +195,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 36
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->e:Lcom/google/android/apps/camera/bottombar/BottomBar;
 
     iget v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->g:I
@@ -236,7 +205,6 @@
 
     goto :goto_0
 
-    .line 37
     :cond_2
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->d:Lgls;
 
@@ -244,7 +212,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 38
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->e:Lcom/google/android/apps/camera/bottombar/BottomBar;
 
     iget v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->g:I
@@ -253,7 +220,6 @@
 
     goto :goto_0
 
-    .line 39
     :cond_3
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -267,16 +233,12 @@
 .method public onMeasure(II)V
     .locals 3
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->a:Lepq;
 
     if-eqz v0, :cond_0
 
-    .line 18
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->a:Lepq;
 
-    .line 19
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v1
@@ -285,10 +247,8 @@
 
     move-result v2
 
-    .line 20
     invoke-interface {v0, v1, v2}, Lepq;->a(II)V
 
-    .line 21
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->getContext()Landroid/content/Context;
 
@@ -300,10 +260,8 @@
 
     move-result v0
 
-    .line 22
     if-eqz v0, :cond_1
 
-    .line 23
     invoke-virtual {p0}, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -316,41 +274,33 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->g:I
 
-    .line 25
     :goto_0
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->c:Landroid/view/WindowManager;
 
-    .line 26
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
     move-result-object v0
 
-    .line 27
     invoke-virtual {p0}, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    .line 28
     invoke-static {v0, v1, p1, p2}, Lgls;->a(Landroid/view/Display;Landroid/content/Context;II)Lgls;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->d:Lgls;
 
-    .line 29
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->e:Lcom/google/android/apps/camera/bottombar/BottomBar;
 
     iget-object v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->d:Lgls;
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/bottombar/BottomBar;->setUiOrientation(Lgls;)V
 
-    .line 30
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 31
     return-void
 
-    .line 24
     :cond_1
     iget v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;->f:I
 

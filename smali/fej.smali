@@ -16,8 +16,6 @@
 .method constructor <init>(Lgat;Limr;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfej;->a:Lgat;
 
     iput-object p2, p0, Lfej;->b:Limr;
@@ -32,11 +30,8 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 2
     check-cast p1, Ljava/lang/Integer;
 
-    .line 3
     iget-object v1, p0, Lfej;->a:Lgat;
 
     iget-object v0, p0, Lfej;->b:Limr;
@@ -53,6 +48,5 @@
 
     invoke-interface {v1, v0}, Lgat;->a(Lgba;)V
 
-    .line 4
     return-void
 .end method

@@ -18,28 +18,20 @@
 .method private constructor <init>(Lilp;Lilp;Lilp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldpa;->a:Lilp;
 
-    .line 3
     iput-object p2, p0, Ldpa;->b:Lilp;
 
-    .line 4
     iput-object p3, p0, Ldpa;->c:Lilp;
 
-    .line 5
     return-void
 .end method
 
 .method public static a(Lilp;Lilp;Lilp;)Lilp;
     .locals 1
 
-    .prologue
-    .line 6
     new-instance v0, Ldpa;
 
     invoke-direct {v0, p0, p1, p2}, Ldpa;-><init>(Lilp;Lilp;Lilp;)V
@@ -52,18 +44,14 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 11
 
-    .prologue
     const/4 v9, 0x4
 
     const/high16 v8, 0x3f800000    # 1.0f
 
     const/4 v10, 0x0
 
-    .line 7
-    .line 8
     iget-object v0, p0, Ldpa;->a:Lilp;
 
-    .line 9
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -82,7 +70,6 @@
 
     check-cast v1, Lilc;
 
-    .line 11
     const/16 v2, 0x11
 
     new-array v2, v2, [Lfvb;
@@ -91,7 +78,6 @@
 
     sget-object v4, Landroid/hardware/camera2/CaptureRequest;->COLOR_CORRECTION_ABERRATION_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 12
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -120,7 +106,6 @@
 
     sget-object v5, Landroid/hardware/camera2/CaptureRequest;->COLOR_CORRECTION_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 13
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -153,7 +138,6 @@
 
     sget-object v4, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_ANTIBANDING_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 14
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -168,7 +152,6 @@
 
     sget-object v5, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 15
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -183,7 +166,6 @@
 
     sget-object v5, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AWB_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 16
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -198,7 +180,6 @@
 
     sget-object v5, Landroid/hardware/camera2/CaptureRequest;->CONTROL_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 17
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -213,7 +194,6 @@
 
     sget-object v5, Landroid/hardware/camera2/CaptureRequest;->CONTROL_SCENE_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 18
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -230,7 +210,6 @@
 
     const/16 v6, 0x64
 
-    .line 19
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -245,7 +224,6 @@
 
     sget-object v5, Landroid/hardware/camera2/CaptureRequest;->EDGE_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 20
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -260,7 +238,6 @@
 
     sget-object v5, Landroid/hardware/camera2/CaptureRequest;->HOT_PIXEL_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 21
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -275,7 +252,6 @@
 
     sget-object v5, Landroid/hardware/camera2/CaptureRequest;->NOISE_REDUCTION_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 22
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -290,7 +266,6 @@
 
     sget-object v5, Landroid/hardware/camera2/CaptureRequest;->REPROCESS_EFFECTIVE_EXPOSURE_FACTOR:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 23
     invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v6
@@ -305,7 +280,6 @@
 
     sget-object v5, Landroid/hardware/camera2/CaptureRequest;->SHADING_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 24
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -346,7 +320,6 @@
 
     sget-object v5, Landroid/hardware/camera2/CaptureRequest;->TONEMAP_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 25
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -355,57 +328,46 @@
 
     aput-object v4, v2, v3
 
-    .line 26
     invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 27
     new-instance v3, Ldoz;
 
-    .line 28
     invoke-virtual {v1}, Lilc;->a()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 29
     invoke-virtual {v1}, Lilc;->b()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lgcm;
 
-    .line 31
     :goto_0
     invoke-direct {v3, v0, v2, v1}, Ldoz;-><init>(Ldor;Ljava/util/Collection;Lgcm;)V
 
-    .line 32
     invoke-static {v3}, Lilc;->b(Ljava/lang/Object;)Lilc;
 
     move-result-object v0
 
-    .line 33
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 34
     invoke-static {v0, v1}, Ldt;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lilc;
 
-    .line 35
     return-object v0
 
-    .line 30
     :cond_0
     sget-object v1, Lgcn;->a:Lgcm;
 
     goto :goto_0
 
-    .line 13
     :array_0
     .array-data 4
         0x1
@@ -428,7 +390,6 @@
         0x1
     .end array-data
 
-    .line 24
     :array_1
     .array-data 4
         0x0

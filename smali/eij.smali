@@ -41,8 +41,6 @@
 .method public final run()V
     .locals 7
 
-    .prologue
-    .line 1
     iget-object v1, p0, Leij;->a:Leii;
 
     iget-object v0, p0, Leij;->b:Lgje;
@@ -53,7 +51,6 @@
 
     iget-object v4, p0, Leij;->e:Lgfg;
 
-    .line 2
     iget-object v5, v1, Leii;->m:Lgjj;
 
     iget-object v6, v1, Leii;->c:Ljava/lang/String;
@@ -62,41 +59,33 @@
 
     move-result-object v5
 
-    .line 4
     :try_start_0
     iget-object v6, v1, Leii;->n:Lgiz;
 
     invoke-interface {v6, v5, v2, v3}, Lgiz;->a(Ljava/io/File;Ljava/io/InputStream;Lilc;)J
 
-    .line 5
     iget-object v2, v1, Leii;->l:Liwp;
 
-    .line 7
     new-instance v3, Leil;
 
     invoke-direct {v3, v1, v5, v0, v4}, Leil;-><init>(Leii;Ljava/io/File;Lgje;Lgfg;)V
 
-    .line 8
     invoke-virtual {v2, v3}, Liuj;->a(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 13
     :goto_0
     return-void
 
-    .line 10
     :catch_0
     move-exception v0
 
-    .line 11
     sget-object v2, Leii;->a:Ljava/lang/String;
 
     const-string v3, "CameraFileUtil.writeImageFile() throws : "
 
     invoke-static {v2, v3, v0}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 12
     iget-object v1, v1, Leii;->l:Liwp;
 
     invoke-virtual {v1, v0}, Liuj;->a(Ljava/lang/Throwable;)Z

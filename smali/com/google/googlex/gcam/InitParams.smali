@@ -13,8 +13,6 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
-    .line 14
     invoke-static {}, Lcom/google/googlex/gcam/GcamModuleJNI;->new_InitParams()J
 
     move-result-wide v0
@@ -23,32 +21,24 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/InitParams;-><init>(JZ)V
 
-    .line 15
     return-void
 .end method
 
 .method protected constructor <init>(JZ)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-boolean p3, p0, Lcom/google/googlex/gcam/InitParams;->swigCMemOwn:Z
 
-    .line 3
     iput-wide p1, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
-    .line 4
     return-void
 .end method
 
 .method protected static getCPtr(Lcom/google/googlex/gcam/InitParams;)J
     .locals 2
 
-    .prologue
-    .line 5
     if-nez p0, :cond_0
 
     const-wide/16 v0, 0x0
@@ -67,8 +57,6 @@
 .method public Check()Z
     .locals 2
 
-    .prologue
-    .line 18
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_Check(JLcom/google/googlex/gcam/InitParams;)Z
@@ -81,21 +69,16 @@
 .method public Clear()V
     .locals 2
 
-    .prologue
-    .line 16
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_Clear(JLcom/google/googlex/gcam/InitParams;)V
 
-    .line 17
     return-void
 .end method
 
 .method public DeserializeFromString(Ljava/lang/String;)Z
     .locals 2
 
-    .prologue
-    .line 23
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_DeserializeFromString(JLcom/google/googlex/gcam/InitParams;Ljava/lang/String;)Z
@@ -108,8 +91,6 @@
 .method public Equals(Lcom/google/googlex/gcam/InitParams;)Z
     .locals 6
 
-    .prologue
-    .line 24
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/InitParams;->getCPtr(Lcom/google/googlex/gcam/InitParams;)J
@@ -130,21 +111,16 @@
 .method public Print(I)V
     .locals 2
 
-    .prologue
-    .line 19
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_Print(JLcom/google/googlex/gcam/InitParams;I)V
 
-    .line 20
     return-void
 .end method
 
 .method public SerializeToString(Lcom/google/googlex/gcam/SWIGTYPE_p_std__string;)V
     .locals 4
 
-    .prologue
-    .line 21
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/SWIGTYPE_p_std__string;->getCPtr(Lcom/google/googlex/gcam/SWIGTYPE_p_std__string;)J
@@ -153,17 +129,14 @@
 
     invoke-static {v0, v1, p0, v2, v3}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_SerializeToString(JLcom/google/googlex/gcam/InitParams;J)V
 
-    .line 22
     return-void
 .end method
 
 .method public declared-synchronized delete()V
     .locals 4
 
-    .prologue
     const-wide/16 v2, 0x0
 
-    .line 8
     monitor-enter p0
 
     :try_start_0
@@ -173,22 +146,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 9
     iget-boolean v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCMemOwn:Z
 
     if-eqz v0, :cond_0
 
-    .line 10
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCMemOwn:Z
 
-    .line 11
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1}, Lcom/google/googlex/gcam/GcamModuleJNI;->delete_InitParams(J)V
 
-    .line 12
     :cond_0
     const-wide/16 v0, 0x0
 
@@ -196,13 +165,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 13
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 8
     :catchall_0
     move-exception v0
 
@@ -214,19 +181,14 @@
 .method protected finalize()V
     .locals 0
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Lcom/google/googlex/gcam/InitParams;->delete()V
 
-    .line 7
     return-void
 .end method
 
 .method public getAllow_unknown_devices()Z
     .locals 2
 
-    .prologue
-    .line 66
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_allow_unknown_devices_get(JLcom/google/googlex/gcam/InitParams;)Z
@@ -239,15 +201,12 @@
 .method public getBackground_ae_results_callback()Lcom/google/googlex/gcam/BackgroundAeResultsCallback;
     .locals 4
 
-    .prologue
-    .line 110
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_background_ae_results_callback_get(JLcom/google/googlex/gcam/InitParams;)J
 
     move-result-wide v2
 
-    .line 111
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -272,15 +231,12 @@
 .method public getCapture_priority()Lcom/google/googlex/gcam/ThreadPriority;
     .locals 4
 
-    .prologue
-    .line 78
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_capture_priority_get(JLcom/google/googlex/gcam/InitParams;)J
 
     move-result-wide v2
 
-    .line 79
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -305,15 +261,12 @@
 .method public getCustom_free()Lcom/google/googlex/gcam/SWIGTYPE_p_f_p_void__void;
     .locals 4
 
-    .prologue
-    .line 94
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_custom_free_get(JLcom/google/googlex/gcam/InitParams;)J
 
     move-result-wide v2
 
-    .line 95
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -338,15 +291,12 @@
 .method public getCustom_malloc()Lcom/google/googlex/gcam/SWIGTYPE_p_f_unsigned_long__p_void;
     .locals 4
 
-    .prologue
-    .line 90
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_custom_malloc_get(JLcom/google/googlex/gcam/InitParams;)J
 
     move-result-wide v2
 
-    .line 91
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -371,8 +321,6 @@
 .method public getDisable_smart_metering()Z
     .locals 2
 
-    .prologue
-    .line 33
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_disable_smart_metering_get(JLcom/google/googlex/gcam/InitParams;)Z
@@ -385,15 +333,12 @@
 .method public getFinish_priority()Lcom/google/googlex/gcam/ThreadPriority;
     .locals 4
 
-    .prologue
-    .line 86
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_finish_priority_get(JLcom/google/googlex/gcam/InitParams;)J
 
     move-result-wide v2
 
-    .line 87
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -418,15 +363,12 @@
 .method public getFinish_queue_empty_callback()Lcom/google/googlex/gcam/SimpleCallback;
     .locals 4
 
-    .prologue
-    .line 106
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_finish_queue_empty_callback_get(JLcom/google/googlex/gcam/InitParams;)J
 
     move-result-wide v2
 
-    .line 107
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -451,15 +393,12 @@
 .method public getImage_release_callback()Lcom/google/googlex/gcam/ImageReleaseCallback;
     .locals 4
 
-    .prologue
-    .line 114
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_image_release_callback_get(JLcom/google/googlex/gcam/InitParams;)J
 
     move-result-wide v2
 
-    .line 115
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -484,8 +423,6 @@
 .method public getMax_full_metering_sweep_frames()I
     .locals 2
 
-    .prologue
-    .line 39
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_max_full_metering_sweep_frames_get(JLcom/google/googlex/gcam/InitParams;)I
@@ -498,8 +435,6 @@
 .method public getMax_payload_frames()I
     .locals 2
 
-    .prologue
-    .line 45
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_max_payload_frames_get(JLcom/google/googlex/gcam/InitParams;)I
@@ -512,8 +447,6 @@
 .method public getMax_zsl_frames()I
     .locals 2
 
-    .prologue
-    .line 48
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_max_zsl_frames_get(JLcom/google/googlex/gcam/InitParams;)I
@@ -526,15 +459,12 @@
 .method public getMemory_callback()Lcom/google/googlex/gcam/MemoryStateCallback;
     .locals 4
 
-    .prologue
-    .line 98
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_memory_callback_get(JLcom/google/googlex/gcam/InitParams;)J
 
     move-result-wide v2
 
-    .line 99
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -559,15 +489,12 @@
 .method public getMerge_priority()Lcom/google/googlex/gcam/ThreadPriority;
     .locals 4
 
-    .prologue
-    .line 82
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_merge_priority_get(JLcom/google/googlex/gcam/InitParams;)J
 
     move-result-wide v2
 
-    .line 83
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -592,15 +519,12 @@
 .method public getMerge_queue_empty_callback()Lcom/google/googlex/gcam/SimpleCallback;
     .locals 4
 
-    .prologue
-    .line 102
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_merge_queue_empty_callback_get(JLcom/google/googlex/gcam/InitParams;)J
 
     move-result-wide v2
 
-    .line 103
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -625,8 +549,6 @@
 .method public getMin_full_metering_sweep_frames()I
     .locals 2
 
-    .prologue
-    .line 36
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_min_full_metering_sweep_frames_get(JLcom/google/googlex/gcam/InitParams;)I
@@ -639,8 +561,6 @@
 .method public getMin_payload_frames()I
     .locals 2
 
-    .prologue
-    .line 42
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_min_payload_frames_get(JLcom/google/googlex/gcam/InitParams;)I
@@ -653,8 +573,6 @@
 .method public getPayload_frame_copy_mode()I
     .locals 2
 
-    .prologue
-    .line 51
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_payload_frame_copy_mode_get(JLcom/google/googlex/gcam/InitParams;)I
@@ -667,8 +585,6 @@
 .method public getPlanning_to_process_bayer_for_metering()Z
     .locals 2
 
-    .prologue
-    .line 54
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_planning_to_process_bayer_for_metering_get(JLcom/google/googlex/gcam/InitParams;)Z
@@ -681,8 +597,6 @@
 .method public getPlanning_to_process_bayer_for_payload()Z
     .locals 2
 
-    .prologue
-    .line 57
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_planning_to_process_bayer_for_payload_get(JLcom/google/googlex/gcam/InitParams;)Z
@@ -695,8 +609,6 @@
 .method public getPlanning_to_provide_both_yuv_and_raw_for_metering()Z
     .locals 2
 
-    .prologue
-    .line 60
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_planning_to_provide_both_yuv_and_raw_for_metering_get(JLcom/google/googlex/gcam/InitParams;)Z
@@ -709,8 +621,6 @@
 .method public getPlanning_to_provide_both_yuv_and_raw_for_payload()Z
     .locals 2
 
-    .prologue
-    .line 63
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_planning_to_provide_both_yuv_and_raw_for_payload_get(JLcom/google/googlex/gcam/InitParams;)Z
@@ -723,8 +633,6 @@
 .method public getSimultaneous_merge_and_finish()Z
     .locals 2
 
-    .prologue
-    .line 75
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_simultaneous_merge_and_finish_get(JLcom/google/googlex/gcam/InitParams;)Z
@@ -737,8 +645,6 @@
 .method public getThread_count()I
     .locals 2
 
-    .prologue
-    .line 27
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_thread_count_get(JLcom/google/googlex/gcam/InitParams;)I
@@ -751,8 +657,6 @@
 .method public getTuning_locked()Z
     .locals 2
 
-    .prologue
-    .line 69
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_tuning_locked_get(JLcom/google/googlex/gcam/InitParams;)Z
@@ -765,8 +669,6 @@
 .method public getUse_hexagon()Z
     .locals 2
 
-    .prologue
-    .line 72
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_use_hexagon_get(JLcom/google/googlex/gcam/InitParams;)Z
@@ -779,8 +681,6 @@
 .method public getVerbose()Z
     .locals 2
 
-    .prologue
-    .line 30
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_verbose_get(JLcom/google/googlex/gcam/InitParams;)Z
@@ -793,21 +693,16 @@
 .method public setAllow_unknown_devices(Z)V
     .locals 2
 
-    .prologue
-    .line 64
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_allow_unknown_devices_set(JLcom/google/googlex/gcam/InitParams;Z)V
 
-    .line 65
     return-void
 .end method
 
 .method public setBackground_ae_results_callback(Lcom/google/googlex/gcam/BackgroundAeResultsCallback;)V
     .locals 6
 
-    .prologue
-    .line 108
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/BackgroundAeResultsCallback;->getCPtr(Lcom/google/googlex/gcam/BackgroundAeResultsCallback;)J
@@ -820,15 +715,12 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_background_ae_results_callback_set(JLcom/google/googlex/gcam/InitParams;JLcom/google/googlex/gcam/BackgroundAeResultsCallback;)V
 
-    .line 109
     return-void
 .end method
 
 .method public setCapture_priority(Lcom/google/googlex/gcam/ThreadPriority;)V
     .locals 6
 
-    .prologue
-    .line 76
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/ThreadPriority;->getCPtr(Lcom/google/googlex/gcam/ThreadPriority;)J
@@ -841,15 +733,12 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_capture_priority_set(JLcom/google/googlex/gcam/InitParams;JLcom/google/googlex/gcam/ThreadPriority;)V
 
-    .line 77
     return-void
 .end method
 
 .method public setCustom_free(Lcom/google/googlex/gcam/SWIGTYPE_p_f_p_void__void;)V
     .locals 4
 
-    .prologue
-    .line 92
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/SWIGTYPE_p_f_p_void__void;->getCPtr(Lcom/google/googlex/gcam/SWIGTYPE_p_f_p_void__void;)J
@@ -858,15 +747,12 @@
 
     invoke-static {v0, v1, p0, v2, v3}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_custom_free_set(JLcom/google/googlex/gcam/InitParams;J)V
 
-    .line 93
     return-void
 .end method
 
 .method public setCustom_malloc(Lcom/google/googlex/gcam/SWIGTYPE_p_f_unsigned_long__p_void;)V
     .locals 4
 
-    .prologue
-    .line 88
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/SWIGTYPE_p_f_unsigned_long__p_void;->getCPtr(Lcom/google/googlex/gcam/SWIGTYPE_p_f_unsigned_long__p_void;)J
@@ -875,28 +761,22 @@
 
     invoke-static {v0, v1, p0, v2, v3}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_custom_malloc_set(JLcom/google/googlex/gcam/InitParams;J)V
 
-    .line 89
     return-void
 .end method
 
 .method public setDisable_smart_metering(Z)V
     .locals 2
 
-    .prologue
-    .line 31
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_disable_smart_metering_set(JLcom/google/googlex/gcam/InitParams;Z)V
 
-    .line 32
     return-void
 .end method
 
 .method public setFinish_priority(Lcom/google/googlex/gcam/ThreadPriority;)V
     .locals 6
 
-    .prologue
-    .line 84
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/ThreadPriority;->getCPtr(Lcom/google/googlex/gcam/ThreadPriority;)J
@@ -909,15 +789,12 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_finish_priority_set(JLcom/google/googlex/gcam/InitParams;JLcom/google/googlex/gcam/ThreadPriority;)V
 
-    .line 85
     return-void
 .end method
 
 .method public setFinish_queue_empty_callback(Lcom/google/googlex/gcam/SimpleCallback;)V
     .locals 6
 
-    .prologue
-    .line 104
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/SimpleCallback;->getCPtr(Lcom/google/googlex/gcam/SimpleCallback;)J
@@ -930,15 +807,12 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_finish_queue_empty_callback_set(JLcom/google/googlex/gcam/InitParams;JLcom/google/googlex/gcam/SimpleCallback;)V
 
-    .line 105
     return-void
 .end method
 
 .method public setImage_release_callback(Lcom/google/googlex/gcam/ImageReleaseCallback;)V
     .locals 6
 
-    .prologue
-    .line 112
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/ImageReleaseCallback;->getCPtr(Lcom/google/googlex/gcam/ImageReleaseCallback;)J
@@ -951,54 +825,42 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_image_release_callback_set(JLcom/google/googlex/gcam/InitParams;JLcom/google/googlex/gcam/ImageReleaseCallback;)V
 
-    .line 113
     return-void
 .end method
 
 .method public setMax_full_metering_sweep_frames(I)V
     .locals 2
 
-    .prologue
-    .line 37
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_max_full_metering_sweep_frames_set(JLcom/google/googlex/gcam/InitParams;I)V
 
-    .line 38
     return-void
 .end method
 
 .method public setMax_payload_frames(I)V
     .locals 2
 
-    .prologue
-    .line 43
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_max_payload_frames_set(JLcom/google/googlex/gcam/InitParams;I)V
 
-    .line 44
     return-void
 .end method
 
 .method public setMax_zsl_frames(I)V
     .locals 2
 
-    .prologue
-    .line 46
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_max_zsl_frames_set(JLcom/google/googlex/gcam/InitParams;I)V
 
-    .line 47
     return-void
 .end method
 
 .method public setMemory_callback(Lcom/google/googlex/gcam/MemoryStateCallback;)V
     .locals 6
 
-    .prologue
-    .line 96
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/MemoryStateCallback;->getCPtr(Lcom/google/googlex/gcam/MemoryStateCallback;)J
@@ -1011,15 +873,12 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_memory_callback_set(JLcom/google/googlex/gcam/InitParams;JLcom/google/googlex/gcam/MemoryStateCallback;)V
 
-    .line 97
     return-void
 .end method
 
 .method public setMerge_priority(Lcom/google/googlex/gcam/ThreadPriority;)V
     .locals 6
 
-    .prologue
-    .line 80
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/ThreadPriority;->getCPtr(Lcom/google/googlex/gcam/ThreadPriority;)J
@@ -1032,15 +891,12 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_merge_priority_set(JLcom/google/googlex/gcam/InitParams;JLcom/google/googlex/gcam/ThreadPriority;)V
 
-    .line 81
     return-void
 .end method
 
 .method public setMerge_queue_empty_callback(Lcom/google/googlex/gcam/SimpleCallback;)V
     .locals 6
 
-    .prologue
-    .line 100
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/SimpleCallback;->getCPtr(Lcom/google/googlex/gcam/SimpleCallback;)J
@@ -1053,162 +909,125 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_merge_queue_empty_callback_set(JLcom/google/googlex/gcam/InitParams;JLcom/google/googlex/gcam/SimpleCallback;)V
 
-    .line 101
     return-void
 .end method
 
 .method public setMin_full_metering_sweep_frames(I)V
     .locals 2
 
-    .prologue
-    .line 34
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_min_full_metering_sweep_frames_set(JLcom/google/googlex/gcam/InitParams;I)V
 
-    .line 35
     return-void
 .end method
 
 .method public setMin_payload_frames(I)V
     .locals 2
 
-    .prologue
-    .line 40
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_min_payload_frames_set(JLcom/google/googlex/gcam/InitParams;I)V
 
-    .line 41
     return-void
 .end method
 
 .method public setPayload_frame_copy_mode(I)V
     .locals 2
 
-    .prologue
-    .line 49
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_payload_frame_copy_mode_set(JLcom/google/googlex/gcam/InitParams;I)V
 
-    .line 50
     return-void
 .end method
 
 .method public setPlanning_to_process_bayer_for_metering(Z)V
     .locals 2
 
-    .prologue
-    .line 52
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_planning_to_process_bayer_for_metering_set(JLcom/google/googlex/gcam/InitParams;Z)V
 
-    .line 53
     return-void
 .end method
 
 .method public setPlanning_to_process_bayer_for_payload(Z)V
     .locals 2
 
-    .prologue
-    .line 55
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_planning_to_process_bayer_for_payload_set(JLcom/google/googlex/gcam/InitParams;Z)V
 
-    .line 56
     return-void
 .end method
 
 .method public setPlanning_to_provide_both_yuv_and_raw_for_metering(Z)V
     .locals 2
 
-    .prologue
-    .line 58
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_planning_to_provide_both_yuv_and_raw_for_metering_set(JLcom/google/googlex/gcam/InitParams;Z)V
 
-    .line 59
     return-void
 .end method
 
 .method public setPlanning_to_provide_both_yuv_and_raw_for_payload(Z)V
     .locals 2
 
-    .prologue
-    .line 61
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_planning_to_provide_both_yuv_and_raw_for_payload_set(JLcom/google/googlex/gcam/InitParams;Z)V
 
-    .line 62
     return-void
 .end method
 
 .method public setSimultaneous_merge_and_finish(Z)V
     .locals 2
 
-    .prologue
-    .line 73
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_simultaneous_merge_and_finish_set(JLcom/google/googlex/gcam/InitParams;Z)V
 
-    .line 74
     return-void
 .end method
 
 .method public setThread_count(I)V
     .locals 2
 
-    .prologue
-    .line 25
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_thread_count_set(JLcom/google/googlex/gcam/InitParams;I)V
 
-    .line 26
     return-void
 .end method
 
 .method public setTuning_locked(Z)V
     .locals 2
 
-    .prologue
-    .line 67
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_tuning_locked_set(JLcom/google/googlex/gcam/InitParams;Z)V
 
-    .line 68
     return-void
 .end method
 
 .method public setUse_hexagon(Z)V
     .locals 2
 
-    .prologue
-    .line 70
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_use_hexagon_set(JLcom/google/googlex/gcam/InitParams;Z)V
 
-    .line 71
     return-void
 .end method
 
 .method public setVerbose(Z)V
     .locals 2
 
-    .prologue
-    .line 28
     iget-wide v0, p0, Lcom/google/googlex/gcam/InitParams;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->InitParams_verbose_set(JLcom/google/googlex/gcam/InitParams;Z)V
 
-    .line 29
     return-void
 .end method

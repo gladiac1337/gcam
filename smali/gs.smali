@@ -11,15 +11,12 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 3
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x10
 
     if-lt v0, v1, :cond_0
 
-    .line 4
     new-instance v0, Lgt;
 
     const/4 v1, 0x0
@@ -28,11 +25,9 @@
 
     sput-object v0, Lgs;->a:Lgu;
 
-    .line 8
     :goto_0
     return-void
 
-    .line 5
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -40,7 +35,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 6
     new-instance v0, Lgt;
 
     invoke-direct {v0}, Lgt;-><init>()V
@@ -49,7 +43,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_1
     new-instance v0, Lgu;
 
@@ -67,8 +60,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 2
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -81,8 +72,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 1
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V

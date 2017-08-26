@@ -33,8 +33,6 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgwi;->c:Lgwg;
 
     invoke-static {v0}, Lgwg;->a(Lgwg;)Z
@@ -51,12 +49,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 5
     :cond_0
     :goto_0
     return-void
 
-    .line 1
     :cond_1
     iget-object v0, p0, Lgwi;->c:Lgwg;
 
@@ -139,10 +135,8 @@
 
     iget-object v0, p0, Lgwi;->b:Lcom/google/android/gms/common/ConnectionResult;
 
-    .line 2
     iget v0, v0, Lcom/google/android/gms/common/ConnectionResult;->b:I
 
-    .line 3
     invoke-static {v0}, Lgvj;->a(I)Z
 
     move-result v0
@@ -162,10 +156,8 @@
     :cond_3
     iget-object v0, p0, Lgwi;->b:Lcom/google/android/gms/common/ConnectionResult;
 
-    .line 4
     iget v0, v0, Lcom/google/android/gms/common/ConnectionResult;->b:I
 
-    .line 5
     const/16 v1, 0x12
 
     if-ne v0, v1, :cond_4

@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,15 +15,10 @@
 .method public static synthetic a(Landroid/animation/Animator;)Lgly;
     .locals 3
 
-    .prologue
-    .line 1
-    .line 2
     new-instance v0, Lgma;
 
-    .line 3
     if-nez p0, :cond_0
 
-    .line 4
     new-instance v0, Ljava/lang/NullPointerException;
 
     const/16 v1, 0x5d
@@ -48,12 +41,10 @@
 
     throw v0
 
-    .line 6
     :cond_0
     check-cast p0, Landroid/animation/Animator;
 
     invoke-direct {v0, p0}, Lgma;-><init>(Landroid/animation/Animator;)V
 
-    .line 7
     return-object v0
 .end method

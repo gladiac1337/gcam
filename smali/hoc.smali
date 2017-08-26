@@ -15,13 +15,10 @@
 .method constructor <init>()V
     .locals 8
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     :try_start_0
     const-string v0, "android.os.SystemProperties"
 
@@ -29,7 +26,6 @@
 
     move-result-object v0
 
-    .line 6
     const-string v2, "get"
 
     const/4 v3, 0x2
@@ -55,7 +51,6 @@
 
     move-result-object v3
 
-    .line 7
     :try_start_1
     const-string v2, "set"
 
@@ -82,7 +77,6 @@
 
     move-result-object v2
 
-    .line 8
     :try_start_2
     const-string v4, "getInt"
 
@@ -106,7 +100,6 @@
 
     move-result-object v1
 
-    .line 9
     const-string v4, "getLong"
 
     const/4 v5, 0x2
@@ -130,19 +123,14 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 10
     iput-object v3, p0, Lhoc;->a:Ljava/lang/reflect/Method;
 
-    .line 11
     iput-object v2, p0, Lhoc;->b:Ljava/lang/reflect/Method;
 
-    .line 12
     iput-object v1, p0, Lhoc;->c:Ljava/lang/reflect/Method;
 
-    .line 13
     return-void
 
-    .line 14
     :catch_0
     move-exception v0
 
@@ -150,7 +138,6 @@
 
     move-object v3, v1
 
-    .line 15
     :goto_0
     :try_start_3
     new-instance v4, Ljava/lang/IllegalStateException;
@@ -163,23 +150,18 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 16
     :catchall_0
     move-exception v0
 
     :goto_1
     iput-object v3, p0, Lhoc;->a:Ljava/lang/reflect/Method;
 
-    .line 17
     iput-object v2, p0, Lhoc;->b:Ljava/lang/reflect/Method;
 
-    .line 18
     iput-object v1, p0, Lhoc;->c:Ljava/lang/reflect/Method;
 
-    .line 19
     throw v0
 
-    .line 16
     :catchall_1
     move-exception v0
 
@@ -196,7 +178,6 @@
 
     goto :goto_1
 
-    .line 14
     :catch_1
     move-exception v0
 
@@ -215,19 +196,15 @@
 .method public final a(Ljava/lang/String;I)I
     .locals 5
 
-    .prologue
-    .line 38
     const-string v0, "Key cannot be null!"
 
     invoke-static {p1, v0}, Lid;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 39
     :try_start_0
     iget-object v0, p0, Lhoc;->c:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
-    .line 40
     iget-object v0, p0, Lhoc;->c:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
@@ -254,26 +231,21 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 41
     if-eqz v0, :cond_0
 
-    .line 42
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result p2
 
-    .line 47
     :cond_0
     :goto_0
     return p2
 
-    .line 45
     :catch_0
     move-exception v0
 
-    .line 46
     const-string v1, "CAM_SystemProperties"
 
     const-string v2, "get error"
@@ -286,21 +258,17 @@
 .method public final a(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 20
     const-string v0, "Key cannot be null!"
 
     invoke-static {p1, v0}, Lid;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 22
     :try_start_0
     iget-object v0, p0, Lhoc;->a:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_1
 
-    .line 23
     iget-object v0, p0, Lhoc;->a:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
@@ -325,7 +293,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 24
     const-string v2, ""
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -338,16 +305,13 @@
 
     move-object v0, v1
 
-    .line 29
     :cond_0
     :goto_0
     return-object v0
 
-    .line 27
     :catch_0
     move-exception v0
 
-    .line 28
     const-string v2, "CAM_SystemProperties"
 
     const-string v3, "get error"
@@ -356,7 +320,6 @@
 
     move-object v0, v1
 
-    .line 29
     goto :goto_0
 
     :cond_1
@@ -368,23 +331,19 @@
 .method public final a(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 30
     const-string v2, "Key cannot be null!"
 
     invoke-static {p1, v2}, Lid;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 31
     :try_start_0
     iget-object v2, p0, Lhoc;->b:Ljava/lang/reflect/Method;
 
     if-eqz v2, :cond_0
 
-    .line 32
     iget-object v2, p0, Lhoc;->b:Ljava/lang/reflect/Method;
 
     const/4 v3, 0x0
@@ -405,15 +364,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 37
     :goto_0
     return v0
 
-    .line 35
     :catch_0
     move-exception v0
 
-    .line 36
     const-string v2, "CAM_SystemProperties"
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -469,6 +425,5 @@
     :cond_0
     move v0, v1
 
-    .line 37
     goto :goto_0
 .end method

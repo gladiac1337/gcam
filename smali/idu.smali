@@ -22,54 +22,42 @@
 .method public constructor <init>(Ligb;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/TreeSet;
 
     invoke-direct {v0}, Ljava/util/TreeSet;-><init>()V
 
     iput-object v0, p0, Lidu;->a:Ljava/util/TreeSet;
 
-    .line 3
     new-instance v0, Ljava/util/TreeSet;
 
     invoke-direct {v0}, Ljava/util/TreeSet;-><init>()V
 
     iput-object v0, p0, Lidu;->b:Ljava/util/TreeSet;
 
-    .line 4
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lidu;->c:Ljava/lang/Object;
 
-    .line 5
     new-instance v0, Lidv;
 
-    .line 6
     invoke-direct {v0, p0}, Lidv;-><init>(Lidu;)V
 
-    .line 7
     iput-object v0, p0, Lidu;->e:Lidv;
 
-    .line 8
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     iput-object p1, p0, Lidu;->d:Ligb;
 
-    .line 10
     iget-object v0, p0, Lidu;->d:Ligb;
 
     iget-object v1, p0, Lidu;->e:Lidv;
 
     invoke-virtual {v0, v1}, Ligb;->a(Ligg;)V
 
-    .line 11
     return-void
 .end method
 
@@ -78,24 +66,19 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 14
     iget-object v1, p0, Lidu;->c:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 15
     :try_start_0
     iget-object v0, p0, Lidu;->a:Ljava/util/TreeSet;
 
     invoke-virtual {v0}, Ljava/util/TreeSet;->clear()V
 
-    .line 16
     iget-object v0, p0, Lidu;->b:Ljava/util/TreeSet;
 
     invoke-virtual {v0}, Ljava/util/TreeSet;->clear()V
 
-    .line 17
     monitor-exit v1
 
     return-void
@@ -113,15 +96,11 @@
 .method public final b(J)V
     .locals 0
 
-    .prologue
-    .line 12
     return-void
 .end method
 
 .method public final c(J)V
     .locals 0
 
-    .prologue
-    .line 13
     return-void
 .end method

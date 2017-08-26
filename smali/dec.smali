@@ -14,8 +14,6 @@
 .method constructor <init>(Ldea;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldec;->a:Ldea;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,35 +26,27 @@
 .method public final a()V
     .locals 12
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ldec;->a:Ldea;
 
-    .line 3
     iget-object v0, v0, Ldea;->a:Ldjy;
 
-    .line 4
     invoke-interface {v0}, Ldjy;->a()Ldjz;
 
     move-result-object v9
 
     const/4 v8, 0x0
 
-    .line 5
     :try_start_0
     iget-object v0, p0, Ldec;->a:Ldea;
 
-    .line 6
     iget-object v0, v0, Ldea;->b:Liwe;
 
-    .line 7
     invoke-static {v0}, Lhks;->a(Liwe;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ldhs;
 
-    .line 8
     new-instance v10, Lfvc;
 
     invoke-virtual {v0}, Ldhs;->a()Ljava/lang/Object;
@@ -70,54 +60,43 @@
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 9
     :try_start_1
     new-instance v0, Lftf;
 
     invoke-direct {v0}, Lftf;-><init>()V
 
-    .line 10
     new-instance v1, Ldeh;
 
     sget-object v2, Lftg;->a:Lgdi;
 
     invoke-direct {v1, v2}, Ldeh;-><init>(Lgdi;)V
 
-    .line 11
     iget-object v2, p0, Ldec;->a:Ldea;
 
-    .line 12
     iget-object v2, v2, Ldea;->c:Lftb;
 
-    .line 13
     invoke-interface {v2, v10}, Lftb;->a(Lfvc;)Lfvc;
 
     move-result-object v2
 
-    .line 15
     invoke-static {v0}, Lkk;->b(Lawz;)Lfvk;
 
     move-result-object v3
 
-    .line 16
     invoke-virtual {v2, v3}, Lfvc;->a(Lfvk;)Lfvc;
 
-    .line 18
     invoke-static {v1}, Lkk;->b(Lawz;)Lfvk;
 
     move-result-object v3
 
-    .line 19
     invoke-virtual {v2, v3}, Lfvc;->a(Lfvk;)Lfvc;
 
-    .line 20
     const/4 v3, 0x1
 
     new-array v3, v3, [Lfva;
 
     const/4 v4, 0x0
 
-    .line 21
     invoke-virtual {v2}, Lfvc;->c()Lfva;
 
     move-result-object v5
@@ -130,45 +109,34 @@
 
     sget-object v4, Lfvj;->a:Lfvj;
 
-    .line 22
     invoke-interface {v9, v3, v4}, Ldjz;->a(Ljava/util/List;Lfvj;)V
 
-    .line 23
     invoke-virtual {v1}, Ldeh;->a()J
 
     move-result-wide v4
 
-    .line 24
     iget-object v1, p0, Ldec;->a:Ldea;
 
-    .line 25
     iget-object v1, v1, Ldea;->c:Lftb;
 
-    .line 26
     invoke-interface {v1, v10}, Lftb;->b(Lfvc;)Lfvc;
 
     move-result-object v1
 
-    .line 27
     iget-object v3, p0, Ldec;->a:Ldea;
 
-    .line 28
     iget-object v3, v3, Ldea;->e:Ldfc;
 
-    .line 29
     iget-object v3, v3, Ldfc;->f:Lfvk;
 
-    .line 30
     invoke-virtual {v1, v3}, Lfvc;->a(Lfvk;)Lfvc;
 
-    .line 31
     const/4 v3, 0x1
 
     new-array v3, v3, [Lfva;
 
     const/4 v6, 0x0
 
-    .line 32
     invoke-virtual {v1}, Lfvc;->c()Lfva;
 
     move-result-object v1
@@ -181,15 +149,12 @@
 
     sget-object v3, Lfvj;->b:Lfvj;
 
-    .line 33
     invoke-interface {v9, v1, v3}, Ldjz;->a(Ljava/util/List;Lfvj;)V
 
-    .line 34
     invoke-virtual {v0}, Lftf;->a()J
 
     move-result-wide v6
 
-    .line 36
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_LOCK:Landroid/hardware/camera2/CaptureRequest$Key;
 
     const/4 v1, 0x1
@@ -200,14 +165,12 @@
 
     invoke-virtual {v2, v0, v1}, Lfvc;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)Lfvc;
 
-    .line 37
     const/4 v0, 0x1
 
     new-array v0, v0, [Lfva;
 
     const/4 v1, 0x0
 
-    .line 38
     invoke-virtual {v2}, Lfvc;->c()Lfva;
 
     move-result-object v2
@@ -220,60 +183,47 @@
 
     sget-object v1, Lfvj;->a:Lfvj;
 
-    .line 39
     invoke-interface {v9, v0, v1}, Ldjz;->a(Ljava/util/List;Lfvj;)V
 
-    .line 40
     iget-object v0, p0, Ldec;->a:Ldea;
 
-    .line 41
     iget-object v0, v0, Ldea;->d:Liwp;
 
-    .line 44
     new-instance v1, Lftc;
 
     const-wide/16 v2, -0x1
 
     invoke-direct/range {v1 .. v7}, Lftc;-><init>(JJJ)V
 
-    .line 45
     invoke-virtual {v0, v1}, Liuj;->a(Ljava/lang/Object;)Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 55
     if-eqz v9, :cond_0
 
     invoke-interface {v9}, Ldjz;->close()V
 
-    .line 58
     :cond_0
     return-void
 
-    .line 47
     :catchall_0
     move-exception v0
 
-    .line 48
     :try_start_2
     iget-object v1, p0, Ldec;->a:Ldea;
 
-    .line 49
     iget-object v1, v1, Ldea;->c:Lftb;
 
-    .line 50
     invoke-interface {v1, v10}, Lftb;->c(Lfvc;)Lfvc;
 
     move-result-object v1
 
-    .line 51
     const/4 v2, 0x1
 
     new-array v2, v2, [Lfva;
 
     const/4 v3, 0x0
 
-    .line 52
     invoke-virtual {v1}, Lfvc;->c()Lfva;
 
     move-result-object v1
@@ -286,16 +236,13 @@
 
     sget-object v2, Lfvj;->b:Lfvj;
 
-    .line 53
     invoke-interface {v9, v1, v2}, Ldjz;->a(Ljava/util/List;Lfvj;)V
 
-    .line 54
     throw v0
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 56
     :catch_0
     move-exception v0
 
@@ -304,7 +251,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 57
     :catchall_1
     move-exception v1
 

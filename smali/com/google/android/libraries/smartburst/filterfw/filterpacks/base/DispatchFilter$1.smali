@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/DispatchFilter;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/DispatchFilter$1;->this$0:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/DispatchFilter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onGraphRunnerError(Ljava/lang/Exception;Z)V
     .locals 2
 
-    .prologue
-    .line 6
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Error during dispatched run!"
@@ -42,15 +38,12 @@
 .method public onGraphRunnerStopped(Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;)V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/DispatchFilter$1;->this$0:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/DispatchFilter;
 
     iget-object v1, v0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/DispatchFilter;->mState:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MetaFilter$State;
 
     monitor-enter v1
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/DispatchFilter$1;->this$0:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/DispatchFilter;
 
@@ -62,7 +55,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/DispatchFilter$1;->this$0:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/DispatchFilter;
 
     iget-object v0, v0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/DispatchFilter;->mState:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MetaFilter$State;
@@ -71,7 +63,6 @@
 
     iput v2, v0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MetaFilter$State;->state:I
 
-    .line 5
     :cond_0
     monitor-exit v1
 

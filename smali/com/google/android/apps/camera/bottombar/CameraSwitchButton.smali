@@ -52,16 +52,12 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Landroid/widget/ImageButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 2
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->clickEnabled:Z
 
-    .line 3
     sget v0, Lcom/google/android/apps/camera/bottombar/R$color;->front_back_switch_button_color:I
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getColor(I)I
@@ -70,23 +66,18 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->buttonColorLight:I
 
-    .line 4
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->buttonColorLight:I
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->currentButtonColor:I
 
-    .line 5
     invoke-direct {p0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->initialize()V
 
-    .line 6
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;)Z
     .locals 1
 
-    .prologue
-    .line 83
     iget-boolean v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->clickEnabled:Z
 
     return v0
@@ -95,8 +86,6 @@
 .method static synthetic access$100(Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;)I
     .locals 1
 
-    .prologue
-    .line 84
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->state:I
 
     return v0
@@ -105,8 +94,6 @@
 .method static synthetic access$202(Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;F)F
     .locals 0
 
-    .prologue
-    .line 85
     iput p1, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->currentRippleAlpha:F
 
     return p1
@@ -115,8 +102,6 @@
 .method static synthetic access$302(Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;F)F
     .locals 0
 
-    .prologue
-    .line 86
     iput p1, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->currentRippleRadius:F
 
     return p1
@@ -125,11 +110,8 @@
 .method private initialize()V
     .locals 4
 
-    .prologue
-    .line 7
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->unsetDarkFrontFacingDrawable()V
 
-    .line 8
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -138,7 +120,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->buttonAnimatable:Landroid/graphics/drawable/Animatable;
 
-    .line 9
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -151,47 +132,40 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->pixelDensity:F
 
-    .line 10
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->paint:Landroid/graphics/Paint;
 
-    .line 11
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->paint:Landroid/graphics/Paint;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 12
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->paint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 13
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->paint:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 14
     new-instance v0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton$1;
 
     invoke-direct {v0, p0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton$1;-><init>(Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;)V
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 15
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->setFocusable(Z)V
 
-    .line 16
     const/4 v0, 0x2
 
     new-array v0, v0, [F
@@ -204,14 +178,12 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->fastOutSlowInAnimator:Landroid/animation/ValueAnimator;
 
-    .line 17
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->fastOutSlowInAnimator:Landroid/animation/ValueAnimator;
 
     const-wide/16 v2, 0x1f4
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 18
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->fastOutSlowInAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lgw;
@@ -220,7 +192,6 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 19
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->fastOutSlowInAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton$2;
@@ -229,10 +200,8 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 20
     return-void
 
-    .line 16
     nop
 
     :array_0
@@ -245,15 +214,12 @@
 .method private setNewDescription()V
     .locals 2
 
-    .prologue
-    .line 78
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->state:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 79
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -264,14 +230,11 @@
 
     move-result-object v0
 
-    .line 81
     :goto_0
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 82
     return-void
 
-    .line 80
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->getResources()Landroid/content/res/Resources;
 
@@ -291,8 +254,6 @@
 .method public getCameraSwitchColorProperty()Lgll;
     .locals 1
 
-    .prologue
-    .line 74
     new-instance v0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton$3;
 
     invoke-direct {v0, p0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton$3;-><init>(Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;)V
@@ -303,8 +264,6 @@
 .method public getState()I
     .locals 1
 
-    .prologue
-    .line 47
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->state:I
 
     return v0
@@ -313,8 +272,6 @@
 .method public getSwitchColor()I
     .locals 1
 
-    .prologue
-    .line 73
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->currentButtonColor:I
 
     return v0
@@ -323,50 +280,38 @@
 .method protected onAttachedToWindow()V
     .locals 1
 
-    .prologue
-    .line 24
     invoke-super {p0}, Landroid/widget/ImageButton;->onAttachedToWindow()V
 
-    .line 25
     new-instance v0, Lgln;
 
     invoke-direct {v0, p0}, Lgln;-><init>(Landroid/view/View;)V
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->smoothRotator:Lgln;
 
-    .line 26
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->smoothRotator:Lgln;
 
     invoke-virtual {v0}, Lgln;->a()V
 
-    .line 27
     return-void
 .end method
 
 .method protected onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
-    .prologue
-    .line 28
     invoke-super {p0, p1}, Landroid/widget/ImageButton;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 29
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->smoothRotator:Lgln;
 
     invoke-virtual {v0}, Lgln;->b()V
 
-    .line 30
     return-void
 .end method
 
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 4
 
-    .prologue
-    .line 52
     invoke-super {p0, p1}, Landroid/widget/ImageButton;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 53
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
 
     move-result v0
@@ -375,7 +320,6 @@
 
     int-to-float v0, v0
 
-    .line 54
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getHeight()I
 
     move-result v1
@@ -384,24 +328,20 @@
 
     int-to-float v1, v1
 
-    .line 55
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->isPressed()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 56
     iget-object v2, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->paint:Landroid/graphics/Paint;
 
     const/16 v3, 0x42
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 57
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 58
     const/high16 v2, 0x41e00000    # 28.0f
 
     iget v3, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->pixelDensity:F
@@ -412,14 +352,11 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 59
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 65
     :goto_0
     return-void
 
-    .line 61
     :cond_0
     iget-object v2, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->paint:Landroid/graphics/Paint;
 
@@ -429,10 +366,8 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 62
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 63
     iget v2, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->currentRippleRadius:F
 
     iget v3, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->pixelDensity:F
@@ -443,7 +378,6 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 64
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     goto :goto_0
@@ -452,98 +386,73 @@
 .method public resetCameraSwitchButton()V
     .locals 1
 
-    .prologue
-    .line 75
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->setPressed(Z)V
 
-    .line 76
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->invalidate()V
 
-    .line 77
     return-void
 .end method
 
 .method public setClickEnabled(Z)V
     .locals 0
 
-    .prologue
-    .line 66
     iput-boolean p1, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->clickEnabled:Z
 
-    .line 67
     return-void
 .end method
 
 .method public setOnPreChangeListener(Lcom/google/android/apps/camera/bottombar/OnStateChangeListener;)V
     .locals 0
 
-    .prologue
-    .line 48
     iput-object p1, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->onStatePreChangeListener:Lcom/google/android/apps/camera/bottombar/OnStateChangeListener;
 
-    .line 49
     return-void
 .end method
 
 .method public setOnStateChangeListener(Lcom/google/android/apps/camera/bottombar/OnStateChangeListener;)V
     .locals 0
 
-    .prologue
-    .line 50
     iput-object p1, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->onStateChangeListener:Lcom/google/android/apps/camera/bottombar/OnStateChangeListener;
 
-    .line 51
     return-void
 .end method
 
 .method public setPressed(Z)V
     .locals 0
 
-    .prologue
-    .line 21
     invoke-super {p0, p1}, Landroid/widget/ImageButton;->setPressed(Z)V
 
-    .line 22
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->invalidate()V
 
-    .line 23
     return-void
 .end method
 
 .method public setState(IZ)V
     .locals 2
 
-    .prologue
-    .line 31
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->state:I
 
     if-ne v0, p1, :cond_1
 
-    .line 32
     invoke-direct {p0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->setNewDescription()V
 
-    .line 38
     :cond_0
     :goto_0
     return-void
 
-    .line 34
     :cond_1
     iput p1, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->state:I
 
-    .line 35
     invoke-direct {p0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->setNewDescription()V
 
-    .line 36
     if-eqz p2, :cond_0
 
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->onStateChangeListener:Lcom/google/android/apps/camera/bottombar/OnStateChangeListener;
 
     if-eqz v0, :cond_0
 
-    .line 37
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->onStateChangeListener:Lcom/google/android/apps/camera/bottombar/OnStateChangeListener;
 
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->getState()I
@@ -558,17 +467,13 @@
 .method public setStateAnimated(IZ)V
     .locals 2
 
-    .prologue
-    .line 39
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->state:I
 
     if-ne v0, p1, :cond_0
 
-    .line 46
     :goto_0
     return-void
 
-    .line 41
     :cond_0
     if-eqz p2, :cond_1
 
@@ -576,23 +481,19 @@
 
     if-eqz v0, :cond_1
 
-    .line 42
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->onStatePreChangeListener:Lcom/google/android/apps/camera/bottombar/OnStateChangeListener;
 
     iget v1, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->state:I
 
     invoke-interface {v0, p0, v1}, Lcom/google/android/apps/camera/bottombar/OnStateChangeListener;->stateChanged(Landroid/view/View;I)V
 
-    .line 43
     :cond_1
     invoke-virtual {p0, p1, p2}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->setState(IZ)V
 
-    .line 44
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->buttonAnimatable:Landroid/graphics/drawable/Animatable;
 
     invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->start()V
 
-    .line 45
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->fastOutSlowInAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
@@ -603,28 +504,21 @@
 .method public setSwitchColor(I)V
     .locals 1
 
-    .prologue
-    .line 70
     iput p1, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->currentButtonColor:I
 
-    .line 71
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->currentButtonColor:I
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->setColorFilter(I)V
 
-    .line 72
     return-void
 .end method
 
 .method public unsetDarkFrontFacingDrawable()V
     .locals 1
 
-    .prologue
-    .line 68
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->buttonColorLight:I
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;->setSwitchColor(I)V
 
-    .line 69
     return-void
 .end method

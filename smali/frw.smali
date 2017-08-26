@@ -13,8 +13,6 @@
 .method constructor <init>(Lfrl;Landroid/view/View;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfrw;->b:Lfrl;
 
     iput-object p2, p0, Lfrw;->a:Landroid/view/View;
@@ -29,17 +27,12 @@
 .method public final onAnimationStart(Landroid/animation/Animator;)V
     .locals 3
 
-    .prologue
-    .line 2
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationStart(Landroid/animation/Animator;)V
 
-    .line 3
     iget-object v0, p0, Lfrw;->b:Lfrl;
 
-    .line 4
     iget-object v0, v0, Lfrl;->a:Lhic;
 
-    .line 5
     new-instance v1, Lfrx;
 
     iget-object v2, p0, Lfrw;->a:Landroid/view/View;
@@ -48,6 +41,5 @@
 
     invoke-virtual {v0, v1}, Lhic;->execute(Ljava/lang/Runnable;)V
 
-    .line 6
     return-void
 .end method

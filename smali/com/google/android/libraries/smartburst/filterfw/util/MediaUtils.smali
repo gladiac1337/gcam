@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,18 +18,14 @@
         value = 0x11
     .end annotation
 
-    .prologue
-    .line 2
     new-instance v0, Landroid/media/MediaMetadataRetriever;
 
     invoke-direct {v0}, Landroid/media/MediaMetadataRetriever;-><init>()V
 
-    .line 3
     invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4
     const-string v2, "content"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -42,18 +36,15 @@
 
     const-string v2, "android.resource"
 
-    .line 5
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 6
     :cond_0
     invoke-virtual {v0, p0, p1}, Landroid/media/MediaMetadataRetriever;->setDataSource(Landroid/content/Context;Landroid/net/Uri;)V
 
-    .line 10
     :goto_0
     const/16 v1, 0x18
 
@@ -61,7 +52,6 @@
 
     move-result-object v0
 
-    .line 11
     if-nez v0, :cond_3
 
     const/4 v0, 0x0
@@ -69,7 +59,6 @@
     :goto_1
     return v0
 
-    .line 7
     :cond_1
     const-string v2, "file"
 
@@ -79,7 +68,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 8
     invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
     move-result-object v1
@@ -88,7 +76,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_2
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -102,7 +89,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_3
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 

@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public final accept(Ljava/io/File;)Z
     .locals 2
 
-    .prologue
-    .line 2
     const-string v0, "cpu[0-9]+"
 
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
@@ -36,10 +32,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     const/4 v0, 0x1
 
-    .line 4
     :goto_0
     return v0
 

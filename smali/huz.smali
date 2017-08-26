@@ -15,23 +15,16 @@
 .method public constructor <init>(Ljava/lang/String;IJLjava/io/File;JJ)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Lhsy;-><init>(Ljava/lang/String;IJ)V
 
-    .line 2
     invoke-static {p5}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iput-object p5, p0, Lhuz;->d:Ljava/io/File;
 
-    .line 4
     iput-wide p6, p0, Lhuz;->e:J
 
-    .line 5
     iput-wide p8, p0, Lhuz;->f:J
 
-    .line 6
     return-void
 .end method
 
@@ -40,22 +33,16 @@
 .method public final a(Libk;Landroid/content/Context;Ljava/util/concurrent/Executor;Lias;)Lhqy;
     .locals 2
 
-    .prologue
-    .line 48
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 49
     invoke-static {p3}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 51
     iget-wide v0, p0, Lhsy;->c:J
 
-    .line 52
     invoke-virtual {p1, v0, v1}, Libk;->b(J)Lhqy;
 
     move-result-object v0
 
-    .line 53
     invoke-static {p4, p2}, Lid;->b(Lias;Landroid/content/Context;)Lhpz;
 
     move-result-object v1
@@ -64,51 +51,39 @@
 
     move-result-object v0
 
-    .line 54
     return-object v0
 .end method
 
 .method public final a(Libk;Lihs;Ljava/util/concurrent/Executor;Lias;)Lhqy;
     .locals 17
 
-    .prologue
-    .line 7
     invoke-static/range {p1 .. p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
     invoke-static/range {p2 .. p2}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     invoke-static/range {p3 .. p3}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10
     :try_start_0
     new-instance v3, Lihb;
 
-    .line 11
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lhsy;->a:Ljava/lang/String;
 
-    .line 12
     const-string v5, "video/mp4"
 
-    .line 13
     move-object/from16 v0, p0
 
     iget-wide v6, v0, Lhsy;->c:J
 
-    .line 15
     move-object/from16 v0, p1
 
     iget v8, v0, Libk;->a:I
 
-    .line 17
     move-object/from16 v0, p1
 
     iget v9, v0, Libk;->b:I
 
-    .line 19
     move-object/from16 v0, p0
 
     iget-wide v10, v0, Lhuz;->f:J
@@ -123,22 +98,16 @@
 
     div-long/2addr v10, v12
 
-    .line 20
     invoke-direct/range {v3 .. v11}, Lihb;-><init>(Ljava/lang/String;Ljava/lang/String;JIIJ)V
 
-    .line 22
     iget v2, v3, Lihr;->e:I
 
-    .line 24
     iget v4, v3, Lihr;->d:I
 
-    .line 25
     mul-int v6, v2, v4
 
-    .line 26
     new-instance v7, Ljava/io/BufferedOutputStream;
 
-    .line 27
     move-object/from16 v0, p2
 
     invoke-interface {v0, v3}, Lihs;->a(Lihr;)Ljava/io/OutputStream;
@@ -147,7 +116,6 @@
 
     invoke-direct {v7, v2, v6}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;I)V
 
-    .line 28
     const-string v2, "tempVideo"
 
     const-string v4, ".mp4"
@@ -156,14 +124,12 @@
 
     move-result-object v8
 
-    .line 29
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lhuz;->d:Ljava/io/File;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 31
     :try_start_1
     invoke-static {}, Lkk;->n()Z
 
@@ -171,7 +137,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 32
     invoke-virtual {v2}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v2
@@ -186,11 +151,9 @@
 
     move-result-object v2
 
-    .line 34
     :goto_0
     const/4 v5, 0x0
 
-    .line 35
     :try_start_2
     move-object/from16 v0, p0
 
@@ -213,7 +176,6 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 36
     if-eqz v2, :cond_0
 
     :try_start_3
@@ -221,7 +183,6 @@
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 42
     :cond_0
     :goto_1
     :try_start_4
@@ -233,7 +194,6 @@
 
     invoke-direct {v2, v4, v6}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;I)V
 
-    .line 44
     new-instance v4, Lhva;
 
     invoke-direct {v4, v2, v7, v3}, Lhva;-><init>(Ljava/io/InputStream;Ljava/io/OutputStream;Lihb;)V
@@ -246,10 +206,8 @@
 
     move-result-object v2
 
-    .line 45
     return-object v2
 
-    .line 33
     :cond_1
     :try_start_5
     invoke-virtual {v2}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -268,7 +226,6 @@
 
     goto :goto_0
 
-    .line 37
     :catch_0
     move-exception v4
 
@@ -277,7 +234,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 38
     :catchall_0
     move-exception v5
 
@@ -305,11 +261,9 @@
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_1
 
-    .line 40
     :catch_1
     move-exception v2
 
-    .line 41
     :try_start_9
     const-string v4, "VFRVideoArtifact"
 
@@ -351,7 +305,6 @@
 
     goto :goto_1
 
-    .line 47
     :catch_2
     move-exception v2
 
@@ -363,7 +316,6 @@
 
     throw v2
 
-    .line 38
     :catch_3
     move-exception v2
 
@@ -388,48 +340,34 @@
 .method public final synthetic a(Libk;)Lihr;
     .locals 8
 
-    .prologue
-    .line 58
-    .line 59
     new-instance v1, Lihb;
 
-    .line 60
     iget-object v2, p0, Lhsy;->a:Ljava/lang/String;
 
-    .line 61
     const-string v3, "video/mp4"
 
-    .line 62
     iget-wide v4, p0, Lhsy;->c:J
 
-    .line 64
     iget v6, p1, Libk;->a:I
 
-    .line 66
     iget v7, p1, Libk;->b:I
 
-    .line 67
     invoke-direct/range {v1 .. v7}, Lihb;-><init>(Ljava/lang/String;Ljava/lang/String;JII)V
 
-    .line 68
     return-object v1
 .end method
 
 .method public final a()Ljava/util/Collection;
     .locals 4
 
-    .prologue
-    .line 55
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/Long;
 
     const/4 v1, 0x0
 
-    .line 56
     iget-wide v2, p0, Lhsy;->c:J
 
-    .line 57
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2

@@ -21,19 +21,14 @@
 .method public constructor <init>(Ldhg;Ldvk;Lhji;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldvq;->a:Ldhg;
 
-    .line 3
     iput-object p2, p0, Ldvq;->b:Ldvk;
 
-    .line 4
     const-string v0, "PictureTakerImpl"
 
     invoke-interface {p3, v0}, Lhji;->a(Ljava/lang/String;)Lhjh;
@@ -42,14 +37,12 @@
 
     iput-object v0, p0, Ldvq;->c:Lhjh;
 
-    .line 5
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
     iput-object v0, p0, Ldvq;->f:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 6
     new-instance v0, Latr;
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -60,7 +53,6 @@
 
     iput-object v0, p0, Ldvq;->e:Latr;
 
-    .line 7
     new-instance v0, Lawe;
 
     new-instance v1, Ldza;
@@ -71,6 +63,5 @@
 
     iput-object v0, p0, Ldvq;->d:Lawe;
 
-    .line 8
     return-void
 .end method

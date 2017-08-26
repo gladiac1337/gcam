@@ -16,18 +16,14 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Laes;
 
     invoke-direct {v0}, Laes;-><init>()V
 
     iput-object v0, p0, Laeq;->a:Laes;
 
-    .line 3
     new-instance v0, Laex;
 
     invoke-direct {v0}, Laex;-><init>()V
@@ -40,8 +36,6 @@
 .method static c(IILandroid/graphics/Bitmap$Config;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 16
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -102,8 +96,6 @@
 .method public final a()Landroid/graphics/Bitmap;
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Laeq;->b:Laex;
 
     invoke-virtual {v0}, Laex;->a()Ljava/lang/Object;
@@ -118,15 +110,12 @@
 .method public final a(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
     .locals 2
 
-    .prologue
-    .line 7
     iget-object v0, p0, Laeq;->a:Laes;
 
     invoke-virtual {v0, p1, p2, p3}, Laes;->a(IILandroid/graphics/Bitmap$Config;)Laer;
 
     move-result-object v0
 
-    .line 8
     iget-object v1, p0, Laeq;->b:Laex;
 
     invoke-virtual {v1, v0}, Laex;->a(Laff;)Ljava/lang/Object;
@@ -141,8 +130,6 @@
 .method public final a(Landroid/graphics/Bitmap;)V
     .locals 4
 
-    .prologue
-    .line 4
     iget-object v0, p0, Laeq;->a:Laes;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -161,20 +148,16 @@
 
     move-result-object v0
 
-    .line 5
     iget-object v1, p0, Laeq;->b:Laex;
 
     invoke-virtual {v1, v0, p1}, Laex;->a(Laff;Ljava/lang/Object;)V
 
-    .line 6
     return-void
 .end method
 
 .method public final b(IILandroid/graphics/Bitmap$Config;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 13
     invoke-static {p1, p2, p3}, Laeq;->c(IILandroid/graphics/Bitmap$Config;)Ljava/lang/String;
 
     move-result-object v0
@@ -185,9 +168,6 @@
 .method public final b(Landroid/graphics/Bitmap;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 10
-    .line 11
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -204,15 +184,12 @@
 
     move-result-object v0
 
-    .line 12
     return-object v0
 .end method
 
 .method public final c(Landroid/graphics/Bitmap;)I
     .locals 1
 
-    .prologue
-    .line 14
     invoke-static {p1}, Laos;->a(Landroid/graphics/Bitmap;)I
 
     move-result v0
@@ -223,8 +200,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 15
     iget-object v0, p0, Laeq;->b:Laex;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

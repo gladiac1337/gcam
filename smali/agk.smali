@@ -20,8 +20,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 13
     const/16 v0, 0x16
 
     sput v0, Lagk;->a:I
@@ -32,17 +30,12 @@
 .method public constructor <init>(Landroid/content/res/AssetManager;Lagl;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lagk;->b:Landroid/content/res/AssetManager;
 
-    .line 3
     iput-object p2, p0, Lagk;->c:Lagl;
 
-    .line 4
     return-void
 .end method
 
@@ -51,11 +44,8 @@
 .method public final synthetic a(Ljava/lang/Object;IILabq;)Lahx;
     .locals 5
 
-    .prologue
-    .line 9
     check-cast p1, Landroid/net/Uri;
 
-    .line 10
     invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -66,7 +56,6 @@
 
     move-result-object v0
 
-    .line 11
     new-instance v1, Lahx;
 
     new-instance v2, Laoi;
@@ -83,20 +72,16 @@
 
     invoke-direct {v1, v2, v0}, Lahx;-><init>(Labm;Labv;)V
 
-    .line 12
     return-object v1
 .end method
 
 .method public final synthetic a(Ljava/lang/Object;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 5
     check-cast p1, Landroid/net/Uri;
 
-    .line 6
     const-string v1, "file"
 
     invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
@@ -113,7 +98,6 @@
 
     move-result-object v1
 
-    .line 7
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
@@ -138,7 +122,6 @@
 
     const/4 v0, 0x1
 
-    .line 8
     :cond_0
     return v0
 .end method

@@ -23,7 +23,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x3
 
     const/4 v5, 0x2
@@ -32,7 +31,6 @@
 
     const/4 v3, 0x0
 
-    .line 5
     new-instance v0, Lbgb;
 
     const-string v1, "ENG"
@@ -43,7 +41,6 @@
 
     sput-object v0, Lbgb;->c:Lbgb;
 
-    .line 6
     new-instance v0, Lbgb;
 
     const-string v1, "FISHFOOD"
@@ -54,7 +51,6 @@
 
     sput-object v0, Lbgb;->d:Lbgb;
 
-    .line 7
     new-instance v0, Lbgb;
 
     const-string v1, "DOGFOOD"
@@ -65,7 +61,6 @@
 
     sput-object v0, Lbgb;->e:Lbgb;
 
-    .line 8
     new-instance v0, Lbgb;
 
     const-string v1, "RELEASE"
@@ -76,7 +71,6 @@
 
     sput-object v0, Lbgb;->a:Lbgb;
 
-    .line 9
     const/4 v0, 0x4
 
     new-array v0, v0, [Lbgb;
@@ -105,22 +99,16 @@
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput-object p3, p0, Lbgb;->b:Ljava/lang/String;
 
-    .line 4
     return-void
 .end method
 
 .method public static values()[Lbgb;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lbgb;->f:[Lbgb;
 
     invoke-virtual {v0}, [Lbgb;->clone()Ljava/lang/Object;

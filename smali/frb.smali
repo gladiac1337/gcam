@@ -11,8 +11,6 @@
 .method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 6
     iput-object p1, p0, Lfrb;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,8 +23,6 @@
 .method public final a()Ljava/io/InputStream;
     .locals 4
 
-    .prologue
-    .line 1
     :try_start_0
     new-instance v0, Ljava/io/FileInputStream;
 
@@ -36,17 +32,14 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5
     :goto_0
     return-object v0
 
-    .line 3
     :catch_0
     move-exception v0
 
     sget-object v0, Lfrc;->a:Ljava/lang/String;
 
-    .line 4
     iget-object v1, p0, Lfrb;->a:Ljava/lang/String;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -85,7 +78,6 @@
 
     invoke-static {v0, v1}, Lbgj;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     const/4 v0, 0x0
 
     goto :goto_0

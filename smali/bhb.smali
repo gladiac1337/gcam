@@ -25,17 +25,13 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lbhb;->a:Lbhd;
 
-    .line 2
     iget-object v0, v0, Lbhd;->c:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 3
     return-void
 .end method

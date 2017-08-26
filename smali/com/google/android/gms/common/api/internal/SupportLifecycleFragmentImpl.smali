@@ -21,23 +21,16 @@
 .method protected final synthetic a()Lgvj;
     .locals 1
 
-    .prologue
-    .line 7
     sget-object v0, Lgvi;->a:Lgvi;
 
-    .line 8
     return-object v0
 .end method
 
 .method protected final a(ILcom/google/android/gms/common/ConnectionResult;)V
     .locals 3
 
-    .prologue
-    .line 1
-    .line 2
     iget v0, p2, Lcom/google/android/gms/common/ConnectionResult;->b:I
 
-    .line 3
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/SupportLifecycleFragmentImpl;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v1
@@ -52,8 +45,6 @@
 .method protected final b(ILcom/google/android/gms/common/ConnectionResult;)V
     .locals 3
 
-    .prologue
-    .line 4
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/internal/SupportLifecycleFragmentImpl;->getActivity()Landroid/support/v4/app/FragmentActivity;
 
     move-result-object v0
@@ -74,12 +65,10 @@
 
     invoke-direct {v2, p0, v0}, Lgwd;-><init>(Lcom/google/android/gms/common/api/internal/SupportLifecycleFragmentImpl;Landroid/app/Dialog;)V
 
-    .line 5
     invoke-static {v1, v2}, Lgxo;->a(Landroid/content/Context;Lgxo;)Lgxo;
 
     move-result-object v0
 
-    .line 6
     iput-object v0, p0, Lcom/google/android/gms/common/api/internal/SupportLifecycleFragmentImpl;->c:Lgxo;
 
     return-void

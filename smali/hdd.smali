@@ -22,29 +22,22 @@
 .method protected final synthetic b(Lgvr;)V
     .locals 5
 
-    .prologue
-    .line 1
     check-cast p1, Lhdm;
 
-    .line 2
     new-instance v2, Lhdh;
 
     invoke-direct {v2, p0}, Lhdh;-><init>(Lgwf;)V
 
     iget-object v0, p0, Lhdd;->b:Lhcv;
 
-    .line 3
     iget-object v1, p1, Lhdm;->g:Lhdk;
 
-    .line 4
     iget-object v3, v1, Lhdk;->a:Lhdp;
 
-    .line 5
     iget-object v3, v3, Lhdp;->a:Lhda;
 
     invoke-static {v3}, Lhda;->a(Lhda;)V
 
-    .line 6
     const-string v3, "Invalid null listener"
 
     invoke-static {v0, v3}, Lkk;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -64,15 +57,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 7
     const/4 v4, 0x0
 
     iput-object v4, v0, Lhdu;->a:Landroid/os/Handler;
 
-    .line 8
     iget-object v1, v1, Lhdk;->a:Lhdp;
 
-    .line 9
     iget-object v1, v1, Lhdp;->a:Lhda;
 
     invoke-virtual {v1}, Lhda;->i()Landroid/os/IInterface;
@@ -81,7 +71,6 @@
 
     check-cast v1, Lhdj;
 
-    .line 10
     invoke-static {v0, v2}, Lcom/google/android/gms/location/internal/LocationRequestUpdateData;->a(Lhdt;Lhdg;)Lcom/google/android/gms/location/internal/LocationRequestUpdateData;
 
     move-result-object v0

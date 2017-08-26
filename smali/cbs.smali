@@ -16,23 +16,18 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
 
     iput-object v0, p0, Lcbs;->a:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    .line 3
     const/4 v0, 0x3
 
     iput v0, p0, Lcbs;->b:I
 
-    .line 4
     return-void
 .end method
 
@@ -41,8 +36,6 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lcbs;->a:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->iterator()Ljava/util/Iterator;
@@ -62,12 +55,10 @@
 
     check-cast v0, Lcgm;
 
-    .line 6
     invoke-interface {v0}, Lcgm;->a()V
 
     goto :goto_0
 
-    .line 8
     :cond_0
     return-void
 .end method
@@ -75,8 +66,6 @@
 .method public final a(ILcda;)V
     .locals 2
 
-    .prologue
-    .line 13
     iget-object v0, p0, Lcbs;->a:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->iterator()Ljava/util/Iterator;
@@ -96,12 +85,10 @@
 
     check-cast v0, Lcgm;
 
-    .line 14
     invoke-interface {v0, p1, p2}, Lcgm;->a(ILcda;)V
 
     goto :goto_0
 
-    .line 16
     :cond_0
     return-void
 .end method
@@ -109,8 +96,6 @@
 .method public final a(Lcgn;)V
     .locals 2
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lcbs;->a:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->iterator()Ljava/util/Iterator;
@@ -130,12 +115,10 @@
 
     check-cast v0, Lcgm;
 
-    .line 10
     invoke-interface {v0, p1}, Lcgm;->a(Lcgn;)V
 
     goto :goto_0
 
-    .line 12
     :cond_0
     return-void
 .end method
@@ -143,8 +126,6 @@
 .method public final b(ILcda;)V
     .locals 2
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lcbs;->a:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->iterator()Ljava/util/Iterator;
@@ -164,12 +145,10 @@
 
     check-cast v0, Lcgm;
 
-    .line 18
     invoke-interface {v0, p1, p2}, Lcgm;->b(ILcda;)V
 
     goto :goto_0
 
-    .line 20
     :cond_0
     return-void
 .end method

@@ -33,21 +33,17 @@
 .method public final a(Lfwx;Lcen;)V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lceq;->a:Lcem;
 
     iget-object v1, p0, Lceq;->b:Lhjh;
 
     iget-object v2, p0, Lceq;->c:Lhjf;
 
-    .line 2
     new-instance v3, Lcen;
 
     invoke-direct {v3, p2, v1, v2}, Lcen;-><init>(Lcen;Lhjh;Lhjf;)V
 
     invoke-interface {v0, p1, v3}, Lcem;->a(Lfwx;Lcen;)V
 
-    .line 3
     return-void
 .end method

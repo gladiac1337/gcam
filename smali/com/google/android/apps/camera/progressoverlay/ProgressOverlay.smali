@@ -13,11 +13,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 2
     return-void
 .end method
 
@@ -26,11 +23,8 @@
 .method protected onFinishInflate()V
     .locals 2
 
-    .prologue
-    .line 3
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    .line 4
     invoke-virtual {p0}, Lcom/google/android/apps/camera/progressoverlay/ProgressOverlay;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -43,12 +37,10 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    .line 5
     const v1, 0x7f04006b
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 6
     const v0, 0x7f0e000e
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/progressoverlay/ProgressOverlay;->findViewById(I)Landroid/view/View;
@@ -59,7 +51,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/progressoverlay/ProgressOverlay;->b:Landroid/widget/ImageView;
 
-    .line 7
     invoke-virtual {p0}, Lcom/google/android/apps/camera/progressoverlay/ProgressOverlay;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -74,13 +65,11 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/progressoverlay/ProgressOverlay;->a:Landroid/graphics/drawable/AnimatedVectorDrawable;
 
-    .line 8
     iget-object v0, p0, Lcom/google/android/apps/camera/progressoverlay/ProgressOverlay;->b:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/google/android/apps/camera/progressoverlay/ProgressOverlay;->a:Landroid/graphics/drawable/AnimatedVectorDrawable;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 9
     return-void
 .end method

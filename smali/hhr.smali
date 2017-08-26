@@ -14,8 +14,6 @@
 .method public constructor <init>(Lhhv;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhhr;->a:Lhhv;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,47 +26,38 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 10
 
-    .prologue
     const/4 v9, 0x1
 
-    .line 6
     check-cast p1, Ljava/util/List;
 
-    .line 7
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/List;
 
-    .line 8
     const/4 v1, 0x0
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 9
     invoke-interface {v0, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 10
     iget-object v3, p0, Lhhr;->a:Lhhv;
 
     move-object v0, v1
 
-    .line 11
     check-cast v0, Lftc;
 
     move-object v1, v2
 
     check-cast v1, Ljava/lang/Boolean;
 
-    .line 12
     sget-object v2, Lbcd;->a:Ljava/lang/String;
 
-    .line 13
     iget-wide v4, v0, Lftc;->a:J
 
     iget-wide v6, v0, Lftc;->c:J
@@ -105,7 +94,6 @@
 
     invoke-static {v2, v0}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 14
     iget-object v0, v3, Lhhv;->a:Lbcd;
 
     invoke-static {v0}, Lbcd;->a(Lbcd;)Lavm;
@@ -118,17 +106,14 @@
 
     invoke-interface {v0, v2}, Lavm;->a(Ljava/lang/Object;)V
 
-    .line 15
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 16
     iget-object v0, v3, Lhhv;->a:Lbcd;
 
-    .line 18
     iget-object v1, v0, Lbcd;->c:Lawk;
 
     new-instance v2, Lbce;
@@ -137,7 +122,6 @@
 
     invoke-virtual {v1, v2}, Lawk;->execute(Ljava/lang/Runnable;)V
 
-    .line 19
     :cond_0
     return-void
 .end method
@@ -145,12 +129,8 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 4
 
-    .prologue
-    .line 2
-    .line 3
     sget-object v0, Lbcd;->a:Ljava/lang/String;
 
-    .line 4
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -185,6 +165,5 @@
 
     invoke-static {v0, v1}, Lbgj;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     return-void
 .end method

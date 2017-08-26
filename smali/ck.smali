@@ -19,11 +19,8 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lkk;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -32,7 +29,6 @@
 
     iput-object v0, p0, Lck;->a:Ljava/lang/String;
 
-    .line 3
     invoke-static {p2}, Lkk;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -41,7 +37,6 @@
 
     iput-object v0, p0, Lck;->b:Ljava/lang/String;
 
-    .line 4
     invoke-static {p3}, Lkk;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -50,7 +45,6 @@
 
     iput-object v0, p0, Lck;->c:Ljava/lang/String;
 
-    .line 5
     invoke-static {p4}, Lkk;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -59,7 +53,6 @@
 
     iput-object v0, p0, Lck;->d:Ljava/util/List;
 
-    .line 6
     new-instance v0, Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lck;->a:Ljava/lang/String;
@@ -80,7 +73,6 @@
 
     const-string v1, "-"
 
-    .line 7
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
@@ -97,7 +89,6 @@
 
     iput-object v0, p0, Lck;->e:Ljava/lang/String;
 
-    .line 8
     return-void
 .end method
 
@@ -106,15 +97,12 @@
 .method public final toString()Ljava/lang/String;
     .locals 6
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 9
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 10
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "FontRequest {mProviderAuthority: "
@@ -165,7 +153,6 @@
 
     move v2, v3
 
-    .line 11
     :goto_0
     iget-object v0, p0, Lck;->d:Ljava/util/List;
 
@@ -175,12 +162,10 @@
 
     if-ge v2, v0, :cond_1
 
-    .line 12
     const-string v0, " ["
 
     invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 13
     iget-object v0, p0, Lck;->d:Ljava/util/List;
 
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -191,7 +176,6 @@
 
     move v4, v3
 
-    .line 14
     :goto_1
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -199,57 +183,48 @@
 
     if-ge v4, v1, :cond_0
 
-    .line 15
     const-string v1, " \""
 
     invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 16
     invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, [B
 
-    .line 17
     invoke-static {v1, v3}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 18
     const-string v1, "\""
 
     invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 19
     add-int/lit8 v1, v4, 0x1
 
     move v4, v1
 
     goto :goto_1
 
-    .line 20
     :cond_0
     const-string v0, " ]"
 
     invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 21
     add-int/lit8 v0, v2, 0x1
 
     move v2, v0
 
     goto :goto_0
 
-    .line 22
     :cond_1
     const-string v0, "}"
 
     invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 23
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "mCertificatesArray: "
@@ -266,7 +241,6 @@
 
     invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 24
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

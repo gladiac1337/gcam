@@ -22,10 +22,8 @@
 .method public final handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 1
     iget v1, p1, Landroid/os/Message;->what:I
 
     if-ne v1, v0, :cond_0
@@ -39,27 +37,22 @@
 
     check-cast v0, Lgxt;
 
-    .line 2
     iget-object v1, v1, Lgxr;->b:Ljava/lang/Object;
 
     if-nez v1, :cond_1
 
-    .line 5
     :goto_1
     return-void
 
-    .line 1
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 3
     :cond_1
     :try_start_0
     check-cast v1, Lhes;
 
-    .line 4
     iget-object v0, v0, Lgxt;->a:Lcom/google/android/gms/wearable/internal/MessageEventParcelable;
 
     invoke-interface {v1, v0}, Lhes;->a(Lhet;)V
@@ -68,7 +61,6 @@
 
     goto :goto_1
 
-    .line 5
     :catch_0
     move-exception v0
 

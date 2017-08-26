@@ -20,17 +20,12 @@
 .method public constructor <init>(FF)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/google/android/apps/refocus/image/RangeLinearDepthTransform;->near:F
 
-    .line 3
     iput p2, p0, Lcom/google/android/apps/refocus/image/RangeLinearDepthTransform;->far:F
 
-    .line 4
     return-void
 .end method
 
@@ -39,8 +34,6 @@
 .method public getFar()F
     .locals 1
 
-    .prologue
-    .line 6
     iget v0, p0, Lcom/google/android/apps/refocus/image/RangeLinearDepthTransform;->far:F
 
     return v0
@@ -49,8 +42,6 @@
 .method public getFormat()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 7
     const-string v0, "RangeLinear"
 
     return-object v0
@@ -59,8 +50,6 @@
 .method public getNear()F
     .locals 1
 
-    .prologue
-    .line 5
     iget v0, p0, Lcom/google/android/apps/refocus/image/RangeLinearDepthTransform;->near:F
 
     return v0
@@ -69,8 +58,6 @@
 .method public quantize(F)I
     .locals 5
 
-    .prologue
-    .line 8
     const/4 v0, 0x0
 
     const/16 v1, 0xff
@@ -107,8 +94,6 @@
 .method public reconstruct(I)F
     .locals 4
 
-    .prologue
-    .line 9
     iget v0, p0, Lcom/google/android/apps/refocus/image/RangeLinearDepthTransform;->near:F
 
     iget v1, p0, Lcom/google/android/apps/refocus/image/RangeLinearDepthTransform;->far:F

@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,13 +20,10 @@
 .method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 2
 
-    .prologue
-    .line 2
     check-cast p1, Lcah;
 
     check-cast p2, Lcah;
 
-    .line 3
     iget v0, p2, Lcah;->b:F
 
     iget v1, p1, Lcah;->b:F
@@ -37,6 +32,5 @@
 
     move-result v0
 
-    .line 4
     return v0
 .end method
