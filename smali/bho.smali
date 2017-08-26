@@ -1,0 +1,214 @@
+.class public Lbho;
+.super Lgir;
+.source "PG"
+
+
+# instance fields
+.field public a:Lcom/google/android/apps/camera/evcomp/EvCompView;
+
+.field public b:Lbhk;
+
+.field public c:Landroid/animation/ValueAnimator;
+
+.field public d:Lavm;
+
+.field public e:F
+
+.field public f:I
+
+.field public g:I
+
+.field public h:F
+
+.field public i:F
+
+.field public j:I
+
+.field public final k:Ljava/lang/Runnable;
+
+.field private l:Lavm;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .prologue
+    .line 1
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lgir;-><init>(C)V
+
+    .line 2
+    new-instance v0, Lbhp;
+
+    invoke-direct {v0, p0}, Lbhp;-><init>(Lbho;)V
+
+    iput-object v0, p0, Lbho;->k:Ljava/lang/Runnable;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Lbhk;Lcom/google/android/apps/camera/evcomp/EvCompView;Landroid/animation/ValueAnimator;ILavm;Lbhf;F)V
+    .locals 1
+
+    .prologue
+    .line 3
+    iput-object p1, p0, Lbho;->b:Lbhk;
+
+    .line 4
+    iput-object p2, p0, Lbho;->a:Lcom/google/android/apps/camera/evcomp/EvCompView;
+
+    .line 5
+    iput-object p3, p0, Lbho;->c:Landroid/animation/ValueAnimator;
+
+    .line 6
+    iput p4, p0, Lbho;->j:I
+
+    .line 7
+    iput-object p5, p0, Lbho;->l:Lavm;
+
+    .line 9
+    iget-object v0, p6, Lbhf;->a:Lavm;
+
+    .line 10
+    iput-object v0, p0, Lbho;->d:Lavm;
+
+    .line 11
+    iput p7, p0, Lbho;->i:F
+
+    .line 12
+    return-void
+.end method
+
+.method final b_()V
+    .locals 7
+
+    .prologue
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 13
+    iget-object v3, p0, Lbho;->a:Lcom/google/android/apps/camera/evcomp/EvCompView;
+
+    iget v4, p0, Lbho;->e:F
+
+    .line 14
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    cmpg-float v0, v4, v0
+
+    if-gtz v0, :cond_0
+
+    move v0, v1
+
+    :goto_0
+    const-string v5, "marker position must be in range [0,1] was: %s"
+
+    .line 15
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v6
+
+    .line 16
+    invoke-static {v0, v5, v6}, Lid;->a(ZLjava/lang/String;Ljava/lang/Object;)V
+
+    .line 17
+    const/4 v0, 0x0
+
+    cmpl-float v0, v4, v0
+
+    if-ltz v0, :cond_1
+
+    :goto_1
+    const-string v0, "marker position must be in range [0,1] was: %s"
+
+    .line 18
+    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    .line 19
+    invoke-static {v1, v0, v2}, Lid;->a(ZLjava/lang/String;Ljava/lang/Object;)V
+
+    .line 20
+    iput v4, v3, Lcom/google/android/apps/camera/evcomp/EvCompView;->b:F
+
+    .line 21
+    invoke-virtual {v3}, Lcom/google/android/apps/camera/evcomp/EvCompView;->invalidate()V
+
+    .line 22
+    iget v0, p0, Lbho;->g:I
+
+    int-to-float v0, v0
+
+    iget v1, p0, Lbho;->e:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Ljava/lang/Math;->round(F)I
+
+    move-result v0
+
+    iget v1, p0, Lbho;->f:I
+
+    add-int/2addr v1, v0
+
+    .line 23
+    iget-object v0, p0, Lbho;->l:Lavm;
+
+    invoke-interface {v0}, Lavm;->a()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    if-ne v1, v0, :cond_2
+
+    .line 28
+    :goto_2
+    return-void
+
+    :cond_0
+    move v0, v2
+
+    .line 14
+    goto :goto_0
+
+    :cond_1
+    move v1, v2
+
+    .line 17
+    goto :goto_1
+
+    .line 25
+    :cond_2
+    iget-object v0, p0, Lbho;->a:Lcom/google/android/apps/camera/evcomp/EvCompView;
+
+    int-to-float v2, v1
+
+    iget v3, p0, Lbho;->h:F
+
+    mul-float/2addr v2, v3
+
+    .line 26
+    iput v2, v0, Lcom/google/android/apps/camera/evcomp/EvCompView;->e:F
+
+    .line 27
+    iget-object v0, p0, Lbho;->l:Lavm;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lavm;->a(Ljava/lang/Object;)V
+
+    goto :goto_2
+.end method

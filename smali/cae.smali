@@ -1,0 +1,191 @@
+.class final Lcae;
+.super Lhqg;
+.source "PG"
+
+
+# instance fields
+.field private synthetic a:Ljava/io/File;
+
+.field private synthetic b:I
+
+.field private synthetic c:Lcad;
+
+
+# direct methods
+.method constructor <init>(Lcad;Ljava/io/File;I)V
+    .locals 0
+
+    .prologue
+    .line 1
+    iput-object p1, p0, Lcae;->c:Lcad;
+
+    iput-object p2, p0, Lcae;->a:Ljava/io/File;
+
+    iput p3, p0, Lcae;->b:I
+
+    invoke-direct {p0}, Lhqg;-><init>()V
+
+    return-void
+.end method
+
+.method private static synthetic a(Ljava/lang/Throwable;Ljava/lang/AutoCloseable;)V
+    .locals 1
+
+    .prologue
+    .line 14
+    if-eqz p0, :cond_0
+
+    :try_start_0
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-static {p0, v0}, Liwv;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method public final synthetic b(Ljava/lang/Object;)V
+    .locals 7
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 2
+    check-cast p1, Liaw;
+
+    .line 3
+    iget-object v0, p0, Lcae;->c:Lcad;
+
+    iget-object v0, v0, Lcad;->i:Lias;
+
+    invoke-interface {p1, v0}, Liaw;->a(Lias;)Liav;
+
+    move-result-object v3
+
+    .line 4
+    :try_start_0
+    iget-object v0, p0, Lcae;->a:Ljava/io/File;
+
+    .line 5
+    invoke-static {v0}, Lid;->c(Ljava/io/File;)Ljava/io/OutputStream;
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+
+    move-result-object v4
+
+    .line 7
+    :try_start_1
+    invoke-interface {v3}, Liav;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Bitmap;
+
+    sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
+
+    iget v5, p0, Lcae;->b:I
+
+    invoke-virtual {v0, v1, v5, v4}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+    :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_3
+
+    .line 8
+    const/4 v0, 0x0
+
+    :try_start_2
+    invoke-static {v0, v4}, Lcae;->a(Ljava/lang/Throwable;Ljava/lang/AutoCloseable;)V
+    :try_end_2
+    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    .line 10
+    if-eqz v3, :cond_0
+
+    invoke-static {v2, v3}, Lcae;->a(Ljava/lang/Throwable;Ljava/lang/AutoCloseable;)V
+
+    .line 13
+    :cond_0
+    return-void
+
+    .line 9
+    :catch_0
+    move-exception v0
+
+    :try_start_3
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    .line 10
+    :catchall_0
+    move-exception v1
+
+    move-object v6, v1
+
+    move-object v1, v0
+
+    move-object v0, v6
+
+    :goto_0
+    :try_start_4
+    invoke-static {v1, v4}, Lcae;->a(Ljava/lang/Throwable;Ljava/lang/AutoCloseable;)V
+
+    throw v0
+    :try_end_4
+    .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_1
+    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+
+    .line 11
+    :catch_1
+    move-exception v0
+
+    :try_start_5
+    throw v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    .line 12
+    :catchall_1
+    move-exception v1
+
+    move-object v2, v0
+
+    move-object v0, v1
+
+    :goto_1
+    if-eqz v3, :cond_1
+
+    invoke-static {v2, v3}, Lcae;->a(Ljava/lang/Throwable;Ljava/lang/AutoCloseable;)V
+
+    :cond_1
+    throw v0
+
+    :catchall_2
+    move-exception v0
+
+    goto :goto_1
+
+    .line 10
+    :catchall_3
+    move-exception v0
+
+    move-object v1, v2
+
+    goto :goto_0
+.end method

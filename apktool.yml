@@ -1,0 +1,25 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.google.android.GoogleCamera_4.4.020.163412804-41174009_minAPI25(arm64-v8a)(nodpi)_apkmirror.com.apk
+compressionType: false
+doNotCompress:
+- arsc
+- META-INF/services/com.google.protobuf.GeneratedExtensionRegistryLoader
+- apk
+- bin
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '25'
+  targetSdkVersion: '26'
+sharedLibrary: false
+unknownFiles: {}
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.4
+versionInfo:
+  versionCode: '41174009'
+  versionName: 4.4.020.163412804
