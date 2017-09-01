@@ -857,11 +857,15 @@
 
     move-result v6
 
+    const/4 v6, 0x1
+
     const-string v0, "is_advice_module_supported"
 
     invoke-virtual {v9, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v5
+
+    const/4 v5, 0x1
 
     const-string v0, "is_experiemental_supported"
 
@@ -869,11 +873,15 @@
 
     move-result v3
 
+    const/4 v3, 0x1
+
     const-string v0, "is_smartburst_supported"
 
     invoke-virtual {v9, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v0
+
+    const/4 v0, 0x1
 
     iput-boolean v0, p0, Lekv;->l:Z
 
@@ -883,11 +891,15 @@
 
     move-result v2
 
+    const/4 v2, 0x1
+
     const-string v0, "is_developer_settings_supported"
 
     invoke-virtual {v9, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v0
+
+    const/4 v0, 0x1
 
     move v7, v6
 

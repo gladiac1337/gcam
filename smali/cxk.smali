@@ -829,6 +829,8 @@
 
     move-result v8
 
+    const/4 v8, 0x1
+
     if-eqz v8, :cond_4
 
     :cond_3

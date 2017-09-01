@@ -4,15 +4,15 @@
 
 
 # static fields
-.field private static a:Ljava/lang/String;
+.field public static a:Ljava/lang/String;
 
 
 # instance fields
-.field private b:Landroid/content/Context;
+.field public b:Landroid/content/Context;
 
-.field private c:Lcnb;
+.field public c:Lcnb;
 
-.field private d:Lfss;
+.field public d:Lfss;
 
 
 # direct methods

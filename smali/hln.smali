@@ -24,7 +24,7 @@
 
 # virtual methods
 .method public final a(I)Lhon;
-    .locals 4
+    .locals 3
 
     :try_start_0
     move v2, p1

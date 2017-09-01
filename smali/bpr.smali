@@ -21,7 +21,7 @@
 
 .field private i:Lbnn;
 
-.field private j:Lgft;
+.field public j:Lgft;
 
 .field private k:Lhpu;
 

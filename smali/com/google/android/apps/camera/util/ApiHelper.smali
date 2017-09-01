@@ -70,8 +70,8 @@
     goto :goto_0
 .end method
 
-.method private constructor <init>(Lhnx;Lhnw;)V
-    .locals 0
+.method public constructor <init>(Lhnx;Lhnw;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
