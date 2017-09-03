@@ -94,8 +94,6 @@
 
     move-result v0
 
-    const/4 v0, 0x1
-
     if-eqz v0, :cond_1
 
     :cond_0
@@ -117,7 +115,7 @@
 
     move v8, p5
 
-    invoke-direct/range {v0 .. v6}, Lbct;-><init>(Lbci;Lhin;IIII)V
+    invoke-direct/range {v0 .. v8}, Lbct;-><init>(Lbci;Lhin;IIIIII)V
 
     :goto_0
     return-object v0
