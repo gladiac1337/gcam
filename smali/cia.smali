@@ -31,17 +31,12 @@
 .method public constructor <init>(FFLandroid/graphics/PointF;Landroid/graphics/PointF;FFFF)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcia;->a:F
 
-    .line 3
     iput p2, p0, Lcia;->d:F
 
-    .line 4
     invoke-static {p3}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -50,7 +45,6 @@
 
     iput-object v0, p0, Lcia;->b:Landroid/graphics/PointF;
 
-    .line 5
     invoke-static {p4}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -59,19 +53,14 @@
 
     iput-object v0, p0, Lcia;->e:Landroid/graphics/PointF;
 
-    .line 6
     iput p5, p0, Lcia;->c:F
 
-    .line 7
     iput p6, p0, Lcia;->f:F
 
-    .line 8
     iput p7, p0, Lcia;->g:F
 
-    .line 9
     iput p8, p0, Lcia;->h:F
 
-    .line 10
     return-void
 .end method
 
@@ -80,8 +69,6 @@
 .method public final a(F)F
     .locals 3
 
-    .prologue
-    .line 11
     iget v0, p0, Lcia;->a:F
 
     iget v1, p0, Lcia;->d:F
@@ -100,8 +87,6 @@
 .method public final b(F)Landroid/graphics/PointF;
     .locals 5
 
-    .prologue
-    .line 12
     new-instance v0, Landroid/graphics/PointF;
 
     iget-object v1, p0, Lcia;->b:Landroid/graphics/PointF;
@@ -148,8 +133,6 @@
 .method public final c(F)F
     .locals 3
 
-    .prologue
-    .line 13
     iget v0, p0, Lcia;->c:F
 
     iget v1, p0, Lcia;->f:F
@@ -168,8 +151,6 @@
 .method public final d(F)F
     .locals 3
 
-    .prologue
-    .line 14
     iget v0, p0, Lcia;->g:F
 
     iget v1, p0, Lcia;->h:F
@@ -188,13 +169,10 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 15
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 16
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -215,7 +193,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 17
     iget v1, p0, Lcia;->a:F
 
     iget v2, p0, Lcia;->d:F
@@ -252,7 +229,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 18
     iget-object v1, p0, Lcia;->b:Landroid/graphics/PointF;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -315,7 +291,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 19
     iget v1, p0, Lcia;->c:F
 
     iget v2, p0, Lcia;->f:F
@@ -352,7 +327,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 20
     iget v1, p0, Lcia;->g:F
 
     iget v2, p0, Lcia;->h:F
@@ -389,12 +363,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 21
     const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 22
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

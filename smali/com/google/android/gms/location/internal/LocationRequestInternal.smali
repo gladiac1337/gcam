@@ -77,13 +77,10 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
     const/4 v3, 0x0
 
     const/4 v1, 0x1
 
-    .line 1
-    .line 2
     new-instance v0, Lcom/google/android/gms/location/internal/LocationRequestInternal;
 
     sget-object v6, Lcom/google/android/gms/location/internal/LocationRequestInternal;->a:Ljava/util/List;
@@ -100,7 +97,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/google/android/gms/location/internal/LocationRequestInternal;-><init>(ILcom/google/android/gms/location/LocationRequest;ZZZLjava/util/List;Ljava/lang/String;Z)V
 
-    .line 3
     return-object v0
 .end method
 
@@ -281,16 +277,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 4
-    .line 6
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lkk;->l(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 7
     const/4 v1, 0x1
 
     iget-object v2, p0, Lcom/google/android/gms/location/internal/LocationRequestInternal;->c:Lcom/google/android/gms/location/LocationRequest;
@@ -299,10 +291,8 @@
 
     const/16 v1, 0x3e8
 
-    .line 8
     iget v2, p0, Lcom/google/android/gms/location/internal/LocationRequestInternal;->b:I
 
-    .line 9
     invoke-static {p1, v1, v2}, Lkk;->c(Landroid/os/Parcel;II)V
 
     const/4 v1, 0x2
@@ -341,9 +331,7 @@
 
     invoke-static {p1, v1, v2}, Lkk;->a(Landroid/os/Parcel;IZ)V
 
-    .line 10
     invoke-static {p1, v0}, Lkk;->m(Landroid/os/Parcel;I)V
 
-    .line 11
     return-void
 .end method

@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public final process()Lhqy;
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Lhtb;
 
     invoke-direct {v0}, Lhtb;-><init>()V
@@ -38,23 +34,17 @@
 .method public final resume()V
     .locals 0
 
-    .prologue
-    .line 5
     return-void
 .end method
 
 .method public final stop()V
     .locals 0
 
-    .prologue
-    .line 3
     return-void
 .end method
 
 .method public final suspend()V
     .locals 0
 
-    .prologue
-    .line 4
     return-void
 .end method

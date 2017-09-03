@@ -19,28 +19,20 @@
 .method public constructor <init>(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;Ljava/util/List;Lals;Ldi;)V
     .locals 5
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lade;->b:Ljava/lang/Class;
 
-    .line 3
     iput-object p4, p0, Lade;->c:Ljava/util/List;
 
-    .line 4
     iput-object p5, p0, Lade;->a:Lals;
 
-    .line 5
     iput-object p6, p0, Lade;->d:Ldi;
 
-    .line 6
     invoke-virtual {p1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 7
     invoke-virtual {p2}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v1
@@ -125,18 +117,14 @@
 
     iput-object v0, p0, Lade;->e:Ljava/lang/String;
 
-    .line 8
     return-void
 .end method
 
 .method private final a(Labx;IILabq;Ljava/util/List;)Laei;
     .locals 8
 
-    .prologue
-    .line 14
     const/4 v1, 0x0
 
-    .line 15
     const/4 v0, 0x0
 
     iget-object v2, p0, Lade;->c:Ljava/util/List;
@@ -150,7 +138,6 @@
     :goto_0
     if-ge v3, v4, :cond_1
 
-    .line 16
     iget-object v0, p0, Lade;->c:Ljava/util/List;
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -159,25 +146,21 @@
 
     check-cast v0, Labr;
 
-    .line 17
     :try_start_0
     invoke-interface {p1}, Labx;->a()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 18
     invoke-interface {v0, v2, p4}, Labr;->a(Ljava/lang/Object;Labq;)Z
 
     move-result v2
 
     if-eqz v2, :cond_3
 
-    .line 19
     invoke-interface {p1}, Labx;->a()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 20
     invoke-interface {v0, v2, p2, p3, p4}, Labr;->a(Ljava/lang/Object;IILabq;)Laei;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -187,22 +170,18 @@
     :goto_1
     move-object v1, v0
 
-    .line 26
     :goto_2
     if-nez v1, :cond_1
 
-    .line 27
     add-int/lit8 v0, v3, 0x1
 
     move v3, v0
 
     goto :goto_0
 
-    .line 22
     :catch_0
     move-exception v2
 
-    .line 23
     const-string v5, "DecodePath"
 
     const/4 v6, 0x2
@@ -213,7 +192,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 24
     const-string v5, "DecodePath"
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -250,17 +228,14 @@
 
     invoke-static {v5, v0, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 25
     :cond_0
     invoke-interface {p5, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    .line 28
     :cond_1
     if-nez v1, :cond_2
 
-    .line 29
     new-instance v0, Laec;
 
     iget-object v1, p0, Lade;->e:Ljava/lang/String;
@@ -273,7 +248,6 @@
 
     throw v0
 
-    .line 30
     :cond_2
     return-object v1
 
@@ -288,8 +262,6 @@
 .method final a(Labx;IILabq;)Laei;
     .locals 6
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lade;->d:Ldi;
 
     invoke-interface {v0}, Ldi;->a()Ljava/lang/Object;
@@ -308,7 +280,6 @@
 
     move-object v4, p4
 
-    .line 10
     :try_start_0
     invoke-direct/range {v0 .. v5}, Lade;->a(Labx;IILabq;Ljava/util/List;)Laei;
     :try_end_0
@@ -316,15 +287,12 @@
 
     move-result-object v0
 
-    .line 11
     iget-object v1, p0, Lade;->d:Ldi;
 
     invoke-interface {v1, v5}, Ldi;->a(Ljava/lang/Object;)Z
 
-    .line 12
     return-object v0
 
-    .line 13
     :catchall_0
     move-exception v0
 
@@ -338,8 +306,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 31
     iget-object v0, p0, Lade;->b:Ljava/lang/Class;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

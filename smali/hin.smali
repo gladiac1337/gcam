@@ -35,7 +35,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x3
 
     const/4 v7, 0x2
@@ -46,7 +45,6 @@
 
     const/4 v0, 0x0
 
-    .line 9
     new-instance v1, Lhin;
 
     const-string v2, "RES_UNKNOWN"
@@ -55,7 +53,6 @@
 
     sput-object v1, Lhin;->a:Lhin;
 
-    .line 10
     new-instance v1, Lhin;
 
     const-string v2, "RES_QCIF"
@@ -68,7 +65,6 @@
 
     sput-object v1, Lhin;->b:Lhin;
 
-    .line 11
     new-instance v1, Lhin;
 
     const-string v2, "RES_QVGA"
@@ -81,7 +77,6 @@
 
     sput-object v1, Lhin;->c:Lhin;
 
-    .line 12
     new-instance v1, Lhin;
 
     const-string v2, "RES_CIF"
@@ -94,7 +89,6 @@
 
     sput-object v1, Lhin;->d:Lhin;
 
-    .line 13
     new-instance v1, Lhin;
 
     const-string v2, "RES_480P"
@@ -109,7 +103,6 @@
 
     sput-object v1, Lhin;->e:Lhin;
 
-    .line 14
     new-instance v1, Lhin;
 
     const-string v2, "RES_720P"
@@ -124,7 +117,6 @@
 
     sput-object v1, Lhin;->f:Lhin;
 
-    .line 15
     new-instance v1, Lhin;
 
     const-string v2, "RES_1080P"
@@ -139,7 +131,6 @@
 
     sput-object v1, Lhin;->g:Lhin;
 
-    .line 16
     new-instance v1, Lhin;
 
     const-string v2, "RES_2160P"
@@ -154,7 +145,6 @@
 
     sput-object v1, Lhin;->h:Lhin;
 
-    .line 17
     const/16 v1, 0x8
 
     new-array v1, v1, [Lhin;
@@ -201,14 +191,12 @@
 
     sput-object v1, Lhin;->l:[Lhin;
 
-    .line 18
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     sput-object v1, Lhin;->i:Ljava/util/Map;
 
-    .line 19
     invoke-static {}, Lhin;->values()[Lhin;
 
     move-result-object v1
@@ -220,7 +208,6 @@
 
     aget-object v3, v1, v0
 
-    .line 20
     new-instance v4, Lhja;
 
     iget v5, v3, Lhin;->j:I
@@ -229,17 +216,14 @@
 
     invoke-direct {v4, v5, v6}, Lhja;-><init>(II)V
 
-    .line 21
     sget-object v5, Lhin;->i:Ljava/util/Map;
 
     invoke-interface {v5, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 22
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 23
     :cond_0
     return-void
 .end method
@@ -247,25 +231,18 @@
 .method private constructor <init>(Ljava/lang/String;III)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput p3, p0, Lhin;->j:I
 
-    .line 4
     iput p4, p0, Lhin;->k:I
 
-    .line 5
     return-void
 .end method
 
 .method public static a()Ljava/util/Comparator;
     .locals 1
 
-    .prologue
-    .line 6
     new-instance v0, Lhio;
 
     invoke-direct {v0}, Lhio;-><init>()V
@@ -276,8 +253,6 @@
 .method public static values()[Lhin;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lhin;->l:[Lhin;
 
     invoke-virtual {v0}, [Lhin;->clone()Ljava/lang/Object;
@@ -294,8 +269,6 @@
 .method public final b()Lhja;
     .locals 3
 
-    .prologue
-    .line 7
     new-instance v0, Lhja;
 
     iget v1, p0, Lhin;->j:I
@@ -310,8 +283,6 @@
 .method public final c()J
     .locals 2
 
-    .prologue
-    .line 8
     iget v0, p0, Lhin;->j:I
 
     iget v1, p0, Lhin;->k:I

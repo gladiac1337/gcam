@@ -36,15 +36,12 @@
 .method public constructor <init>()V
     .locals 6
 
-    .prologue
     const-wide/16 v4, 0x0
 
     const/4 v2, 0x0
 
-    .line 1
     invoke-direct {p0}, Lhba;-><init>()V
 
-    .line 2
     sget-object v0, Lhbg;->e:[B
 
     iput-object v0, p0, Lhay;->a:[B
@@ -103,7 +100,6 @@
 
     iput v0, p0, Lhay;->p:I
 
-    .line 3
     return-void
 .end method
 
@@ -112,12 +108,10 @@
 .method protected final a()I
     .locals 8
 
-    .prologue
     const-wide/16 v6, 0x0
 
     const/4 v1, 0x0
 
-    .line 17
     invoke-super {p0}, Lhba;->a()I
 
     move-result v0
@@ -180,18 +174,14 @@
 
     if-eqz v2, :cond_2
 
-    .line 20
     const/16 v2, 0x18
 
-    .line 21
     invoke-static {v2}, Lhaz;->c(I)I
 
     move-result v2
 
-    .line 22
     add-int/lit8 v2, v2, 0x8
 
-    .line 23
     add-int/2addr v0, v2
 
     :cond_2
@@ -209,18 +199,14 @@
 
     if-eq v2, v3, :cond_3
 
-    .line 26
     const/16 v2, 0x20
 
-    .line 27
     invoke-static {v2}, Lhaz;->c(I)I
 
     move-result v2
 
-    .line 28
     add-int/lit8 v2, v2, 0x4
 
-    .line 29
     add-int/2addr v0, v2
 
     :cond_3
@@ -262,15 +248,12 @@
 
     iget v2, p0, Lhay;->g:I
 
-    .line 32
     const/16 v3, 0x38
 
-    .line 33
     invoke-static {v3}, Lhaz;->c(I)I
 
     move-result v3
 
-    .line 35
     invoke-static {v2}, Lhaz;->d(I)I
 
     move-result v2
@@ -279,10 +262,8 @@
 
     move-result v2
 
-    .line 36
     add-int/2addr v2, v3
 
-    .line 37
     add-int/2addr v0, v2
 
     :cond_6
@@ -290,18 +271,14 @@
 
     if-eqz v2, :cond_7
 
-    .line 40
     const/16 v2, 0x40
 
-    .line 41
     invoke-static {v2}, Lhaz;->c(I)I
 
     move-result v2
 
-    .line 42
     add-int/lit8 v2, v2, 0x1
 
-    .line 43
     add-int/2addr v0, v2
 
     :cond_7
@@ -466,12 +443,10 @@
 
     aget-wide v4, v3, v1
 
-    .line 44
     invoke-static {v4, v5}, Lhaz;->b(J)I
 
     move-result v3
 
-    .line 45
     add-int/2addr v2, v3
 
     add-int/lit8 v1, v1, 0x1
@@ -540,7 +515,6 @@
 .method public final a(Lhaz;)V
     .locals 10
 
-    .prologue
     const-wide/16 v8, 0x0
 
     const/16 v6, 0x8
@@ -549,7 +523,6 @@
 
     const/4 v1, 0x0
 
-    .line 4
     iget-object v2, p0, Lhay;->a:[B
 
     sget-object v3, Lhbg;->e:[B
@@ -600,17 +573,14 @@
 
     iget-wide v2, p0, Lhay;->c:D
 
-    .line 5
     const/4 v4, 0x3
 
     invoke-virtual {p1, v4, v0}, Lhaz;->c(II)V
 
-    .line 6
     invoke-static {v2, v3}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     move-result-wide v2
 
-    .line 7
     iget-object v4, p1, Lhaz;->a:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v4}, Ljava/nio/ByteBuffer;->remaining()I
@@ -642,7 +612,6 @@
 
     invoke-virtual {v4, v2, v3}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
-    .line 8
     :cond_3
     iget v2, p0, Lhay;->d:F
 
@@ -695,19 +664,16 @@
 
     iget v2, p0, Lhay;->g:I
 
-    .line 9
     const/4 v3, 0x7
 
     invoke-virtual {p1, v3, v1}, Lhaz;->c(II)V
 
-    .line 10
     invoke-static {v2}, Lhaz;->d(I)I
 
     move-result v2
 
     invoke-virtual {p1, v2}, Lhaz;->b(I)V
 
-    .line 11
     :cond_7
     iget-boolean v2, p0, Lhay;->h:Z
 
@@ -715,17 +681,13 @@
 
     iget-boolean v2, p0, Lhay;->h:Z
 
-    .line 12
     invoke-virtual {p1, v6, v1}, Lhaz;->c(II)V
 
-    .line 13
     if-eqz v2, :cond_8
 
-    .line 14
     :goto_0
     int-to-byte v0, v0
 
-    .line 15
     iget-object v2, p1, Lhaz;->a:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v2}, Ljava/nio/ByteBuffer;->hasRemaining()Z
@@ -755,16 +717,13 @@
     :cond_8
     move v0, v1
 
-    .line 13
     goto :goto_0
 
-    .line 15
     :cond_9
     iget-object v2, p1, Lhaz;->a:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v2, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 16
     :cond_a
     iget-object v0, p0, Lhay;->i:[Lhaw;
 

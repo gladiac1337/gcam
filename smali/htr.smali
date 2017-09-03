@@ -16,17 +16,12 @@
 .method public constructor <init>(Lias;Lcom/google/android/libraries/smartburst/filterpacks/face/FaceEditor;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lhtr;->a:Lias;
 
-    .line 3
     iput-object p2, p0, Lhtr;->b:Lcom/google/android/libraries/smartburst/filterpacks/face/FaceEditor;
 
-    .line 4
     return-void
 .end method
 
@@ -35,9 +30,6 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 5
-    .line 6
     iget-object v0, p0, Lhtr;->b:Lcom/google/android/libraries/smartburst/filterpacks/face/FaceEditor;
 
     iget-object v1, p0, Lhtr;->a:Lias;
@@ -48,14 +40,12 @@
 
     move-result-object v0
 
-    .line 7
     iget-object v1, p0, Lhtr;->b:Lcom/google/android/libraries/smartburst/filterpacks/face/FaceEditor;
 
     invoke-virtual {v1}, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceEditor;->getBestInputBitmapTimestamp()J
 
     move-result-wide v2
 
-    .line 8
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -64,6 +54,5 @@
 
     move-result-object v0
 
-    .line 9
     return-object v0
 .end method

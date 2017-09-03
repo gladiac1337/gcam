@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 50
     const-string v0, "GDepth"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -35,8 +33,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,10 +41,8 @@
 .method public static a(Lcom/google/android/apps/refocus/image/RGBZ;)Lgtd;
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 39
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/image/RGBZ;->getBitmap()Landroid/graphics/Bitmap;
@@ -63,7 +57,6 @@
 
     if-nez v1, :cond_1
 
-    .line 40
     :cond_0
     sget-object v1, Lgtd;->d:Ljava/lang/String;
 
@@ -71,29 +64,24 @@
 
     invoke-static {v1, v2}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 49
     :goto_0
     return-object v0
 
-    .line 42
     :cond_1
     new-instance v1, Lgtd;
 
     invoke-direct {v1}, Lgtd;-><init>()V
 
-    .line 43
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/image/RGBZ;->getDepthTransform()Lcom/google/android/apps/refocus/image/DepthTransform;
 
     move-result-object v2
 
     iput-object v2, v1, Lgtd;->c:Lcom/google/android/apps/refocus/image/DepthTransform;
 
-    .line 44
     const-string v2, "image/jpeg"
 
     iput-object v2, v1, Lgtd;->a:Ljava/lang/String;
 
-    .line 45
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/image/RGBZ;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v2
@@ -108,12 +96,10 @@
 
     iput-object v2, v1, Lgtd;->b:[B
 
-    .line 46
     iget-object v2, v1, Lgtd;->b:[B
 
     if-nez v2, :cond_2
 
-    .line 47
     sget-object v1, Lgtd;->d:Ljava/lang/String;
 
     const-string v2, "null depthmap data in fromBitmap"
@@ -125,46 +111,37 @@
     :cond_2
     move-object v0, v1
 
-    .line 49
     goto :goto_0
 .end method
 
 .method public static a(Lud;)Lgtd;
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 2
     if-nez p0, :cond_0
 
-    .line 38
     :goto_0
     return-object v0
 
-    .line 4
     :cond_0
     invoke-static {}, Lcom/google/android/apps/camera/metadata/refocus/GDepthUtil;->initialize()V
 
-    .line 5
     new-instance v1, Lgtd;
 
     invoke-direct {v1}, Lgtd;-><init>()V
 
-    .line 6
     :try_start_0
     const-string v2, "http://ns.google.com/photos/1.0/depthmap/"
 
     const-string v3, "Mime"
 
-    .line 7
     invoke-interface {p0, v2, v3}, Lud;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     iput-object v2, v1, Lgtd;->a:Ljava/lang/String;
 
-    .line 8
     const-string v2, "image/png"
 
     iget-object v3, v1, Lgtd;->a:Ljava/lang/String;
@@ -179,14 +156,12 @@
 
     iget-object v3, v1, Lgtd;->a:Ljava/lang/String;
 
-    .line 9
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    .line 10
     sget-object v2, Lgtd;->d:Ljava/lang/String;
 
     const-string v3, "Unknown GDepth mime: "
@@ -214,11 +189,9 @@
 
     goto :goto_0
 
-    .line 18
     :catch_0
     move-exception v1
 
-    .line 19
     sget-object v2, Lgtd;->d:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -229,7 +202,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_1
     :try_start_1
     new-instance v1, Ljava/lang/String;
@@ -238,25 +210,21 @@
 
     goto :goto_1
 
-    .line 12
     :cond_2
     const-string v2, "http://ns.google.com/photos/1.0/depthmap/"
 
     const-string v3, "Data"
 
-    .line 13
     invoke-interface {p0, v2, v3}, Lud;->h(Ljava/lang/String;Ljava/lang/String;)[B
 
     move-result-object v2
 
     iput-object v2, v1, Lgtd;->b:[B
 
-    .line 14
     iget-object v2, v1, Lgtd;->b:[B
 
     if-nez v2, :cond_3
 
-    .line 15
     sget-object v1, Lgtd;->d:Ljava/lang/String;
 
     const-string v2, "No GDepth data"
@@ -267,49 +235,40 @@
 
     goto :goto_0
 
-    .line 21
     :cond_3
     :try_start_2
     const-string v2, "http://ns.google.com/photos/1.0/depthmap/"
 
     const-string v3, "Near"
 
-    .line 22
     invoke-interface {p0, v2, v3}, Lud;->f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Double;
 
     move-result-object v2
 
-    .line 23
     invoke-virtual {v2}, Ljava/lang/Double;->floatValue()F
 
     move-result v2
 
-    .line 24
     const-string v3, "http://ns.google.com/photos/1.0/depthmap/"
 
     const-string v4, "Far"
 
-    .line 25
     invoke-interface {p0, v3, v4}, Lud;->f(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Double;
 
     move-result-object v3
 
-    .line 26
     invoke-virtual {v3}, Ljava/lang/Double;->floatValue()F
 
     move-result v3
 
-    .line 27
     const-string v4, "http://ns.google.com/photos/1.0/depthmap/"
 
     const-string v5, "Format"
 
-    .line 28
     invoke-interface {p0, v4, v5}, Lud;->i(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 29
     const-string v5, "RangeInverse"
 
     invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -318,7 +277,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 30
     new-instance v4, Lcom/google/android/apps/refocus/image/RangeInverseDepthTransform;
 
     invoke-direct {v4, v2, v3}, Lcom/google/android/apps/refocus/image/RangeInverseDepthTransform;-><init>(FF)V
@@ -328,10 +286,8 @@
     :goto_2
     move-object v0, v1
 
-    .line 38
     goto/16 :goto_0
 
-    .line 31
     :cond_4
     const-string v5, "RangeLinear"
 
@@ -341,7 +297,6 @@
 
     if-eqz v5, :cond_5
 
-    .line 32
     new-instance v4, Lcom/google/android/apps/refocus/image/RangeLinearDepthTransform;
 
     invoke-direct {v4, v2, v3}, Lcom/google/android/apps/refocus/image/RangeLinearDepthTransform;-><init>(FF)V
@@ -352,11 +307,9 @@
 
     goto :goto_2
 
-    .line 35
     :catch_1
     move-exception v1
 
-    .line 36
     sget-object v2, Lgtd;->d:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
@@ -367,7 +320,6 @@
 
     goto/16 :goto_0
 
-    .line 33
     :cond_5
     :try_start_3
     sget-object v2, Lgtd;->d:Ljava/lang/String;

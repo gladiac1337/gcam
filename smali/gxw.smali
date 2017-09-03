@@ -17,12 +17,10 @@
 .method public static a(Landroid/os/Parcel;)Lcom/google/android/gms/common/data/DataHolder;
     .locals 8
 
-    .prologue
     const/4 v4, 0x0
 
     const/4 v5, 0x0
 
-    .line 1
     invoke-static {p0}, Lkk;->a(Landroid/os/Parcel;)I
 
     move-result v6
@@ -40,17 +38,14 @@
 
     if-ge v0, v6, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 4
     const v7, 0xffff
 
     and-int/2addr v7, v0
 
-    .line 5
     sparse-switch v7, :sswitch_data_0
 
     invoke-static {p0, v0}, Lkk;->b(Landroid/os/Parcel;I)V
@@ -159,11 +154,7 @@
 .method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 6
-    .line 7
     new-array v0, p1, [Lcom/google/android/gms/common/data/DataHolder;
 
-    .line 8
     return-object v0
 .end method

@@ -13,17 +13,12 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lckn;->a:I
 
-    .line 3
     iput p2, p0, Lckn;->b:I
 
-    .line 4
     return-void
 .end method
 
@@ -32,27 +27,21 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 5
     if-nez p1, :cond_1
 
-    .line 10
     :cond_0
     :goto_0
     return v0
 
-    .line 7
     :cond_1
     instance-of v1, p1, Lckn;
 
     if-eqz v1, :cond_0
 
-    .line 9
     check-cast p1, Lckn;
 
-    .line 10
     iget v1, p0, Lckn;->a:I
 
     iget v2, p1, Lckn;->a:I
@@ -73,8 +62,6 @@
 .method public final hashCode()I
     .locals 3
 
-    .prologue
-    .line 11
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;

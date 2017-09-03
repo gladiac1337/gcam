@@ -11,14 +11,10 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/Filter;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
 
-    .line 2
     iput-object p3, p0, Lcom/google/android/libraries/smartburst/filterfw/SlotFilter;->mSlotName:Ljava/lang/String;
 
-    .line 3
     return-void
 .end method
 
@@ -27,8 +23,6 @@
 .method protected final getSlotType()Lcom/google/android/libraries/smartburst/filterfw/FrameType;
     .locals 2
 
-    .prologue
-    .line 4
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/SlotFilter;->getFrameManager()Lcom/google/android/libraries/smartburst/filterfw/FrameManager;
 
     move-result-object v0
@@ -49,8 +43,6 @@
 .method public final slotHasFrame()Z
     .locals 2
 
-    .prologue
-    .line 5
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/SlotFilter;->getFrameManager()Lcom/google/android/libraries/smartburst/filterfw/FrameManager;
 
     move-result-object v0

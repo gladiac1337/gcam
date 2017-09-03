@@ -18,8 +18,6 @@
 .method constructor <init>(Lbee;Lhog;Liwp;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbef;->b:Lbee;
 
     iput-object p2, p0, Lbef;->c:Lhog;
@@ -36,8 +34,6 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 2
     :try_start_0
     iget-object v0, p0, Lbef;->c:Lhog;
 
@@ -46,32 +42,25 @@
     .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Lhof; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7
     :goto_0
     iget-object v0, p0, Lbef;->b:Lbee;
 
-    .line 8
     iget-object v0, v0, Lbee;->b:Ljava/util/concurrent/Executor;
 
-    .line 9
     new-instance v1, Lbeg;
 
     invoke-direct {v1, p0}, Lbeg;-><init>(Lbef;)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 10
     return-void
 
-    .line 4
     :catch_0
     move-exception v0
 
-    .line 5
     :goto_1
     sget-object v1, Lbee;->a:Ljava/lang/String;
 
-    .line 6
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -108,7 +97,6 @@
 
     goto :goto_0
 
-    .line 4
     :catch_1
     move-exception v0
 

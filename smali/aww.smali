@@ -16,8 +16,6 @@
 .method constructor <init>(Lawv;Lawz;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Laww;->b:Lawv;
 
     iput-object p2, p0, Laww;->a:Lawz;
@@ -32,18 +30,14 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 5
 
-    .prologue
-    .line 2
     iget-object v0, p0, Laww;->a:Lawz;
 
     iget-object v1, p0, Laww;->b:Lawv;
 
     iget-object v1, v1, Lawv;->a:Lawu;
 
-    .line 4
     if-nez p1, :cond_0
 
-    .line 5
     new-instance v0, Ljava/lang/NullPointerException;
 
     iget-object v1, v1, Lawu;->a:Lavm;
@@ -90,23 +84,19 @@
 
     throw v0
 
-    .line 6
     :cond_0
     invoke-virtual {v1, p1}, Lawu;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 7
     if-nez v2, :cond_1
 
-    .line 8
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 9
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -167,10 +157,8 @@
 
     throw v0
 
-    .line 11
     :cond_1
     invoke-interface {v0, v2}, Lawz;->a(Ljava/lang/Object;)V
 
-    .line 12
     return-void
 .end method

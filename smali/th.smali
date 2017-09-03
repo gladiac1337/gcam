@@ -16,13 +16,10 @@
 .method constructor <init>(Lpj;)V
     .locals 3
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lth;->b:Lpj;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lll;
 
     iget-object v1, p0, Lth;->b:Lpj;
@@ -49,8 +46,6 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 3
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lth;->b:Lpj;
 
     iget-object v0, v0, Lpj;->e:Landroid/view/Window$Callback;
@@ -63,7 +58,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lth;->b:Lpj;
 
     iget-object v0, v0, Lpj;->e:Landroid/view/Window$Callback;
@@ -74,7 +68,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/Window$Callback;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
 
-    .line 5
     :cond_0
     return-void
 .end method

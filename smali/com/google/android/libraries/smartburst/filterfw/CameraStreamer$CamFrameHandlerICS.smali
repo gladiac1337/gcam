@@ -35,45 +35,36 @@
 .method private constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->this$0:Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer;
 
     invoke-direct {p0, p1, v1}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;-><init>(Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer;Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$1;)V
 
-    .line 2
     const/16 v0, 0x10
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mCameraTransform:[F
 
-    .line 3
     iput-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mPreviewTexture:Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
 
-    .line 4
     iput-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mPreviewSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
-    .line 5
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mTargetSurfaceTextures:Ljava/util/HashMap;
 
-    .line 6
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mClientRenderTargets:Ljava/util/HashMap;
 
-    .line 7
     iput-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mCopyShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
-    .line 8
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS$2;
 
     invoke-direct {v0, p0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS$2;-><init>(Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;)V
@@ -86,8 +77,6 @@
 .method synthetic constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer;Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$1;)V
     .locals 0
 
-    .prologue
-    .line 103
     invoke-direct {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;-><init>(Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer;)V
 
     return-void
@@ -98,8 +87,6 @@
 .method protected createClientShader()Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
     .locals 2
 
-    .prologue
-    .line 47
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     const-string v1, "#extension GL_OES_EGL_image_external : require\nprecision mediump float;\nuniform samplerExternalOES tex_sampler_0;\nvarying vec2 v_texcoord;\nvoid main() {\n  gl_FragColor = texture2D(tex_sampler_0, v_texcoord);\n}\n"
@@ -112,8 +99,6 @@
 .method protected createClientTexture()Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
     .locals 1
 
-    .prologue
-    .line 48
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/TextureSource;->newExternalTexture()Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
 
     move-result-object v0
@@ -124,22 +109,18 @@
 .method protected distributeFrames()V
     .locals 6
 
-    .prologue
-    .line 49
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->getCopyShader()Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->updateTransform(Lcom/google/android/libraries/smartburst/filterfw/ImageShader;)V
 
-    .line 50
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->getCopyShader()Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->updateShaderTargetRect(Lcom/google/android/libraries/smartburst/filterfw/ImageShader;)V
 
-    .line 51
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mTargetSurfaceTextures:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -163,15 +144,12 @@
 
     check-cast v0, Landroid/graphics/SurfaceTexture;
 
-    .line 52
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->renderTargetFor(Landroid/graphics/SurfaceTexture;)Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;
 
     move-result-object v0
 
-    .line 53
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;->focus()V
 
-    .line 54
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->getCopyShader()Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     move-result-object v2
@@ -184,17 +162,14 @@
 
     invoke-virtual {v2, v3, v0, v4, v5}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->process(Lcom/google/android/libraries/smartburst/filterfw/TextureSource;Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;II)V
 
-    .line 55
     const-string v2, "distribute frames"
 
     invoke-static {v2}, Lcom/google/android/libraries/smartburst/filterfw/GLToolbox;->checkGlError(Ljava/lang/String;)V
 
-    .line 56
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;->swapBuffers()V
 
     goto :goto_0
 
-    .line 58
     :cond_0
     return-void
 .end method
@@ -202,13 +177,10 @@
 .method protected getCopyShader()Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
     .locals 2
 
-    .prologue
-    .line 75
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mCopyShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     if-nez v0, :cond_0
 
-    .line 76
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     const-string v1, "#extension GL_OES_EGL_image_external : require\nprecision mediump float;\nuniform samplerExternalOES tex_sampler_0;\nvarying vec2 v_texcoord;\nvoid main() {\n  gl_FragColor = texture2D(tex_sampler_0, v_texcoord);\n}\n"
@@ -217,7 +189,6 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mCopyShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
-    .line 77
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mCopyShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
@@ -227,8 +198,6 @@
 .method public declared-synchronized grabFrame(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;Lcom/google/android/libraries/smartburst/filterfw/geometry/Scaler;)V
     .locals 6
 
-    .prologue
-    .line 24
     monitor-enter p0
 
     :try_start_0
@@ -236,33 +205,27 @@
 
     move-result-object v0
 
-    .line 25
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->textureForContext(Ljavax/microedition/khronos/egl/EGLContext;)Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
 
     move-result-object v1
 
-    .line 26
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->shaderForContext(Ljavax/microedition/khronos/egl/EGLContext;)Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     move-result-object v2
 
-    .line 27
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->surfaceTextureForContext(Ljavax/microedition/khronos/egl/EGLContext;)Landroid/graphics/SurfaceTexture;
 
     move-result-object v0
 
-    .line 28
     if-eqz v1, :cond_0
 
     if-eqz v2, :cond_0
 
     if-nez v0, :cond_1
 
-    .line 29
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 
-    .line 30
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v1
@@ -311,7 +274,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 24
     :catchall_0
     move-exception v0
 
@@ -319,12 +281,10 @@
 
     throw v0
 
-    .line 31
     :cond_1
     :try_start_1
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
 
-    .line 32
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mOutWidth:I
 
     iget v3, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mOutHeight:I
@@ -333,10 +293,8 @@
 
     move-result-object v0
 
-    .line 33
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->resize([I)V
 
-    .line 35
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->lockRenderTarget()Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;
 
     move-result-object v3
@@ -349,10 +307,8 @@
 
     aget v0, v0, v5
 
-    .line 36
     invoke-virtual {v2, v1, v3, v4, v0}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->process(Lcom/google/android/libraries/smartburst/filterfw/TextureSource;Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;II)V
 
-    .line 37
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mPreviewSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->getTimestamp()J
@@ -361,12 +317,10 @@
 
     invoke-virtual {p1, v0, v1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->setTimestamp(J)V
 
-    .line 38
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->unlock()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 39
     monitor-exit p0
 
     return-void
@@ -375,11 +329,8 @@
 .method protected onCleanupContext(Ljavax/microedition/khronos/egl/EGLContext;)V
     .locals 1
 
-    .prologue
-    .line 97
     invoke-super {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->onCleanupContext(Ljavax/microedition/khronos/egl/EGLContext;)V
 
-    .line 98
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mTargetSurfaceTextures:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -388,18 +339,14 @@
 
     check-cast v0, Landroid/graphics/SurfaceTexture;
 
-    .line 99
     if-eqz v0, :cond_0
 
-    .line 100
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->release()V
 
-    .line 101
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mTargetSurfaceTextures:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 102
     :cond_0
     return-void
 .end method
@@ -407,8 +354,6 @@
 .method public declared-synchronized onRegisterClient(Lcom/google/android/libraries/smartburst/filterfw/VideoFrameConsumer;Ljavax/microedition/khronos/egl/EGLContext;)V
     .locals 3
 
-    .prologue
-    .line 18
     monitor-enter p0
 
     :try_start_0
@@ -416,18 +361,14 @@
 
     move-result-object v0
 
-    .line 19
     invoke-virtual {p0, p2}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->textureForContext(Ljavax/microedition/khronos/egl/EGLContext;)Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
 
-    .line 20
     invoke-virtual {p0, p2}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->shaderForContext(Ljavax/microedition/khronos/egl/EGLContext;)Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
-    .line 21
     invoke-virtual {p0, p2}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->surfaceTextureForContext(Ljavax/microedition/khronos/egl/EGLContext;)Landroid/graphics/SurfaceTexture;
 
     move-result-object v1
 
-    .line 22
     new-instance v2, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS$1;
 
     invoke-direct {v2, p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS$1;-><init>(Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;Ljava/util/Set;)V
@@ -436,12 +377,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 23
     monitor-exit p0
 
     return-void
 
-    .line 18
     :catchall_0
     move-exception v0
 
@@ -453,11 +392,8 @@
 .method public onUpdateCameraOrientation(I)V
     .locals 1
 
-    .prologue
-    .line 14
     invoke-super {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandler;->onUpdateCameraOrientation(I)V
 
-    .line 15
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mRunner:Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CameraRunnable;
 
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CameraRunnable;->access$100(Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CameraRunnable;)Landroid/hardware/Camera;
@@ -466,18 +402,14 @@
 
     invoke-virtual {v0, p1}, Landroid/hardware/Camera;->setDisplayOrientation(I)V
 
-    .line 16
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->updateSurfaceTextureSizes()V
 
-    .line 17
     return-void
 .end method
 
 .method public declared-synchronized release()V
     .locals 1
 
-    .prologue
-    .line 40
     monitor-enter p0
 
     :try_start_0
@@ -485,41 +417,34 @@
 
     if-eqz v0, :cond_0
 
-    .line 41
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mPreviewTexture:Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/TextureSource;->release()V
 
-    .line 42
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mPreviewTexture:Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
 
-    .line 43
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mPreviewSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     if-eqz v0, :cond_1
 
-    .line 44
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mPreviewSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->release()V
 
-    .line 45
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mPreviewSurfaceTexture:Landroid/graphics/SurfaceTexture;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 46
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 40
     :catchall_0
     move-exception v0
 
@@ -531,8 +456,6 @@
 .method protected renderTargetFor(Landroid/graphics/SurfaceTexture;)Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;
     .locals 2
 
-    .prologue
-    .line 59
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mClientRenderTargets:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -541,10 +464,8 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;
 
-    .line 60
     if-nez v0, :cond_0
 
-    .line 61
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;->currentTarget()Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;
 
     move-result-object v0
@@ -553,12 +474,10 @@
 
     move-result-object v0
 
-    .line 62
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mClientRenderTargets:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 63
     :cond_0
     return-object v0
 .end method
@@ -566,26 +485,21 @@
 .method protected setupPreviewTexture(Landroid/hardware/Camera;)V
     .locals 4
 
-    .prologue
-    .line 64
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mPreviewTexture:Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
 
     if-nez v0, :cond_0
 
-    .line 65
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/TextureSource;->newExternalTexture()Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mPreviewTexture:Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
 
-    .line 66
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mPreviewSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     if-nez v0, :cond_1
 
-    .line 67
     new-instance v0, Landroid/graphics/SurfaceTexture;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mPreviewTexture:Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
@@ -598,7 +512,6 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mPreviewSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
-    .line 68
     :try_start_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mPreviewSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
@@ -606,25 +519,20 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 73
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mPreviewSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mOnCameraFrameListener:Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;
 
     invoke-virtual {v0, v1}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
 
-    .line 74
     :cond_1
     return-void
 
-    .line 70
     :catch_0
     move-exception v0
 
-    .line 71
     new-instance v1, Ljava/lang/RuntimeException;
 
-    .line 72
     invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -671,8 +579,6 @@
 .method public declared-synchronized setupServerFrame()V
     .locals 1
 
-    .prologue
-    .line 9
     monitor-enter p0
 
     :try_start_0
@@ -686,12 +592,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10
     monitor-exit p0
 
     return-void
 
-    .line 9
     :catchall_0
     move-exception v0
 
@@ -703,8 +607,6 @@
 .method protected surfaceTextureForContext(Ljavax/microedition/khronos/egl/EGLContext;)Landroid/graphics/SurfaceTexture;
     .locals 3
 
-    .prologue
-    .line 78
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mTargetSurfaceTextures:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -713,18 +615,14 @@
 
     check-cast v0, Landroid/graphics/SurfaceTexture;
 
-    .line 79
     if-nez v0, :cond_0
 
-    .line 80
     invoke-virtual {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->textureForContext(Ljavax/microedition/khronos/egl/EGLContext;)Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
 
     move-result-object v1
 
-    .line 81
     if-eqz v1, :cond_0
 
-    .line 82
     new-instance v0, Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v1}, Lcom/google/android/libraries/smartburst/filterfw/TextureSource;->getTextureId()I
@@ -733,19 +631,16 @@
 
     invoke-direct {v0, v1}, Landroid/graphics/SurfaceTexture;-><init>(I)V
 
-    .line 83
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mOutWidth:I
 
     iget v2, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mOutHeight:I
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/SurfaceTexture;->setDefaultBufferSize(II)V
 
-    .line 84
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mTargetSurfaceTextures:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 85
     :cond_0
     return-object v0
 .end method
@@ -753,8 +648,6 @@
 .method public declared-synchronized updateServerFrame()V
     .locals 1
 
-    .prologue
-    .line 11
     monitor-enter p0
 
     :try_start_0
@@ -762,17 +655,14 @@
 
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
 
-    .line 12
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->distributeFrames()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 13
     monitor-exit p0
 
     return-void
 
-    .line 11
     :catchall_0
     move-exception v0
 
@@ -784,12 +674,10 @@
 .method protected updateShaderTargetRect(Lcom/google/android/libraries/smartburst/filterfw/ImageShader;)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 86
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mRunner:Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CameraRunnable;
 
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CameraRunnable;->access$200(Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CameraRunnable;)I
@@ -808,16 +696,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 87
     const/high16 v0, -0x40800000    # -1.0f
 
     invoke-virtual {p1, v2, v3, v0, v2}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->setTargetRect(FFFF)V
 
-    .line 89
     :goto_0
     return-void
 
-    .line 88
     :cond_0
     invoke-virtual {p1, v3, v3, v2, v2}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->setTargetRect(FFFF)V
 
@@ -827,8 +712,6 @@
 .method protected declared-synchronized updateSurfaceTextureSizes()V
     .locals 4
 
-    .prologue
-    .line 90
     monitor-enter p0
 
     :try_start_0
@@ -855,7 +738,6 @@
 
     check-cast v0, Landroid/graphics/SurfaceTexture;
 
-    .line 91
     iget v2, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mOutWidth:I
 
     iget v3, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mOutHeight:I
@@ -866,7 +748,6 @@
 
     goto :goto_0
 
-    .line 90
     :catchall_0
     move-exception v0
 
@@ -874,7 +755,6 @@
 
     throw v0
 
-    .line 93
     :cond_0
     monitor-exit p0
 
@@ -884,19 +764,15 @@
 .method protected updateTransform(Lcom/google/android/libraries/smartburst/filterfw/ImageShader;)V
     .locals 2
 
-    .prologue
-    .line 94
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mPreviewSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mCameraTransform:[F
 
     invoke-virtual {v0, v1}, Landroid/graphics/SurfaceTexture;->getTransformMatrix([F)V
 
-    .line 95
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/CameraStreamer$CamFrameHandlerICS;->mCameraTransform:[F
 
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->setSourceTransform([F)V
 
-    .line 96
     return-void
 .end method

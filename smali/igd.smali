@@ -26,20 +26,16 @@
 .method public constructor <init>(Lige;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Ligd;->d:Ljava/util/Set;
 
-    .line 3
     const-wide/16 v0, -0x1
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -48,33 +44,26 @@
 
     iput-object v0, p0, Ligd;->e:Ljava/lang/Long;
 
-    .line 4
     new-instance v0, Ljava/util/TreeSet;
 
     invoke-direct {v0}, Ljava/util/TreeSet;-><init>()V
 
     iput-object v0, p0, Ligd;->f:Ljava/util/SortedSet;
 
-    .line 5
     invoke-static {v2}, Lid;->a(Z)V
 
-    .line 6
     invoke-static {v2}, Lid;->a(Z)V
 
-    .line 7
     iput-object p1, p0, Ligd;->c:Lige;
 
-    .line 8
     const/high16 v0, 0x41200000    # 10.0f
 
     iput v0, p0, Ligd;->a:F
 
-    .line 9
     const/4 v0, 0x2
 
     iput v0, p0, Ligd;->g:I
 
-    .line 10
     const v0, 0x4e6e6b28    # 1.0E9f
 
     iget v1, p0, Ligd;->a:F
@@ -87,7 +76,6 @@
 
     iput v0, p0, Ligd;->b:I
 
-    .line 11
     return-void
 .end method
 
@@ -96,8 +84,6 @@
 .method public final declared-synchronized a()J
     .locals 4
 
-    .prologue
-    .line 12
     monitor-enter p0
 
     :try_start_0
@@ -107,7 +93,6 @@
 
     move-result-wide v0
 
-    .line 13
     :goto_0
     iget-object v2, p0, Ligd;->f:Ljava/util/SortedSet;
 
@@ -119,7 +104,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 15
     iget-object v2, p0, Ligd;->d:Ljava/util/Set;
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -130,10 +114,8 @@
 
     move-result v2
 
-    .line 16
     if-eqz v2, :cond_0
 
-    .line 17
     invoke-virtual {p0}, Ligd;->c()Ljava/util/Set;
 
     move-result-object v2
@@ -148,20 +130,17 @@
 
     if-gt v2, v3, :cond_1
 
-    .line 23
     :cond_0
     monitor-exit p0
 
     return-wide v0
 
-    .line 19
     :cond_1
     :try_start_1
     iget-object v2, p0, Ligd;->c:Lige;
 
     invoke-interface {v2, v0, v1}, Lige;->a(J)V
 
-    .line 20
     iget-object v2, p0, Ligd;->d:Ljava/util/Set;
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -170,7 +149,6 @@
 
     invoke-interface {v2, v3}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 21
     iget-object v2, p0, Ligd;->f:Ljava/util/SortedSet;
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -179,7 +157,6 @@
 
     invoke-interface {v2, v0}, Ljava/util/SortedSet;->add(Ljava/lang/Object;)Z
 
-    .line 22
     iget-object v0, p0, Ligd;->c:Lige;
 
     invoke-interface {v0}, Lige;->a()J
@@ -190,7 +167,6 @@
 
     goto :goto_0
 
-    .line 12
     :catchall_0
     move-exception v0
 
@@ -202,8 +178,6 @@
 .method public final declared-synchronized a(J)V
     .locals 3
 
-    .prologue
-    .line 31
     monitor-enter p0
 
     :try_start_0
@@ -215,19 +189,16 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 32
     iget-object v0, p0, Ligd;->c:Lige;
 
     invoke-interface {v0, p1, p2}, Lige;->a(J)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 33
     monitor-exit p0
 
     return-void
 
-    .line 31
     :catchall_0
     move-exception v0
 
@@ -239,8 +210,6 @@
 .method public final declared-synchronized b()V
     .locals 1
 
-    .prologue
-    .line 34
     monitor-enter p0
 
     :try_start_0
@@ -248,19 +217,16 @@
 
     invoke-interface {v0}, Ljava/util/SortedSet;->clear()V
 
-    .line 35
     iget-object v0, p0, Ligd;->c:Lige;
 
     invoke-interface {v0}, Lige;->b()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 36
     monitor-exit p0
 
     return-void
 
-    .line 34
     :catchall_0
     move-exception v0
 
@@ -272,8 +238,6 @@
 .method public final declared-synchronized b(J)V
     .locals 5
 
-    .prologue
-    .line 24
     monitor-enter p0
 
     :try_start_0
@@ -289,14 +253,12 @@
 
     if-gez v0, :cond_0
 
-    .line 25
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
     iput-object v0, p0, Ligd;->e:Ljava/lang/Long;
 
-    .line 26
     :cond_0
     iget-object v0, p0, Ligd;->e:Ljava/lang/Long;
 
@@ -312,7 +274,6 @@
 
     if-lez v0, :cond_1
 
-    .line 27
     iget-object v0, p0, Ligd;->d:Ljava/util/Set;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -321,7 +282,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 28
     iget-object v0, p0, Ligd;->e:Ljava/lang/Long;
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
@@ -340,7 +300,6 @@
 
     iput-object v0, p0, Ligd;->e:Ljava/lang/Long;
 
-    .line 29
     :cond_1
     iget-object v0, p0, Ligd;->c:Lige;
 
@@ -348,12 +307,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 30
     monitor-exit p0
 
     return-void
 
-    .line 24
     :catchall_0
     move-exception v0
 
@@ -365,8 +322,6 @@
 .method public final declared-synchronized c()Ljava/util/Set;
     .locals 1
 
-    .prologue
-    .line 37
     monitor-enter p0
 
     :try_start_0
@@ -393,8 +348,6 @@
 .method public final declared-synchronized d()Lilc;
     .locals 4
 
-    .prologue
-    .line 38
     monitor-enter p0
 
     :try_start_0
@@ -406,7 +359,6 @@
 
     if-nez v0, :cond_0
 
-    .line 39
     iget-object v0, p0, Ligd;->f:Ljava/util/SortedSet;
 
     invoke-interface {v0}, Ljava/util/SortedSet;->first()Ljava/lang/Object;
@@ -419,7 +371,6 @@
 
     move-result-wide v0
 
-    .line 40
     iget-object v2, p0, Ligd;->f:Ljava/util/SortedSet;
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -428,7 +379,6 @@
 
     invoke-interface {v2, v3}, Ljava/util/SortedSet;->remove(Ljava/lang/Object;)Z
 
-    .line 41
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -439,13 +389,11 @@
 
     move-result-object v0
 
-    .line 43
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 42
     :cond_0
     :try_start_1
     sget-object v0, Liku;->a:Liku;
@@ -454,7 +402,6 @@
 
     goto :goto_0
 
-    .line 38
     :catchall_0
     move-exception v0
 

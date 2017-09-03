@@ -18,8 +18,6 @@
 .method constructor <init>(Lyg;ILzn;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lyk;->c:Lyg;
 
     iput p2, p0, Lyk;->a:I
@@ -36,32 +34,26 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lyk;->c:Lyg;
 
     invoke-virtual {v0}, Lyg;->j()Lzp;
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {v0}, Lzp;->c()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 7
     :goto_0
     return-void
 
-    .line 5
     :cond_0
     iget v1, p0, Lyk;->a:I
 
     invoke-virtual {v0, v1}, Lzp;->b(I)Z
 
-    .line 6
     iget-object v0, p0, Lyk;->c:Lyg;
 
     invoke-virtual {v0}, Lyg;->h()Landroid/os/Handler;

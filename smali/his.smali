@@ -35,15 +35,11 @@
 .method public final a(Ljava/util/Set;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     invoke-static {p1}, Ljava/util/Collections;->min(Ljava/util/Collection;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Comparable;
 
-    .line 3
     return-object v0
 .end method

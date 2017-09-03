@@ -14,8 +14,6 @@
 .method public constructor <init>(Lgom;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgop;->a:Lgom;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,16 +26,11 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgop;->a:Lgom;
 
-    .line 3
     iget-object v0, v0, Lgom;->b:Lgnm;
 
-    .line 4
     invoke-virtual {v0}, Lgir;->T()V
 
-    .line 5
     return-void
 .end method

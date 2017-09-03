@@ -19,16 +19,12 @@
 .method constructor <init>(Lqq;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lqr;->e:Lqq;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-virtual {p0}, Lqr;->a()V
 
-    .line 3
     return-void
 .end method
 
@@ -37,39 +33,30 @@
 .method final a()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 4
     const/4 v0, -0x1
 
     iput v0, p0, Lqr;->a:I
 
-    .line 5
     const/high16 v0, -0x80000000
 
     iput v0, p0, Lqr;->b:I
 
-    .line 6
     iput-boolean v1, p0, Lqr;->c:Z
 
-    .line 7
     iput-boolean v1, p0, Lqr;->d:Z
 
-    .line 8
     return-void
 .end method
 
 .method public final a(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 14
     iget-boolean v0, p0, Lqr;->c:Z
 
     if-eqz v0, :cond_0
 
-    .line 15
     iget-object v0, p0, Lqr;->e:Lqq;
 
     iget-object v0, v0, Lqq;->c:Lrl;
@@ -82,7 +69,6 @@
 
     iget-object v1, v1, Lqq;->c:Lrl;
 
-    .line 16
     invoke-virtual {v1}, Lrl;->a()I
 
     move-result v1
@@ -91,7 +77,6 @@
 
     iput v0, p0, Lqr;->b:I
 
-    .line 18
     :goto_0
     invoke-static {p1}, Lqq;->a(Landroid/view/View;)I
 
@@ -99,10 +84,8 @@
 
     iput v0, p0, Lqr;->a:I
 
-    .line 19
     return-void
 
-    .line 17
     :cond_0
     iget-object v0, p0, Lqr;->e:Lqq;
 
@@ -120,8 +103,6 @@
 .method final b()V
     .locals 1
 
-    .prologue
-    .line 9
     iget-boolean v0, p0, Lqr;->c:Z
 
     if-eqz v0, :cond_0
@@ -130,25 +111,20 @@
 
     iget-object v0, v0, Lqq;->c:Lrl;
 
-    .line 10
     invoke-virtual {v0}, Lrl;->c()I
 
     move-result v0
 
-    .line 11
     :goto_0
     iput v0, p0, Lqr;->b:I
 
-    .line 12
     return-void
 
-    .line 10
     :cond_0
     iget-object v0, p0, Lqr;->e:Lqq;
 
     iget-object v0, v0, Lqq;->c:Lrl;
 
-    .line 11
     invoke-virtual {v0}, Lrl;->b()I
 
     move-result v0
@@ -159,8 +135,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 13
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "AnchorInfo{mPosition="

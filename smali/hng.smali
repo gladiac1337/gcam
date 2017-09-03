@@ -14,14 +14,10 @@
 .method constructor <init>(Lhpc;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lhng;->a:Lhpc;
 
-    .line 3
     return-void
 .end method
 
@@ -30,8 +26,6 @@
 .method public final a(IIII)Lhpb;
     .locals 4
 
-    .prologue
-    .line 4
     new-instance v0, Lhna;
 
     new-instance v1, Lhne;
@@ -40,7 +34,6 @@
 
     iget-object v3, p0, Lhng;->a:Lhpc;
 
-    .line 5
     invoke-interface {v3, p1, p2, p3, p4}, Lhpc;->a(IIII)Lhpb;
 
     move-result-object v3
@@ -51,6 +44,5 @@
 
     invoke-direct {v0, v1}, Lhna;-><init>(Lhpb;)V
 
-    .line 6
     return-object v0
 .end method

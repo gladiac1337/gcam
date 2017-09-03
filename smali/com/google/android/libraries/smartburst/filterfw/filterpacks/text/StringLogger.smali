@@ -7,11 +7,8 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/Filter;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
 
-    .line 2
     return-void
 .end method
 
@@ -20,8 +17,6 @@
 .method public getSignature()Lcom/google/android/libraries/smartburst/filterfw/Signature;
     .locals 4
 
-    .prologue
-    .line 3
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     invoke-direct {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;-><init>()V
@@ -32,7 +27,6 @@
 
     const-class v3, Ljava/lang/String;
 
-    .line 4
     invoke-static {v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->single(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v3
@@ -41,20 +35,16 @@
 
     move-result-object v0
 
-    .line 5
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->disallowOtherPorts()Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 6
     return-object v0
 .end method
 
 .method protected onProcess()V
     .locals 2
 
-    .prologue
-    .line 7
     const-string v0, "string"
 
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/text/StringLogger;->getConnectedInputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/InputPort;
@@ -69,7 +59,6 @@
 
     move-result-object v0
 
-    .line 8
     const-string v1, "StringLogger"
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameValue;->getValue()Ljava/lang/Object;
@@ -80,6 +69,5 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     return-void
 .end method

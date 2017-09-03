@@ -17,32 +17,24 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Laey;-><init>(Ljava/lang/Object;)V
 
-    .line 2
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     iput-object p0, p0, Laey;->d:Laey;
 
     iput-object p0, p0, Laey;->c:Laey;
 
-    .line 5
     iput-object p1, p0, Laey;->a:Ljava/lang/Object;
 
-    .line 6
     return-void
 .end method
 
@@ -51,13 +43,10 @@
 .method public final a()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 7
     invoke-virtual {p0}, Laey;->b()I
 
     move-result v0
 
-    .line 8
     if-lez v0, :cond_0
 
     iget-object v1, p0, Laey;->b:Ljava/util/List;
@@ -80,8 +69,6 @@
 .method public final b()I
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Laey;->b:Ljava/util/List;
 
     if-eqz v0, :cond_0

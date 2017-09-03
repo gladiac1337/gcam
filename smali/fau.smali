@@ -16,8 +16,6 @@
 .method public constructor <init>(Lfar;Landroid/graphics/RectF;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfau;->b:Lfar;
 
     iput-object p2, p0, Lfau;->a:Landroid/graphics/RectF;
@@ -32,11 +30,8 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 2
     sget-object v0, Lfar;->a:Ljava/lang/String;
 
-    .line 3
     iget-object v1, p0, Lfau;->a:Landroid/graphics/RectF;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -79,15 +74,11 @@
 
     invoke-static {v0, v1}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lfau;->b:Lfar;
 
-    .line 5
     iget-object v0, v0, Lfar;->b:Lfao;
 
-    .line 6
     invoke-interface {v0}, Lfao;->g()V
 
-    .line 7
     return-void
 .end method

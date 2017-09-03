@@ -25,16 +25,12 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 1
     iget-object v0, p0, Layk;->a:Layj;
 
-    .line 2
     iget-object v1, v0, Layj;->s:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 3
     :try_start_0
     iget-object v2, v0, Layj;->r:Layv;
 
@@ -42,7 +38,6 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 4
     sget-object v2, Layj;->a:Ljava/lang/String;
 
     iget-object v0, v0, Layj;->r:Layv;
@@ -81,14 +76,11 @@
 
     invoke-static {v2, v0}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     monitor-exit v1
 
-    .line 7
     :goto_0
     return-void
 
-    .line 6
     :cond_0
     iget-object v2, v0, Layj;->k:Lbbx;
 
@@ -100,7 +92,6 @@
 
     invoke-virtual {v2, v3, v4, v0}, Lbbx;->a(Lhog;Landroid/view/Surface;Lbbs;)Liwe;
 
-    .line 7
     monitor-exit v1
 
     goto :goto_0

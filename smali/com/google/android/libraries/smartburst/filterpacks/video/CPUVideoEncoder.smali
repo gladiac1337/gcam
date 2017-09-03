@@ -26,45 +26,36 @@
 .method private constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     new-instance v0, Landroid/media/MediaCodec$BufferInfo;
 
     invoke-direct {v0}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
-    .line 4
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mEndOfStreamSent:Z
 
-    .line 5
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mLastBufferIndexProvided:I
 
-    .line 6
     return-void
 .end method
 
 .method private encodeFrame()Z
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 40
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->getOutputBuffers()[Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 41
     :goto_0
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
@@ -76,24 +67,20 @@
 
     move-result v2
 
-    .line 42
     const/4 v3, -0x1
 
     if-ne v2, v3, :cond_0
 
     move v0, v1
 
-    .line 55
     :goto_1
     return v0
 
-    .line 44
     :cond_0
     const/4 v3, -0x3
 
     if-ne v2, v3, :cond_1
 
-    .line 45
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->getOutputBuffers()[Ljava/nio/ByteBuffer;
@@ -102,13 +89,11 @@
 
     goto :goto_0
 
-    .line 46
     :cond_1
     const/4 v3, -0x2
 
     if-ne v2, v3, :cond_2
 
-    .line 47
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
     iget-object v3, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mEncoder:Landroid/media/MediaCodec;
@@ -123,18 +108,15 @@
 
     iput v2, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mCurrentTrack:I
 
-    .line 48
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v2}, Landroid/media/MediaMuxer;->start()V
 
     goto :goto_0
 
-    .line 49
     :cond_2
     aget-object v0, v0, v2
 
-    .line 50
     iget-object v3, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
     iget v3, v3, Landroid/media/MediaCodec$BufferInfo;->flags:I
@@ -143,12 +125,10 @@
 
     if-eqz v3, :cond_3
 
-    .line 51
     iget-object v3, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
     iput v1, v3, Landroid/media/MediaCodec$BufferInfo;->size:I
 
-    .line 52
     :cond_3
     iget-object v3, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
@@ -156,7 +136,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 53
     iget-object v3, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
     iget v4, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mCurrentTrack:I
@@ -165,13 +144,11 @@
 
     invoke-virtual {v3, v4, v0, v5}, Landroid/media/MediaMuxer;->writeSampleData(ILjava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
 
-    .line 54
     :cond_4
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v0, v2, v1}, Landroid/media/MediaCodec;->releaseOutputBuffer(IZ)V
 
-    .line 55
     const/4 v0, 0x1
 
     goto :goto_1
@@ -180,8 +157,6 @@
 .method public static newInstance()Lcom/google/android/libraries/smartburst/filterpacks/video/Encoder;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;
 
     invoke-direct {v0}, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;-><init>()V
@@ -192,23 +167,18 @@
 .method private sendEndOfStreamIfNecessary()V
     .locals 1
 
-    .prologue
-    .line 35
     iget-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mEndOfStreamSent:Z
 
     if-eqz v0, :cond_0
 
-    .line 39
     :goto_0
     return-void
 
-    .line 37
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterpacks/video/MediaCodecUtil;->signalEndOfStream(Landroid/media/MediaCodec;)Z
 
-    .line 38
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mEndOfStreamSent:Z
@@ -221,11 +191,8 @@
 .method public close()V
     .locals 2
 
-    .prologue
-    .line 13
     const/4 v0, 0x0
 
-    .line 14
     :cond_0
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mBufferInfo:Landroid/media/MediaCodec$BufferInfo;
 
@@ -235,44 +202,35 @@
 
     if-nez v1, :cond_1
 
-    .line 15
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->sendEndOfStreamIfNecessary()V
 
-    .line 16
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->encodeFrame()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 17
     add-int/lit8 v0, v0, 0x1
 
-    .line 18
     const/16 v1, 0x64
 
     if-le v0, v1, :cond_0
 
-    .line 19
     :cond_1
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->flush()V
 
-    .line 20
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->release()V
 
-    .line 21
     return-void
 .end method
 
 .method public drainOutput()V
     .locals 1
 
-    .prologue
-    .line 33
     :cond_0
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->encodeFrame()Z
 
@@ -280,15 +238,12 @@
 
     if-nez v0, :cond_0
 
-    .line 34
     return-void
 .end method
 
 .method public bridge synthetic get()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 56
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->get()Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -299,15 +254,12 @@
 .method public get()Ljava/nio/ByteBuffer;
     .locals 2
 
-    .prologue
-    .line 22
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->getInputBuffers()[Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 23
     :goto_0
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
@@ -315,18 +267,14 @@
 
     move-result v1
 
-    .line 24
     if-ltz v1, :cond_0
 
-    .line 25
     iput v1, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mLastBufferIndexProvided:I
 
-    .line 26
     aget-object v0, v0, v1
 
     return-object v0
 
-    .line 27
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->drainOutput()V
 
@@ -336,19 +284,14 @@
 .method public onEndOfStream()V
     .locals 0
 
-    .prologue
-    .line 31
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->sendEndOfStreamIfNecessary()V
 
-    .line 32
     return-void
 .end method
 
 .method public onNewFrameAvailable(Landroid/media/MediaCodec$BufferInfo;)V
     .locals 7
 
-    .prologue
-    .line 29
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mLastBufferIndexProvided:I
@@ -363,23 +306,18 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/media/MediaCodec;->queueInputBuffer(IIIJI)V
 
-    .line 30
     return-void
 .end method
 
 .method public open(Landroid/media/MediaMuxer;Landroid/media/MediaFormat;)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 7
     iput-object p2, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mFormat:Landroid/media/MediaFormat;
 
-    .line 8
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mMuxer:Landroid/media/MediaMuxer;
 
-    .line 9
     const-string v0, "mime"
 
     invoke-virtual {p2, v0}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -392,7 +330,6 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
-    .line 10
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mFormat:Landroid/media/MediaFormat;
@@ -401,11 +338,9 @@
 
     invoke-virtual {v0, v1, v3, v3, v2}, Landroid/media/MediaCodec;->configure(Landroid/media/MediaFormat;Landroid/view/Surface;Landroid/media/MediaCrypto;I)V
 
-    .line 11
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->mEncoder:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->start()V
 
-    .line 12
     return-void
 .end method

@@ -16,13 +16,10 @@
 .method constructor <init>(Lixr;)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lixx;->b:Lixr;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
@@ -37,28 +34,20 @@
 .method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 3
     iget-object v0, p0, Lixx;->b:Lixr;
 
-    .line 4
     iget-object v0, v0, Lixr;->k:Landroid/view/ScaleGestureDetector;
 
-    .line 5
     invoke-virtual {v0, p2}, Landroid/view/ScaleGestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 6
     iget-object v0, p0, Lixx;->b:Lixr;
 
-    .line 7
     iget-object v0, v0, Lixr;->l:Landroid/view/GestureDetector;
 
-    .line 8
     invoke-virtual {v0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 9
     new-instance v3, Landroid/graphics/PointF;
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
@@ -71,38 +60,30 @@
 
     invoke-direct {v3, v0, v2}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 10
     iget-object v0, p0, Lixx;->b:Lixr;
 
-    .line 11
     iget v0, v0, Lixr;->c:I
 
-    .line 12
     sget v2, Lbl;->bV:I
 
     if-eq v0, v2, :cond_0
 
     iget-object v0, p0, Lixx;->b:Lixr;
 
-    .line 13
     iget v0, v0, Lixr;->c:I
 
-    .line 14
     sget v2, Lbl;->bW:I
 
     if-eq v0, v2, :cond_0
 
     iget-object v0, p0, Lixx;->b:Lixr;
 
-    .line 15
     iget v0, v0, Lixr;->c:I
 
-    .line 16
     sget v2, Lbl;->bY:I
 
     if-ne v0, v2, :cond_1
 
-    .line 17
     :cond_0
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -110,7 +91,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 64
     :cond_1
     :goto_0
     :pswitch_0
@@ -118,84 +98,62 @@
 
     iget-object v1, p0, Lixx;->b:Lixr;
 
-    .line 65
     iget-object v1, v1, Lixr;->b:Landroid/graphics/Matrix;
 
-    .line 66
     invoke-virtual {v0, v1}, Lixr;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    .line 67
     iget-object v0, p0, Lixx;->b:Lixr;
 
-    .line 68
     iget-object v0, v0, Lixr;->m:Landroid/view/View$OnTouchListener;
 
-    .line 69
     if-eqz v0, :cond_2
 
-    .line 70
     iget-object v0, p0, Lixx;->b:Lixr;
 
-    .line 71
     iget-object v0, v0, Lixr;->m:Landroid/view/View$OnTouchListener;
 
-    .line 72
     invoke-interface {v0, p1, p2}, Landroid/view/View$OnTouchListener;->onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
 
-    .line 73
     :cond_2
     const/4 v0, 0x1
 
     return v0
 
-    .line 18
     :pswitch_1
     iget-object v0, p0, Lixx;->a:Landroid/graphics/PointF;
 
     invoke-virtual {v0, v3}, Landroid/graphics/PointF;->set(Landroid/graphics/PointF;)V
 
-    .line 19
     iget-object v0, p0, Lixx;->b:Lixr;
 
-    .line 20
     iget-object v0, v0, Lixr;->h:Lixv;
 
-    .line 21
     if-eqz v0, :cond_3
 
-    .line 22
     iget-object v0, p0, Lixx;->b:Lixr;
 
-    .line 23
     iget-object v0, v0, Lixr;->h:Lixv;
 
-    .line 24
     invoke-virtual {v0}, Lixv;->a()V
 
-    .line 25
     :cond_3
     iget-object v0, p0, Lixx;->b:Lixr;
 
     sget v1, Lbl;->bW:I
 
-    .line 27
     iput v1, v0, Lixr;->c:I
 
     goto :goto_0
 
-    .line 29
     :pswitch_2
     iget-object v0, p0, Lixx;->b:Lixr;
 
-    .line 30
     iget v0, v0, Lixr;->c:I
 
-    .line 31
     sget v2, Lbl;->bW:I
 
     if-ne v0, v2, :cond_1
 
-    .line 32
     iget v0, v3, Landroid/graphics/PointF;->x:F
 
     iget-object v2, p0, Lixx;->a:Landroid/graphics/PointF;
@@ -204,7 +162,6 @@
 
     sub-float/2addr v0, v2
 
-    .line 33
     iget v2, v3, Landroid/graphics/PointF;->y:F
 
     iget-object v4, p0, Lixx;->a:Landroid/graphics/PointF;
@@ -213,68 +170,52 @@
 
     sub-float/2addr v2, v4
 
-    .line 34
     iget-object v4, p0, Lixx;->b:Lixr;
 
-    .line 35
     iget v4, v4, Lixr;->i:I
 
-    .line 36
     int-to-float v4, v4
 
     iget-object v5, p0, Lixx;->b:Lixr;
 
-    .line 37
     invoke-virtual {v5}, Lixr;->d()F
 
     move-result v5
 
-    .line 40
     cmpg-float v4, v5, v4
 
     if-gtz v4, :cond_4
 
     move v0, v1
 
-    .line 44
     :cond_4
     iget-object v4, p0, Lixx;->b:Lixr;
 
-    .line 45
     iget v4, v4, Lixr;->j:I
 
-    .line 46
     int-to-float v4, v4
 
     iget-object v5, p0, Lixx;->b:Lixr;
 
-    .line 47
     invoke-virtual {v5}, Lixr;->e()F
 
     move-result v5
 
-    .line 50
     cmpg-float v4, v5, v4
 
     if-gtz v4, :cond_5
 
-    .line 54
     :goto_1
     iget-object v2, p0, Lixx;->b:Lixr;
 
-    .line 55
     iget-object v2, v2, Lixr;->b:Landroid/graphics/Matrix;
 
-    .line 56
     invoke-virtual {v2, v0, v1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 57
     iget-object v0, p0, Lixx;->b:Lixr;
 
-    .line 58
     invoke-virtual {v0}, Lixr;->b()V
 
-    .line 59
     iget-object v0, p0, Lixx;->a:Landroid/graphics/PointF;
 
     iget v1, v3, Landroid/graphics/PointF;->x:F
@@ -288,21 +229,17 @@
     :cond_5
     move v1, v2
 
-    .line 52
     goto :goto_1
 
-    .line 61
     :pswitch_3
     iget-object v0, p0, Lixx;->b:Lixr;
 
     sget v1, Lbl;->bV:I
 
-    .line 63
     iput v1, v0, Lixr;->c:I
 
     goto/16 :goto_0
 
-    .line 17
     nop
 
     :pswitch_data_0

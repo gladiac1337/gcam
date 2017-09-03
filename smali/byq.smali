@@ -14,8 +14,6 @@
 .method constructor <init>(Lbyp;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbyq;->a:Lbyp;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,14 +26,11 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbyq;->a:Lbyp;
 
     iget-object v0, v0, Lbyp;->a:Lbyf;
 
     invoke-virtual {v0}, Lbyf;->a()V
 
-    .line 3
     return-void
 .end method

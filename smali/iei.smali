@@ -14,17 +14,12 @@
 .method public constructor <init>(Lidz;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Liei;->a:Lidz;
 
-    .line 4
     return-void
 .end method
 
@@ -33,8 +28,6 @@
 .method public final a(Ljava/util/List;)Ljava/util/List;
     .locals 10
 
-    .prologue
-    .line 5
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -49,16 +42,13 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 21
     :cond_0
     :goto_0
     return-object p1
 
-    .line 7
     :cond_1
     const/high16 v1, -0x800000    # Float.NEGATIVE_INFINITY
 
-    .line 8
     const/4 v0, 0x0
 
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -67,7 +57,6 @@
 
     check-cast v0, Liel;
 
-    .line 9
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -89,10 +78,8 @@
 
     check-cast v0, Liel;
 
-    .line 11
     const/4 v1, 0x0
 
-    .line 12
     invoke-virtual {v0}, Liel;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -116,7 +103,6 @@
 
     move-result-wide v8
 
-    .line 13
     iget-object v1, p0, Liei;->a:Lidz;
 
     invoke-interface {v1, v8, v9}, Lidz;->a(J)Lijj;
@@ -131,10 +117,8 @@
 
     move v4, v1
 
-    .line 14
     goto :goto_2
 
-    .line 16
     :cond_2
     const/high16 v1, 0x40400000    # 3.0f
 
@@ -148,7 +132,6 @@
 
     add-float/2addr v1, v4
 
-    .line 17
     cmpl-float v4, v1, v3
 
     if-lez v4, :cond_4
@@ -158,10 +141,8 @@
 
     move v3, v1
 
-    .line 20
     goto :goto_1
 
-    .line 21
     :cond_3
     invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
@@ -180,8 +161,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 22
     const-string v0, "BestSegmentSelector[scorer=BestSegmentSelector][segment size = 3.0]"
 
     return-object v0

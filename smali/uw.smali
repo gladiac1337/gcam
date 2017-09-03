@@ -14,8 +14,6 @@
 .method constructor <init>(Ljava/util/Iterator;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Luw;->a:Ljava/util/Iterator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final hasNext()Z
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Luw;->a:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -42,8 +38,6 @@
 .method public final next()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Luw;->a:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -56,8 +50,6 @@
 .method public final remove()V
     .locals 2
 
-    .prologue
-    .line 4
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "remove() is not allowed due to the internal contraints"

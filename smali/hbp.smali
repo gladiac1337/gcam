@@ -22,20 +22,14 @@
 .method protected final synthetic b(Lcom/google/android/gms/common/api/Status;)Lgwb;
     .locals 0
 
-    .prologue
-    .line 5
-    .line 6
     return-object p1
 .end method
 
 .method protected final synthetic b(Lgvr;)V
     .locals 5
 
-    .prologue
-    .line 1
     check-cast p1, Lhbr;
 
-    .line 2
     new-instance v1, Lhbt;
 
     invoke-direct {v1, p0}, Lhbt;-><init>(Lhbp;)V
@@ -49,14 +43,12 @@
 
     iget-object v2, p0, Lhbp;->b:Lcom/google/android/gms/clearcut/LogEventParcelable;
 
-    .line 3
     invoke-virtual {p1}, Lhbr;->i()Landroid/os/IInterface;
 
     move-result-object v0
 
     check-cast v0, Lhbu;
 
-    .line 4
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v3
@@ -100,7 +92,6 @@
     :goto_1
     return-void
 
-    .line 2
     :catch_0
     move-exception v0
 
@@ -146,7 +137,6 @@
 
     goto :goto_1
 
-    .line 4
     :cond_0
     const/4 v1, 0x0
 

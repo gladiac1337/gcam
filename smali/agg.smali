@@ -19,10 +19,8 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 4
     new-instance v0, Lagg;
 
     const-string v1, "IGNORE"
@@ -31,7 +29,6 @@
 
     sput-object v0, Lagg;->b:Lagg;
 
-    .line 5
     new-instance v0, Lagh;
 
     const-string v1, "LOG"
@@ -40,7 +37,6 @@
 
     sput-object v0, Lagg;->c:Lagg;
 
-    .line 6
     new-instance v0, Lagi;
 
     const-string v1, "THROW"
@@ -49,7 +45,6 @@
 
     sput-object v0, Lagg;->d:Lagg;
 
-    .line 7
     const/4 v0, 0x3
 
     new-array v0, v0, [Lagg;
@@ -72,7 +67,6 @@
 
     sput-object v0, Lagg;->e:[Lagg;
 
-    .line 8
     sget-object v0, Lagg;->c:Lagg;
 
     sput-object v0, Lagg;->a:Lagg;
@@ -83,8 +77,6 @@
 .method constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -93,8 +85,6 @@
 .method public static values()[Lagg;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lagg;->e:[Lagg;
 
     invoke-virtual {v0}, [Lagg;->clone()Ljava/lang/Object;
@@ -111,7 +101,5 @@
 .method protected a(Ljava/lang/Throwable;)V
     .locals 0
 
-    .prologue
-    .line 3
     return-void
 .end method

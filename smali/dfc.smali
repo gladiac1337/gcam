@@ -21,48 +21,38 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ldfd;
 
     invoke-direct {v0, p0}, Ldfd;-><init>(Ldfc;)V
 
     iput-object v0, p0, Ldfc;->e:Lfvk;
 
-    .line 3
     new-instance v0, Ldfe;
 
     invoke-direct {v0, p0}, Ldfe;-><init>(Ldfc;)V
 
     iput-object v0, p0, Ldfc;->f:Lfvk;
 
-    .line 4
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Ldfc;->a:Ljava/lang/Object;
 
-    .line 5
     return-void
 .end method
 
 .method static synthetic a(Ldfc;Lhop;)V
     .locals 8
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 9
-    .line 10
     iget-object v2, p0, Ldfc;->a:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 11
     :try_start_0
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_STATE:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -72,7 +62,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 12
     invoke-interface {p1}, Lhop;->d()J
 
     move-result-wide v4
@@ -89,7 +78,6 @@
 
     const/4 v1, 0x1
 
-    .line 13
     :cond_0
     sget-object v3, Lfto;->a:Linu;
 
@@ -101,13 +89,11 @@
 
     if-eqz v1, :cond_2
 
-    .line 14
     :cond_1
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Ldfc;->b:Z
 
-    .line 15
     iget-object v0, p0, Ldfc;->d:Liwp;
 
     invoke-interface {p1}, Lhop;->d()J
@@ -120,7 +106,6 @@
 
     invoke-virtual {v0, v1}, Liuj;->a(Ljava/lang/Object;)Z
 
-    .line 16
     :cond_2
     monitor-exit v2
 
@@ -141,13 +126,10 @@
 .method public final a()Liwe;
     .locals 2
 
-    .prologue
-    .line 6
     iget-object v1, p0, Ldfc;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 7
     :try_start_0
     iget-object v0, p0, Ldfc;->d:Liwp;
 
@@ -155,7 +137,6 @@
 
     return-object v0
 
-    .line 8
     :catchall_0
     move-exception v0
 

@@ -11,8 +11,6 @@
 .method public constructor <init>(Liwp;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhok;->a:Liwp;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

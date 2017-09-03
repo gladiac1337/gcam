@@ -35,9 +35,6 @@
 .method public final a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
@@ -47,10 +44,8 @@
 
     move-result-object v0
 
-    .line 3
     return-object v0
 
-    .line 2
     :cond_0
     const/4 v0, 0x0
 

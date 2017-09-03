@@ -22,26 +22,20 @@
 .method public constructor <init>(Lavm;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lawr;->d:Lavm;
 
-    .line 3
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lawr;->b:Ljava/lang/Object;
 
-    .line 4
     iput v2, p0, Lawr;->c:I
 
-    .line 5
     new-instance v0, Lawn;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -52,7 +46,6 @@
 
     iput-object v0, p0, Lawr;->a:Lawn;
 
-    .line 6
     const/4 v0, 0x2
 
     new-array v0, v0, [Lavm;
@@ -67,7 +60,6 @@
 
     aput-object v2, v0, v1
 
-    .line 7
     invoke-static {v0}, Lavn;->b([Lavm;)Lavm;
 
     move-result-object v0
@@ -76,14 +68,12 @@
 
     invoke-direct {v1}, Laws;-><init>()V
 
-    .line 8
     invoke-static {v0, v1}, Lavn;->a(Lavm;Lhpz;)Lavm;
 
     move-result-object v0
 
     iput-object v0, p0, Lawr;->e:Lavm;
 
-    .line 9
     return-void
 .end method
 
@@ -92,8 +82,6 @@
 .method public final a(Lawz;Ljava/util/concurrent/Executor;)Lhiz;
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lawr;->e:Lavm;
 
     invoke-interface {v0, p1, p2}, Lavm;->a(Lawz;Ljava/util/concurrent/Executor;)Lhiz;
@@ -106,8 +94,6 @@
 .method public final a()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lawr;->e:Lavm;
 
     invoke-interface {v0}, Lavm;->a()Ljava/lang/Object;
@@ -120,14 +106,10 @@
 .method public final b()Lhiz;
     .locals 3
 
-    .prologue
-    .line 12
-    .line 13
     iget-object v1, p0, Lawr;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 14
     :try_start_0
     iget v0, p0, Lawr;->c:I
 
@@ -135,7 +117,6 @@
 
     iput v0, p0, Lawr;->c:I
 
-    .line 15
     iget-object v0, p0, Lawr;->a:Lawn;
 
     iget v2, p0, Lawr;->c:I
@@ -144,30 +125,24 @@
 
     move-result-object v2
 
-    .line 16
     iput-object v2, v0, Lawn;->b:Ljava/lang/Object;
 
-    .line 17
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 18
     iget-object v0, p0, Lawr;->a:Lawn;
 
-    .line 19
     iget-object v0, v0, Lawn;->a:Lawe;
 
     invoke-virtual {v0}, Lawe;->b()V
 
-    .line 20
     new-instance v0, Lawt;
 
     invoke-direct {v0, p0}, Lawt;-><init>(Lawr;)V
 
     return-object v0
 
-    .line 17
     :catchall_0
     move-exception v0
 

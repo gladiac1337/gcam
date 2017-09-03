@@ -17,47 +17,36 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MetaFilter;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
 
-    .line 2
     iput v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mIndex:I
 
-    .line 3
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mInputsArray:Ljava/lang/Object;
 
-    .line 4
     iput v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mInputArraySize:I
 
-    .line 5
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mOutputs:Ljava/util/HashMap;
 
-    .line 6
     return-void
 .end method
 
 .method private initializeInputsAndOutputs(Ljava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 80
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mInputsArray:Ljava/lang/Object;
 
-    .line 81
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mIndex:I
 
-    .line 82
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mInputsArray:Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
@@ -66,30 +55,24 @@
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mInputArraySize:I
 
-    .line 83
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mOutputs:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 84
     return-void
 .end method
 
 .method private setOutputForPortAtIndex(Ljava/lang/Object;Ljava/lang/String;I)V
     .locals 2
 
-    .prologue
-    .line 85
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mOutputs:Ljava/util/HashMap;
 
     invoke-virtual {v0, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 86
     if-nez v0, :cond_0
 
-    .line 87
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -100,16 +83,13 @@
 
     move-result-object v0
 
-    .line 88
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mOutputs:Ljava/util/HashMap;
 
     invoke-virtual {v1, p2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 89
     :cond_0
     invoke-static {v0, p3, p1}, Ljava/lang/reflect/Array;->set(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    .line 90
     return-void
 .end method
 
@@ -118,10 +98,8 @@
 .method protected assignInputs()V
     .locals 8
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 32
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mGraphProvider:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MetaFilter$FilterGraphProvider;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mInputFrames:Ljava/util/HashMap;
@@ -132,7 +110,6 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mCurrentGraph:Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
 
-    .line 33
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mInputFrames:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -157,10 +134,8 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 36
     const/4 v2, 0x0
 
-    .line 37
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -175,12 +150,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 38
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mInputsArray:Ljava/lang/Object;
 
     if-nez v1, :cond_1
 
-    .line 39
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -197,13 +170,11 @@
 
     invoke-direct {p0, v1}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->initializeInputsAndOutputs(Ljava/lang/Object;)V
 
-    .line 40
     :cond_1
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mInputArraySize:I
 
     if-lez v1, :cond_5
 
-    .line 41
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mCurrentGraph:Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
 
     const-string v2, "elem"
@@ -212,7 +183,6 @@
 
     move-result-object v4
 
-    .line 42
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mInputsArray:Ljava/lang/Object;
 
     iget v2, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mIndex:I
@@ -221,7 +191,6 @@
 
     move-result-object v1
 
-    .line 43
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->single()Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v2
@@ -230,24 +199,19 @@
 
     move-result-object v2
 
-    .line 44
     invoke-virtual {v2}, Lcom/google/android/libraries/smartburst/filterfw/Frame;->asFrameValue()Lcom/google/android/libraries/smartburst/filterfw/FrameValue;
 
     move-result-object v6
 
     invoke-virtual {v6, v1}, Lcom/google/android/libraries/smartburst/filterfw/FrameValue;->setValue(Ljava/lang/Object;)V
 
-    .line 45
     const/4 v1, 0x1
 
-    .line 49
     :goto_1
     if-eqz v2, :cond_0
 
-    .line 50
     if-nez v4, :cond_3
 
-    .line 51
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -294,7 +258,6 @@
 
     throw v1
 
-    .line 47
     :cond_2
     iget-object v4, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mCurrentGraph:Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
 
@@ -308,7 +271,6 @@
 
     move-result-object v4
 
-    .line 48
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -323,19 +285,15 @@
 
     goto :goto_1
 
-    .line 52
     :cond_3
     invoke-virtual {v4, v2}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/GraphInputSource;->pushFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;)V
 
-    .line 53
     if-eqz v1, :cond_0
 
-    .line 54
     invoke-virtual {v2}, Lcom/google/android/libraries/smartburst/filterfw/Frame;->release()Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
     goto/16 :goto_0
 
-    .line 56
     :cond_4
     return-void
 
@@ -352,8 +310,6 @@
 .method protected assignOutputs()V
     .locals 7
 
-    .prologue
-    .line 57
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->getConnectedOutputPorts()[Lcom/google/android/libraries/smartburst/filterfw/OutputPort;
 
     move-result-object v1
@@ -367,27 +323,22 @@
 
     aget-object v3, v1, v0
 
-    .line 58
     invoke-virtual {v3}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 59
     iget-object v4, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mCurrentGraph:Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
 
     invoke-virtual {v4, v3}, Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;->getGraphOutput(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/GraphOutputTarget;
 
     move-result-object v4
 
-    .line 60
     invoke-virtual {v4}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/GraphOutputTarget;->pullFrame()Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
     move-result-object v5
 
-    .line 61
     if-nez v5, :cond_0
 
-    .line 62
     const-string v3, "IterateFilter"
 
     invoke-virtual {v4}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/GraphOutputTarget;->getName()Ljava/lang/String;
@@ -430,13 +381,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 63
     :cond_0
     invoke-virtual {v5}, Lcom/google/android/libraries/smartburst/filterfw/Frame;->asFrameValue()Lcom/google/android/libraries/smartburst/filterfw/FrameValue;
 
@@ -446,17 +395,14 @@
 
     move-result-object v4
 
-    .line 64
     iget v6, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mIndex:I
 
     invoke-direct {p0, v4, v3, v6}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->setOutputForPortAtIndex(Ljava/lang/Object;Ljava/lang/String;I)V
 
-    .line 65
     invoke-virtual {v5}, Lcom/google/android/libraries/smartburst/filterfw/Frame;->release()Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
     goto :goto_1
 
-    .line 67
     :cond_1
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mIndex:I
 
@@ -464,15 +410,12 @@
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mIndex:I
 
-    .line 68
     return-void
 .end method
 
 .method protected clearInputs()V
     .locals 2
 
-    .prologue
-    .line 21
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mInputFrames:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -496,26 +439,21 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
-    .line 22
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Frame;->release()Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
     goto :goto_0
 
-    .line 24
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mInputFrames:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 25
     return-void
 .end method
 
 .method public getSignature()Lcom/google/android/libraries/smartburst/filterfw/Signature;
     .locals 4
 
-    .prologue
-    .line 7
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     invoke-direct {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;-><init>()V
@@ -538,42 +476,33 @@
 .method protected onProcess()V
     .locals 2
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mState:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MetaFilter$State;
 
     iget v0, v0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MetaFilter$State;->state:I
 
     if-nez v0, :cond_2
 
-    .line 9
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mInputsArray:Ljava/lang/Object;
 
-    .line 10
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->pullInputs()V
 
-    .line 11
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mInputArraySize:I
 
     if-lez v0, :cond_1
 
-    .line 12
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->processGraph()V
 
-    .line 20
     :cond_0
     :goto_0
     return-void
 
-    .line 13
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->pushOutputs()V
 
     goto :goto_0
 
-    .line 14
     :cond_2
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mState:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MetaFilter$State;
 
@@ -583,25 +512,20 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 15
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->assignOutputs()V
 
-    .line 16
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mIndex:I
 
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mInputArraySize:I
 
     if-ge v0, v1, :cond_3
 
-    .line 17
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->assignInputs()V
 
-    .line 18
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->processGraph()V
 
     goto :goto_0
 
-    .line 19
     :cond_3
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->pushOutputs()V
 
@@ -611,11 +535,8 @@
 .method protected pullInputs()V
     .locals 6
 
-    .prologue
-    .line 26
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->clearInputs()V
 
-    .line 27
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->getConnectedInputPorts()[Lcom/google/android/libraries/smartburst/filterfw/InputPort;
 
     move-result-object v1
@@ -629,7 +550,6 @@
 
     aget-object v3, v1, v0
 
-    .line 28
     iget-object v4, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mInputFrames:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->getName()Ljava/lang/String;
@@ -646,26 +566,21 @@
 
     invoke-virtual {v4, v5, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 29
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 30
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->assignInputs()V
 
-    .line 31
     return-void
 .end method
 
 .method protected pushOutputs()V
     .locals 9
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 69
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->getConnectedOutputPorts()[Lcom/google/android/libraries/smartburst/filterfw/OutputPort;
 
     move-result-object v2
@@ -679,22 +594,18 @@
 
     aget-object v4, v2, v0
 
-    .line 70
     invoke-virtual {v4}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->getName()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 71
     iget-object v6, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mOutputs:Ljava/util/HashMap;
 
     invoke-virtual {v6, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v5
 
-    .line 72
     if-eqz v5, :cond_0
 
-    .line 73
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->array()Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v6
@@ -711,31 +622,25 @@
 
     move-result-object v6
 
-    .line 74
     invoke-virtual {v6}, Lcom/google/android/libraries/smartburst/filterfw/Frame;->asFrameValues()Lcom/google/android/libraries/smartburst/filterfw/FrameValues;
 
     move-result-object v7
 
     invoke-virtual {v7, v5}, Lcom/google/android/libraries/smartburst/filterfw/FrameValues;->setValues(Ljava/lang/Object;)V
 
-    .line 75
     invoke-virtual {v4, v6}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->pushFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;)V
 
-    .line 76
     invoke-virtual {v6}, Lcom/google/android/libraries/smartburst/filterfw/Frame;->release()Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
-    .line 77
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 78
     :cond_1
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/IterateFilter;->mState:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MetaFilter$State;
 
     iput v1, v0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MetaFilter$State;->state:I
 
-    .line 79
     return-void
 .end method

@@ -11,8 +11,6 @@
 .method public constructor <init>(Ljv;)V
     .locals 0
 
-    .prologue
-    .line 3
     iput-object p1, p0, Lqd;->a:Ljv;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,8 +23,6 @@
 .method public final a(Landroid/graphics/Rect;)V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lqd;->a:Ljv;
 
     iget v1, p1, Landroid/graphics/Rect;->top:I
@@ -37,6 +33,5 @@
 
     iput v0, p1, Landroid/graphics/Rect;->top:I
 
-    .line 2
     return-void
 .end method

@@ -16,16 +16,12 @@
 .method public constructor <init>(Lida;Lias;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lidc;->b:Lida;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p2, p0, Lidc;->a:Lias;
 
-    .line 3
     return-void
 .end method
 
@@ -34,17 +30,12 @@
 .method public final synthetic a(Ljava/lang/Object;Ljava/util/concurrent/Executor;)Lhqy;
     .locals 6
 
-    .prologue
-    .line 4
     check-cast p1, Ljava/lang/Long;
 
-    .line 5
     iget-object v0, p0, Lidc;->b:Lida;
 
-    .line 6
     iget-object v0, v0, Lida;->d:Libk;
 
-    .line 7
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v2
@@ -57,7 +48,6 @@
 
     iget-object v2, p0, Lidc;->b:Lida;
 
-    .line 8
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v4
@@ -66,11 +56,9 @@
 
     invoke-direct {v1, v2, v4, v5, v3}, Lidd;-><init>(Lida;JLias;)V
 
-    .line 9
     invoke-interface {v0, p2, v1}, Lhqy;->a(Ljava/util/concurrent/Executor;Lhpz;)Lhqy;
 
     move-result-object v0
 
-    .line 10
     return-object v0
 .end method

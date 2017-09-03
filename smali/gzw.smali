@@ -19,9 +19,6 @@
 .method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 62
 
-    .prologue
-    .line 4
-    .line 5
     invoke-static/range {p1 .. p1}, Lkk;->a(Landroid/os/Parcel;)I
 
     move-result v60
@@ -149,17 +146,14 @@
 
     if-ge v2, v0, :cond_0
 
-    .line 6
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 8
     const v61, 0xffff
 
     and-int v61, v61, v2
 
-    .line 9
     packed-switch v61, :pswitch_data_0
 
     move-object/from16 v0, p1
@@ -761,10 +755,8 @@
 
     invoke-direct/range {v2 .. v59}, Lcom/google/android/gms/feedback/ErrorReport;-><init>(ILandroid/app/ApplicationErrorReport;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;[BIIIILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;ZIIZLjava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/common/data/BitmapTeleporter;Ljava/lang/String;[Lcom/google/android/gms/feedback/FileTeleporter;[Ljava/lang/String;ZLjava/lang/String;Lcom/google/android/gms/feedback/ThemeSettings;Lcom/google/android/gms/feedback/LogOptions;Ljava/lang/String;ZLandroid/os/Bundle;Ljava/util/List;)V
 
-    .line 10
     return-object v2
 
-    .line 9
     nop
 
     :pswitch_data_0
@@ -832,11 +824,7 @@
 .method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     new-array v0, p1, [Lcom/google/android/gms/feedback/ErrorReport;
 
-    .line 3
     return-object v0
 .end method

@@ -14,8 +14,6 @@
 .method constructor <init>(Leor;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leow;->a:Leor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,18 +26,14 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 10
 
-    .prologue
     const/4 v9, 0x0
 
-    .line 2
     iget-object v1, p0, Leow;->a:Leor;
 
-    .line 4
     iget-object v2, v1, Leor;->i:Ljava/lang/Boolean;
 
     monitor-enter v2
 
-    .line 5
     const/4 v0, 0x0
 
     :try_start_0
@@ -49,12 +43,10 @@
 
     iput-object v0, v1, Leor;->j:Ljava/lang/Boolean;
 
-    .line 6
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8
     invoke-virtual {v1}, Leor;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -69,17 +61,14 @@
 
     move-result-object v6
 
-    .line 9
     new-instance v2, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    .line 10
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 11
     const-string v0, "TINYPLANET_"
 
     iget-object v3, v1, Leor;->f:Ljava/lang/String;
@@ -130,7 +119,6 @@
 
     move-result-object v3
 
-    .line 12
     new-instance v0, Leox;
 
     invoke-direct/range {v0 .. v6}, Leox;-><init>(Leor;Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/String;JLjava/lang/String;)V
@@ -139,13 +127,10 @@
 
     new-array v2, v9, [Ljava/lang/Void;
 
-    .line 13
     invoke-virtual {v0, v1, v2}, Leox;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 14
     return-void
 
-    .line 6
     :catchall_0
     move-exception v0
 

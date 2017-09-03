@@ -19,13 +19,10 @@
 .method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 7
 
-    .prologue
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    .line 4
-    .line 5
     invoke-static {p1}, Lkk;->a(Landroid/os/Parcel;)I
 
     move-result v4
@@ -43,17 +40,14 @@
 
     if-ge v5, v4, :cond_0
 
-    .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 8
     const v6, 0xffff
 
     and-int/2addr v6, v5
 
-    .line 9
     packed-switch v6, :pswitch_data_0
 
     invoke-static {p1, v5}, Lkk;->b(Landroid/os/Parcel;I)V
@@ -124,10 +118,8 @@
 
     invoke-direct {v4, v3, v2, v1, v0}, Lcom/google/android/gms/googlehelp/internal/common/OverflowMenuItem;-><init>(IILjava/lang/String;Landroid/content/Intent;)V
 
-    .line 10
     return-object v4
 
-    .line 9
     nop
 
     :pswitch_data_0
@@ -142,11 +134,7 @@
 .method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     new-array v0, p1, [Lcom/google/android/gms/googlehelp/internal/common/OverflowMenuItem;
 
-    .line 3
     return-object v0
 .end method

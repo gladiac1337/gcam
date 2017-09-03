@@ -249,8 +249,6 @@
 .method public static synthetic d()[I
     .locals 1
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     return-object v0

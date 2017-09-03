@@ -19,25 +19,17 @@
 .method public constructor <init>(IIIZI)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lbtd;->a:I
 
-    .line 3
     iput p2, p0, Lbtd;->b:I
 
-    .line 4
     iput p3, p0, Lbtd;->c:I
 
-    .line 5
     iput-boolean p4, p0, Lbtd;->e:Z
 
-    .line 6
     iput p5, p0, Lbtd;->d:I
 
-    .line 7
     return-void
 .end method

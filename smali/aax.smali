@@ -11,8 +11,6 @@
 .method constructor <init>(Laaw;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Laax;->a:Laaw;
 
     invoke-direct {p0, p2}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
@@ -25,8 +23,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 2
     iget v0, p0, Laax;->count:I
 
     if-lez v0, :cond_0
@@ -47,7 +43,6 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 3
     :goto_0
     :try_start_0
     new-instance v1, Ljava/lang/String;
@@ -58,10 +53,8 @@
 
     iget-object v4, p0, Laax;->a:Laaw;
 
-    .line 4
     iget-object v4, v4, Laaw;->a:Ljava/nio/charset/Charset;
 
-    .line 5
     invoke-virtual {v4}, Ljava/nio/charset/Charset;->name()Ljava/lang/String;
 
     move-result-object v4
@@ -72,17 +65,14 @@
 
     return-object v1
 
-    .line 2
     :cond_0
     iget v0, p0, Laax;->count:I
 
     goto :goto_0
 
-    .line 6
     :catch_0
     move-exception v0
 
-    .line 7
     new-instance v1, Ljava/lang/AssertionError;
 
     invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V

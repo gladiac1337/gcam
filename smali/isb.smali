@@ -25,92 +25,73 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 7
     invoke-direct {p0}, Lixi;-><init>()V
 
-    .line 9
     const/4 v0, 0x0
 
     iput v0, p0, Lisb;->a:I
 
-    .line 10
     iput v1, p0, Lisb;->b:F
 
-    .line 11
     iput v1, p0, Lisb;->c:F
 
-    .line 12
     iput v1, p0, Lisb;->d:F
 
-    .line 13
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lisb;->e:J
 
-    .line 14
     invoke-static {}, Liru;->a()[Liru;
 
     move-result-object v0
 
     iput-object v0, p0, Lisb;->g:[Liru;
 
-    .line 15
     const/4 v0, 0x0
 
     iput-object v0, p0, Lisb;->unknownFieldData:Lixk;
 
-    .line 16
     const/4 v0, -0x1
 
     iput v0, p0, Lisb;->cachedSize:I
 
-    .line 17
     return-void
 .end method
 
 .method public static a()[Lisb;
     .locals 2
 
-    .prologue
-    .line 1
     sget-object v0, Lisb;->f:[Lisb;
 
     if-nez v0, :cond_1
 
-    .line 2
     sget-object v1, Lixm;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 3
     :try_start_0
     sget-object v0, Lisb;->f:[Lisb;
 
     if-nez v0, :cond_0
 
-    .line 4
     const/4 v0, 0x0
 
     new-array v0, v0, [Lisb;
 
     sput-object v0, Lisb;->f:[Lisb;
 
-    .line 5
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6
     :cond_1
     sget-object v0, Lisb;->f:[Lisb;
 
     return-object v0
 
-    .line 5
     :catchall_0
     move-exception v0
 
@@ -127,32 +108,26 @@
 .method protected final computeSerializedSize()I
     .locals 7
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 39
     invoke-super {p0}, Lixi;->computeSerializedSize()I
 
     move-result v0
 
-    .line 40
     iget v1, p0, Lisb;->a:I
 
     if-eqz v1, :cond_0
 
-    .line 41
     const/4 v1, 0x1
 
     iget v2, p0, Lisb;->a:I
 
-    .line 42
     invoke-static {v1, v2}, Lixh;->b(II)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 43
     :cond_0
     iget v1, p0, Lisb;->b:F
 
@@ -160,28 +135,22 @@
 
     move-result v1
 
-    .line 44
     invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v2
 
     if-eq v1, v2, :cond_1
 
-    .line 48
     const/16 v1, 0x10
 
-    .line 49
     invoke-static {v1}, Lixh;->b(I)I
 
     move-result v1
 
-    .line 50
     add-int/lit8 v1, v1, 0x4
 
-    .line 51
     add-int/2addr v0, v1
 
-    .line 52
     :cond_1
     iget v1, p0, Lisb;->c:F
 
@@ -189,28 +158,22 @@
 
     move-result v1
 
-    .line 53
     invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v2
 
     if-eq v1, v2, :cond_2
 
-    .line 57
     const/16 v1, 0x18
 
-    .line 58
     invoke-static {v1}, Lixh;->b(I)I
 
     move-result v1
 
-    .line 59
     add-int/lit8 v1, v1, 0x4
 
-    .line 60
     add-int/2addr v0, v1
 
-    .line 61
     :cond_2
     iget v1, p0, Lisb;->d:F
 
@@ -218,28 +181,22 @@
 
     move-result v1
 
-    .line 62
     invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v2
 
     if-eq v1, v2, :cond_3
 
-    .line 66
     const/16 v1, 0x20
 
-    .line 67
     invoke-static {v1}, Lixh;->b(I)I
 
     move-result v1
 
-    .line 68
     add-int/lit8 v1, v1, 0x4
 
-    .line 69
     add-int/2addr v0, v1
 
-    .line 70
     :cond_3
     iget-wide v2, p0, Lisb;->e:J
 
@@ -249,19 +206,16 @@
 
     if-eqz v1, :cond_4
 
-    .line 71
     const/4 v1, 0x5
 
     iget-wide v2, p0, Lisb;->e:J
 
-    .line 72
     invoke-static {v1, v2, v3}, Lixh;->b(IJ)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 73
     :cond_4
     iget-object v1, p0, Lisb;->g:[Liru;
 
@@ -273,7 +227,6 @@
 
     if-lez v1, :cond_7
 
-    .line 74
     const/4 v1, 0x0
 
     move v6, v1
@@ -289,25 +242,20 @@
 
     if-ge v0, v2, :cond_6
 
-    .line 75
     iget-object v2, p0, Lisb;->g:[Liru;
 
     aget-object v2, v2, v0
 
-    .line 76
     if-eqz v2, :cond_5
 
-    .line 77
     const/4 v3, 0x6
 
-    .line 78
     invoke-static {v3, v2}, Lixh;->b(ILixo;)I
 
     move-result v2
 
     add-int/2addr v1, v2
 
-    .line 79
     :cond_5
     add-int/lit8 v0, v0, 0x1
 
@@ -316,7 +264,6 @@
     :cond_6
     move v0, v1
 
-    .line 80
     :cond_7
     return v0
 .end method
@@ -324,43 +271,34 @@
 .method public final synthetic mergeFrom(Lixg;)Lixo;
     .locals 8
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 81
-    .line 82
     :cond_0
     :goto_0
     invoke-virtual {p1}, Lixg;->a()I
 
     move-result v0
 
-    .line 83
     sparse-switch v0, :sswitch_data_0
 
-    .line 85
     invoke-super {p0, p1, v0}, Lixi;->storeUnknownField(Lixg;I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 86
     :sswitch_0
     return-object p0
 
-    .line 88
     :sswitch_1
     invoke-virtual {p1}, Lixg;->d()I
 
     move-result v0
 
-    .line 89
     iput v0, p0, Lisb;->a:I
 
     goto :goto_0
 
-    .line 92
     :sswitch_2
     invoke-virtual {p1}, Lixg;->e()I
 
@@ -370,12 +308,10 @@
 
     move-result v0
 
-    .line 93
     iput v0, p0, Lisb;->b:F
 
     goto :goto_0
 
-    .line 96
     :sswitch_3
     invoke-virtual {p1}, Lixg;->e()I
 
@@ -385,12 +321,10 @@
 
     move-result v0
 
-    .line 97
     iput v0, p0, Lisb;->c:F
 
     goto :goto_0
 
-    .line 100
     :sswitch_4
     invoke-virtual {p1}, Lixg;->e()I
 
@@ -400,29 +334,24 @@
 
     move-result v0
 
-    .line 101
     iput v0, p0, Lisb;->d:F
 
     goto :goto_0
 
-    .line 106
     :sswitch_5
     const-wide/16 v2, 0x0
 
     move v0, v1
 
-    .line 107
     :goto_1
     const/16 v4, 0x40
 
     if-ge v0, v4, :cond_2
 
-    .line 108
     invoke-virtual {p1}, Lixg;->i()B
 
     move-result v4
 
-    .line 109
     and-int/lit8 v5, v4, 0x7f
 
     int-to-long v6, v5
@@ -431,24 +360,19 @@
 
     or-long/2addr v2, v6
 
-    .line 110
     and-int/lit16 v4, v4, 0x80
 
     if-nez v4, :cond_1
 
-    .line 115
     iput-wide v2, p0, Lisb;->e:J
 
     goto :goto_0
 
-    .line 112
     :cond_1
     add-int/lit8 v0, v0, 0x7
 
-    .line 113
     goto :goto_1
 
-    .line 114
     :cond_2
     invoke-static {}, Lixn;->c()Lixn;
 
@@ -456,37 +380,30 @@
 
     throw v0
 
-    .line 117
     :sswitch_6
     const/16 v0, 0x32
 
-    .line 118
     invoke-static {p1, v0}, Lixq;->a(Lixg;I)I
 
     move-result v2
 
-    .line 119
     iget-object v0, p0, Lisb;->g:[Liru;
 
     if-nez v0, :cond_4
 
     move v0, v1
 
-    .line 120
     :goto_2
     add-int/2addr v2, v0
 
     new-array v2, v2, [Liru;
 
-    .line 121
     if-eqz v0, :cond_3
 
-    .line 122
     iget-object v3, p0, Lisb;->g:[Liru;
 
     invoke-static {v3, v1, v2, v1, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 123
     :cond_3
     :goto_3
     array-length v3, v2
@@ -495,27 +412,22 @@
 
     if-ge v0, v3, :cond_5
 
-    .line 124
     new-instance v3, Liru;
 
     invoke-direct {v3}, Liru;-><init>()V
 
     aput-object v3, v2, v0
 
-    .line 125
     aget-object v3, v2, v0
 
     invoke-virtual {p1, v3}, Lixg;->a(Lixo;)V
 
-    .line 126
     invoke-virtual {p1}, Lixg;->a()I
 
-    .line 127
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 119
     :cond_4
     iget-object v0, p0, Lisb;->g:[Liru;
 
@@ -523,7 +435,6 @@
 
     goto :goto_2
 
-    .line 128
     :cond_5
     new-instance v3, Liru;
 
@@ -531,17 +442,14 @@
 
     aput-object v3, v2, v0
 
-    .line 129
     aget-object v0, v2, v0
 
     invoke-virtual {p1, v0}, Lixg;->a(Lixo;)V
 
-    .line 130
     iput-object v2, p0, Lisb;->g:[Liru;
 
     goto/16 :goto_0
 
-    .line 83
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -557,22 +465,18 @@
 .method public final writeTo(Lixh;)V
     .locals 4
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 18
     iget v0, p0, Lisb;->a:I
 
     if-eqz v0, :cond_0
 
-    .line 19
     const/4 v0, 0x1
 
     iget v1, p0, Lisb;->a:I
 
     invoke-virtual {p1, v0, v1}, Lixh;->a(II)V
 
-    .line 20
     :cond_0
     iget v0, p0, Lisb;->b:F
 
@@ -580,21 +484,18 @@
 
     move-result v0
 
-    .line 21
     invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v1
 
     if-eq v0, v1, :cond_1
 
-    .line 22
     const/4 v0, 0x2
 
     iget v1, p0, Lisb;->b:F
 
     invoke-virtual {p1, v0, v1}, Lixh;->a(IF)V
 
-    .line 23
     :cond_1
     iget v0, p0, Lisb;->c:F
 
@@ -602,21 +503,18 @@
 
     move-result v0
 
-    .line 24
     invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v1
 
     if-eq v0, v1, :cond_2
 
-    .line 25
     const/4 v0, 0x3
 
     iget v1, p0, Lisb;->c:F
 
     invoke-virtual {p1, v0, v1}, Lixh;->a(IF)V
 
-    .line 26
     :cond_2
     iget v0, p0, Lisb;->d:F
 
@@ -624,21 +522,18 @@
 
     move-result v0
 
-    .line 27
     invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v1
 
     if-eq v0, v1, :cond_3
 
-    .line 28
     const/4 v0, 0x4
 
     iget v1, p0, Lisb;->d:F
 
     invoke-virtual {p1, v0, v1}, Lixh;->a(IF)V
 
-    .line 29
     :cond_3
     iget-wide v0, p0, Lisb;->e:J
 
@@ -648,14 +543,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 30
     const/4 v0, 0x5
 
     iget-wide v2, p0, Lisb;->e:J
 
     invoke-virtual {p1, v0, v2, v3}, Lixh;->a(IJ)V
 
-    .line 31
     :cond_4
     iget-object v0, p0, Lisb;->g:[Liru;
 
@@ -667,7 +560,6 @@
 
     if-lez v0, :cond_6
 
-    .line 32
     const/4 v0, 0x0
 
     :goto_0
@@ -677,29 +569,23 @@
 
     if-ge v0, v1, :cond_6
 
-    .line 33
     iget-object v1, p0, Lisb;->g:[Liru;
 
     aget-object v1, v1, v0
 
-    .line 34
     if-eqz v1, :cond_5
 
-    .line 35
     const/4 v2, 0x6
 
     invoke-virtual {p1, v2, v1}, Lixh;->a(ILixo;)V
 
-    .line 36
     :cond_5
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 37
     :cond_6
     invoke-super {p0, p1}, Lixi;->writeTo(Lixh;)V
 
-    .line 38
     return-void
 .end method

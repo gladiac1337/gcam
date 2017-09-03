@@ -35,13 +35,9 @@
 .method public final a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
     check-cast p1, Lfsw;
 
-    .line 2
     iget-object v0, p1, Lfsw;->e:Lfsn;
 
-    .line 3
     return-object v0
 .end method

@@ -37,13 +37,10 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 133
     const-string v0, "FocusRingView"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 134
     new-instance v0, Lbin;
 
     const-string v1, "camera.focus.debug"
@@ -56,11 +53,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 4
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -77,12 +71,10 @@
 
     invoke-interface {v0, p0}, Lddq;->a(Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;)V
 
-    .line 3
     invoke-virtual {p0}, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 4
     const v1, 0x7f0c0061
 
     invoke-static {v0, v1}, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->a(Landroid/content/res/Resources;I)Landroid/graphics/Paint;
@@ -91,12 +83,10 @@
 
     iput-object v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->g:Landroid/graphics/Paint;
 
-    .line 5
     const v1, 0x7f0c0062
 
     invoke-static {v0, v1}, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->a(Landroid/content/res/Resources;I)Landroid/graphics/Paint;
 
-    .line 6
     const v1, 0x7f0d00e7
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -105,7 +95,6 @@
 
     int-to-float v1, v1
 
-    .line 7
     const v2, 0x7f0d00e6
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -114,7 +103,6 @@
 
     int-to-float v2, v2
 
-    .line 8
     const v3, 0x7f0d00e5
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
@@ -125,14 +113,12 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->f:F
 
-    .line 9
     new-instance v0, Lgkg;
 
     invoke-direct {v0, v1, v2}, Lgkg;-><init>(FF)V
 
     iput-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->e:Lgkg;
 
-    .line 10
     new-instance v0, Lgke;
 
     new-instance v1, Lgmq;
@@ -143,7 +129,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->d:Lgke;
 
-    .line 11
     new-instance v0, Lfai;
 
     iget-object v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->d:Lgke;
@@ -154,7 +139,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->a:Lfai;
 
-    .line 12
     new-instance v0, Lfaw;
 
     iget-object v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->d:Lgke;
@@ -165,7 +149,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->b:Lfaw;
 
-    .line 13
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->d:Lgke;
 
     iget-object v0, v0, Lgke;->a:Ljava/util/List;
@@ -174,7 +157,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 14
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->d:Lgke;
 
     iget-object v0, v0, Lgke;->a:Ljava/util/List;
@@ -183,52 +165,42 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 15
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->i:Z
 
-    .line 16
     iget v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->f:F
 
     iput v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->j:F
 
-    .line 17
     return-void
 .end method
 
 .method private static a(Landroid/content/res/Resources;I)Landroid/graphics/Paint;
     .locals 2
 
-    .prologue
-    .line 126
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    .line 127
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 128
     invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 129
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 130
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 131
     const v1, 0x7f0d00e8
 
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getDimension(I)F
@@ -237,31 +209,24 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 132
     return-object v0
 .end method
 
 .method private final h()V
     .locals 2
 
-    .prologue
-    .line 121
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->a:Lfai;
 
     iget v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->k:I
 
-    .line 122
     iput v1, v0, Lfap;->i:I
 
-    .line 123
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->a:Lfai;
 
     iget v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->l:I
 
-    .line 124
     iput v1, v0, Lfap;->j:I
 
-    .line 125
     return-void
 .end method
 
@@ -270,22 +235,18 @@
 .method public final a(F)V
     .locals 8
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 66
     iget-object v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->e:Lgkg;
 
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->e:Lgkg;
 
-    .line 67
     iget v2, v0, Lgkg;->a:F
 
     cmpl-float v2, v3, v2
 
     if-lez v2, :cond_2
 
-    .line 68
     iget v0, v0, Lgkg;->a:F
 
     invoke-static {v3, p1}, Ljava/lang/Math;->min(FF)F
@@ -296,7 +257,6 @@
 
     move-result v0
 
-    .line 71
     :goto_0
     iget v2, v1, Lgkg;->b:F
 
@@ -306,14 +266,12 @@
 
     add-float/2addr v2, v0
 
-    .line 73
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->d:Lgke;
 
     invoke-virtual {v0}, Lgke;->a()J
 
     move-result-wide v0
 
-    .line 74
     iget-object v3, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->h:Lfap;
 
     if-eqz v3, :cond_1
@@ -324,10 +282,8 @@
 
     if-lez v3, :cond_1
 
-    .line 75
     iget-object v3, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->h:Lfap;
 
-    .line 76
     iget v4, v3, Lfap;->o:I
 
     sget v5, Lbl;->aJ:I
@@ -336,10 +292,8 @@
 
     iget-object v4, v3, Lfap;->d:Lgkc;
 
-    .line 77
     iget v4, v4, Lgkc;->a:F
 
-    .line 78
     sub-float/2addr v4, v2
 
     invoke-static {v4}, Ljava/lang/Math;->abs(F)F
@@ -354,7 +308,6 @@
 
     if-lez v4, :cond_0
 
-    .line 79
     sget-object v4, Lfap;->a:Ljava/lang/String;
 
     const/16 v5, 0x46
@@ -395,15 +348,12 @@
 
     invoke-static {v4, v5}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
     sget v4, Lbl;->aH:I
 
     iput v4, v3, Lfap;->o:I
 
-    .line 81
     iget v4, v3, Lfap;->g:F
 
-    .line 82
     iget-wide v6, v3, Lfap;->l:J
 
     long-to-float v5, v6
@@ -418,25 +368,19 @@
 
     if-gtz v5, :cond_3
 
-    .line 88
     :goto_1
     iput-wide v0, v3, Lfap;->k:J
 
-    .line 89
     :cond_0
     iget-object v0, v3, Lfap;->d:Lgkc;
 
-    .line 90
     iput v2, v0, Lgkc;->a:F
 
-    .line 91
     iput v2, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->j:F
 
-    .line 92
     :cond_1
     return-void
 
-    .line 69
     :cond_2
     iget v0, v0, Lgkg;->a:F
 
@@ -450,7 +394,6 @@
 
     goto :goto_0
 
-    .line 84
     :cond_3
     iget-wide v6, v3, Lfap;->l:J
 
@@ -462,17 +405,14 @@
 
     div-float/2addr v5, v6
 
-    .line 85
     iget-object v6, v3, Lfap;->f:Lgki;
 
     iget-object v7, v3, Lfap;->e:Lgki;
 
-    .line 86
     invoke-static {v6, v7, v5}, Lgkj;->a(Lgki;Lgki;F)F
 
     move-result v5
 
-    .line 87
     mul-float/2addr v4, v5
 
     float-to-long v4, v4
@@ -485,16 +425,12 @@
 .method public final a(FF)V
     .locals 4
 
-    .prologue
-    .line 53
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
-    .line 54
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->getLocationInWindow([I)V
 
-    .line 55
     const/4 v1, 0x1
 
     aget v1, v0, v1
@@ -503,7 +439,6 @@
 
     sub-float v1, p2, v1
 
-    .line 56
     const/4 v2, 0x0
 
     aget v0, v0, v2
@@ -512,47 +447,36 @@
 
     sub-float v0, p1, v0
 
-    .line 57
     iget-object v2, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->a:Lfai;
 
     float-to-int v3, v0
 
-    .line 58
     iput v3, v2, Lfap;->i:I
 
-    .line 59
     iget-object v2, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->a:Lfai;
 
     float-to-int v3, v1
 
-    .line 60
     iput v3, v2, Lfap;->j:I
 
-    .line 61
     iget-object v2, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->b:Lfaw;
 
     float-to-int v0, v0
 
-    .line 62
     iput v0, v2, Lfap;->i:I
 
-    .line 63
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->b:Lfaw;
 
     float-to-int v1, v1
 
-    .line 64
     iput v1, v0, Lfap;->j:I
 
-    .line 65
     return-void
 .end method
 
 .method public final a()Z
     .locals 1
 
-    .prologue
-    .line 22
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->a:Lfai;
 
     invoke-virtual {v0}, Lfai;->a()Z
@@ -565,8 +489,6 @@
 .method public final b()Z
     .locals 1
 
-    .prologue
-    .line 23
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->b:Lfaw;
 
     invoke-virtual {v0}, Lfaw;->a()Z
@@ -579,20 +501,16 @@
 .method public final c()V
     .locals 5
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->d:Lgke;
 
     invoke-virtual {v0}, Lgke;->invalidate()V
 
-    .line 25
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->d:Lgke;
 
     invoke-virtual {v0}, Lgke;->a()J
 
     move-result-wide v0
 
-    .line 26
     iget-object v2, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->b:Lfaw;
 
     invoke-virtual {v2}, Lfaw;->a()Z
@@ -609,12 +527,10 @@
 
     if-nez v2, :cond_0
 
-    .line 27
     iget-object v2, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->b:Lfaw;
 
     invoke-virtual {v2, v0, v1}, Lfaw;->b(J)V
 
-    .line 28
     :cond_0
     iget-object v2, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->a:Lfai;
 
@@ -624,32 +540,26 @@
 
     invoke-virtual {v2, v0, v1, v3, v4}, Lfai;->a(JFF)V
 
-    .line 29
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->a:Lfai;
 
     iput-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->h:Lfap;
 
-    .line 30
     return-void
 .end method
 
 .method public final d()V
     .locals 5
 
-    .prologue
-    .line 31
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->d:Lgke;
 
     invoke-virtual {v0}, Lgke;->invalidate()V
 
-    .line 32
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->d:Lgke;
 
     invoke-virtual {v0}, Lgke;->a()J
 
     move-result-wide v0
 
-    .line 33
     iget-object v2, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->a:Lfai;
 
     invoke-virtual {v2}, Lfai;->a()Z
@@ -666,12 +576,10 @@
 
     if-nez v2, :cond_0
 
-    .line 34
     iget-object v2, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->a:Lfai;
 
     invoke-virtual {v2, v0, v1}, Lfai;->b(J)V
 
-    .line 35
     :cond_0
     iget-object v2, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->b:Lfaw;
 
@@ -681,27 +589,22 @@
 
     invoke-virtual {v2, v0, v1, v3, v4}, Lfaw;->a(JFF)V
 
-    .line 36
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->b:Lfaw;
 
     iput-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->h:Lfap;
 
-    .line 37
     return-void
 .end method
 
 .method public final e()V
     .locals 4
 
-    .prologue
-    .line 38
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->d:Lgke;
 
     invoke-virtual {v0}, Lgke;->a()J
 
     move-result-wide v2
 
-    .line 39
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->b:Lfaw;
 
     invoke-virtual {v0}, Lfaw;->a()Z
@@ -712,7 +615,6 @@
 
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->b:Lfaw;
 
-    .line 40
     invoke-virtual {v0}, Lfaw;->b()Z
 
     move-result v0
@@ -721,7 +623,6 @@
 
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->b:Lfaw;
 
-    .line 41
     iget v0, v0, Lfap;->o:I
 
     sget v1, Lbl;->aH:I
@@ -730,16 +631,13 @@
 
     const/4 v0, 0x1
 
-    .line 42
     :goto_0
     if-nez v0, :cond_0
 
-    .line 43
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->b:Lfaw;
 
     invoke-virtual {v0, v2, v3}, Lfaw;->a(J)V
 
-    .line 44
     :cond_0
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->a:Lfai;
 
@@ -757,16 +655,13 @@
 
     if-nez v0, :cond_1
 
-    .line 45
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->a:Lfai;
 
     invoke-virtual {v0, v2, v3}, Lfai;->a(J)V
 
-    .line 46
     :cond_1
     return-void
 
-    .line 41
     :cond_2
     const/4 v0, 0x0
 
@@ -776,15 +671,12 @@
 .method public final f()V
     .locals 3
 
-    .prologue
-    .line 47
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->d:Lgke;
 
     invoke-virtual {v0}, Lgke;->a()J
 
     move-result-wide v0
 
-    .line 48
     iget-object v2, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->b:Lfaw;
 
     invoke-virtual {v2}, Lfaw;->a()Z
@@ -801,12 +693,10 @@
 
     if-nez v2, :cond_0
 
-    .line 49
     iget-object v2, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->b:Lfaw;
 
     invoke-virtual {v2, v0, v1}, Lfaw;->b(J)V
 
-    .line 50
     :cond_0
     iget-object v2, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->a:Lfai;
 
@@ -824,12 +714,10 @@
 
     if-nez v2, :cond_1
 
-    .line 51
     iget-object v2, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->a:Lfai;
 
     invoke-virtual {v2, v0, v1}, Lfai;->b(J)V
 
-    .line 52
     :cond_1
     return-void
 .end method
@@ -837,29 +725,22 @@
 .method public final g()V
     .locals 1
 
-    .prologue
-    .line 93
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
-    .line 94
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->getLocationInWindow([I)V
 
-    .line 95
     iget v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->f:F
 
     iput v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->j:F
 
-    .line 96
     iget-boolean v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->i:Z
 
     if-nez v0, :cond_0
 
-    .line 97
     invoke-direct {p0}, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->h()V
 
-    .line 98
     :cond_0
     return-void
 .end method
@@ -867,41 +748,31 @@
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 9
 
-    .prologue
     const/4 v8, 0x0
 
-    .line 99
     iget-boolean v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->i:Z
 
     if-eqz v0, :cond_0
 
-    .line 100
     iput-boolean v8, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->i:Z
 
-    .line 101
     invoke-direct {p0}, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->h()V
 
-    .line 102
     :cond_0
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->d:Lgke;
 
-    .line 103
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lgke;->d:Z
 
-    .line 104
     iput-boolean v8, v0, Lgke;->c:Z
 
-    .line 106
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 107
     iput-wide v2, v0, Lgke;->f:J
 
-    .line 108
     iget-wide v2, v0, Lgke;->e:J
 
     const-wide/16 v4, 0x0
@@ -910,12 +781,10 @@
 
     if-gtz v1, :cond_1
 
-    .line 109
     iget-wide v2, v0, Lgke;->f:J
 
     iput-wide v2, v0, Lgke;->e:J
 
-    .line 110
     :cond_1
     iget-wide v2, v0, Lgke;->f:J
 
@@ -923,12 +792,10 @@
 
     sub-long v4, v2, v4
 
-    .line 111
     iget-wide v2, v0, Lgke;->f:J
 
     iput-wide v2, v0, Lgke;->e:J
 
-    .line 112
     iget-object v1, v0, Lgke;->a:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -949,14 +816,12 @@
 
     check-cast v1, Lgkd;
 
-    .line 113
     invoke-interface {v1}, Lgkd;->a()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 114
     iget-wide v2, v0, Lgke;->f:J
 
     move-object v6, p1
@@ -965,25 +830,20 @@
 
     goto :goto_0
 
-    .line 116
     :cond_3
     iget-boolean v1, v0, Lgke;->c:Z
 
     if-eqz v1, :cond_4
 
-    .line 117
     iget-object v1, v0, Lgke;->b:Lgkf;
 
     invoke-interface {v1}, Lgkf;->invalidate()V
 
-    .line 119
     :goto_1
     iput-boolean v8, v0, Lgke;->d:Z
 
-    .line 120
     return-void
 
-    .line 118
     :cond_4
     const-wide/16 v2, -0x1
 
@@ -995,24 +855,19 @@
 .method protected onLayout(ZIIII)V
     .locals 1
 
-    .prologue
-    .line 18
     invoke-super/range {p0 .. p5}, Landroid/view/View;->onLayout(ZIIII)V
 
-    .line 19
     sub-int v0, p4, p2
 
     div-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->k:I
 
-    .line 20
     sub-int v0, p5, p3
 
     div-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/focus/FocusRingView;->l:I
 
-    .line 21
     return-void
 .end method

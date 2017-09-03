@@ -18,14 +18,10 @@
 .method public constructor <init>(Ldjy;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldko;->c:Ldjy;
 
-    .line 3
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x0
@@ -34,7 +30,6 @@
 
     iput-object v0, p0, Ldko;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 4
     new-instance v0, Latr;
 
     const/4 v1, 0x1
@@ -47,7 +42,6 @@
 
     iput-object v0, p0, Ldko;->b:Latr;
 
-    .line 5
     return-void
 .end method
 
@@ -56,19 +50,16 @@
 .method public final a()Ldjz;
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 6
     iget-object v0, p0, Ldko;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
     move-result v0
 
-    .line 7
     iget-object v3, p0, Ldko;->b:Latr;
 
     if-nez v0, :cond_0
@@ -82,7 +73,6 @@
 
     invoke-virtual {v3, v0}, Latr;->a(Ljava/lang/Object;)V
 
-    .line 8
     :try_start_0
     iget-object v0, p0, Ldko;->c:Ldjy;
 
@@ -90,35 +80,28 @@
 
     move-result-object v0
 
-    .line 9
     new-instance v3, Ldkp;
 
-    .line 10
     invoke-direct {v3, p0, v0}, Ldkp;-><init>(Ldko;Ldjz;)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 11
     return-object v3
 
     :cond_0
     move v0, v2
 
-    .line 7
     goto :goto_0
 
-    .line 12
     :catch_0
     move-exception v0
 
-    .line 13
     iget-object v3, p0, Ldko;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
 
     move-result v3
 
-    .line 14
     iget-object v4, p0, Ldko;->b:Latr;
 
     if-nez v3, :cond_1
@@ -130,21 +113,17 @@
 
     invoke-virtual {v4, v1}, Latr;->a(Ljava/lang/Object;)V
 
-    .line 15
     throw v0
 
     :cond_1
     move v1, v2
 
-    .line 14
     goto :goto_1
 .end method
 
 .method public final b()Lavm;
     .locals 1
 
-    .prologue
-    .line 16
     iget-object v0, p0, Ldko;->b:Latr;
 
     return-object v0

@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method constructor <init>(B)V
     .locals 0
 
-    .prologue
-    .line 4
     invoke-direct {p0}, Lfy;-><init>()V
 
     return-void
@@ -29,8 +25,6 @@
 .method public a(Landroid/view/accessibility/AccessibilityEvent;)I
     .locals 1
 
-    .prologue
-    .line 3
     const/4 v0, 0x0
 
     return v0
@@ -39,7 +33,5 @@
 .method public a(Landroid/view/accessibility/AccessibilityEvent;I)V
     .locals 0
 
-    .prologue
-    .line 2
     return-void
 .end method

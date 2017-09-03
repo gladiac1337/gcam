@@ -16,11 +16,8 @@
 .method public constructor <init>(J)V
     .locals 5
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lfvk;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
     const-wide v2, 0x7fffffffffffffffL
@@ -29,10 +26,8 @@
 
     iput-object v0, p0, Lfwa;->a:Ljava/util/concurrent/atomic/AtomicLong;
 
-    .line 3
     iput-wide p1, p0, Lfwa;->b:J
 
-    .line 4
     return-void
 .end method
 
@@ -41,13 +36,10 @@
 .method public final a(Lhop;)V
     .locals 4
 
-    .prologue
-    .line 5
     iget-object v1, p0, Lfwa;->a:Ljava/util/concurrent/atomic/AtomicLong;
 
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->SENSOR_TIMESTAMP:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 6
     invoke-interface {p1, v0}, Lhop;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
@@ -64,20 +56,16 @@
 
     move-result-wide v2
 
-    .line 7
     invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
 
-    .line 8
     return-void
 .end method
 
 .method public final b(Lhop;)Z
     .locals 8
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 9
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->SENSOR_TIMESTAMP:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p1, v0}, Lhop;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -96,14 +84,12 @@
 
     move-result-wide v2
 
-    .line 10
     iget-object v0, p0, Lfwa;->a:Ljava/util/concurrent/atomic/AtomicLong;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
 
     move-result-wide v4
 
-    .line 11
     const-wide v6, 0x7fffffffffffffffL
 
     cmp-long v0, v4, v6
@@ -112,7 +98,6 @@
 
     move v0, v1
 
-    .line 13
     :goto_0
     return v0
 

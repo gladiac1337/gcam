@@ -80,16 +80,12 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;ILgxz;Lgvw;Lgvx;)V
     .locals 9
 
-    .prologue
-    .line 1
     invoke-static {p1}, Lgyn;->a(Landroid/content/Context;)Lgyn;
 
     move-result-object v3
 
-    .line 2
     sget-object v4, Lgvj;->c:Lgvj;
 
-    .line 3
     invoke-static {p5}, Lkk;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v7
@@ -120,8 +116,6 @@
 .method private constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lgyn;Lgvj;ILgxz;Lgvw;Lgvx;)V
     .locals 2
 
-    .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/Object;
@@ -204,16 +198,12 @@
 
     iput-object v0, p0, Lgyd;->i:Lgxz;
 
-    .line 5
     const/4 v0, 0x0
 
-    .line 6
     iput-object v0, p0, Lgyd;->t:Landroid/accounts/Account;
 
-    .line 7
     iget-object v0, p6, Lgxz;->c:Ljava/util/Set;
 
-    .line 8
     invoke-static {v0}, Lgyd;->a(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v0
@@ -246,9 +236,6 @@
 .method private static a(Ljava/util/Set;)Ljava/util/Set;
     .locals 2
 
-    .prologue
-    .line 9
-    .line 10
     if-nez p0, :cond_1
 
     :cond_0
@@ -290,12 +277,10 @@
 .method private final a(ILandroid/os/IInterface;)V
     .locals 5
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 14
     const/4 v2, 0x3
 
     if-ne p1, v2, :cond_1
@@ -324,7 +309,6 @@
 
     packed-switch p1, :pswitch_data_0
 
-    .line 25
     :cond_0
     :goto_3
     monitor-exit v1
@@ -334,7 +318,6 @@
     :cond_1
     move v3, v1
 
-    .line 14
     goto :goto_0
 
     :cond_2
@@ -347,7 +330,6 @@
 
     goto :goto_2
 
-    .line 15
     :pswitch_0
     iget-object v0, p0, Lgyd;->q:Lgyh;
 
@@ -383,7 +365,6 @@
 
     iget-object v3, p0, Lgyd;->q:Lgyh;
 
-    .line 16
     invoke-virtual {v0, v2, v3}, Lgyn;->a(Ljava/lang/String;Landroid/content/ServiceConnection;)V
 
     iget-object v0, p0, Lgyd;->e:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -411,13 +392,10 @@
 
     iget-object v3, p0, Lgyd;->q:Lgyh;
 
-    .line 17
     iget-object v4, p0, Lgyd;->i:Lgxz;
 
-    .line 18
     iget-object v4, v4, Lgxz;->f:Ljava/lang/String;
 
-    .line 19
     invoke-virtual {v0, v2, v3, v4}, Lgyn;->a(Ljava/lang/String;Landroid/content/ServiceConnection;Ljava/lang/String;)Z
 
     move-result v0
@@ -458,7 +436,6 @@
 
     goto :goto_3
 
-    .line 25
     :catchall_0
     move-exception v0
 
@@ -468,7 +445,6 @@
 
     throw v0
 
-    .line 21
     :pswitch_1
     :try_start_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -479,7 +455,6 @@
 
     goto :goto_3
 
-    .line 23
     :pswitch_2
     iget-object v0, p0, Lgyd;->q:Lgyh;
 
@@ -493,7 +468,6 @@
 
     iget-object v3, p0, Lgyd;->q:Lgyh;
 
-    .line 24
     invoke-virtual {v0, v2, v3}, Lgyn;->a(Ljava/lang/String;Landroid/content/ServiceConnection;)V
 
     const/4 v0, 0x0
@@ -504,7 +478,6 @@
 
     goto/16 :goto_3
 
-    .line 14
     nop
 
     :pswitch_data_0
@@ -761,12 +734,8 @@
 .method protected final a(Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 2
 
-    .prologue
-    .line 11
-    .line 12
     iget v0, p1, Lcom/google/android/gms/common/ConnectionResult;->b:I
 
-    .line 13
     iput v0, p0, Lgyd;->g:I
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -803,10 +772,8 @@
 .method public final a(Lgyt;Ljava/util/Set;)V
     .locals 8
 
-    .prologue
     const/4 v7, 0x1
 
-    .line 26
     :try_start_0
     invoke-virtual {p0}, Lgyd;->g()Landroid/os/Bundle;
 
@@ -824,16 +791,12 @@
 
     move-result-object v2
 
-    .line 27
     iput-object v2, v1, Lcom/google/android/gms/common/internal/GetServiceRequest;->a:Ljava/lang/String;
 
-    .line 29
     iput-object v0, v1, Lcom/google/android/gms/common/internal/GetServiceRequest;->d:Landroid/os/Bundle;
 
-    .line 30
     if-eqz p2, :cond_0
 
-    .line 31
     invoke-interface {p2}, Ljava/util/Collection;->size()I
 
     move-result v0
@@ -848,7 +811,6 @@
 
     iput-object v0, v1, Lcom/google/android/gms/common/internal/GetServiceRequest;->c:[Lcom/google/android/gms/common/api/Scope;
 
-    .line 32
     :cond_0
     invoke-virtual {p0}, Lgyd;->c()Z
 
@@ -856,18 +818,15 @@
 
     if-eqz v0, :cond_1
 
-    .line 33
     iget-object v0, p0, Lgyd;->t:Landroid/accounts/Account;
 
     if-eqz v0, :cond_2
 
     iget-object v0, p0, Lgyd;->t:Landroid/accounts/Account;
 
-    .line 35
     :goto_0
     iput-object v0, v1, Lcom/google/android/gms/common/internal/GetServiceRequest;->e:Landroid/accounts/Account;
 
-    .line 37
     if-eqz p1, :cond_1
 
     invoke-interface {p1}, Lgyt;->asBinder()Landroid/os/IBinder;
@@ -876,7 +835,6 @@
 
     iput-object v0, v1, Lcom/google/android/gms/common/internal/GetServiceRequest;->b:Landroid/os/IBinder;
 
-    .line 38
     :cond_1
     iget-object v2, p0, Lgyd;->l:Ljava/lang/Object;
 
@@ -902,7 +860,6 @@
 
     invoke-direct {v3, p0, v4}, Lgyx;-><init>(Lgyd;I)V
 
-    .line 39
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v4
@@ -949,17 +906,14 @@
 
     invoke-virtual {v4}, Landroid/os/Parcel;->recycle()V
 
-    .line 40
     :goto_1
     monitor-exit v2
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 42
     :goto_2
     return-void
 
-    .line 33
     :cond_2
     :try_start_4
     new-instance v0, Landroid/accounts/Account;
@@ -975,7 +929,6 @@
 
     goto :goto_0
 
-    .line 40
     :catch_0
     move-exception v0
 
@@ -985,7 +938,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 41
     iget-object v0, p0, Lgyd;->d:Landroid/os/Handler;
 
     iget-object v1, p0, Lgyd;->d:Landroid/os/Handler;
@@ -1006,7 +958,6 @@
 
     goto :goto_2
 
-    .line 39
     :catchall_0
     move-exception v0
 
@@ -1017,7 +968,6 @@
 
     throw v0
 
-    .line 40
     :catchall_1
     move-exception v0
 
@@ -1031,7 +981,6 @@
     .catch Landroid/os/DeadObjectException; {:try_start_6 .. :try_end_6} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_6 .. :try_end_6} :catch_1
 
-    .line 42
     :catch_1
     move-exception v0
 
@@ -1043,7 +992,6 @@
 
     goto :goto_2
 
-    .line 40
     :cond_3
     :try_start_7
     const-string v0, "GmsClient"

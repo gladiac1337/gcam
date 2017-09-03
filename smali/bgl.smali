@@ -14,8 +14,6 @@
 .method public constructor <init>(Lhjh;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbgl;->a:Lhjh;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final a(Ljava/lang/String;)Lhjh;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbgl;->a:Lhjh;
 
     invoke-interface {v0, p1}, Lhjh;->a(Ljava/lang/String;)Lhjh;

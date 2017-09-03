@@ -55,47 +55,36 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/FrameType;[ILcom/google/android/libraries/smartburst/filterfw/FrameManager;)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const-wide/16 v2, -0x1
 
     iput-wide v2, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mTimestamp:J
 
-    .line 3
     new-instance v1, Ljava/util/Vector;
 
     invoke-direct {v1}, Ljava/util/Vector;-><init>()V
 
     iput-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mBackings:Ljava/util/Vector;
 
-    .line 4
     iput-boolean v4, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mWriteLocked:Z
 
-    .line 5
     iput v4, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mReadLocks:I
 
-    .line 6
     const/4 v1, 0x1
 
     iput v1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mRefCount:I
 
-    .line 7
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mCurrentBacking:Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
-    .line 8
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mLockedBacking:Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
-    .line 9
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mType:Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
-    .line 10
     if-eqz p2, :cond_0
 
     array-length v0, p2
@@ -107,23 +96,18 @@
     :cond_0
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mDimensions:[I
 
-    .line 11
     iput-object p3, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mFrameManager:Lcom/google/android/libraries/smartburst/filterfw/FrameManager;
 
-    .line 12
     return-void
 .end method
 
 .method private final attachNewBacking(II)Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
     .locals 2
 
-    .prologue
-    .line 79
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->createBacking(II)Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
     move-result-object v0
 
-    .line 80
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mBackings:Ljava/util/Vector;
 
     invoke-virtual {v1}, Ljava/util/Vector;->size()I
@@ -132,41 +116,33 @@
 
     if-lez v1, :cond_0
 
-    .line 81
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->markDirty()V
 
-    .line 82
     :cond_0
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mBackings:Ljava/util/Vector;
 
     invoke-virtual {v1, v0}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 83
     return-object v0
 .end method
 
 .method private final createBacking(II)Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
     .locals 3
 
-    .prologue
-    .line 84
     const/4 v0, 0x0
 
-    .line 85
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mType:Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     invoke-virtual {v1}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->getElementSize()I
 
     move-result v1
 
-    .line 86
     invoke-static {p2}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->shouldFetchCached(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 87
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mFrameManager:Lcom/google/android/libraries/smartburst/filterfw/FrameManager;
 
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mDimensions:[I
@@ -175,18 +151,14 @@
 
     move-result-object v0
 
-    .line 88
     :cond_0
     if-nez v0, :cond_4
 
-    .line 89
     sparse-switch p2, :sswitch_data_0
 
-    .line 101
     :goto_0
     if-nez v0, :cond_2
 
-    .line 102
     new-instance v0, Ljava/lang/RuntimeException;
 
     const/16 v1, 0x35
@@ -219,7 +191,6 @@
 
     throw v0
 
-    .line 90
     :sswitch_0
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$ByteBufferBacking;
 
@@ -227,7 +198,6 @@
 
     goto :goto_0
 
-    .line 92
     :sswitch_1
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$TextureBacking;
 
@@ -235,7 +205,6 @@
 
     goto :goto_0
 
-    .line 94
     :sswitch_2
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$ObjectBacking;
 
@@ -243,7 +212,6 @@
 
     goto :goto_0
 
-    .line 96
     :sswitch_3
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$BitmapBacking;
 
@@ -251,7 +219,6 @@
 
     goto :goto_0
 
-    .line 98
     :sswitch_4
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$AllocationBacking;->isSupported()Z
 
@@ -259,7 +226,6 @@
 
     if-nez v0, :cond_1
 
-    .line 99
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Attempted to create an AllocationBacking in context that does not support RenderScript!"
@@ -268,7 +234,6 @@
 
     throw v0
 
-    .line 100
     :cond_1
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$AllocationBacking;
 
@@ -286,7 +251,6 @@
 
     goto :goto_0
 
-    .line 103
     :cond_2
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->requiresGpu()Z
 
@@ -304,7 +268,6 @@
 
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mFrameManager:Lcom/google/android/libraries/smartburst/filterfw/FrameManager;
 
-    .line 104
     invoke-virtual {v2}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->getRunner()Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;
 
     move-result-object v2
@@ -315,7 +278,6 @@
 
     if-nez v2, :cond_3
 
-    .line 105
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Cannot create backing that requires GPU in a runner that does not support OpenGL!"
@@ -324,16 +286,13 @@
 
     throw v0
 
-    .line 106
     :cond_3
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mDimensions:[I
 
     invoke-virtual {v0, v2}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->setDimensions([I)V
 
-    .line 107
     invoke-virtual {v0, v1}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->setElementSize(I)V
 
-    .line 108
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mType:Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     invoke-virtual {v1}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->getElementId()I
@@ -342,21 +301,17 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->setElementId(I)V
 
-    .line 109
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mType:Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     invoke-virtual {v0, v1}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->allocate(Lcom/google/android/libraries/smartburst/filterfw/FrameType;)V
 
-    .line 110
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mFrameManager:Lcom/google/android/libraries/smartburst/filterfw/FrameManager;
 
     invoke-virtual {v1, v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->onBackingCreated(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;)V
 
-    .line 111
     :cond_4
     return-object v0
 
-    .line 89
     nop
 
     :sswitch_data_0
@@ -373,33 +328,25 @@
 .method private final fetchBacking(II)Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
     .locals 1
 
-    .prologue
-    .line 64
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->getBacking(II)Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
     move-result-object v0
 
-    .line 65
     if-nez v0, :cond_0
 
-    .line 66
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->attachNewBacking(II)Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
     move-result-object v0
 
-    .line 67
     :cond_0
     invoke-direct {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->syncBacking(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;)V
 
-    .line 68
     return-object v0
 .end method
 
 .method private final getBacking(II)Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
     .locals 3
 
-    .prologue
-    .line 72
     const/4 v0, 0x0
 
     move v1, v0
@@ -413,7 +360,6 @@
 
     if-ge v1, v0, :cond_2
 
-    .line 73
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mBackings:Ljava/util/Vector;
 
     invoke-virtual {v0, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -422,7 +368,6 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
-    .line 74
     const/4 v2, 0x2
 
     if-ne p1, v2, :cond_0
@@ -431,17 +376,14 @@
 
     move-result v2
 
-    .line 75
     :goto_1
     and-int/2addr v2, p2
 
     if-ne v2, p2, :cond_1
 
-    .line 78
     :goto_2
     return-object v0
 
-    .line 74
     :cond_0
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->readAccess()I
 
@@ -449,7 +391,6 @@
 
     goto :goto_1
 
-    .line 77
     :cond_1
     add-int/lit8 v0, v1, 0x1
 
@@ -457,7 +398,6 @@
 
     goto :goto_0
 
-    .line 78
     :cond_2
     const/4 v0, 0x0
 
@@ -467,10 +407,8 @@
 .method private final importBacking(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 112
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->requiresGpu()Z
 
     move-result v0
@@ -479,27 +417,21 @@
 
     move v0, v1
 
-    .line 113
     :goto_0
     invoke-direct {p0, v1, v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->createBacking(II)Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
     move-result-object v0
 
-    .line 114
     invoke-virtual {v0, p1}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->syncTo(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;)V
 
-    .line 115
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mBackings:Ljava/util/Vector;
 
     invoke-virtual {v1, v0}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 116
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mCurrentBacking:Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
-    .line 117
     return-void
 
-    .line 112
     :cond_0
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->readAccess()I
 
@@ -511,18 +443,14 @@
 .method private final lock(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;I)V
     .locals 4
 
-    .prologue
-    .line 126
     const/4 v0, 0x2
 
     if-ne p2, v0, :cond_4
 
-    .line 127
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mReadLocks:I
 
     if-lez v0, :cond_0
 
-    .line 128
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -567,13 +495,11 @@
 
     throw v0
 
-    .line 129
     :cond_0
     iget-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mWriteLocked:Z
 
     if-eqz v0, :cond_1
 
-    .line 130
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -618,7 +544,6 @@
 
     throw v0
 
-    .line 131
     :cond_1
     const/4 v0, 0x0
 
@@ -633,7 +558,6 @@
 
     if-ge v1, v0, :cond_3
 
-    .line 132
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mBackings:Ljava/util/Vector;
 
     invoke-virtual {v0, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -642,13 +566,10 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
-    .line 133
     if-eq v0, p1, :cond_2
 
-    .line 134
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->markDirty()V
 
-    .line 135
     :cond_2
     add-int/lit8 v0, v1, 0x1
 
@@ -656,29 +577,23 @@
 
     goto :goto_0
 
-    .line 136
     :cond_3
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mWriteLocked:Z
 
-    .line 137
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mCurrentBacking:Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
-    .line 141
     :goto_1
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mLockedBacking:Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
-    .line 142
     return-void
 
-    .line 138
     :cond_4
     iget-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mWriteLocked:Z
 
     if-eqz v0, :cond_5
 
-    .line 139
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -723,7 +638,6 @@
 
     throw v0
 
-    .line 140
     :cond_5
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mReadLocks:I
 
@@ -737,21 +651,16 @@
 .method private final releaseBacking(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;)V
     .locals 1
 
-    .prologue
-    .line 124
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mFrameManager:Lcom/google/android/libraries/smartburst/filterfw/FrameManager;
 
     invoke-virtual {v0, p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->onBackingAvailable(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;)V
 
-    .line 125
     return-void
 .end method
 
 .method private final releaseBackings()V
     .locals 2
 
-    .prologue
-    .line 118
     const/4 v0, 0x0
 
     move v1, v0
@@ -765,7 +674,6 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 119
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mBackings:Ljava/util/Vector;
 
     invoke-virtual {v0, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
@@ -776,33 +684,27 @@
 
     invoke-direct {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->releaseBacking(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;)V
 
-    .line 120
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 121
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mBackings:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->clear()V
 
-    .line 122
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mCurrentBacking:Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
-    .line 123
     return-void
 .end method
 
 .method private static shouldFetchCached(I)Z
     .locals 1
 
-    .prologue
-    .line 143
     const/16 v0, 0x8
 
     if-eq p0, v0, :cond_0
@@ -821,8 +723,6 @@
 .method private final syncBacking(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;)V
     .locals 1
 
-    .prologue
-    .line 69
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->isDirty()Z
@@ -835,12 +735,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 70
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mCurrentBacking:Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->syncTo(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;)V
 
-    .line 71
     :cond_0
     return-void
 .end method
@@ -850,8 +748,6 @@
 .method public final getDimensions()[I
     .locals 1
 
-    .prologue
-    .line 50
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mDimensions:[I
 
     return-object v0
@@ -860,16 +756,12 @@
 .method public final getElementCount()I
     .locals 5
 
-    .prologue
-    .line 51
     const/4 v0, 0x1
 
-    .line 52
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mDimensions:[I
 
     if-eqz v1, :cond_0
 
-    .line 53
     iget-object v3, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mDimensions:[I
 
     array-length v4, v3
@@ -881,10 +773,8 @@
 
     aget v2, v3, v1
 
-    .line 54
     mul-int/2addr v2, v0
 
-    .line 55
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
@@ -893,7 +783,6 @@
 
     goto :goto_0
 
-    .line 56
     :cond_0
     return v0
 .end method
@@ -901,8 +790,6 @@
 .method public final getFrameType()Lcom/google/android/libraries/smartburst/filterfw/FrameType;
     .locals 1
 
-    .prologue
-    .line 13
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mType:Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     return-object v0
@@ -911,8 +798,6 @@
 .method public final getTimestamp()J
     .locals 2
 
-    .prologue
-    .line 61
     iget-wide v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mTimestamp:J
 
     return-wide v0
@@ -921,8 +806,6 @@
 .method public final importStore(Lcom/google/android/libraries/smartburst/filterfw/BackingStore;)V
     .locals 2
 
-    .prologue
-    .line 57
     iget-object v0, p1, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mBackings:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->size()I
@@ -931,7 +814,6 @@
 
     if-lez v0, :cond_0
 
-    .line 58
     iget-object v0, p1, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mBackings:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->firstElement()Ljava/lang/Object;
@@ -942,29 +824,23 @@
 
     invoke-direct {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->importBacking(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;)V
 
-    .line 59
     :cond_0
     iget-wide v0, p1, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mTimestamp:J
 
     iput-wide v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mTimestamp:J
 
-    .line 60
     return-void
 .end method
 
 .method public final lockBacking(II)Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
     .locals 2
 
-    .prologue
-    .line 15
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->fetchBacking(II)Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
     move-result-object v0
 
-    .line 16
     if-nez v0, :cond_0
 
-    .line 17
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Could not fetch frame data!"
@@ -973,19 +849,15 @@
 
     throw v0
 
-    .line 18
     :cond_0
     invoke-direct {p0, v0, p1}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->lock(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;I)V
 
-    .line 19
     return-object v0
 .end method
 
 .method public final lockData(II)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 14
     invoke-virtual {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->lockBacking(II)Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
     move-result-object v0
@@ -1000,13 +872,10 @@
 .method public final release()Lcom/google/android/libraries/smartburst/filterfw/BackingStore;
     .locals 2
 
-    .prologue
-    .line 34
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mRefCount:I
 
     if-gtz v0, :cond_0
 
-    .line 35
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "DOUBLE-RELEASE"
@@ -1015,7 +884,6 @@
 
     throw v0
 
-    .line 36
     :cond_0
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mRefCount:I
 
@@ -1023,18 +891,14 @@
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mRefCount:I
 
-    .line 37
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mRefCount:I
 
     if-nez v0, :cond_1
 
-    .line 38
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->releaseBackings()V
 
-    .line 39
     const/4 p0, 0x0
 
-    .line 40
     :cond_1
     return-object p0
 .end method
@@ -1042,13 +906,10 @@
 .method public final resize([I)V
     .locals 4
 
-    .prologue
-    .line 41
     new-instance v1, Ljava/util/Vector;
 
     invoke-direct {v1}, Ljava/util/Vector;-><init>()V
 
-    .line 42
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mBackings:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
@@ -1068,47 +929,38 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
-    .line 43
     invoke-virtual {v0, p1}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->resize([I)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 44
     invoke-virtual {v1, v0}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 45
     :cond_0
     invoke-direct {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->releaseBacking(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;)V
 
     goto :goto_0
 
-    .line 47
     :cond_1
     iput-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mBackings:Ljava/util/Vector;
 
-    .line 48
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mDimensions:[I
 
-    .line 49
     return-void
 .end method
 
 .method public final retain()Lcom/google/android/libraries/smartburst/filterfw/BackingStore;
     .locals 5
 
-    .prologue
-    .line 28
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mRefCount:I
 
     const/16 v1, 0xa
 
     if-lt v0, v1, :cond_0
 
-    .line 29
     const-string v0, "BackingStore"
 
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mRefCount:I
@@ -1163,13 +1015,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 30
     :cond_0
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mRefCount:I
 
     if-gtz v0, :cond_1
 
-    .line 31
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "RETAINING RELEASED"
@@ -1178,7 +1028,6 @@
 
     throw v0
 
-    .line 32
     :cond_1
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mRefCount:I
 
@@ -1186,59 +1035,47 @@
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mRefCount:I
 
-    .line 33
     return-object p0
 .end method
 
 .method public final setTimestamp(J)V
     .locals 1
 
-    .prologue
-    .line 62
     iput-wide p1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mTimestamp:J
 
-    .line 63
     return-void
 .end method
 
 .method public final unlock()Z
     .locals 2
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 20
     iget-boolean v1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mWriteLocked:Z
 
     if-eqz v1, :cond_1
 
-    .line 21
     iput-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mWriteLocked:Z
 
-    .line 25
     :goto_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mLockedBacking:Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->unlock()V
 
-    .line 26
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mLockedBacking:Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
-    .line 27
     const/4 v0, 0x1
 
     :cond_0
     return v0
 
-    .line 22
     :cond_1
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mReadLocks:I
 
     if-lez v1, :cond_0
 
-    .line 23
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->mReadLocks:I
 
     add-int/lit8 v0, v0, -0x1

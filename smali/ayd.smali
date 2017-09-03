@@ -14,8 +14,6 @@
 .method constructor <init>(Laxx;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Layd;->a:Laxx;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,24 +24,17 @@
 .method private final a(Lbdp;)Liwe;
     .locals 6
 
-    .prologue
-    .line 2
     iget-object v0, p0, Layd;->a:Laxx;
 
-    .line 3
     iget-object v1, v0, Laxx;->w:Ljava/lang/Object;
 
-    .line 4
     monitor-enter v1
 
-    .line 5
     :try_start_0
     iget-object v0, p0, Layd;->a:Laxx;
 
-    .line 6
     iget-object v0, v0, Laxx;->v:Layi;
 
-    .line 7
     sget-object v2, Layi;->a:Layi;
 
     invoke-virtual {v0, v2}, Layi;->equals(Ljava/lang/Object;)Z
@@ -52,15 +43,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 8
     new-instance v0, Ljava/lang/IllegalStateException;
 
     iget-object v2, p0, Layd;->a:Laxx;
 
-    .line 9
     iget-object v2, v2, Laxx;->v:Layi;
 
-    .line 10
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -95,25 +83,20 @@
 
     invoke-direct {v0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 11
     invoke-static {v0}, Livs;->a(Ljava/lang/Throwable;)Liwe;
 
     move-result-object v0
 
     monitor-exit v1
 
-    .line 23
     :goto_0
     return-object v0
 
-    .line 12
     :cond_0
     iget-object v0, p0, Layd;->a:Laxx;
 
-    .line 13
     iget-object v0, v0, Laxx;->v:Layi;
 
-    .line 14
     sget-object v2, Layi;->c:Layi;
 
     invoke-virtual {v0, v2}, Layi;->equals(Ljava/lang/Object;)Z
@@ -122,32 +105,24 @@
 
     invoke-static {v0}, Lid;->a(Z)V
 
-    .line 15
     iget-object v0, p0, Layd;->a:Laxx;
 
-    .line 16
     iget-object v0, v0, Laxx;->g:Lbea;
 
-    .line 17
     iget-object v2, p0, Layd;->a:Laxx;
 
-    .line 18
     iget-object v2, v2, Laxx;->s:Lhog;
 
-    .line 20
     invoke-interface {p1}, Lbdp;->f()Landroid/view/Surface;
 
     move-result-object v3
 
     iget-object v4, p0, Layd;->a:Laxx;
 
-    .line 21
     iget-object v4, v4, Laxx;->t:Lbbs;
 
-    .line 22
     iget-object v5, p0, Layd;->a:Laxx;
 
-    .line 23
     invoke-interface {v0, v2, v3, v4, v5}, Lbea;->a(Lhog;Landroid/view/Surface;Lbbs;Lbdq;)Liwe;
 
     move-result-object v0
@@ -156,7 +131,6 @@
 
     goto :goto_0
 
-    .line 24
     :catchall_0
     move-exception v0
 
@@ -172,8 +146,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;Ljava/lang/Object;)Liwe;
     .locals 1
 
-    .prologue
-    .line 25
     check-cast p2, Lbdp;
 
     invoke-direct {p0, p2}, Layd;->a(Lbdp;)Liwe;

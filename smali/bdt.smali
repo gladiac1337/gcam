@@ -11,14 +11,10 @@
 .method public constructor <init>(Lgjh;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbdt;->a:Lgjh;
 
-    .line 3
     return-void
 .end method
 
@@ -27,11 +23,8 @@
 .method public final a()V
     .locals 8
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lbdt;->a:Lgjh;
 
-    .line 5
     invoke-interface {v0}, Lgjh;->a()Ljava/io/File;
 
     move-result-object v0
@@ -40,19 +33,15 @@
 
     invoke-direct {v1}, Lbdu;-><init>()V
 
-    .line 6
     invoke-virtual {v0, v1}, Ljava/io/File;->listFiles(Ljava/io/FilenameFilter;)[Ljava/io/File;
 
     move-result-object v1
 
-    .line 7
     if-nez v1, :cond_1
 
-    .line 13
     :cond_0
     return-void
 
-    .line 9
     :cond_1
     array-length v2, v1
 
@@ -63,7 +52,6 @@
 
     aget-object v3, v1, v0
 
-    .line 10
     invoke-virtual {v3}, Ljava/io/File;->isFile()Z
 
     move-result v4
@@ -80,10 +68,8 @@
 
     if-nez v4, :cond_2
 
-    .line 11
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 12
     :cond_2
     add-int/lit8 v0, v0, 0x1
 

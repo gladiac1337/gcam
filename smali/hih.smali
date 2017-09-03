@@ -11,14 +11,10 @@
 .method public constructor <init>(Lhii;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lhih;->a:Lhii;
 
-    .line 3
     return-void
 .end method
 
@@ -27,11 +23,8 @@
 .method public final close()V
     .locals 5
 
-    .prologue
-    .line 26
     iget-object v0, p0, Lhih;->a:Lhii;
 
-    .line 27
     iget-object v1, v0, Lhii;->a:Lhiq;
 
     invoke-virtual {v1}, Lhiq;->a()I
@@ -40,7 +33,6 @@
 
     if-lez v1, :cond_0
 
-    .line 28
     const-string v1, "CAM_ProcFSM"
 
     iget-object v2, v0, Lhii;->a:Lhiq;
@@ -79,13 +71,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
     :cond_0
     iget v1, v0, Lhii;->d:I
 
     if-lez v1, :cond_1
 
-    .line 30
     const-string v1, "CAM_ProcFSM"
 
     iget v2, v0, Lhii;->d:I
@@ -118,13 +108,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 31
     :cond_1
     iget v1, v0, Lhii;->c:I
 
     if-lez v1, :cond_2
 
-    .line 32
     const-string v1, "CAM_ProcFSM"
 
     iget v2, v0, Lhii;->d:I
@@ -157,78 +145,62 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 33
     :cond_2
     iget-object v0, v0, Lhii;->b:Ljava/io/OutputStream;
 
     invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
-    .line 34
     return-void
 .end method
 
 .method public final flush()V
     .locals 1
 
-    .prologue
-    .line 23
     iget-object v0, p0, Lhih;->a:Lhii;
 
-    .line 24
     iget-object v0, v0, Lhii;->b:Ljava/io/OutputStream;
 
     invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
 
-    .line 25
     return-void
 .end method
 
 .method public final write(I)V
     .locals 5
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lhih;->a:Lhii;
 
-    .line 5
     iget v1, v0, Lhii;->c:I
 
     if-eqz v1, :cond_1
 
-    .line 6
     iget v1, v0, Lhii;->c:I
 
     if-lez v1, :cond_0
 
-    .line 7
     iget v1, v0, Lhii;->c:I
 
     add-int/lit8 v1, v1, -0x1
 
     iput v1, v0, Lhii;->c:I
 
-    .line 17
     :cond_0
     :goto_0
     return-void
 
-    .line 8
     :cond_1
     iget v1, v0, Lhii;->d:I
 
     if-eqz v1, :cond_2
 
-    .line 9
     iget-object v1, v0, Lhii;->b:Ljava/io/OutputStream;
 
     invoke-virtual {v1, p1}, Ljava/io/OutputStream;->write(I)V
 
-    .line 10
     iget v1, v0, Lhii;->d:I
 
     if-lez v1, :cond_0
 
-    .line 11
     iget v1, v0, Lhii;->d:I
 
     add-int/lit8 v1, v1, -0x1
@@ -237,32 +209,27 @@
 
     goto :goto_0
 
-    .line 12
     :cond_2
     iget-object v1, v0, Lhii;->a:Lhiq;
 
     int-to-byte v2, p1
 
-    .line 13
     const/4 v3, 0x1
 
     invoke-virtual {v1, v3}, Lhiq;->b(I)V
 
-    .line 14
     iget-object v3, v1, Lhiq;->a:[B
 
     iget v4, v1, Lhiq;->c:I
 
     aput-byte v2, v3, v4
 
-    .line 15
     iget v2, v1, Lhiq;->c:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, v1, Lhiq;->c:I
 
-    .line 16
     invoke-virtual {v0}, Lhii;->b()V
 
     goto :goto_0
@@ -271,30 +238,23 @@
 .method public final write([B)V
     .locals 3
 
-    .prologue
-    .line 18
     iget-object v0, p0, Lhih;->a:Lhii;
 
-    .line 19
     const/4 v1, 0x0
 
     array-length v2, p1
 
     invoke-virtual {v0, p1, v1, v2}, Lhii;->a([BII)V
 
-    .line 20
     return-void
 .end method
 
 .method public final write([BII)V
     .locals 1
 
-    .prologue
-    .line 21
     iget-object v0, p0, Lhih;->a:Lhii;
 
     invoke-virtual {v0, p1, p2, p3}, Lhii;->a([BII)V
 
-    .line 22
     return-void
 .end method

@@ -103,19 +103,16 @@
         value = 0x15
     .end annotation
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 9
     const/16 v0, 0x15
 
     invoke-static {v0}, Lkk;->d(I)Z
 
     move-result v0
 
-    .line 10
     if-eqz v0, :cond_1
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -159,11 +156,9 @@
 
     move v0, v1
 
-    .line 13
     :goto_0
     return v0
 
-    .line 11
     :cond_1
     const/16 v0, 0x12
 
@@ -171,7 +166,6 @@
 
     move-result v0
 
-    .line 12
     if-eqz v0, :cond_2
 
     const-string v0, "user"
@@ -206,7 +200,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 13
     :goto_1
     if-eqz v1, :cond_3
 
@@ -217,10 +210,8 @@
     :cond_2
     move v1, v2
 
-    .line 12
     goto :goto_1
 
-    .line 13
     :cond_3
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -252,14 +243,12 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
     const/16 v0, 0x9
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v4
@@ -288,7 +277,6 @@
 
     if-nez v3, :cond_4
 
-    .line 2
     sget-object v3, Lgvl;->f:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -367,7 +355,6 @@
 
     throw v0
 
-    .line 1
     :catch_0
     move-exception v3
 
@@ -379,7 +366,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_1
     const/4 v3, 0x0
 
@@ -517,7 +503,6 @@
 
     throw v0
 
-    .line 3
     :cond_4
     :try_start_7
     const-string v3, "com.google.android.gms"
@@ -530,7 +515,6 @@
 
     move-result-object v3
 
-    .line 4
     invoke-static {p0}, Lkk;->a(Landroid/content/Context;)Z
 
     move-result v5
@@ -551,11 +535,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8
     :goto_2
     return v0
 
-    .line 3
     :catch_2
     move-exception v0
 
@@ -569,7 +551,6 @@
 
     goto :goto_2
 
-    .line 4
     :cond_5
     :try_start_8
     const-string v5, "com.android.vending"
@@ -638,16 +619,12 @@
     :cond_7
     sget v0, Lgvl;->a:I
 
-    .line 5
     div-int/lit16 v0, v0, 0x3e8
 
-    .line 6
     iget v5, v3, Landroid/content/pm/PackageInfo;->versionCode:I
 
-    .line 7
     div-int/lit16 v5, v5, 0x3e8
 
-    .line 8
     if-ge v5, v0, :cond_8
 
     const-string v0, "GooglePlayServicesUtil"

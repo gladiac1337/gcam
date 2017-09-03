@@ -26,13 +26,10 @@
 .method public final a()V
     .locals 5
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgwz;->b:Lgws;
 
     iget-object v1, p0, Lgwz;->c:Lcom/google/android/gms/signin/internal/SignInResponse;
 
-    .line 3
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lgws;->b(I)Z
@@ -41,23 +38,18 @@
 
     if-eqz v2, :cond_0
 
-    .line 4
     iget-object v2, v1, Lcom/google/android/gms/signin/internal/SignInResponse;->a:Lcom/google/android/gms/common/ConnectionResult;
 
-    .line 5
     invoke-virtual {v2}, Lcom/google/android/gms/common/ConnectionResult;->b()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 6
     iget-object v1, v1, Lcom/google/android/gms/signin/internal/SignInResponse;->b:Lcom/google/android/gms/common/internal/ResolveAccountResponse;
 
-    .line 8
     iget-object v2, v1, Lcom/google/android/gms/common/internal/ResolveAccountResponse;->b:Lcom/google/android/gms/common/ConnectionResult;
 
-    .line 9
     invoke-virtual {v2}, Lcom/google/android/gms/common/ConnectionResult;->b()Z
 
     move-result v3
@@ -88,37 +80,29 @@
 
     invoke-virtual {v0, v2}, Lgws;->b(Lcom/google/android/gms/common/ConnectionResult;)V
 
-    .line 16
     :cond_0
     :goto_0
     return-void
 
-    .line 9
     :cond_1
     const/4 v2, 0x1
 
     iput-boolean v2, v0, Lgws;->f:Z
 
-    .line 10
     iget-object v2, v1, Lcom/google/android/gms/common/internal/ResolveAccountResponse;->a:Landroid/os/IBinder;
 
     invoke-static {v2}, Lgyu;->a(Landroid/os/IBinder;)Lgyt;
 
     move-result-object v2
 
-    .line 11
     iput-object v2, v0, Lgws;->g:Lgyt;
 
-    .line 12
     iget-boolean v2, v1, Lcom/google/android/gms/common/internal/ResolveAccountResponse;->c:Z
 
-    .line 13
     iput-boolean v2, v0, Lgws;->h:Z
 
-    .line 14
     iget-boolean v1, v1, Lcom/google/android/gms/common/internal/ResolveAccountResponse;->d:Z
 
-    .line 15
     iput-boolean v1, v0, Lgws;->i:Z
 
     invoke-virtual {v0}, Lgws;->e()V

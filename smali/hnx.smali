@@ -33,15 +33,12 @@
 .method private constructor <init>(J)V
     .locals 7
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     const-wide v4, 0x784b3c11d4741c10L    # 2.877583020119766E271
 
     cmp-long v0, p1, v4
@@ -53,7 +50,6 @@
     :goto_0
     iput-boolean v0, p0, Lhnx;->d:Z
 
-    .line 23
     const-wide v4, -0x8108390a3062de8L
 
     cmp-long v0, p1, v4
@@ -65,7 +61,6 @@
     :goto_1
     iput-boolean v0, p0, Lhnx;->b:Z
 
-    .line 24
     const-wide v4, -0x40c46e491360ee39L    # -4.2067256856295445E-4
 
     cmp-long v0, p1, v4
@@ -77,7 +72,6 @@
     :goto_2
     iput-boolean v0, p0, Lhnx;->c:Z
 
-    .line 25
     const-wide v4, -0x2147b4292375dfd7L    # -1.941677432629765E148
 
     cmp-long v0, p1, v4
@@ -89,7 +83,6 @@
     :goto_3
     iput-boolean v0, p0, Lhnx;->k:Z
 
-    .line 26
     const-wide v4, 0x1ae6728baa56037dL    # 4.327723224915982E-179
 
     cmp-long v0, p1, v4
@@ -101,7 +94,6 @@
     :goto_4
     iput-boolean v0, p0, Lhnx;->l:Z
 
-    .line 27
     const-wide v4, -0x6ecbec09c73f9fd0L    # -8.475458213407771E-226
 
     cmp-long v0, p1, v4
@@ -113,7 +105,6 @@
     :goto_5
     iput-boolean v0, p0, Lhnx;->a:Z
 
-    .line 28
     const-wide v4, -0x1066fc7bac91d3fdL    # -3.7924102167396995E229
 
     cmp-long v0, p1, v4
@@ -125,7 +116,6 @@
     :goto_6
     iput-boolean v0, p0, Lhnx;->e:Z
 
-    .line 29
     const-wide v4, 0x20aaa7be10471b33L    # 2.544689807436741E-151
 
     cmp-long v0, p1, v4
@@ -137,7 +127,6 @@
     :goto_7
     iput-boolean v0, p0, Lhnx;->g:Z
 
-    .line 30
     const-wide v4, 0x47d9e7a79d47ed18L    # 1.3773408036971932E38
 
     cmp-long v0, p1, v4
@@ -149,7 +138,6 @@
     :goto_8
     iput-boolean v0, p0, Lhnx;->f:Z
 
-    .line 31
     const-wide v4, -0x151a2f65df0190c9L    # -8.754660434409255E206
 
     cmp-long v0, p1, v4
@@ -161,7 +149,6 @@
     :goto_9
     iput-boolean v0, p0, Lhnx;->h:Z
 
-    .line 32
     const-wide v4, 0x1bbb902f8fbb273eL
 
     cmp-long v0, p1, v4
@@ -173,7 +160,6 @@
     :goto_a
     iput-boolean v0, p0, Lhnx;->i:Z
 
-    .line 33
     const-wide v4, -0x2a4d5c1d8dff2aeaL    # -6.679877084835613E104
 
     cmp-long v0, p1, v4
@@ -183,109 +169,94 @@
     :goto_b
     iput-boolean v1, p0, Lhnx;->j:Z
 
-    .line 34
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 22
     goto/16 :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 23
     goto :goto_1
 
     :cond_2
     move v0, v2
 
-    .line 24
     goto :goto_2
 
     :cond_3
     move v0, v2
 
-    .line 25
     goto :goto_3
 
     :cond_4
     move v0, v2
 
-    .line 26
     goto :goto_4
 
     :cond_5
     move v0, v2
 
-    .line 27
     goto :goto_5
 
     :cond_6
     move v0, v2
 
-    .line 28
     goto :goto_6
 
     :cond_7
     move v0, v2
 
-    .line 29
     goto :goto_7
 
     :cond_8
     move v0, v2
 
-    .line 30
     goto :goto_8
 
     :cond_9
     move v0, v2
 
-    .line 31
     goto :goto_9
 
     :cond_a
     move v0, v2
 
-    .line 32
     goto :goto_a
 
     :cond_b
     move v1, v2
 
-    .line 33
     goto :goto_b
 .end method
 
 .method public static a()Lhnx;
     .locals 6
 
-    .prologue
-    .line 1
     sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    const-string v0, "motorola"
 
     sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
+    const-string v1, "shamu"
+
     sget-object v2, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 
-    .line 2
     invoke-static {v0}, Lhnx;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3
     invoke-static {v1}, Lhnx;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 4
     invoke-static {v2}, Lhnx;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 5
     const-string v2, "GENERIC"
 
     invoke-virtual {v3, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -296,7 +267,6 @@
 
     const-string v2, "GENERIC"
 
-    .line 6
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
@@ -305,7 +275,6 @@
 
     const-string v2, "SDK_"
 
-    .line 7
     invoke-virtual {v1, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -314,14 +283,12 @@
 
     const-string v2, "_SDK"
 
-    .line 8
     invoke-virtual {v1, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 9
     :cond_0
     new-instance v0, Lhnx;
 
@@ -329,15 +296,12 @@
 
     invoke-direct {v0, v2, v3}, Lhnx;-><init>(J)V
 
-    .line 20
     :goto_0
     return-object v0
 
-    .line 10
     :cond_1
     new-instance v1, Lhnx;
 
-    .line 11
     const-string v2, "G1V5VHBME0Mq6trmUxb9Q9URJXm0Sof1|"
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -396,7 +360,6 @@
 
     move-result-object v0
 
-    .line 12
     invoke-static {}, Liqd;->a()Liqb;
 
     move-result-object v2
@@ -407,15 +370,12 @@
 
     move-result-object v3
 
-    .line 13
     invoke-interface {v3}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
 
-    .line 14
     shl-int/lit8 v4, v0, 0x1
 
-    .line 15
     if-ltz v4, :cond_2
 
     const/4 v0, 0x1
@@ -425,12 +385,10 @@
 
     invoke-static {v0, v5, v4}, Lid;->a(ZLjava/lang/String;I)V
 
-    .line 16
     invoke-virtual {v2}, Liqb;->a()Liqc;
 
     move-result-object v0
 
-    .line 17
     invoke-virtual {v0, v3}, Liqc;->a(Ljava/lang/CharSequence;)Liqc;
 
     move-result-object v0
@@ -439,20 +397,16 @@
 
     move-result-object v0
 
-    .line 18
     invoke-virtual {v0}, Lipz;->c()J
 
     move-result-wide v2
 
-    .line 19
     invoke-direct {v1, v2, v3}, Lhnx;-><init>(J)V
 
     move-object v0, v1
 
-    .line 20
     goto :goto_0
 
-    .line 15
     :cond_2
     const/4 v0, 0x0
 
@@ -462,8 +416,6 @@
 .method private static a(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 36
     if-nez p0, :cond_0
 
     const-string v0, "unknown"
@@ -486,8 +438,6 @@
 .method public final b()Z
     .locals 1
 
-    .prologue
-    .line 35
     iget-boolean v0, p0, Lhnx;->k:Z
 
     if-nez v0, :cond_0

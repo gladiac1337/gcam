@@ -104,14 +104,10 @@
 .method protected final synthetic a(Landroid/os/IBinder;)Landroid/os/IInterface;
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     invoke-static {p1}, Lhfy;->a(Landroid/os/IBinder;)Lhfx;
 
     move-result-object v0
 
-    .line 3
     return-object v0
 .end method
 

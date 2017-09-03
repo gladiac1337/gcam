@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,28 +20,22 @@
 .method public final synthetic a(Lhwy;)Ljava/lang/Object;
     .locals 7
 
-    .prologue
     const/4 v6, 0x2
 
     const/4 v5, 0x1
 
     const/4 v4, 0x0
 
-    .line 2
-    .line 3
     const-class v0, Lihq;
 
-    .line 4
     const-string v1, "default"
 
     invoke-virtual {p1, v0, v1}, Lhwy;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 5
     check-cast v0, Lihq;
 
-    .line 6
     const/4 v1, 0x6
 
     new-array v2, v1, [Lieo;
@@ -52,7 +44,6 @@
 
     const-string v3, "face_detector"
 
-    .line 7
     invoke-virtual {p1, v1, v3}, Lhwy;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
@@ -71,7 +62,6 @@
 
     const-string v3, "face_quality_filter"
 
-    .line 8
     invoke-virtual {p1, v1, v3}, Lhwy;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
@@ -110,11 +100,9 @@
 
     aput-object v1, v2, v0
 
-    .line 9
     invoke-static {v2}, Liej;->a([Lieo;)Liej;
 
     move-result-object v0
 
-    .line 10
     return-object v0
 .end method

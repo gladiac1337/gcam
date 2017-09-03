@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/google/android/apps/refocus/ViewerActivity;Landroid/net/Uri;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgrz;->b:Lcom/google/android/apps/refocus/ViewerActivity;
 
     iput-object p2, p0, Lgrz;->a:Landroid/net/Uri;
@@ -32,22 +30,16 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 5
 
-    .prologue
-    .line 2
-    .line 3
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 4
     iget-object v1, p0, Lgrz;->a:Landroid/net/Uri;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 5
     sget-object v1, Lcom/google/android/apps/refocus/ViewerActivity;->d:Ljava/lang/String;
 
-    .line 6
     iget-object v2, p0, Lgrz;->a:Landroid/net/Uri;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -84,13 +76,11 @@
 
     invoke-static {v1, v2}, Lbgj;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7
     iget-object v1, p0, Lgrz;->b:Lcom/google/android/apps/refocus/ViewerActivity;
 
     const/4 v2, -0x1
 
     invoke-virtual {v1, v2, v0}, Lcom/google/android/apps/refocus/ViewerActivity;->setResult(ILandroid/content/Intent;)V
 
-    .line 8
     return-void
 .end method

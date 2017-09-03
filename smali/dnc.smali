@@ -18,20 +18,14 @@
 .method constructor <init>(Ldmm;Lfur;Lhib;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldnc;->a:Ldmm;
 
-    .line 3
     iput-object p2, p0, Ldnc;->b:Lfur;
 
-    .line 4
     iput-object p3, p0, Ldnc;->c:Lhib;
 
-    .line 5
     return-void
 .end method
 
@@ -40,8 +34,6 @@
 .method public final a()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Ldnc;->a:Ldmm;
 
     invoke-virtual {v0}, Ldmm;->a()Ljava/util/List;
@@ -54,8 +46,6 @@
 .method public final b()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Ldnc;->a:Ldmm;
 
     invoke-virtual {v0}, Ldmm;->b()Ljava/util/List;
@@ -68,21 +58,16 @@
 .method public final close()V
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Ldnc;->c:Lhib;
 
     invoke-virtual {v0}, Lhib;->close()V
 
-    .line 10
     return-void
 .end method
 
 .method public final e()Lfur;
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Ldnc;->b:Lfur;
 
     return-object v0

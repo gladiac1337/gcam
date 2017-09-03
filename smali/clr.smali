@@ -11,8 +11,6 @@
 .method constructor <init>(Lclq;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lclr;->a:Lclq;
 
     invoke-direct {p0}, Lcom/google/googlex/gcam/MemoryStateCallback;-><init>()V
@@ -25,11 +23,8 @@
 .method public final Run(JJ)V
     .locals 3
 
-    .prologue
-    .line 2
     sget-object v0, Lclq;->a:Ljava/lang/String;
 
-    .line 3
     const/16 v1, 0x69
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -60,10 +55,8 @@
 
     move-result-object v1
 
-    .line 4
     invoke-static {v0, v1}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     iget-object v0, p0, Lclr;->a:Lclq;
 
     iget-object v0, v0, Lclq;->f:Latr;
@@ -74,7 +67,6 @@
 
     invoke-virtual {v0, v1}, Latr;->a(Ljava/lang/Object;)V
 
-    .line 6
     iget-object v0, p0, Lclr;->a:Lclq;
 
     iget-object v0, v0, Lclq;->g:Latr;
@@ -85,6 +77,5 @@
 
     invoke-virtual {v0, v1}, Latr;->a(Ljava/lang/Object;)V
 
-    .line 7
     return-void
 .end method

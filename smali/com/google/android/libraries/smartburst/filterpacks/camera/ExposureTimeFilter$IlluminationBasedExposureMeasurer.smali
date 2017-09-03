@@ -27,11 +27,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const-string v0, "sensor"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -42,12 +39,10 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$IlluminationBasedExposureMeasurer;->mSensorManager:Landroid/hardware/SensorManager;
 
-    .line 3
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$IlluminationBasedExposureMeasurer;->mSensorManager:Landroid/hardware/SensorManager;
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$IlluminationBasedExposureMeasurer;->mSensorManager:Landroid/hardware/SensorManager;
 
     const/4 v1, 0x5
@@ -56,14 +51,11 @@
 
     move-result-object v0
 
-    .line 5
     :goto_0
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$IlluminationBasedExposureMeasurer;->mLight:Landroid/hardware/Sensor;
 
-    .line 6
     return-void
 
-    .line 5
     :cond_0
     const/4 v0, 0x0
 
@@ -73,18 +65,14 @@
 .method private static estimateExposureFromLux(F)F
     .locals 2
 
-    .prologue
-    .line 17
     const/4 v0, 0x0
 
     cmpl-float v0, p0, v0
 
     if-nez v0, :cond_0
 
-    .line 18
     const/high16 p0, 0x42a00000    # 80.0f
 
-    .line 19
     :cond_0
     const/high16 v0, 0x44b40000    # 1440.0f
 
@@ -102,8 +90,6 @@
 .method public getFrameExposure(Lcom/google/android/libraries/smartburst/filterfw/Frame;)F
     .locals 1
 
-    .prologue
-    .line 10
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$IlluminationBasedExposureMeasurer;->mLightLx:F
 
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$IlluminationBasedExposureMeasurer;->estimateExposureFromLux(F)F
@@ -116,16 +102,12 @@
 .method public onAccuracyChanged(Landroid/hardware/Sensor;I)V
     .locals 0
 
-    .prologue
-    .line 16
     return-void
 .end method
 
 .method public onSensorChanged(Landroid/hardware/SensorEvent;)V
     .locals 2
 
-    .prologue
-    .line 14
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
     const/4 v1, 0x0
@@ -134,15 +116,12 @@
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$IlluminationBasedExposureMeasurer;->mLightLx:F
 
-    .line 15
     return-void
 .end method
 
 .method public start()V
     .locals 3
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$IlluminationBasedExposureMeasurer;->mSensorManager:Landroid/hardware/SensorManager;
 
     if-eqz v0, :cond_0
@@ -151,7 +130,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 8
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$IlluminationBasedExposureMeasurer;->mSensorManager:Landroid/hardware/SensorManager;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$IlluminationBasedExposureMeasurer;->mLight:Landroid/hardware/Sensor;
@@ -160,7 +138,6 @@
 
     invoke-virtual {v0, p0, v1, v2}, Landroid/hardware/SensorManager;->registerListener(Landroid/hardware/SensorEventListener;Landroid/hardware/Sensor;I)Z
 
-    .line 9
     :cond_0
     return-void
 .end method
@@ -168,8 +145,6 @@
 .method public stop()V
     .locals 1
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$IlluminationBasedExposureMeasurer;->mSensorManager:Landroid/hardware/SensorManager;
 
     if-eqz v0, :cond_0
@@ -178,12 +153,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 12
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$IlluminationBasedExposureMeasurer;->mSensorManager:Landroid/hardware/SensorManager;
 
     invoke-virtual {v0, p0}, Landroid/hardware/SensorManager;->unregisterListener(Landroid/hardware/SensorEventListener;)V
 
-    .line 13
     :cond_0
     return-void
 .end method

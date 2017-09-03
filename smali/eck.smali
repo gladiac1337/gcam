@@ -22,34 +22,24 @@
 .method private constructor <init>(Lebv;Lilp;Lilp;Lilp;Lilp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Leck;->a:Lebv;
 
-    .line 3
     iput-object p2, p0, Leck;->b:Lilp;
 
-    .line 4
     iput-object p3, p0, Leck;->c:Lilp;
 
-    .line 5
     iput-object p4, p0, Leck;->d:Lilp;
 
-    .line 6
     iput-object p5, p0, Leck;->e:Lilp;
 
-    .line 7
     return-void
 .end method
 
 .method public static a(Lebv;Lilp;Lilp;Lilp;Lilp;)Lilp;
     .locals 6
 
-    .prologue
-    .line 8
     new-instance v0, Leck;
 
     move-object v1, p0
@@ -72,16 +62,12 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 7
 
-    .prologue
     const/4 v4, 0x1
 
-    .line 9
-    .line 10
     iget-object v5, p0, Leck;->a:Lebv;
 
     iget-object v0, p0, Leck;->b:Lilp;
 
-    .line 11
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -90,7 +76,6 @@
 
     iget-object v1, p0, Leck;->c:Lilp;
 
-    .line 12
     invoke-interface {v1}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -99,7 +84,6 @@
 
     iget-object v2, p0, Leck;->d:Lilp;
 
-    .line 13
     invoke-interface {v2}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -108,14 +92,12 @@
 
     iget-object v3, p0, Leck;->e:Lilp;
 
-    .line 14
     invoke-interface {v3}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lfsq;
 
-    .line 16
     sget-object v6, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     invoke-interface {v3, v6}, Lfsq;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
@@ -124,7 +106,6 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 17
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
@@ -133,7 +114,6 @@
 
     const/4 v3, 0x0
 
-    .line 18
     :goto_0
     new-instance v4, Lebg;
 
@@ -147,22 +127,18 @@
 
     check-cast v0, Lebg;
 
-    .line 19
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 20
     invoke-static {v0, v1}, Ldt;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lebg;
 
-    .line 21
     return-object v0
 
     :cond_0
     move v3, v4
 
-    .line 17
     goto :goto_0
 .end method

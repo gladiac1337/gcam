@@ -24,23 +24,16 @@
 .method public final a(Lcom/google/android/gms/googlehelp/GoogleHelp;)V
     .locals 7
 
-    .prologue
-    .line 1
-    .line 2
     iget-object v0, p1, Lcom/google/android/gms/googlehelp/GoogleHelp;->b:Lcom/google/android/gms/googlehelp/internal/common/TogglingData;
 
-    .line 3
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v4, p1, Lcom/google/android/gms/googlehelp/GoogleHelp;->b:Lcom/google/android/gms/googlehelp/internal/common/TogglingData;
 
-    .line 5
     iget-object v0, p0, Lhad;->a:Lhaf;
 
     iget-object v0, v0, Lhaf;->c:Landroid/app/Activity;
 
-    .line 6
     invoke-virtual {v0}, Landroid/app/Activity;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -106,11 +99,9 @@
 
     move-result-object v0
 
-    .line 7
     :goto_1
     iput-object v0, v4, Lcom/google/android/gms/googlehelp/internal/common/TogglingData;->a:Ljava/lang/String;
 
-    .line 8
     :cond_0
     iget-object v0, p0, Lhad;->a:Lhaf;
 
@@ -150,7 +141,6 @@
 
     return-void
 
-    .line 6
     :cond_1
     add-int/lit8 v1, v2, 0x1
 

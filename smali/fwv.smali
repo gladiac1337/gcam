@@ -16,8 +16,6 @@
 .method constructor <init>(Lfwu;J)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfwv;->b:Lfwu;
 
     iput-wide p2, p0, Lfwv;->a:J
@@ -32,25 +30,17 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 4
 
-    .prologue
-    .line 3
-    .line 4
     iget-object v0, p0, Lfwv;->b:Lfwu;
 
-    .line 5
     iget-object v1, v0, Lfwu;->b:Ljava/lang/Object;
 
-    .line 6
     monitor-enter v1
 
-    .line 7
     :try_start_0
     iget-object v0, p0, Lfwv;->b:Lfwu;
 
-    .line 8
     iget-object v0, v0, Lfwu;->a:Ljava/util/Map;
 
-    .line 9
     iget-wide v2, p0, Lfwv;->a:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -59,7 +49,6 @@
 
     invoke-interface {v0, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10
     monitor-exit v1
 
     return-void
@@ -77,8 +66,6 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

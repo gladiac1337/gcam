@@ -22,8 +22,6 @@
 .method constructor <init>(Lhro;Lhpz;Lhro;Lhse;Lhpz;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhrr;->e:Lhro;
 
     iput-object p2, p0, Lhrr;->a:Lhpz;
@@ -44,41 +42,30 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lhrr;->e:Lhro;
 
-    .line 3
     iget-object v0, v0, Lhro;->a:Ljava/lang/Object;
 
-    .line 5
     if-eqz v0, :cond_0
 
-    .line 6
     iget-object v1, p0, Lhrr;->a:Lhpz;
 
     iget-object v2, p0, Lhrr;->b:Lhro;
 
-    .line 7
     invoke-static {v0, v1, v2}, Lhro;->a(Ljava/lang/Object;Lhpz;Lhro;)V
 
-    .line 13
     :goto_0
     return-void
 
-    .line 9
     :cond_0
     iget-object v0, p0, Lhrr;->e:Lhro;
 
-    .line 10
     iget-object v0, v0, Lhro;->b:Lhra;
 
-    .line 11
     iget-object v1, p0, Lhrr;->d:Lhpz;
 
     iget-object v2, p0, Lhrr;->b:Lhro;
 
-    .line 12
     invoke-static {v0, v1, v2}, Lhro;->a(Lhra;Lhpz;Lhro;)V
 
     goto :goto_0
@@ -87,8 +74,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 14
     iget-object v0, p0, Lhrr;->e:Lhro;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

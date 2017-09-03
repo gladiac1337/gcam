@@ -13,92 +13,70 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 12
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lbin;-><init>(Ljava/lang/String;Z)V
 
-    .line 13
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;B)V
     .locals 1
 
-    .prologue
-    .line 14
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lbin;-><init>(Ljava/lang/String;Z)V
 
-    .line 15
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;C)V
     .locals 1
 
-    .prologue
-    .line 16
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lbin;-><init>(Ljava/lang/String;Z)V
 
-    .line 17
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;F)V
     .locals 1
 
-    .prologue
-    .line 24
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lbin;-><init>(Ljava/lang/String;Z)V
 
-    .line 25
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;I)V
     .locals 1
 
-    .prologue
-    .line 22
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lbin;-><init>(Ljava/lang/String;Z)V
 
-    .line 23
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;S)V
     .locals 1
 
-    .prologue
-    .line 20
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lbin;-><init>(Ljava/lang/String;Z)V
 
-    .line 21
     return-void
 .end method
 
 .method protected constructor <init>(Ljava/lang/String;Z)V
     .locals 5
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     const-string v0, "persist."
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -107,7 +85,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "persist."
@@ -192,7 +169,6 @@
 
     throw v0
 
-    .line 6
     :cond_0
     const-string v0, "persist."
 
@@ -214,7 +190,6 @@
 
     move-result-object v0
 
-    .line 7
     :goto_0
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -224,7 +199,6 @@
 
     if-le v1, v2, :cond_2
 
-    .line 8
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -279,7 +253,6 @@
 
     throw v1
 
-    .line 6
     :cond_1
     new-instance v0, Ljava/lang/String;
 
@@ -287,24 +260,18 @@
 
     goto :goto_0
 
-    .line 9
     :cond_2
     iput-object p1, p0, Lbin;->a:Ljava/lang/String;
 
-    .line 10
     iput-boolean p2, p0, Lbin;->b:Z
 
-    .line 11
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;ZB)V
     .locals 0
 
-    .prologue
-    .line 18
     invoke-direct {p0, p1, p2}, Lbin;-><init>(Ljava/lang/String;Z)V
 
-    .line 19
     return-void
 .end method

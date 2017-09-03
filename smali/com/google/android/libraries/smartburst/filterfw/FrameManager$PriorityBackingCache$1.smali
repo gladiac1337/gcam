@@ -10,8 +10,6 @@
 .method constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public compare(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;)I
     .locals 2
 
-    .prologue
-    .line 2
     iget v0, p1, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->cachePriority:I
 
     iget v1, p2, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->cachePriority:I
@@ -36,8 +32,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 3
     check-cast p1, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
     check-cast p2, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;

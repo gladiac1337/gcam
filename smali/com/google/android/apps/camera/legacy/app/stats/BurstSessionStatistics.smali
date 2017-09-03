@@ -32,8 +32,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 61
     const-string v0, "BurstSessionStats"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -48,27 +46,20 @@
 .method public constructor <init>(Lhpu;Ljava/lang/String;)V
     .locals 2
 
-    .prologue
     const-wide/16 v0, 0x0
 
-    .line 2
     invoke-direct {p0, p1, p2}, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;-><init>(Lhpu;Ljava/lang/String;)V
 
-    .line 3
     iput-wide v0, p0, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->b:J
 
-    .line 4
     iput-wide v0, p0, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->c:J
 
-    .line 5
     return-void
 .end method
 
 .method public static a()Lilp;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Lemm;
 
     invoke-direct {v0}, Lemm;-><init>()V
@@ -81,8 +72,6 @@
 .method public final declared-synchronized b()V
     .locals 4
 
-    .prologue
-    .line 6
     monitor-enter p0
 
     :try_start_0
@@ -94,20 +83,16 @@
 
     if-nez v0, :cond_0
 
-    .line 8
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v0
 
-    .line 9
     iput-wide v0, p0, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->b:J
 
-    .line 10
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->h:I
 
-    .line 11
     const-string v0, "Burst started"
 
     iget-wide v2, p0, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->b:J
@@ -116,13 +101,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 12
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 6
     :catchall_0
     move-exception v0
 
@@ -134,10 +117,8 @@
 .method public final declared-synchronized c()V
     .locals 4
 
-    .prologue
     const-wide/16 v2, 0x0
 
-    .line 13
     monitor-enter p0
 
     :try_start_0
@@ -153,15 +134,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 15
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v0
 
-    .line 16
     iput-wide v0, p0, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->c:J
 
-    .line 17
     const-string v0, "Burst ended"
 
     iget-wide v2, p0, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->c:J
@@ -170,13 +148,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 18
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 13
     :catchall_0
     move-exception v0
 
@@ -188,8 +164,6 @@
 .method public final declared-synchronized d()V
     .locals 4
 
-    .prologue
-    .line 19
     monitor-enter p0
 
     :try_start_0
@@ -201,15 +175,12 @@
 
     if-nez v0, :cond_0
 
-    .line 21
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v0
 
-    .line 22
     iput-wide v0, p0, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->d:J
 
-    .line 23
     const-string v0, "Burst sound indicator started"
 
     iget-wide v2, p0, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->d:J
@@ -218,13 +189,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 24
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 19
     :catchall_0
     move-exception v0
 
@@ -236,8 +205,6 @@
 .method public final declared-synchronized e()V
     .locals 4
 
-    .prologue
-    .line 25
     monitor-enter p0
 
     :try_start_0
@@ -249,15 +216,12 @@
 
     if-nez v0, :cond_0
 
-    .line 27
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v0
 
-    .line 28
     iput-wide v0, p0, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->e:J
 
-    .line 29
     const-string v0, "Burst sound indicator stopped"
 
     iget-wide v2, p0, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->e:J
@@ -266,13 +230,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 30
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 25
     :catchall_0
     move-exception v0
 
@@ -284,8 +246,6 @@
 .method public final declared-synchronized f()V
     .locals 4
 
-    .prologue
-    .line 31
     monitor-enter p0
 
     :try_start_0
@@ -297,15 +257,12 @@
 
     if-nez v0, :cond_0
 
-    .line 33
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v0
 
-    .line 34
     iput-wide v0, p0, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->f:J
 
-    .line 35
     const-string v0, "Burst previews generated"
 
     iget-wide v2, p0, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->f:J
@@ -314,13 +271,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 36
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 31
     :catchall_0
     move-exception v0
 
@@ -332,8 +287,6 @@
 .method public final declared-synchronized g()V
     .locals 4
 
-    .prologue
-    .line 37
     monitor-enter p0
 
     :try_start_0
@@ -345,15 +298,12 @@
 
     if-nez v0, :cond_0
 
-    .line 39
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v0
 
-    .line 40
     iput-wide v0, p0, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->g:J
 
-    .line 41
     const-string v0, "Burst all files saved"
 
     iget-wide v2, p0, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->g:J
@@ -362,13 +312,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 42
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 37
     :catchall_0
     move-exception v0
 
@@ -382,8 +330,6 @@
     .annotation build Lcom/google/android/apps/common/proguard/UsedByReflection;
     .end annotation
 
-    .prologue
-    .line 50
     monitor-enter p0
 
     :try_start_0
@@ -408,8 +354,6 @@
     .annotation build Lcom/google/android/apps/common/proguard/UsedByReflection;
     .end annotation
 
-    .prologue
-    .line 52
     monitor-enter p0
 
     :try_start_0
@@ -419,14 +363,12 @@
 
     sub-long/2addr v0, v2
 
-    .line 53
     long-to-float v0, v0
 
     const v1, 0x4e6e6b28    # 1.0E9f
 
     div-float/2addr v0, v1
 
-    .line 54
     iget v1, p0, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->h:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -439,7 +381,6 @@
 
     return v0
 
-    .line 52
     :catchall_0
     move-exception v0
 
@@ -453,8 +394,6 @@
     .annotation build Lcom/google/android/apps/common/proguard/UsedByReflection;
     .end annotation
 
-    .prologue
-    .line 46
     monitor-enter p0
 
     :try_start_0
@@ -479,8 +418,6 @@
     .annotation build Lcom/google/android/apps/common/proguard/UsedByReflection;
     .end annotation
 
-    .prologue
-    .line 49
     monitor-enter p0
 
     :try_start_0
@@ -505,8 +442,6 @@
     .annotation build Lcom/google/android/apps/common/proguard/UsedByReflection;
     .end annotation
 
-    .prologue
-    .line 48
     monitor-enter p0
 
     :try_start_0
@@ -531,8 +466,6 @@
     .annotation build Lcom/google/android/apps/common/proguard/UsedByReflection;
     .end annotation
 
-    .prologue
-    .line 58
     monitor-enter p0
 
     :try_start_0
@@ -544,14 +477,12 @@
 
     sub-long/2addr v0, v2
 
-    .line 59
     long-to-float v0, v0
 
     const v1, 0x4e6e6b28    # 1.0E9f
 
     div-float/2addr v0, v1
 
-    .line 60
     const/4 v1, 0x0
 
     div-float v0, v1, v0
@@ -560,7 +491,6 @@
 
     return v0
 
-    .line 58
     :catchall_0
     move-exception v0
 
@@ -574,8 +504,6 @@
     .annotation build Lcom/google/android/apps/common/proguard/UsedByReflection;
     .end annotation
 
-    .prologue
-    .line 55
     monitor-enter p0
 
     :try_start_0
@@ -587,14 +515,12 @@
 
     sub-long/2addr v0, v2
 
-    .line 56
     long-to-float v0, v0
 
     const v1, 0x4e6e6b28    # 1.0E9f
 
     div-float/2addr v0, v1
 
-    .line 57
     const/4 v1, 0x0
 
     div-float v0, v1, v0
@@ -603,7 +529,6 @@
 
     return v0
 
-    .line 55
     :catchall_0
     move-exception v0
 
@@ -617,8 +542,6 @@
     .annotation build Lcom/google/android/apps/common/proguard/UsedByReflection;
     .end annotation
 
-    .prologue
-    .line 47
     monitor-enter p0
 
     :try_start_0
@@ -643,8 +566,6 @@
     .annotation build Lcom/google/android/apps/common/proguard/UsedByReflection;
     .end annotation
 
-    .prologue
-    .line 45
     monitor-enter p0
 
     :try_start_0
@@ -669,8 +590,6 @@
     .annotation build Lcom/google/android/apps/common/proguard/UsedByReflection;
     .end annotation
 
-    .prologue
-    .line 51
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -683,8 +602,6 @@
 .method public final declared-synchronized h()V
     .locals 1
 
-    .prologue
-    .line 43
     monitor-enter p0
 
     :try_start_0
@@ -696,12 +613,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 44
     monitor-exit p0
 
     return-void
 
-    .line 43
     :catchall_0
     move-exception v0
 

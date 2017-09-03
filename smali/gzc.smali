@@ -19,13 +19,10 @@
 .method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 8
 
-    .prologue
     const/4 v3, 0x0
 
     const/4 v5, 0x0
 
-    .line 4
-    .line 5
     invoke-static {p1}, Lkk;->a(Landroid/os/Parcel;)I
 
     move-result v6
@@ -43,17 +40,14 @@
 
     if-ge v0, v6, :cond_0
 
-    .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 8
     const v7, 0xffff
 
     and-int/2addr v7, v0
 
-    .line 9
     packed-switch v7, :pswitch_data_0
 
     invoke-static {p1, v0}, Lkk;->b(Landroid/os/Parcel;I)V
@@ -133,10 +127,8 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/common/internal/ResolveAccountResponse;-><init>(ILandroid/os/IBinder;Lcom/google/android/gms/common/ConnectionResult;ZZ)V
 
-    .line 10
     return-object v0
 
-    .line 9
     nop
 
     :pswitch_data_0
@@ -152,11 +144,7 @@
 .method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     new-array v0, p1, [Lcom/google/android/gms/common/internal/ResolveAccountResponse;
 
-    .line 3
     return-object v0
 .end method

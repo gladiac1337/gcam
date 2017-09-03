@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 54
     const-string v0, "PlaceholderMgr"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -29,7 +27,6 @@
 
     sput-object v0, Leir;->c:Ljava/lang/String;
 
-    .line 55
     new-instance v0, Laev;
 
     invoke-direct {v0}, Laev;-><init>()V
@@ -42,32 +39,24 @@
 .method public constructor <init>(Landroid/content/Context;Lgjf;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Leir;->a:Landroid/content/Context;
 
-    .line 3
     iput-object p2, p0, Leir;->b:Lgjf;
 
-    .line 4
     return-void
 .end method
 
 .method private final a(Landroid/graphics/Bitmap;)Lajm;
     .locals 3
 
-    .prologue
-    .line 51
     new-instance v0, Lajm;
 
     new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
 
     iget-object v2, p0, Leir;->a:Landroid/content/Context;
 
-    .line 52
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -78,7 +67,6 @@
 
     invoke-direct {v0, v1, v2}, Lajm;-><init>(Landroid/graphics/drawable/BitmapDrawable;Laeu;)V
 
-    .line 53
     return-object v0
 .end method
 
@@ -90,19 +78,16 @@
         value = 0x15
     .end annotation
 
-    .prologue
     const/4 v4, 0x0
 
     const/4 v3, 0x0
 
-    .line 28
     iget-object v0, p0, Leir;->a:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 29
     const/4 v1, 0x2
 
     new-array v2, v1, [Ljava/lang/String;
@@ -123,12 +108,10 @@
 
     move-object v5, v3
 
-    .line 30
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v2
 
-    .line 32
     if-eqz v2, :cond_0
 
     :try_start_0
@@ -141,18 +124,15 @@
 
     if-nez v0, :cond_2
 
-    .line 33
     :cond_0
     if-eqz v2, :cond_1
 
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    .line 48
     :cond_1
     :goto_0
     return-object v3
 
-    .line 35
     :cond_2
     :try_start_1
     const-string v0, "datetaken"
@@ -161,44 +141,36 @@
 
     move-result v0
 
-    .line 36
     const-string v1, "_display_name"
 
     invoke-interface {v2, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 37
     invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 38
     invoke-interface {v2, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v4
 
-    .line 39
     invoke-interface {v2, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 40
     invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v1
 
     sget-object v6, Lgje;->c:Lgje;
 
-    .line 41
     iget-object v6, v6, Lgje;->j:Ljava/lang/String;
 
-    .line 42
     invoke-virtual {v1, v6}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_6
 
-    .line 43
     const/4 v1, 0x0
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -207,10 +179,8 @@
 
     sget-object v7, Lgje;->c:Lgje;
 
-    .line 44
     iget-object v7, v7, Lgje;->j:Ljava/lang/String;
 
-    .line 45
     invoke-virtual {v7}, Ljava/lang/String;->length()I
 
     move-result v7
@@ -223,7 +193,6 @@
 
     move-object v1, v0
 
-    .line 46
     :goto_1
     new-instance v0, Leis;
 
@@ -232,7 +201,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 47
     if-eqz v2, :cond_3
 
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
@@ -240,10 +208,8 @@
     :cond_3
     move-object v3, v0
 
-    .line 48
     goto :goto_0
 
-    .line 49
     :catch_0
     move-exception v0
 
@@ -252,7 +218,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 50
     :catchall_0
     move-exception v1
 
@@ -300,13 +265,10 @@
 .method public final a(Ljava/lang/String;Laky;J)Leis;
     .locals 3
 
-    .prologue
-    .line 7
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 8
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -316,7 +278,6 @@
 
     throw v0
 
-    .line 9
     :cond_1
     iget-object v0, p0, Leir;->b:Lgjf;
 
@@ -324,13 +285,10 @@
 
     move-result-object v1
 
-    .line 10
     if-nez v1, :cond_2
 
-    .line 11
     const/4 v0, 0x0
 
-    .line 12
     :goto_0
     return-object v0
 
@@ -345,15 +303,12 @@
 .method public final a(Ljava/lang/String;Lhja;J)Leis;
     .locals 3
 
-    .prologue
-    .line 5
     iget-object v0, p0, Leir;->b:Lgjf;
 
     invoke-interface {v0, p2, p3, p4}, Lgjf;->a(Lhja;J)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 6
     new-instance v1, Leis;
 
     invoke-direct {v1, p1, v0, p3, p4}, Leis;-><init>(Ljava/lang/String;Landroid/net/Uri;J)V
@@ -364,13 +319,10 @@
 .method public final a(Ljava/lang/String;[BJ)Leis;
     .locals 3
 
-    .prologue
-    .line 13
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 14
     const/4 v1, 0x0
 
     array-length v2, p2
@@ -379,7 +331,6 @@
 
     move-result-object v0
 
-    .line 16
     invoke-direct {p0, v0}, Leir;->a(Landroid/graphics/Bitmap;)Lajm;
 
     move-result-object v0
@@ -388,15 +339,12 @@
 
     move-result-object v0
 
-    .line 17
     return-object v0
 .end method
 
 .method public final a(Leis;)Lilc;
     .locals 2
 
-    .prologue
-    .line 23
     iget-object v0, p0, Leir;->b:Lgjf;
 
     iget-object v1, p1, Leis;->b:Landroid/net/Uri;
@@ -411,55 +359,43 @@
 .method public final a(Leis;Laky;)V
     .locals 2
 
-    .prologue
-    .line 18
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 19
     iget-object v0, p0, Leir;->b:Lgjf;
 
     iget-object v1, p1, Leis;->b:Landroid/net/Uri;
 
     invoke-interface {v0, v1, p2}, Lgjf;->a(Landroid/net/Uri;Laky;)V
 
-    .line 20
     return-void
 .end method
 
 .method public final a(Leis;Landroid/graphics/Bitmap;)V
     .locals 1
 
-    .prologue
-    .line 21
     invoke-direct {p0, p2}, Leir;->a(Landroid/graphics/Bitmap;)Lajm;
 
     move-result-object v0
 
     invoke-virtual {p0, p1, v0}, Leir;->a(Leis;Laky;)V
 
-    .line 22
     return-void
 .end method
 
 .method public final b(Leis;)V
     .locals 2
 
-    .prologue
-    .line 24
     if-eqz p1, :cond_0
 
-    .line 25
     iget-object v0, p0, Leir;->b:Lgjf;
 
     iget-object v1, p1, Leis;->b:Landroid/net/Uri;
 
     invoke-interface {v0, v1}, Lgjf;->a(Landroid/net/Uri;)V
 
-    .line 27
     :goto_0
     return-void
 
-    .line 26
     :cond_0
     sget-object v0, Leir;->c:Ljava/lang/String;
 

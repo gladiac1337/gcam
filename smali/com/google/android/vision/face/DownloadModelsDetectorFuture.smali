@@ -10,8 +10,6 @@
 .method public cancel(Z)Z
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -22,8 +20,6 @@
 .method public synthetic get()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 5
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -34,8 +30,6 @@
 .method public synthetic get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 4
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -46,8 +40,6 @@
 .method public isCancelled()Z
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -58,8 +50,6 @@
 .method public isDone()Z
     .locals 1
 
-    .prologue
-    .line 3
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V

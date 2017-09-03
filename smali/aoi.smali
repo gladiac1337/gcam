@@ -14,21 +14,16 @@
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     const-string v0, "Argument must not be null"
 
     invoke-static {p1, v0}, Lhco;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 4
     iput-object v0, p0, Laoi;->b:Ljava/lang/Object;
 
-    .line 5
     return-void
 .end method
 
@@ -37,8 +32,6 @@
 .method public final a(Ljava/security/MessageDigest;)V
     .locals 2
 
-    .prologue
-    .line 12
     iget-object v0, p0, Laoi;->b:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -53,23 +46,18 @@
 
     invoke-virtual {p1, v0}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 13
     return-void
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 7
     instance-of v0, p1, Laoi;
 
     if-eqz v0, :cond_0
 
-    .line 8
     check-cast p1, Laoi;
 
-    .line 9
     iget-object v0, p0, Laoi;->b:Ljava/lang/Object;
 
     iget-object v1, p1, Laoi;->b:Ljava/lang/Object;
@@ -78,7 +66,6 @@
 
     move-result v0
 
-    .line 10
     :goto_0
     return v0
 
@@ -91,8 +78,6 @@
 .method public final hashCode()I
     .locals 1
 
-    .prologue
-    .line 11
     iget-object v0, p0, Laoi;->b:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -105,8 +90,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 6
     iget-object v0, p0, Laoi;->b:Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

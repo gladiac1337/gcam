@@ -97,203 +97,156 @@
 .method constructor <init>(Landroid/content/Context;Lfss;Lddd;Lgmp;Lbwh;Lfgl;Lepv;Leek;Lgjc;Lhic;Lcom/google/android/apps/camera/config/GservicesHelper;Lfcu;Lfdc;Lghx;Lcfq;Lbnj;Lbnn;Lgjj;Lgiz;Lhkr;Lfax;Lesm;Leyo;Lfgy;Lavm;Lgow;Lgou;Lgft;Lgfs;Lbhg;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lghg;Leuc;Lesr;Lilc;Lgeh;Lapl;Leks;Lgmh;Lhjz;Lfrh;Lddu;Lgch;Lerg;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lcmx;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcrl;->a:Landroid/content/Context;
 
-    .line 3
     iput-object p2, p0, Lcrl;->b:Lfss;
 
-    .line 4
     iput-object p3, p0, Lcrl;->c:Lddd;
 
-    .line 5
     iput-object p4, p0, Lcrl;->d:Lgmp;
 
-    .line 6
     iput-object p5, p0, Lcrl;->e:Lbwh;
 
-    .line 7
     iput-object p6, p0, Lcrl;->f:Lfgl;
 
-    .line 8
     iput-object p7, p0, Lcrl;->g:Lepv;
 
-    .line 9
     iput-object p8, p0, Lcrl;->q:Leek;
 
-    .line 10
     move-object/from16 v0, p16
 
     iput-object v0, p0, Lcrl;->r:Lbnj;
 
-    .line 11
     iput-object p10, p0, Lcrl;->h:Lhic;
 
-    .line 12
     iput-object p11, p0, Lcrl;->i:Lcom/google/android/apps/camera/config/GservicesHelper;
 
-    .line 13
     iput-object p12, p0, Lcrl;->j:Lfcu;
 
-    .line 14
     iput-object p13, p0, Lcrl;->k:Lfdc;
 
-    .line 15
     iput-object p14, p0, Lcrl;->m:Lghx;
 
-    .line 16
     move-object/from16 v0, p15
 
     iput-object v0, p0, Lcrl;->l:Lcfq;
 
-    .line 17
     move-object/from16 v0, p18
 
     iput-object v0, p0, Lcrl;->n:Lgjj;
 
-    .line 18
     iput-object p9, p0, Lcrl;->o:Lgjc;
 
-    .line 19
     move-object/from16 v0, p19
 
     iput-object v0, p0, Lcrl;->p:Lgiz;
 
-    .line 20
     move-object/from16 v0, p17
 
     iput-object v0, p0, Lcrl;->s:Lbnn;
 
-    .line 21
     move-object/from16 v0, p20
 
     iput-object v0, p0, Lcrl;->t:Lhkr;
 
-    .line 22
     move-object/from16 v0, p21
 
     iput-object v0, p0, Lcrl;->u:Lfax;
 
-    .line 23
     move-object/from16 v0, p22
 
     iput-object v0, p0, Lcrl;->v:Lesm;
 
-    .line 24
     move-object/from16 v0, p23
 
     iput-object v0, p0, Lcrl;->w:Leyo;
 
-    .line 25
     move-object/from16 v0, p24
 
     iput-object v0, p0, Lcrl;->x:Lfgy;
 
-    .line 26
     move-object/from16 v0, p25
 
     iput-object v0, p0, Lcrl;->y:Lavm;
 
-    .line 27
     move-object/from16 v0, p26
 
     iput-object v0, p0, Lcrl;->z:Lgow;
 
-    .line 28
     move-object/from16 v0, p27
 
     iput-object v0, p0, Lcrl;->A:Lgou;
 
-    .line 29
     move-object/from16 v0, p28
 
     iput-object v0, p0, Lcrl;->B:Lgft;
 
-    .line 30
     move-object/from16 v0, p29
 
     iput-object v0, p0, Lcrl;->C:Lgfs;
 
-    .line 31
     move-object/from16 v0, p30
 
     iput-object v0, p0, Lcrl;->D:Lbhg;
 
-    .line 32
     move-object/from16 v0, p31
 
     iput-object v0, p0, Lcrl;->E:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
-    .line 33
     move-object/from16 v0, p32
 
     iput-object v0, p0, Lcrl;->F:Lghg;
 
-    .line 34
     move-object/from16 v0, p33
 
     iput-object v0, p0, Lcrl;->G:Leuc;
 
-    .line 35
     move-object/from16 v0, p34
 
     iput-object v0, p0, Lcrl;->H:Lesr;
 
-    .line 36
     move-object/from16 v0, p35
 
     iput-object v0, p0, Lcrl;->I:Lilc;
 
-    .line 37
     move-object/from16 v0, p36
 
     iput-object v0, p0, Lcrl;->J:Lgeh;
 
-    .line 38
     move-object/from16 v0, p37
 
     iput-object v0, p0, Lcrl;->K:Lapl;
 
-    .line 39
     move-object/from16 v0, p38
 
     iput-object v0, p0, Lcrl;->L:Leks;
 
-    .line 40
     move-object/from16 v0, p39
 
     iput-object v0, p0, Lcrl;->M:Lgmh;
 
-    .line 41
     move-object/from16 v0, p40
 
     iput-object v0, p0, Lcrl;->N:Lhjz;
 
-    .line 42
     move-object/from16 v0, p41
 
     iput-object v0, p0, Lcrl;->O:Lfrh;
 
-    .line 43
     move-object/from16 v0, p42
 
     iput-object v0, p0, Lcrl;->P:Lddu;
 
-    .line 44
     move-object/from16 v0, p43
 
     iput-object v0, p0, Lcrl;->Q:Lgch;
 
-    .line 45
     move-object/from16 v0, p44
 
     iput-object v0, p0, Lcrl;->R:Lerg;
 
-    .line 46
     return-void
 .end method
 
@@ -302,8 +255,6 @@
 .method protected final a(Lbqs;)Lcna;
     .locals 43
 
-    .prologue
-    .line 47
     new-instance v1, Lcra;
 
     move-object/from16 v0, p0
@@ -350,7 +301,6 @@
 
     iget-object v7, v0, Lcrl;->f:Lfgl;
 
-    .line 48
     invoke-virtual {v7}, Lfgl;->a()Landroid/content/Intent;
 
     move-result-object v13
@@ -375,7 +325,6 @@
 
     move-object/from16 v17, v0
 
-    .line 49
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcrl;->j:Lfcu;
@@ -530,6 +479,5 @@
 
     invoke-direct/range {v1 .. v42}, Lcra;-><init>(Landroid/content/Context;Lfss;Lddd;Lgmp;Lbwh;Lbqs;Lbnn;Lepv;Lgjj;Lgjc;Lcom/google/android/apps/camera/config/GservicesHelper;Landroid/content/Intent;Lhic;Lghx;Lcfq;Lbnj;Lfcu;Lfdc;Lhkr;Lfax;Lesm;Leyo;Lfgy;Lavm;Lgow;Lgou;Lgft;Lgfs;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lghg;Leuc;Lesr;Lgeh;Lapl;Leks;Lgmh;Lhjz;Lfrh;Lddu;Lgch;Lerg;)V
 
-    .line 50
     return-object v1
 .end method

@@ -13,8 +13,6 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
-    .line 14
     invoke-static {}, Lcom/google/googlex/gcam/GcamModuleJNI;->new_BurstSpec()J
 
     move-result-wide v0
@@ -23,32 +21,24 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/BurstSpec;-><init>(JZ)V
 
-    .line 15
     return-void
 .end method
 
 .method protected constructor <init>(JZ)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-boolean p3, p0, Lcom/google/googlex/gcam/BurstSpec;->swigCMemOwn:Z
 
-    .line 3
     iput-wide p1, p0, Lcom/google/googlex/gcam/BurstSpec;->swigCPtr:J
 
-    .line 4
     return-void
 .end method
 
 .method protected static getCPtr(Lcom/google/googlex/gcam/BurstSpec;)J
     .locals 2
 
-    .prologue
-    .line 5
     if-nez p0, :cond_0
 
     const-wide/16 v0, 0x0
@@ -67,21 +57,16 @@
 .method public Clear()V
     .locals 2
 
-    .prologue
-    .line 16
     iget-wide v0, p0, Lcom/google/googlex/gcam/BurstSpec;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->BurstSpec_Clear(JLcom/google/googlex/gcam/BurstSpec;)V
 
-    .line 17
     return-void
 .end method
 
 .method public DeserializeFromString(Lcom/google/googlex/gcam/SWIGTYPE_p_p_char;)Z
     .locals 4
 
-    .prologue
-    .line 22
     iget-wide v0, p0, Lcom/google/googlex/gcam/BurstSpec;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/SWIGTYPE_p_p_char;->getCPtr(Lcom/google/googlex/gcam/SWIGTYPE_p_p_char;)J
@@ -98,21 +83,16 @@
 .method public Print(I)V
     .locals 2
 
-    .prologue
-    .line 18
     iget-wide v0, p0, Lcom/google/googlex/gcam/BurstSpec;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->BurstSpec_Print(JLcom/google/googlex/gcam/BurstSpec;I)V
 
-    .line 19
     return-void
 .end method
 
 .method public SerializeToString(Lcom/google/googlex/gcam/SWIGTYPE_p_std__string;)V
     .locals 4
 
-    .prologue
-    .line 20
     iget-wide v0, p0, Lcom/google/googlex/gcam/BurstSpec;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/SWIGTYPE_p_std__string;->getCPtr(Lcom/google/googlex/gcam/SWIGTYPE_p_std__string;)J
@@ -121,17 +101,14 @@
 
     invoke-static {v0, v1, p0, v2, v3}, Lcom/google/googlex/gcam/GcamModuleJNI;->BurstSpec_SerializeToString(JLcom/google/googlex/gcam/BurstSpec;J)V
 
-    .line 21
     return-void
 .end method
 
 .method public declared-synchronized delete()V
     .locals 4
 
-    .prologue
     const-wide/16 v2, 0x0
 
-    .line 8
     monitor-enter p0
 
     :try_start_0
@@ -141,22 +118,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 9
     iget-boolean v0, p0, Lcom/google/googlex/gcam/BurstSpec;->swigCMemOwn:Z
 
     if-eqz v0, :cond_0
 
-    .line 10
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/googlex/gcam/BurstSpec;->swigCMemOwn:Z
 
-    .line 11
     iget-wide v0, p0, Lcom/google/googlex/gcam/BurstSpec;->swigCPtr:J
 
     invoke-static {v0, v1}, Lcom/google/googlex/gcam/GcamModuleJNI;->delete_BurstSpec(J)V
 
-    .line 12
     :cond_0
     const-wide/16 v0, 0x0
 
@@ -164,13 +137,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 13
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 8
     :catchall_0
     move-exception v0
 
@@ -182,26 +153,20 @@
 .method protected finalize()V
     .locals 0
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Lcom/google/googlex/gcam/BurstSpec;->delete()V
 
-    .line 7
     return-void
 .end method
 
 .method public getFrame_requests()Lcom/google/googlex/gcam/FrameRequestVector;
     .locals 4
 
-    .prologue
-    .line 25
     iget-wide v0, p0, Lcom/google/googlex/gcam/BurstSpec;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->BurstSpec_frame_requests_get(JLcom/google/googlex/gcam/BurstSpec;)J
 
     move-result-wide v2
 
-    .line 26
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -226,8 +191,6 @@
 .method public setFrame_requests(Lcom/google/googlex/gcam/FrameRequestVector;)V
     .locals 6
 
-    .prologue
-    .line 23
     iget-wide v0, p0, Lcom/google/googlex/gcam/BurstSpec;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/FrameRequestVector;->getCPtr(Lcom/google/googlex/gcam/FrameRequestVector;)J
@@ -240,6 +203,5 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->BurstSpec_frame_requests_set(JLcom/google/googlex/gcam/BurstSpec;JLcom/google/googlex/gcam/FrameRequestVector;)V
 
-    .line 24
     return-void
 .end method

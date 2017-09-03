@@ -11,11 +11,8 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     return-void
 .end method
 
@@ -24,13 +21,10 @@
 .method public final I()V
     .locals 3
 
-    .prologue
-    .line 3
     invoke-static {}, Lcom/google/android/apps/camera/legacy/app/stats/Instrumentation;->instance()Lcom/google/android/apps/camera/legacy/app/stats/Instrumentation;
 
     move-result-object v1
 
-    .line 4
     invoke-virtual {v1}, Lcom/google/android/apps/camera/legacy/app/stats/Instrumentation;->cameraActivity()Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSessionRecorder;
 
     move-result-object v0
@@ -56,12 +50,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;
 
-    .line 5
     invoke-virtual {v0}, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;->i()V
 
     goto :goto_0
 
-    .line 7
     :cond_0
     invoke-virtual {v1}, Lcom/google/android/apps/camera/legacy/app/stats/Instrumentation;->cameraDevice()Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSessionRecorder;
 
@@ -88,12 +80,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;
 
-    .line 8
     invoke-virtual {v0}, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;->i()V
 
     goto :goto_1
 
-    .line 10
     :cond_1
     invoke-virtual {v1}, Lcom/google/android/apps/camera/legacy/app/stats/Instrumentation;->cameraChange()Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSessionRecorder;
 
@@ -120,12 +110,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;
 
-    .line 11
     invoke-virtual {v0}, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;->i()V
 
     goto :goto_2
 
-    .line 13
     :cond_2
     invoke-virtual {v1}, Lcom/google/android/apps/camera/legacy/app/stats/Instrumentation;->captureSession()Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSessionRecorder;
 
@@ -152,12 +140,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;
 
-    .line 14
     invoke-virtual {v0}, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;->i()V
 
     goto :goto_3
 
-    .line 16
     :cond_3
     invoke-virtual {v1}, Lcom/google/android/apps/camera/legacy/app/stats/Instrumentation;->modeSwitch()Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSessionRecorder;
 
@@ -184,12 +170,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;
 
-    .line 17
     invoke-virtual {v0}, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;->i()V
 
     goto :goto_4
 
-    .line 19
     :cond_4
     invoke-virtual {v1}, Lcom/google/android/apps/camera/legacy/app/stats/Instrumentation;->jankStats()Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSessionRecorder;
 
@@ -216,12 +200,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;
 
-    .line 20
     invoke-virtual {v0}, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;->i()V
 
     goto :goto_5
 
-    .line 22
     :cond_5
     invoke-virtual {v1}, Lcom/google/android/apps/camera/legacy/app/stats/Instrumentation;->viewfinder()Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSessionRecorder;
 
@@ -248,12 +230,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;
 
-    .line 23
     invoke-virtual {v0}, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;->i()V
 
     goto :goto_6
 
-    .line 25
     :cond_6
     invoke-virtual {v1}, Lcom/google/android/apps/camera/legacy/app/stats/Instrumentation;->oneCamera()Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSessionRecorder;
 
@@ -280,12 +260,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;
 
-    .line 26
     invoke-virtual {v0}, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;->i()V
 
     goto :goto_7
 
-    .line 28
     :cond_7
     invoke-virtual {v1}, Lcom/google/android/apps/camera/legacy/app/stats/Instrumentation;->burstStats()Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSessionRecorder;
 
@@ -312,12 +290,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;
 
-    .line 29
     invoke-virtual {v0}, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;->i()V
 
     goto :goto_8
 
-    .line 31
     :cond_8
     return-void
 .end method

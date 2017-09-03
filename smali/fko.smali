@@ -13,16 +13,12 @@
 .method public constructor <init>()V
     .locals 11
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lfjq;-><init>()V
 
-    .line 2
     const/4 v0, 0x0
 
     iput v0, p0, Lfko;->f:I
 
-    .line 3
     :try_start_0
     new-instance v0, Lfjv;
 
@@ -30,22 +26,18 @@
 
     iput-object v0, p0, Lfko;->g:Lfjv;
 
-    .line 4
     iget-object v0, p0, Lfko;->g:Lfjv;
 
     sget-object v1, Lfht;->e:[F
 
     invoke-virtual {v0, v1}, Lfjv;->b([F)V
 
-    .line 7
     const v0, 0xe5b0
 
-    .line 8
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 9
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v1
@@ -54,17 +46,14 @@
 
     move-result-object v0
 
-    .line 10
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
     move-result-object v0
 
     iput-object v0, p0, Lfjq;->a:Ljava/nio/FloatBuffer;
 
-    .line 11
     const/16 v0, 0x2648
 
-    .line 12
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -83,15 +72,12 @@
 
     iput-object v0, p0, Lfjq;->c:Ljava/nio/ShortBuffer;
 
-    .line 13
     const v0, 0x9920
 
-    .line 14
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 15
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v1
@@ -100,23 +86,18 @@
 
     move-result-object v0
 
-    .line 16
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
     move-result-object v0
 
     iput-object v0, p0, Lfjq;->b:Ljava/nio/FloatBuffer;
 
-    .line 17
     const v1, -0x3f5ccccc    # -5.1000004f
 
-    .line 18
     const/4 v3, 0x0
 
-    .line 19
     const/4 v2, 0x0
 
-    .line 20
     const/4 v0, 0x0
 
     move v7, v0
@@ -128,10 +109,8 @@
 
     if-ge v7, v0, :cond_2
 
-    .line 21
     const v1, -0x3f5ccccc    # -5.1000004f
 
-    .line 22
     const/4 v0, 0x0
 
     move v4, v1
@@ -147,7 +126,6 @@
 
     if-ge v3, v0, :cond_1
 
-    .line 24
     add-int/lit8 v0, v5, 0x1
 
     int-to-short v0, v0
@@ -158,7 +136,6 @@
 
     invoke-virtual {p0, v5, v2, v4}, Lfko;->a(IFF)V
 
-    .line 25
     add-int/lit8 v2, v0, 0x1
 
     int-to-short v2, v2
@@ -169,7 +146,6 @@
 
     invoke-virtual {p0, v0, v6, v4}, Lfko;->a(IFF)V
 
-    .line 26
     add-int/lit8 v0, v2, 0x1
 
     int-to-short v0, v0
@@ -180,7 +156,6 @@
 
     invoke-virtual {p0, v2, v8, v6}, Lfko;->a(IFF)V
 
-    .line 27
     add-int/lit8 v2, v0, 0x1
 
     int-to-short v6, v2
@@ -191,7 +166,6 @@
 
     invoke-virtual {p0, v0, v8, v2}, Lfko;->a(IFF)V
 
-    .line 28
     const/4 v0, 0x0
 
     :goto_2
@@ -199,7 +173,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 29
     add-int/lit8 v2, v1, 0x1
 
     int-to-short v2, v2
@@ -208,25 +181,21 @@
 
     int-to-short v9, v9
 
-    .line 30
     iget-object v10, p0, Lfjq;->c:Ljava/nio/ShortBuffer;
 
     invoke-virtual {v10, v1, v9}, Ljava/nio/ShortBuffer;->put(IS)Ljava/nio/ShortBuffer;
 
-    .line 31
     add-int/lit8 v0, v0, 0x1
 
     move v1, v2
 
     goto :goto_2
 
-    .line 32
     :cond_0
     const v0, 0x3e99999a    # 0.3f
 
     add-float v2, v4, v0
 
-    .line 33
     add-int/lit8 v0, v3, 0x1
 
     move v3, v0
@@ -237,13 +206,11 @@
 
     goto :goto_1
 
-    .line 34
     :cond_1
     const v0, 0x3e99999a    # 0.3f
 
     add-float v2, v8, v0
 
-    .line 35
     add-int/lit8 v0, v7, 0x1
 
     move v7, v0
@@ -256,21 +223,17 @@
 
     goto :goto_0
 
-    .line 36
     :cond_2
     iput v2, p0, Lfko;->f:I
     :try_end_0
     .catch Lfjs; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 40
     :goto_3
     return-void
 
-    .line 38
     :catch_0
     move-exception v0
 
-    .line 39
     sget-object v1, Liwv;->a:Liww;
 
     invoke-virtual {v1, v0}, Liww;->b(Ljava/lang/Throwable;)V
@@ -283,65 +246,52 @@
 .method public final a()V
     .locals 1
 
-    .prologue
-    .line 50
     iget-object v0, p0, Lfko;->g:Lfjv;
 
-    .line 51
     iget v0, v0, Lfjt;->d:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
 
-    .line 52
     return-void
 .end method
 
 .method public final b([F)V
     .locals 4
 
-    .prologue
-    .line 41
     iget-object v0, p0, Lfko;->g:Lfjv;
 
-    .line 42
     iget v0, v0, Lfjt;->d:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 43
     iget-object v0, p0, Lfko;->g:Lfjv;
 
     sget-object v1, Lfht;->e:[F
 
     invoke-virtual {v0, v1}, Lfjv;->b([F)V
 
-    .line 44
     iget-object v0, p0, Lfko;->g:Lfjv;
 
     iget-object v1, p0, Lfko;->a:Ljava/nio/FloatBuffer;
 
     invoke-virtual {v0, v1}, Lfjv;->a(Ljava/nio/FloatBuffer;)V
 
-    .line 45
     iget-object v0, p0, Lfko;->g:Lfjv;
 
     iget-object v1, p0, Lfko;->b:Ljava/nio/FloatBuffer;
 
     invoke-virtual {v0, v1}, Lfjv;->b(Ljava/nio/FloatBuffer;)V
 
-    .line 46
     iget-object v0, p0, Lfko;->g:Lfjv;
 
     invoke-virtual {v0, p1}, Lfjv;->a([F)V
 
-    .line 47
     iget-object v0, p0, Lfko;->c:Ljava/nio/ShortBuffer;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/nio/ShortBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 48
     const/4 v0, 0x1
 
     iget v1, p0, Lfko;->f:I
@@ -352,6 +302,5 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/opengl/GLES20;->glDrawElements(IIILjava/nio/Buffer;)V
 
-    .line 49
     return-void
 .end method

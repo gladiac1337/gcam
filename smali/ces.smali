@@ -32,8 +32,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 44
     const-string v0, "BurstMemoryImage"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -44,40 +42,28 @@
 .method public constructor <init>(IJJLhix;IILdpl;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lces;->d:I
 
-    .line 3
     iput-wide p2, p0, Lces;->e:J
 
-    .line 4
     iput-wide p4, p0, Lces;->f:J
 
-    .line 5
     iput-object p6, p0, Lces;->a:Lhix;
 
-    .line 6
     iput p7, p0, Lces;->b:I
 
-    .line 7
     iput p8, p0, Lces;->c:I
 
-    .line 8
     iput-object p9, p0, Lces;->g:Ldpl;
 
-    .line 9
     return-void
 .end method
 
 .method private static synthetic a(Ljava/lang/Throwable;Ljava/lang/AutoCloseable;)V
     .locals 1
 
-    .prologue
-    .line 43
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -106,10 +92,8 @@
 .method public final a(Lgjc;Ljava/io/File;ZZ)Lcfa;
     .locals 6
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 19
     :try_start_0
     new-instance v3, Ljava/io/BufferedOutputStream;
 
@@ -121,14 +105,11 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 20
     :try_start_1
     iget-object v0, p0, Lces;->g:Ldpl;
 
-    .line 21
     iget-object v0, v0, Ldpl;->d:Lcom/google/android/libraries/camera/exif/ExifInterface;
 
-    .line 22
     invoke-virtual {v0, v3}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(Ljava/io/OutputStream;)Ljava/io/OutputStream;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
@@ -136,20 +117,16 @@
 
     move-result-object v4
 
-    .line 24
     :try_start_2
     iget-object v0, p0, Lces;->g:Ldpl;
 
-    .line 25
     iget-object v0, v0, Ldpl;->b:[B
 
-    .line 26
     invoke-virtual {v4, v0}, Ljava/io/OutputStream;->write([B)V
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_3
 
-    .line 27
     const/4 v0, 0x0
 
     :try_start_3
@@ -158,7 +135,6 @@
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 30
     const/4 v0, 0x0
 
     :try_start_4
@@ -166,7 +142,6 @@
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 35
     new-instance v0, Lcfa;
 
     iget-object v1, p0, Lces;->a:Lhix;
@@ -175,7 +150,6 @@
 
     iget v3, p0, Lces;->c:I
 
-    .line 36
     invoke-static {v2, v3}, Lhja;->a(II)Lhja;
 
     move-result-object v2
@@ -186,10 +160,8 @@
 
     invoke-direct {v0, p2, v1, v2, v3}, Lcfa;-><init>(Ljava/io/File;Lhix;Lhja;Ljava/lang/String;)V
 
-    .line 37
     return-object v0
 
-    .line 28
     :catch_0
     move-exception v0
 
@@ -198,7 +170,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 29
     :catchall_0
     move-exception v1
 
@@ -217,7 +188,6 @@
     .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_1
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 31
     :catch_1
     move-exception v0
 
@@ -226,7 +196,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 32
     :catchall_1
     move-exception v1
 
@@ -242,24 +211,20 @@
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_2
 
-    .line 33
     :catch_2
     move-exception v0
 
-    .line 34
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 32
     :catchall_2
     move-exception v0
 
     goto :goto_1
 
-    .line 29
     :catchall_3
     move-exception v0
 
@@ -271,8 +236,6 @@
 .method public final a(ZZ)Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 13
     iget v0, p0, Lces;->d:I
 
     iget-wide v2, p0, Lces;->e:J
@@ -287,8 +250,6 @@
 .method public final declared-synchronized a()V
     .locals 1
 
-    .prologue
-    .line 10
     monitor-enter p0
 
     :try_start_0
@@ -303,19 +264,16 @@
     :goto_0
     invoke-static {v0}, Lid;->b(Z)V
 
-    .line 11
     const/4 v0, 0x0
 
     iput-object v0, p0, Lces;->g:Ldpl;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 12
     monitor-exit p0
 
     return-void
 
-    .line 10
     :cond_0
     const/4 v0, 0x0
 
@@ -332,8 +290,6 @@
 .method public final b()I
     .locals 1
 
-    .prologue
-    .line 14
     iget v0, p0, Lces;->b:I
 
     return v0
@@ -342,8 +298,6 @@
 .method public final c()I
     .locals 1
 
-    .prologue
-    .line 15
     iget v0, p0, Lces;->c:I
 
     return v0
@@ -352,8 +306,6 @@
 .method public final d()Ljava/io/File;
     .locals 1
 
-    .prologue
-    .line 16
     const/4 v0, 0x0
 
     return-object v0
@@ -362,8 +314,6 @@
 .method public final e()J
     .locals 2
 
-    .prologue
-    .line 17
     iget-wide v0, p0, Lces;->f:J
 
     return-wide v0
@@ -372,8 +322,6 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 41
     instance-of v0, p1, Lces;
 
     if-eqz v0, :cond_0
@@ -402,8 +350,6 @@
 .method public final f()Lhix;
     .locals 1
 
-    .prologue
-    .line 18
     iget-object v0, p0, Lces;->a:Lhix;
 
     return-object v0
@@ -412,8 +358,6 @@
 .method public final hashCode()I
     .locals 6
 
-    .prologue
-    .line 42
     const-string v0, "%d_%dx%d_%d"
 
     const/4 v1, 0x4
@@ -474,14 +418,10 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 38
     iget-object v0, p0, Lces;->g:Ldpl;
 
-    .line 39
     iget-wide v0, v0, Ldpl;->a:J
 
-    .line 40
     const/16 v2, 0x26
 
     new-instance v3, Ljava/lang/StringBuilder;

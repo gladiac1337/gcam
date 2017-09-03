@@ -34,8 +34,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/HashSet;
@@ -66,10 +64,8 @@
 
     iput v0, p0, Lgvu;->i:I
 
-    .line 2
     sget-object v0, Lgvj;->c:Lgvj;
 
-    .line 3
     iput-object v0, p0, Lgvu;->k:Lgvj;
 
     sget-object v0, Lhcl;->a:Lgvq;
@@ -144,10 +140,8 @@
 .method public final a()Lgvt;
     .locals 15
 
-    .prologue
     const/4 v10, 0x0
 
-    .line 7
     iget-object v0, p0, Lgvu;->h:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
@@ -163,7 +157,6 @@
 
     invoke-static {v0, v1}, Lkk;->b(ZLjava/lang/Object;)V
 
-    .line 9
     sget-object v5, Lhcr;->a:Lhcr;
 
     iget-object v0, p0, Lgvu;->h:Ljava/util/Map;
@@ -201,10 +194,8 @@
 
     invoke-direct/range {v0 .. v5}, Lgxz;-><init>(Ljava/util/Set;Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;Lhcr;)V
 
-    .line 11
     iget-object v12, v0, Lgxz;->d:Ljava/util/Map;
 
-    .line 12
     new-instance v8, Lct;
 
     invoke-direct {v8}, Lct;-><init>()V
@@ -271,7 +262,6 @@
 
     invoke-virtual {v14, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 13
     invoke-virtual {v9}, Lgvo;->a()Lgvq;
 
     move-result-object v1
@@ -284,12 +274,10 @@
 
     move-object v7, v6
 
-    .line 14
     invoke-virtual/range {v1 .. v7}, Lgvq;->a(Landroid/content/Context;Landroid/os/Looper;Lgxz;Ljava/lang/Object;Lgvw;Lgvx;)Lgvr;
 
     move-result-object v1
 
-    .line 15
     invoke-virtual {v9}, Lgvo;->b()Lgvs;
 
     move-result-object v2
@@ -301,10 +289,8 @@
     :cond_1
     move v0, v10
 
-    .line 7
     goto/16 :goto_0
 
-    .line 15
     :cond_2
     invoke-interface {v11}, Ljava/util/Map;->values()Ljava/util/Collection;
 
@@ -338,17 +324,13 @@
 
     invoke-direct/range {v1 .. v14}, Lgxd;-><init>(Landroid/content/Context;Ljava/util/concurrent/locks/Lock;Landroid/os/Looper;Lgxz;Lgvj;Lgvq;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/util/Map;IILjava/util/ArrayList;)V
 
-    .line 17
     sget-object v2, Lgvt;->a:Ljava/util/Set;
 
-    .line 18
     monitor-enter v2
 
-    .line 19
     :try_start_0
     sget-object v0, Lgvt;->a:Ljava/util/Set;
 
-    .line 20
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     monitor-exit v2
@@ -359,7 +341,6 @@
 
     if-ltz v0, :cond_3
 
-    .line 21
     const/4 v0, 0x0
 
     invoke-static {v0}, Lgwg;->a(Landroid/support/v4/app/FragmentActivity;)Lgwg;
@@ -384,12 +365,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 22
     :cond_3
     :goto_3
     return-object v1
 
-    .line 20
     :catchall_0
     move-exception v0
 
@@ -400,7 +379,6 @@
 
     throw v0
 
-    .line 21
     :cond_4
     invoke-virtual {p0, v0, v1}, Lgvu;->a(Lgwg;Lgvt;)V
 
@@ -415,8 +393,6 @@
 .method public final a(Lgvo;)Lgvu;
     .locals 2
 
-    .prologue
-    .line 4
     const-string v0, "Api must not be null"
 
     invoke-static {p1, v0}, Lkk;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -429,12 +405,10 @@
 
     invoke-virtual {p1}, Lgvo;->a()Lgvq;
 
-    .line 5
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
-    .line 6
     iget-object v1, p0, Lgvu;->c:Ljava/util/Set;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
@@ -463,11 +437,8 @@
 .method final a(Lgwg;Lgvt;)V
     .locals 4
 
-    .prologue
-    .line 23
     iget v1, p0, Lgvu;->i:I
 
-    .line 24
     const-string v0, "GoogleApiClient instance cannot be null"
 
     invoke-static {p2, v0}, Lkk;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -517,11 +488,9 @@
 
     invoke-virtual {p2}, Lgvt;->b()V
 
-    .line 25
     :cond_0
     return-void
 
-    .line 24
     :cond_1
     const/4 v0, 0x0
 

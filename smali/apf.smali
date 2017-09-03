@@ -15,20 +15,14 @@
 .method public constructor <init>(Lhic;Lapq;Lfsj;Lbgr;)V
     .locals 0
 
-    .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
     iput-object p1, p0, Lapf;->c:Lhic;
 
-    .line 7
     iput-object p2, p0, Lapf;->a:Lapq;
 
-    .line 8
     iput-object p3, p0, Lapf;->b:Lfsj;
 
-    .line 9
     return-void
 .end method
 
@@ -37,8 +31,6 @@
 .method public final a(Lavm;)Lhiz;
     .locals 2
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lapf;->c:Lhic;
 
     new-instance v1, Laph;
@@ -47,7 +39,6 @@
 
     invoke-virtual {v0, v1}, Lhic;->execute(Ljava/lang/Runnable;)V
 
-    .line 4
     new-instance v0, Lapi;
 
     invoke-direct {v0, p0}, Lapi;-><init>(Lapf;)V
@@ -64,8 +55,6 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lapf;->c:Lhic;
 
     new-instance v1, Lapg;
@@ -74,6 +63,5 @@
 
     invoke-virtual {v0, v1}, Lhic;->execute(Ljava/lang/Runnable;)V
 
-    .line 2
     return-void
 .end method

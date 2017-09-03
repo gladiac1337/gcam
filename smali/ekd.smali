@@ -16,17 +16,12 @@
 .method public constructor <init>(Lilp;Lilp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lekd;->a:Lilp;
 
-    .line 3
     iput-object p2, p0, Lekd;->b:Lilp;
 
-    .line 4
     return-void
 .end method
 
@@ -35,12 +30,8 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 5
 
-    .prologue
-    .line 5
-    .line 6
     iget-object v0, p0, Lekd;->a:Lilp;
 
-    .line 7
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -55,62 +46,49 @@
 
     check-cast v1, Lfss;
 
-    .line 9
     sget-object v2, Lfsw;->c:Lfsw;
 
-    .line 10
     sget-object v3, Lhmr;->b:Lhmr;
 
-    .line 11
     invoke-virtual {v1, v3}, Lfss;->b(Lhmr;)Lhmp;
 
     move-result-object v3
 
-    .line 12
     if-eqz v3, :cond_0
 
-    .line 14
     invoke-virtual {v1, v3}, Lfss;->a(Lhmp;)Lfsq;
 
     move-result-object v1
 
-    .line 15
     invoke-interface {v1}, Lfsq;->q_()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 16
     sget-object v1, Lfsw;->b:Lfsw;
 
-    .line 17
     :goto_0
     new-instance v2, Ldcr;
 
     const-string v3, "pref_camera_hdr_plus_key"
 
-    .line 18
     iget-object v4, v1, Lfsw;->d:Ljava/lang/String;
 
-    .line 19
     invoke-virtual {v0, v3, v4}, Lgfs;->a(Ljava/lang/String;Ljava/lang/String;)Lavm;
 
     move-result-object v0
 
     invoke-direct {v2, v0, v1}, Ldcr;-><init>(Lavm;Lfsw;)V
 
-    .line 20
     const-string v0, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 21
     invoke-static {v2, v0}, Ldt;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ldcr;
 
-    .line 22
     return-object v0
 
     :cond_0

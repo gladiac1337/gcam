@@ -16,8 +16,6 @@
 .method constructor <init>(Lfwh;Lfup;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfwk;->b:Lfwh;
 
     iput-object p2, p0, Lfwk;->a:Lfup;
@@ -32,18 +30,14 @@
 .method public final a(Ljava/lang/Object;)Liwe;
     .locals 6
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lfwk;->b:Lfwh;
 
     iget-object v1, p0, Lfwk;->a:Lfup;
 
-    .line 4
     iget-object v2, v0, Lfwh;->b:Lhjh;
 
     iget-object v3, v0, Lfwh;->a:Lhpb;
 
-    .line 5
     invoke-interface {v3}, Lhpb;->c()I
 
     move-result v3
@@ -54,7 +48,6 @@
 
     iget-object v0, v0, Lfwh;->a:Lhpb;
 
-    .line 6
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
@@ -135,29 +128,23 @@
 
     move-result-object v0
 
-    .line 7
     invoke-interface {v2, v0}, Lhjh;->f(Ljava/lang/String;)V
 
-    .line 8
     iget-object v0, p0, Lfwk;->b:Lfwh;
 
     new-instance v1, Lhmv;
 
     iget-object v2, p0, Lfwk;->a:Lfup;
 
-    .line 9
     iget-wide v2, v2, Lfup;->a:J
 
-    .line 10
     invoke-direct {v1, v2, v3}, Lhmv;-><init>(J)V
 
     iget-object v2, p0, Lfwk;->a:Lfup;
 
-    .line 12
     invoke-virtual {v0, v1, v2}, Lfwh;->a(Lhoz;Lfup;)Liwe;
 
     move-result-object v0
 
-    .line 13
     return-object v0
 .end method

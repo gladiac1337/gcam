@@ -20,8 +20,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 66
     const-string v0, "SpeTpMetaReqHand"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -36,17 +34,12 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lblt;->b:Landroid/content/Context;
 
-    .line 3
     iput-object p2, p0, Lblt;->c:Ljava/lang/String;
 
-    .line 4
     return-void
 .end method
 
@@ -55,21 +48,17 @@
 .method public final a(Landroid/net/Uri;[Ljava/lang/String;)Landroid/database/Cursor;
     .locals 11
 
-    .prologue
     const/4 v1, 0x0
 
     const/4 v3, 0x0
 
-    .line 5
     if-nez p2, :cond_0
 
     move-object v0, v1
 
-    .line 65
     :goto_0
     return-object v0
 
-    .line 7
     :cond_0
     invoke-static {p2}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -77,7 +66,6 @@
 
     check-cast v0, [Ljava/lang/String;
 
-    .line 9
     invoke-virtual {p1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v2
@@ -86,20 +74,17 @@
 
     move-result-object v2
 
-    .line 11
     :try_start_0
     invoke-static {v2}, Lblw;->a(Ljava/lang/String;)Lblw;
 
     move-result-object v6
 
-    .line 12
     sget-object v2, Lblt;->a:Ljava/lang/String;
 
     invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 13
     invoke-static {v0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
@@ -152,22 +137,18 @@
 
     move-result-object v4
 
-    .line 14
     invoke-static {v2, v4}, Lbgj;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 21
     new-instance v2, Landroid/database/MatrixCursor;
 
     invoke-direct {v2, v0}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    .line 22
     array-length v1, v0
 
     new-array v7, v1, [Ljava/lang/Object;
 
-    .line 24
     array-length v8, v0
 
     move v4, v3
@@ -179,7 +160,6 @@
 
     aget-object v9, v0, v4
 
-    .line 25
     const/4 v1, -0x1
 
     invoke-virtual {v9}, Ljava/lang/String;->hashCode()I
@@ -192,30 +172,25 @@
     :goto_2
     packed-switch v1, :pswitch_data_0
 
-    .line 61
     :cond_2
     :goto_3
     add-int/lit8 v5, v5, 0x1
 
-    .line 62
     add-int/lit8 v1, v4, 0x1
 
     move v4, v1
 
     goto :goto_1
 
-    .line 16
     :catch_0
     move-exception v2
 
-    .line 17
     sget-object v3, Lblt;->a:Ljava/lang/String;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 18
     invoke-static {v0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -268,15 +243,12 @@
 
     move-result-object v0
 
-    .line 19
     invoke-static {v3, v0, v2}, Lbgj;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     move-object v0, v1
 
-    .line 20
     goto/16 :goto_0
 
-    .line 25
     :sswitch_0
     const-string v10, "configuration"
 
@@ -433,7 +405,6 @@
 
     goto/16 :goto_2
 
-    .line 27
     :pswitch_0
     iget-object v1, v6, Lblw;->e:Lgqv;
 
@@ -441,19 +412,15 @@
 
     move-result-object v1
 
-    .line 28
     aput-object v1, v7, v5
 
     goto/16 :goto_3
 
-    .line 30
     :pswitch_1
     iget-object v1, p0, Lblt;->b:Landroid/content/Context;
 
-    .line 31
     iget v9, v6, Lblw;->f:I
 
-    .line 32
     invoke-virtual {v1, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -462,14 +429,11 @@
 
     goto/16 :goto_3
 
-    .line 34
     :pswitch_2
     iget-object v1, p0, Lblt;->b:Landroid/content/Context;
 
-    .line 35
     iget v9, v6, Lblw;->g:I
 
-    .line 36
     invoke-virtual {v1, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -478,7 +442,6 @@
 
     goto/16 :goto_3
 
-    .line 38
     :pswitch_3
     new-instance v1, Landroid/net/Uri$Builder;
 
@@ -486,29 +449,24 @@
 
     const-string v9, "content"
 
-    .line 39
     invoke-virtual {v1, v9}, Landroid/net/Uri$Builder;->scheme(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v1
 
     iget-object v9, p0, Lblt;->c:Ljava/lang/String;
 
-    .line 40
     invoke-virtual {v1, v9}, Landroid/net/Uri$Builder;->authority(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v1
 
     const-string v9, "icon"
 
-    .line 41
     invoke-virtual {v1, v9}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v1
 
-    .line 42
     iget v9, v6, Lblw;->h:I
 
-    .line 43
     invoke-static {v9}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v9
@@ -521,7 +479,6 @@
 
     goto/16 :goto_3
 
-    .line 45
     :pswitch_4
     iget-object v1, p0, Lblt;->b:Landroid/content/Context;
 
@@ -533,7 +490,6 @@
 
     goto/16 :goto_3
 
-    .line 47
     :pswitch_5
     invoke-virtual {v6}, Lblw;->c()Lilc;
 
@@ -545,7 +501,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 48
     invoke-virtual {v6}, Lblw;->c()Lilc;
 
     move-result-object v1
@@ -558,7 +513,6 @@
 
     goto/16 :goto_3
 
-    .line 49
     :pswitch_6
     invoke-virtual {v6}, Lblw;->d()Lilc;
 
@@ -570,7 +524,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 50
     invoke-virtual {v6}, Lblw;->d()Lilc;
 
     move-result-object v1
@@ -583,7 +536,6 @@
 
     goto/16 :goto_3
 
-    .line 51
     :pswitch_7
     invoke-virtual {v6}, Lblw;->e()Lilc;
 
@@ -595,7 +547,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 52
     invoke-virtual {v6}, Lblw;->e()Lilc;
 
     move-result-object v1
@@ -608,7 +559,6 @@
 
     goto/16 :goto_3
 
-    .line 53
     :pswitch_8
     invoke-virtual {v6}, Lblw;->a()Lilc;
 
@@ -620,10 +570,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 54
     iget-object v9, p0, Lblt;->b:Landroid/content/Context;
 
-    .line 55
     invoke-virtual {v6}, Lblw;->a()Lilc;
 
     move-result-object v1
@@ -638,7 +586,6 @@
 
     move-result v1
 
-    .line 56
     invoke-virtual {v9, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -647,7 +594,6 @@
 
     goto/16 :goto_3
 
-    .line 57
     :pswitch_9
     invoke-virtual {v6}, Lblw;->b()Lilc;
 
@@ -659,10 +605,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 58
     iget-object v9, p0, Lblt;->b:Landroid/content/Context;
 
-    .line 59
     invoke-virtual {v6}, Lblw;->b()Lilc;
 
     move-result-object v1
@@ -677,7 +621,6 @@
 
     move-result v1
 
-    .line 60
     invoke-virtual {v9, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -686,7 +629,6 @@
 
     goto/16 :goto_3
 
-    .line 63
     :cond_3
     sget-object v1, Lblt;->a:Ljava/lang/String;
 
@@ -713,15 +655,12 @@
     :goto_4
     invoke-static {v1, v0}, Lbgj;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 64
     invoke-virtual {v2, v7}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
 
     move-object v0, v2
 
-    .line 65
     goto/16 :goto_0
 
-    .line 63
     :cond_4
     new-instance v0, Ljava/lang/String;
 
@@ -729,7 +668,6 @@
 
     goto :goto_4
 
-    .line 25
     nop
 
     :sswitch_data_0

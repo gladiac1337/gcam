@@ -23,26 +23,18 @@
 .method public constructor <init>(Libk;Lihq;Lcom/google/android/libraries/smartburst/buffers/FeatureTable;Licc;Licc;Lidj;I)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p2}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     invoke-static {p3}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     invoke-static {p4}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     invoke-static {p5}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     invoke-static {p6}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     if-lez p7, :cond_0
 
     const/4 v0, 0x1
@@ -50,31 +42,22 @@
     :goto_0
     invoke-static {v0}, Lid;->a(Z)V
 
-    .line 8
     iput-object p1, p0, Lida;->d:Libk;
 
-    .line 9
     iput-object p2, p0, Lida;->e:Lihq;
 
-    .line 10
     iput-object p3, p0, Lida;->g:Lcom/google/android/libraries/smartburst/buffers/FeatureTable;
 
-    .line 11
     iput-object p4, p0, Lida;->a:Licc;
 
-    .line 12
     iput-object p5, p0, Lida;->b:Licc;
 
-    .line 13
     iput-object p6, p0, Lida;->c:Lidj;
 
-    .line 14
     iput p7, p0, Lida;->f:I
 
-    .line 15
     return-void
 
-    .line 7
     :cond_0
     const/4 v0, 0x0
 
@@ -86,8 +69,6 @@
 .method public toString()Ljava/lang/String;
     .locals 6
 
-    .prologue
-    .line 16
     const-string v0, "SummaryFeatureExtractor[parallelMetadataExtractor="
 
     iget-object v1, p0, Lida;->a:Licc;

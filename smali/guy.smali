@@ -101,26 +101,21 @@
 .method public final a(Ljava/lang/String;)Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 3
     :cond_0
     :goto_0
     return-object v0
 
-    .line 1
     :cond_1
     const-string v1, "googleSignInAccount"
 
-    .line 2
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -143,7 +138,6 @@
 
     move-result-object v1
 
-    .line 3
     invoke-virtual {p0, v1}, Lguy;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1

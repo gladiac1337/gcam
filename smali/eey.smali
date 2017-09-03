@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 30
     const-string v0, "ImageShadowTask"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -38,55 +36,42 @@
 .method public constructor <init>(Lejj;)V
     .locals 3
 
-    .prologue
-    .line 1
     new-instance v0, Lgco;
 
     invoke-direct {v0}, Lgco;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lilc;->b(Ljava/lang/Object;)Lilc;
 
     move-result-object v1
 
-    .line 3
     sget-object v2, Liku;->a:Liku;
 
-    .line 4
     invoke-direct {p0, v0, v1, v2}, Leey;-><init>(Lgco;Lilc;Lilc;)V
 
-    .line 6
     iget-object v0, p0, Leey;->a:Lgco;
 
-    .line 7
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lgco;->a(I)V
 
-    .line 8
     return-void
 .end method
 
 .method public constructor <init>(Lgco;Lilc;Lilc;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10
     iput-object p1, p0, Leey;->a:Lgco;
 
-    .line 11
     invoke-virtual {p2}, Lilc;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 12
     invoke-virtual {p2}, Lilc;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -95,7 +80,6 @@
 
     iput-object v0, p0, Leey;->d:Lgcf;
 
-    .line 14
     :goto_0
     invoke-virtual {p3}, Lilc;->a()Z
 
@@ -103,7 +87,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 15
     invoke-virtual {p3}, Lilc;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -112,17 +95,14 @@
 
     iput-object v0, p0, Leey;->b:Ljava/lang/Runnable;
 
-    .line 17
     :goto_1
     return-void
 
-    .line 13
     :cond_0
     iput-object v1, p0, Leey;->d:Lgcf;
 
     goto :goto_0
 
-    .line 16
     :cond_1
     iput-object v1, p0, Leey;->b:Ljava/lang/Runnable;
 
@@ -134,16 +114,12 @@
 .method public final a()V
     .locals 0
 
-    .prologue
-    .line 26
     return-void
 .end method
 
 .method public final a(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 21
     :try_start_0
     iget-object v0, p0, Leey;->a:Lgco;
 
@@ -151,11 +127,9 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 25
     :goto_0
     return-void
 
-    .line 24
     :catch_0
     move-exception v0
 
@@ -171,8 +145,6 @@
 .method public final a(Lfmb;)V
     .locals 2
 
-    .prologue
-    .line 29
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Not implemented yet"
@@ -185,16 +157,12 @@
 .method public final b()V
     .locals 0
 
-    .prologue
-    .line 27
     return-void
 .end method
 
 .method public final c()Lgcf;
     .locals 1
 
-    .prologue
-    .line 28
     iget-object v0, p0, Leey;->d:Lgcf;
 
     return-object v0
@@ -203,19 +171,15 @@
 .method public final d()V
     .locals 2
 
-    .prologue
-    .line 18
     iget-object v0, p0, Leey;->a:Lgco;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lgco;->a(I)V
 
-    .line 19
     iget-object v0, p0, Leey;->a:Lgco;
 
     invoke-virtual {v0}, Lgco;->c()V
 
-    .line 20
     return-void
 .end method

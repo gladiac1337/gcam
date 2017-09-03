@@ -14,8 +14,6 @@
 .method constructor <init>(Lczm;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lczt;->a:Lczm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,14 +26,10 @@
 .method public final a_(Landroid/graphics/PointF;)Z
     .locals 5
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lczt;->a:Lczm;
 
-    .line 3
     iget-object v0, v0, Lczm;->c:Lcjz;
 
-    .line 4
     new-instance v1, Lcsc;
 
     new-instance v2, Landroid/graphics/Point;
@@ -54,7 +48,6 @@
 
     invoke-interface {v0, v1}, Lcjz;->a(Ljava/lang/Object;)V
 
-    .line 5
     const/4 v0, 0x1
 
     return v0

@@ -505,18 +505,13 @@
 .method static synthetic a(Lgxd;)V
     .locals 2
 
-    .prologue
-    .line 48
-    .line 49
     iget-object v0, p0, Lgxd;->b:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    .line 50
     :try_start_0
     iget-boolean v0, p0, Lgxd;->l:Z
 
-    .line 51
     if-eqz v0, :cond_0
 
     invoke-direct {p0}, Lgxd;->h()V
@@ -578,9 +573,6 @@
 .method static synthetic b(Lgxd;)V
     .locals 2
 
-    .prologue
-    .line 52
-    .line 53
     iget-object v0, p0, Lgxd;->b:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -616,16 +608,12 @@
 .method private final h()V
     .locals 2
 
-    .prologue
-    .line 22
     iget-object v0, p0, Lgxd;->h:Lgyl;
 
-    .line 23
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lgyl;->e:Z
 
-    .line 24
     iget-object v0, p0, Lgxd;->i:Lgxp;
 
     invoke-interface {v0}, Lgxp;->a()V
@@ -664,12 +652,8 @@
 .method public final a(Lgwe;)Lgwe;
     .locals 2
 
-    .prologue
-    .line 1
-    .line 2
     iget-object v0, p1, Lgwe;->a:Lgvs;
 
-    .line 3
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
@@ -681,10 +665,8 @@
 
     iget-object v0, p0, Lgxd;->r:Ljava/util/Map;
 
-    .line 4
     iget-object v1, p1, Lgwe;->a:Lgvs;
 
-    .line 5
     invoke-interface {v0, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
@@ -715,13 +697,11 @@
     :goto_1
     return-object p1
 
-    .line 3
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 5
     :cond_1
     :try_start_1
     iget-object v0, p0, Lgxd;->i:Lgxp;
@@ -791,22 +771,18 @@
 .method public final a(IZ)V
     .locals 9
 
-    .prologue
     const/4 v8, 0x2
 
     const/4 v2, 0x0
 
     const/4 v1, 0x1
 
-    .line 41
     if-ne p1, v1, :cond_1
 
     if-nez p2, :cond_1
 
-    .line 43
     iget-boolean v0, p0, Lgxd;->l:Z
 
-    .line 44
     if-nez v0, :cond_1
 
     iput-boolean v1, p0, Lgxd;->l:Z
@@ -858,7 +834,6 @@
 
     invoke-virtual {v0, v3, v4, v5}, Lgxf;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 45
     :cond_1
     iget-object v0, p0, Lgxd;->f:Ljava/util/Set;
 
@@ -903,7 +878,6 @@
 
     iget-object v3, p0, Lgxd;->h:Lgyl;
 
-    .line 46
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -1018,7 +992,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 47
     iget-object v0, p0, Lgxd;->h:Lgyl;
 
     invoke-virtual {v0}, Lgyl;->a()V
@@ -1034,12 +1007,10 @@
 .method public final a(Landroid/os/Bundle;)V
     .locals 8
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 32
     :goto_0
     iget-object v0, p0, Lgxd;->d:Ljava/util/Queue;
 
@@ -1064,7 +1035,6 @@
     :cond_0
     iget-object v3, p0, Lgxd;->h:Lgyl;
 
-    .line 33
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -1225,18 +1195,14 @@
 .method public final a(Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 8
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 34
     iget-object v0, p0, Lgxd;->k:Landroid/content/Context;
 
-    .line 35
     iget v3, p1, Lcom/google/android/gms/common/ConnectionResult;->b:I
 
-    .line 36
     invoke-static {v0, v3}, Lgvj;->a(Landroid/content/Context;I)Z
 
     move-result v0
@@ -1245,16 +1211,13 @@
 
     invoke-virtual {p0}, Lgxd;->f()Z
 
-    .line 37
     :cond_0
     iget-boolean v0, p0, Lgxd;->l:Z
 
-    .line 38
     if-nez v0, :cond_3
 
     iget-object v3, p0, Lgxd;->h:Lgyl;
 
-    .line 39
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -1330,7 +1293,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 40
     :goto_2
     iget-object v0, p0, Lgxd;->h:Lgyl;
 
@@ -1342,7 +1304,6 @@
     :cond_4
     move v0, v2
 
-    .line 39
     goto :goto_0
 
     :cond_5
@@ -1485,12 +1446,8 @@
 .method public final b(Lgwe;)Lgwe;
     .locals 2
 
-    .prologue
-    .line 6
-    .line 7
     iget-object v0, p1, Lgwe;->a:Lgvs;
 
-    .line 8
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
@@ -1519,7 +1476,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10
     :catchall_0
     move-exception v0
 
@@ -1529,18 +1485,15 @@
 
     throw v0
 
-    .line 8
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 9
     :cond_1
     :try_start_1
     iget-boolean v0, p0, Lgxd;->l:Z
 
-    .line 10
     if-eqz v0, :cond_3
 
     iget-object v0, p0, Lgxd;->d:Ljava/util/Queue;
@@ -1602,14 +1555,12 @@
 .method public final b()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x2
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    .line 11
     iget-object v2, p0, Lgxd;->b:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -1638,7 +1589,6 @@
 
     move-result v2
 
-    .line 12
     iget-object v3, p0, Lgxd;->b:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v3}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -1687,7 +1637,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 13
     iget-object v0, p0, Lgxd;->b:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
@@ -1697,7 +1646,6 @@
     :cond_3
     move v2, v0
 
-    .line 11
     goto :goto_0
 
     :cond_4
@@ -1726,7 +1674,6 @@
 
     goto :goto_1
 
-    .line 13
     :catchall_0
     move-exception v0
 
@@ -1736,7 +1683,6 @@
 
     throw v0
 
-    .line 11
     :cond_5
     :try_start_4
     iget-object v2, p0, Lgxd;->x:Ljava/lang/Integer;
@@ -1755,7 +1701,6 @@
 
     throw v0
 
-    .line 12
     :catchall_1
     move-exception v0
 
@@ -1771,11 +1716,8 @@
 .method public final b(Lgvw;)V
     .locals 4
 
-    .prologue
-    .line 28
     iget-object v0, p0, Lgxd;->h:Lgyl;
 
-    .line 29
     invoke-static {p1}, Lkk;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v1, v0, Lgyl;->i:Ljava/lang/Object;
@@ -1845,11 +1787,8 @@
 .method public final b(Lgvx;)V
     .locals 4
 
-    .prologue
-    .line 30
     iget-object v0, p0, Lgxd;->h:Lgyl;
 
-    .line 31
     invoke-static {p1}, Lkk;->d(Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v1, v0, Lgyl;->i:Ljava/lang/Object;
@@ -1907,12 +1846,10 @@
 .method public final c()Lcom/google/android/gms/common/ConnectionResult;
     .locals 4
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v1, 0x1
 
-    .line 14
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -1960,12 +1897,10 @@
 
     iget-object v0, p0, Lgxd;->h:Lgyl;
 
-    .line 15
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lgyl;->e:Z
 
-    .line 16
     iget-object v0, p0, Lgxd;->i:Lgxp;
 
     invoke-interface {v0}, Lgxp;->b()Lcom/google/android/gms/common/ConnectionResult;
@@ -1983,7 +1918,6 @@
     :cond_1
     move v0, v2
 
-    .line 14
     goto :goto_0
 
     :cond_2
@@ -2017,7 +1951,6 @@
 
     goto :goto_2
 
-    .line 16
     :catchall_0
     move-exception v0
 
@@ -2027,7 +1960,6 @@
 
     throw v0
 
-    .line 14
     :cond_4
     :try_start_2
     iget-object v0, p0, Lgxd;->x:Ljava/lang/Integer;
@@ -2054,8 +1986,6 @@
 .method public final d()V
     .locals 4
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lgxd;->b:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -2077,7 +2007,6 @@
 
     move v1, v0
 
-    .line 18
     :goto_0
     iget-object v0, p0, Lgxd;->f:Ljava/util/Set;
 
@@ -2106,7 +2035,6 @@
 
     goto :goto_1
 
-    .line 21
     :catchall_0
     move-exception v0
 
@@ -2116,7 +2044,6 @@
 
     throw v0
 
-    .line 17
     :cond_0
     const/4 v0, 0x0
 
@@ -2124,7 +2051,6 @@
 
     goto :goto_0
 
-    .line 18
     :cond_1
     :try_start_1
     invoke-interface {v0}, Lgxi;->d()V
@@ -2135,7 +2061,6 @@
 
     goto :goto_1
 
-    .line 19
     :cond_2
     iget-object v0, p0, Lgxd;->v:Ljava/util/Set;
 
@@ -2156,14 +2081,12 @@
 
     check-cast v0, Lgxr;
 
-    .line 20
     const/4 v2, 0x0
 
     iput-object v2, v0, Lgxr;->b:Ljava/lang/Object;
 
     goto :goto_2
 
-    .line 21
     :cond_3
     iget-object v0, p0, Lgxd;->v:Ljava/util/Set;
 
@@ -2260,16 +2183,12 @@
 .method final f()Z
     .locals 3
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 25
-    .line 26
     iget-boolean v2, p0, Lgxd;->l:Z
 
-    .line 27
     if-nez v2, :cond_0
 
     :goto_0

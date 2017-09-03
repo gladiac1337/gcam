@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public final build(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZLandroid/os/Bundle;Ljava/util/Set;)Landroid/support/v4/app/RemoteInput;
     .locals 7
 
-    .prologue
-    .line 2
     new-instance v0, Landroid/support/v4/app/RemoteInput;
 
     move-object v1, p1
@@ -46,8 +42,6 @@
 .method public final bridge synthetic build(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZLandroid/os/Bundle;Ljava/util/Set;)Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;
     .locals 1
 
-    .prologue
-    .line 5
     invoke-virtual/range {p0 .. p6}, Landroid/support/v4/app/RemoteInput$1;->build(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZLandroid/os/Bundle;Ljava/util/Set;)Landroid/support/v4/app/RemoteInput;
 
     move-result-object v0
@@ -58,8 +52,6 @@
 .method public final newArray(I)[Landroid/support/v4/app/RemoteInput;
     .locals 1
 
-    .prologue
-    .line 3
     new-array v0, p1, [Landroid/support/v4/app/RemoteInput;
 
     return-object v0
@@ -68,8 +60,6 @@
 .method public final bridge synthetic newArray(I)[Landroid/support/v4/app/RemoteInputCompatBase$RemoteInput;
     .locals 1
 
-    .prologue
-    .line 4
     invoke-virtual {p0, p1}, Landroid/support/v4/app/RemoteInput$1;->newArray(I)[Landroid/support/v4/app/RemoteInput;
 
     move-result-object v0

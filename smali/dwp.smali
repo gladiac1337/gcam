@@ -20,23 +20,16 @@
 .method public constructor <init>(Lilp;Lilp;Lilp;Lilp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldwp;->a:Lilp;
 
-    .line 3
     iput-object p2, p0, Ldwp;->b:Lilp;
 
-    .line 4
     iput-object p3, p0, Ldwp;->c:Lilp;
 
-    .line 5
     iput-object p4, p0, Ldwp;->d:Lilp;
 
-    .line 6
     return-void
 .end method
 
@@ -45,14 +38,10 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 20
 
-    .prologue
-    .line 7
-    .line 8
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldwp;->a:Lilp;
 
-    .line 9
     invoke-interface {v2}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -65,7 +54,6 @@
 
     iget-object v2, v0, Ldwp;->b:Lilp;
 
-    .line 10
     invoke-interface {v2}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -76,7 +64,6 @@
 
     iget-object v3, v0, Ldwp;->c:Lilp;
 
-    .line 11
     invoke-interface {v3}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -89,7 +76,6 @@
 
     iget-object v3, v0, Ldwp;->d:Lilp;
 
-    .line 12
     invoke-interface {v3}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -98,35 +84,28 @@
 
     check-cast v13, Ldym;
 
-    .line 14
     new-instance v17, Ldyr;
 
-    .line 15
     invoke-virtual {v2}, Ldyj;->a()Ldvk;
 
     move-result-object v18
 
-    .line 16
     invoke-static {}, Lkk;->j()Lfvg;
 
     move-result-object v2
 
-    .line 17
     iget-object v3, v13, Ldym;->e:Liwe;
 
     new-instance v4, Ldyn;
 
     invoke-direct {v4, v2}, Ldyn;-><init>(Lfvg;)V
 
-    .line 18
     sget-object v2, Liwj;->a:Liwj;
 
-    .line 19
     invoke-static {v3, v4, v2}, Livs;->a(Liwe;Lhpz;Ljava/util/concurrent/Executor;)Liwe;
 
     move-result-object v9
 
-    .line 20
     new-instance v19, Ldys;
 
     new-instance v2, Ldxq;
@@ -163,7 +142,6 @@
 
     invoke-direct {v0, v2, v3, v4}, Ldys;-><init>(Ldvk;IZ)V
 
-    .line 21
     const-wide/32 v2, 0x5f5e100
 
     move-object/from16 v0, v16
@@ -184,10 +162,8 @@
 
     invoke-direct {v0, v2}, Ldyr;-><init>(Ldvk;)V
 
-    .line 22
     const-string v2, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 23
     move-object/from16 v0, v17
 
     invoke-static {v0, v2}, Ldt;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
@@ -196,6 +172,5 @@
 
     check-cast v2, Ldyr;
 
-    .line 24
     return-object v2
 .end method

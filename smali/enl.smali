@@ -16,8 +16,6 @@
 .method constructor <init>(Lenh;Lfoq;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lenl;->b:Lenh;
 
     iput-object p2, p0, Lenl;->a:Lfoq;
@@ -32,8 +30,6 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lenl;->b:Lenh;
 
     iget-object v1, p0, Lenl;->a:Lfoq;
@@ -44,15 +40,11 @@
 
     move-result-object v2
 
-    .line 3
     invoke-virtual {v2}, Lkk;->i()Lfop;
 
-    .line 4
     iget-object v1, v1, Lfoq;->b:Lcom/google/common/logging/nano/eventprotos$CameraEvent;
 
-    .line 5
     invoke-virtual {v0, v1}, Lenh;->a(Lcom/google/common/logging/nano/eventprotos$CameraEvent;)V
 
-    .line 6
     return-void
 .end method

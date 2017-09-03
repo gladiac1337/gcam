@@ -25,13 +25,9 @@
 .method public final onImageAvailable(Landroid/media/ImageReader;)V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhlw;->a:Lhpd;
 
-    .line 2
     invoke-interface {v0}, Lhpd;->a()V
 
-    .line 3
     return-void
 .end method

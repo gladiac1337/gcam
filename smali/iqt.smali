@@ -7,8 +7,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 26
     new-instance v0, Liqu;
 
     invoke-direct {v0}, Liqu;-><init>()V
@@ -19,18 +17,14 @@
 .method public static a(Ljava/io/File;Ljava/io/File;)V
     .locals 4
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 11
     invoke-static {p0}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 12
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 13
     invoke-virtual {p0, p1}, Ljava/io/File;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -44,14 +38,12 @@
 
     invoke-static {v0, v3, p0, p1}, Lid;->a(ZLjava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 14
     invoke-virtual {p0, p1}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 16
     invoke-virtual {p0, p1}, Ljava/io/File;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -63,37 +55,30 @@
 
     invoke-static {v1, v0, p0, p1}, Lid;->a(ZLjava/lang/String;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 17
     invoke-static {p0}, Liqt;->b(Ljava/io/File;)Liqj;
 
     move-result-object v0
 
     new-array v1, v2, [Liqs;
 
-    .line 18
     new-instance v2, Liqv;
 
-    .line 19
     invoke-direct {v2, p1, v1}, Liqv;-><init>(Ljava/io/File;[Liqs;)V
 
-    .line 20
     invoke-virtual {v0, v2}, Liqj;->a(Liqi;)J
 
-    .line 21
     invoke-virtual {p0}, Ljava/io/File;->delete()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 22
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 23
     new-instance v0, Ljava/io/IOException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -135,16 +120,13 @@
     :cond_0
     move v0, v2
 
-    .line 13
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 16
     goto :goto_1
 
-    .line 24
     :cond_2
     new-instance v0, Ljava/io/IOException;
 
@@ -184,7 +166,6 @@
 
     throw v0
 
-    .line 25
     :cond_3
     return-void
 .end method
@@ -192,8 +173,6 @@
 .method public static a(Ljava/io/File;)[B
     .locals 1
 
-    .prologue
-    .line 10
     invoke-static {p0}, Liqt;->b(Ljava/io/File;)Liqj;
 
     move-result-object v0
@@ -208,15 +187,12 @@
 .method static a(Ljava/io/InputStream;J)[B
     .locals 3
 
-    .prologue
-    .line 4
     const-wide/32 v0, 0x7fffffff
 
     cmp-long v0, p1, v0
 
     if-lez v0, :cond_0
 
-    .line 5
     new-instance v0, Ljava/lang/OutOfMemoryError;
 
     const/16 v1, 0x44
@@ -249,7 +225,6 @@
 
     throw v0
 
-    .line 6
     :cond_0
     const-wide/16 v0, 0x0
 
@@ -257,16 +232,13 @@
 
     if-nez v0, :cond_1
 
-    .line 7
     invoke-static {p0}, Liqk;->a(Ljava/io/InputStream;)[B
 
     move-result-object v0
 
-    .line 9
     :goto_0
     return-object v0
 
-    .line 8
     :cond_1
     long-to-int v0, p1
 
@@ -280,13 +252,9 @@
 .method private static b(Ljava/io/File;)Liqj;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Liqw;
 
-    .line 2
     invoke-direct {v0, p0}, Liqw;-><init>(Ljava/io/File;)V
 
-    .line 3
     return-object v0
 .end method

@@ -14,11 +14,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lct;
 
     invoke-direct {v0}, Lct;-><init>()V
@@ -33,8 +30,6 @@
 .method public final a(Labn;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 15
     iget-object v0, p0, Labq;->b:Lct;
 
     invoke-virtual {v0, p1}, Lct;->containsKey(Ljava/lang/Object;)Z
@@ -49,11 +44,9 @@
 
     move-result-object v0
 
-    .line 17
     :goto_0
     return-object v0
 
-    .line 16
     :cond_0
     iget-object v0, p1, Labn;->b:Ljava/lang/Object;
 
@@ -63,40 +56,32 @@
 .method public final a(Labq;)V
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 3
     iget-object v1, p0, Labq;->b:Lct;
 
     iget-object v2, p1, Labq;->b:Lct;
 
-    .line 4
     iget v3, v2, Ldl;->c:I
 
-    .line 5
     iget v4, v1, Ldl;->c:I
 
     add-int/2addr v4, v3
 
     invoke-virtual {v1, v4}, Ldl;->a(I)V
 
-    .line 6
     iget v4, v1, Ldl;->c:I
 
     if-nez v4, :cond_1
 
-    .line 7
     if-lez v3, :cond_0
 
-    .line 8
     iget-object v4, v2, Ldl;->a:[I
 
     iget-object v5, v1, Ldl;->a:[I
 
     invoke-static {v4, v0, v5, v0, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 9
     iget-object v2, v2, Ldl;->b:[Ljava/lang/Object;
 
     iget-object v4, v1, Ldl;->b:[Ljava/lang/Object;
@@ -105,19 +90,15 @@
 
     invoke-static {v2, v0, v4, v0, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 10
     iput v3, v1, Ldl;->c:I
 
-    .line 14
     :cond_0
     return-void
 
-    .line 11
     :cond_1
     :goto_0
     if-ge v0, v3, :cond_0
 
-    .line 12
     invoke-virtual {v2, v0}, Ldl;->b(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -128,7 +109,6 @@
 
     invoke-virtual {v1, v4, v5}, Ldl;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 13
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -137,8 +117,6 @@
 .method public final a(Ljava/security/MessageDigest;)V
     .locals 6
 
-    .prologue
-    .line 23
     iget-object v0, p0, Labq;->b:Lct;
 
     invoke-virtual {v0}, Lct;->entrySet()Ljava/util/Set;
@@ -162,7 +140,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 24
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -173,15 +150,12 @@
 
     move-result-object v0
 
-    .line 26
     iget-object v3, v1, Labn;->c:Labp;
 
-    .line 27
     iget-object v4, v1, Labn;->e:[B
 
     if-nez v4, :cond_0
 
-    .line 28
     iget-object v4, v1, Labn;->d:Ljava/lang/String;
 
     sget-object v5, Labm;->a:Ljava/nio/charset/Charset;
@@ -192,16 +166,13 @@
 
     iput-object v4, v1, Labn;->e:[B
 
-    .line 29
     :cond_0
     iget-object v1, v1, Labn;->e:[B
 
-    .line 30
     invoke-interface {v3, v1, v0, p1}, Labp;->a([BLjava/lang/Object;Ljava/security/MessageDigest;)V
 
     goto :goto_0
 
-    .line 32
     :cond_1
     return-void
 .end method
@@ -209,16 +180,12 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 18
     instance-of v0, p1, Labq;
 
     if-eqz v0, :cond_0
 
-    .line 19
     check-cast p1, Labq;
 
-    .line 20
     iget-object v0, p0, Labq;->b:Lct;
 
     iget-object v1, p1, Labq;->b:Lct;
@@ -227,7 +194,6 @@
 
     move-result v0
 
-    .line 21
     :goto_0
     return v0
 
@@ -240,8 +206,6 @@
 .method public final hashCode()I
     .locals 1
 
-    .prologue
-    .line 22
     iget-object v0, p0, Labq;->b:Lct;
 
     invoke-virtual {v0}, Lct;->hashCode()I
@@ -254,8 +218,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 33
     iget-object v0, p0, Labq;->b:Lct;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

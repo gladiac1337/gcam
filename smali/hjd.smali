@@ -17,17 +17,12 @@
 .method public constructor <init>(Ljava/lang/String;Lhjc;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lhjd;->a:Ljava/lang/String;
 
-    .line 3
     iput-object p2, p0, Lhjd;->b:Lhjc;
 
-    .line 4
     return-void
 .end method
 
@@ -36,11 +31,8 @@
 .method public final a(Ljava/lang/String;)Lhjh;
     .locals 6
 
-    .prologue
-    .line 29
     iget-object v1, p0, Lhjd;->b:Lhjc;
 
-    .line 30
     iget-object v0, v1, Lhjc;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -61,7 +53,6 @@
 
     move-result-object v0
 
-    .line 31
     :goto_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -71,7 +62,6 @@
 
     if-le v2, v3, :cond_0
 
-    .line 32
     const/4 v2, 0x0
 
     iget v3, v1, Lhjc;->b:I
@@ -84,7 +74,6 @@
 
     move-result-object v2
 
-    .line 33
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -139,16 +128,13 @@
 
     invoke-virtual {v2, v3}, Lhjd;->f(Ljava/lang/String;)V
 
-    .line 34
     :cond_0
     invoke-virtual {v1, v0}, Lhjc;->a(Ljava/lang/String;)Lhjd;
 
     move-result-object v0
 
-    .line 35
     return-object v0
 
-    .line 30
     :cond_1
     new-instance v0, Ljava/lang/String;
 
@@ -160,8 +146,6 @@
 .method public final a(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 3
 
-    .prologue
-    .line 23
     iget-object v0, p0, Lhjd;->b:Lhjc;
 
     iget-object v1, p0, Lhjd;->a:Ljava/lang/String;
@@ -174,12 +158,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 24
     iget-object v0, p0, Lhjd;->a:Ljava/lang/String;
 
     invoke-static {v0, p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 25
     :cond_0
     return-void
 .end method
@@ -187,8 +169,6 @@
 .method public final b(Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 20
     iget-object v0, p0, Lhjd;->b:Lhjc;
 
     iget-object v1, p0, Lhjd;->a:Ljava/lang/String;
@@ -201,12 +181,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 21
     iget-object v0, p0, Lhjd;->a:Ljava/lang/String;
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 22
     :cond_0
     return-void
 .end method
@@ -214,8 +192,6 @@
 .method public final b(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 3
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lhjd;->b:Lhjc;
 
     iget-object v1, p0, Lhjd;->a:Ljava/lang/String;
@@ -228,12 +204,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 9
     iget-object v0, p0, Lhjd;->a:Ljava/lang/String;
 
     invoke-static {v0, p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 10
     :cond_0
     return-void
 .end method
@@ -241,8 +215,6 @@
 .method public final c(Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lhjd;->b:Lhjc;
 
     iget-object v1, p0, Lhjd;->a:Ljava/lang/String;
@@ -255,12 +227,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 6
     iget-object v0, p0, Lhjd;->a:Ljava/lang/String;
 
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     :cond_0
     return-void
 .end method
@@ -268,8 +238,6 @@
 .method public final c(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 3
 
-    .prologue
-    .line 14
     iget-object v0, p0, Lhjd;->b:Lhjc;
 
     iget-object v1, p0, Lhjd;->a:Ljava/lang/String;
@@ -282,12 +250,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 15
     iget-object v0, p0, Lhjd;->a:Ljava/lang/String;
 
     invoke-static {v0, p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 16
     :cond_0
     return-void
 .end method
@@ -295,8 +261,6 @@
 .method public final d(Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lhjd;->b:Lhjc;
 
     iget-object v1, p0, Lhjd;->a:Ljava/lang/String;
@@ -309,12 +273,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 18
     iget-object v0, p0, Lhjd;->a:Ljava/lang/String;
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19
     :cond_0
     return-void
 .end method
@@ -322,8 +284,6 @@
 .method public final e(Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 26
     iget-object v0, p0, Lhjd;->b:Lhjc;
 
     iget-object v1, p0, Lhjd;->a:Ljava/lang/String;
@@ -336,12 +296,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 27
     iget-object v0, p0, Lhjd;->a:Ljava/lang/String;
 
     invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 28
     :cond_0
     return-void
 .end method
@@ -349,8 +307,6 @@
 .method public final f(Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lhjd;->b:Lhjc;
 
     iget-object v1, p0, Lhjd;->a:Ljava/lang/String;
@@ -363,12 +319,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 12
     iget-object v0, p0, Lhjd;->a:Ljava/lang/String;
 
     invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 13
     :cond_0
     return-void
 .end method

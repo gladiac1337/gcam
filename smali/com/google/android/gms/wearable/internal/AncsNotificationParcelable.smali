@@ -592,16 +592,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 1
-    .line 3
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lkk;->l(Landroid/os/Parcel;I)I
 
     move-result v1
 
-    .line 4
     const/4 v0, 0x1
 
     iget v2, p0, Lcom/google/android/gms/wearable/internal/AncsNotificationParcelable;->a:I
@@ -610,112 +606,85 @@
 
     const/4 v0, 0x2
 
-    .line 5
     iget v2, p0, Lcom/google/android/gms/wearable/internal/AncsNotificationParcelable;->b:I
 
-    .line 6
     invoke-static {p1, v0, v2}, Lkk;->c(Landroid/os/Parcel;II)V
 
     const/4 v0, 0x3
 
-    .line 7
     iget-object v2, p0, Lcom/google/android/gms/wearable/internal/AncsNotificationParcelable;->c:Ljava/lang/String;
 
-    .line 8
     invoke-static {p1, v0, v2}, Lkk;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/4 v0, 0x4
 
-    .line 9
     iget-object v2, p0, Lcom/google/android/gms/wearable/internal/AncsNotificationParcelable;->d:Ljava/lang/String;
 
-    .line 10
     invoke-static {p1, v0, v2}, Lkk;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/4 v0, 0x5
 
-    .line 11
     iget-object v2, p0, Lcom/google/android/gms/wearable/internal/AncsNotificationParcelable;->e:Ljava/lang/String;
 
-    .line 12
     invoke-static {p1, v0, v2}, Lkk;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/4 v0, 0x6
 
-    .line 13
     iget-object v2, p0, Lcom/google/android/gms/wearable/internal/AncsNotificationParcelable;->f:Ljava/lang/String;
 
-    .line 14
     invoke-static {p1, v0, v2}, Lkk;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/4 v0, 0x7
 
-    .line 15
     iget-object v2, p0, Lcom/google/android/gms/wearable/internal/AncsNotificationParcelable;->g:Ljava/lang/String;
 
-    .line 16
     invoke-static {p1, v0, v2}, Lkk;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/16 v2, 0x8
 
-    .line 17
     iget-object v0, p0, Lcom/google/android/gms/wearable/internal/AncsNotificationParcelable;->h:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
     iget-object v0, p0, Lcom/google/android/gms/wearable/internal/AncsNotificationParcelable;->c:Ljava/lang/String;
 
-    .line 18
     :goto_0
     invoke-static {p1, v2, v0}, Lkk;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/16 v0, 0x9
 
-    .line 19
     iget-byte v2, p0, Lcom/google/android/gms/wearable/internal/AncsNotificationParcelable;->i:B
 
-    .line 20
     invoke-static {p1, v0, v2}, Lkk;->a(Landroid/os/Parcel;IB)V
 
     const/16 v0, 0xa
 
-    .line 21
     iget-byte v2, p0, Lcom/google/android/gms/wearable/internal/AncsNotificationParcelable;->j:B
 
-    .line 22
     invoke-static {p1, v0, v2}, Lkk;->a(Landroid/os/Parcel;IB)V
 
     const/16 v0, 0xb
 
-    .line 23
     iget-byte v2, p0, Lcom/google/android/gms/wearable/internal/AncsNotificationParcelable;->k:B
 
-    .line 24
     invoke-static {p1, v0, v2}, Lkk;->a(Landroid/os/Parcel;IB)V
 
     const/16 v0, 0xc
 
-    .line 25
     iget-byte v2, p0, Lcom/google/android/gms/wearable/internal/AncsNotificationParcelable;->l:B
 
-    .line 26
     invoke-static {p1, v0, v2}, Lkk;->a(Landroid/os/Parcel;IB)V
 
     const/16 v0, 0xd
 
-    .line 27
     iget-object v2, p0, Lcom/google/android/gms/wearable/internal/AncsNotificationParcelable;->m:Ljava/lang/String;
 
-    .line 28
     invoke-static {p1, v0, v2}, Lkk;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    .line 29
     invoke-static {p1, v1}, Lkk;->m(Landroid/os/Parcel;I)V
 
-    .line 30
     return-void
 
-    .line 17
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/wearable/internal/AncsNotificationParcelable;->h:Ljava/lang/String;
 

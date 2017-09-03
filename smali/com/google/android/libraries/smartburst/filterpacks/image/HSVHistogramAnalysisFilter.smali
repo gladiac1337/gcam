@@ -25,24 +25,18 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/Filter;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
 
-    .line 2
     return-void
 .end method
 
 .method private static calculateEntropy([F)F
     .locals 12
 
-    .prologue
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    .line 50
-    .line 51
     array-length v4, p0
 
     move v2, v0
@@ -54,21 +48,17 @@
 
     aget v5, p0, v2
 
-    .line 52
     add-float/2addr v3, v5
 
-    .line 53
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 55
     :cond_0
     cmpl-float v2, v3, v1
 
     if-lez v2, :cond_2
 
-    .line 56
     array-length v4, p0
 
     move v2, v0
@@ -80,15 +70,12 @@
 
     aget v5, p0, v2
 
-    .line 57
     div-float/2addr v5, v3
 
-    .line 58
     cmpl-float v6, v5, v1
 
     if-lez v6, :cond_1
 
-    .line 59
     float-to-double v6, v0
 
     float-to-double v8, v5
@@ -105,7 +92,6 @@
 
     double-to-float v0, v6
 
-    .line 60
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
@@ -114,7 +100,6 @@
     :cond_2
     move v0, v1
 
-    .line 61
     :cond_3
     neg-float v0, v0
 
@@ -124,13 +109,10 @@
 .method private static calculateEntropyFromHistogram([F)F
     .locals 6
 
-    .prologue
-    .line 45
     const/4 v0, 0x6
 
     new-array v1, v0, [F
 
-    .line 46
     const/4 v0, 0x0
 
     :goto_0
@@ -138,7 +120,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 47
     rem-int/lit8 v2, v0, 0x6
 
     aget v3, v1, v2
@@ -157,12 +138,10 @@
 
     aput v3, v1, v2
 
-    .line 48
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 49
     :cond_0
     invoke-static {v1}, Lcom/google/android/libraries/smartburst/filterpacks/image/HSVHistogramAnalysisFilter;->calculateEntropy([F)F
 
@@ -174,11 +153,8 @@
 .method private static calculateSaturationFromHistogram([F)F
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 38
-    .line 40
     const/4 v1, 0x0
 
     move v2, v0
@@ -190,7 +166,6 @@
 
     if-ge v1, v4, :cond_0
 
-    .line 41
     aget v4, p0, v1
 
     invoke-static {v1}, Lcom/google/android/libraries/smartburst/filterpacks/image/HSVHistogramAnalysisFilter;->getHSVSaturationBin(I)I
@@ -203,17 +178,14 @@
 
     add-float/2addr v3, v4
 
-    .line 42
     aget v4, p0, v1
 
     add-float/2addr v2, v4
 
-    .line 43
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 44
     :cond_0
     const v1, 0x358637bd    # 1.0E-6f
 
@@ -237,8 +209,6 @@
 .method private static getHSVSaturationBin(I)I
     .locals 1
 
-    .prologue
-    .line 62
     div-int/lit8 v0, p0, 0x6
 
     add-int/lit8 v0, v0, 0x1
@@ -255,10 +225,8 @@
 .method public getSignature()Lcom/google/android/libraries/smartburst/filterfw/Signature;
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
-    .line 3
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     invoke-direct {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;-><init>()V
@@ -269,12 +237,10 @@
 
     const/16 v3, 0xc8
 
-    .line 4
     invoke-static {v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->buffer2D(I)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v3
 
-    .line 5
     invoke-virtual {v0, v1, v2, v3}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addInputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
@@ -283,12 +249,10 @@
 
     sget-object v2, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
-    .line 6
     invoke-static {v2}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->single(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v2
 
-    .line 7
     invoke-virtual {v0, v1, v4, v2}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addOutputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
@@ -297,34 +261,28 @@
 
     sget-object v2, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
-    .line 8
     invoke-static {v2}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->single(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v2
 
-    .line 9
     invoke-virtual {v0, v1, v4, v2}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addOutputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 10
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->disallowOtherPorts()Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 11
     return-object v0
 .end method
 
 .method protected onProcess()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x0
 
     const/16 v3, 0x12
 
-    .line 12
     const-string v0, "histogram"
 
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterpacks/image/HSVHistogramAnalysisFilter;->getConnectedInputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/InputPort;
@@ -335,19 +293,16 @@
 
     move-result-object v0
 
-    .line 13
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Frame;->asFrameBuffer2D()Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer2D;
 
     move-result-object v0
 
-    .line 14
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer2D;->getElementCount()I
 
     move-result v1
 
     if-eq v1, v3, :cond_0
 
-    .line 15
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Invalid size of the new chroma histogram."
@@ -356,7 +311,6 @@
 
     throw v0
 
-    .line 16
     :cond_0
     const-string v1, "saturation"
 
@@ -364,64 +318,51 @@
 
     move-result-object v1
 
-    .line 17
     const-string v2, "entropy"
 
     invoke-virtual {p0, v2}, Lcom/google/android/libraries/smartburst/filterpacks/image/HSVHistogramAnalysisFilter;->getConnectedOutputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/OutputPort;
 
     move-result-object v2
 
-    .line 18
     if-nez v2, :cond_2
 
     if-nez v1, :cond_2
 
-    .line 37
     :cond_1
     :goto_0
     return-void
 
-    .line 20
     :cond_2
     new-array v3, v3, [F
 
-    .line 21
     const/4 v4, 0x1
 
     invoke-virtual {v0, v4}, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer2D;->lockBytes(I)Ljava/nio/ByteBuffer;
 
     move-result-object v4
 
-    .line 22
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v5
 
     invoke-virtual {v4, v5}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 23
     invoke-virtual {v4}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
     move-result-object v4
 
-    .line 24
     invoke-virtual {v4}, Ljava/nio/FloatBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 25
     invoke-virtual {v4, v3}, Ljava/nio/FloatBuffer;->get([F)Ljava/nio/FloatBuffer;
 
-    .line 26
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer2D;->unlock()V
 
-    .line 27
     if-eqz v1, :cond_3
 
-    .line 28
     invoke-static {v3}, Lcom/google/android/libraries/smartburst/filterpacks/image/HSVHistogramAnalysisFilter;->calculateSaturationFromHistogram([F)F
 
     move-result v0
 
-    .line 29
     invoke-virtual {v1, v6}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->fetchAvailableFrame([I)Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
     move-result-object v4
@@ -430,26 +371,21 @@
 
     move-result-object v4
 
-    .line 30
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
 
     invoke-virtual {v4, v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameValue;->setValue(Ljava/lang/Object;)V
 
-    .line 31
     invoke-virtual {v1, v4}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->pushFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;)V
 
-    .line 32
     :cond_3
     if-eqz v2, :cond_1
 
-    .line 33
     invoke-static {v3}, Lcom/google/android/libraries/smartburst/filterpacks/image/HSVHistogramAnalysisFilter;->calculateEntropyFromHistogram([F)F
 
     move-result v0
 
-    .line 34
     invoke-virtual {v2, v6}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->fetchAvailableFrame([I)Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
     move-result-object v1
@@ -458,14 +394,12 @@
 
     move-result-object v1
 
-    .line 35
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameValue;->setValue(Ljava/lang/Object;)V
 
-    .line 36
     invoke-virtual {v2, v1}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->pushFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;)V
 
     goto :goto_0

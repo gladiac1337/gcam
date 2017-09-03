@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 79
     new-instance v0, Lavq;
 
     invoke-direct {v0}, Lavq;-><init>()V
@@ -31,27 +29,20 @@
 .method public static a(Lavm;)Lavm;
     .locals 2
 
-    .prologue
-    .line 58
-    .line 59
     new-instance v0, Laub;
 
     invoke-direct {v0, p0}, Laub;-><init>(Lavm;)V
 
-    .line 61
     new-instance v1, Lauq;
 
     invoke-direct {v1, v0}, Lauq;-><init>(Lavm;)V
 
-    .line 62
     return-object v1
 .end method
 
 .method public static a(Lavm;Lavm;)Lavm;
     .locals 2
 
-    .prologue
-    .line 19
     const/4 v0, 0x2
 
     new-array v0, v0, [Lavm;
@@ -64,7 +55,6 @@
 
     aput-object p1, v0, v1
 
-    .line 20
     invoke-static {v0}, Lavn;->b([Lavm;)Lavm;
 
     move-result-object v0
@@ -73,7 +63,6 @@
 
     invoke-direct {v1}, Lavr;-><init>()V
 
-    .line 21
     invoke-static {v0, v1}, Lavn;->a(Lavm;Lhpz;)Lavm;
 
     move-result-object v0
@@ -84,26 +73,20 @@
 .method public static a(Lavm;Lhpz;)Lavm;
     .locals 2
 
-    .prologue
-    .line 1
     new-instance v0, Lavw;
 
     invoke-direct {v0, p0, p1, p0}, Lavw;-><init>(Lavm;Lhpz;Lavm;)V
 
-    .line 3
     new-instance v1, Lauq;
 
     invoke-direct {v1, v0}, Lauq;-><init>(Lavm;)V
 
-    .line 4
     return-object v1
 .end method
 
 .method public static a(Lavm;Ljava/lang/Comparable;)Lavm;
     .locals 1
 
-    .prologue
-    .line 14
     new-instance v0, Lawb;
 
     invoke-direct {v0, p1}, Lawb;-><init>(Ljava/lang/Comparable;)V
@@ -118,8 +101,6 @@
 .method public static a(Liwe;)Lavm;
     .locals 3
 
-    .prologue
-    .line 26
     new-instance v0, Latr;
 
     const/4 v1, 0x0
@@ -130,26 +111,20 @@
 
     invoke-direct {v0, v1}, Latr;-><init>(Ljava/lang/Object;)V
 
-    .line 27
     new-instance v1, Lavt;
 
     invoke-direct {v1, v0}, Lavt;-><init>(Latr;)V
 
-    .line 28
     sget-object v2, Liwj;->a:Liwj;
 
-    .line 29
     invoke-static {p0, v1, v2}, Livs;->a(Liwe;Livr;Ljava/util/concurrent/Executor;)V
 
-    .line 30
     return-object v0
 .end method
 
 .method public static a(Ljava/lang/Object;)Lavm;
     .locals 1
 
-    .prologue
-    .line 5
     new-instance v0, Lavx;
 
     invoke-direct {v0, p0}, Lavx;-><init>(Ljava/lang/Object;)V
@@ -160,48 +135,36 @@
 .method public static a(Ljava/lang/Object;Liwe;)Lavm;
     .locals 3
 
-    .prologue
-    .line 31
     new-instance v0, Latr;
 
-    .line 32
     invoke-static {p0}, Lavn;->a(Ljava/lang/Object;)Lavm;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Latr;-><init>(Ljava/lang/Object;)V
 
-    .line 33
     new-instance v1, Lavu;
 
     invoke-direct {v1, v0}, Lavu;-><init>(Latr;)V
 
-    .line 34
     sget-object v2, Liwj;->a:Liwj;
 
-    .line 35
     invoke-static {p1, v1, v2}, Livs;->a(Liwe;Livr;Ljava/util/concurrent/Executor;)V
 
-    .line 38
     new-instance v1, Laub;
 
     invoke-direct {v1, v0}, Laub;-><init>(Lavm;)V
 
-    .line 40
     new-instance v0, Lauq;
 
     invoke-direct {v0, v1}, Lauq;-><init>(Lavm;)V
 
-    .line 41
     return-object v0
 .end method
 
 .method public static a(Ljava/util/Collection;)Lavm;
     .locals 2
 
-    .prologue
-    .line 6
-    .line 7
     invoke-static {p0}, Lavn;->e(Ljava/util/Collection;)Lavm;
 
     move-result-object v0
@@ -210,7 +173,6 @@
 
     invoke-direct {v1}, Lavz;-><init>()V
 
-    .line 8
     invoke-static {v0, v1}, Lavn;->a(Lavm;Lhpz;)Lavm;
 
     move-result-object v0
@@ -223,8 +185,6 @@
     .annotation runtime Ljava/lang/SafeVarargs;
     .end annotation
 
-    .prologue
-    .line 9
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
@@ -239,15 +199,10 @@
 .method public static a(Lavm;Lawz;)Lhiz;
     .locals 1
 
-    .prologue
-    .line 63
-    .line 64
     new-instance v0, Liwk;
 
-    .line 65
     invoke-direct {v0}, Liwk;-><init>()V
 
-    .line 66
     invoke-interface {p0, p1, v0}, Lavm;->a(Lawz;Ljava/util/concurrent/Executor;)Lhiz;
 
     move-result-object v0
@@ -258,17 +213,12 @@
 .method public static a(Lavm;Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)Lhiz;
     .locals 1
 
-    .prologue
-    .line 67
     invoke-static {p0}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 68
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 69
     invoke-static {p2}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 70
     new-instance v0, Lavv;
 
     invoke-direct {v0, p1}, Lavv;-><init>(Ljava/lang/Runnable;)V
@@ -283,56 +233,44 @@
 .method public static a(Lavm;Lhib;)Liwe;
     .locals 5
 
-    .prologue
-    .line 42
     new-instance v0, Liwp;
 
     invoke-direct {v0}, Liwp;-><init>()V
 
-    .line 44
     new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v2, 0x0
 
     invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    .line 45
     invoke-virtual {p1}, Lhib;->f()Lhib;
 
     move-result-object v2
 
-    .line 46
     new-instance v3, Lavo;
 
     invoke-direct {v3, v1, v2}, Lavo;-><init>(Ljava/util/concurrent/atomic/AtomicBoolean;Lhib;)V
 
-    .line 47
     sget-object v4, Liwj;->a:Liwj;
 
-    .line 48
     invoke-interface {p0, v3, v4}, Lavm;->a(Lawz;Ljava/util/concurrent/Executor;)Lhiz;
 
     move-result-object v3
 
-    .line 49
     invoke-virtual {v2, v3}, Lhib;->a(Lhiz;)Lhiz;
 
-    .line 50
     new-instance v3, Lavp;
 
     invoke-direct {v3, v0, v1}, Lavp;-><init>(Liwp;Ljava/util/concurrent/atomic/AtomicBoolean;)V
 
     invoke-virtual {v2, v3}, Lhib;->a(Lhiz;)Lhiz;
 
-    .line 51
     return-object v0
 .end method
 
 .method static final synthetic a(Liwp;Ljava/util/concurrent/atomic/AtomicBoolean;)V
     .locals 1
 
-    .prologue
-    .line 74
     invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result v0
@@ -349,23 +287,18 @@
 .method static final synthetic a(Ljava/util/concurrent/atomic/AtomicBoolean;Lhib;Ljava/lang/Boolean;)V
     .locals 1
 
-    .prologue
-    .line 75
     invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 76
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 77
     invoke-virtual {p1}, Lhib;->close()V
 
-    .line 78
     :cond_0
     return-void
 .end method
@@ -373,22 +306,16 @@
 .method public static b(Lavm;)Lavm;
     .locals 1
 
-    .prologue
-    .line 71
-    .line 72
     new-instance v0, Lauq;
 
     invoke-direct {v0, p0}, Lauq;-><init>(Lavm;)V
 
-    .line 73
     return-object v0
 .end method
 
 .method public static b(Lavm;Ljava/lang/Comparable;)Lavm;
     .locals 1
 
-    .prologue
-    .line 15
     new-instance v0, Lawc;
 
     invoke-direct {v0, p1}, Lawc;-><init>(Ljava/lang/Comparable;)V
@@ -403,8 +330,6 @@
 .method public static b(Ljava/util/Collection;)Lavm;
     .locals 2
 
-    .prologue
-    .line 10
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
@@ -416,7 +341,6 @@
     :goto_0
     invoke-static {v0}, Lid;->a(Z)V
 
-    .line 12
     invoke-static {p0}, Lavn;->e(Ljava/util/Collection;)Lavm;
 
     move-result-object v0
@@ -425,14 +349,12 @@
 
     invoke-direct {v1}, Lawa;-><init>()V
 
-    .line 13
     invoke-static {v0, v1}, Lavn;->a(Lavm;Lhpz;)Lavm;
 
     move-result-object v0
 
     return-object v0
 
-    .line 10
     :cond_0
     const/4 v0, 0x0
 
@@ -442,13 +364,10 @@
 .method public static varargs b([Lavm;)Lavm;
     .locals 4
 
-    .prologue
-    .line 53
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 54
     array-length v2, p0
 
     const/4 v0, 0x0
@@ -458,15 +377,12 @@
 
     aget-object v3, p0, v0
 
-    .line 55
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 56
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 57
     :cond_0
     invoke-static {v1}, Lavn;->e(Ljava/util/Collection;)Lavm;
 
@@ -478,9 +394,6 @@
 .method public static c(Ljava/util/Collection;)Lavm;
     .locals 2
 
-    .prologue
-    .line 16
-    .line 17
     invoke-static {p0}, Lavn;->e(Ljava/util/Collection;)Lavm;
 
     move-result-object v0
@@ -489,7 +402,6 @@
 
     invoke-direct {v1}, Lawd;-><init>()V
 
-    .line 18
     invoke-static {v0, v1}, Lavn;->a(Lavm;Lhpz;)Lavm;
 
     move-result-object v0
@@ -500,8 +412,6 @@
 .method public static d(Ljava/util/Collection;)Lavm;
     .locals 2
 
-    .prologue
-    .line 22
     invoke-interface {p0}, Ljava/util/Collection;->isEmpty()Z
 
     move-result v0
@@ -513,7 +423,6 @@
     :goto_0
     invoke-static {v0}, Lid;->a(Z)V
 
-    .line 24
     invoke-static {p0}, Lavn;->e(Ljava/util/Collection;)Lavm;
 
     move-result-object v0
@@ -522,14 +431,12 @@
 
     invoke-direct {v1}, Lavs;-><init>()V
 
-    .line 25
     invoke-static {v0, v1}, Lavn;->a(Lavm;Lhpz;)Lavm;
 
     move-result-object v0
 
     return-object v0
 
-    .line 22
     :cond_0
     const/4 v0, 0x0
 
@@ -539,8 +446,6 @@
 .method public static e(Ljava/util/Collection;)Lavm;
     .locals 1
 
-    .prologue
-    .line 52
     new-instance v0, Lava;
 
     invoke-direct {v0, p0}, Lava;-><init>(Ljava/util/Collection;)V

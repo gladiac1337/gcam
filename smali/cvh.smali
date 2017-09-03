@@ -45,73 +45,52 @@
 .method constructor <init>(Lbow;Lbsi;Lgjj;Lghx;Lepv;Lcom/google/android/apps/camera/config/GservicesHelper;Lgck;Lgch;Lavm;Lfgy;Lhic;Lfax;Leyv;Lezb;Lent;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lghg;Lhjz;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lcmx;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcvh;->a:Lbow;
 
-    .line 3
     iput-object p2, p0, Lcvh;->b:Lbsi;
 
-    .line 4
     iput-object p3, p0, Lcvh;->c:Lgjj;
 
-    .line 5
     iput-object p4, p0, Lcvh;->d:Lghx;
 
-    .line 6
     iput-object p5, p0, Lcvh;->e:Lepv;
 
-    .line 7
     iput-object p6, p0, Lcvh;->f:Lcom/google/android/apps/camera/config/GservicesHelper;
 
-    .line 8
     iput-object p7, p0, Lcvh;->g:Lgck;
 
-    .line 9
     iput-object p8, p0, Lcvh;->h:Lgch;
 
-    .line 10
     iput-object p9, p0, Lcvh;->i:Lavm;
 
-    .line 11
     iput-object p11, p0, Lcvh;->j:Lhic;
 
-    .line 12
     iput-object p10, p0, Lcvh;->k:Lfgy;
 
-    .line 13
     iput-object p12, p0, Lcvh;->l:Lfax;
 
-    .line 14
     iput-object p13, p0, Lcvh;->m:Leyv;
 
-    .line 15
     iput-object p14, p0, Lcvh;->n:Lezb;
 
-    .line 16
     move-object/from16 v0, p15
 
     iput-object v0, p0, Lcvh;->o:Lent;
 
-    .line 17
     move-object/from16 v0, p16
 
     iput-object v0, p0, Lcvh;->p:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
-    .line 18
     move-object/from16 v0, p17
 
     iput-object v0, p0, Lcvh;->q:Lghg;
 
-    .line 19
     move-object/from16 v0, p18
 
     iput-object v0, p0, Lcvh;->r:Lhjz;
 
-    .line 20
     return-void
 .end method
 
@@ -120,8 +99,6 @@
 .method protected final a(Lbqs;)Lcna;
     .locals 22
 
-    .prologue
-    .line 21
     new-instance v1, Lfhx;
 
     move-object/from16 v0, p0
@@ -162,7 +139,6 @@
 
     iget-object v4, v0, Lcvh;->k:Lfgy;
 
-    .line 22
     invoke-interface {v4}, Lfgy;->b()Lhhm;
 
     move-result-object v12
@@ -219,6 +195,5 @@
 
     invoke-direct/range {v1 .. v21}, Lfhx;-><init>(Lbow;Lbsi;Lbqs;ZLepv;Lghx;Lcom/google/android/apps/camera/config/GservicesHelper;Lgck;Lgch;Lgjj;Lhhm;Lhic;Lavm;Lfax;Leyv;Lezb;Lent;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lghg;Lhjz;)V
 
-    .line 23
     return-object v1
 .end method

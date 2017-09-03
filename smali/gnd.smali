@@ -14,8 +14,6 @@
 .method public constructor <init>(Lgmx;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgnd;->a:Lgmx;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,14 +26,10 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 4
 
-    .prologue
-    .line 8
     check-cast p1, Lbek;
 
-    .line 9
     sget-object v0, Lgmx;->a:Ljava/lang/String;
 
-    .line 10
     iget-object v1, p1, Lbek;->b:Ljava/io/File;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -72,38 +66,28 @@
 
     invoke-static {v0, v1}, Lbgj;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 11
     iget-object v0, p0, Lgnd;->a:Lgmx;
 
-    .line 12
     iget-object v0, v0, Lgmx;->g:Ljava/util/List;
 
-    .line 13
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 14
     iget-object v0, p0, Lgnd;->a:Lgmx;
 
-    .line 15
     iget-object v0, v0, Lgmx;->e:Lgni;
 
-    .line 16
     const/4 v1, 0x1
 
     invoke-interface {v0, v1}, Lgni;->c(Z)V
 
-    .line 17
     return-void
 .end method
 
 .method public final a(Ljava/lang/Throwable;)V
     .locals 4
 
-    .prologue
-    .line 2
     sget-object v0, Lgmx;->a:Ljava/lang/String;
 
-    .line 3
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -138,17 +122,13 @@
 
     invoke-static {v0, v1}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lgnd;->a:Lgmx;
 
-    .line 5
     iget-object v0, v0, Lgmx;->e:Lgni;
 
-    .line 6
     const/4 v1, 0x1
 
     invoke-interface {v0, v1}, Lgni;->c(Z)V
 
-    .line 7
     return-void
 .end method

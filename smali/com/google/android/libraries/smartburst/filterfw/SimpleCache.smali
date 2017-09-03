@@ -11,8 +11,6 @@
 .method public constructor <init>(I)V
     .locals 3
 
-    .prologue
-    .line 1
     add-int/lit8 v0, p1, 0x1
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -21,10 +19,8 @@
 
     invoke-direct {p0, v0, v1, v2}, Ljava/util/LinkedHashMap;-><init>(IFZ)V
 
-    .line 2
     iput p1, p0, Lcom/google/android/libraries/smartburst/filterfw/SimpleCache;->mMaxEntries:I
 
-    .line 3
     return-void
 .end method
 
@@ -33,8 +29,6 @@
 .method protected removeEldestEntry(Ljava/util/Map$Entry;)Z
     .locals 2
 
-    .prologue
-    .line 4
     invoke-super {p0}, Ljava/util/LinkedHashMap;->size()I
 
     move-result v0

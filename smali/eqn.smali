@@ -31,8 +31,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 26
     const-string v0, "Photos1UpLauncher"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -41,7 +39,6 @@
 
     sput-object v0, Leqn;->a:Ljava/lang/String;
 
-    .line 27
     new-instance v0, Lbin;
 
     const-string v1, "camera.closeonphotos"
@@ -56,72 +53,53 @@
 .method public constructor <init>(Landroid/content/Context;ZLiya;Lets;Lbgr;Lbgb;Lfgl;Lerg;Lhjz;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Leqn;->b:Landroid/content/Context;
 
-    .line 3
     iput-boolean p2, p0, Leqn;->c:Z
 
-    .line 4
     iput-object p3, p0, Leqn;->d:Liya;
 
-    .line 5
     iput-object p4, p0, Leqn;->e:Lets;
 
-    .line 6
     iput-object p5, p0, Leqn;->f:Lbgr;
 
-    .line 7
     iput-object p6, p0, Leqn;->g:Lbgb;
 
-    .line 8
     iput-object p7, p0, Leqn;->h:Lfgl;
 
-    .line 9
     iput-object p8, p0, Leqn;->i:Lerg;
 
-    .line 10
     iput-object p9, p0, Leqn;->j:Lhjz;
 
-    .line 11
     return-void
 .end method
 
 .method static a(Lfhs;)[J
     .locals 10
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 12
     invoke-interface {p0}, Lfhs;->f()I
 
     move-result v3
 
-    .line 13
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     move v1, v2
 
-    .line 14
     :goto_0
     if-ge v1, v3, :cond_2
 
-    .line 15
     invoke-interface {p0, v1}, Lfhs;->e(I)Lfqu;
 
     move-result-object v0
 
-    .line 16
     if-eqz v0, :cond_1
 
-    .line 17
     invoke-interface {v0}, Lfqu;->f()Lfqy;
 
     move-result-object v0
@@ -130,12 +108,10 @@
 
     move-result-object v0
 
-    .line 18
     invoke-virtual {v0, v2}, Link;->a(I)Lipx;
 
     move-result-object v5
 
-    .line 19
     :cond_0
     :goto_1
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
@@ -150,7 +126,6 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    .line 20
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v6
@@ -161,12 +136,10 @@
 
     if-eqz v6, :cond_0
 
-    .line 21
     invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 23
     :cond_1
     add-int/lit8 v0, v1, 0x1
 
@@ -174,7 +147,6 @@
 
     goto :goto_0
 
-    .line 24
     :cond_2
     sget-object v0, Leqn;->a:Ljava/lang/String;
 
@@ -210,7 +182,6 @@
 
     invoke-static {v0, v1}, Lbgj;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 25
     invoke-static {v4}, Lkk;->e(Ljava/util/Collection;)[J
 
     move-result-object v0

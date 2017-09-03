@@ -18,20 +18,14 @@
 .method public constructor <init>(Lilp;Lilp;Lilp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldwm;->a:Lilp;
 
-    .line 3
     iput-object p2, p0, Ldwm;->b:Lilp;
 
-    .line 4
     iput-object p3, p0, Ldwm;->c:Lilp;
 
-    .line 5
     return-void
 .end method
 
@@ -40,14 +34,10 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 19
 
-    .prologue
-    .line 6
-    .line 7
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldwm;->a:Lilp;
 
-    .line 8
     invoke-interface {v2}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -78,35 +68,28 @@
 
     check-cast v13, Ldym;
 
-    .line 10
     new-instance v16, Ldyr;
 
-    .line 11
     invoke-virtual {v2}, Ldyj;->a()Ldvk;
 
     move-result-object v17
 
-    .line 12
     invoke-static {}, Lkk;->j()Lfvg;
 
     move-result-object v2
 
-    .line 13
     iget-object v3, v13, Ldym;->e:Liwe;
 
     new-instance v4, Ldyn;
 
     invoke-direct {v4, v2}, Ldyn;-><init>(Lfvg;)V
 
-    .line 14
     sget-object v2, Liwj;->a:Liwj;
 
-    .line 15
     invoke-static {v3, v4, v2}, Livs;->a(Liwe;Lhpz;Ljava/util/concurrent/Executor;)Liwe;
 
     move-result-object v9
 
-    .line 16
     new-instance v18, Ldys;
 
     new-instance v2, Ldxq;
@@ -143,7 +126,6 @@
 
     invoke-direct {v0, v2, v3, v4}, Ldys;-><init>(Ldvk;IZ)V
 
-    .line 17
     move-object/from16 v0, v17
 
     move-object/from16 v1, v18
@@ -156,10 +138,8 @@
 
     invoke-direct {v0, v2}, Ldyr;-><init>(Ldvk;)V
 
-    .line 18
     const-string v2, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 19
     move-object/from16 v0, v16
 
     invoke-static {v0, v2}, Ldt;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
@@ -168,6 +148,5 @@
 
     check-cast v2, Ldyr;
 
-    .line 20
     return-object v2
 .end method

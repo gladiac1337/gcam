@@ -18,8 +18,6 @@
 .method constructor <init>(Lceo;Lfwx;Lcen;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcep;->c:Lceo;
 
     iput-object p2, p0, Lcep;->a:Lfwx;
@@ -34,8 +32,6 @@
 .method private static synthetic a(Ljava/lang/Throwable;Ljava/lang/AutoCloseable;)V
     .locals 1
 
-    .prologue
-    .line 65
     if-eqz p0, :cond_0
 
     :try_start_0
@@ -64,45 +60,33 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 12
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 7
     check-cast p1, Ldpl;
 
-    .line 8
     :try_start_0
     iget-object v0, p0, Lcep;->c:Lceo;
 
-    .line 9
     iget-object v0, v0, Lceo;->a:Ljava/util/concurrent/Semaphore;
 
-    .line 10
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 11
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 12
     iget-object v0, p0, Lcep;->a:Lfwx;
 
     invoke-virtual {v0}, Lfwx;->close()V
 
-    .line 13
     iget-object v0, p0, Lcep;->b:Lcen;
 
-    .line 14
     iget-wide v4, p1, Ldpl;->a:J
 
-    .line 15
     invoke-virtual {v0, v4, v5}, Lcen;->a(J)V
 
-    .line 16
     iget-object v1, p0, Lcep;->c:Lceo;
 
     iget-object v3, p0, Lcep;->a:Lfwx;
 
-    .line 19
     sget-object v0, Lfwz;->e:Lfwy;
 
     invoke-virtual {v3, v0}, Lfwx;->a(Lfwy;)Ljava/lang/Object;
@@ -111,7 +95,6 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    .line 20
     sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v5, "burst-%d"
@@ -124,12 +107,10 @@
 
     aput-object v0, v6, v7
 
-    .line 21
     invoke-static {v4, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 22
     new-instance v4, Ljava/io/File;
 
     invoke-virtual {v1}, Lceo;->a()Ljava/io/File;
@@ -138,7 +119,6 @@
 
     invoke-direct {v4, v1, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 23
     invoke-virtual {v4}, Ljava/io/File;->mkdirs()Z
 
     move-result v0
@@ -151,7 +131,6 @@
 
     if-nez v0, :cond_0
 
-    .line 24
     new-instance v0, Ljava/io/IOException;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -193,11 +172,9 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 62
     :catch_0
     move-exception v0
 
-    .line 63
     :try_start_1
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -207,7 +184,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 64
     :catchall_0
     move-exception v0
 
@@ -217,17 +193,14 @@
 
     throw v0
 
-    .line 26
     :cond_0
     :try_start_2
     invoke-virtual {v3}, Lfwx;->e()J
 
     move-result-wide v0
 
-    .line 27
     new-instance v7, Ljava/io/File;
 
-    .line 28
     invoke-static {v0, v1}, Lihv;->a(J)Ljava/lang/String;
 
     move-result-object v0
@@ -237,7 +210,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 30
     :try_start_3
     new-instance v3, Ljava/io/BufferedOutputStream;
 
@@ -251,11 +223,9 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 32
     :try_start_4
     iget-object v0, p1, Ldpl;->d:Lcom/google/android/libraries/camera/exif/ExifInterface;
 
-    .line 33
     invoke-virtual {v0, v3}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(Ljava/io/OutputStream;)Ljava/io/OutputStream;
     :try_end_4
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_2
@@ -263,14 +233,11 @@
 
     move-result-object v4
 
-    .line 36
     :try_start_5
     iget-object v1, p1, Ldpl;->b:[B
 
-    .line 37
     iget-object v0, p0, Lcep;->a:Lfwx;
 
-    .line 38
     sget-object v5, Lfwz;->d:Lfwy;
 
     invoke-virtual {v0, v5}, Lfwx;->a(Lfwy;)Ljava/lang/Object;
@@ -279,20 +246,17 @@
 
     check-cast v0, Ljava/util/UUID;
 
-    .line 39
     const/4 v5, 0x0
 
     invoke-static {v0, v5}, Lkk;->a(Ljava/util/UUID;Z)Lud;
 
     move-result-object v0
 
-    .line 40
     invoke-static {v1, v4, v0}, Lcao;->a([BLjava/io/OutputStream;Lud;)V
     :try_end_5
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_4
 
-    .line 41
     const/4 v0, 0x0
 
     :try_start_6
@@ -301,7 +265,6 @@
     .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_2
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
-    .line 44
     const/4 v0, 0x0
 
     :try_start_7
@@ -311,16 +274,13 @@
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_0
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 49
     :try_start_8
     iget-object v10, p0, Lcep;->a:Lfwx;
 
-    .line 50
     new-instance v0, Lcel;
 
     sget-object v1, Lfwz;->f:Lfwy;
 
-    .line 51
     invoke-virtual {v10, v1}, Lfwx;->a(Lfwy;)Ljava/lang/Object;
 
     move-result-object v1
@@ -333,7 +293,6 @@
 
     sget-object v2, Lfwz;->e:Lfwy;
 
-    .line 52
     invoke-virtual {v10, v2}, Lfwx;->a(Lfwy;)Ljava/lang/Object;
 
     move-result-object v2
@@ -344,14 +303,12 @@
 
     move-result-wide v2
 
-    .line 53
     invoke-virtual {v10}, Lfwx;->e()J
 
     move-result-wide v4
 
     sget-object v6, Lfwz;->d:Lfwy;
 
-    .line 54
     invoke-virtual {v10, v6}, Lfwx;->a(Lfwy;)Ljava/lang/Object;
 
     move-result-object v6
@@ -360,26 +317,22 @@
 
     sget-object v8, Lfwz;->c:Lfwy;
 
-    .line 55
     invoke-virtual {v10, v8}, Lfwx;->a(Lfwy;)Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Lhix;
 
-    .line 56
     invoke-virtual {v10}, Lfwx;->f()I
 
     move-result v9
 
-    .line 57
     invoke-virtual {v10}, Lfwx;->c()I
 
     move-result v10
 
     invoke-direct/range {v0 .. v10}, Lcel;-><init>(IJJLjava/util/UUID;Ljava/io/File;Lhix;II)V
 
-    .line 59
     iget-object v1, p0, Lcep;->b:Lcen;
 
     invoke-virtual {v1, v0}, Lcen;->a(Lcel;)V
@@ -387,15 +340,12 @@
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_0
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 60
     iget-object v0, p0, Lcep;->a:Lfwx;
 
     invoke-virtual {v0}, Lfwx;->close()V
 
-    .line 61
     return-void
 
-    .line 42
     :catch_1
     move-exception v0
 
@@ -404,7 +354,6 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
-    .line 43
     :catchall_1
     move-exception v1
 
@@ -423,7 +372,6 @@
     .catch Ljava/lang/Throwable; {:try_start_a .. :try_end_a} :catch_2
     .catchall {:try_start_a .. :try_end_a} :catchall_3
 
-    .line 45
     :catch_2
     move-exception v0
 
@@ -432,7 +380,6 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_2
 
-    .line 46
     :catchall_2
     move-exception v1
 
@@ -450,11 +397,9 @@
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_0
     .catchall {:try_start_c .. :try_end_c} :catchall_0
 
-    .line 47
     :catch_3
     move-exception v0
 
-    .line 48
     :try_start_d
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -465,13 +410,11 @@
     .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_0
     .catchall {:try_start_d .. :try_end_d} :catchall_0
 
-    .line 46
     :catchall_3
     move-exception v0
 
     goto :goto_1
 
-    .line 43
     :catchall_4
     move-exception v0
 
@@ -483,21 +426,15 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcep;->c:Lceo;
 
-    .line 3
     iget-object v0, v0, Lceo;->a:Ljava/util/concurrent/Semaphore;
 
-    .line 4
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 5
     iget-object v0, p0, Lcep;->a:Lfwx;
 
     invoke-virtual {v0}, Lfwx;->close()V
 
-    .line 6
     return-void
 .end method

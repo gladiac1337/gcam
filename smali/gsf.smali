@@ -17,8 +17,6 @@
 .method public constructor <init>(Lgsd;Lyr;Lye;)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgsf;->d:Lgsd;
 
     iput-object p2, p0, Lgsf;->a:Lyr;
@@ -39,51 +37,37 @@
 .method public final run()V
     .locals 6
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgsf;->d:Lgsd;
 
-    .line 3
     iget-object v1, v0, Lgsd;->i:Ljava/lang/Object;
 
-    .line 4
     monitor-enter v1
 
-    .line 5
     :try_start_0
     iget-object v0, p0, Lgsf;->d:Lgsd;
 
-    .line 6
     const/4 v2, 0x0
 
     iput-boolean v2, v0, Lgsd;->d:Z
 
-    .line 7
     iget-object v0, p0, Lgsf;->d:Lgsd;
 
-    .line 8
     iget-object v0, v0, Lgsd;->b:Lyg;
 
-    .line 9
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
     invoke-virtual {v0, v2, v3}, Lyg;->b(Landroid/os/Handler;Lyf;)V
 
-    .line 10
     iget-object v0, p0, Lgsf;->d:Lgsd;
 
-    .line 11
     iget-object v0, v0, Lgsd;->b:Lyg;
 
-    .line 12
     iget-object v2, p0, Lgsf;->d:Lgsd;
 
-    .line 13
     iget-object v2, v2, Lgsd;->h:Landroid/os/Handler;
 
-    .line 14
     iget-object v3, p0, Lgsf;->a:Lyr;
 
     const/4 v4, 0x0
@@ -92,7 +76,6 @@
 
     invoke-virtual {v0, v2, v3, v4, v5}, Lyg;->a(Landroid/os/Handler;Lyr;Lye;Lye;)V
 
-    .line 15
     monitor-exit v1
 
     return-void

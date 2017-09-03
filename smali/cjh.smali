@@ -20,8 +20,6 @@
 .method constructor <init>(Lcjd;Lcjm;FF)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcjh;->d:Lcjd;
 
     iput-object p2, p0, Lcjh;->a:Lcjm;
@@ -40,8 +38,6 @@
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 6
 
-    .prologue
-    .line 2
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -52,26 +48,20 @@
 
     move-result v0
 
-    .line 3
     iget-object v1, p0, Lcjh;->d:Lcjd;
 
     iget-object v1, v1, Lcjd;->f:Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/FilmstripView;
 
-    .line 4
     iget v1, v1, Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/FilmstripView;->j:F
 
-    .line 5
     div-float v3, v0, v1
 
-    .line 6
     iget-object v1, p0, Lcjh;->d:Lcjd;
 
     iget-object v1, v1, Lcjd;->f:Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/FilmstripView;
 
-    .line 7
     iput v0, v1, Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/FilmstripView;->j:F
 
-    .line 8
     iget-object v0, p0, Lcjh;->a:Lcjm;
 
     iget v1, p0, Lcjh;->b:F
@@ -82,10 +72,8 @@
 
     iget-object v4, v4, Lcjd;->f:Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/FilmstripView;
 
-    .line 9
     iget-object v4, v4, Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/FilmstripView;->i:Landroid/graphics/Rect;
 
-    .line 10
     invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
 
     move-result v4
@@ -94,16 +82,13 @@
 
     iget-object v5, v5, Lcjd;->f:Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/FilmstripView;
 
-    .line 11
     iget-object v5, v5, Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/FilmstripView;->i:Landroid/graphics/Rect;
 
-    .line 12
     invoke-virtual {v5}, Landroid/graphics/Rect;->height()I
 
     move-result v5
 
     invoke-virtual/range {v0 .. v5}, Lcjm;->a(FFFII)V
 
-    .line 13
     return-void
 .end method

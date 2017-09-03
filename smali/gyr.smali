@@ -25,8 +25,6 @@
 .method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgyr;->a:Lgyq;
 
     iget-object v0, v0, Lgyq;->h:Lgyo;
@@ -40,22 +38,16 @@
     :try_start_0
     iget-object v0, p0, Lgyr;->a:Lgyq;
 
-    .line 2
     iput-object p2, v0, Lgyq;->e:Landroid/os/IBinder;
 
-    .line 3
     iget-object v0, p0, Lgyr;->a:Lgyq;
 
-    .line 4
     iput-object p1, v0, Lgyq;->g:Landroid/content/ComponentName;
 
-    .line 5
     iget-object v0, p0, Lgyr;->a:Lgyq;
 
-    .line 6
     iget-object v0, v0, Lgyq;->b:Ljava/util/Set;
 
-    .line 7
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -77,7 +69,6 @@
 
     goto :goto_0
 
-    .line 9
     :catchall_0
     move-exception v0
 
@@ -87,17 +78,14 @@
 
     throw v0
 
-    .line 7
     :cond_0
     :try_start_1
     iget-object v0, p0, Lgyr;->a:Lgyq;
 
-    .line 8
     const/4 v2, 0x1
 
     iput v2, v0, Lgyq;->c:I
 
-    .line 9
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -108,8 +96,6 @@
 .method public final onServiceDisconnected(Landroid/content/ComponentName;)V
     .locals 3
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lgyr;->a:Lgyq;
 
     iget-object v0, v0, Lgyq;->h:Lgyo;
@@ -123,24 +109,18 @@
     :try_start_0
     iget-object v0, p0, Lgyr;->a:Lgyq;
 
-    .line 11
     const/4 v2, 0x0
 
     iput-object v2, v0, Lgyq;->e:Landroid/os/IBinder;
 
-    .line 12
     iget-object v0, p0, Lgyr;->a:Lgyq;
 
-    .line 13
     iput-object p1, v0, Lgyq;->g:Landroid/content/ComponentName;
 
-    .line 14
     iget-object v0, p0, Lgyr;->a:Lgyq;
 
-    .line 15
     iget-object v0, v0, Lgyq;->b:Ljava/util/Set;
 
-    .line 16
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -162,7 +142,6 @@
 
     goto :goto_0
 
-    .line 18
     :catchall_0
     move-exception v0
 
@@ -172,17 +151,14 @@
 
     throw v0
 
-    .line 16
     :cond_0
     :try_start_1
     iget-object v0, p0, Lgyr;->a:Lgyq;
 
-    .line 17
     const/4 v2, 0x2
 
     iput v2, v0, Lgyq;->c:I
 
-    .line 18
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

@@ -19,14 +19,12 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x2
 
     const/4 v3, 0x0
 
     const/4 v2, 0x1
 
-    .line 5
     new-instance v0, Lgqx;
 
     const-string v1, "INDETERMINATE"
@@ -35,7 +33,6 @@
 
     sput-object v0, Lgqx;->a:Lgqx;
 
-    .line 6
     new-instance v0, Lgqx;
 
     const-string v1, "DETERMINATE"
@@ -44,7 +41,6 @@
 
     sput-object v0, Lgqx;->b:Lgqx;
 
-    .line 7
     new-array v0, v4, [Lgqx;
 
     sget-object v1, Lgqx;->a:Lgqx;
@@ -63,22 +59,16 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput p3, p0, Lgqx;->c:I
 
-    .line 4
     return-void
 .end method
 
 .method public static values()[Lgqx;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lgqx;->d:[Lgqx;
 
     invoke-virtual {v0}, [Lgqx;->clone()Ljava/lang/Object;

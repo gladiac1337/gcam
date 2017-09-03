@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,16 +20,12 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 2
     check-cast p1, Ljava/util/List;
 
-    .line 3
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -49,7 +43,6 @@
 
     check-cast v0, Lfym;
 
-    .line 5
     invoke-interface {v0}, Lfym;->e()Lavm;
 
     move-result-object v0
@@ -58,12 +51,10 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     invoke-static {v1}, Lavn;->e(Ljava/util/Collection;)Lavm;
 
     move-result-object v0
 
-    .line 8
     return-object v0
 .end method

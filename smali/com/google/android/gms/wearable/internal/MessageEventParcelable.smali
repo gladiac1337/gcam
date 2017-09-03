@@ -142,16 +142,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 1
-    .line 3
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lkk;->l(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 4
     const/4 v1, 0x1
 
     iget v2, p0, Lcom/google/android/gms/wearable/internal/MessageEventParcelable;->a:I
@@ -160,39 +156,29 @@
 
     const/4 v1, 0x2
 
-    .line 5
     iget v2, p0, Lcom/google/android/gms/wearable/internal/MessageEventParcelable;->b:I
 
-    .line 6
     invoke-static {p1, v1, v2}, Lkk;->c(Landroid/os/Parcel;II)V
 
     const/4 v1, 0x3
 
-    .line 7
     iget-object v2, p0, Lcom/google/android/gms/wearable/internal/MessageEventParcelable;->c:Ljava/lang/String;
 
-    .line 8
     invoke-static {p1, v1, v2}, Lkk;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/4 v1, 0x4
 
-    .line 9
     iget-object v2, p0, Lcom/google/android/gms/wearable/internal/MessageEventParcelable;->d:[B
 
-    .line 10
     invoke-static {p1, v1, v2}, Lkk;->a(Landroid/os/Parcel;I[B)V
 
     const/4 v1, 0x5
 
-    .line 11
     iget-object v2, p0, Lcom/google/android/gms/wearable/internal/MessageEventParcelable;->e:Ljava/lang/String;
 
-    .line 12
     invoke-static {p1, v1, v2}, Lkk;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    .line 13
     invoke-static {p1, v0}, Lkk;->m(Landroid/os/Parcel;I)V
 
-    .line 14
     return-void
 .end method

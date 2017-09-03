@@ -16,8 +16,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,8 +26,6 @@
 .method public a(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 2
     invoke-virtual {p0, p1}, Limp;->a(Ljava/lang/Object;)Ljava/util/Collection;
 
     move-result-object v0
@@ -44,8 +40,6 @@
 .method c()Ljava/util/Set;
     .locals 2
 
-    .prologue
-    .line 5
     new-instance v0, Lioo;
 
     invoke-virtual {p0}, Limp;->f()Ljava/util/Map;
@@ -63,11 +57,8 @@
 .method public e()Ljava/util/Set;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Limp;->a:Ljava/util/Set;
 
-    .line 4
     if-nez v0, :cond_0
 
     invoke-virtual {p0}, Limp;->c()Ljava/util/Set;
@@ -83,28 +74,20 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 8
-    .line 9
     if-ne p1, p0, :cond_0
 
-    .line 10
     const/4 v0, 0x1
 
-    .line 15
     :goto_0
     return v0
 
-    .line 11
     :cond_0
     instance-of v0, p1, Lior;
 
     if-eqz v0, :cond_1
 
-    .line 12
     check-cast p1, Lior;
 
-    .line 13
     invoke-interface {p0}, Lior;->f()Ljava/util/Map;
 
     move-result-object v0
@@ -119,22 +102,17 @@
 
     goto :goto_0
 
-    .line 14
     :cond_1
     const/4 v0, 0x0
 
-    .line 15
     goto :goto_0
 .end method
 
 .method public f()Ljava/util/Map;
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Limp;->b:Ljava/util/Map;
 
-    .line 7
     if-nez v0, :cond_0
 
     invoke-virtual {p0}, Limp;->d()Ljava/util/Map;
@@ -150,8 +128,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 16
     invoke-virtual {p0}, Limp;->f()Ljava/util/Map;
 
     move-result-object v0
@@ -166,8 +142,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 17
     invoke-virtual {p0}, Limp;->f()Ljava/util/Map;
 
     move-result-object v0

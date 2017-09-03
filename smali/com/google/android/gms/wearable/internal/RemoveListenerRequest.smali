@@ -81,16 +81,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 1
-    .line 3
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lkk;->l(Landroid/os/Parcel;I)I
 
     move-result v1
 
-    .line 4
     const/4 v0, 0x1
 
     iget v2, p0, Lcom/google/android/gms/wearable/internal/RemoveListenerRequest;->a:I
@@ -99,24 +95,19 @@
 
     const/4 v2, 0x2
 
-    .line 5
     iget-object v0, p0, Lcom/google/android/gms/wearable/internal/RemoveListenerRequest;->b:Lhfu;
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 6
     :goto_0
     invoke-static {p1, v2, v0}, Lkk;->a(Landroid/os/Parcel;ILandroid/os/IBinder;)V
 
-    .line 7
     invoke-static {p1, v1}, Lkk;->m(Landroid/os/Parcel;I)V
 
-    .line 8
     return-void
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/wearable/internal/RemoveListenerRequest;->b:Lhfu;
 

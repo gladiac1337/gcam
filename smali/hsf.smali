@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Lhsf;
 
     invoke-direct {v0}, Lhsf;-><init>()V
@@ -25,8 +23,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lhse;-><init>()V
 
     return-void

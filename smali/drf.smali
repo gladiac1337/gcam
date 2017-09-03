@@ -29,8 +29,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 8
     const-string v0, "GcamDngImgWrtr"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -39,7 +37,6 @@
 
     sput-object v0, Ldrf;->a:Ljava/lang/String;
 
-    .line 9
     new-instance v0, Lbin;
 
     const-string v1, "camera.exp.dng.ms"
@@ -52,25 +49,17 @@
 .method constructor <init>(Landroid/content/Context;Lgjj;Lgiz;Lgjf;Lcom/google/android/apps/camera/util/ApiHelper;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldrf;->b:Landroid/content/Context;
 
-    .line 3
     iput-object p2, p0, Ldrf;->d:Lgjj;
 
-    .line 4
     iput-object p3, p0, Ldrf;->e:Lgiz;
 
-    .line 5
     iput-object p4, p0, Ldrf;->c:Lgjf;
 
-    .line 6
     iput-object p5, p0, Ldrf;->f:Lcom/google/android/apps/camera/util/ApiHelper;
 
-    .line 7
     return-void
 .end method

@@ -16,8 +16,6 @@
 .method constructor <init>(Lbwd;Lfur;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbwe;->b:Lbwd;
 
     iput-object p2, p0, Lbwe;->a:Lfur;
@@ -32,8 +30,6 @@
 .method public final a()Lfus;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbwe;->a:Lfur;
 
     invoke-interface {v0}, Lfur;->a()Lfus;
@@ -46,13 +42,10 @@
 .method public final b()Lfus;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lbwe;->b:Lbwd;
 
     invoke-virtual {v0}, Lbwd;->b()V
 
-    .line 4
     iget-object v0, p0, Lbwe;->a:Lfur;
 
     invoke-interface {v0}, Lfur;->b()Lfus;

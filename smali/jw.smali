@@ -14,8 +14,6 @@
 .method constructor <init>(Ljv;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljw;->a:Ljv;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,10 +26,8 @@
 .method public final run()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 2
     iget-object v0, p0, Ljw;->a:Ljv;
 
     iget v0, v0, Ljv;->w:I
@@ -40,12 +36,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Ljw;->a:Ljv;
 
     invoke-virtual {v0, v2}, Ljv;->h(I)V
 
-    .line 4
     :cond_0
     iget-object v0, p0, Ljw;->a:Ljv;
 
@@ -55,24 +49,20 @@
 
     if-eqz v0, :cond_1
 
-    .line 5
     iget-object v0, p0, Ljw;->a:Ljv;
 
     const/16 v1, 0x6c
 
     invoke-virtual {v0, v1}, Ljv;->h(I)V
 
-    .line 6
     :cond_1
     iget-object v0, p0, Ljw;->a:Ljv;
 
     iput-boolean v2, v0, Ljv;->v:Z
 
-    .line 7
     iget-object v0, p0, Ljw;->a:Ljv;
 
     iput v2, v0, Ljv;->w:I
 
-    .line 8
     return-void
 .end method

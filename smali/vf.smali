@@ -11,46 +11,34 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x0
 
     iput v0, p0, Lvf;->a:I
 
-    .line 3
     return-void
 .end method
 
 .method public constructor <init>(I)V
     .locals 1
 
-    .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     const/4 v0, 0x0
 
     iput v0, p0, Lvf;->a:I
 
-    .line 6
     invoke-direct {p0, p1}, Lvf;->d(I)V
 
-    .line 7
     invoke-virtual {p0, p1}, Lvf;->b(I)V
 
-    .line 8
     return-void
 .end method
 
 .method private final d(I)V
     .locals 4
 
-    .prologue
-    .line 25
     invoke-virtual {p0}, Lvf;->c()I
 
     move-result v0
@@ -59,15 +47,12 @@
 
     and-int/2addr v0, p1
 
-    .line 26
     if-nez v0, :cond_0
 
-    .line 27
     invoke-virtual {p0, p1}, Lvf;->c(I)V
 
     return-void
 
-    .line 28
     :cond_0
     new-instance v1, Lub;
 
@@ -121,8 +106,6 @@
 .method public final a(IZ)V
     .locals 2
 
-    .prologue
-    .line 10
     if-eqz p2, :cond_0
 
     iget v0, p0, Lvf;->a:I
@@ -132,10 +115,8 @@
     :goto_0
     iput v0, p0, Lvf;->a:I
 
-    .line 11
     return-void
 
-    .line 10
     :cond_0
     iget v0, p0, Lvf;->a:I
 
@@ -149,8 +130,6 @@
 .method public final a(I)Z
     .locals 1
 
-    .prologue
-    .line 9
     iget v0, p0, Lvf;->a:I
 
     and-int/2addr v0, p1
@@ -171,14 +150,10 @@
 .method public final b(I)V
     .locals 0
 
-    .prologue
-    .line 12
     invoke-direct {p0, p1}, Lvf;->d(I)V
 
-    .line 13
     iput p1, p0, Lvf;->a:I
 
-    .line 14
     return-void
 .end method
 
@@ -188,26 +163,18 @@
 .method protected c(I)V
     .locals 0
 
-    .prologue
-    .line 24
     return-void
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 15
-    .line 16
     iget v0, p0, Lvf;->a:I
 
-    .line 17
     check-cast p1, Lvf;
 
-    .line 18
     iget v1, p1, Lvf;->a:I
 
-    .line 19
     if-ne v0, v1, :cond_0
 
     const/4 v0, 0x1
@@ -224,20 +191,14 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 20
-    .line 21
     iget v0, p0, Lvf;->a:I
 
-    .line 22
     return v0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 23
     const-string v1, "0x"
 
     iget v0, p0, Lvf;->a:I

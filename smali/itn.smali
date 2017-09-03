@@ -13,8 +13,6 @@
 .method constructor <init>(Ljava/lang/reflect/TypeVariable;Litm;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Litn;->a:Ljava/lang/reflect/TypeVariable;
 
     iput-object p2, p0, Litn;->b:Litm;
@@ -29,8 +27,6 @@
 .method public final a(Ljava/lang/reflect/TypeVariable;Litm;)Ljava/lang/reflect/Type;
     .locals 2
 
-    .prologue
-    .line 2
     invoke-interface {p1}, Ljava/lang/reflect/TypeVariable;->getGenericDeclaration()Ljava/lang/reflect/GenericDeclaration;
 
     move-result-object v0
@@ -47,7 +43,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     :goto_0
     return-object p1
 

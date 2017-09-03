@@ -19,24 +19,18 @@
 .method static constructor <clinit>()V
     .locals 0
 
-    .prologue
-    .line 29
     return-void
 .end method
 
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/Filter;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
 
-    .line 2
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter;->mExposureMeasurer:Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$ExposureMeasurer;
 
-    .line 3
     return-void
 .end method
 
@@ -45,17 +39,14 @@
 .method public getSignature()Lcom/google/android/libraries/smartburst/filterfw/Signature;
     .locals 4
 
-    .prologue
     const/4 v3, 0x2
 
-    .line 8
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     invoke-direct {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;-><init>()V
 
     const-string v1, "frame"
 
-    .line 9
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->any()Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v2
@@ -68,40 +59,32 @@
 
     sget-object v2, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
-    .line 10
     invoke-static {v2}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->single(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v2
 
-    .line 11
     invoke-virtual {v0, v1, v3, v2}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addOutputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 12
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->disallowOtherPorts()Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 13
     return-object v0
 .end method
 
 .method protected onClose()V
     .locals 1
 
-    .prologue
-    .line 26
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter;->mExposureMeasurer:Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$ExposureMeasurer;
 
     if-eqz v0, :cond_0
 
-    .line 27
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter;->mExposureMeasurer:Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$ExposureMeasurer;
 
     invoke-interface {v0}, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$ExposureMeasurer;->stop()V
 
-    .line 28
     :cond_0
     return-void
 .end method
@@ -109,16 +92,12 @@
 .method protected onOpen()V
     .locals 2
 
-    .prologue
-    .line 14
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter;->mExposureMeasurer:Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$ExposureMeasurer;
 
     if-nez v0, :cond_0
 
-    .line 15
     new-instance v0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$IlluminationBasedExposureMeasurer;
 
-    .line 16
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter;->getContext()Lcom/google/android/libraries/smartburst/filterfw/MffContext;
 
     move-result-object v1
@@ -131,21 +110,17 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter;->mExposureMeasurer:Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$ExposureMeasurer;
 
-    .line 17
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter;->mExposureMeasurer:Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$ExposureMeasurer;
 
     invoke-interface {v0}, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$ExposureMeasurer;->start()V
 
-    .line 18
     return-void
 .end method
 
 .method protected onProcess()V
     .locals 3
 
-    .prologue
-    .line 19
     const-string v0, "frame"
 
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter;->getConnectedInputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/InputPort;
@@ -156,21 +131,18 @@
 
     move-result-object v0
 
-    .line 20
     const-string v1, "exposure"
 
     invoke-virtual {p0, v1}, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter;->getConnectedOutputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/OutputPort;
 
     move-result-object v1
 
-    .line 21
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter;->mExposureMeasurer:Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$ExposureMeasurer;
 
     invoke-interface {v2, v0}, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$ExposureMeasurer;->getFrameExposure(Lcom/google/android/libraries/smartburst/filterfw/Frame;)F
 
     move-result v0
 
-    .line 22
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->fetchAvailableFrame([I)Lcom/google/android/libraries/smartburst/filterfw/Frame;
@@ -181,32 +153,26 @@
 
     move-result-object v2
 
-    .line 23
     invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
 
     invoke-virtual {v2, v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameValue;->setValue(Ljava/lang/Object;)V
 
-    .line 24
     invoke-virtual {v1, v2}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->pushFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;)V
 
-    .line 25
     return-void
 .end method
 
 .method public setFixedExposure(F)V
     .locals 2
 
-    .prologue
-    .line 4
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter;->isRunning()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 5
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Must call this before running!"
@@ -215,7 +181,6 @@
 
     throw v0
 
-    .line 6
     :cond_0
     new-instance v0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$FixedExposureMeasurer;
 
@@ -223,6 +188,5 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter;->mExposureMeasurer:Lcom/google/android/libraries/smartburst/filterpacks/camera/ExposureTimeFilter$ExposureMeasurer;
 
-    .line 7
     return-void
 .end method

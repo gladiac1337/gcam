@@ -11,8 +11,6 @@
 .method constructor <init>(Lgdn;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgdp;->a:Lgdn;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,8 +23,6 @@
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgdp;->a:Lgdn;
 
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -61,14 +57,11 @@
 
     move-result-object v1
 
-    .line 4
     invoke-virtual {v0}, Lgdn;->b()V
 
-    .line 5
     iget-object v0, v0, Lgdn;->a:Lgmm;
 
     invoke-virtual {v0, v1}, Lgmm;->a(Ljava/lang/String;)V
 
-    .line 6
     return-void
 .end method

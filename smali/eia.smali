@@ -45,8 +45,6 @@
 .method public final run()V
     .locals 8
 
-    .prologue
-    .line 1
     iget-object v1, p0, Leia;->a:Lehz;
 
     iget-object v2, p0, Leia;->b:Lgje;
@@ -59,7 +57,6 @@
 
     iget-object v5, p0, Leia;->f:Lilc;
 
-    .line 2
     iget-object v6, v1, Lehz;->j:Lilc;
 
     invoke-virtual {v6}, Lilc;->a()Z
@@ -68,7 +65,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 3
     iget-object v0, v1, Lehz;->c:Lgjj;
 
     iget-wide v6, v1, Lehz;->i:J
@@ -77,20 +73,16 @@
 
     move-result-object v0
 
-    .line 4
     iget-object v5, v1, Lehz;->c:Lgjj;
 
-    .line 5
     invoke-virtual {v5, v0, v2}, Lgjj;->a(Ljava/lang/String;Lgje;)Ljava/io/File;
 
-    .line 6
     iget-object v0, v1, Lehz;->c:Lgjj;
 
     iget-object v5, v1, Lehz;->g:Ljava/lang/String;
 
     invoke-virtual {v0, v5, v2}, Lgjj;->a(Ljava/lang/String;Lgje;)Ljava/io/File;
 
-    .line 7
     iget-object v0, v1, Lehz;->j:Lilc;
 
     invoke-virtual {v0}, Lilc;->b()Ljava/lang/Object;
@@ -99,15 +91,12 @@
 
     check-cast v0, Lf;
 
-    .line 9
     invoke-static {v4}, Lilc;->b(Ljava/lang/Object;)Lilc;
 
-    .line 10
     invoke-interface {v0}, Lf;->h()Liwe;
 
     move-result-object v0
 
-    .line 15
     :goto_0
     new-instance v4, Leic;
 
@@ -117,10 +106,8 @@
 
     invoke-static {v0, v4, v1}, Livs;->a(Liwe;Livr;Ljava/util/concurrent/Executor;)V
 
-    .line 16
     return-void
 
-    .line 12
     :cond_0
     new-instance v4, Leib;
 
@@ -130,7 +117,6 @@
 
     move-result-object v0
 
-    .line 13
     invoke-virtual {v0}, Liwf;->run()V
 
     goto :goto_0

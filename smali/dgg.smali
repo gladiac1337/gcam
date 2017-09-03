@@ -14,22 +14,16 @@
 .method private constructor <init>(Lilp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldgg;->a:Lilp;
 
-    .line 3
     return-void
 .end method
 
 .method public static a(Lilp;)Lilp;
     .locals 1
 
-    .prologue
-    .line 4
     new-instance v0, Ldgg;
 
     invoke-direct {v0, p0}, Ldgg;-><init>(Lilp;)V
@@ -42,9 +36,6 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 5
-    .line 6
     new-instance v1, Ldgd;
 
     iget-object v0, p0, Ldgg;->a:Lilp;
@@ -57,6 +48,5 @@
 
     invoke-direct {v1, v0}, Ldgd;-><init>(Lhji;)V
 
-    .line 7
     return-object v1
 .end method

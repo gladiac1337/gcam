@@ -10,8 +10,6 @@
 .method constructor <init>(Lgxd;)V
     .locals 0
 
-    .prologue
-    .line 2
     iput-object p1, p0, Lgxh;->a:Lgxd;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -24,8 +22,6 @@
 .method public a(Lgxi;)V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgxh;->a:Lgxd;
 
     iget-object v0, v0, Lgxd;->f:Ljava/util/Set;

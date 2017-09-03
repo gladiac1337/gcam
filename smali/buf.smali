@@ -32,8 +32,6 @@
 .method constructor <init>(Lbua;Lhwx;Liwe;Lbul;Lbtd;Lbvg;Lejj;ZLjava/util/UUID;Lbtq;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbuf;->j:Lbua;
 
     iput-object p2, p0, Lbuf;->a:Lhwx;
@@ -64,17 +62,12 @@
 .method public final synthetic call()Ljava/lang/Object;
     .locals 19
 
-    .prologue
-    .line 2
-    .line 3
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lbuf;->j:Lbua;
 
-    .line 4
     iget-object v1, v1, Lbua;->k:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 5
     invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v1
@@ -83,10 +76,8 @@
 
     check-cast v18, Lbsz;
 
-    .line 6
     if-nez v18, :cond_0
 
-    .line 7
     new-instance v1, Ljava/lang/NullPointerException;
 
     const-string v2, "Attempting to start burst, but BurstCaptureCommand is null!"
@@ -95,42 +86,33 @@
 
     throw v1
 
-    .line 8
     :cond_0
     new-instance v11, Leng;
 
     invoke-direct {v11}, Leng;-><init>()V
 
-    .line 9
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lbuf;->j:Lbua;
 
-    .line 10
     iget-object v1, v1, Lbua;->i:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 11
     invoke-virtual {v1, v11}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 13
     move-object/from16 v0, v18
 
     iget v1, v0, Lbsz;->b:I
 
-    .line 14
     invoke-virtual {v11, v1}, Leng;->a(I)V
 
-    .line 15
     new-instance v1, Lbte;
 
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lbuf;->j:Lbua;
 
-    .line 16
     iget-object v2, v2, Lbua;->b:Landroid/content/Context;
 
-    .line 17
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lbuf;->a:Lhwx;
@@ -143,10 +125,8 @@
 
     iget-object v5, v0, Lbuf;->j:Lbua;
 
-    .line 18
     iget-object v5, v5, Lbua;->f:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 19
     invoke-virtual {v5}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-object/from16 v0, p0
@@ -165,12 +145,10 @@
 
     iget-object v9, v0, Lbuf;->e:Lbvg;
 
-    .line 21
     new-instance v7, Lbvf;
 
     invoke-direct {v7, v8, v9}, Lbvf;-><init>(Lbua;Lbvg;)V
 
-    .line 22
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lbuf;->f:Lejj;
@@ -179,7 +157,6 @@
 
     iget-object v9, v0, Lbuf;->j:Lbua;
 
-    .line 23
     invoke-static {v9}, Lbua;->a(Lbua;)Lgfd;
 
     move-result-object v9
@@ -188,7 +165,6 @@
 
     iget-object v10, v0, Lbuf;->j:Lbua;
 
-    .line 24
     invoke-static {v10}, Lbua;->b(Lbua;)Lgch;
 
     move-result-object v10
@@ -197,10 +173,8 @@
 
     iget-object v12, v0, Lbuf;->j:Lbua;
 
-    .line 25
     iget-object v12, v12, Lbua;->s:Lcom/google/android/libraries/smartburst/filterfw/SurfaceTextureStreamer;
 
-    .line 26
     move-object/from16 v0, p0
 
     iget-boolean v13, v0, Lbuf;->g:Z
@@ -209,10 +183,8 @@
 
     iget-object v14, v0, Lbuf;->j:Lbua;
 
-    .line 27
     iget-object v14, v14, Lbua;->o:Lgjf;
 
-    .line 28
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lbuf;->h:Ljava/util/UUID;
@@ -223,58 +195,47 @@
 
     move-object/from16 v16, v0
 
-    .line 29
     move-object/from16 v0, v16
 
     iget-object v0, v0, Lbua;->q:Lhjm;
 
     move-object/from16 v16, v0
 
-    .line 30
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lbuf;->j:Lbua;
 
     move-object/from16 v17, v0
 
-    .line 31
     invoke-static/range {v17 .. v17}, Lbua;->c(Lbua;)Lhjz;
 
     move-result-object v17
 
     invoke-direct/range {v1 .. v17}, Lbte;-><init>(Landroid/content/Context;Lhwx;Liwe;Lbul;Lbtd;Lbvf;Lejj;Lgfd;Lgch;Leng;Lcom/google/android/libraries/smartburst/filterfw/SurfaceTextureStreamer;ZLgjf;Ljava/util/UUID;Lhjm;Lhjz;)V
 
-    .line 32
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lbuf;->j:Lbua;
 
-    .line 33
     iget-object v2, v2, Lbua;->j:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 34
     invoke-virtual {v2, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 35
     invoke-interface {v1}, Lbtc;->a()Lige;
 
     move-result-object v2
 
-    .line 37
     move-object/from16 v0, v18
 
     iget-object v3, v0, Lbsz;->c:Liwp;
 
-    .line 38
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lbuf;->i:Lbtq;
 
     iget-object v4, v4, Lbtq;->b:Ldqz;
 
-    .line 39
     invoke-interface {v1, v3, v4}, Lbtc;->a(Liwe;Ldqz;)V
 
-    .line 41
     return-object v2
 .end method

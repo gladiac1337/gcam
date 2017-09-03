@@ -31,13 +31,10 @@
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "scopeUri must not be null or empty"
 
-    .line 2
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -54,7 +51,6 @@
 
     throw v1
 
-    .line 3
     :cond_0
     iput p1, p0, Lcom/google/android/gms/common/api/Scope;->b:I
 
@@ -139,16 +135,12 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 4
-    .line 6
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lkk;->l(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 7
     const/4 v1, 0x1
 
     iget v2, p0, Lcom/google/android/gms/common/api/Scope;->b:I
@@ -157,15 +149,11 @@
 
     const/4 v1, 0x2
 
-    .line 8
     iget-object v2, p0, Lcom/google/android/gms/common/api/Scope;->a:Ljava/lang/String;
 
-    .line 9
     invoke-static {p1, v1, v2}, Lkk;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    .line 10
     invoke-static {p1, v0}, Lkk;->m(Landroid/os/Parcel;I)V
 
-    .line 11
     return-void
 .end method

@@ -7,8 +7,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 5
     new-instance v0, Lbin;
 
     const-string v1, "camera.enable_gouda"
@@ -23,14 +21,9 @@
 .method public static a(Lbga;)Lilc;
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     invoke-virtual {p0}, Lbga;->ordinal()I
 
-    .line 3
     sget-object v0, Liku;->a:Liku;
 
-    .line 4
     return-object v0
 .end method

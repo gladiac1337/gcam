@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,16 +20,12 @@
 .method public final a(Ljava/util/List;)Ljava/util/List;
     .locals 18
 
-    .prologue
-    .line 2
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4
     const/4 v1, 0x0
 
-    .line 5
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -49,7 +43,6 @@
 
     check-cast v0, Liel;
 
-    .line 6
     sget-object v3, Liem;->b:Liem;
 
     invoke-virtual {v0, v3}, Liel;->a(Liem;)Z
@@ -60,21 +53,17 @@
 
     move-object v1, v0
 
-    .line 11
     :cond_0
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 13
     new-instance v13, Ljava/util/ArrayList;
 
     invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
 
-    .line 15
     const/4 v0, 0x0
 
-    .line 16
     invoke-static/range {p1 .. p1}, Lkk;->e(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v3
@@ -99,7 +88,6 @@
 
     check-cast v0, Liel;
 
-    .line 17
     sget-object v6, Liem;->b:Liem;
 
     invoke-virtual {v0, v6}, Liel;->a(Liem;)Z
@@ -108,39 +96,30 @@
 
     if-eqz v6, :cond_2
 
-    .line 18
     const/4 v3, 0x1
 
-    .line 19
     :cond_2
     if-eqz v3, :cond_6
 
-    .line 20
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 21
     if-ne v0, v1, :cond_1
 
-    .line 25
     :cond_3
     new-instance v14, Ljava/util/ArrayList;
 
     invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
-    .line 27
     invoke-interface {v14, v4}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 28
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_d
 
-    .line 30
     invoke-static {v2}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 31
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v0
@@ -152,25 +131,20 @@
     :goto_2
     invoke-static {v0}, Lid;->a(Z)V
 
-    .line 32
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 34
     new-instance v6, Ljava/util/HashSet;
 
     invoke-direct {v6}, Ljava/util/HashSet;-><init>()V
 
-    .line 36
     const-wide v8, 0x7fffffffffffffffL
 
-    .line 37
     const-wide/high16 v4, -0x8000000000000000L
 
     move-object v0, v2
 
-    .line 38
     check-cast v0, Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -196,26 +170,20 @@
 
     check-cast v7, Liel;
 
-    .line 39
     if-eqz v7, :cond_a
 
-    .line 40
     iget-object v8, v7, Liel;->a:Ljava/util/List;
 
     invoke-interface {v1, v8}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 42
     iget-wide v10, v7, Liel;->c:J
 
-    .line 45
     iget-wide v8, v7, Liel;->d:J
 
-    .line 47
     cmp-long v16, v10, v2
 
     if-gez v16, :cond_8
 
-    .line 49
     :goto_4
     cmp-long v2, v8, v4
 
@@ -223,11 +191,9 @@
 
     move-wide v4, v8
 
-    .line 51
     :cond_4
     iget-object v2, v7, Liel;->b:Ljava/util/Set;
 
-    .line 52
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -245,24 +211,20 @@
 
     check-cast v2, Liem;
 
-    .line 53
     invoke-interface {v6, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_5
 
-    .line 9
     :cond_5
     invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_0
 
-    .line 23
     :cond_6
     invoke-interface {v13, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_1
 
-    .line 31
     :cond_7
     const/4 v0, 0x0
 
@@ -271,7 +233,6 @@
     :cond_8
     move-wide v10, v2
 
-    .line 48
     goto :goto_4
 
     :cond_9
@@ -280,10 +241,8 @@
     :cond_a
     move v8, v12
 
-    .line 55
     goto :goto_3
 
-    .line 56
     :cond_b
     invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
 
@@ -291,7 +250,6 @@
 
     if-eqz v0, :cond_c
 
-    .line 57
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "No segments found to merge!"
@@ -300,23 +258,19 @@
 
     throw v0
 
-    .line 58
     :cond_c
     new-instance v0, Liel;
 
     invoke-direct/range {v0 .. v6}, Liel;-><init>(Ljava/util/Collection;JJLjava/util/Set;)V
 
-    .line 59
     invoke-interface {v14, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 60
     invoke-static {v13}, Lkk;->e(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
     invoke-interface {v14, v0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 61
     :cond_d
     return-object v14
 .end method
@@ -324,8 +278,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 62
     const-string v0, "ToSingleActionMerger"
 
     return-object v0

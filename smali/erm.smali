@@ -16,17 +16,12 @@
 .method public varargs constructor <init>(I[Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lerm;->a:I
 
-    .line 3
     iput-object p2, p0, Lerm;->b:[Ljava/lang/Object;
 
-    .line 4
     return-void
 .end method
 
@@ -35,8 +30,6 @@
 .method public final a(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 5
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0

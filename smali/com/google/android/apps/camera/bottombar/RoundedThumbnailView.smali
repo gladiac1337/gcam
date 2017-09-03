@@ -117,8 +117,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 283
     const-string v0, "RoundedThumbnail"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -133,34 +131,26 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 2
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->isVisibilityDisabled:Z
 
-    .line 3
     new-instance v0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$1;
 
     invoke-direct {v0, p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$1;-><init>(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;)V
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->onClickListener:Landroid/view/View$OnClickListener;
 
-    .line 4
     invoke-direct {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->initialize()V
 
-    .line 5
     return-void
 .end method
 
 .method static synthetic access$002(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;F)F
     .locals 0
 
-    .prologue
-    .line 267
     iput p1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->currentHitStateCircleOpacity:F
 
     return p1
@@ -169,8 +159,6 @@
 .method static synthetic access$100(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;)Lilc;
     .locals 1
 
-    .prologue
-    .line 268
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->callback:Lilc;
 
     return-object v0
@@ -179,8 +167,6 @@
 .method static synthetic access$1002(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;F)F
     .locals 0
 
-    .prologue
-    .line 276
     iput p1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->currentRippleRingDiameter:F
 
     return p1
@@ -189,8 +175,6 @@
 .method static synthetic access$1102(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;F)F
     .locals 0
 
-    .prologue
-    .line 277
     iput p1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->currentRippleRingThickness:F
 
     return p1
@@ -199,8 +183,6 @@
 .method static synthetic access$1200(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;)F
     .locals 1
 
-    .prologue
-    .line 278
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleRingThicknessBegin:F
 
     return v0
@@ -209,8 +191,6 @@
 .method static synthetic access$1300(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;)F
     .locals 1
 
-    .prologue
-    .line 279
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleRingThicknessEnd:F
 
     return v0
@@ -219,8 +199,6 @@
 .method static synthetic access$1402(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;F)F
     .locals 0
 
-    .prologue
-    .line 280
     iput p1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->currentRippleRingOpacity:F
 
     return p1
@@ -229,8 +207,6 @@
 .method static synthetic access$1502(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
     .locals 0
 
-    .prologue
-    .line 281
     iput-object p1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->burstFlashAnimator:Landroid/animation/ValueAnimator;
 
     return-object p1
@@ -239,8 +215,6 @@
 .method static synthetic access$1600()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 282
     sget-object v0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -249,8 +223,6 @@
 .method static synthetic access$200(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;)Lilc;
     .locals 1
 
-    .prologue
-    .line 269
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->optionalOnClickListener:Lilc;
 
     return-object v0
@@ -259,8 +231,6 @@
 .method static synthetic access$402(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;F)F
     .locals 0
 
-    .prologue
-    .line 270
     iput p1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->currentThumbnailDiameter:F
 
     return p1
@@ -269,8 +239,6 @@
 .method static synthetic access$502(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;F)F
     .locals 0
 
-    .prologue
-    .line 271
     iput p1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->currentRevealCircleOpacity:F
 
     return p1
@@ -279,8 +247,6 @@
 .method static synthetic access$600(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;)Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
     .locals 1
 
-    .prologue
-    .line 272
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->foregroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     return-object v0
@@ -289,8 +255,6 @@
 .method static synthetic access$700(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;)V
     .locals 0
 
-    .prologue
-    .line 273
     invoke-direct {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->processRevealRequests()V
 
     return-void
@@ -299,8 +263,6 @@
 .method static synthetic access$802(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
     .locals 0
 
-    .prologue
-    .line 274
     iput-object p1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailAnimatorSet:Landroid/animation/AnimatorSet;
 
     return-object p1
@@ -309,8 +271,6 @@
 .method static synthetic access$902(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
     .locals 0
 
-    .prologue
-    .line 275
     iput-object p1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleAnimator:Landroid/animation/ValueAnimator;
 
     return-object p1
@@ -319,10 +279,8 @@
 .method private clearAnimations()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 177
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailAnimatorSet:Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_0
@@ -335,20 +293,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 178
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->removeAllListeners()V
 
-    .line 179
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 180
     iput-object v1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailAnimatorSet:Landroid/animation/AnimatorSet;
 
-    .line 181
     :cond_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleAnimator:Landroid/animation/ValueAnimator;
 
@@ -362,20 +316,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 182
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->removeAllListeners()V
 
-    .line 183
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 184
     iput-object v1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleAnimator:Landroid/animation/ValueAnimator;
 
-    .line 185
     :cond_1
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->burstFlashAnimator:Landroid/animation/ValueAnimator;
 
@@ -389,20 +339,16 @@
 
     if-eqz v0, :cond_2
 
-    .line 186
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->burstFlashAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->removeAllListeners()V
 
-    .line 187
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->burstFlashAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->cancel()V
 
-    .line 188
     iput-object v1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->burstFlashAnimator:Landroid/animation/ValueAnimator;
 
-    .line 189
     :cond_2
     return-void
 .end method
@@ -410,8 +356,6 @@
 .method private getColor(I)I
     .locals 2
 
-    .prologue
-    .line 151
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -428,7 +372,6 @@
 .method private initialize()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x0
 
     const/4 v4, -0x1
@@ -439,28 +382,20 @@
 
     const/4 v7, 0x1
 
-    .line 6
-    .line 7
     sget-object v0, Liku;->a:Liku;
 
-    .line 8
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->callback:Lilc;
 
-    .line 10
     sget-object v0, Liku;->a:Liku;
 
-    .line 11
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->optionalOnClickListener:Lilc;
 
-    .line 12
     invoke-virtual {p0, v7}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->setClickable(Z)V
 
-    .line 13
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->onClickListener:Landroid/view/View$OnClickListener;
 
     invoke-super {p0, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 14
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -473,7 +408,6 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailPadding:F
 
-    .line 16
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -486,7 +420,6 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailStretchDiameterBegin:F
 
-    .line 18
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -499,12 +432,10 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailStretchDiameterEnd:F
 
-    .line 19
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailStretchDiameterEnd:F
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailShrinkDiameterBegin:F
 
-    .line 21
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -517,7 +448,6 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailShrinkDiameterEnd:F
 
-    .line 22
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -530,7 +460,6 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailTypeIconSize:F
 
-    .line 24
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -543,7 +472,6 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleRingDiameterEnd:F
 
-    .line 25
     new-instance v0, Landroid/graphics/RectF;
 
     iget v2, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleRingDiameterEnd:F
@@ -554,7 +482,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->viewRect:Landroid/graphics/RectF;
 
-    .line 27
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -567,7 +494,6 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleRingDiameterBegin:F
 
-    .line 29
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -580,7 +506,6 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleRingThicknessBegin:F
 
-    .line 31
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -593,83 +518,70 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleRingThicknessEnd:F
 
-    .line 32
     const/high16 v0, -0x40800000    # -1.0f
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->currentHitStateCircleOpacity:F
 
-    .line 33
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v7}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->hitStateCirclePaint:Landroid/graphics/Paint;
 
-    .line 34
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->hitStateCirclePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 35
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->hitStateCirclePaint:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 36
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v7}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->ripplePaint:Landroid/graphics/Paint;
 
-    .line 37
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->ripplePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 38
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->ripplePaint:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 39
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v7}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->revealCirclePaint:Landroid/graphics/Paint;
 
-    .line 40
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->revealCirclePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 41
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->revealCirclePaint:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 42
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v7}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->borderStrokePaint:Landroid/graphics/Paint;
 
-    .line 43
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->borderStrokePaint:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 44
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -682,14 +594,12 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->innerStrokeWidth:F
 
-    .line 45
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->borderStrokePaint:Landroid/graphics/Paint;
 
     iget v2, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->innerStrokeWidth:F
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 46
     new-instance v0, Landroid/graphics/LinearGradient;
 
     iget v4, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailShrinkDiameterEnd:F
@@ -698,7 +608,6 @@
 
     new-array v5, v2, [I
 
-    .line 47
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -711,7 +620,6 @@
 
     aput v2, v5, v8
 
-    .line 48
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -732,12 +640,10 @@
 
     invoke-direct/range {v0 .. v7}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
 
-    .line 49
     iget-object v1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->borderStrokePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 50
     new-instance v0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RoundedThumbnailOutlineProvider;
 
     iget v1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailShrinkDiameterEnd:F
@@ -748,31 +654,24 @@
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
-    .line 51
     invoke-virtual {p0, v8}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->setEnabled(Z)V
 
-    .line 52
     sget-object v0, Lglq;->a:Lglq;
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getDefaultThumbnail(Lglq;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 53
     invoke-virtual {p0, v0, v8}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->setThumbnail(Landroid/graphics/Bitmap;I)V
 
-    .line 54
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->disableVisibilityAndHide()V
 
-    .line 55
     return-void
 .end method
 
 .method private processRevealRequests()V
     .locals 1
 
-    .prologue
-    .line 262
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->foregroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     if-eqz v0, :cond_0
@@ -785,17 +684,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 263
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->foregroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->backgroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
-    .line 264
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->foregroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
-    .line 265
     :cond_0
     return-void
 .end method
@@ -803,54 +699,43 @@
 .method private runBurstFlashAnimation()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 239
     sget-object v0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->TAG:Ljava/lang/String;
 
     const-string v1, "runPendingFlashAnimation"
 
     invoke-static {v0, v1}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 240
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->foregroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     if-eqz v0, :cond_0
 
-    .line 241
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->foregroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->backgroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
-    .line 242
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->backgroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->finishRippleAnimation()V
 
-    .line 243
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->backgroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->finishThumbnailAnimation()V
 
-    .line 244
     :cond_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->backgroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->foregroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
-    .line 245
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->pendingRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
-    .line 246
     invoke-direct {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->clearAnimations()V
 
-    .line 247
     invoke-virtual {p0, v3}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->setVisibility(I)V
 
-    .line 249
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -861,7 +746,6 @@
 
     move-result-object v0
 
-    .line 250
     const/4 v1, 0x2
 
     new-array v1, v1, [F
@@ -882,26 +766,22 @@
 
     iput-object v1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->burstFlashAnimator:Landroid/animation/ValueAnimator;
 
-    .line 251
     iget-object v1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->burstFlashAnimator:Landroid/animation/ValueAnimator;
 
     const-wide/16 v2, 0xc8
 
     invoke-virtual {v1, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 252
     iget-object v1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->burstFlashAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v1, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 253
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->burstFlashAnimator:Landroid/animation/ValueAnimator;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setRepeatCount(I)V
 
-    .line 254
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->burstFlashAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$7;
@@ -910,7 +790,6 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 255
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->burstFlashAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$8;
@@ -919,19 +798,16 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 256
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->burstFlashAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 257
     return-void
 .end method
 
 .method private runPendingRequestAnimation(Z)V
     .locals 10
 
-    .prologue
     const/4 v4, 0x0
 
     const-wide/16 v8, 0xc8
@@ -942,14 +818,12 @@
 
     const/4 v2, 0x0
 
-    .line 190
     sget-object v0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->TAG:Ljava/lang/String;
 
     const-string v3, "runPendingRequestAnimation"
 
     invoke-static {v0, v3}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 191
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->pendingRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     invoke-static {v0}, Lkk;->j(Ljava/lang/Object;)Ljava/lang/Object;
@@ -966,63 +840,50 @@
 
     move v0, v1
 
-    .line 192
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 193
     iput-object v4, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->backgroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
-    .line 194
     iget-object v3, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->foregroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     if-eqz v3, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 195
     iget-object v3, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->foregroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     iput-object v3, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->backgroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
-    .line 196
     iget-object v3, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->backgroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     invoke-virtual {v3}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->finishRippleAnimation()V
 
-    .line 197
     iget-object v3, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->backgroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     invoke-virtual {v3}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->finishThumbnailAnimation()V
 
-    .line 198
     :cond_0
     iget-object v3, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->pendingRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     iput-object v3, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->foregroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
-    .line 199
     iput-object v4, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->pendingRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
-    .line 200
     if-nez v0, :cond_4
 
-    .line 201
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailAnimatorSet:Landroid/animation/AnimatorSet;
 
     if-nez v0, :cond_1
 
-    .line 202
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailShrinkDiameterEnd:F
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->currentThumbnailDiameter:F
 
-    .line 203
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->currentRevealCircleOpacity:F
 
-    .line 204
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->foregroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     invoke-static {v0}, Lkk;->j(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1033,13 +894,11 @@
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->finishThumbnailAnimation()V
 
-    .line 205
     :cond_1
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleAnimator:Landroid/animation/ValueAnimator;
 
     if-nez v0, :cond_2
 
-    .line 206
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->foregroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     invoke-static {v0}, Lkk;->j(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1050,28 +909,22 @@
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->finishRippleAnimation()V
 
-    .line 207
     :cond_2
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->invalidate()V
 
-    .line 238
     :goto_1
     return-void
 
     :cond_3
     move v0, v2
 
-    .line 191
     goto :goto_0
 
-    .line 209
     :cond_4
     invoke-direct {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->clearAnimations()V
 
-    .line 210
     invoke-virtual {p0, v2}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->setVisibility(I)V
 
-    .line 212
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1082,7 +935,6 @@
 
     move-result-object v0
 
-    .line 213
     new-array v3, v6, [F
 
     iget v4, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailStretchDiameterBegin:F
@@ -1093,25 +945,20 @@
 
     aput v4, v3, v1
 
-    .line 214
     invoke-static {v3}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object v3
 
-    .line 215
     invoke-virtual {v3, v8, v9}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 216
     invoke-virtual {v3, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 217
     new-instance v4, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$2;
 
     invoke-direct {v4, p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$2;-><init>(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;)V
 
     invoke-virtual {v3, v4}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 219
     new-array v4, v6, [F
 
     iget v5, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailShrinkDiameterBegin:F
@@ -1122,32 +969,26 @@
 
     aput v5, v4, v1
 
-    .line 220
     invoke-static {v4}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
 
     move-result-object v4
 
-    .line 221
     invoke-virtual {v4, v8, v9}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 222
     invoke-virtual {v4, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 223
     new-instance v0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$3;
 
     invoke-direct {v0, p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$3;-><init>(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;)V
 
     invoke-virtual {v4, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 224
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailAnimatorSet:Landroid/animation/AnimatorSet;
 
-    .line 225
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailAnimatorSet:Landroid/animation/AnimatorSet;
 
     new-array v5, v6, [Landroid/animation/Animator;
@@ -1158,7 +999,6 @@
 
     invoke-virtual {v0, v5}, Landroid/animation/AnimatorSet;->playSequentially([Landroid/animation/Animator;)V
 
-    .line 226
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailAnimatorSet:Landroid/animation/AnimatorSet;
 
     new-instance v3, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$4;
@@ -1167,12 +1007,10 @@
 
     invoke-virtual {v0, v3}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 227
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailAnimatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 229
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1183,7 +1021,6 @@
 
     move-result-object v0
 
-    .line 230
     new-array v3, v6, [F
 
     iget v4, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleRingDiameterBegin:F
@@ -1200,17 +1037,14 @@
 
     iput-object v1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleAnimator:Landroid/animation/ValueAnimator;
 
-    .line 231
     iget-object v1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v1, v8, v9}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 232
     iget-object v1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v1, v0}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 233
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$5;
@@ -1219,7 +1053,6 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 234
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleAnimator:Landroid/animation/ValueAnimator;
 
     new-instance v1, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$6;
@@ -1228,19 +1061,16 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 235
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleAnimator:Landroid/animation/ValueAnimator;
 
     const-wide/16 v2, 0x64
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setStartDelay(J)V
 
-    .line 236
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleAnimator:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 237
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->foregroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     invoke-static {v0}, Lkk;->j(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1261,28 +1091,22 @@
 .method private setThumbnail(Landroid/graphics/Bitmap;IZ)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 140
     sget-object v0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->TAG:Ljava/lang/String;
 
     const-string v1, "setThumbnail"
 
     invoke-static {v0, v1}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 141
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 142
     invoke-static {}, Lhic;->a()V
 
-    .line 143
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->pendingRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     if-nez v0, :cond_0
 
-    .line 144
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleRingDiameterEnd:F
 
     const-string v1, ""
@@ -1293,57 +1117,46 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->pendingRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
-    .line 145
     :cond_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->pendingRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->setThumbnailBitmap(Landroid/graphics/Bitmap;I)V
 
-    .line 146
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getVisibility()I
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 147
     iput-object v2, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->backgroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
-    .line 148
     iput-object v2, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->foregroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
-    .line 149
     :cond_1
     invoke-direct {p0, p3}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->runPendingRequestAnimation(Z)V
 
-    .line 150
     return-void
 .end method
 
 .method private stopBurstFlashAnimation()V
     .locals 2
 
-    .prologue
-    .line 258
     sget-object v0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->TAG:Ljava/lang/String;
 
     const-string v1, "runPendingFlashAnimation"
 
     invoke-static {v0, v1}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 259
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->burstFlashAnimator:Landroid/animation/ValueAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 260
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->burstFlashAnimator:Landroid/animation/ValueAnimator;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setRepeatCount(I)V
 
-    .line 261
     :cond_0
     return-void
 .end method
@@ -1353,39 +1166,30 @@
 .method public disableVisibilityAndHide()V
     .locals 1
 
-    .prologue
-    .line 59
     const/16 v0, 0x8
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->setVisibility(I)V
 
-    .line 60
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->isVisibilityDisabled:Z
 
-    .line 61
     return-void
 .end method
 
 .method public enableVisibilityAndShow()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 62
     iget-boolean v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->isVisibilityDisabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 63
     iput-boolean v1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->isVisibilityDisabled:Z
 
-    .line 64
     invoke-virtual {p0, v1}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->setVisibility(I)V
 
-    .line 65
     :cond_0
     return-void
 .end method
@@ -1393,51 +1197,40 @@
 .method public flashThumbnail()V
     .locals 2
 
-    .prologue
-    .line 122
     sget-object v0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->TAG:Ljava/lang/String;
 
     const-string v1, "flashThumbnail"
 
     invoke-static {v0, v1}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 123
     invoke-static {}, Lhic;->a()V
 
-    .line 124
     invoke-direct {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->runBurstFlashAnimation()V
 
-    .line 125
     return-void
 .end method
 
 .method public getDefaultThumbnail(Lglq;)Landroid/graphics/Bitmap;
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 152
     sget-object v1, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->TAG:Ljava/lang/String;
 
     const-string v2, "showDefaultThumbnail"
 
     invoke-static {v1, v2}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 153
     iget v1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailShrinkDiameterEnd:F
 
     float-to-int v1, v1
 
-    .line 154
     sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    .line 155
     invoke-static {v1, v1, v2}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 156
     sget v3, Lcom/google/android/apps/camera/bottombar/R$color;->indicator_background:I
 
     invoke-direct {p0, v3}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getColor(I)I
@@ -1446,23 +1239,19 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Bitmap;->eraseColor(I)V
 
-    .line 157
     invoke-virtual {p1}, Lglq;->ordinal()I
 
     move-result v3
 
     packed-switch v3, :pswitch_data_0
 
-    .line 167
     :goto_0
     new-instance v3, Landroid/graphics/Canvas;
 
     invoke-direct {v3, v2}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 168
     if-eqz v0, :cond_0
 
-    .line 169
     int-to-float v1, v1
 
     iget v4, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailTypeIconSize:F
@@ -1475,7 +1264,6 @@
 
     float-to-int v1, v1
 
-    .line 171
     iget v4, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailTypeIconSize:F
 
     float-to-int v4, v4
@@ -1490,14 +1278,11 @@
 
     invoke-virtual {v0, v1, v1, v4, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 172
     invoke-virtual {v0, v3}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 173
     :cond_0
     return-object v2
 
-    .line 158
     :pswitch_0
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getResources()Landroid/content/res/Resources;
 
@@ -1511,7 +1296,6 @@
 
     goto :goto_0
 
-    .line 160
     :pswitch_1
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getResources()Landroid/content/res/Resources;
 
@@ -1525,7 +1309,6 @@
 
     goto :goto_0
 
-    .line 162
     :pswitch_2
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getResources()Landroid/content/res/Resources;
 
@@ -1539,7 +1322,6 @@
 
     goto :goto_0
 
-    .line 164
     :pswitch_3
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getResources()Landroid/content/res/Resources;
 
@@ -1553,7 +1335,6 @@
 
     goto :goto_0
 
-    .line 157
     nop
 
     :pswitch_data_0
@@ -1568,8 +1349,6 @@
 .method public getRippleRingMaxDiameterDp()F
     .locals 1
 
-    .prologue
-    .line 116
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleRingDiameterEnd:F
 
     return v0
@@ -1578,8 +1357,6 @@
 .method public getThumbnailFinalDiameter()F
     .locals 1
 
-    .prologue
-    .line 115
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailShrinkDiameterEnd:F
 
     return v0
@@ -1588,8 +1365,6 @@
 .method public getThumbnailPadding()F
     .locals 1
 
-    .prologue
-    .line 114
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailPadding:F
 
     return v0
@@ -1598,8 +1373,6 @@
 .method public hasOverlappingRendering()Z
     .locals 1
 
-    .prologue
-    .line 266
     const/4 v0, 0x1
 
     return v0
@@ -1608,54 +1381,42 @@
 .method protected onAttachedToWindow()V
     .locals 1
 
-    .prologue
-    .line 133
     invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
-    .line 134
     new-instance v0, Lgln;
 
     invoke-direct {v0, p0}, Lgln;-><init>(Landroid/view/View;)V
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->smoothRotator:Lgln;
 
-    .line 135
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->smoothRotator:Lgln;
 
     invoke-virtual {v0}, Lgln;->a()V
 
-    .line 136
     return-void
 .end method
 
 .method protected onConfigurationChanged(Landroid/content/res/Configuration;)V
     .locals 1
 
-    .prologue
-    .line 137
     invoke-super {p0, p1}, Landroid/view/View;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 138
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->smoothRotator:Lgln;
 
     invoke-virtual {v0}, Lgln;->b()V
 
-    .line 139
     return-void
 .end method
 
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 8
 
-    .prologue
     const/high16 v7, 0x437f0000    # 255.0f
 
     const/high16 v6, 0x40000000    # 2.0f
 
-    .line 69
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 70
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
 
     move-result v0
@@ -1664,7 +1425,6 @@
 
     int-to-float v1, v0
 
-    .line 71
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getHeight()I
 
     move-result v0
@@ -1673,47 +1433,36 @@
 
     int-to-float v2, v0
 
-    .line 72
     iget v3, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleRingDiameterEnd:F
 
-    .line 73
     iget v4, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->thumbnailShrinkDiameterEnd:F
 
-    .line 74
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->viewRect:Landroid/graphics/RectF;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/RectF;)Z
 
-    .line 75
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->backgroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     if-eqz v0, :cond_0
 
-    .line 76
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->backgroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->getThumbnailPaint()Landroid/graphics/Paint;
 
     move-result-object v0
 
-    .line 77
     if-eqz v0, :cond_0
 
-    .line 78
     div-float v5, v4, v3
 
-    .line 79
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 80
     invoke-virtual {p1, v5, v5, v1, v2}, Landroid/graphics/Canvas;->scale(FFFF)V
 
-    .line 81
     iget-object v5, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->viewRect:Landroid/graphics/RectF;
 
     invoke-virtual {p1, v5, v1, v2, v0}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 82
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->innerStrokeWidth:F
 
     div-float/2addr v0, v6
@@ -1724,16 +1473,13 @@
 
     invoke-virtual {p1, v1, v2, v0, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 83
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 84
     :cond_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->foregroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     if-eqz v0, :cond_3
 
-    .line 85
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->currentRippleRingThickness:F
 
     const/4 v5, 0x0
@@ -1748,14 +1494,12 @@
 
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleAnimator:Landroid/animation/ValueAnimator;
 
-    .line 86
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->isRunning()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 87
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->ripplePaint:Landroid/graphics/Paint;
 
     iget v5, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->currentRippleRingOpacity:F
@@ -1766,17 +1510,14 @@
 
     invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 88
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->ripplePaint:Landroid/graphics/Paint;
 
     iget v5, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->currentRippleRingThickness:F
 
     invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 89
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 90
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->currentRippleRingDiameter:F
 
     div-float/2addr v0, v6
@@ -1785,10 +1526,8 @@
 
     invoke-virtual {p1, v1, v2, v0, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 91
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 92
     :cond_1
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->currentThumbnailDiameter:F
 
@@ -1796,13 +1535,10 @@
 
     div-float/2addr v0, v5
 
-    .line 93
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 94
     invoke-virtual {p1, v0, v0, v1, v2}, Landroid/graphics/Canvas;->scale(FFFF)V
 
-    .line 95
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->foregroundRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     invoke-static {v0}, Lkk;->j(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1815,15 +1551,12 @@
 
     move-result-object v0
 
-    .line 96
     if-eqz v0, :cond_2
 
-    .line 97
     iget-object v5, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->viewRect:Landroid/graphics/RectF;
 
     invoke-virtual {p1, v5, v1, v2, v0}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 98
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->innerStrokeWidth:F
 
     div-float/2addr v0, v6
@@ -1834,7 +1567,6 @@
 
     invoke-virtual {p1, v1, v2, v0, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 99
     :cond_2
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->revealCirclePaint:Landroid/graphics/Paint;
 
@@ -1846,7 +1578,6 @@
 
     invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 100
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleRingDiameterEnd:F
 
     div-float/2addr v0, v6
@@ -1855,10 +1586,8 @@
 
     invoke-virtual {p1, v1, v2, v0, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 101
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 102
     :cond_3
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->currentHitStateCircleOpacity:F
 
@@ -1868,16 +1597,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 103
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 104
     div-float v0, v4, v3
 
-    .line 105
     invoke-virtual {p1, v0, v0, v1, v2}, Landroid/graphics/Canvas;->scale(FFFF)V
 
-    .line 106
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->hitStateCirclePaint:Landroid/graphics/Paint;
 
     iget v3, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->currentHitStateCircleOpacity:F
@@ -1888,7 +1613,6 @@
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 107
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleRingDiameterEnd:F
 
     div-float/2addr v0, v6
@@ -1897,10 +1621,8 @@
 
     invoke-virtual {p1, v1, v2, v0, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 108
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 109
     :cond_4
     return-void
 .end method
@@ -1908,94 +1630,72 @@
 .method protected onMeasure(II)V
     .locals 1
 
-    .prologue
-    .line 66
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->rippleRingDiameterEnd:F
 
     float-to-int v0, v0
 
-    .line 67
     invoke-virtual {p0, v0, v0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->setMeasuredDimension(II)V
 
-    .line 68
     return-void
 .end method
 
 .method public resetThumbnailView()V
     .locals 1
 
-    .prologue
-    .line 174
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->setPressed(Z)V
 
-    .line 175
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->invalidate()V
 
-    .line 176
     return-void
 .end method
 
 .method public setCallback(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$Callback;)V
     .locals 1
 
-    .prologue
-    .line 110
     invoke-static {p1}, Lilc;->b(Ljava/lang/Object;)Lilc;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->callback:Lilc;
 
-    .line 111
     return-void
 .end method
 
 .method public setOnClickListener(Landroid/view/View$OnClickListener;)V
     .locals 1
 
-    .prologue
-    .line 112
     invoke-static {p1}, Lilc;->c(Ljava/lang/Object;)Lilc;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->optionalOnClickListener:Lilc;
 
-    .line 113
     return-void
 .end method
 
 .method public setThumbnail(Landroid/graphics/Bitmap;I)V
     .locals 1
 
-    .prologue
-    .line 130
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, p2, v0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->setThumbnail(Landroid/graphics/Bitmap;IZ)V
 
-    .line 131
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->enableVisibilityAndShow()V
 
-    .line 132
     return-void
 .end method
 
 .method public setVisibility(I)V
     .locals 1
 
-    .prologue
-    .line 56
     iget-boolean v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->isVisibilityDisabled:Z
 
     if-nez v0, :cond_0
 
-    .line 57
     invoke-super {p0, p1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 58
     :cond_0
     return-void
 .end method
@@ -2003,18 +1703,14 @@
 .method public startRevealThumbnailAnimation(Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 117
     sget-object v0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->TAG:Ljava/lang/String;
 
     const-string v1, "startRevealThumbnailAnimation"
 
     invoke-static {v0, v1}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 118
     invoke-static {}, Lhic;->a()V
 
-    .line 120
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->getMeasuredWidth()I
 
     move-result v0
@@ -2027,27 +1723,21 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->pendingRequest:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
-    .line 121
     return-void
 .end method
 
 .method public stopFlashThumbnail()V
     .locals 2
 
-    .prologue
-    .line 126
     sget-object v0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->TAG:Ljava/lang/String;
 
     const-string v1, "stopFlashThumbnail"
 
     invoke-static {v0, v1}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 127
     invoke-static {}, Lhic;->a()V
 
-    .line 128
     invoke-direct {p0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->stopBurstFlashAnimation()V
 
-    .line 129
     return-void
 .end method

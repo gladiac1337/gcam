@@ -16,17 +16,12 @@
 .method public constructor <init>(Lixr;Lbyr;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbye;->a:Lixr;
 
-    .line 3
     iput-object p2, p0, Lbye;->b:Lbyr;
 
-    .line 4
     return-void
 .end method
 
@@ -35,10 +30,8 @@
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 11
 
-    .prologue
     const/high16 v10, 0x3f800000    # 1.0f
 
-    .line 5
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -49,17 +42,14 @@
 
     move-result v0
 
-    .line 6
     iget-object v1, p0, Lbye;->b:Lbyr;
 
     iget-object v1, v1, Lbyr;->e:Landroid/graphics/Rect;
 
-    .line 7
     iget-object v2, p0, Lbye;->b:Lbyr;
 
     iget-object v2, v2, Lbyr;->f:Landroid/graphics/Rect;
 
-    .line 8
     iget-object v3, p0, Lbye;->a:Lixr;
 
     new-instance v4, Landroid/graphics/Rect;
@@ -140,6 +130,5 @@
 
     invoke-virtual {v3, v4}, Lixr;->setClipBounds(Landroid/graphics/Rect;)V
 
-    .line 9
     return-void
 .end method

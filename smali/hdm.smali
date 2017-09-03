@@ -28,8 +28,6 @@
 .method public final a()V
     .locals 14
 
-    .prologue
-    .line 1
     iget-object v10, p0, Lhdm;->g:Lhdk;
 
     monitor-enter v10
@@ -49,7 +47,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 2
     :try_start_2
     iget-object v3, v11, Lhdk;->b:Ljava/util/Map;
 
@@ -88,7 +85,6 @@
 
     iget-object v2, v11, Lhdk;->a:Lhdp;
 
-    .line 3
     iget-object v2, v2, Lhdp;->a:Lhda;
 
     invoke-virtual {v2}, Lhda;->i()Landroid/os/IInterface;
@@ -97,7 +93,6 @@
 
     check-cast v2, Lhdj;
 
-    .line 4
     const/4 v5, 0x0
 
     invoke-static {v1, v5}, Lcom/google/android/gms/location/internal/LocationRequestUpdateData;->a(Lhdt;Lhdg;)Lcom/google/android/gms/location/internal/LocationRequestUpdateData;
@@ -122,7 +117,6 @@
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 8
     :catch_0
     move-exception v1
 
@@ -136,7 +130,6 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 9
     :catch_1
     move-exception v1
 
@@ -157,7 +150,6 @@
 
     return-void
 
-    .line 4
     :cond_2
     :try_start_7
     iget-object v1, v11, Lhdk;->b:Ljava/util/Map;
@@ -210,7 +202,6 @@
 
     iget-object v1, v11, Lhdk;->a:Lhdp;
 
-    .line 5
     iget-object v1, v1, Lhdp;->a:Lhda;
 
     invoke-virtual {v1}, Lhda;->i()Landroid/os/IInterface;
@@ -223,7 +214,6 @@
 
     move-object v9, v0
 
-    .line 7
     new-instance v1, Lcom/google/android/gms/location/internal/LocationRequestUpdateData;
 
     const/4 v2, 0x1
@@ -244,7 +234,6 @@
 
     invoke-direct/range {v1 .. v8}, Lcom/google/android/gms/location/internal/LocationRequestUpdateData;-><init>(IILcom/google/android/gms/location/internal/LocationRequestInternal;Landroid/os/IBinder;Landroid/app/PendingIntent;Landroid/os/IBinder;Landroid/os/IBinder;)V
 
-    .line 8
     invoke-virtual {v9, v1}, Lhdj;->a(Lcom/google/android/gms/location/internal/LocationRequestUpdateData;)V
 
     goto :goto_2
@@ -263,7 +252,6 @@
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_1
     .catchall {:try_start_a .. :try_end_a} :catchall_2
 
-    .line 9
     :catchall_2
     move-exception v1
 
@@ -274,7 +262,6 @@
 
     throw v1
 
-    .line 8
     :cond_4
     :try_start_c
     iget-object v1, v11, Lhdk;->c:Ljava/util/Map;

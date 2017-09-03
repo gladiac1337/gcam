@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;Ljava/lang/Exception;Z)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$1;->this$0:Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;
 
     iput-object p2, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$1;->val$exception:Ljava/lang/Exception;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$1;->this$0:Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;
 
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;->access$2000(Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;)Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$RunParameters;
@@ -48,17 +44,14 @@
 
     if-nez v0, :cond_0
 
-    .line 7
     :goto_0
     return-void
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$1;->val$exception:Ljava/lang/Exception;
 
     if-nez v0, :cond_1
 
-    .line 5
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$1;->this$0:Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;
 
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;->access$2000(Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;)Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$RunParameters;
@@ -73,7 +66,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_1
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$1;->this$0:Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;
 

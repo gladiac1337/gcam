@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public final a(Ljava/lang/Object;)Labx;
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Lacb;
 
     invoke-direct {v0, p1}, Lacb;-><init>(Ljava/lang/Object;)V
@@ -34,8 +30,6 @@
 .method public final a()Ljava/lang/Class;
     .locals 2
 
-    .prologue
-    .line 3
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "Not implemented"

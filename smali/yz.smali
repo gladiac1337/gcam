@@ -25,7 +25,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -36,7 +35,6 @@
 
     const/4 v3, 0x0
 
-    .line 3
     new-instance v0, Lyz;
 
     const-string v1, "ZOOM"
@@ -45,7 +43,6 @@
 
     sput-object v0, Lyz;->a:Lyz;
 
-    .line 4
     new-instance v0, Lyz;
 
     const-string v1, "VIDEO_SNAPSHOT"
@@ -54,7 +51,6 @@
 
     sput-object v0, Lyz;->b:Lyz;
 
-    .line 5
     new-instance v0, Lyz;
 
     const-string v1, "FOCUS_AREA"
@@ -63,7 +59,6 @@
 
     sput-object v0, Lyz;->c:Lyz;
 
-    .line 6
     new-instance v0, Lyz;
 
     const-string v1, "METERING_AREA"
@@ -72,7 +67,6 @@
 
     sput-object v0, Lyz;->d:Lyz;
 
-    .line 7
     new-instance v0, Lyz;
 
     const-string v1, "AUTO_EXPOSURE_LOCK"
@@ -81,7 +75,6 @@
 
     sput-object v0, Lyz;->e:Lyz;
 
-    .line 8
     new-instance v0, Lyz;
 
     const-string v1, "AUTO_WHITE_BALANCE_LOCK"
@@ -92,7 +85,6 @@
 
     sput-object v0, Lyz;->f:Lyz;
 
-    .line 9
     new-instance v0, Lyz;
 
     const-string v1, "VIDEO_STABILIZATION"
@@ -103,7 +95,6 @@
 
     sput-object v0, Lyz;->g:Lyz;
 
-    .line 10
     const/4 v0, 0x7
 
     new-array v0, v0, [Lyz;
@@ -148,8 +139,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -158,8 +147,6 @@
 .method public static values()[Lyz;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lyz;->h:[Lyz;
 
     invoke-virtual {v0}, [Lyz;->clone()Ljava/lang/Object;

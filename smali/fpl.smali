@@ -21,19 +21,14 @@
 .method public constructor <init>(Lfpa;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lfpl;->c:J
 
-    .line 3
     iput-object p1, p0, Lfpl;->b:Lfpa;
 
-    .line 4
     return-void
 .end method
 
@@ -42,15 +37,12 @@
 .method public final a()Lfoz;
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 9
     iget-object v0, p0, Lfpl;->a:Ljava/lang/String;
 
     invoke-static {v0}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10
     iget-wide v2, p0, Lfpl;->c:J
 
     const-wide/16 v4, 0x0
@@ -64,27 +56,22 @@
     :goto_0
     invoke-static {v0}, Lid;->b(Z)V
 
-    .line 11
     new-instance v0, Lfoz;
 
     invoke-direct {v0}, Lfoz;-><init>()V
 
-    .line 13
     const-string v2, "_data"
 
     iget-object v3, p0, Lfpl;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v3}, Lfoz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 14
     const-string v2, "mime_type"
 
-    .line 15
     iget-object v3, v0, Lfoz;->a:Landroid/content/ContentValues;
 
     invoke-virtual {v3, v2}, Landroid/content/ContentValues;->putNull(Ljava/lang/String;)V
 
-    .line 16
     const-string v2, "date_modified"
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -93,7 +80,6 @@
 
     invoke-virtual {v0, v2, v1}, Lfoz;->a(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 17
     const-string v1, "datetaken"
 
     iget-wide v2, p0, Lfpl;->c:J
@@ -104,28 +90,23 @@
 
     invoke-virtual {v0, v1, v2}, Lfoz;->a(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 18
     return-object v0
 
     :cond_0
     move v0, v1
 
-    .line 10
     goto :goto_0
 .end method
 
 .method public final a(J)Lfpl;
     .locals 3
 
-    .prologue
-    .line 5
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
 
     if-gtz v0, :cond_0
 
-    .line 6
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const/16 v1, 0x2d
@@ -152,10 +133,8 @@
 
     throw v0
 
-    .line 7
     :cond_0
     iput-wide p1, p0, Lfpl;->c:J
 
-    .line 8
     return-object p0
 .end method

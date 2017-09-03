@@ -13,8 +13,6 @@
 .method constructor <init>(Lavm;Lhpz;Lavm;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p2, p0, Lavw;->b:Lhpz;
 
     iput-object p3, p0, Lavw;->c:Lavm;
@@ -29,8 +27,6 @@
 .method protected final b(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lavw;->b:Lhpz;
 
     invoke-interface {v0, p1}, Lhpz;->a(Ljava/lang/Object;)Ljava/lang/Object;
@@ -43,8 +39,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 3
     const-string v0, "TransformedObs"
 
     invoke-static {v0}, Lkk;->r(Ljava/lang/String;)Likz;
@@ -55,26 +49,21 @@
 
     iget-object v2, p0, Lavw;->c:Lavm;
 
-    .line 5
     invoke-virtual {v0, v1, v2}, Likz;->a(Ljava/lang/String;Ljava/lang/Object;)Likz;
 
     move-result-object v0
 
-    .line 6
     const-string v1, "func"
 
     iget-object v2, p0, Lavw;->b:Lhpz;
 
-    .line 8
     invoke-virtual {v0, v1, v2}, Likz;->a(Ljava/lang/String;Ljava/lang/Object;)Likz;
 
     move-result-object v0
 
-    .line 9
     invoke-virtual {v0}, Likz;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 10
     return-object v0
 .end method

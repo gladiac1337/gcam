@@ -14,8 +14,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhzq;->a:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,9 +26,6 @@
 .method public final synthetic a(Lhwy;)Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 2
-    .line 3
     new-instance v1, Lhvb;
 
     iget-object v2, p0, Lhzq;->a:Landroid/content/Context;
@@ -47,6 +42,5 @@
 
     invoke-direct {v1, v2, v0}, Lhvb;-><init>(Landroid/content/Context;Lidz;)V
 
-    .line 4
     return-object v1
 .end method

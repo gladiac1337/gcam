@@ -16,17 +16,12 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$AddTargetSlotCommand;->mName:Ljava/lang/String;
 
-    .line 3
     iput-object p2, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$AddTargetSlotCommand;->mSlotName:Ljava/lang/String;
 
-    .line 4
     return-void
 .end method
 
@@ -35,8 +30,6 @@
 .method public compileToJava(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Lcom/google/android/libraries/smartburst/filterfw/GraphReader$GraphFactorySource;)V
     .locals 4
 
-    .prologue
-    .line 7
     const-string v0, "builder.addFrameSlotTarget(\"%s\", \"%s\")"
 
     const/4 v1, 0x2
@@ -61,15 +54,12 @@
 
     invoke-virtual {p2, v0}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$GraphFactorySource;->addBuildCommand(Ljava/lang/String;)V
 
-    .line 8
     return-void
 .end method
 
 .method public execute(Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;)V
     .locals 3
 
-    .prologue
-    .line 5
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->getBuilder()Lcom/google/android/libraries/smartburst/filterfw/FilterGraph$Builder;
 
     move-result-object v0
@@ -80,6 +70,5 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/google/android/libraries/smartburst/filterfw/FilterGraph$Builder;->addFrameSlotTarget(Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/FrameSlotTarget;
 
-    .line 6
     return-void
 .end method

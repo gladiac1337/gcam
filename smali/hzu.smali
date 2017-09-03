@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,9 +20,6 @@
 .method public final synthetic a(Lhwy;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 2
-    .line 3
     const-class v0, Lidz;
 
     const-string v1, "auc_quality"
@@ -35,6 +30,5 @@
 
     check-cast v0, Lidz;
 
-    .line 4
     return-object v0
 .end method

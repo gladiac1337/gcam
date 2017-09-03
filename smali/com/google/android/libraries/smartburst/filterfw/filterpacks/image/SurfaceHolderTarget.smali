@@ -19,42 +19,32 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/ViewFilter;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
 
-    .line 2
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
-    .line 3
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mRenderTarget:Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;
 
-    .line 4
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
-    .line 5
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mHasSurface:Z
 
-    .line 6
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget$1;
 
     invoke-direct {v0, p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget$1;-><init>(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;)V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mSurfaceHolderListener:Landroid/view/SurfaceHolder$Callback;
 
-    .line 7
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;Landroid/view/SurfaceHolder;)V
     .locals 0
 
-    .prologue
-    .line 81
     invoke-direct {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->onSurfaceCreated(Landroid/view/SurfaceHolder;)V
 
     return-void
@@ -63,8 +53,6 @@
 .method private declared-synchronized onSurfaceCreated(Landroid/view/SurfaceHolder;)V
     .locals 2
 
-    .prologue
-    .line 77
     monitor-enter p0
 
     :try_start_0
@@ -72,7 +60,6 @@
 
     if-eq v0, p1, :cond_0
 
-    .line 78
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Unexpected Holder!"
@@ -83,7 +70,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 77
     :catchall_0
     move-exception v0
 
@@ -91,7 +77,6 @@
 
     throw v0
 
-    .line 79
     :cond_0
     const/4 v0, 0x1
 
@@ -100,7 +85,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 80
     monitor-exit p0
 
     return-void
@@ -109,24 +93,20 @@
 .method private renderCanvas(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)V
     .locals 7
 
-    .prologue
     const/4 v5, 0x0
 
     const/4 v6, 0x0
 
-    .line 59
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     invoke-interface {v0}, Landroid/view/SurfaceHolder;->lockCanvas()Landroid/graphics/Canvas;
 
     move-result-object v0
 
-    .line 60
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->toBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 61
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -139,24 +119,20 @@
 
     invoke-direct {v2, v5, v5, v3, v4}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 62
     iget-object v3, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     invoke-interface {v3}, Landroid/view/SurfaceHolder;->getSurfaceFrame()Landroid/graphics/Rect;
 
     move-result-object v3
 
-    .line 63
     invoke-virtual {p0, v2, v3}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->getTargetRect(Landroid/graphics/Rect;Landroid/graphics/Rect;)Landroid/graphics/RectF;
 
     move-result-object v4
 
-    .line 64
     const/high16 v5, -0x1000000
 
     invoke-virtual {v0, v5}, Landroid/graphics/Canvas;->drawColor(I)V
 
-    .line 65
     invoke-virtual {v4}, Landroid/graphics/RectF;->width()F
 
     move-result v5
@@ -173,7 +149,6 @@
 
     if-lez v5, :cond_0
 
-    .line 66
     invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
 
     move-result v5
@@ -188,35 +163,29 @@
 
     invoke-virtual {v0, v5, v3}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 67
     new-instance v3, Landroid/graphics/Paint;
 
     invoke-direct {v3}, Landroid/graphics/Paint;-><init>()V
 
     invoke-virtual {v0, v1, v2, v4, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 68
     :cond_0
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     invoke-interface {v1, v0}, Landroid/view/SurfaceHolder;->unlockCanvasAndPost(Landroid/graphics/Canvas;)V
 
-    .line 69
     return-void
 .end method
 
 .method private renderGL(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)V
     .locals 5
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 46
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mRenderTarget:Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;
 
     if-nez v0, :cond_0
 
-    .line 47
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;->currentTarget()Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;
 
     move-result-object v0
@@ -229,12 +198,10 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mRenderTarget:Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;
 
-    .line 48
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mRenderTarget:Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;->registerAsDisplaySurface()V
 
-    .line 49
     :cond_0
     new-instance v0, Landroid/graphics/Rect;
 
@@ -248,19 +215,16 @@
 
     invoke-direct {v0, v3, v3, v1, v2}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 50
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     invoke-interface {v1}, Landroid/view/SurfaceHolder;->getSurfaceFrame()Landroid/graphics/Rect;
 
     move-result-object v1
 
-    .line 51
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     invoke-virtual {p0, v2, v0, v1}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->setupShader(Lcom/google/android/libraries/smartburst/filterfw/ImageShader;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    .line 52
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->lockTextureSource()Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
@@ -269,28 +233,22 @@
 
     iget-object v3, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mRenderTarget:Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;
 
-    .line 53
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
     move-result v4
 
-    .line 54
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
 
     move-result v1
 
-    .line 55
     invoke-virtual {v0, v2, v3, v4, v1}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->process(Lcom/google/android/libraries/smartburst/filterfw/TextureSource;Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;II)V
 
-    .line 56
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->unlock()V
 
-    .line 57
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mRenderTarget:Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;->swapBuffers()V
 
-    .line 58
     return-void
 .end method
 
@@ -299,59 +257,48 @@
 .method public getSignature()Lcom/google/android/libraries/smartburst/filterfw/Signature;
     .locals 4
 
-    .prologue
     const/4 v3, 0x2
 
-    .line 24
     const/16 v0, 0x12d
 
     invoke-static {v0, v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->image2D(II)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v0
 
-    .line 25
     invoke-super {p0}, Lcom/google/android/libraries/smartburst/filterfw/ViewFilter;->getSignature()Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v1
 
     const-string v2, "image"
 
-    .line 26
     invoke-virtual {v1, v2, v3, v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addInputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 27
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->disallowOtherPorts()Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 28
     return-object v0
 .end method
 
 .method public onBindToView(Landroid/view/View;)V
     .locals 4
 
-    .prologue
-    .line 8
     instance-of v0, p1, Landroid/view/SurfaceView;
 
     if-eqz v0, :cond_1
 
     move-object v0, p1
 
-    .line 9
     check-cast v0, Landroid/view/SurfaceView;
 
     invoke-virtual {v0}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
 
     move-result-object v0
 
-    .line 10
     if-nez v0, :cond_0
 
-    .line 11
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -396,14 +343,11 @@
 
     throw v0
 
-    .line 12
     :cond_0
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->setSurfaceHolder(Landroid/view/SurfaceHolder;)V
 
-    .line 13
     return-void
 
-    .line 14
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -417,8 +361,6 @@
 .method protected declared-synchronized onClose()V
     .locals 2
 
-    .prologue
-    .line 70
     monitor-enter p0
 
     :try_start_0
@@ -426,28 +368,23 @@
 
     if-eqz v0, :cond_0
 
-    .line 71
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mRenderTarget:Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;->unregisterAsDisplaySurface()V
 
-    .line 72
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mRenderTarget:Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;->release()V
 
-    .line 73
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mRenderTarget:Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;
 
-    .line 74
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     if-eqz v0, :cond_1
 
-    .line 75
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mSurfaceHolderListener:Landroid/view/SurfaceHolder$Callback;
@@ -456,13 +393,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 76
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 70
     :catchall_0
     move-exception v0
 
@@ -474,8 +409,6 @@
 .method public declared-synchronized onDestroySurface()V
     .locals 1
 
-    .prologue
-    .line 19
     monitor-enter p0
 
     :try_start_0
@@ -483,17 +416,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 20
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mRenderTarget:Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;->release()V
 
-    .line 21
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mRenderTarget:Lcom/google/android/libraries/smartburst/filterfw/RenderTarget;
 
-    .line 22
     :cond_0
     const/4 v0, 0x0
 
@@ -501,12 +431,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 23
     monitor-exit p0
 
     return-void
 
-    .line 19
     :catchall_0
     move-exception v0
 
@@ -518,19 +446,14 @@
 .method protected onInputPortOpen(Lcom/google/android/libraries/smartburst/filterfw/InputPort;)V
     .locals 0
 
-    .prologue
-    .line 29
     invoke-super {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/ViewFilter;->connectViewInputs(Lcom/google/android/libraries/smartburst/filterfw/InputPort;)V
 
-    .line 30
     return-void
 .end method
 
 .method protected declared-synchronized onOpen()V
     .locals 2
 
-    .prologue
-    .line 34
     monitor-enter p0
 
     :try_start_0
@@ -540,14 +463,12 @@
 
     invoke-interface {v0, v1}, Landroid/view/SurfaceHolder;->addCallback(Landroid/view/SurfaceHolder$Callback;)V
 
-    .line 35
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     invoke-interface {v0}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
 
     move-result-object v0
 
-    .line 36
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Landroid/view/Surface;->isValid()Z
@@ -563,18 +484,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 37
     monitor-exit p0
 
     return-void
 
-    .line 36
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 34
     :catchall_0
     move-exception v0
 
@@ -586,8 +504,6 @@
 .method protected declared-synchronized onPrepare()V
     .locals 1
 
-    .prologue
-    .line 31
     monitor-enter p0
 
     :try_start_0
@@ -597,7 +513,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 32
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->createIdentity()Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     move-result-object v0
@@ -606,13 +521,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 33
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 31
     :catchall_0
     move-exception v0
 
@@ -624,8 +537,6 @@
 .method protected declared-synchronized onProcess()V
     .locals 3
 
-    .prologue
-    .line 38
     monitor-enter p0
 
     :try_start_0
@@ -643,19 +554,16 @@
 
     move-result-object v0
 
-    .line 39
     iget-boolean v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mHasSurface:Z
 
     if-eqz v1, :cond_0
 
-    .line 40
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mSurfaceHolder:Landroid/view/SurfaceHolder;
 
     monitor-enter v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 41
     :try_start_1
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->isOpenGLSupported()Z
 
@@ -663,29 +571,24 @@
 
     if-eqz v2, :cond_1
 
-    .line 42
     invoke-direct {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->renderGL(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)V
 
-    .line 44
     :goto_0
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 45
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 43
     :cond_1
     :try_start_2
     invoke-direct {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->renderCanvas(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)V
 
     goto :goto_0
 
-    .line 44
     :catchall_0
     move-exception v0
 
@@ -698,7 +601,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 38
     :catchall_1
     move-exception v0
 
@@ -710,8 +612,6 @@
 .method public declared-synchronized setSurfaceHolder(Landroid/view/SurfaceHolder;)V
     .locals 2
 
-    .prologue
-    .line 15
     monitor-enter p0
 
     :try_start_0
@@ -721,7 +621,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 16
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Cannot set SurfaceHolder while running!"
@@ -732,7 +631,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 15
     :catchall_0
     move-exception v0
 
@@ -740,14 +638,12 @@
 
     throw v0
 
-    .line 17
     :cond_0
     :try_start_1
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/SurfaceHolderTarget;->mSurfaceHolder:Landroid/view/SurfaceHolder;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 18
     monitor-exit p0
 
     return-void

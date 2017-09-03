@@ -19,9 +19,6 @@
 .method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 17
 
-    .prologue
-    .line 4
-    .line 5
     invoke-static/range {p1 .. p1}, Lkk;->a(Landroid/os/Parcel;)I
 
     move-result v1
@@ -59,17 +56,14 @@
 
     if-ge v15, v1, :cond_0
 
-    .line 6
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v15
 
-    .line 8
     const v16, 0xffff
 
     and-int v16, v16, v15
 
-    .line 9
     packed-switch v16, :pswitch_data_0
 
     move-object/from16 v0, p1
@@ -229,10 +223,8 @@
 
     invoke-direct/range {v1 .. v14}, Lcom/google/android/gms/wearable/internal/AncsNotificationParcelable;-><init>(IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;BBBBLjava/lang/String;)V
 
-    .line 10
     return-object v1
 
-    .line 9
     nop
 
     :pswitch_data_0
@@ -256,11 +248,7 @@
 .method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     new-array v0, p1, [Lcom/google/android/gms/wearable/internal/AncsNotificationParcelable;
 
-    .line 3
     return-object v0
 .end method

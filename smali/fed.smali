@@ -29,29 +29,23 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lfed;->a:Lfdz;
 
     iget-object v1, p0, Lfed;->b:Lgat;
 
     check-cast p1, Lgbb;
 
-    .line 2
     invoke-virtual {p1}, Lgbb;->ordinal()I
 
     move-result v2
 
     packed-switch v2, :pswitch_data_0
 
-    .line 6
     :goto_0
     invoke-interface {v1, p1}, Lgat;->a(Lgbb;)V
 
-    .line 7
     return-void
 
-    .line 3
     :pswitch_0
     iget-object v0, v0, Lfdz;->i:Lavm;
 
@@ -65,7 +59,6 @@
 
     goto :goto_0
 
-    .line 5
     :pswitch_1
     iget-object v0, v0, Lfdz;->i:Lavm;
 
@@ -79,7 +72,6 @@
 
     goto :goto_0
 
-    .line 2
     nop
 
     :pswitch_data_0

@@ -14,8 +14,6 @@
 .method public constructor <init>(Ligx;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ligy;->a:Ligx;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,14 +26,10 @@
 .method public final a(Ljava/io/Writer;)V
     .locals 7
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ligy;->a:Ligx;
 
-    .line 3
     iget-object v0, v0, Ligx;->a:Ljava/util/Map;
 
-    .line 4
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -57,7 +51,6 @@
 
     check-cast v0, Landroid/util/Pair;
 
-    .line 5
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v3, "%d,%d,%f%n"
@@ -82,17 +75,14 @@
 
     iget-object v6, p0, Ligy;->a:Ligx;
 
-    .line 6
     iget-object v6, v6, Ligx;->a:Ljava/util/Map;
 
-    .line 7
     invoke-interface {v6, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     aput-object v0, v4, v5
 
-    .line 8
     invoke-static {v2, v3, v4}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -101,7 +91,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_0
     return-void
 .end method

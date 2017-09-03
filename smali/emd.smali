@@ -18,8 +18,6 @@
 .method constructor <init>(Lemc;Ljava/lang/Thread;Ljava/lang/Throwable;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lemd;->c:Lemc;
 
     iput-object p2, p0, Lemd;->a:Ljava/lang/Thread;
@@ -36,17 +34,13 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lemd;->c:Lemc;
 
     iget-object v1, p0, Lemd;->a:Ljava/lang/Thread;
 
     iget-object v2, p0, Lemd;->b:Ljava/lang/Throwable;
 
-    .line 3
     invoke-virtual {v0, v1, v2}, Lemc;->a(Ljava/lang/Thread;Ljava/lang/Throwable;)V
 
-    .line 4
     return-void
 .end method

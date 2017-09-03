@@ -17,35 +17,26 @@
 .method public constructor <init>(Lcen;Lhjh;Lhjf;)V
     .locals 1
 
-    .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     new-instance v0, Lcz;
 
     invoke-direct {v0}, Lcz;-><init>()V
 
     iput-object v0, p0, Lcen;->b:Lcz;
 
-    .line 16
     iput-object p1, p0, Lcen;->a:Lcen;
 
-    .line 17
     iput-object p2, p0, Lcen;->c:Lhjh;
 
-    .line 18
     iput-object p3, p0, Lcen;->d:Lhjf;
 
-    .line 19
     return-void
 .end method
 
 .method private static b(J)Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 20
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
@@ -82,14 +73,11 @@
 .method public final a(J)V
     .locals 5
 
-    .prologue
-    .line 3
     :goto_0
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v2
 
-    .line 4
     iget-object v0, p0, Lcen;->b:Lcz;
 
     invoke-virtual {v0, p1, p2}, Lcz;->a(J)Ljava/lang/Object;
@@ -104,7 +92,6 @@
 
     sub-long v0, v2, v0
 
-    .line 5
     iget-object v2, p0, Lcen;->c:Lhjh;
 
     invoke-static {v0, v1}, Lcen;->b(J)Ljava/lang/String;
@@ -151,7 +138,6 @@
 
     invoke-interface {v2, v0}, Lhjh;->b(Ljava/lang/String;)V
 
-    .line 6
     iget-object p0, p0, Lcen;->a:Lcen;
 
     goto :goto_0
@@ -160,19 +146,15 @@
 .method public final a(Lcel;)V
     .locals 6
 
-    .prologue
-    .line 7
     :goto_0
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v2
 
-    .line 8
     iget-object v0, p0, Lcen;->d:Lhjf;
 
     invoke-virtual {v0}, Lhjf;->a()V
 
-    .line 9
     iget-object v0, p0, Lcen;->b:Lcz;
 
     iget-wide v4, p1, Lcel;->a:J
@@ -189,15 +171,12 @@
 
     sub-long v0, v2, v0
 
-    .line 10
     iget-object v2, p0, Lcen;->b:Lcz;
 
     iget-wide v4, p1, Lcel;->a:J
 
-    .line 11
     invoke-virtual {v2, v4, v5}, Lcz;->b(J)V
 
-    .line 12
     iget-object v2, p0, Lcen;->c:Lhjh;
 
     iget-wide v4, p1, Lcel;->a:J
@@ -246,7 +225,6 @@
 
     invoke-interface {v2, v0}, Lhjh;->b(Ljava/lang/String;)V
 
-    .line 13
     iget-object p0, p0, Lcen;->a:Lcen;
 
     goto :goto_0
@@ -255,8 +233,6 @@
 .method public final a(Lfwx;)V
     .locals 6
 
-    .prologue
-    .line 1
     :goto_0
     iget-object v0, p0, Lcen;->b:Lcz;
 
@@ -274,7 +250,6 @@
 
     invoke-virtual {v0, v2, v3, v1}, Lcz;->a(JLjava/lang/Object;)V
 
-    .line 2
     iget-object p0, p0, Lcen;->a:Lcen;
 
     goto :goto_0

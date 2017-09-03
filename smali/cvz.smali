@@ -25,17 +25,13 @@
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lcvz;->a:Lfri;
 
-    .line 2
     iget-object v1, v0, Lfri;->s:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     iget-object v0, v0, Lfri;->w:Lcom/google/android/apps/camera/bottombar/BottomBarListener;
 
     invoke-virtual {v1, v0}, Lcom/google/android/apps/camera/bottombar/BottomBarController;->removeListener(Lcom/google/android/apps/camera/bottombar/BottomBarListener;)V
 
-    .line 3
     return-void
 .end method

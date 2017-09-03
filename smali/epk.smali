@@ -14,8 +14,6 @@
 .method constructor <init>(Lepj;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lepk;->a:Lepj;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,26 +26,18 @@
 .method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lepk;->a:Lepj;
 
-    .line 3
     iget-object v0, v0, Lepj;->D:Lerc;
 
-    .line 4
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lepk;->a:Lepj;
 
-    .line 6
     iget-object v0, v0, Lepj;->D:Lerc;
 
-    .line 7
     invoke-interface {v0}, Lerc;->t_()V
 
-    .line 8
     :cond_0
     return-void
 .end method

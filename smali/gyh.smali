@@ -29,8 +29,6 @@
 .method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 4
 
-    .prologue
-    .line 1
     const-string v0, "Expecting a valid IBinder"
 
     invoke-static {p2, v0}, Lkk;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -46,12 +44,10 @@
     :try_start_0
     iget-object v2, p0, Lgyh;->b:Lgyd;
 
-    .line 2
     if-nez p2, :cond_0
 
     const/4 v0, 0x0
 
-    .line 3
     :goto_0
     invoke-static {v2, v0}, Lgyd;->a(Lgyd;Lgyy;)Lgyy;
 
@@ -69,7 +65,6 @@
 
     return-void
 
-    .line 2
     :cond_0
     :try_start_1
     const-string v0, "com.google.android.gms.common.internal.IGmsServiceBroker"
@@ -95,7 +90,6 @@
 
     goto :goto_0
 
-    .line 3
     :catchall_0
     move-exception v0
 

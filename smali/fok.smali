@@ -27,7 +27,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -38,7 +37,6 @@
 
     const/4 v3, 0x0
 
-    .line 3
     new-instance v0, Lfok;
 
     const-string v1, "INIT"
@@ -47,7 +45,6 @@
 
     sput-object v0, Lfok;->a:Lfok;
 
-    .line 4
     new-instance v0, Lfok;
 
     const-string v1, "CREATED"
@@ -56,7 +53,6 @@
 
     sput-object v0, Lfok;->b:Lfok;
 
-    .line 5
     new-instance v0, Lfok;
 
     const-string v1, "STARTED"
@@ -65,7 +61,6 @@
 
     sput-object v0, Lfok;->c:Lfok;
 
-    .line 6
     new-instance v0, Lfok;
 
     const-string v1, "STOPPED"
@@ -74,7 +69,6 @@
 
     sput-object v0, Lfok;->d:Lfok;
 
-    .line 7
     new-instance v0, Lfok;
 
     const-string v1, "SHUTTER_BUTTON_DRAWN"
@@ -83,7 +77,6 @@
 
     sput-object v0, Lfok;->e:Lfok;
 
-    .line 8
     new-instance v0, Lfok;
 
     const-string v1, "SHUTTER_BUTTON_ENABLED"
@@ -94,7 +87,6 @@
 
     sput-object v0, Lfok;->f:Lfok;
 
-    .line 9
     new-instance v0, Lfok;
 
     const-string v1, "ANY"
@@ -105,7 +97,6 @@
 
     sput-object v0, Lfok;->g:Lfok;
 
-    .line 10
     new-instance v0, Lfok;
 
     const-string v1, "INVALID"
@@ -116,7 +107,6 @@
 
     sput-object v0, Lfok;->h:Lfok;
 
-    .line 11
     const/16 v0, 0x8
 
     new-array v0, v0, [Lfok;
@@ -167,8 +157,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -177,8 +165,6 @@
 .method public static values()[Lfok;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lfok;->i:[Lfok;
 
     invoke-virtual {v0}, [Lfok;->clone()Ljava/lang/Object;

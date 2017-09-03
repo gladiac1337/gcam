@@ -18,17 +18,12 @@
 .method public constructor <init>(Ljava/io/File;Lahh;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lahg;->a:Ljava/io/File;
 
-    .line 3
     iput-object p2, p0, Lahg;->b:Lahh;
 
-    .line 4
     return-void
 .end method
 
@@ -37,13 +32,10 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 14
     iget-object v0, p0, Lahg;->c:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    .line 15
     :try_start_0
     iget-object v0, p0, Lahg;->b:Lahh;
 
@@ -53,7 +45,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 18
     :cond_0
     :goto_0
     return-void
@@ -67,8 +58,6 @@
 .method public final a(Laaf;Labw;)V
     .locals 3
 
-    .prologue
-    .line 5
     :try_start_0
     iget-object v0, p0, Lahg;->b:Lahh;
 
@@ -82,20 +71,16 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 12
     iget-object v0, p0, Lahg;->c:Ljava/lang/Object;
 
     invoke-interface {p2, v0}, Labw;->a(Ljava/lang/Object;)V
 
-    .line 13
     :goto_0
     return-void
 
-    .line 7
     :catch_0
     move-exception v0
 
-    .line 8
     const-string v1, "FileLoader"
 
     const/4 v2, 0x3
@@ -106,14 +91,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 9
     const-string v1, "FileLoader"
 
     const-string v2, "Failed to open file"
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 10
     :cond_0
     invoke-interface {p2, v0}, Labw;->a(Ljava/lang/Exception;)V
 
@@ -123,16 +106,12 @@
 .method public final b()V
     .locals 0
 
-    .prologue
-    .line 19
     return-void
 .end method
 
 .method public final c()Labf;
     .locals 1
 
-    .prologue
-    .line 21
     sget-object v0, Labf;->a:Labf;
 
     return-object v0
@@ -141,8 +120,6 @@
 .method public final d()Ljava/lang/Class;
     .locals 1
 
-    .prologue
-    .line 20
     iget-object v0, p0, Lahg;->b:Lahh;
 
     invoke-interface {v0}, Lahh;->a()Ljava/lang/Class;

@@ -34,52 +34,36 @@
 .method private constructor <init>(Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldpf;->a:Lilp;
 
-    .line 3
     iput-object p2, p0, Ldpf;->b:Lilp;
 
-    .line 4
     iput-object p3, p0, Ldpf;->c:Lilp;
 
-    .line 5
     iput-object p4, p0, Ldpf;->d:Lilp;
 
-    .line 6
     iput-object p5, p0, Ldpf;->e:Lilp;
 
-    .line 7
     iput-object p6, p0, Ldpf;->f:Lilp;
 
-    .line 8
     iput-object p7, p0, Ldpf;->g:Lilp;
 
-    .line 9
     iput-object p8, p0, Ldpf;->h:Lilp;
 
-    .line 10
     iput-object p9, p0, Ldpf;->i:Lilp;
 
-    .line 11
     iput-object p10, p0, Ldpf;->j:Lilp;
 
-    .line 12
     iput-object p11, p0, Ldpf;->k:Lilp;
 
-    .line 13
     return-void
 .end method
 
 .method public static a(Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;)Lilp;
     .locals 12
 
-    .prologue
-    .line 14
     new-instance v0, Ldpf;
 
     move-object v1, p0
@@ -114,12 +98,8 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 13
 
-    .prologue
-    .line 15
-    .line 16
     iget-object v0, p0, Ldpf;->a:Lilp;
 
-    .line 17
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -130,7 +110,6 @@
 
     iget-object v0, p0, Ldpf;->c:Lilp;
 
-    .line 18
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -139,7 +118,6 @@
 
     iget-object v0, p0, Ldpf;->d:Lilp;
 
-    .line 19
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v5
@@ -148,7 +126,6 @@
 
     iget-object v0, p0, Ldpf;->e:Lilp;
 
-    .line 20
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -157,7 +134,6 @@
 
     iget-object v0, p0, Ldpf;->f:Lilp;
 
-    .line 21
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v8
@@ -166,7 +142,6 @@
 
     iget-object v0, p0, Ldpf;->g:Lilp;
 
-    .line 22
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -177,7 +152,6 @@
 
     iget-object v0, p0, Ldpf;->h:Lilp;
 
-    .line 23
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -186,24 +160,20 @@
 
     iget-object v0, p0, Ldpf;->i:Lilp;
 
-    .line 24
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Ldpf;->j:Lilp;
 
-    .line 25
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Ldpf;->k:Lilp;
 
-    .line 26
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v9
 
     check-cast v9, Lgmh;
 
-    .line 28
     new-instance v0, Ldqf;
 
     new-instance v7, Lfvb;
@@ -212,26 +182,22 @@
 
     const/high16 v12, 0x3f800000    # 1.0f
 
-    .line 29
     invoke-static {v12}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v12
 
     invoke-direct {v7, v11, v12}, Lfvb;-><init>(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 30
     invoke-static {v7}, Linu;->a(Ljava/lang/Object;)Linu;
 
     move-result-object v7
 
     invoke-direct/range {v0 .. v9}, Ldqf;-><init>(Lhji;Lhpu;Ldor;Lilp;Ldry;Lffx;Ljava/util/Set;Ldsh;Lgmh;)V
 
-    .line 31
     new-instance v1, Ldox;
 
     const/16 v2, 0x23
 
-    .line 32
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -242,21 +208,17 @@
 
     invoke-direct {v1, v0, v2}, Ldox;-><init>(Ldqd;Ljava/util/Set;)V
 
-    .line 33
     new-instance v0, Ldtr;
 
     invoke-direct {v0, v1, v10}, Ldtr;-><init>(Ldqd;Ldua;)V
 
-    .line 34
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 35
     invoke-static {v0, v1}, Ldt;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ldqd;
 
-    .line 36
     return-object v0
 .end method

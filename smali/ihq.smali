@@ -11,11 +11,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/util/LongSparseArray;
 
     invoke-direct {v0}, Landroid/util/LongSparseArray;-><init>()V
@@ -30,8 +27,6 @@
 .method public final declared-synchronized a(J)Lihe;
     .locals 3
 
-    .prologue
-    .line 5
     monitor-enter p0
 
     :try_start_0
@@ -43,10 +38,8 @@
 
     check-cast v0, Lihe;
 
-    .line 6
     if-nez v0, :cond_0
 
-    .line 7
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const/16 v1, 0x39
@@ -81,7 +74,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     :catchall_0
     move-exception v0
 
@@ -89,7 +81,6 @@
 
     throw v0
 
-    .line 8
     :cond_0
     monitor-exit p0
 
@@ -99,8 +90,6 @@
 .method public final declared-synchronized a()Ljava/util/List;
     .locals 3
 
-    .prologue
-    .line 9
     monitor-enter p0
 
     :try_start_0
@@ -108,7 +97,6 @@
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 11
     const/4 v0, 0x0
 
     move v1, v0
@@ -122,7 +110,6 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 12
     iget-object v0, p0, Lihq;->a:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;
@@ -135,20 +122,17 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 13
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 14
     :cond_0
     monitor-exit p0
 
     return-object v2
 
-    .line 9
     :catchall_0
     move-exception v0
 
@@ -160,8 +144,6 @@
 .method public final declared-synchronized a(Lihe;)V
     .locals 4
 
-    .prologue
-    .line 3
     monitor-enter p0
 
     :try_start_0
@@ -183,12 +165,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     monitor-exit p0
 
     return-void
 
-    .line 3
     :catchall_0
     move-exception v0
 

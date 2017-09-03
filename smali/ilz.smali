@@ -18,13 +18,10 @@
 .method constructor <init>(Lilx;)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lilz;->c:Lilx;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iget-object v0, p0, Lilz;->c:Lilx;
 
     iget-object v0, v0, Lilx;->a:Ljava/util/Map;
@@ -47,8 +44,6 @@
 .method public final hasNext()Z
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lilz;->a:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
@@ -61,9 +56,6 @@
 .method public final synthetic next()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 8
-    .line 9
     iget-object v0, p0, Lilz;->a:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -72,7 +64,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 10
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -81,27 +72,22 @@
 
     iput-object v1, p0, Lilz;->b:Ljava/util/Collection;
 
-    .line 11
     iget-object v1, p0, Lilz;->c:Lilx;
 
     invoke-virtual {v1, v0}, Lilx;->a(Ljava/util/Map$Entry;)Ljava/util/Map$Entry;
 
     move-result-object v0
 
-    .line 12
     return-object v0
 .end method
 
 .method public final remove()V
     .locals 2
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lilz;->a:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
-    .line 5
     iget-object v0, p0, Lilz;->c:Lilx;
 
     iget-object v0, v0, Lilx;->b:Lilw;
@@ -114,11 +100,9 @@
 
     invoke-static {v0, v1}, Lilw;->b(Lilw;I)I
 
-    .line 6
     iget-object v0, p0, Lilz;->b:Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->clear()V
 
-    .line 7
     return-void
 .end method

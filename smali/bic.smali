@@ -7,8 +7,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 5
     new-instance v0, Lbin;
 
     const-string v1, "camera.enable_vesper"
@@ -23,21 +21,15 @@
 .method public static a()Lilc;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Liku;->a:Liku;
 
-    .line 2
     return-object v0
 .end method
 
 .method public static b()Lilc;
     .locals 1
 
-    .prologue
-    .line 3
     sget-object v0, Liku;->a:Liku;
 
-    .line 4
     return-object v0
 .end method

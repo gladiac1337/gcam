@@ -20,8 +20,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 27
     const-string v0, "Photos1UpLauncher"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -36,25 +34,20 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lerg;->a:Ljava/util/Set;
 
-    .line 3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lerg;->b:Ljava/util/Map;
 
-    .line 4
     return-void
 .end method
 
@@ -63,24 +56,18 @@
 .method public final a(Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .prologue
-    .line 25
     return-void
 .end method
 
 .method public final a(Landroid/graphics/Bitmap;I)V
     .locals 0
 
-    .prologue
-    .line 16
     return-void
 .end method
 
 .method public final a(Landroid/net/Uri;)V
     .locals 4
 
-    .prologue
-    .line 13
     sget-object v0, Lerg;->c:Ljava/lang/String;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -117,28 +104,22 @@
 
     invoke-static {v0, v1}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 14
     iget-object v0, p0, Lerg;->a:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 15
     return-void
 .end method
 
 .method public final a(Landroid/net/Uri;I)V
     .locals 0
 
-    .prologue
-    .line 23
     return-void
 .end method
 
 .method public final a(Landroid/net/Uri;Lgff;Lfpk;)V
     .locals 6
 
-    .prologue
-    .line 5
     sget-object v0, Lerg;->c:Ljava/lang/String;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -175,27 +156,22 @@
 
     invoke-static {v0, v1}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
     iget-object v0, p0, Lerg;->a:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 7
     if-eqz p3, :cond_0
 
-    .line 8
     iget-object v0, p0, Lerg;->b:Ljava/util/Map;
 
     invoke-interface {v0, p1, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     sget-object v0, Lerg;->c:Ljava/lang/String;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 10
     invoke-interface {p3}, Lfpk;->a()J
 
     move-result-wide v2
@@ -232,10 +208,8 @@
 
     move-result-object v1
 
-    .line 11
     invoke-static {v0, v1}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     :cond_0
     return-void
 .end method
@@ -243,24 +217,18 @@
 .method public final a(Landroid/net/Uri;Lgld;)V
     .locals 0
 
-    .prologue
-    .line 24
     return-void
 .end method
 
 .method public final a(Landroid/net/Uri;Lgld;Z)V
     .locals 0
 
-    .prologue
-    .line 20
     return-void
 .end method
 
 .method public final a(Landroid/net/Uri;Ljava/util/List;)V
     .locals 4
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lerg;->a:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -269,7 +237,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 18
     sget-object v0, Lerg;->c:Ljava/lang/String;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -306,7 +273,6 @@
 
     invoke-static {v0, v1}, Lbgj;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 19
     :cond_0
     return-void
 .end method
@@ -314,23 +280,17 @@
 .method public final a([BI)V
     .locals 0
 
-    .prologue
-    .line 26
     return-void
 .end method
 
 .method public final b(Landroid/net/Uri;)V
     .locals 0
 
-    .prologue
-    .line 21
     return-void
 .end method
 
 .method public final c(Landroid/net/Uri;)V
     .locals 0
 
-    .prologue
-    .line 22
     return-void
 .end method

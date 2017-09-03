@@ -23,7 +23,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -34,7 +33,6 @@
 
     const/4 v3, 0x0
 
-    .line 4
     new-instance v0, Lza;
 
     const-string v1, "NO_FLASH"
@@ -43,7 +41,6 @@
 
     sput-object v0, Lza;->a:Lza;
 
-    .line 5
     new-instance v0, Lza;
 
     const-string v1, "AUTO"
@@ -52,7 +49,6 @@
 
     sput-object v0, Lza;->b:Lza;
 
-    .line 6
     new-instance v0, Lza;
 
     const-string v1, "OFF"
@@ -61,7 +57,6 @@
 
     sput-object v0, Lza;->c:Lza;
 
-    .line 7
     new-instance v0, Lza;
 
     const-string v1, "ON"
@@ -70,7 +65,6 @@
 
     sput-object v0, Lza;->d:Lza;
 
-    .line 8
     new-instance v0, Lza;
 
     const-string v1, "TORCH"
@@ -79,7 +73,6 @@
 
     sput-object v0, Lza;->e:Lza;
 
-    .line 9
     new-instance v0, Lza;
 
     const-string v1, "RED_EYE"
@@ -90,7 +83,6 @@
 
     sput-object v0, Lza;->f:Lza;
 
-    .line 10
     const/4 v0, 0x6
 
     new-array v0, v0, [Lza;
@@ -129,8 +121,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -139,8 +129,6 @@
 .method public static a(Ljava/lang/String;)Lza;
     .locals 1
 
-    .prologue
-    .line 2
     const-class v0, Lza;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -155,8 +143,6 @@
 .method public static values()[Lza;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lza;->g:[Lza;
 
     invoke-virtual {v0}, [Lza;->clone()Ljava/lang/Object;

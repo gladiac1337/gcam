@@ -245,8 +245,6 @@
 .method public final hashCode()I
     .locals 4
 
-    .prologue
-    .line 14
     const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -321,20 +319,16 @@
 
     aput-object v2, v0, v1
 
-    .line 15
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 16
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 6
 
-    .prologue
-    .line 11
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -347,13 +341,11 @@
 
     iget v0, p0, Lcom/google/android/gms/location/LocationRequest;->a:I
 
-    .line 12
     packed-switch v0, :pswitch_data_0
 
     :pswitch_0
     const-string v0, "???"
 
-    .line 13
     :goto_0
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -471,7 +463,6 @@
 
     return-object v0
 
-    .line 12
     :pswitch_1
     const-string v0, "PRIORITY_HIGH_ACCURACY"
 
@@ -506,18 +497,14 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x4
 
-    .line 1
-    .line 3
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lkk;->l(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 4
     const/4 v1, 0x1
 
     iget v2, p0, Lcom/google/android/gms/location/LocationRequest;->a:I
@@ -526,10 +513,8 @@
 
     const/16 v1, 0x3e8
 
-    .line 5
     iget v2, p0, Lcom/google/android/gms/location/LocationRequest;->e:I
 
-    .line 6
     invoke-static {p1, v1, v2}, Lkk;->c(Landroid/os/Parcel;II)V
 
     const/4 v1, 0x2
@@ -562,23 +547,19 @@
 
     iget v1, p0, Lcom/google/android/gms/location/LocationRequest;->h:F
 
-    .line 7
     const/4 v2, 0x7
 
     invoke-static {p1, v2, v4}, Lkk;->b(Landroid/os/Parcel;II)V
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 8
     const/16 v1, 0x8
 
     iget-wide v2, p0, Lcom/google/android/gms/location/LocationRequest;->i:J
 
     invoke-static {p1, v1, v2, v3}, Lkk;->a(Landroid/os/Parcel;IJ)V
 
-    .line 9
     invoke-static {p1, v0}, Lkk;->m(Landroid/os/Parcel;I)V
 
-    .line 10
     return-void
 .end method

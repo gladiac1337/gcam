@@ -14,8 +14,6 @@
 .method constructor <init>(Lqw;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lqy;->a:Lqw;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,26 +26,20 @@
 .method public final onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 2
 
-    .prologue
-    .line 2
     const/4 v0, -0x1
 
     if-eq p3, v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lqy;->a:Lqw;
 
     iget-object v0, v0, Lqw;->e:Lpw;
 
-    .line 4
     if-eqz v0, :cond_0
 
-    .line 6
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lpw;->a:Z
 
-    .line 7
     :cond_0
     return-void
 .end method
@@ -55,7 +47,5 @@
 .method public final onNothingSelected(Landroid/widget/AdapterView;)V
     .locals 0
 
-    .prologue
-    .line 8
     return-void
 .end method

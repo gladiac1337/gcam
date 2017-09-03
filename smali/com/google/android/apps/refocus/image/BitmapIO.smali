@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 20
     const-string v0, "BitmapIO"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -29,8 +27,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,18 +35,14 @@
 .method public static decodeJpeg([B)Landroid/graphics/Bitmap;
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 8
     if-nez p0, :cond_1
 
-    .line 19
     :cond_0
     :goto_0
     return-object v0
 
-    .line 10
     :cond_1
     const/4 v1, 0x0
 
@@ -60,26 +52,20 @@
 
     move-result-object v1
 
-    .line 11
     if-eqz v1, :cond_0
 
-    .line 13
     invoke-static {p0}, Lhky;->a([B)Lhky;
 
     move-result-object v0
 
-    .line 14
     if-eqz v0, :cond_2
 
-    .line 16
     invoke-static {v0}, Lhky;->a(Lhky;)Lhix;
 
     move-result-object v0
 
-    .line 17
     iget v0, v0, Lhix;->e:I
 
-    .line 18
     invoke-static {v1, v0}, Lcom/google/android/apps/refocus/image/BitmapProcessing;->rotate(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -89,30 +75,24 @@
     :cond_2
     move-object v0, v1
 
-    .line 19
     goto :goto_0
 .end method
 
 .method public static toByteArray(Landroid/graphics/Bitmap;I)[B
     .locals 3
 
-    .prologue
-    .line 2
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 3
     if-gez p1, :cond_0
 
-    .line 4
     sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
     const/16 v2, 0x64
 
     invoke-virtual {p0, v1, v2, v0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 6
     :goto_0
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
@@ -120,7 +100,6 @@
 
     return-object v0
 
-    .line 5
     :cond_0
     sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -132,8 +111,6 @@
 .method public static toInputStream(Landroid/graphics/Bitmap;I)Ljava/io/InputStream;
     .locals 2
 
-    .prologue
-    .line 7
     new-instance v0, Ljava/io/ByteArrayInputStream;
 
     invoke-static {p0, p1}, Lcom/google/android/apps/refocus/image/BitmapIO;->toByteArray(Landroid/graphics/Bitmap;I)[B

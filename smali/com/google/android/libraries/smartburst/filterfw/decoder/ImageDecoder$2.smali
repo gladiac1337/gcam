@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder$2;->this$0:Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public run()V
     .locals 6
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder$2;->this$0:Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;
 
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->access$400(Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;)J
 
     move-result-wide v2
 
-    .line 3
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder$2;->this$0:Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;
 
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->access$100(Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;)Ljava/util/List;
@@ -45,7 +40,6 @@
 
     monitor-enter v1
 
-    .line 4
     :try_start_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder$2;->this$0:Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;
 
@@ -70,14 +64,12 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/VideoFrameConsumer;
 
-    .line 5
     iget-object v5, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder$2;->this$0:Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;
 
     invoke-interface {v0, v5, v2, v3}, Lcom/google/android/libraries/smartburst/filterfw/VideoFrameConsumer;->onVideoFrameAvailable(Lcom/google/android/libraries/smartburst/filterfw/VideoFrameProvider;J)V
 
     goto :goto_0
 
-    .line 7
     :catchall_0
     move-exception v0
 

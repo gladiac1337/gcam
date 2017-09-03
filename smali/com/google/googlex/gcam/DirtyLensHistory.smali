@@ -13,8 +13,6 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
-    .line 14
     invoke-static {}, Lcom/google/googlex/gcam/GcamModuleJNI;->new_DirtyLensHistory__SWIG_0()J
 
     move-result-wide v0
@@ -23,32 +21,24 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/DirtyLensHistory;-><init>(JZ)V
 
-    .line 15
     return-void
 .end method
 
 .method protected constructor <init>(JZ)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-boolean p3, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCMemOwn:Z
 
-    .line 3
     iput-wide p1, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCPtr:J
 
-    .line 4
     return-void
 .end method
 
 .method public constructor <init>(Lcom/google/googlex/gcam/FloatDeque;)V
     .locals 3
 
-    .prologue
-    .line 16
     invoke-static {p1}, Lcom/google/googlex/gcam/FloatDeque;->getCPtr(Lcom/google/googlex/gcam/FloatDeque;)J
 
     move-result-wide v0
@@ -61,15 +51,12 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/DirtyLensHistory;-><init>(JZ)V
 
-    .line 17
     return-void
 .end method
 
 .method protected static getCPtr(Lcom/google/googlex/gcam/DirtyLensHistory;)J
     .locals 2
 
-    .prologue
-    .line 5
     if-nez p0, :cond_0
 
     const-wide/16 v0, 0x0
@@ -88,8 +75,6 @@
 .method public OnPhoto(Ljava/math/BigInteger;F)Z
     .locals 2
 
-    .prologue
-    .line 20
     iget-wide v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1, p2}, Lcom/google/googlex/gcam/GcamModuleJNI;->DirtyLensHistory_OnPhoto(JLcom/google/googlex/gcam/DirtyLensHistory;Ljava/math/BigInteger;F)Z
@@ -102,23 +87,18 @@
 .method public Reset()V
     .locals 2
 
-    .prologue
-    .line 18
     iget-wide v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->DirtyLensHistory_Reset(JLcom/google/googlex/gcam/DirtyLensHistory;)V
 
-    .line 19
     return-void
 .end method
 
 .method public declared-synchronized delete()V
     .locals 4
 
-    .prologue
     const-wide/16 v2, 0x0
 
-    .line 8
     monitor-enter p0
 
     :try_start_0
@@ -128,22 +108,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 9
     iget-boolean v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCMemOwn:Z
 
     if-eqz v0, :cond_0
 
-    .line 10
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCMemOwn:Z
 
-    .line 11
     iget-wide v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCPtr:J
 
     invoke-static {v0, v1}, Lcom/google/googlex/gcam/GcamModuleJNI;->delete_DirtyLensHistory(J)V
 
-    .line 12
     :cond_0
     const-wide/16 v0, 0x0
 
@@ -151,13 +127,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 13
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 8
     :catchall_0
     move-exception v0
 
@@ -169,19 +143,14 @@
 .method protected finalize()V
     .locals 0
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Lcom/google/googlex/gcam/DirtyLensHistory;->delete()V
 
-    .line 7
     return-void
 .end method
 
 .method public getFrame_influence_decay_rate_()F
     .locals 2
 
-    .prologue
-    .line 36
     iget-wide v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->DirtyLensHistory_frame_influence_decay_rate__get(JLcom/google/googlex/gcam/DirtyLensHistory;)F
@@ -194,8 +163,6 @@
 .method public getInitial_score_()F
     .locals 2
 
-    .prologue
-    .line 27
     iget-wide v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->DirtyLensHistory_initial_score__get(JLcom/google/googlex/gcam/DirtyLensHistory;)F
@@ -208,8 +175,6 @@
 .method public getMax_photo_count_()I
     .locals 2
 
-    .prologue
-    .line 33
     iget-wide v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->DirtyLensHistory_max_photo_count__get(JLcom/google/googlex/gcam/DirtyLensHistory;)I
@@ -222,8 +187,6 @@
 .method public getMin_photo_count_()I
     .locals 2
 
-    .prologue
-    .line 30
     iget-wide v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->DirtyLensHistory_min_photo_count__get(JLcom/google/googlex/gcam/DirtyLensHistory;)I
@@ -236,8 +199,6 @@
 .method public getMin_seconds_between_photos_()F
     .locals 2
 
-    .prologue
-    .line 42
     iget-wide v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->DirtyLensHistory_min_seconds_between_photos__get(JLcom/google/googlex/gcam/DirtyLensHistory;)F
@@ -250,15 +211,12 @@
 .method public getScore_history_()Lcom/google/googlex/gcam/FloatDeque;
     .locals 4
 
-    .prologue
-    .line 23
     iget-wide v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->DirtyLensHistory_score_history__get(JLcom/google/googlex/gcam/DirtyLensHistory;)J
 
     move-result-wide v2
 
-    .line 24
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -283,8 +241,6 @@
 .method public getWeighted_score_threshold_()F
     .locals 2
 
-    .prologue
-    .line 39
     iget-wide v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->DirtyLensHistory_weighted_score_threshold__get(JLcom/google/googlex/gcam/DirtyLensHistory;)F
@@ -297,73 +253,56 @@
 .method public setFrame_influence_decay_rate_(F)V
     .locals 2
 
-    .prologue
-    .line 34
     iget-wide v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->DirtyLensHistory_frame_influence_decay_rate__set(JLcom/google/googlex/gcam/DirtyLensHistory;F)V
 
-    .line 35
     return-void
 .end method
 
 .method public setInitial_score_(F)V
     .locals 2
 
-    .prologue
-    .line 25
     iget-wide v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->DirtyLensHistory_initial_score__set(JLcom/google/googlex/gcam/DirtyLensHistory;F)V
 
-    .line 26
     return-void
 .end method
 
 .method public setMax_photo_count_(I)V
     .locals 2
 
-    .prologue
-    .line 31
     iget-wide v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->DirtyLensHistory_max_photo_count__set(JLcom/google/googlex/gcam/DirtyLensHistory;I)V
 
-    .line 32
     return-void
 .end method
 
 .method public setMin_photo_count_(I)V
     .locals 2
 
-    .prologue
-    .line 28
     iget-wide v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->DirtyLensHistory_min_photo_count__set(JLcom/google/googlex/gcam/DirtyLensHistory;I)V
 
-    .line 29
     return-void
 .end method
 
 .method public setMin_seconds_between_photos_(F)V
     .locals 2
 
-    .prologue
-    .line 40
     iget-wide v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->DirtyLensHistory_min_seconds_between_photos__set(JLcom/google/googlex/gcam/DirtyLensHistory;F)V
 
-    .line 41
     return-void
 .end method
 
 .method public setScore_history_(Lcom/google/googlex/gcam/FloatDeque;)V
     .locals 6
 
-    .prologue
-    .line 21
     iget-wide v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/FloatDeque;->getCPtr(Lcom/google/googlex/gcam/FloatDeque;)J
@@ -376,19 +315,15 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->DirtyLensHistory_score_history__set(JLcom/google/googlex/gcam/DirtyLensHistory;JLcom/google/googlex/gcam/FloatDeque;)V
 
-    .line 22
     return-void
 .end method
 
 .method public setWeighted_score_threshold_(F)V
     .locals 2
 
-    .prologue
-    .line 37
     iget-wide v0, p0, Lcom/google/googlex/gcam/DirtyLensHistory;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->DirtyLensHistory_weighted_score_threshold__set(JLcom/google/googlex/gcam/DirtyLensHistory;F)V
 
-    .line 38
     return-void
 .end method

@@ -69,8 +69,6 @@
 .method private final a(Lgyp;Landroid/content/ServiceConnection;Ljava/lang/String;)Z
     .locals 4
 
-    .prologue
-    .line 1
     const-string v0, "ServiceConnection must not be null"
 
     invoke-static {p2, v0}, Lkk;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -102,16 +100,13 @@
 
     invoke-virtual {v2, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
     :goto_0
     iget-boolean v0, v0, Lgyq;->d:Z
 
-    .line 9
     monitor-exit v1
 
     return v0
 
-    .line 1
     :cond_0
     iget-object v2, p0, Lgyo;->c:Landroid/os/Handler;
 
@@ -145,7 +140,6 @@
 
     throw v0
 
-    .line 9
     :catchall_0
     move-exception v0
 
@@ -155,27 +149,21 @@
 
     throw v0
 
-    .line 1
     :cond_1
     :try_start_1
     invoke-virtual {v0, p2, p3}, Lgyq;->a(Landroid/content/ServiceConnection;Ljava/lang/String;)V
 
-    .line 2
     iget v2, v0, Lgyq;->c:I
 
-    .line 3
     packed-switch v2, :pswitch_data_0
 
     goto :goto_0
 
-    .line 4
     :pswitch_0
     iget-object v2, v0, Lgyq;->g:Landroid/content/ComponentName;
 
-    .line 6
     iget-object v3, v0, Lgyq;->e:Landroid/os/IBinder;
 
-    .line 7
     invoke-interface {p2, v2, v3}, Landroid/content/ServiceConnection;->onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
 
     goto :goto_0
@@ -187,7 +175,6 @@
 
     goto :goto_0
 
-    .line 3
     nop
 
     :pswitch_data_0
@@ -218,13 +205,10 @@
 .method public final a(Ljava/lang/String;Landroid/content/ServiceConnection;)V
     .locals 6
 
-    .prologue
-    .line 10
     new-instance v1, Lgyp;
 
     invoke-direct {v1, p1}, Lgyp;-><init>(Ljava/lang/String;)V
 
-    .line 11
     const-string v0, "ServiceConnection must not be null"
 
     invoke-static {p2, v0}, Lkk;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -264,7 +248,6 @@
 
     throw v0
 
-    .line 16
     :catchall_0
     move-exception v0
 
@@ -274,7 +257,6 @@
 
     throw v0
 
-    .line 11
     :cond_0
     :try_start_1
     invoke-virtual {v0, p2}, Lgyq;->a(Landroid/content/ServiceConnection;)Z
@@ -303,16 +285,13 @@
 
     throw v0
 
-    .line 14
     :cond_1
     invoke-static {p2}, Lgzd;->a(Landroid/content/ServiceConnection;)Ljava/lang/String;
 
-    .line 15
     iget-object v1, v0, Lgyq;->b:Ljava/util/Set;
 
     invoke-interface {v1, p2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 16
     invoke-virtual {v0}, Lgyq;->a()Z
 
     move-result v1
@@ -358,19 +337,15 @@
 .method public final handleMessage(Landroid/os/Message;)Z
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 17
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 27
     :goto_0
     return v0
 
-    .line 17
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -387,25 +362,18 @@
 
     if-eqz v2, :cond_1
 
-    .line 18
     iget-boolean v2, v0, Lgyq;->d:Z
 
-    .line 19
     if-eqz v2, :cond_0
 
-    .line 20
     iget-object v2, v0, Lgyq;->h:Lgyo;
 
-    .line 21
     iget-object v2, v2, Lgyo;->d:Lgzd;
 
-    .line 22
     iget-object v3, v0, Lgyq;->h:Lgyo;
 
-    .line 23
     iget-object v3, v3, Lgyo;->b:Landroid/content/Context;
 
-    .line 24
     iget-object v4, v0, Lgyq;->a:Lgyr;
 
     invoke-virtual {v2, v3, v4}, Lgzd;->a(Landroid/content/Context;Landroid/content/ServiceConnection;)V
@@ -418,14 +386,11 @@
 
     iput v2, v0, Lgyq;->c:I
 
-    .line 25
     :cond_0
     iget-object v2, p0, Lgyo;->a:Ljava/util/HashMap;
 
-    .line 26
     iget-object v0, v0, Lgyq;->f:Lgyp;
 
-    .line 27
     invoke-virtual {v2, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_1
@@ -444,7 +409,6 @@
 
     throw v0
 
-    .line 17
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

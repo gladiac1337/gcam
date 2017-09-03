@@ -45,8 +45,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 59
     const-string v0, "FilmstripController"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -61,14 +59,10 @@
 .method public constructor <init>(Lcgs;Lcfz;Lcfw;Lcgo;Lfhs;ZLandroid/content/Context;Landroid/app/FragmentManager;Lbow;Lcgi;Leoh;Lcic;Landroid/app/ActionBar;Liya;Lgjw;Lgjf;Lgch;Lgfd;Lhjz;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p8, p0, Lcgk;->k:Landroid/app/FragmentManager;
 
-    .line 3
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -77,13 +71,10 @@
 
     iput-object v1, p0, Lcgk;->a:Lcgs;
 
-    .line 4
     invoke-static {p2}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     invoke-static {p3}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     invoke-static {p4}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -92,7 +83,6 @@
 
     iput-object v1, p0, Lcgk;->n:Lcgo;
 
-    .line 7
     invoke-static {p5}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -101,7 +91,6 @@
 
     iput-object v1, p0, Lcgk;->e:Lfhs;
 
-    .line 8
     invoke-static {p7}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -110,7 +99,6 @@
 
     iput-object v1, p0, Lcgk;->f:Landroid/content/Context;
 
-    .line 9
     invoke-static {p9}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -119,13 +107,10 @@
 
     iput-object v1, p0, Lcgk;->o:Lbow;
 
-    .line 10
     iput-object p10, p0, Lcgk;->p:Lcgi;
 
-    .line 11
     iput-boolean p6, p0, Lcgk;->g:Z
 
-    .line 12
     invoke-static {p11}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -134,13 +119,10 @@
 
     iput-object v1, p0, Lcgk;->q:Leoh;
 
-    .line 13
     invoke-static {p12}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 14
     invoke-static {p13}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 15
     invoke-static/range {p14 .. p14}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -149,10 +131,8 @@
 
     iput-object v1, p0, Lcgk;->d:Liya;
 
-    .line 16
     invoke-static/range {p15 .. p15}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 17
     invoke-static/range {p16 .. p16}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -161,7 +141,6 @@
 
     iput-object v1, p0, Lcgk;->h:Lgjf;
 
-    .line 18
     invoke-static/range {p17 .. p17}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -170,7 +149,6 @@
 
     iput-object v1, p0, Lcgk;->i:Lgch;
 
-    .line 19
     invoke-static/range {p18 .. p18}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -179,22 +157,18 @@
 
     iput-object v1, p0, Lcgk;->j:Lgfd;
 
-    .line 20
     iget-object v1, p12, Lcic;->b:Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/FilmstripView;
 
     iput-object v1, p0, Lcgk;->c:Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/FilmstripView;
 
-    .line 21
     iget-object v1, p12, Lcic;->a:Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/PeekableFilmstripLayout;
 
     iput-object v1, p0, Lcgk;->b:Lcom/google/android/apps/camera/legacy/app/filmstrip/widget/PeekableFilmstripLayout;
 
-    .line 22
     move-object/from16 v0, p19
 
     iput-object v0, p0, Lcgk;->l:Lhjz;
 
-    .line 23
     return-void
 .end method
 
@@ -203,22 +177,18 @@
 .method public final a()Landroid/graphics/Bitmap;
     .locals 3
 
-    .prologue
-    .line 50
     iget-object v0, p0, Lcgk;->q:Leoh;
 
     invoke-virtual {v0}, Leoh;->a()Liwe;
 
     move-result-object v0
 
-    .line 51
     invoke-interface {v0}, Liwe;->isDone()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 52
     :try_start_0
     invoke-interface {v0}, Liwe;->get()Ljava/lang/Object;
 
@@ -226,7 +196,6 @@
 
     check-cast v0, Leog;
 
-    .line 53
     if-eqz v0, :cond_0
 
     iget-object v1, v0, Leog;->a:Landroid/graphics/Bitmap;
@@ -241,21 +210,17 @@
 
     if-nez v1, :cond_0
 
-    .line 54
     iget-object v0, v0, Leog;->a:Landroid/graphics/Bitmap;
     :try_end_0
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 58
     :goto_0
     return-object v0
 
-    .line 56
     :catch_0
     move-exception v0
 
-    .line 57
     :goto_1
     sget-object v1, Lcgk;->m:Ljava/lang/String;
 
@@ -263,13 +228,11 @@
 
     invoke-static {v1, v2, v0}, Lbgj;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 58
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 56
     :catch_1
     move-exception v0
 
@@ -279,10 +242,8 @@
 .method public final a(Lcda;)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
-    .line 24
     invoke-interface {p1}, Lcda;->c()Lfqu;
 
     move-result-object v0
@@ -291,27 +252,20 @@
 
     move-result-object v0
 
-    .line 25
     iget-object v0, v0, Lfqy;->h:Landroid/net/Uri;
 
-    .line 27
     iget-object v1, p0, Lcgk;->o:Lbow;
 
-    .line 28
     iget-object v1, v1, Lbow;->a:Lgfd;
 
-    .line 29
     invoke-interface {v1, v0}, Lgfd;->a(Landroid/net/Uri;)Lejj;
 
     move-result-object v0
 
-    .line 30
     if-eqz v0, :cond_2
 
-    .line 31
     invoke-interface {v0}, Lejj;->g()V
 
-    .line 44
     :goto_0
     iget-object v0, p0, Lcgk;->e:Lfhs;
 
@@ -319,45 +273,35 @@
 
     move-result v0
 
-    .line 45
     if-eqz v0, :cond_0
 
     if-ne v0, v4, :cond_1
 
-    .line 46
     iget-boolean v0, p0, Lcgk;->g:Z
 
-    .line 47
     if-eqz v0, :cond_1
 
-    .line 48
     :cond_0
     iget-object v0, p0, Lcgk;->p:Lcgi;
 
     invoke-interface {v0}, Lcgi;->N()V
 
-    .line 49
     :cond_1
     return-void
 
-    .line 32
     :cond_2
     iget-object v0, p0, Lcgk;->e:Lfhs;
 
     invoke-interface {v0, p1}, Lfhs;->b(Lcda;)V
 
-    .line 33
     iget-object v0, p0, Lcgk;->n:Lcgo;
 
-    .line 34
     iget-boolean v1, v0, Lcgo;->e:Z
 
     if-eqz v1, :cond_3
 
-    .line 35
     invoke-virtual {v0}, Lcgo;->a()V
 
-    .line 36
     :cond_3
     sget-object v1, Lcgo;->a:Ljava/lang/String;
 
@@ -365,10 +309,8 @@
 
     invoke-static {v1, v2}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 37
     iput-boolean v4, v0, Lcgo;->e:Z
 
-    .line 39
     iget-object v1, v0, Lcgo;->d:Landroid/view/View;
 
     new-instance v2, Lcgq;
@@ -377,26 +319,22 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 40
     iget-object v1, v0, Lcgo;->c:Landroid/view/ViewGroup;
 
     invoke-virtual {v1, v4}, Landroid/view/ViewGroup;->setClickable(Z)V
 
-    .line 41
     iget-object v1, v0, Lcgo;->c:Landroid/view/ViewGroup;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->setAlpha(F)V
 
-    .line 42
     iget-object v1, v0, Lcgo;->c:Landroid/view/ViewGroup;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 43
     iget-object v0, v0, Lcgo;->c:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->animate()Landroid/view/ViewPropertyAnimator;

@@ -19,34 +19,24 @@
 .method public constructor <init>(Lgdj;Lgdk;FZLilc;)V
     .locals 0
 
-    .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     iput-object p1, p0, Lftj;->a:Lgdj;
 
-    .line 6
     iput-object p2, p0, Lftj;->b:Lgdk;
 
-    .line 7
     iput p3, p0, Lftj;->d:F
 
-    .line 8
     iput-boolean p4, p0, Lftj;->e:Z
 
-    .line 9
     iput-object p5, p0, Lftj;->c:Lilc;
 
-    .line 10
     return-void
 .end method
 
 .method public static a()Lftj;
     .locals 6
 
-    .prologue
-    .line 1
     new-instance v0, Lftj;
 
     sget-object v1, Lgdj;->a:Lgdj;
@@ -57,10 +47,8 @@
 
     const/4 v4, 0x0
 
-    .line 2
     sget-object v5, Liku;->a:Liku;
 
-    .line 3
     invoke-direct/range {v0 .. v5}, Lftj;-><init>(Lgdj;Lgdk;FZLilc;)V
 
     return-object v0
@@ -71,20 +59,16 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 12
     if-ne p1, p0, :cond_1
 
-    .line 17
     :cond_0
     :goto_0
     return v0
 
-    .line 14
     :cond_1
     instance-of v2, p1, Lftj;
 
@@ -92,14 +76,11 @@
 
     move v0, v1
 
-    .line 15
     goto :goto_0
 
-    .line 16
     :cond_2
     check-cast p1, Lftj;
 
-    .line 17
     iget-object v2, p0, Lftj;->a:Lgdj;
 
     iget-object v3, p1, Lftj;->a:Lgdj;
@@ -135,28 +116,20 @@
 .method public final hashCode()I
     .locals 2
 
-    .prologue
-    .line 18
     iget-object v0, p0, Lftj;->a:Lgdj;
 
-    .line 19
     iget v0, v0, Lgdj;->e:I
 
-    .line 20
     add-int/lit16 v0, v0, 0x20f
 
-    .line 21
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v1, p0, Lftj;->b:Lgdk;
 
-    .line 22
     iget v1, v1, Lgdk;->i:I
 
-    .line 23
     add-int/2addr v0, v1
 
-    .line 24
     mul-int/lit8 v0, v0, 0x1f
 
     iget v1, p0, Lftj;->d:F
@@ -167,7 +140,6 @@
 
     add-int/2addr v0, v1
 
-    .line 25
     mul-int/lit8 v1, v0, 0x1f
 
     iget-boolean v0, p0, Lftj;->e:Z
@@ -179,10 +151,8 @@
     :goto_0
     add-int/2addr v0, v1
 
-    .line 26
     return v0
 
-    .line 25
     :cond_0
     const/4 v0, 0x0
 
@@ -192,8 +162,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 6
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lftj;->a:Lgdj;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

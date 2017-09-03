@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,13 +20,10 @@
 .method public scale(II)[I
     .locals 3
 
-    .prologue
-    .line 2
     if-ltz p1, :cond_0
 
     if-gez p2, :cond_1
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -66,7 +61,6 @@
 
     throw v0
 
-    .line 4
     :cond_1
     const/4 v0, 0x2
 

@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 40
     const-string v0, "LogAfctGenFunc"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -37,36 +35,28 @@
 .method public constructor <init>(Landroid/content/ContentResolver;ZLbzv;Ljava/lang/String;Lgjf;Lhjz;)V
     .locals 6
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 1
     invoke-direct {p0}, Lhqg;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lenc;->b:Landroid/content/ContentResolver;
 
-    .line 3
     iput-object p6, p0, Lenc;->e:Lhjz;
 
-    .line 4
     new-instance v0, Lisw;
 
     invoke-direct {v0}, Lisw;-><init>()V
 
     iput-object v0, p0, Lenc;->c:Lisw;
 
-    .line 5
     iget-object v2, p0, Lenc;->c:Lisw;
 
-    .line 6
     invoke-virtual {p3}, Lbzv;->ordinal()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 12
     sget-object v0, Lenc;->a:Ljava/lang/String;
 
     invoke-static {p3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -109,14 +99,11 @@
 
     invoke-static {v0, v3}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 13
     const/4 v0, -0x1
 
-    .line 14
     :goto_0
     iput v0, v2, Lisw;->b:I
 
-    .line 15
     iget-object v0, p0, Lenc;->c:Lisw;
 
     if-eqz p2, :cond_0
@@ -124,7 +111,6 @@
     :goto_1
     iput v1, v0, Lisw;->c:I
 
-    .line 16
     iget-object v0, p0, Lenc;->c:Lisw;
 
     invoke-static {}, Lfos;->a()Lfos;
@@ -137,49 +123,40 @@
 
     iput-object v1, v0, Lisw;->a:Ljava/lang/String;
 
-    .line 17
     iput-object p5, p0, Lenc;->d:Lgjf;
 
-    .line 18
     return-void
 
     :pswitch_0
     move v0, v1
 
-    .line 7
     goto :goto_0
 
-    .line 8
     :pswitch_1
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 9
     :pswitch_2
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 10
     :pswitch_3
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 11
     :pswitch_4
     const/4 v0, 0x5
 
     goto :goto_0
 
-    .line 15
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 6
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -195,40 +172,32 @@
 .method public final synthetic b(Ljava/lang/Object;)V
     .locals 6
 
-    .prologue
-    .line 19
     check-cast p1, Lilc;
 
-    .line 20
     invoke-virtual {p1}, Lilc;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 21
     invoke-virtual {p1}, Lilc;->b()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/net/Uri;
 
-    .line 22
     if-nez v0, :cond_1
 
-    .line 23
     sget-object v0, Lenc;->a:Ljava/lang/String;
 
     const-string v1, "Couldn\'t get session URI"
 
     invoke-static {v0, v1}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 39
     :cond_0
     :goto_0
     return-void
 
-    .line 25
     :cond_1
     iget-object v1, p0, Lenc;->d:Lgjf;
 
@@ -236,10 +205,8 @@
 
     move-result-object v1
 
-    .line 26
     if-nez v1, :cond_2
 
-    .line 27
     sget-object v2, Lenc;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -276,7 +243,6 @@
 
     invoke-static {v2, v3}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 28
     :cond_2
     iget-object v2, p0, Lenc;->b:Landroid/content/ContentResolver;
 
@@ -284,10 +250,8 @@
 
     move-result-object v1
 
-    .line 29
     if-nez v1, :cond_3
 
-    .line 30
     sget-object v1, Lenc;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -326,7 +290,6 @@
 
     goto :goto_0
 
-    .line 32
     :cond_3
     new-instance v0, Lfoq;
 
@@ -338,7 +301,6 @@
 
     invoke-direct {v4, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 33
     invoke-virtual {v4}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -347,14 +309,12 @@
 
     iget-object v1, p0, Lenc;->c:Lisw;
 
-    .line 35
     iget-object v2, v0, Lfoq;->b:Lcom/google/common/logging/nano/eventprotos$CameraEvent;
 
     iget-object v2, v2, Lcom/google/common/logging/nano/eventprotos$CameraEvent;->captureDoneEvent:Lcom/google/common/logging/nano/eventprotos$CaptureDone;
 
     iput-object v1, v2, Lcom/google/common/logging/nano/eventprotos$CaptureDone;->smartburstCreationMeta:Lisw;
 
-    .line 38
     iget-object v1, p0, Lenc;->e:Lhjz;
 
     invoke-interface {v1, v0}, Lhjz;->a(Lfoq;)V

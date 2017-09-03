@@ -53,10 +53,8 @@
 .method protected final a()Z
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 1
     :try_start_0
     iget-object v1, p0, Lgyj;->c:Landroid/os/IBinder;
 
@@ -112,12 +110,10 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2
     :cond_0
     :goto_0
     return v0
 
-    .line 1
     :catch_0
     move-exception v1
 
@@ -152,7 +148,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2
     iget-object v0, p0, Lgyj;->d:Lgyd;
 
     invoke-static {v0}, Lgyd;->c(Lgyd;)Lgvw;

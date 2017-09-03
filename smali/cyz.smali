@@ -7,9 +7,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/util/ApiHelper;Lazo;Lfde;Lbow;Lbsi;Lhjq;Lghx;Landroid/content/ContentResolver;Lhkr;Lcom/google/android/apps/camera/config/GservicesHelper;Ljava/util/concurrent/Executor;Lgmp;Lfhs;Lhic;Lbwh;Lcci;Landroid/content/res/Resources;Lfgo;Lgft;Lcct;Lfcu;Lfdc;Lilp;Lfqm;Lezh;Lavm;Lfax;Lelu;Lelv;Ldee;Lbhf;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lghg;Lcyv;Leks;Lavm;Lesr;Lbhd;Lhjz;Lgfd;Lfpe;Lgjf;Lbst;Lapl;Lgnf;)V
     .locals 48
 
-    .prologue
-    .line 1
-    .line 2
     invoke-virtual/range {p28 .. p28}, Lelu;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -20,13 +17,11 @@
 
     sget-object v4, Lbav;->b:Lbav;
 
-    .line 4
     :goto_0
     invoke-static/range {p28 .. p28}, Lilc;->b(Ljava/lang/Object;)Lilc;
 
     move-result-object v30
 
-    .line 5
     move-object/from16 v0, p31
 
     iget-object v0, v0, Lbhf;->a:Lavm;
@@ -121,13 +116,10 @@
 
     move-object/from16 v47, p45
 
-    .line 7
     invoke-direct/range {v1 .. v47}, Lcxx;-><init>(Lcom/google/android/apps/camera/util/ApiHelper;Lazo;Lbav;Lfde;Lbow;Lbsi;Lhjq;Lghx;Landroid/content/ContentResolver;Lhkr;Lcom/google/android/apps/camera/config/GservicesHelper;Ljava/util/concurrent/Executor;Lfhs;Lgmp;Lhic;Lbwh;Lcci;Landroid/content/res/Resources;Lfgo;Lgft;Lcct;Lfcu;Lfdc;Lilp;Lfqm;Lezh;Lavm;Lfax;Lilc;Lelv;Ldee;Lavm;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lghg;Lcyv;Leks;Lavm;Lesr;Lbhd;Lhjz;Lgfd;Lfpe;Lgjf;Lbst;Lapl;Lgnf;)V
 
-    .line 8
     return-void
 
-    .line 2
     :cond_0
     sget-object v4, Lbav;->a:Lbav;
 

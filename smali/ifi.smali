@@ -17,30 +17,22 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/buffers/FeatureTable;)V
     .locals 1
 
-    .prologue
     const v0, 0x3e99999a    # 0.3f
 
-    .line 1
     invoke-direct {p0}, Lieq;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Lifi;->a:Lcom/google/android/libraries/smartburst/buffers/FeatureTable;
 
-    .line 4
     iput v0, p0, Lifi;->b:F
 
-    .line 5
     iput v0, p0, Lifi;->c:F
 
-    .line 6
     const/high16 v0, 0x3e800000    # 0.25f
 
     iput v0, p0, Lifi;->d:F
 
-    .line 7
     return-void
 .end method
 
@@ -49,25 +41,20 @@
 .method public final a(Liel;)Liel;
     .locals 13
 
-    .prologue
     const-wide/16 v10, -0x1
 
-    .line 8
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 12
     invoke-virtual {p1}, Liel;->iterator()Ljava/util/Iterator;
 
     move-result-object v12
 
     move-wide v2, v10
 
-    .line 13
     :goto_0
     invoke-interface {v12}, Ljava/util/Iterator;->hasNext()Z
 
@@ -75,7 +62,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 14
     invoke-interface {v12}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -86,7 +72,6 @@
 
     move-result-wide v4
 
-    .line 15
     new-instance v0, Lcom/google/android/libraries/smartburst/filterpacks/motion/MotionStatistics;
 
     iget v1, p0, Lifi;->b:F
@@ -97,12 +82,10 @@
 
     invoke-direct {v0, v1, v6, v7}, Lcom/google/android/libraries/smartburst/filterpacks/motion/MotionStatistics;-><init>(FFF)V
 
-    .line 16
     cmp-long v1, v2, v10
 
     if-eqz v1, :cond_0
 
-    .line 17
     iget-object v1, p0, Lifi;->a:Lcom/google/android/libraries/smartburst/buffers/FeatureTable;
 
     iget v6, p0, Lifi;->b:F
@@ -115,7 +98,6 @@
 
     move-result-object v0
 
-    .line 18
     :cond_0
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterpacks/motion/MotionStatistics;->isMovementTooLarge()Z
 
@@ -123,14 +105,12 @@
 
     if-nez v1, :cond_1
 
-    .line 19
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterpacks/motion/MotionStatistics;->hasTooManyInvalidFrames()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 20
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -140,10 +120,8 @@
     :cond_1
     move-wide v2, v4
 
-    .line 22
     goto :goto_0
 
-    .line 23
     :cond_2
     new-instance v0, Liel;
 
@@ -155,8 +133,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 6
 
-    .prologue
-    .line 24
     const-string v0, "SmallMotionSegmentFilter[maxValidMovement="
 
     iget v1, p0, Lifi;->b:F

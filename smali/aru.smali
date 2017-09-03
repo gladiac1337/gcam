@@ -25,13 +25,9 @@
 .method public final run()V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Laru;->a:Lars;
 
-    .line 2
     invoke-virtual {v0}, Lars;->d()V
 
-    .line 3
     return-void
 .end method

@@ -7,8 +7,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 3
     const-class v0, Lile;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -17,21 +15,16 @@
 
     invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
 
-    .line 4
     new-instance v0, Lild;
 
-    .line 5
     invoke-direct {v0}, Lild;-><init>()V
 
-    .line 6
     return-void
 .end method
 
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,8 +33,6 @@
 .method public static a(Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 2
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z

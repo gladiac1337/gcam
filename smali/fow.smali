@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,13 +15,10 @@
 .method public static a(Lfox;)Landroid/media/MediaCodec;
     .locals 5
 
-    .prologue
-    .line 2
     invoke-interface {p0}, Lfox;->a()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 3
     const-string v2, "MediaCodecFac"
 
     const-string v3, "create mediaCodec for"
@@ -45,7 +40,6 @@
     :goto_0
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4
     :try_start_0
     invoke-static {v1}, Landroid/media/MediaCodec;->createEncoderByType(Ljava/lang/String;)Landroid/media/MediaCodec;
     :try_end_0
@@ -55,7 +49,6 @@
 
     return-object v0
 
-    .line 3
     :cond_0
     new-instance v0, Ljava/lang/String;
 
@@ -63,11 +56,9 @@
 
     goto :goto_0
 
-    .line 5
     :catch_0
     move-exception v0
 
-    .line 6
     new-instance v1, Labj;
 
     const-string v2, "fail to create media codec"

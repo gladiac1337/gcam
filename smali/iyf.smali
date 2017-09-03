@@ -16,8 +16,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 5
     new-instance v0, Liyf;
 
     const-string v1, "INSTANCE"
@@ -26,7 +24,6 @@
 
     sput-object v0, Liyf;->a:Liyf;
 
-    .line 6
     const/4 v0, 0x1
 
     new-array v0, v0, [Liyf;
@@ -45,8 +42,6 @@
 .method private constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 2
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
@@ -57,8 +52,6 @@
 .method public static values()[Liyf;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Liyf;->b:[Liyf;
 
     invoke-virtual {v0}, [Liyf;->clone()Ljava/lang/Object;
@@ -75,10 +68,7 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-static {p1}, Ldt;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     return-void
 .end method

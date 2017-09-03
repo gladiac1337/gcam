@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$6;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$6$1;->this$1:Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,14 +26,11 @@
 .method public run()V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$6$1;->this$1:Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$6;
 
     iget-object v0, v0, Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$6;->this$0:Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor;
 
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor;->access$100(Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor;)V
 
-    .line 3
     return-void
 .end method

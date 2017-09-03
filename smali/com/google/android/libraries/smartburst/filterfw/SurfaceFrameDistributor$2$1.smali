@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$2;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$2$1;->this$1:Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$2$1;->this$1:Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$2;
 
     iget-object v0, v0, Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$2;->this$0:Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor;
@@ -40,18 +36,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$2$1;->this$1:Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$2;
 
     iget-object v0, v0, Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$2;->this$0:Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor;
 
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor;->access$100(Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor;)V
 
-    .line 5
     :goto_0
     return-void
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$2$1;->this$1:Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$2;
 

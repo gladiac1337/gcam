@@ -13,57 +13,44 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/buffers/FeatureTable;Lije;)V
     .locals 3
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0, p1}, Lidr;-><init>(Lcom/google/android/libraries/smartburst/buffers/FeatureTable;)V
 
-    .line 2
     invoke-static {p2}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     iget v2, p2, Lije;->A:I
 
-    .line 5
     if-ne v2, v0, :cond_0
 
     :goto_0
     invoke-static {v0}, Lid;->a(Z)V
 
-    .line 6
     iput-object p2, p0, Lieg;->b:Lije;
 
-    .line 7
     iput v1, p0, Lieg;->c:I
 
-    .line 8
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 5
     goto :goto_0
 .end method
 
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/buffers/FeatureTable;Lije;I)V
     .locals 3
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 9
     invoke-direct {p0, p1}, Lidr;-><init>(Lcom/google/android/libraries/smartburst/buffers/FeatureTable;)V
 
-    .line 10
     invoke-static {p2}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 11
     if-ltz p3, :cond_0
 
     move v0, v1
@@ -71,34 +58,27 @@
     :goto_0
     invoke-static {v0}, Lid;->a(Z)V
 
-    .line 13
     iget v0, p2, Lije;->A:I
 
-    .line 14
     if-ge p3, v0, :cond_1
 
     :goto_1
     invoke-static {v1}, Lid;->a(Z)V
 
-    .line 15
     iput-object p2, p0, Lieg;->b:Lije;
 
-    .line 16
     iput p3, p0, Lieg;->c:I
 
-    .line 17
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 11
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 14
     goto :goto_1
 .end method
 
@@ -107,13 +87,10 @@
 .method public final a(JLhve;)Lijj;
     .locals 4
 
-    .prologue
-    .line 18
     new-instance v0, Lijg;
 
     iget-object v1, p0, Lieg;->b:Lije;
 
-    .line 19
     invoke-virtual {p3, v1}, Lhve;->a(Lije;)Lcom/google/android/libraries/smartburst/utils/Feature;
 
     move-result-object v1
@@ -130,15 +107,12 @@
 
     invoke-direct {v0, v1}, Lijg;-><init>(F)V
 
-    .line 20
     return-object v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 21
     const-string v0, "SingleFeatureScorer[type="
 
     iget-object v1, p0, Lieg;->b:Lije;

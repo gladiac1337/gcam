@@ -14,8 +14,6 @@
 .method constructor <init>(Lfyl;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfyp;->a:Lfyl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,28 +26,21 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lfyp;->a:Lfyl;
 
-    .line 3
     iget-object v1, v0, Lfyl;->a:Ljava/lang/Object;
 
-    .line 4
     monitor-enter v1
 
-    .line 5
     :try_start_0
     iget-object v0, p0, Lfyp;->a:Lfyl;
 
-    .line 6
     iget v2, v0, Lfyl;->d:I
 
     add-int/lit8 v2, v2, -0x1
 
     iput v2, v0, Lfyl;->d:I
 
-    .line 7
     monitor-exit v1
 
     return-void

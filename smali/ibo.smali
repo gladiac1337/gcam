@@ -23,24 +23,18 @@
 .method public constructor <init>(Lias;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Libo;->b:Ljava/util/Set;
 
-    .line 3
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     iput-object p1, p0, Libo;->a:Lias;
 
-    .line 5
     return-void
 .end method
 
@@ -49,15 +43,12 @@
 .method public final a(Ljava/lang/String;IILandroid/graphics/Bitmap$Config;)Liav;
     .locals 4
 
-    .prologue
-    .line 9
     iget-object v0, p0, Libo;->a:Lias;
 
     invoke-interface {v0, p1, p2, p3, p4}, Lias;->a(Ljava/lang/String;IILandroid/graphics/Bitmap$Config;)Liav;
 
     move-result-object v0
 
-    .line 10
     new-instance v1, Libq;
 
     const-string v2, "CREATE"
@@ -72,15 +63,12 @@
 .method public final a(Ljava/lang/String;Landroid/graphics/Bitmap;)Liav;
     .locals 4
 
-    .prologue
-    .line 6
     new-instance v0, Libq;
 
     const-string v1, "WRAP"
 
     iget-object v2, p0, Libo;->a:Lias;
 
-    .line 7
     invoke-interface {v2, p1, p2}, Lias;->a(Ljava/lang/String;Landroid/graphics/Bitmap;)Liav;
 
     move-result-object v2
@@ -89,27 +77,22 @@
 
     invoke-direct {v0, p1, v1, v2, v3}, Libq;-><init>(Ljava/lang/String;Ljava/lang/String;Liav;Ljava/util/Set;)V
 
-    .line 8
     return-object v0
 .end method
 
 .method public final a(Ljava/io/Writer;)V
     .locals 17
 
-    .prologue
-    .line 11
     new-instance v8, Landroid/util/LongSparseArray;
 
     invoke-direct {v8}, Landroid/util/LongSparseArray;-><init>()V
 
-    .line 12
     move-object/from16 v0, p0
 
     iget-object v4, v0, Libo;->b:Ljava/util/Set;
 
     monitor-enter v4
 
-    .line 13
     :try_start_0
     move-object/from16 v0, p0
 
@@ -133,7 +116,6 @@
 
     check-cast v2, Libq;
 
-    .line 14
     invoke-virtual {v2}, Libq;->f()Ljava/lang/String;
 
     move-result-object v3
@@ -142,53 +124,39 @@
 
     const/4 v3, 0x1
 
-    .line 16
     :goto_1
     iget-wide v6, v2, Libq;->b:J
 
-    .line 17
     new-instance v9, Libp;
 
-    .line 18
     iget v10, v2, Libq;->d:I
 
-    .line 20
     iget-object v11, v2, Libq;->c:Ljava/lang/String;
 
-    .line 21
     invoke-direct {v9, v10, v11, v2}, Libp;-><init>(ILjava/lang/String;Libq;)V
 
-    .line 22
     invoke-virtual {v8, v6, v7, v9}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
 
-    .line 23
     if-nez v3, :cond_0
 
-    .line 25
     iget-wide v6, v2, Libq;->g:J
 
-    .line 26
     new-instance v3, Libp;
 
-    .line 27
     iget v9, v2, Libq;->d:I
 
-    .line 28
     neg-int v9, v9
 
-    .line 29
     invoke-virtual {v2}, Libq;->f()Ljava/lang/String;
 
     move-result-object v10
 
     invoke-direct {v3, v9, v10, v2}, Libp;-><init>(ILjava/lang/String;Libq;)V
 
-    .line 30
     invoke-virtual {v8, v6, v7, v3}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
 
     goto :goto_0
 
-    .line 32
     :catchall_0
     move-exception v2
 
@@ -198,33 +166,27 @@
 
     throw v2
 
-    .line 14
     :cond_1
     const/4 v3, 0x0
 
     goto :goto_1
 
-    .line 32
     :cond_2
     :try_start_1
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 33
     const-string v2, "TIME,ALLOC_SIZE,WIDTH,HEIGHT,LABEL,TYPE,LEAKED,TOTAL_USAGE,TOTAL_COUNT\n"
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 34
     const-wide/16 v4, 0x0
 
-    .line 35
     const/4 v3, 0x0
 
-    .line 36
     const/4 v2, 0x0
 
     move-wide v6, v4
@@ -240,14 +202,12 @@
 
     if-ge v3, v2, :cond_5
 
-    .line 37
     invoke-virtual {v8, v3}, Landroid/util/LongSparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Libp;
 
-    .line 38
     iget v5, v2, Libp;->a:I
 
     if-ltz v5, :cond_3
@@ -257,14 +217,12 @@
     :goto_3
     add-int/2addr v4, v5
 
-    .line 39
     iget v5, v2, Libp;->a:I
 
     int-to-long v10, v5
 
     add-long/2addr v6, v10
 
-    .line 40
     invoke-virtual {v8, v3}, Landroid/util/LongSparseArray;->keyAt(I)J
 
     move-result-wide v10
@@ -273,25 +231,18 @@
 
     iget-object v9, v2, Libp;->b:Libq;
 
-    .line 41
     iget v9, v9, Libq;->e:I
 
-    .line 42
     iget-object v12, v2, Libp;->b:Libq;
 
-    .line 43
     iget v12, v12, Libq;->f:I
 
-    .line 44
     iget-object v13, v2, Libp;->b:Libq;
 
-    .line 45
     iget-object v13, v13, Libq;->a:Ljava/lang/String;
 
-    .line 46
     iget-object v14, v2, Libp;->c:Ljava/lang/String;
 
-    .line 47
     iget-object v2, v2, Libp;->b:Libq;
 
     invoke-virtual {v2}, Libq;->f()Ljava/lang/String;
@@ -435,31 +386,26 @@
 
     move-result-object v2
 
-    .line 48
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 49
     add-int/lit8 v2, v3, 0x1
 
     move v3, v2
 
     goto/16 :goto_2
 
-    .line 38
     :cond_3
     const/4 v5, -0x1
 
     goto/16 :goto_3
 
-    .line 47
     :cond_4
     const-string v2, ""
 
     goto/16 :goto_4
 
-    .line 50
     :cond_5
     return-void
 .end method
@@ -467,8 +413,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 51
     iget-object v0, p0, Libo;->a:Lias;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

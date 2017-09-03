@@ -13,18 +13,14 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCache;-><init>(Lcom/google/android/libraries/smartburst/filterfw/FrameManager$1;)V
 
-    .line 2
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->mSize:I
 
-    .line 3
     new-instance v0, Ljava/util/PriorityQueue;
 
     const/4 v1, 0x4
@@ -37,27 +33,21 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->mQueue:Ljava/util/PriorityQueue;
 
-    .line 4
     return-void
 .end method
 
 .method private reserve(I)Z
     .locals 3
 
-    .prologue
-    .line 27
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->mCacheMaxSize:I
 
     if-le p1, v0, :cond_0
 
-    .line 28
     const/4 v0, 0x0
 
-    .line 35
     :goto_0
     return v0
 
-    .line 29
     :cond_0
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->mSize:I
 
@@ -65,7 +55,6 @@
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->mSize:I
 
-    .line 30
     :goto_1
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->mSize:I
 
@@ -73,7 +62,6 @@
 
     if-le v0, v1, :cond_1
 
-    .line 31
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->mQueue:Ljava/util/PriorityQueue;
 
     invoke-virtual {v0}, Ljava/util/PriorityQueue;->poll()Ljava/lang/Object;
@@ -82,7 +70,6 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
-    .line 32
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->mSize:I
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->getSize()I
@@ -93,12 +80,10 @@
 
     iput v1, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->mSize:I
 
-    .line 33
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->destroy()V
 
     goto :goto_1
 
-    .line 35
     :cond_1
     const/4 v0, 0x1
 
@@ -110,8 +95,6 @@
 .method public cacheBacking(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;)Z
     .locals 1
 
-    .prologue
-    .line 18
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->getSize()I
 
     move-result v0
@@ -122,18 +105,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 19
     invoke-virtual {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->onCacheBacking(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;)V
 
-    .line 20
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->mQueue:Ljava/util/PriorityQueue;
 
     invoke-virtual {v0, p1}, Ljava/util/PriorityQueue;->add(Ljava/lang/Object;)Z
 
-    .line 21
     const/4 v0, 0x1
 
-    .line 22
     :goto_0
     return v0
 
@@ -146,26 +125,20 @@
 .method public clear()V
     .locals 1
 
-    .prologue
-    .line 23
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->mQueue:Ljava/util/PriorityQueue;
 
     invoke-virtual {v0}, Ljava/util/PriorityQueue;->clear()V
 
-    .line 24
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->mSize:I
 
-    .line 25
     return-void
 .end method
 
 .method public fetchBacking(II[II)Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
     .locals 3
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->mQueue:Ljava/util/PriorityQueue;
 
     invoke-virtual {v0}, Ljava/util/PriorityQueue;->iterator()Ljava/util/Iterator;
@@ -185,23 +158,19 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;
 
-    .line 6
     const/4 v1, 0x2
 
     if-ne p1, v1, :cond_1
 
-    .line 7
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->writeAccess()I
 
     move-result v1
 
-    .line 9
     :goto_0
     and-int/2addr v1, p2
 
     if-ne v1, p2, :cond_0
 
-    .line 10
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->getDimensions()[I
 
     move-result-object v1
@@ -212,19 +181,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 11
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->getElementSize()I
 
     move-result v1
 
     if-ne p4, v1, :cond_0
 
-    .line 12
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->mQueue:Ljava/util/PriorityQueue;
 
     invoke-virtual {v1, v0}, Ljava/util/PriorityQueue;->remove(Ljava/lang/Object;)Z
 
-    .line 13
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->mSize:I
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->getSize()I
@@ -235,14 +201,11 @@
 
     iput v1, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->mSize:I
 
-    .line 14
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->onFetchBacking(Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;)V
 
-    .line 17
     :goto_1
     return-object v0
 
-    .line 8
     :cond_1
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->readAccess()I
 
@@ -250,7 +213,6 @@
 
     goto :goto_0
 
-    .line 17
     :cond_2
     const/4 v0, 0x0
 
@@ -260,8 +222,6 @@
 .method public getSizeLeft()I
     .locals 2
 
-    .prologue
-    .line 26
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->mCacheMaxSize:I
 
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$PriorityBackingCache;->mSize:I

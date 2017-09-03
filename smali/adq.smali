@@ -14,8 +14,6 @@
 .method constructor <init>(Ladp;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ladq;->a:Ladp;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,9 +26,6 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 6
 
-    .prologue
-    .line 2
-    .line 3
     new-instance v0, Ladu;
 
     iget-object v1, p0, Ladq;->a:Ladp;
@@ -55,6 +50,5 @@
 
     invoke-direct/range {v0 .. v5}, Ladu;-><init>(Lagc;Lagc;Lagc;Ladx;Ldi;)V
 
-    .line 4
     return-object v0
 .end method

@@ -15,23 +15,18 @@
 .method protected constructor <init>(Ljava/io/InputStream;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 2
     const/4 v0, 0x0
 
     iput v0, p0, Lhkt;->a:I
 
-    .line 3
     const/16 v0, 0x8
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lhkt;->c:[B
 
-    .line 4
     iget-object v0, p0, Lhkt;->c:[B
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
@@ -40,7 +35,6 @@
 
     iput-object v0, p0, Lhkt;->b:Ljava/nio/ByteBuffer;
 
-    .line 5
     return-void
 .end method
 
@@ -49,20 +43,16 @@
 .method public final a()S
     .locals 2
 
-    .prologue
-    .line 23
     iget-object v0, p0, Lhkt;->c:[B
 
     const/4 v1, 0x2
 
     invoke-virtual {p0, v0, v1}, Lhkt;->a([BI)V
 
-    .line 24
     iget-object v0, p0, Lhkt;->b:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 25
     iget-object v0, p0, Lhkt;->b:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
@@ -75,28 +65,22 @@
 .method public final a(Ljava/nio/ByteOrder;)V
     .locals 1
 
-    .prologue
-    .line 21
     iget-object v0, p0, Lhkt;->b:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 22
     return-void
 .end method
 
 .method public final a([BI)V
     .locals 1
 
-    .prologue
-    .line 18
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0, p2}, Lhkt;->read([BII)I
 
     move-result v0
 
-    .line 19
     if-eq v0, p2, :cond_0
 
     new-instance v0, Ljava/io/EOFException;
@@ -105,7 +89,6 @@
 
     throw v0
 
-    .line 20
     :cond_0
     return-void
 .end method
@@ -113,20 +96,16 @@
 .method public final b()I
     .locals 2
 
-    .prologue
-    .line 26
     iget-object v0, p0, Lhkt;->c:[B
 
     const/4 v1, 0x4
 
     invoke-virtual {p0, v0, v1}, Lhkt;->a([BI)V
 
-    .line 27
     iget-object v0, p0, Lhkt;->b:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 28
     iget-object v0, p0, Lhkt;->b:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getInt()I
@@ -139,8 +118,6 @@
 .method public final c()J
     .locals 4
 
-    .prologue
-    .line 29
     invoke-virtual {p0}, Lhkt;->b()I
 
     move-result v0
@@ -157,15 +134,12 @@
 .method public final read()I
     .locals 3
 
-    .prologue
-    .line 12
     iget-object v0, p0, Lhkt;->in:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->read()I
 
     move-result v1
 
-    .line 13
     iget v2, p0, Lhkt;->a:I
 
     if-ltz v1, :cond_0
@@ -177,10 +151,8 @@
 
     iput v0, p0, Lhkt;->a:I
 
-    .line 14
     return v1
 
-    .line 13
     :cond_0
     const/4 v0, 0x0
 
@@ -190,15 +162,12 @@
 .method public final read([B)I
     .locals 3
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lhkt;->in:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1}, Ljava/io/InputStream;->read([B)I
 
     move-result v0
 
-    .line 7
     iget v1, p0, Lhkt;->a:I
 
     const/4 v2, 0x0
@@ -211,22 +180,18 @@
 
     iput v1, p0, Lhkt;->a:I
 
-    .line 8
     return v0
 .end method
 
 .method public final read([BII)I
     .locals 3
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lhkt;->in:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
 
     move-result v0
 
-    .line 10
     iget v1, p0, Lhkt;->a:I
 
     const/4 v2, 0x0
@@ -239,22 +204,18 @@
 
     iput v1, p0, Lhkt;->a:I
 
-    .line 11
     return v0
 .end method
 
 .method public final skip(J)J
     .locals 5
 
-    .prologue
-    .line 15
     iget-object v0, p0, Lhkt;->in:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1, p2}, Ljava/io/InputStream;->skip(J)J
 
     move-result-wide v0
 
-    .line 16
     iget v2, p0, Lhkt;->a:I
 
     int-to-long v2, v2
@@ -265,6 +226,5 @@
 
     iput v2, p0, Lhkt;->a:I
 
-    .line 17
     return-wide v0
 .end method

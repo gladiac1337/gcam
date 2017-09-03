@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 5
     invoke-direct {p0}, Linq;-><init>()V
 
     return-void
@@ -20,19 +18,14 @@
 .method public static a(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Linb;
     .locals 4
 
-    .prologue
     const/4 v3, 0x3
 
-    .line 1
     invoke-static {p0, p1}, Lkk;->c(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 2
     invoke-static {p2, p3}, Lkk;->c(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 3
     invoke-static {p4, p5}, Lkk;->c(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 4
     new-instance v0, Liov;
 
     const/4 v1, 0x6
@@ -71,8 +64,6 @@
 .method public synthetic a()Limr;
     .locals 1
 
-    .prologue
-    .line 14
     invoke-virtual {p0}, Linb;->b()Linb;
 
     move-result-object v0
@@ -86,8 +77,6 @@
 .method final synthetic c()Line;
     .locals 2
 
-    .prologue
-    .line 7
     new-instance v0, Ljava/lang/AssertionError;
 
     const-string v1, "should never be called"
@@ -100,9 +89,6 @@
 .method public final synthetic d()Line;
     .locals 1
 
-    .prologue
-    .line 8
-    .line 9
     invoke-virtual {p0}, Linb;->b()Linb;
 
     move-result-object v0
@@ -111,16 +97,12 @@
 
     move-result-object v0
 
-    .line 10
     return-object v0
 .end method
 
 .method public synthetic values()Ljava/util/Collection;
     .locals 1
 
-    .prologue
-    .line 11
-    .line 12
     invoke-virtual {p0}, Linb;->b()Linb;
 
     move-result-object v0
@@ -129,15 +111,12 @@
 
     move-result-object v0
 
-    .line 13
     return-object v0
 .end method
 
 .method writeReplace()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 6
     new-instance v0, Lind;
 
     invoke-direct {v0, p0}, Lind;-><init>(Linb;)V

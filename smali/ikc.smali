@@ -14,8 +14,6 @@
 .method public constructor <init>(Likb;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Likc;->a:Likb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final close()V
     .locals 4
 
-    .prologue
-    .line 4
     :try_start_0
     iget-object v0, p0, Likc;->a:Likb;
 
@@ -37,15 +33,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8
     :goto_0
     return-void
 
-    .line 6
     :catch_0
     move-exception v0
 
-    .line 7
     const-string v1, "SafeHandle"
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -88,8 +81,6 @@
 .method public final d()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Likc;->a:Likb;
 
     invoke-interface {v0}, Likb;->d()Ljava/lang/Object;
@@ -102,8 +93,6 @@
 .method public final e()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Likc;->a:Likb;
 
     invoke-interface {v0}, Likb;->e()Ljava/lang/Object;

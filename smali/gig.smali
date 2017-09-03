@@ -16,8 +16,6 @@
 .method constructor <init>(Lgie;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgig;->b:Lgie;
 
     iput p2, p0, Lgig;->a:I
@@ -32,13 +30,10 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 6
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 7
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -49,35 +44,28 @@
 
     const/4 v0, 0x1
 
-    .line 8
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 9
     iget-object v0, p0, Lgig;->b:Lgie;
 
     iget v2, p0, Lgig;->a:I
 
-    .line 10
     const v3, 0x3f19999a    # 0.6f
 
     invoke-virtual {v0, v2, v3, v1}, Lgie;->a(IFI)I
 
-    .line 15
     :goto_1
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 7
     goto :goto_0
 
-    .line 12
     :cond_1
     sget-object v0, Lgie;->a:Ljava/lang/String;
 
-    .line 13
     iget v1, p0, Lgig;->a:I
 
     const/16 v2, 0x2a
@@ -108,7 +96,6 @@
 
     invoke-static {v0, v1}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 14
     iget-object v0, p0, Lgig;->b:Lgie;
 
     iget v1, p0, Lgig;->a:I
@@ -121,11 +108,8 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 5
 
-    .prologue
-    .line 2
     sget-object v0, Lgie;->a:Ljava/lang/String;
 
-    .line 3
     iget v1, p0, Lgig;->a:I
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -172,13 +156,11 @@
 
     invoke-static {v0, v1}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lgig;->b:Lgie;
 
     iget v1, p0, Lgig;->a:I
 
     invoke-virtual {v0, v1}, Lgie;->f(I)Z
 
-    .line 5
     return-void
 .end method

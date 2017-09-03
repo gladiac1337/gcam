@@ -26,9 +26,6 @@
 .method protected final synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 1
-    .line 2
     iget-object v0, p0, Lhaq;->a:Lgvt;
 
     invoke-virtual {v0}, Lgvt;->c()Lcom/google/android/gms/common/ConnectionResult;
@@ -43,15 +40,12 @@
 
     iget-object v0, p0, Lhaq;->b:Lhas;
 
-    .line 3
     sget-object v1, Lhao;->c:Lham;
 
     iget-object v2, v0, Lhas;->b:Lhab;
 
-    .line 4
     iget-object v2, v2, Lhab;->b:Lgvt;
 
-    .line 5
     iget-object v3, v0, Lhas;->b:Lhab;
 
     iget-object v3, v3, Lhab;->a:Landroid/app/Activity;
@@ -62,7 +56,6 @@
 
     move-result-object v0
 
-    .line 6
     new-instance v1, Lhar;
 
     invoke-direct {v1, p0}, Lhar;-><init>(Lhaq;)V
@@ -72,10 +65,8 @@
     :goto_0
     const/4 v0, 0x0
 
-    .line 7
     return-object v0
 
-    .line 6
     :cond_0
     iget-object v0, p0, Lhaq;->b:Lhas;
 

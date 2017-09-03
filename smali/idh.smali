@@ -26,36 +26,28 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x6
 
     iput v0, p0, Lidh;->a:I
 
-    .line 3
     const/4 v0, 0x3
 
     iput v0, p0, Lidh;->b:I
 
-    .line 4
     const/16 v0, 0x1a
 
     iput v0, p0, Lidh;->c:I
 
-    .line 5
     const/16 v0, 0x33
 
     iput v0, p0, Lidh;->d:I
 
-    .line 6
     iget v0, p0, Lidh;->a:I
 
     iput v0, p0, Lidh;->e:I
 
-    .line 7
     iget v0, p0, Lidh;->a:I
 
     iget v1, p0, Lidh;->b:I
@@ -68,7 +60,6 @@
 
     iput-object v0, p0, Lidh;->f:Ljava/nio/FloatBuffer;
 
-    .line 8
     iget v0, p0, Lidh;->e:I
 
     invoke-static {v0}, Lidh;->a(I)Ljava/nio/FloatBuffer;
@@ -77,22 +68,18 @@
 
     iput-object v0, p0, Lidh;->g:Ljava/nio/FloatBuffer;
 
-    .line 9
     return-void
 .end method
 
 .method private static a(I)Ljava/nio/FloatBuffer;
     .locals 2
 
-    .prologue
-    .line 34
     shl-int/lit8 v0, p0, 0x2
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 35
     invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v1
@@ -101,30 +88,24 @@
 
     move-result-object v0
 
-    .line 36
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
     move-result-object v0
 
-    .line 37
     return-object v0
 .end method
 
 .method private static a(Ljava/nio/FloatBuffer;)[F
     .locals 1
 
-    .prologue
-    .line 31
     invoke-virtual {p0}, Ljava/nio/FloatBuffer;->remaining()I
 
     move-result v0
 
     new-array v0, v0, [F
 
-    .line 32
     invoke-virtual {p0, v0}, Ljava/nio/FloatBuffer;->get([F)Ljava/nio/FloatBuffer;
 
-    .line 33
     return-object v0
 .end method
 
@@ -133,32 +114,26 @@
 .method public final declared-synchronized a(Landroid/graphics/Bitmap;)Ljava/util/List;
     .locals 9
 
-    .prologue
-    .line 10
     monitor-enter p0
 
     :try_start_0
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 11
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->attachToThread()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 13
     :try_start_1
     invoke-static {p1}, Lkk;->a(Landroid/graphics/Bitmap;)Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;
 
     move-result-object v8
 
-    .line 14
     new-instance v1, Lcom/google/android/libraries/smartburst/filterfw/imageutils/RgbToHsvConverter;
 
     const/4 v0, 0x0
 
     invoke-direct {v1, v0}, Lcom/google/android/libraries/smartburst/filterfw/imageutils/RgbToHsvConverter;-><init>(Z)V
 
-    .line 15
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -171,20 +146,16 @@
 
     move-result-object v0
 
-    .line 16
     invoke-virtual {v1, v8, v0}, Lcom/google/android/libraries/smartburst/filterfw/imageutils/RgbToHsvConverter;->convertImage(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)V
 
-    .line 17
     iget-object v1, p0, Lidh;->f:Ljava/nio/FloatBuffer;
 
     invoke-virtual {v1}, Ljava/nio/FloatBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 18
     iget-object v1, p0, Lidh;->g:Ljava/nio/FloatBuffer;
 
     invoke-virtual {v1}, Ljava/nio/FloatBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 19
     iget v1, p0, Lidh;->a:I
 
     iget v2, p0, Lidh;->b:I
@@ -201,41 +172,34 @@
 
     invoke-static/range {v0 .. v7}, Lcom/google/android/libraries/smartburst/filterfw/imageutils/Histograms;->extractHueSatValueHistogram(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;IIIIILjava/nio/FloatBuffer;Ljava/nio/FloatBuffer;)V
 
-    .line 20
     iget-object v1, p0, Lidh;->f:Ljava/nio/FloatBuffer;
 
     invoke-static {v1}, Lidh;->a(Ljava/nio/FloatBuffer;)[F
 
     move-result-object v1
 
-    .line 21
     iget-object v2, p0, Lidh;->g:Ljava/nio/FloatBuffer;
 
     invoke-static {v2}, Lidh;->a(Ljava/nio/FloatBuffer;)[F
 
     move-result-object v2
 
-    .line 22
     new-instance v3, Lcom/google/android/libraries/smartburst/utils/Feature;
 
     sget-object v4, Lije;->f:Lije;
 
     invoke-direct {v3, v4, v1}, Lcom/google/android/libraries/smartburst/utils/Feature;-><init>(Lije;[F)V
 
-    .line 23
     new-instance v1, Lcom/google/android/libraries/smartburst/utils/Feature;
 
     sget-object v4, Lije;->g:Lije;
 
     invoke-direct {v1, v4, v2}, Lcom/google/android/libraries/smartburst/utils/Feature;-><init>(Lije;[F)V
 
-    .line 24
     invoke-virtual {v8}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->release()Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
-    .line 25
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->release()Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
-    .line 26
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/google/android/libraries/smartburst/utils/Feature;
@@ -254,18 +218,15 @@
 
     move-result-object v0
 
-    .line 28
     :try_start_2
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager;->detachFromThread()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 29
     monitor-exit p0
 
     return-object v0
 
-    .line 30
     :catchall_0
     move-exception v0
 
@@ -276,7 +237,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 10
     :catchall_1
     move-exception v0
 

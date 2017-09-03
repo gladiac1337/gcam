@@ -35,7 +35,6 @@
 .method static constructor <clinit>()V
     .locals 14
 
-    .prologue
     const/4 v13, 0x3
 
     const/4 v12, 0x2
@@ -46,7 +45,6 @@
 
     const/4 v5, 0x1
 
-    .line 14
     new-instance v0, Lcfp;
 
     const-string v1, "GENERIC_CAMERA_ERROR"
@@ -57,7 +55,6 @@
 
     sput-object v0, Lcfp;->a:Lcfp;
 
-    .line 15
     new-instance v6, Lcfp;
 
     const-string v7, "ERROR_CAMERA_DISABLED"
@@ -74,7 +71,6 @@
 
     sput-object v6, Lcfp;->b:Lcfp;
 
-    .line 16
     new-instance v6, Lcfp;
 
     const-string v7, "ERROR_CAMERA_DEVICE"
@@ -91,7 +87,6 @@
 
     sput-object v6, Lcfp;->h:Lcfp;
 
-    .line 17
     new-instance v6, Lcfp;
 
     const-string v7, "ERROR_CAMERA_IN_USE"
@@ -108,7 +103,6 @@
 
     sput-object v6, Lcfp;->i:Lcfp;
 
-    .line 18
     new-instance v6, Lcfp;
 
     const-string v7, "ERROR_CAMERA_SERVICE"
@@ -125,7 +119,6 @@
 
     sput-object v6, Lcfp;->j:Lcfp;
 
-    .line 19
     new-instance v6, Lcfp;
 
     const-string v7, "ERROR_MAX_CAMERAS_IN_USE"
@@ -142,7 +135,6 @@
 
     sput-object v6, Lcfp;->k:Lcfp;
 
-    .line 20
     new-instance v6, Lcfp;
 
     const-string v7, "MEDIA_STORAGE_FAILURE"
@@ -159,7 +151,6 @@
 
     sput-object v6, Lcfp;->c:Lcfp;
 
-    .line 21
     new-instance v6, Lcfp;
 
     const-string v7, "MEDIA_RECORDER_FAILURE"
@@ -176,7 +167,6 @@
 
     sput-object v6, Lcfp;->d:Lcfp;
 
-    .line 22
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcfp;
@@ -229,67 +219,52 @@
 .method private constructor <init>(Ljava/lang/String;IIIZ)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput p3, p0, Lcfp;->e:I
 
-    .line 4
     iput p4, p0, Lcfp;->f:I
 
-    .line 5
     iput-boolean p5, p0, Lcfp;->g:Z
 
-    .line 6
     return-void
 .end method
 
 .method public static a(I)Lcfp;
     .locals 1
 
-    .prologue
-    .line 7
     packed-switch p0, :pswitch_data_0
 
-    .line 13
     sget-object v0, Lcfp;->a:Lcfp;
 
     :goto_0
     return-object v0
 
-    .line 8
     :pswitch_0
     sget-object v0, Lcfp;->i:Lcfp;
 
     goto :goto_0
 
-    .line 9
     :pswitch_1
     sget-object v0, Lcfp;->k:Lcfp;
 
     goto :goto_0
 
-    .line 10
     :pswitch_2
     sget-object v0, Lcfp;->b:Lcfp;
 
     goto :goto_0
 
-    .line 11
     :pswitch_3
     sget-object v0, Lcfp;->h:Lcfp;
 
     goto :goto_0
 
-    .line 12
     :pswitch_4
     sget-object v0, Lcfp;->j:Lcfp;
 
     goto :goto_0
 
-    .line 7
     nop
 
     :pswitch_data_0
@@ -305,8 +280,6 @@
 .method public static values()[Lcfp;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lcfp;->l:[Lcfp;
 
     invoke-virtual {v0}, [Lcfp;->clone()Ljava/lang/Object;

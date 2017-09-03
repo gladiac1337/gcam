@@ -41,11 +41,8 @@
 .method public constructor <init>(Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v1, 0x1
 
     invoke-static {p1, v1}, Lcqo;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -56,7 +53,6 @@
 
     iput-object v1, p0, Lcqo;->a:Lilp;
 
-    .line 3
     const/4 v1, 0x2
 
     invoke-static {p2, v1}, Lcqo;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -67,7 +63,6 @@
 
     iput-object v1, p0, Lcqo;->b:Lilp;
 
-    .line 4
     const/4 v1, 0x3
 
     invoke-static {p3, v1}, Lcqo;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -78,7 +73,6 @@
 
     iput-object v1, p0, Lcqo;->c:Lilp;
 
-    .line 5
     const/4 v1, 0x4
 
     invoke-static {p4, v1}, Lcqo;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -89,7 +83,6 @@
 
     iput-object v1, p0, Lcqo;->d:Lilp;
 
-    .line 6
     const/4 v1, 0x5
 
     invoke-static {p5, v1}, Lcqo;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -100,7 +93,6 @@
 
     iput-object v1, p0, Lcqo;->e:Lilp;
 
-    .line 7
     const/4 v1, 0x6
 
     invoke-static {p6, v1}, Lcqo;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -111,7 +103,6 @@
 
     iput-object v1, p0, Lcqo;->f:Lilp;
 
-    .line 8
     const/4 v1, 0x7
 
     invoke-static {p7, v1}, Lcqo;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -122,7 +113,6 @@
 
     iput-object v1, p0, Lcqo;->g:Lilp;
 
-    .line 9
     const/16 v1, 0x8
 
     invoke-static {p8, v1}, Lcqo;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -133,7 +123,6 @@
 
     iput-object v1, p0, Lcqo;->h:Lilp;
 
-    .line 10
     const/16 v1, 0x9
 
     invoke-static {p9, v1}, Lcqo;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -144,7 +133,6 @@
 
     iput-object v1, p0, Lcqo;->i:Lilp;
 
-    .line 11
     const/16 v1, 0xa
 
     invoke-static {p10, v1}, Lcqo;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -155,7 +143,6 @@
 
     iput-object v1, p0, Lcqo;->j:Lilp;
 
-    .line 12
     const/16 v1, 0xb
 
     invoke-static {p11, v1}, Lcqo;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -166,7 +153,6 @@
 
     iput-object v1, p0, Lcqo;->k:Lilp;
 
-    .line 13
     const/16 v1, 0xc
 
     invoke-static {p12, v1}, Lcqo;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -177,7 +163,6 @@
 
     iput-object v1, p0, Lcqo;->l:Lilp;
 
-    .line 14
     const/16 v1, 0xd
 
     invoke-static {p13, v1}, Lcqo;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -188,7 +173,6 @@
 
     iput-object v1, p0, Lcqo;->m:Lilp;
 
-    .line 15
     const/16 v1, 0xe
 
     move-object/from16 v0, p14
@@ -201,7 +185,6 @@
 
     iput-object v1, p0, Lcqo;->n:Lilp;
 
-    .line 16
     const/16 v1, 0xf
 
     move-object/from16 v0, p15
@@ -214,7 +197,6 @@
 
     iput-object v1, p0, Lcqo;->o:Lilp;
 
-    .line 17
     const/16 v1, 0x10
 
     move-object/from16 v0, p16
@@ -227,18 +209,14 @@
 
     iput-object v1, p0, Lcqo;->p:Lilp;
 
-    .line 18
     return-void
 .end method
 
 .method private static a(Ljava/lang/Object;I)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 38
     if-nez p0, :cond_0
 
-    .line 39
     new-instance v0, Ljava/lang/NullPointerException;
 
     const/16 v1, 0x5d
@@ -265,7 +243,6 @@
 
     throw v0
 
-    .line 40
     :cond_0
     return-object p0
 .end method
@@ -275,15 +252,12 @@
 .method public final a(Lddt;F)Lcql;
     .locals 21
 
-    .prologue
-    .line 19
     new-instance v2, Lcql;
 
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcqo;->a:Lilp;
 
-    .line 20
     invoke-interface {v3}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -302,7 +276,6 @@
 
     iget-object v4, v0, Lcqo;->b:Lilp;
 
-    .line 21
     invoke-interface {v4}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v4
@@ -321,7 +294,6 @@
 
     iget-object v5, v0, Lcqo;->c:Lilp;
 
-    .line 22
     invoke-interface {v5}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v5
@@ -340,7 +312,6 @@
 
     iget-object v6, v0, Lcqo;->d:Lilp;
 
-    .line 23
     invoke-interface {v6}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -359,7 +330,6 @@
 
     iget-object v7, v0, Lcqo;->e:Lilp;
 
-    .line 24
     invoke-interface {v7}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v7
@@ -378,7 +348,6 @@
 
     iget-object v8, v0, Lcqo;->f:Lilp;
 
-    .line 25
     invoke-interface {v8}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v8
@@ -397,7 +366,6 @@
 
     iget-object v9, v0, Lcqo;->g:Lilp;
 
-    .line 26
     invoke-interface {v9}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v9
@@ -416,7 +384,6 @@
 
     iget-object v10, v0, Lcqo;->h:Lilp;
 
-    .line 27
     invoke-interface {v10}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v10
@@ -435,7 +402,6 @@
 
     iget-object v11, v0, Lcqo;->i:Lilp;
 
-    .line 28
     invoke-interface {v11}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v11
@@ -454,7 +420,6 @@
 
     iget-object v12, v0, Lcqo;->j:Lilp;
 
-    .line 29
     invoke-interface {v12}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v12
@@ -473,7 +438,6 @@
 
     iget-object v13, v0, Lcqo;->k:Lilp;
 
-    .line 30
     invoke-interface {v13}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v13
@@ -492,7 +456,6 @@
 
     iget-object v14, v0, Lcqo;->l:Lilp;
 
-    .line 31
     invoke-interface {v14}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v14
@@ -511,7 +474,6 @@
 
     iget-object v15, v0, Lcqo;->m:Lilp;
 
-    .line 32
     invoke-interface {v15}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v15
@@ -532,7 +494,6 @@
 
     move-object/from16 v16, v0
 
-    .line 33
     invoke-interface/range {v16 .. v16}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v16
@@ -553,7 +514,6 @@
 
     move-object/from16 v17, v0
 
-    .line 34
     invoke-interface/range {v17 .. v17}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v17
@@ -574,7 +534,6 @@
 
     move-object/from16 v18, v0
 
-    .line 35
     invoke-interface/range {v18 .. v18}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v18
@@ -591,7 +550,6 @@
 
     const/16 v19, 0x11
 
-    .line 36
     move-object/from16 v0, p1
 
     move/from16 v1, v19
@@ -606,6 +564,5 @@
 
     invoke-direct/range {v2 .. v20}, Lcql;-><init>(Lhic;Ljava/util/concurrent/Executor;Lgfs;Ldcr;Lavm;Lddr;Lfss;Lddd;Landroid/util/DisplayMetrics;Lbtt;Lcej;Lcom/google/android/apps/camera/legacy/app/stats/Instrumentation;Lhjm;Lcdp;Lavm;Lavm;Lddt;F)V
 
-    .line 37
     return-object v2
 .end method

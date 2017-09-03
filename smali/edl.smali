@@ -22,16 +22,12 @@
 .method public constructor <init>(Lhji;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const-wide v0, 0x4040800000000000L    # 33.0
 
     iput-wide v0, p0, Ledl;->b:D
 
-    .line 3
     const-string v0, "FrameJank"
 
     invoke-interface {p1, v0}, Lhji;->a(Ljava/lang/String;)Lhjh;
@@ -40,7 +36,6 @@
 
     iput-object v0, p0, Ledl;->a:Lhjh;
 
-    .line 4
     return-void
 .end method
 
@@ -49,10 +44,8 @@
 .method public final a(Lhop;DD)V
     .locals 10
 
-    .prologue
     const-wide v8, 0x4040800000000000L    # 33.0
 
-    .line 5
     iget-wide v0, p0, Ledl;->b:D
 
     cmpl-double v0, v0, v8
@@ -63,7 +56,6 @@
 
     if-lez v0, :cond_0
 
-    .line 6
     iget-wide v0, p0, Ledl;->b:D
 
     sub-double v0, p2, v0
@@ -72,14 +64,12 @@
 
     div-double/2addr v0, v2
 
-    .line 7
     const-wide/high16 v2, 0x3ff8000000000000L    # 1.5
 
     cmpl-double v2, v0, v2
 
     if-ltz v2, :cond_0
 
-    .line 8
     iget-object v2, p0, Ledl;->a:Lhjh;
 
     const-wide/high16 v4, 0x4059000000000000L    # 100.0
@@ -136,20 +126,17 @@
 
     invoke-interface {v2, v0}, Lhjh;->d(Ljava/lang/String;)V
 
-    .line 9
     :cond_0
     cmpl-double v0, p2, v8
 
     if-lez v0, :cond_1
 
-    .line 10
     iget-wide v0, p0, Ledl;->b:D
 
     cmpl-double v0, p2, v0
 
     if-lez v0, :cond_2
 
-    .line 11
     const-wide/high16 v0, 0x4024000000000000L    # 10.0
 
     iget-wide v2, p0, Ledl;->b:D
@@ -164,12 +151,10 @@
 
     iput-wide v0, p0, Ledl;->b:D
 
-    .line 13
     :cond_1
     :goto_0
     return-void
 
-    .line 12
     :cond_2
     iput-wide p2, p0, Ledl;->b:D
 

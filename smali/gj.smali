@@ -11,22 +11,16 @@
 .method private constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lgj;->a:Ljava/lang/Object;
 
-    .line 4
     return-void
 .end method
 
 .method public static a(IIIIZ)Lgj;
     .locals 7
 
-    .prologue
-    .line 1
     new-instance v6, Lgj;
 
     sget-object v0, Lfz;->a:Lgh;

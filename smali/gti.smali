@@ -16,8 +16,6 @@
 .method constructor <init>(Lgth;Ljava/util/concurrent/atomic/AtomicBoolean;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgti;->b:Lgth;
 
     iput-object p2, p0, Lgti;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -32,24 +30,18 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgti;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
 
     iget-object v2, p0, Lgti;->b:Lgth;
 
-    .line 3
     iget-object v2, v2, Lgth;->e:Lcom/google/android/apps/refocus/image/ColorImage;
 
-    .line 4
     iget-object v3, p0, Lgti;->b:Lgth;
 
-    .line 5
     iget-object v3, v3, Lgth;->d:Lgsl;
 
-    .line 6
     invoke-virtual {v3}, Lgsl;->a()Ljava/lang/String;
 
     move-result-object v3
@@ -58,9 +50,7 @@
 
     move-result v2
 
-    .line 7
     invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    .line 8
     return-void
 .end method

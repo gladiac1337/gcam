@@ -16,8 +16,6 @@
 .method constructor <init>(Laai;Land;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Laaj;->b:Laai;
 
     iput-object p2, p0, Laaj;->a:Land;
@@ -32,8 +30,6 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Laaj;->a:Land;
 
     invoke-virtual {v0}, Land;->isCancelled()Z
@@ -42,14 +38,12 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Laaj;->b:Laai;
 
     iget-object v1, p0, Laaj;->a:Land;
 
     invoke-virtual {v0, v1}, Laai;->a(Lanr;)Lanr;
 
-    .line 4
     :cond_0
     return-void
 .end method

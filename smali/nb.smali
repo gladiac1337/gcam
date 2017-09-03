@@ -18,13 +18,10 @@
 .method protected constructor <init>(Lna;)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lnb;->c:Lna;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lnb;->a:Z
@@ -37,51 +34,39 @@
 .method public final a(Lfo;I)Lnb;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lnb;->c:Lna;
 
     iput-object p1, v0, Lna;->e:Lfo;
 
-    .line 4
     iput p2, p0, Lnb;->b:I
 
-    .line 5
     return-object p0
 .end method
 
 .method public final a(Landroid/view/View;)V
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lnb;->c:Lna;
 
     invoke-static {v0}, Lna;->a(Lna;)V
 
-    .line 7
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lnb;->a:Z
 
-    .line 8
     return-void
 .end method
 
 .method public final b(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 9
     iget-boolean v0, p0, Lnb;->a:Z
 
     if-eqz v0, :cond_0
 
-    .line 12
     :goto_0
     return-void
 
-    .line 10
     :cond_0
     iget-object v0, p0, Lnb;->c:Lna;
 
@@ -89,7 +74,6 @@
 
     iput-object v1, v0, Lna;->e:Lfo;
 
-    .line 11
     iget-object v0, p0, Lnb;->c:Lna;
 
     iget v1, p0, Lnb;->b:I
@@ -102,12 +86,9 @@
 .method public final c(Landroid/view/View;)V
     .locals 1
 
-    .prologue
-    .line 13
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lnb;->a:Z
 
-    .line 14
     return-void
 .end method

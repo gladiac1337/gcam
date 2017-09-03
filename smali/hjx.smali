@@ -21,11 +21,8 @@
 .method constructor <init>(Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lhjx;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -36,7 +33,6 @@
 
     iput-object v0, p0, Lhjx;->a:Lilp;
 
-    .line 3
     const/4 v0, 0x2
 
     invoke-static {p2, v0}, Lhjx;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -47,7 +43,6 @@
 
     iput-object v0, p0, Lhjx;->b:Lilp;
 
-    .line 4
     const/4 v0, 0x3
 
     invoke-static {p3, v0}, Lhjx;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -58,7 +53,6 @@
 
     iput-object v0, p0, Lhjx;->c:Lilp;
 
-    .line 5
     const/4 v0, 0x4
 
     invoke-static {p4, v0}, Lhjx;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -69,7 +63,6 @@
 
     iput-object v0, p0, Lhjx;->d:Lilp;
 
-    .line 6
     const/4 v0, 0x5
 
     invoke-static {p5, v0}, Lhjx;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -80,7 +73,6 @@
 
     iput-object v0, p0, Lhjx;->e:Lilp;
 
-    .line 7
     const/4 v0, 0x6
 
     invoke-static {p6, v0}, Lhjx;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -91,18 +83,14 @@
 
     iput-object v0, p0, Lhjx;->f:Lilp;
 
-    .line 8
     return-void
 .end method
 
 .method static a(Ljava/lang/Object;I)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 9
     if-nez p0, :cond_0
 
-    .line 10
     new-instance v0, Ljava/lang/NullPointerException;
 
     const/16 v1, 0x5d
@@ -129,7 +117,6 @@
 
     throw v0
 
-    .line 11
     :cond_0
     return-object p0
 .end method

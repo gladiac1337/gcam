@@ -17,32 +17,26 @@
 .method public constructor <init>()V
     .locals 13
 
-    .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lug;->a:Ljava/util/Map;
 
-    .line 32
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lug;->b:Ljava/util/Map;
 
-    .line 33
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lug;->c:Ljava/util/Map;
 
-    .line 34
     const-string v0, "[/*?\\[\\]]"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -51,7 +45,6 @@
 
     iput-object v0, p0, Lug;->d:Ljava/util/regex/Pattern;
 
-    .line 36
     :try_start_0
     const-string v0, "http://www.w3.org/XML/1998/namespace"
 
@@ -59,353 +52,302 @@
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 37
     const-string v0, "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 
     const-string v1, "rdf"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 38
     const-string v0, "http://purl.org/dc/elements/1.1/"
 
     const-string v1, "dc"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 39
     const-string v0, "http://iptc.org/std/Iptc4xmpCore/1.0/xmlns/"
 
     const-string v1, "Iptc4xmpCore"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 40
     const-string v0, "adobe:ns:meta/"
 
     const-string v1, "x"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 41
     const-string v0, "http://ns.adobe.com/iX/1.0/"
 
     const-string v1, "iX"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 42
     const-string v0, "http://ns.adobe.com/xap/1.0/"
 
     const-string v1, "xmp"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 43
     const-string v0, "http://ns.adobe.com/xap/1.0/rights/"
 
     const-string v1, "xmpRights"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 44
     const-string v0, "http://ns.adobe.com/xap/1.0/mm/"
 
     const-string v1, "xmpMM"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 45
     const-string v0, "http://ns.adobe.com/xap/1.0/bj/"
 
     const-string v1, "xmpBJ"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 46
     const-string v0, "http://ns.adobe.com/xmp/note/"
 
     const-string v1, "xmpNote"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 47
     const-string v0, "http://ns.adobe.com/pdf/1.3/"
 
     const-string v1, "pdf"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 48
     const-string v0, "http://ns.adobe.com/pdfx/1.3/"
 
     const-string v1, "pdfx"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 49
     const-string v0, "http://www.npes.org/pdfx/ns/id/"
 
     const-string v1, "pdfxid"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 50
     const-string v0, "http://www.aiim.org/pdfa/ns/schema#"
 
     const-string v1, "pdfaSchema"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 51
     const-string v0, "http://www.aiim.org/pdfa/ns/property#"
 
     const-string v1, "pdfaProperty"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 52
     const-string v0, "http://www.aiim.org/pdfa/ns/type#"
 
     const-string v1, "pdfaType"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 53
     const-string v0, "http://www.aiim.org/pdfa/ns/field#"
 
     const-string v1, "pdfaField"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 54
     const-string v0, "http://www.aiim.org/pdfa/ns/id/"
 
     const-string v1, "pdfaid"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 55
     const-string v0, "http://www.aiim.org/pdfa/ns/extension/"
 
     const-string v1, "pdfaExtension"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 56
     const-string v0, "http://ns.adobe.com/photoshop/1.0/"
 
     const-string v1, "photoshop"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 57
     const-string v0, "http://ns.adobe.com/album/1.0/"
 
     const-string v1, "album"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 58
     const-string v0, "http://ns.adobe.com/exif/1.0/"
 
     const-string v1, "exif"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 59
     const-string v0, "http://ns.adobe.com/exif/1.0/aux/"
 
     const-string v1, "aux"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 60
     const-string v0, "http://ns.adobe.com/tiff/1.0/"
 
     const-string v1, "tiff"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 61
     const-string v0, "http://ns.adobe.com/png/1.0/"
 
     const-string v1, "png"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 62
     const-string v0, "http://ns.adobe.com/jpeg/1.0/"
 
     const-string v1, "jpeg"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 63
     const-string v0, "http://ns.adobe.com/jp2k/1.0/"
 
     const-string v1, "jp2k"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 64
     const-string v0, "http://ns.adobe.com/camera-raw-settings/1.0/"
 
     const-string v1, "crs"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 65
     const-string v0, "http://ns.adobe.com/StockPhoto/1.0/"
 
     const-string v1, "bmsp"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 66
     const-string v0, "http://ns.adobe.com/creatorAtom/1.0/"
 
     const-string v1, "creatorAtom"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 67
     const-string v0, "http://ns.adobe.com/asf/1.0/"
 
     const-string v1, "asf"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 68
     const-string v0, "http://ns.adobe.com/xmp/wav/1.0/"
 
     const-string v1, "wav"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 69
     const-string v0, "http://ns.adobe.com/xmp/1.0/DynamicMedia/"
 
     const-string v1, "xmpDM"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 70
     const-string v0, "http://ns.adobe.com/xmp/transient/1.0/"
 
     const-string v1, "xmpx"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 71
     const-string v0, "http://ns.adobe.com/xap/1.0/t/"
 
     const-string v1, "xmpT"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 72
     const-string v0, "http://ns.adobe.com/xap/1.0/t/pg/"
 
     const-string v1, "xmpTPg"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 73
     const-string v0, "http://ns.adobe.com/xap/1.0/g/"
 
     const-string v1, "xmpG"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 74
     const-string v0, "http://ns.adobe.com/xap/1.0/g/img/"
 
     const-string v1, "xmpGImg"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 75
     const-string v0, "http://ns.adobe.com/xap/1.0/sType/Font#"
 
     const-string v1, "stFNT"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 76
     const-string v0, "http://ns.adobe.com/xap/1.0/sType/Dimensions#"
 
     const-string v1, "stDim"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 77
     const-string v0, "http://ns.adobe.com/xap/1.0/sType/ResourceEvent#"
 
     const-string v1, "stEvt"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 78
     const-string v0, "http://ns.adobe.com/xap/1.0/sType/ResourceRef#"
 
     const-string v1, "stRef"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 79
     const-string v0, "http://ns.adobe.com/xap/1.0/sType/Version#"
 
     const-string v1, "stVer"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 80
     const-string v0, "http://ns.adobe.com/xap/1.0/sType/Job#"
 
     const-string v1, "stJob"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 81
     const-string v0, "http://ns.adobe.com/xap/1.0/sType/ManifestItem#"
 
     const-string v1, "stMfs"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 82
     const-string v0, "http://ns.adobe.com/xmp/Identifier/qual/1.0/"
 
     const-string v1, "xmpidq"
 
     invoke-virtual {p0, v0, v1}, Lug;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 84
     new-instance v5, Lvd;
 
     invoke-direct {v5}, Lvd;-><init>()V
 
-    .line 85
     const/16 v0, 0x600
 
     const/4 v1, 0x1
 
     invoke-virtual {v5, v0, v1}, Lvd;->a(IZ)V
 
-    .line 88
     new-instance v12, Lvd;
 
     invoke-direct {v12}, Lvd;-><init>()V
 
-    .line 89
     const/16 v0, 0x1e00
 
     const/4 v1, 0x1
 
     invoke-virtual {v12, v0, v1}, Lvd;->a(IZ)V
 
-    .line 92
     const-string v1, "http://ns.adobe.com/xap/1.0/"
 
     const-string v2, "Author"
@@ -418,7 +360,6 @@
 
     invoke-direct/range {v0 .. v5}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 93
     const-string v7, "http://ns.adobe.com/xap/1.0/"
 
     const-string v8, "Authors"
@@ -433,7 +374,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 94
     const-string v7, "http://ns.adobe.com/xap/1.0/"
 
     const-string v8, "Description"
@@ -448,7 +388,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 95
     const-string v7, "http://ns.adobe.com/xap/1.0/"
 
     const-string v8, "Format"
@@ -463,7 +402,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 96
     const-string v7, "http://ns.adobe.com/xap/1.0/"
 
     const-string v8, "Keywords"
@@ -478,7 +416,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 97
     const-string v7, "http://ns.adobe.com/xap/1.0/"
 
     const-string v8, "Locale"
@@ -493,7 +430,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 98
     const-string v7, "http://ns.adobe.com/xap/1.0/"
 
     const-string v8, "Title"
@@ -508,7 +444,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 99
     const-string v7, "http://ns.adobe.com/xap/1.0/rights/"
 
     const-string v8, "Copyright"
@@ -523,7 +458,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 100
     const-string v1, "http://ns.adobe.com/pdf/1.3/"
 
     const-string v2, "Author"
@@ -536,7 +470,6 @@
 
     invoke-direct/range {v0 .. v5}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 101
     const-string v7, "http://ns.adobe.com/pdf/1.3/"
 
     const-string v8, "BaseURL"
@@ -551,7 +484,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 102
     const-string v7, "http://ns.adobe.com/pdf/1.3/"
 
     const-string v8, "CreationDate"
@@ -566,7 +498,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 103
     const-string v7, "http://ns.adobe.com/pdf/1.3/"
 
     const-string v8, "Creator"
@@ -581,7 +512,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 104
     const-string v7, "http://ns.adobe.com/pdf/1.3/"
 
     const-string v8, "ModDate"
@@ -596,7 +526,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 105
     const-string v7, "http://ns.adobe.com/pdf/1.3/"
 
     const-string v8, "Subject"
@@ -611,7 +540,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 106
     const-string v7, "http://ns.adobe.com/pdf/1.3/"
 
     const-string v8, "Title"
@@ -626,7 +554,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 107
     const-string v1, "http://ns.adobe.com/photoshop/1.0/"
 
     const-string v2, "Author"
@@ -639,7 +566,6 @@
 
     invoke-direct/range {v0 .. v5}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 108
     const-string v7, "http://ns.adobe.com/photoshop/1.0/"
 
     const-string v8, "Caption"
@@ -654,7 +580,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 109
     const-string v7, "http://ns.adobe.com/photoshop/1.0/"
 
     const-string v8, "Copyright"
@@ -669,7 +594,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 110
     const-string v7, "http://ns.adobe.com/photoshop/1.0/"
 
     const-string v8, "Keywords"
@@ -684,7 +608,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 111
     const-string v7, "http://ns.adobe.com/photoshop/1.0/"
 
     const-string v8, "Marked"
@@ -699,7 +622,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 112
     const-string v7, "http://ns.adobe.com/photoshop/1.0/"
 
     const-string v8, "Title"
@@ -714,7 +636,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 113
     const-string v7, "http://ns.adobe.com/photoshop/1.0/"
 
     const-string v8, "WebStatement"
@@ -729,7 +650,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 114
     const-string v1, "http://ns.adobe.com/tiff/1.0/"
 
     const-string v2, "Artist"
@@ -742,7 +662,6 @@
 
     invoke-direct/range {v0 .. v5}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 115
     const-string v7, "http://ns.adobe.com/tiff/1.0/"
 
     const-string v8, "Copyright"
@@ -757,7 +676,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 116
     const-string v7, "http://ns.adobe.com/tiff/1.0/"
 
     const-string v8, "DateTime"
@@ -772,7 +690,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 117
     const-string v7, "http://ns.adobe.com/tiff/1.0/"
 
     const-string v8, "ImageDescription"
@@ -787,7 +704,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 118
     const-string v7, "http://ns.adobe.com/tiff/1.0/"
 
     const-string v8, "Software"
@@ -802,7 +718,6 @@
 
     invoke-direct/range {v6 .. v11}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 119
     const-string v1, "http://ns.adobe.com/png/1.0/"
 
     const-string v2, "Author"
@@ -815,7 +730,6 @@
 
     invoke-direct/range {v0 .. v5}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 120
     const-string v1, "http://ns.adobe.com/png/1.0/"
 
     const-string v2, "Copyright"
@@ -830,7 +744,6 @@
 
     invoke-direct/range {v0 .. v5}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 121
     const-string v1, "http://ns.adobe.com/png/1.0/"
 
     const-string v2, "CreationTime"
@@ -845,7 +758,6 @@
 
     invoke-direct/range {v0 .. v5}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 122
     const-string v1, "http://ns.adobe.com/png/1.0/"
 
     const-string v2, "Description"
@@ -860,7 +772,6 @@
 
     invoke-direct/range {v0 .. v5}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 123
     const-string v1, "http://ns.adobe.com/png/1.0/"
 
     const-string v2, "ModificationTime"
@@ -875,7 +786,6 @@
 
     invoke-direct/range {v0 .. v5}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 124
     const-string v1, "http://ns.adobe.com/png/1.0/"
 
     const-string v2, "Software"
@@ -890,7 +800,6 @@
 
     invoke-direct/range {v0 .. v5}, Lug;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 125
     const-string v1, "http://ns.adobe.com/png/1.0/"
 
     const-string v2, "Title"
@@ -907,10 +816,8 @@
     :try_end_0
     .catch Lub; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 126
     return-void
 
-    .line 128
     :catch_0
     move-exception v0
 
@@ -926,49 +833,37 @@
 .method private final declared-synchronized a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
     .locals 7
 
-    .prologue
-    .line 129
     monitor-enter p0
 
     :try_start_0
     invoke-static {p1}, Lkk;->l(Ljava/lang/String;)V
 
-    .line 130
     invoke-static {p2}, Lkk;->k(Ljava/lang/String;)V
 
-    .line 131
     invoke-static {p3}, Lkk;->l(Ljava/lang/String;)V
 
-    .line 132
     invoke-static {p4}, Lkk;->k(Ljava/lang/String;)V
 
-    .line 133
     if-eqz p5, :cond_1
 
-    .line 134
     new-instance v0, Lvd;
 
-    .line 135
     invoke-virtual {p5}, Lvd;->b()Lvh;
 
     move-result-object v1
 
     const/4 v2, 0x0
 
-    .line 136
     invoke-static {v1, v2}, Lid;->a(Lvh;Ljava/lang/Object;)Lvh;
 
     move-result-object v1
 
-    .line 137
     iget v1, v1, Lvf;->a:I
 
-    .line 138
     invoke-direct {v0, v1}, Lvd;-><init>(I)V
 
     move-object v2, v0
 
-    .line 140
     :goto_0
     iget-object v0, p0, Lug;->d:Ljava/util/regex/Pattern;
 
@@ -994,7 +889,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 141
     :cond_0
     new-instance v0, Lub;
 
@@ -1008,7 +902,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 129
     :catchall_0
     move-exception v0
 
@@ -1016,7 +909,6 @@
 
     throw v0
 
-    .line 139
     :cond_1
     :try_start_1
     new-instance v0, Lvd;
@@ -1027,21 +919,17 @@
 
     goto :goto_0
 
-    .line 142
     :cond_2
     invoke-virtual {p0, p1}, Lug;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 143
     invoke-virtual {p0, p3}, Lug;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 144
     if-nez v0, :cond_3
 
-    .line 145
     new-instance v0, Lub;
 
     const-string v1, "Alias namespace is not registered"
@@ -1052,11 +940,9 @@
 
     throw v0
 
-    .line 146
     :cond_3
     if-nez v3, :cond_4
 
-    .line 147
     new-instance v0, Lub;
 
     const-string v1, "Actual namespace is not registered"
@@ -1067,7 +953,6 @@
 
     throw v0
 
-    .line 148
     :cond_4
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1089,7 +974,6 @@
 
     move-object v1, v0
 
-    .line 149
     :goto_1
     iget-object v0, p0, Lug;->c:Ljava/util/Map;
 
@@ -1099,7 +983,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 150
     new-instance v0, Lub;
 
     const-string v1, "Alias is already existing"
@@ -1110,7 +993,6 @@
 
     throw v0
 
-    .line 148
     :cond_5
     new-instance v0, Ljava/lang/String;
 
@@ -1120,7 +1002,6 @@
 
     goto :goto_1
 
-    .line 151
     :cond_6
     iget-object v4, p0, Lug;->c:Ljava/util/Map;
 
@@ -1149,7 +1030,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 152
     new-instance v0, Lub;
 
     const-string v1, "Actual property is already an alias, use the base property"
@@ -1160,7 +1040,6 @@
 
     throw v0
 
-    .line 151
     :cond_7
     new-instance v0, Ljava/lang/String;
 
@@ -1168,20 +1047,17 @@
 
     goto :goto_2
 
-    .line 153
     :cond_8
     new-instance v0, Luy;
 
     invoke-direct {v0, p3, v3, p4, v2}, Luy;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lvd;)V
 
-    .line 154
     iget-object v2, p0, Lug;->c:Ljava/util/Map;
 
     invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 155
     monitor-exit p0
 
     return-void
@@ -1192,8 +1068,6 @@
 .method public final declared-synchronized a(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 25
     monitor-enter p0
 
     :try_start_0
@@ -1222,14 +1096,11 @@
 .method public final declared-synchronized a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 1
     monitor-enter p0
 
     :try_start_0
     invoke-static {p1}, Lkk;->l(Ljava/lang/String;)V
 
-    .line 3
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Ljava/lang/String;->length()I
@@ -1238,7 +1109,6 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     :cond_0
     new-instance v0, Lub;
 
@@ -1252,7 +1122,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1
     :catchall_0
     move-exception v0
 
@@ -1260,7 +1129,6 @@
 
     throw v0
 
-    .line 5
     :cond_1
     :try_start_1
     invoke-virtual {p2}, Ljava/lang/String;->length()I
@@ -1277,7 +1145,6 @@
 
     if-eq v0, v1, :cond_6
 
-    .line 6
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -1310,18 +1177,15 @@
 
     move-result-object v2
 
-    .line 7
     :goto_0
     const/4 v0, 0x0
 
-    .line 8
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v1
 
     add-int/lit8 v1, v1, -0x1
 
-    .line 9
     invoke-virtual {v2, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
@@ -1332,7 +1196,6 @@
 
     if-nez v0, :cond_2
 
-    .line 10
     new-instance v0, Lub;
 
     const-string v1, "The prefix is a bad XML name"
@@ -1343,7 +1206,6 @@
 
     throw v0
 
-    .line 11
     :cond_2
     iget-object v0, p0, Lug;->a:Ljava/util/Map;
 
@@ -1353,7 +1215,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 12
     iget-object v1, p0, Lug;->b:Ljava/util/Map;
 
     invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1364,20 +1225,16 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 13
     if-eqz v0, :cond_3
 
-    .line 24
     :goto_1
     monitor-exit p0
 
     return-object v0
 
-    .line 15
     :cond_3
     if-eqz v1, :cond_4
 
-    .line 17
     const/4 v0, 0x1
 
     move v1, v0
@@ -1394,10 +1251,8 @@
 
     if-eqz v3, :cond_5
 
-    .line 18
     const/4 v0, 0x0
 
-    .line 19
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
     move-result v3
@@ -1446,7 +1301,6 @@
 
     move-result-object v3
 
-    .line 20
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
@@ -1458,13 +1312,11 @@
     :cond_4
     move-object v0, v2
 
-    .line 22
     :cond_5
     iget-object v1, p0, Lug;->b:Ljava/util/Map;
 
     invoke-interface {v1, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 23
     iget-object v1, p0, Lug;->a:Ljava/util/Map;
 
     invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -1482,8 +1334,6 @@
 .method public final declared-synchronized b(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 26
     monitor-enter p0
 
     if-eqz p1, :cond_0
@@ -1497,7 +1347,6 @@
 
     if-nez v0, :cond_0
 
-    .line 27
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -1508,7 +1357,6 @@
 
     move-result-object p1
 
-    .line 28
     :cond_0
     iget-object v0, p0, Lug;->b:Ljava/util/Map;
 
@@ -1524,7 +1372,6 @@
 
     return-object v0
 
-    .line 26
     :catchall_0
     move-exception v0
 
@@ -1536,8 +1383,6 @@
 .method public final declared-synchronized c(Ljava/lang/String;)Lvj;
     .locals 1
 
-    .prologue
-    .line 29
     monitor-enter p0
 
     :try_start_0

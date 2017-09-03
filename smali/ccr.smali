@@ -11,9 +11,6 @@
 .method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;Ljava/lang/String;Landroid/net/Uri;ZLhja;JLfra;J)V
     .locals 21
 
-    .prologue
-    .line 1
-    .line 2
     invoke-static/range {p10 .. p10}, Lilc;->b(Ljava/lang/Object;)Lilc;
 
     move-result-object v15
@@ -44,16 +41,13 @@
 
     move-object/from16 v19, p13
 
-    .line 3
     invoke-direct/range {v5 .. v20}, Lfqy;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;Ljava/lang/String;Landroid/net/Uri;ZLilc;JILfra;Z)V
 
-    .line 4
     move-wide/from16 v0, p14
 
     move-object/from16 v2, p0
 
     iput-wide v0, v2, Lccr;->a:J
 
-    .line 5
     return-void
 .end method

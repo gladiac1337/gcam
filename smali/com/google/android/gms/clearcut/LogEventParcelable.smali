@@ -194,8 +194,6 @@
 .method public hashCode()I
     .locals 3
 
-    .prologue
-    .line 1
     const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -246,22 +244,18 @@
 
     aput-object v2, v0, v1
 
-    .line 2
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 3
     return v0
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 4
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v0, "LogEventParcelable["
@@ -303,7 +297,6 @@
 
     move-object v0, v1
 
-    .line 8
     :goto_1
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -339,7 +332,6 @@
 
     return-object v0
 
-    .line 4
     :cond_0
     new-instance v0, Ljava/lang/String;
 
@@ -352,12 +344,10 @@
     :cond_1
     const-string v0, ", "
 
-    .line 5
     new-instance v3, Lgyz;
 
     invoke-direct {v3, v0}, Lgyz;-><init>(Ljava/lang/String;)V
 
-    .line 6
     const/4 v0, 0x1
 
     new-array v0, v0, [[I
@@ -372,7 +362,6 @@
 
     move-result-object v0
 
-    .line 7
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -391,16 +380,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 9
-    .line 11
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lkk;->l(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 12
     const/4 v1, 0x1
 
     iget v2, p0, Lcom/google/android/gms/clearcut/LogEventParcelable;->e:I
@@ -421,7 +406,6 @@
 
     iget-object v1, p0, Lcom/google/android/gms/clearcut/LogEventParcelable;->g:[I
 
-    .line 13
     if-eqz v1, :cond_0
 
     const/4 v2, 0x4
@@ -434,10 +418,8 @@
 
     invoke-static {p1, v2}, Lkk;->m(Landroid/os/Parcel;I)V
 
-    .line 15
     :cond_0
     invoke-static {p1, v0}, Lkk;->m(Landroid/os/Parcel;I)V
 
-    .line 16
     return-void
 .end method

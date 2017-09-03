@@ -18,8 +18,6 @@
 .method constructor <init>(Lxy;Lxr;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lyd;->c:Lxy;
 
     iput-object p2, p0, Lyd;->a:Lxr;
@@ -36,20 +34,15 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lyd;->c:Lxy;
 
-    .line 3
     iget-object v0, v0, Lxy;->a:Lxx;
 
-    .line 4
     iget-object v1, p0, Lyd;->a:Lxr;
 
     iget-object v2, p0, Lyd;->b:Ljava/lang/String;
 
     invoke-interface {v0, v1, v2}, Lxx;->a(Lxr;Ljava/lang/String;)V
 
-    .line 5
     return-void
 .end method

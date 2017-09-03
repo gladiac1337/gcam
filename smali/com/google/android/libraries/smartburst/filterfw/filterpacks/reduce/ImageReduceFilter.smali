@@ -57,71 +57,56 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/Filter;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
 
-    .line 2
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mLevel:I
 
-    .line 3
     iput v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mCurrentWidth:I
 
-    .line 4
     iput v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mCurrentHeight:I
 
-    .line 5
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mOperation:I
 
-    .line 6
     const/16 v0, 0x8
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mChannel:I
 
-    .line 7
     iput-boolean v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mShaderDirtyFlag:Z
 
-    .line 8
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
-    .line 9
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mPyramid:Ljava/util/Vector;
 
-    .line 10
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$1;
 
     invoke-direct {v0, p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$1;-><init>(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;)V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mOperationListener:Lcom/google/android/libraries/smartburst/filterfw/InputPort$FrameListener;
 
-    .line 11
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$2;
 
     invoke-direct {v0, p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$2;-><init>(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;)V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mChannelListener:Lcom/google/android/libraries/smartburst/filterfw/InputPort$FrameListener;
 
-    .line 12
     return-void
 .end method
 
 .method static synthetic access$100(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;)I
     .locals 1
 
-    .prologue
-    .line 116
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mOperation:I
 
     return v0
@@ -130,8 +115,6 @@
 .method static synthetic access$102(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;I)I
     .locals 0
 
-    .prologue
-    .line 117
     iput p1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mOperation:I
 
     return p1
@@ -140,8 +123,6 @@
 .method static synthetic access$202(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;Z)Z
     .locals 0
 
-    .prologue
-    .line 118
     iput-boolean p1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mShaderDirtyFlag:Z
 
     return p1
@@ -150,8 +131,6 @@
 .method static synthetic access$300(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;)I
     .locals 1
 
-    .prologue
-    .line 119
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mChannel:I
 
     return v0
@@ -160,8 +139,6 @@
 .method static synthetic access$302(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;I)I
     .locals 0
 
-    .prologue
-    .line 120
     iput p1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mChannel:I
 
     return p1
@@ -170,13 +147,10 @@
 .method private genColorToValueAlgorithm()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 106
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mChannel:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 115
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mChannel:I
@@ -211,57 +185,47 @@
 
     throw v0
 
-    .line 107
     :pswitch_0
     const-string v0, "color.r"
 
-    .line 114
     :goto_0
     return-object v0
 
-    .line 108
     :pswitch_1
     const-string v0, "color.g"
 
     goto :goto_0
 
-    .line 109
     :pswitch_2
     const-string v0, "color.b"
 
     goto :goto_0
 
-    .line 110
     :pswitch_3
     const-string v0, "(color.r + color.g + color.b) / 3.0"
 
     goto :goto_0
 
-    .line 111
     :pswitch_4
     const-string v0, "(color.r + color.g + color.b)"
 
     goto :goto_0
 
-    .line 112
     :pswitch_5
     const-string v0, "min(color.r, min(color.g, color.b))"
 
     goto :goto_0
 
-    .line 113
     :pswitch_6
     const-string v0, "max(color.r, max(color.g, color.b))"
 
     goto :goto_0
 
-    .line 114
     :pswitch_7
     const-string v0, "dot(color, vec4(0.299, 0.587, 0.114, 0))"
 
     goto :goto_0
 
-    .line 106
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -278,14 +242,10 @@
 .method private genFragmentShader()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 95
-    .line 96
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->genReduceAlgorithm()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 97
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->genColorToValueAlgorithm()Ljava/lang/String;
 
     move-result-object v1
@@ -344,20 +304,16 @@
 
     move-result-object v0
 
-    .line 98
     return-object v0
 .end method
 
 .method private genReduceAlgorithm()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 99
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mOperation:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 105
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mOperation:I
@@ -392,39 +348,32 @@
 
     throw v0
 
-    .line 100
     :pswitch_0
     const-string v0, "max(max(v0, v1), max(v2, v3))"
 
-    .line 104
     :goto_0
     return-object v0
 
-    .line 101
     :pswitch_1
     const-string v0, "min(min(v0, v1), min(v2, v3))"
 
     goto :goto_0
 
-    .line 102
     :pswitch_2
     const-string v0, "(v0 + v1 + v2 + v3) / 4.0"
 
     goto :goto_0
 
-    .line 103
     :pswitch_3
     const-string v0, "(v0 + v1 + v2 + v3)"
 
     goto :goto_0
 
-    .line 104
     :pswitch_4
     const-string v0, "(v0 * v1 * v2 * v3)"
 
     goto :goto_0
 
-    .line 99
     nop
 
     :pswitch_data_0
@@ -440,15 +389,11 @@
 .method private getPyramidLevel(ILcom/google/android/libraries/smartburst/filterfw/FrameImage2D;Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;
     .locals 1
 
-    .prologue
-    .line 66
     if-nez p1, :cond_0
 
-    .line 70
     :goto_0
     return-object p2
 
-    .line 68
     :cond_0
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mLevel:I
 
@@ -456,10 +401,8 @@
 
     move-object p2, p3
 
-    .line 69
     goto :goto_0
 
-    .line 70
     :cond_1
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mPyramid:Ljava/util/Vector;
 
@@ -477,8 +420,6 @@
 .method private regenerateImagePyramid()V
     .locals 5
 
-    .prologue
-    .line 83
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mPyramid:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
@@ -498,18 +439,15 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;
 
-    .line 84
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->release()Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
     goto :goto_0
 
-    .line 86
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mPyramid:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->clear()V
 
-    .line 87
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mCurrentWidth:I
 
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mCurrentHeight:I
@@ -518,7 +456,6 @@
 
     move-result-object v1
 
-    .line 88
     const/16 v0, 0x12d
 
     const/16 v2, 0x12
@@ -527,7 +464,6 @@
 
     move-result-object v2
 
-    .line 89
     const/4 v0, 0x0
 
     :goto_1
@@ -535,14 +471,12 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 90
     aget-object v3, v1, v0
 
     invoke-virtual {v3}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$PyramidLevel;->getDimensions()[I
 
     move-result-object v3
 
-    .line 91
     invoke-static {v2, v3}, Lcom/google/android/libraries/smartburst/filterfw/Frame;->create(Lcom/google/android/libraries/smartburst/filterfw/FrameType;[I)Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
     move-result-object v3
@@ -551,17 +485,14 @@
 
     move-result-object v3
 
-    .line 92
     iget-object v4, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mPyramid:Ljava/util/Vector;
 
     invoke-virtual {v4, v3}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 93
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 94
     :cond_1
     return-void
 .end method
@@ -569,8 +500,6 @@
 .method private regnerateShader()V
     .locals 2
 
-    .prologue
-    .line 81
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->genFragmentShader()Ljava/lang/String;
@@ -581,14 +510,12 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
-    .line 82
     return-void
 .end method
 
 .method private runReduce(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)V
     .locals 9
 
-    .prologue
     const/high16 v8, 0x40000000    # 2.0f
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -597,42 +524,34 @@
 
     const/4 v6, 0x0
 
-    .line 71
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->getWidth()I
 
     move-result v2
 
-    .line 72
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->getHeight()I
 
     move-result v3
 
-    .line 73
     invoke-virtual {p2}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->getWidth()I
 
     move-result v1
 
-    .line 74
     invoke-virtual {p2}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->getHeight()I
 
     move-result v4
 
-    .line 75
     if-ne v1, v2, :cond_0
 
     move v1, v0
 
-    .line 76
     :goto_0
     if-ne v4, v3, :cond_1
 
-    .line 77
     :goto_1
     iget-object v4, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     invoke-virtual {v4, v6, v6, v1, v0}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->setSourceRect(FFFF)V
 
-    .line 78
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     const-string v1, "pix"
@@ -659,15 +578,12 @@
 
     invoke-virtual {v0, v1, v4}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->setUniformValue(Ljava/lang/String;[F)V
 
-    .line 79
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     invoke-virtual {v0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->process(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)V
 
-    .line 80
     return-void
 
-    .line 75
     :cond_0
     int-to-float v1, v1
 
@@ -679,7 +595,6 @@
 
     goto :goto_0
 
-    .line 76
     :cond_1
     int-to-float v0, v4
 
@@ -697,17 +612,14 @@
 .method public getPyramidDims(II)[Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$PyramidLevel;
     .locals 7
 
-    .prologue
     const/4 v6, 0x0
 
     const/4 v1, 0x1
 
-    .line 13
     if-lez p1, :cond_0
 
     if-gtz p2, :cond_1
 
-    .line 14
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -751,13 +663,11 @@
 
     throw v0
 
-    .line 15
     :cond_1
     new-instance v4, Ljava/util/Vector;
 
     invoke-direct {v4}, Ljava/util/Vector;-><init>()V
 
-    .line 16
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$PyramidLevel;
 
     const/4 v2, 0x0
@@ -768,11 +678,9 @@
 
     move v0, v1
 
-    .line 18
     :goto_0
     invoke-virtual {v4, v2}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    .line 19
     invoke-virtual {v2}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$PyramidLevel;->getWidth()I
 
     move-result v3
@@ -785,7 +693,6 @@
 
     if-eq v3, v1, :cond_3
 
-    .line 20
     :cond_2
     new-instance v3, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$PyramidLevel;
 
@@ -797,7 +704,6 @@
 
     div-int/lit8 v5, v5, 0x2
 
-    .line 21
     invoke-virtual {v2}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$PyramidLevel;->getHeight()I
 
     move-result v2
@@ -808,14 +714,12 @@
 
     invoke-direct {v3, v0, v5, v2, v6}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$PyramidLevel;-><init>(IIILcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$1;)V
 
-    .line 22
     add-int/lit8 v0, v0, 0x1
 
     move-object v2, v3
 
     goto :goto_0
 
-    .line 23
     :cond_3
     invoke-virtual {v4}, Ljava/util/Vector;->size()I
 
@@ -835,33 +739,28 @@
 .method public getSignature()Lcom/google/android/libraries/smartburst/filterfw/Signature;
     .locals 6
 
-    .prologue
     const/16 v2, 0x12d
 
     const/4 v5, 0x2
 
     const/4 v4, 0x1
 
-    .line 24
     invoke-static {v2, v5}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->image2D(II)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v0
 
-    .line 25
     const/16 v1, 0x10
 
     invoke-static {v2, v1}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->image2D(II)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v1
 
-    .line 26
     new-instance v2, Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     invoke-direct {v2}, Lcom/google/android/libraries/smartburst/filterfw/Signature;-><init>()V
 
     const-string v3, "image"
 
-    .line 27
     invoke-virtual {v2, v3, v5, v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addInputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
@@ -870,7 +769,6 @@
 
     sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    .line 28
     invoke-static {v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->single(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v3
@@ -883,7 +781,6 @@
 
     sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    .line 29
     invoke-static {v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->single(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v3
@@ -896,7 +793,6 @@
 
     sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    .line 30
     invoke-static {v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->single(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v3
@@ -907,27 +803,22 @@
 
     const-string v2, "image"
 
-    .line 31
     invoke-virtual {v0, v2, v5, v1}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addOutputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 32
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->disallowOtherPorts()Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 33
     return-object v0
 .end method
 
 .method protected onInputPortOpen(Lcom/google/android/libraries/smartburst/filterfw/InputPort;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 34
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -940,20 +831,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 35
     const-string v0, "mLevel"
 
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->bindToFieldNamed(Ljava/lang/String;)V
 
-    .line 36
     invoke-virtual {p1, v2}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->setAutoPullEnabled(Z)V
 
-    .line 43
     :cond_0
     :goto_0
     return-void
 
-    .line 37
     :cond_1
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->getName()Ljava/lang/String;
 
@@ -967,17 +854,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 38
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mOperationListener:Lcom/google/android/libraries/smartburst/filterfw/InputPort$FrameListener;
 
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->bindToListener(Lcom/google/android/libraries/smartburst/filterfw/InputPort$FrameListener;)V
 
-    .line 39
     invoke-virtual {p1, v2}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->setAutoPullEnabled(Z)V
 
     goto :goto_0
 
-    .line 40
     :cond_2
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->getName()Ljava/lang/String;
 
@@ -991,12 +875,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 41
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mChannelListener:Lcom/google/android/libraries/smartburst/filterfw/InputPort$FrameListener;
 
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->bindToListener(Lcom/google/android/libraries/smartburst/filterfw/InputPort$FrameListener;)V
 
-    .line 42
     invoke-virtual {p1, v2}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->setAutoPullEnabled(Z)V
 
     goto :goto_0
@@ -1005,32 +887,26 @@
 .method protected onOpen()V
     .locals 1
 
-    .prologue
-    .line 44
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mShaderDirtyFlag:Z
 
-    .line 45
     return-void
 .end method
 
 .method protected onProcess()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
     const/4 v1, 0x0
 
-    .line 46
     const-string v0, "image"
 
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->getConnectedOutputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/OutputPort;
 
     move-result-object v2
 
-    .line 47
     const-string v0, "image"
 
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->getConnectedInputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/InputPort;
@@ -1045,23 +921,18 @@
 
     move-result-object v3
 
-    .line 48
     invoke-virtual {v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->getDimensions()[I
 
     move-result-object v0
 
-    .line 49
     iget-boolean v4, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mShaderDirtyFlag:Z
 
     if-eqz v4, :cond_0
 
-    .line 50
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->regnerateShader()V
 
-    .line 51
     iput-boolean v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mShaderDirtyFlag:Z
 
-    .line 52
     :cond_0
     aget v4, v0, v1
 
@@ -1075,21 +946,17 @@
 
     if-eq v4, v5, :cond_2
 
-    .line 53
     :cond_1
     aget v4, v0, v1
 
     iput v4, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mCurrentWidth:I
 
-    .line 54
     aget v0, v0, v6
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mCurrentHeight:I
 
-    .line 55
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->regenerateImagePyramid()V
 
-    .line 56
     :cond_2
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mLevel:I
 
@@ -1116,7 +983,6 @@
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mLevel:I
 
-    .line 57
     :cond_4
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mPyramid:Ljava/util/Vector;
 
@@ -1132,7 +998,6 @@
 
     move-result-object v0
 
-    .line 58
     invoke-virtual {v2, v0}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->fetchAvailableFrame([I)Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
     move-result-object v0
@@ -1143,33 +1008,27 @@
 
     move v0, v1
 
-    .line 59
     :goto_0
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mLevel:I
 
     if-ge v0, v1, :cond_5
 
-    .line 60
     invoke-direct {p0, v0, v3, v4}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->getPyramidLevel(ILcom/google/android/libraries/smartburst/filterfw/FrameImage2D;Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;
 
     move-result-object v1
 
     add-int/lit8 v5, v0, 0x1
 
-    .line 61
     invoke-direct {p0, v5, v3, v4}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->getPyramidLevel(ILcom/google/android/libraries/smartburst/filterfw/FrameImage2D;Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;
 
     move-result-object v5
 
-    .line 62
     invoke-direct {p0, v1, v5}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->runReduce(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)V
 
-    .line 63
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 64
     :cond_5
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter;->mLevel:I
 
@@ -1179,6 +1038,5 @@
 
     invoke-virtual {v2, v0}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->pushFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;)V
 
-    .line 65
     return-void
 .end method

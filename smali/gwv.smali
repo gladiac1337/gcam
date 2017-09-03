@@ -12,14 +12,10 @@
 .method public constructor <init>(Lgws;Ljava/util/Map;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgwv;->a:Lgws;
 
-    .line 2
     invoke-direct {p0, p1}, Lgxb;-><init>(Lgws;)V
 
-    .line 3
     iput-object p2, p0, Lgwv;->b:Ljava/util/Map;
 
     return-void
@@ -30,14 +26,10 @@
 .method public final a()V
     .locals 4
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lgwv;->a:Lgws;
 
-    .line 5
     iget-object v0, v0, Lgws;->c:Landroid/content/Context;
 
-    .line 6
     invoke-static {v0}, Lgvj;->a(Landroid/content/Context;)I
 
     move-result v0
@@ -52,10 +44,8 @@
 
     iget-object v0, p0, Lgwv;->a:Lgws;
 
-    .line 7
     iget-object v0, v0, Lgws;->a:Lgxk;
 
-    .line 8
     new-instance v2, Lgww;
 
     iget-object v3, p0, Lgwv;->a:Lgws;
@@ -64,26 +54,20 @@
 
     invoke-virtual {v0, v2}, Lgxk;->a(Lgxl;)V
 
-    .line 12
     :cond_0
     return-void
 
-    .line 8
     :cond_1
     iget-object v0, p0, Lgwv;->a:Lgws;
 
-    .line 9
     iget-boolean v0, v0, Lgws;->e:Z
 
-    .line 10
     if-eqz v0, :cond_2
 
     iget-object v0, p0, Lgwv;->a:Lgws;
 
-    .line 11
     iget-object v0, v0, Lgws;->d:Lhcq;
 
-    .line 12
     invoke-interface {v0}, Lhcq;->h()V
 
     :cond_2

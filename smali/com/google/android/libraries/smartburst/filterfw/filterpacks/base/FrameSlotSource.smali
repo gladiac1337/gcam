@@ -7,11 +7,8 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Lcom/google/android/libraries/smartburst/filterfw/SlotFilter;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     return-void
 .end method
 
@@ -20,8 +17,6 @@
 .method protected final canSchedule()Z
     .locals 1
 
-    .prologue
-    .line 7
     invoke-super {p0}, Lcom/google/android/libraries/smartburst/filterfw/SlotFilter;->canSchedule()Z
 
     move-result v0
@@ -48,8 +43,6 @@
 .method public final getSignature()Lcom/google/android/libraries/smartburst/filterfw/Signature;
     .locals 4
 
-    .prologue
-    .line 3
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     invoke-direct {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;-><init>()V
@@ -58,7 +51,6 @@
 
     const/4 v2, 0x2
 
-    .line 4
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->any()Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v3
@@ -67,20 +59,16 @@
 
     move-result-object v0
 
-    .line 5
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->disallowOtherPorts()Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 6
     return-object v0
 .end method
 
 .method protected final onProcess()V
     .locals 2
 
-    .prologue
-    .line 8
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/FrameSlotSource;->getFrameManager()Lcom/google/android/libraries/smartburst/filterfw/FrameManager;
 
     move-result-object v0
@@ -91,7 +79,6 @@
 
     move-result-object v0
 
-    .line 9
     const-string v1, "frame"
 
     invoke-virtual {p0, v1}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/FrameSlotSource;->getConnectedOutputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/OutputPort;
@@ -100,9 +87,7 @@
 
     invoke-virtual {v1, v0}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->pushFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;)V
 
-    .line 10
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Frame;->release()Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
-    .line 11
     return-void
 .end method

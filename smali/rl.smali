@@ -15,34 +15,26 @@
 .method private constructor <init>(Lry;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/high16 v0, -0x80000000
 
     iput v0, p0, Lrl;->b:I
 
-    .line 3
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lrl;->c:Landroid/graphics/Rect;
 
-    .line 4
     iput-object p1, p0, Lrl;->a:Lry;
 
-    .line 5
     return-void
 .end method
 
 .method synthetic constructor <init>(Lry;B)V
     .locals 0
 
-    .prologue
-    .line 7
     invoke-direct {p0, p1}, Lrl;-><init>(Lry;)V
 
     return-void
@@ -53,8 +45,6 @@
 .method public final a()I
     .locals 2
 
-    .prologue
-    .line 6
     const/high16 v0, -0x80000000
 
     iget v1, p0, Lrl;->b:I

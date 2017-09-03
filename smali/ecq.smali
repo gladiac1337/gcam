@@ -28,43 +28,30 @@
 .method private constructor <init>(Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lecq;->a:Lilp;
 
-    .line 3
     iput-object p2, p0, Lecq;->b:Lilp;
 
-    .line 4
     iput-object p3, p0, Lecq;->c:Lilp;
 
-    .line 5
     iput-object p4, p0, Lecq;->d:Lilp;
 
-    .line 6
     iput-object p5, p0, Lecq;->e:Lilp;
 
-    .line 7
     iput-object p6, p0, Lecq;->f:Lilp;
 
-    .line 8
     iput-object p7, p0, Lecq;->g:Lilp;
 
-    .line 9
     iput-object p8, p0, Lecq;->h:Lilp;
 
-    .line 10
     return-void
 .end method
 
 .method public static a(Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;)Lilp;
     .locals 9
 
-    .prologue
-    .line 11
     new-instance v0, Lecq;
 
     move-object v1, p0
@@ -93,14 +80,10 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 11
 
-    .prologue
     const/4 v4, 0x1
 
-    .line 12
-    .line 13
     iget-object v0, p0, Lecq;->a:Lilp;
 
-    .line 14
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -109,7 +92,6 @@
 
     iget-object v0, p0, Lecq;->b:Lilp;
 
-    .line 15
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -120,7 +102,6 @@
 
     iget-object v0, p0, Lecq;->c:Lilp;
 
-    .line 16
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v5
@@ -129,7 +110,6 @@
 
     iget-object v0, p0, Lecq;->d:Lilp;
 
-    .line 17
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -138,7 +118,6 @@
 
     iget-object v0, p0, Lecq;->e:Lilp;
 
-    .line 18
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v7
@@ -147,7 +126,6 @@
 
     iget-object v0, p0, Lecq;->f:Lilp;
 
-    .line 19
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v8
@@ -156,7 +134,6 @@
 
     iget-object v0, p0, Lecq;->g:Lilp;
 
-    .line 20
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -167,18 +144,14 @@
 
     iget-object v0, p0, Lecq;->h:Lilp;
 
-    .line 21
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
-    .line 23
     new-instance v0, Lebc;
 
-    .line 24
     invoke-interface {v3}, Lfsq;->f()Z
 
     move-result v2
 
-    .line 25
     invoke-interface {v3}, Lfsq;->b()Lhmr;
 
     move-result-object v3
@@ -189,27 +162,21 @@
 
     move v3, v4
 
-    .line 26
     :goto_0
     iget-object v9, v9, Lebl;->a:Latr;
 
-    .line 27
     invoke-direct/range {v0 .. v9}, Lebc;-><init>(Lcom/google/android/apps/camera/config/GservicesHelper;ZZZLavm;Lavm;Lavm;Lavm;Lavm;)V
 
-    .line 28
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 29
     invoke-static {v0, v1}, Ldt;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lavm;
 
-    .line 30
     return-object v0
 
-    .line 25
     :cond_0
     const/4 v3, 0x0
 

@@ -28,8 +28,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 50
     const-string v0, "SesnStorageMgrImpl"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -44,54 +42,44 @@
 .method private constructor <init>(Ljava/io/File;Ljava/io/File;Lgjc;)V
     .locals 1
 
-    .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     invoke-static {p1}, Lilc;->c(Ljava/lang/Object;)Lilc;
 
     move-result-object v0
 
     iput-object v0, p0, Leje;->b:Lilc;
 
-    .line 6
     invoke-static {p2}, Lilc;->c(Ljava/lang/Object;)Lilc;
 
     move-result-object v0
 
     iput-object v0, p0, Leje;->c:Lilc;
 
-    .line 7
     invoke-static {p3}, Lilc;->c(Ljava/lang/Object;)Lilc;
 
     move-result-object v0
 
     iput-object v0, p0, Leje;->d:Lilc;
 
-    .line 8
     return-void
 .end method
 
 .method public static a(Landroid/content/Context;Lgjc;)Lejd;
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 1
     invoke-static {}, Landroid/os/Environment;->isExternalStorageEmulated()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0, v2}, Landroid/content/Context;->getExternalFilesDir(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 3
     :goto_0
     new-instance v1, Leje;
 
@@ -103,7 +91,6 @@
 
     return-object v1
 
-    .line 2
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getNoBackupFilesDir()Ljava/io/File;
 
@@ -115,31 +102,24 @@
 .method private final a(Ljava/io/File;)V
     .locals 12
 
-    .prologue
-    .line 36
     new-instance v0, Lejf;
 
     invoke-direct {v0}, Lejf;-><init>()V
 
-    .line 37
     invoke-virtual {p1, v0}, Ljava/io/File;->listFiles(Ljava/io/FileFilter;)[Ljava/io/File;
 
     move-result-object v2
 
-    .line 38
     if-nez v2, :cond_1
 
-    .line 49
     :cond_0
     return-void
 
-    .line 40
     :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 41
     array-length v3, v2
 
     const/4 v0, 0x0
@@ -151,7 +131,6 @@
 
     aget-object v6, v2, v1
 
-    .line 42
     sget-object v7, Leje;->a:Ljava/lang/String;
 
     const-string v8, "Check for potential clean-up: "
@@ -177,7 +156,6 @@
     :goto_1
     invoke-static {v7, v0}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 43
     invoke-virtual {v6}, Ljava/io/File;->lastModified()J
 
     move-result-wide v8
@@ -190,7 +168,6 @@
 
     if-gez v0, :cond_2
 
-    .line 44
     :try_start_0
     iget-object v0, p0, Leje;->d:Lilc;
 
@@ -204,7 +181,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 48
     :cond_2
     :goto_2
     add-int/lit8 v0, v1, 0x1
@@ -213,7 +189,6 @@
 
     goto :goto_0
 
-    .line 42
     :cond_3
     new-instance v0, Ljava/lang/String;
 
@@ -221,7 +196,6 @@
 
     goto :goto_1
 
-    .line 47
     :catch_0
     move-exception v0
 
@@ -265,8 +239,6 @@
 .method public final a(Ljava/lang/String;)Ljava/io/File;
     .locals 4
 
-    .prologue
-    .line 9
     new-instance v1, Ljava/io/File;
 
     iget-object v0, p0, Leje;->b:Lilc;
@@ -279,7 +251,6 @@
 
     invoke-direct {v1, v0, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 10
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -292,7 +263,6 @@
 
     if-nez v0, :cond_0
 
-    .line 11
     new-instance v0, Ljava/io/IOException;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -331,7 +301,6 @@
 
     throw v0
 
-    .line 12
     :cond_0
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
@@ -339,7 +308,6 @@
 
     if-nez v0, :cond_1
 
-    .line 13
     new-instance v0, Ljava/io/IOException;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -378,11 +346,9 @@
 
     throw v0
 
-    .line 14
     :cond_1
     invoke-direct {p0, v1}, Leje;->a(Ljava/io/File;)V
 
-    .line 15
     new-instance v2, Ljava/io/File;
 
     iget-object v0, p0, Leje;->c:Lilc;
@@ -395,18 +361,14 @@
 
     invoke-direct {v2, v0, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 16
     invoke-direct {p0, v2}, Leje;->a(Ljava/io/File;)V
 
-    .line 17
     return-object v1
 .end method
 
 .method public final a(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
     .locals 4
 
-    .prologue
-    .line 18
     :try_start_0
     new-instance v0, Ljava/io/File;
 
@@ -418,14 +380,12 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 23
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 24
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "Could not create output data directory."
@@ -434,18 +394,15 @@
 
     throw v0
 
-    .line 20
     :catch_0
     move-exception v0
 
-    .line 21
     sget-object v1, Leje;->a:Ljava/lang/String;
 
     const-string v2, "Could not get temp session directory"
 
     invoke-static {v1, v2, v0}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 22
     new-instance v1, Ljava/io/IOException;
 
     const-string v2, "Could not get temp session directory"
@@ -454,7 +411,6 @@
 
     throw v1
 
-    .line 25
     :cond_0
     new-instance v1, Ljava/io/File;
 
@@ -470,7 +426,6 @@
 
     invoke-direct {v1, v0, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 26
     :try_start_1
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -478,14 +433,12 @@
 
     if-nez v0, :cond_1
 
-    .line 27
     invoke-virtual {v1}, Ljava/io/File;->createNewFile()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 28
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "Could not create output data file."
@@ -496,18 +449,15 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 30
     :catch_1
     move-exception v0
 
-    .line 31
     sget-object v1, Leje;->a:Ljava/lang/String;
 
     const-string v2, "Could not create temp session file"
 
     invoke-static {v1, v2, v0}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 32
     new-instance v1, Ljava/io/IOException;
 
     const-string v2, "Could not create temp session file"
@@ -516,7 +466,6 @@
 
     throw v1
 
-    .line 33
     :cond_1
     invoke-virtual {v1}, Ljava/io/File;->canWrite()Z
 
@@ -524,7 +473,6 @@
 
     if-nez v0, :cond_2
 
-    .line 34
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "Temporary output file is not writeable."
@@ -533,7 +481,6 @@
 
     throw v0
 
-    .line 35
     :cond_2
     return-object v1
 .end method

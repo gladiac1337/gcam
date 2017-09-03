@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lijk;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method public final a(FFF)F
     .locals 1
 
-    .prologue
-    .line 2
     const/high16 v0, 0x3f000000    # 0.5f
 
     cmpg-float v0, p3, v0

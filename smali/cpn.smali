@@ -14,8 +14,6 @@
 .method constructor <init>(Lcoy;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcpn;->a:Lcoy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,11 +26,8 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 4
 
-    .prologue
-    .line 3
     check-cast p1, Ljava/lang/Long;
 
-    .line 4
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
@@ -43,15 +38,12 @@
 
     if-gez v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lcpn;->a:Lcoy;
 
-    .line 6
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcoy;->N:Z
 
-    .line 7
     :cond_0
     return-void
 .end method
@@ -59,7 +51,5 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 0
 
-    .prologue
-    .line 2
     return-void
 .end method

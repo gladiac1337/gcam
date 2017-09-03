@@ -28,8 +28,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,51 +36,42 @@
 .method private createMediaFormat(II)Landroid/media/MediaFormat;
     .locals 3
 
-    .prologue
-    .line 32
     const-string v0, "video/avc"
 
     invoke-static {v0, p1, p2}, Landroid/media/MediaFormat;->createVideoFormat(Ljava/lang/String;II)Landroid/media/MediaFormat;
 
     move-result-object v0
 
-    .line 33
     const-string v1, "color-format"
 
     const/16 v2, 0x15
 
     invoke-virtual {v0, v1, v2}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    .line 34
     const-string v1, "bitrate"
 
     const v2, 0x2dc6c0
 
     invoke-virtual {v0, v1, v2}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    .line 35
     const-string v1, "frame-rate"
 
     const/16 v2, 0x1e
 
     invoke-virtual {v0, v1, v2}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    .line 36
     const-string v1, "i-frame-interval"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    .line 37
     return-object v0
 .end method
 
 .method private createMediaMuxer(Ljava/lang/String;)Landroid/media/MediaMuxer;
     .locals 3
 
-    .prologue
-    .line 38
     :try_start_0
     new-instance v0, Landroid/media/MediaMuxer;
 
@@ -92,10 +81,8 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 39
     return-object v0
 
-    .line 41
     :catch_0
     move-exception v0
 
@@ -143,17 +130,12 @@
 .method private static encodeYUV420SP([B[III)V
     .locals 11
 
-    .prologue
-    .line 53
     mul-int v3, p2, p3
 
-    .line 54
     const/4 v2, 0x0
 
-    .line 56
     const/4 v1, 0x0
 
-    .line 57
     const/4 v0, 0x0
 
     move v8, v0
@@ -161,7 +143,6 @@
     :goto_0
     if-ge v8, p3, :cond_7
 
-    .line 58
     const/4 v0, 0x0
 
     move v4, v0
@@ -173,26 +154,22 @@
     :goto_1
     if-ge v4, p2, :cond_6
 
-    .line 59
     aget v0, p1, v5
 
     shr-int/lit8 v0, v0, 0x10
 
     and-int/lit16 v2, v0, 0xff
 
-    .line 60
     aget v0, p1, v5
 
     shr-int/lit8 v0, v0, 0x8
 
     and-int/lit16 v7, v0, 0xff
 
-    .line 61
     aget v0, p1, v5
 
     and-int/lit16 v9, v0, 0xff
 
-    .line 62
     mul-int/lit8 v0, v2, 0x42
 
     mul-int/lit16 v1, v7, 0x81
@@ -209,7 +186,6 @@
 
     add-int/lit8 v0, v0, 0x10
 
-    .line 63
     mul-int/lit8 v1, v2, -0x26
 
     mul-int/lit8 v10, v7, 0x4a
@@ -226,7 +202,6 @@
 
     add-int/lit16 v1, v1, 0x80
 
-    .line 64
     mul-int/lit8 v2, v2, 0x70
 
     mul-int/lit8 v7, v7, 0x5e
@@ -243,7 +218,6 @@
 
     add-int/lit16 v2, v2, 0x80
 
-    .line 65
     add-int/lit8 v7, v6, 0x1
 
     if-gez v0, :cond_1
@@ -256,7 +230,6 @@
 
     aput-byte v0, p0, v6
 
-    .line 66
     rem-int/lit8 v0, v8, 0x2
 
     if-nez v0, :cond_8
@@ -265,7 +238,6 @@
 
     if-nez v0, :cond_8
 
-    .line 67
     add-int/lit8 v6, v3, 0x1
 
     if-gez v1, :cond_2
@@ -277,7 +249,6 @@
 
     aput-byte v0, p0, v3
 
-    .line 68
     add-int/lit8 v1, v6, 0x1
 
     if-gez v2, :cond_4
@@ -291,11 +262,9 @@
 
     move v0, v1
 
-    .line 69
     :goto_5
     add-int/lit8 v2, v5, 0x1
 
-    .line 70
     add-int/lit8 v1, v4, 0x1
 
     move v4, v1
@@ -308,7 +277,6 @@
 
     goto :goto_1
 
-    .line 65
     :cond_1
     const/16 v9, 0xff
 
@@ -318,7 +286,6 @@
 
     goto :goto_2
 
-    .line 67
     :cond_2
     const/16 v0, 0xff
 
@@ -333,7 +300,6 @@
 
     goto :goto_3
 
-    .line 68
     :cond_4
     const/16 v0, 0xff
 
@@ -348,7 +314,6 @@
 
     goto :goto_4
 
-    .line 71
     :cond_6
     add-int/lit8 v0, v8, 0x1
 
@@ -360,7 +325,6 @@
 
     goto/16 :goto_0
 
-    .line 72
     :cond_7
     return-void
 
@@ -373,46 +337,38 @@
 .method private static selectCodec(Ljava/lang/String;)Landroid/media/MediaCodecInfo;
     .locals 7
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 42
     invoke-static {}, Landroid/media/MediaCodecList;->getCodecCount()I
 
     move-result v4
 
     move v3, v1
 
-    .line 43
     :goto_0
     if-ge v3, v4, :cond_2
 
-    .line 44
     invoke-static {v3}, Landroid/media/MediaCodecList;->getCodecInfoAt(I)Landroid/media/MediaCodecInfo;
 
     move-result-object v2
 
-    .line 45
     invoke-virtual {v2}, Landroid/media/MediaCodecInfo;->isEncoder()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 46
     invoke-virtual {v2}, Landroid/media/MediaCodecInfo;->getSupportedTypes()[Ljava/lang/String;
 
     move-result-object v5
 
     move v0, v1
 
-    .line 47
     :goto_1
     array-length v6, v5
 
     if-ge v0, v6, :cond_1
 
-    .line 48
     aget-object v6, v5, v0
 
     invoke-virtual {v6, p0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -423,17 +379,14 @@
 
     move-object v0, v2
 
-    .line 52
     :goto_2
     return-object v0
 
-    .line 50
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 51
     :cond_1
     add-int/lit8 v0, v3, 0x1
 
@@ -441,7 +394,6 @@
 
     goto :goto_0
 
-    .line 52
     :cond_2
     const/4 v0, 0x0
 
@@ -453,38 +405,30 @@
 .method public close()V
     .locals 1
 
-    .prologue
-    .line 28
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/EmulatorEncoder;->mEncoder:Lcom/google/android/libraries/smartburst/filterpacks/video/Encoder;
 
     invoke-interface {v0}, Lcom/google/android/libraries/smartburst/filterpacks/video/Encoder;->close()V
 
-    .line 29
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/EmulatorEncoder;->mMediaMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v0}, Landroid/media/MediaMuxer;->stop()V
 
-    .line 30
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/EmulatorEncoder;->mMediaMuxer:Landroid/media/MediaMuxer;
 
     invoke-virtual {v0}, Landroid/media/MediaMuxer;->release()V
 
-    .line 31
     return-void
 .end method
 
 .method public encodeFrame(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;J)V
     .locals 10
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 11
     new-instance v9, Landroid/media/MediaCodec$BufferInfo;
 
     invoke-direct {v9}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
 
-    .line 12
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/EmulatorEncoder;->mEncoder:Lcom/google/android/libraries/smartburst/filterpacks/video/Encoder;
 
     invoke-interface {v0}, Lcom/google/android/libraries/smartburst/filterpacks/video/Encoder;->get()Ljava/lang/Object;
@@ -495,18 +439,14 @@
 
     check-cast v8, Ljava/nio/ByteBuffer;
 
-    .line 13
     invoke-virtual {v8}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 14
     invoke-virtual {v8}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 15
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->toBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 16
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
@@ -519,7 +459,6 @@
 
     new-array v1, v1, [I
 
-    .line 17
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
@@ -538,7 +477,6 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Bitmap;->getPixels([IIIIIII)V
 
-    .line 18
     array-length v3, v1
 
     mul-int/lit8 v3, v3, 0x3
@@ -547,7 +485,6 @@
 
     new-array v3, v3, [B
 
-    .line 19
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v4
@@ -558,10 +495,8 @@
 
     invoke-static {v3, v1, v4, v0}, Lcom/google/android/libraries/smartburst/filterpacks/video/EmulatorEncoder;->encodeYUV420SP([B[III)V
 
-    .line 20
     invoke-virtual {v8, v3}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 21
     iget-wide v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/EmulatorEncoder;->mEncodedFrameTimestampNs:J
 
     const-wide/16 v4, 0x3e8
@@ -570,35 +505,28 @@
 
     iput-wide v0, v9, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
-    .line 22
     array-length v0, v3
 
     iput v0, v9, Landroid/media/MediaCodec$BufferInfo;->size:I
 
-    .line 23
     iput v2, v9, Landroid/media/MediaCodec$BufferInfo;->offset:I
 
-    .line 24
     iget-wide v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/EmulatorEncoder;->mEncodedFrameTimestampNs:J
 
     add-long/2addr v0, p2
 
     iput-wide v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/EmulatorEncoder;->mEncodedFrameTimestampNs:J
 
-    .line 25
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/EmulatorEncoder;->mEncoder:Lcom/google/android/libraries/smartburst/filterpacks/video/Encoder;
 
     invoke-interface {v0, v9}, Lcom/google/android/libraries/smartburst/filterpacks/video/Encoder;->onNewFrameAvailable(Landroid/media/MediaCodec$BufferInfo;)V
 
-    .line 26
     return-void
 .end method
 
 .method public getDurationMs()J
     .locals 4
 
-    .prologue
-    .line 27
     iget-wide v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/EmulatorEncoder;->mEncodedFrameTimestampNs:J
 
     const-wide/32 v2, 0xf4240
@@ -611,15 +539,12 @@
 .method public initialize(Ljava/lang/String;II)V
     .locals 3
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 2
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     if-lez p2, :cond_0
 
     move v0, v1
@@ -627,16 +552,13 @@
     :goto_0
     invoke-static {v0}, Lid;->a(Z)V
 
-    .line 4
     if-lez p3, :cond_1
 
     :goto_1
     invoke-static {v1}, Lid;->a(Z)V
 
-    .line 5
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/EmulatorEncoder;->mOutputFile:Ljava/lang/String;
 
-    .line 6
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/EmulatorEncoder;->mOutputFile:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/google/android/libraries/smartburst/filterpacks/video/EmulatorEncoder;->createMediaMuxer(Ljava/lang/String;)Landroid/media/MediaMuxer;
@@ -645,14 +567,12 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/EmulatorEncoder;->mMediaMuxer:Landroid/media/MediaMuxer;
 
-    .line 7
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterpacks/video/CPUVideoEncoder;->newInstance()Lcom/google/android/libraries/smartburst/filterpacks/video/Encoder;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/EmulatorEncoder;->mEncoder:Lcom/google/android/libraries/smartburst/filterpacks/video/Encoder;
 
-    .line 8
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/EmulatorEncoder;->mEncoder:Lcom/google/android/libraries/smartburst/filterpacks/video/Encoder;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/EmulatorEncoder;->mMediaMuxer:Landroid/media/MediaMuxer;
@@ -663,23 +583,19 @@
 
     invoke-interface {v0, v1, v2}, Lcom/google/android/libraries/smartburst/filterpacks/video/Encoder;->open(Landroid/media/MediaMuxer;Landroid/media/MediaFormat;)V
 
-    .line 9
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/video/EmulatorEncoder;->mEncodedFrameTimestampNs:J
 
-    .line 10
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 3
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 4
     goto :goto_1
 .end method

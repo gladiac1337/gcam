@@ -15,20 +15,14 @@
 .method constructor <init>(Lbxw;Lcap;I)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbxv;->b:Lbxw;
 
-    .line 3
     iput-object p2, p0, Lbxv;->a:Lcap;
 
-    .line 4
     iput p3, p0, Lbxv;->c:I
 
-    .line 5
     return-void
 .end method
 
@@ -37,8 +31,6 @@
 .method public final a()Z
     .locals 2
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lbxv;->b:Lbxw;
 
     sget-object v1, Lbxw;->b:Lbxw;

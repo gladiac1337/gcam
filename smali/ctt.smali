@@ -16,8 +16,6 @@
 .method constructor <init>(Lcts;Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lctt;->b:Lcts;
 
     iput-object p2, p0, Lctt;->a:Landroid/graphics/Bitmap;
@@ -32,25 +30,19 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lctt;->b:Lcts;
 
     iget-object v0, v0, Lcts;->a:Lcti;
 
-    .line 3
     iget-object v0, v0, Lcjy;->a:Lcjz;
 
-    .line 4
     new-instance v1, Lcrq;
 
     iget-object v2, p0, Lctt;->a:Landroid/graphics/Bitmap;
 
     invoke-direct {v1, v2}, Lcrq;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 5
     invoke-interface {v0, v1}, Lcjz;->a(Ljava/lang/Object;)V
 
-    .line 6
     return-void
 .end method

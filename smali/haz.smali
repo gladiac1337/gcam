@@ -58,12 +58,10 @@
 .method private static a(Ljava/lang/CharSequence;)I
     .locals 8
 
-    .prologue
     const/16 v7, 0x800
 
     const/4 v1, 0x0
 
-    .line 22
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
     move-result v3
@@ -100,12 +98,10 @@
 
     add-int/2addr v2, v4
 
-    .line 24
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 23
     :cond_0
     invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
@@ -176,7 +172,6 @@
 
     goto :goto_3
 
-    .line 24
     :cond_4
     add-int v0, v2, v1
 
@@ -661,17 +656,12 @@
 .method public static b(II)I
     .locals 2
 
-    .prologue
-    .line 32
-    .line 34
     shl-int/lit8 v0, p0, 0x3
 
-    .line 35
     invoke-static {v0}, Lhaz;->c(I)I
 
     move-result v0
 
-    .line 36
     invoke-static {p1}, Lhaz;->a(I)I
 
     move-result v1
@@ -684,22 +674,16 @@
 .method public static b(IJ)I
     .locals 3
 
-    .prologue
-    .line 25
-    .line 27
     shl-int/lit8 v0, p0, 0x3
 
-    .line 28
     invoke-static {v0}, Lhaz;->c(I)I
 
     move-result v0
 
-    .line 30
     invoke-static {p1, p2}, Lhaz;->b(J)I
 
     move-result v1
 
-    .line 31
     add-int/2addr v0, v1
 
     return v0
@@ -708,17 +692,12 @@
 .method public static b(ILhbf;)I
     .locals 3
 
-    .prologue
-    .line 42
-    .line 44
     shl-int/lit8 v0, p0, 0x3
 
-    .line 45
     invoke-static {v0}, Lhaz;->c(I)I
 
     move-result v0
 
-    .line 47
     invoke-virtual {p1}, Lhbf;->d()I
 
     move-result v1
@@ -729,7 +708,6 @@
 
     add-int/2addr v1, v2
 
-    .line 48
     add-int/2addr v0, v1
 
     return v0
@@ -738,17 +716,12 @@
 .method public static b(ILjava/lang/String;)I
     .locals 2
 
-    .prologue
-    .line 37
-    .line 39
     shl-int/lit8 v0, p0, 0x3
 
-    .line 40
     invoke-static {v0}, Lhaz;->c(I)I
 
     move-result v0
 
-    .line 41
     invoke-static {p1}, Lhaz;->a(Ljava/lang/String;)I
 
     move-result v1
@@ -761,17 +734,12 @@
 .method public static b(I[B)I
     .locals 3
 
-    .prologue
-    .line 49
-    .line 51
     shl-int/lit8 v0, p0, 0x3
 
-    .line 52
     invoke-static {v0}, Lhaz;->c(I)I
 
     move-result v0
 
-    .line 54
     array-length v1, p1
 
     invoke-static {v1}, Lhaz;->c(I)I
@@ -782,7 +750,6 @@
 
     add-int/2addr v1, v2
 
-    .line 55
     add-int/2addr v0, v1
 
     return v0
@@ -1177,11 +1144,8 @@
 .method private final e(I)V
     .locals 3
 
-    .prologue
-    .line 56
     int-to-byte v0, p1
 
-    .line 57
     iget-object v1, p0, Lhaz;->a:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->hasRemaining()Z
@@ -1213,7 +1177,6 @@
 
     invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 58
     return-void
 .end method
 
@@ -1222,18 +1185,14 @@
 .method public final a(IF)V
     .locals 3
 
-    .prologue
-    .line 1
     const/4 v0, 0x5
 
     invoke-virtual {p0, p1, v0}, Lhaz;->c(II)V
 
-    .line 2
     invoke-static {p2}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v0
 
-    .line 3
     iget-object v1, p0, Lhaz;->a:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->remaining()I
@@ -1267,29 +1226,23 @@
 
     invoke-virtual {v1, v0}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 4
     return-void
 .end method
 
 .method public final a(II)V
     .locals 2
 
-    .prologue
-    .line 8
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lhaz;->c(II)V
 
-    .line 9
     if-ltz p2, :cond_0
 
     invoke-virtual {p0, p2}, Lhaz;->b(I)V
 
-    .line 10
     :goto_0
     return-void
 
-    .line 9
     :cond_0
     int-to-long v0, p2
 
@@ -1301,29 +1254,22 @@
 .method public final a(IJ)V
     .locals 2
 
-    .prologue
-    .line 5
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lhaz;->c(II)V
 
-    .line 6
     invoke-virtual {p0, p2, p3}, Lhaz;->a(J)V
 
-    .line 7
     return-void
 .end method
 
 .method public final a(ILhbf;)V
     .locals 1
 
-    .prologue
-    .line 13
     const/4 v0, 0x2
 
     invoke-virtual {p0, p1, v0}, Lhaz;->c(II)V
 
-    .line 15
     iget v0, p2, Lhbf;->p:I
 
     if-gez v0, :cond_0
@@ -1333,25 +1279,20 @@
     :cond_0
     iget v0, p2, Lhbf;->p:I
 
-    .line 16
     invoke-virtual {p0, v0}, Lhaz;->b(I)V
 
     invoke-virtual {p2, p0}, Lhbf;->a(Lhaz;)V
 
-    .line 17
     return-void
 .end method
 
 .method public final a(ILjava/lang/String;)V
     .locals 4
 
-    .prologue
-    .line 11
     const/4 v0, 0x2
 
     invoke-virtual {p0, p1, v0}, Lhaz;->c(II)V
 
-    .line 12
     :try_start_0
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
@@ -1480,21 +1421,16 @@
 .method public final a(I[B)V
     .locals 3
 
-    .prologue
-    .line 18
     const/4 v0, 0x2
 
     invoke-virtual {p0, p1, v0}, Lhaz;->c(II)V
 
-    .line 19
     array-length v0, p2
 
     invoke-virtual {p0, v0}, Lhaz;->b(I)V
 
-    .line 20
     array-length v0, p2
 
-    .line 21
     iget-object v1, p0, Lhaz;->a:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->remaining()I
@@ -1594,14 +1530,10 @@
 .method public final c(II)V
     .locals 1
 
-    .prologue
-    .line 59
-    .line 60
     shl-int/lit8 v0, p1, 0x3
 
     or-int/2addr v0, p2
 
-    .line 61
     invoke-virtual {p0, v0}, Lhaz;->b(I)V
 
     return-void

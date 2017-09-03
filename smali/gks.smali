@@ -33,17 +33,13 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgks;->a:Lgkm;
 
     iget-object v1, p0, Lgks;->b:Lgkk;
 
     iget-object v2, p0, Lgks;->c:Lgky;
 
-    .line 2
     invoke-virtual {v0, v1, v2}, Lgkm;->a(Lgkk;Lgky;)V
 
-    .line 3
     return-void
 .end method

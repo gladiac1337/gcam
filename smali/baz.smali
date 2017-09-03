@@ -20,14 +20,10 @@
 .method public constructor <init>(Lbct;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbaz;->a:Lbct;
 
-    .line 3
     return-void
 .end method
 
@@ -36,14 +32,10 @@
 .method public final a()Landroid/util/Range;
     .locals 2
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lbaz;->a:Lbct;
 
-    .line 5
     iget v0, v0, Lbct;->c:I
 
-    .line 7
     const/16 v1, 0x1e
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -64,14 +56,10 @@
 .method public final b()Landroid/util/Range;
     .locals 2
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lbaz;->a:Lbct;
 
-    .line 9
     iget v0, v0, Lbct;->c:I
 
-    .line 11
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1

@@ -14,8 +14,6 @@
 .method constructor <init>(Ljava/lang/Comparable;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lawb;->a:Ljava/lang/Comparable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,11 +26,8 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 2
     check-cast p1, Ljava/lang/Comparable;
 
-    .line 3
     iget-object v0, p0, Lawb;->a:Ljava/lang/Comparable;
 
     invoke-interface {p1, v0}, Ljava/lang/Comparable;->compareTo(Ljava/lang/Object;)I
@@ -48,10 +43,8 @@
 
     move-result-object v0
 
-    .line 4
     return-object v0
 
-    .line 3
     :cond_0
     const/4 v0, 0x0
 

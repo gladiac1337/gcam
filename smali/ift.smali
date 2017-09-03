@@ -13,19 +13,14 @@
 .method public constructor <init>(Lidz;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lier;-><init>()V
 
-    .line 2
     const/16 v0, 0x1f4
 
     iput v0, p0, Lift;->a:I
 
-    .line 3
     iput-object p1, p0, Lift;->b:Lidz;
 
-    .line 4
     return-void
 .end method
 
@@ -34,39 +29,30 @@
 .method public final a(Liel;)Z
     .locals 5
 
-    .prologue
-    .line 5
-    .line 6
     iget-wide v0, p1, Liel;->d:J
 
-    .line 9
     iget-wide v2, p1, Liel;->c:J
 
-    .line 11
     iget-object v4, p0, Lift;->b:Lidz;
 
     invoke-interface {v4, v0, v1}, Lidz;->a(J)Lijj;
 
     move-result-object v0
 
-    .line 12
     invoke-virtual {v0}, Lijj;->a()F
 
     move-result v0
 
-    .line 13
     iget-object v1, p0, Lift;->b:Lidz;
 
     invoke-interface {v1, v2, v3}, Lidz;->a(J)Lijj;
 
     move-result-object v1
 
-    .line 14
     invoke-virtual {v1}, Lijj;->a()F
 
     move-result v1
 
-    .line 15
     sub-float/2addr v0, v1
 
     iget v1, p0, Lift;->a:I
@@ -91,8 +77,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 16
     const-string v0, "MinLengthSegmentSelector[minLengthMs="
 
     iget v1, p0, Lift;->a:I

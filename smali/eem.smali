@@ -16,8 +16,6 @@
 .method constructor <init>(Leek;Lhoz;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leem;->b:Leek;
 
     iput-object p2, p0, Leem;->a:Lhoz;
@@ -32,35 +30,26 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Leem;->a:Lhoz;
 
     invoke-interface {v0}, Lhoz;->close()V
 
-    .line 3
     iget-object v0, p0, Leem;->b:Leek;
 
-    .line 4
     iget v1, v0, Leek;->e:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, v0, Leek;->e:I
 
-    .line 5
     iget-object v0, p0, Leem;->b:Leek;
 
-    .line 6
     iget v0, v0, Leek;->d:I
 
-    .line 7
     iget-object v1, p0, Leem;->b:Leek;
 
-    .line 8
     iget v1, v1, Leek;->e:I
 
-    .line 9
     const/16 v2, 0x58
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -91,11 +80,9 @@
 
     move-result-object v0
 
-    .line 11
     sget-object v1, Leek;->a:Ljava/lang/String;
 
     invoke-static {v1, v0}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     return-void
 .end method

@@ -16,11 +16,8 @@
 .method public constructor <init>(Lbtp;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object v1, Lbtr;->a:Lbtr;
@@ -29,13 +26,10 @@
 
     iput-object v0, p0, Lbwj;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 3
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     iput-object p1, p0, Lbwj;->b:Lbtp;
 
-    .line 5
     return-void
 .end method
 
@@ -44,11 +38,8 @@
 .method public final a(Lbtr;)Liwe;
     .locals 3
 
-    .prologue
-    .line 15
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 16
     iget-object v0, p0, Lbwj;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -69,7 +60,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 17
     :cond_0
     iget-object v0, p0, Lbwj;->b:Lbtp;
 
@@ -77,18 +67,14 @@
 
     move-result-object v0
 
-    .line 18
     new-instance v1, Lbwl;
 
     invoke-direct {v1, p0}, Lbwl;-><init>(Lbwj;)V
 
-    .line 19
     sget-object v2, Liwj;->a:Liwj;
 
-    .line 20
     invoke-static {v0, v1, v2}, Livs;->a(Liwe;Livr;Ljava/util/concurrent/Executor;)V
 
-    .line 22
     :goto_0
     return-object v0
 
@@ -105,11 +91,8 @@
 .method public final a(Lbtr;Legx;Lgfd;Lhix;Lhmr;ILbul;Lbvg;Lhja;)Liwe;
     .locals 10
 
-    .prologue
-    .line 6
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     iget-object v0, p0, Lbwj;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object v1, Lbtr;->a:Lbtr;
@@ -120,7 +103,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 8
     iget-object v0, p0, Lbwj;->b:Lbtp;
 
     move-object v1, p1
@@ -141,23 +123,18 @@
 
     move-object/from16 v9, p9
 
-    .line 9
     invoke-interface/range {v0 .. v9}, Lbtp;->a(Lbtr;Legx;Lgfd;Lhix;Lhmr;ILbul;Lbvg;Lhja;)Liwe;
 
     move-result-object v0
 
-    .line 10
     new-instance v1, Lbwk;
 
     invoke-direct {v1, p0}, Lbwk;-><init>(Lbwj;)V
 
-    .line 11
     sget-object v2, Liwj;->a:Liwj;
 
-    .line 12
     invoke-static {v0, v1, v2}, Livs;->a(Liwe;Livr;Ljava/util/concurrent/Executor;)V
 
-    .line 14
     :goto_0
     return-object v0
 
@@ -174,54 +151,42 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 25
     iget-object v0, p0, Lbwj;->b:Lbtp;
 
     invoke-interface {v0}, Lbtp;->a()V
 
-    .line 26
     iget-object v0, p0, Lbwj;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     sget-object v1, Lbtr;->a:Lbtr;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 27
     return-void
 .end method
 
 .method public final a(Landroid/graphics/SurfaceTexture;Ljava/util/List;Lfyx;)V
     .locals 1
 
-    .prologue
-    .line 23
     iget-object v0, p0, Lbwj;->b:Lbtp;
 
     invoke-interface {v0, p1, p2, p3}, Lbtp;->a(Landroid/graphics/SurfaceTexture;Ljava/util/List;Lfyx;)V
 
-    .line 24
     return-void
 .end method
 
 .method public final a(Lbtq;)V
     .locals 1
 
-    .prologue
-    .line 29
     iget-object v0, p0, Lbwj;->b:Lbtp;
 
     invoke-interface {v0, p1}, Lbtp;->a(Lbtq;)V
 
-    .line 30
     return-void
 .end method
 
 .method public final b()Landroid/view/Surface;
     .locals 1
 
-    .prologue
-    .line 28
     iget-object v0, p0, Lbwj;->b:Lbtp;
 
     invoke-interface {v0}, Lbtp;->b()Landroid/view/Surface;
@@ -234,8 +199,6 @@
 .method public final c()Lavm;
     .locals 1
 
-    .prologue
-    .line 31
     iget-object v0, p0, Lbwj;->b:Lbtp;
 
     invoke-interface {v0}, Lbtp;->c()Lavm;

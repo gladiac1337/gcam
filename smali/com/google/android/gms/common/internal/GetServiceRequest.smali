@@ -61,8 +61,6 @@
 .method public constructor <init>(IIILjava/lang/String;Landroid/os/IBinder;[Lcom/google/android/gms/common/api/Scope;Landroid/os/Bundle;Landroid/accounts/Account;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->f:I
@@ -77,7 +75,6 @@
 
     if-ge p1, v0, :cond_1
 
-    .line 2
     const/4 v0, 0x0
 
     if-eqz p5, :cond_0
@@ -90,7 +87,6 @@
 
     move-result-object v0
 
-    .line 3
     :cond_0
     iput-object v0, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->e:Landroid/accounts/Account;
 
@@ -122,16 +118,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 4
-    .line 6
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lkk;->l(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 7
     const/4 v1, 0x1
 
     iget v2, p0, Lcom/google/android/gms/common/internal/GetServiceRequest;->f:I
@@ -180,9 +172,7 @@
 
     invoke-static {p1, v1, v2, p2}, Lkk;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    .line 8
     invoke-static {p1, v0}, Lkk;->m(Landroid/os/Parcel;I)V
 
-    .line 9
     return-void
 .end method

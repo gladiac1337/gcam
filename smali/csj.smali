@@ -13,8 +13,6 @@
 .method public constructor <init>(Lcse;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcsj;->a:Lcse;
 
     iput p2, p0, Lcsj;->b:I

@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 4
     new-instance v0, Lium;
 
     new-instance v1, Liun;
@@ -35,11 +33,8 @@
 .method constructor <init>(Ljava/lang/Throwable;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -48,6 +43,5 @@
 
     iput-object v0, p0, Lium;->b:Ljava/lang/Throwable;
 
-    .line 3
     return-void
 .end method

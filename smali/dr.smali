@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ldt;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method public final a(Ldq;)Landroid/view/View$AccessibilityDelegate;
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Lds;
 
     invoke-direct {v0, p1}, Lds;-><init>(Ldq;)V
@@ -31,21 +27,16 @@
 .method public final a(Landroid/view/View$AccessibilityDelegate;Landroid/view/View;)Lgk;
     .locals 2
 
-    .prologue
-    .line 3
     invoke-virtual {p1, p2}, Landroid/view/View$AccessibilityDelegate;->getAccessibilityNodeProvider(Landroid/view/View;)Landroid/view/accessibility/AccessibilityNodeProvider;
 
     move-result-object v1
 
-    .line 4
     if-eqz v1, :cond_0
 
-    .line 5
     new-instance v0, Lgk;
 
     invoke-direct {v0, v1}, Lgk;-><init>(Ljava/lang/Object;)V
 
-    .line 6
     :goto_0
     return-object v0
 
@@ -58,8 +49,6 @@
 .method public final a(Landroid/view/View$AccessibilityDelegate;Landroid/view/View;ILandroid/os/Bundle;)Z
     .locals 1
 
-    .prologue
-    .line 7
     invoke-virtual {p1, p2, p3, p4}, Landroid/view/View$AccessibilityDelegate;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
 
     move-result v0

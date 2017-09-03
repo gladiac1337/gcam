@@ -38,58 +38,40 @@
 .method private constructor <init>(Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbux;->a:Lilp;
 
-    .line 3
     iput-object p2, p0, Lbux;->b:Lilp;
 
-    .line 4
     iput-object p3, p0, Lbux;->c:Lilp;
 
-    .line 5
     iput-object p4, p0, Lbux;->d:Lilp;
 
-    .line 6
     iput-object p5, p0, Lbux;->e:Lilp;
 
-    .line 7
     iput-object p6, p0, Lbux;->f:Lilp;
 
-    .line 8
     iput-object p7, p0, Lbux;->g:Lilp;
 
-    .line 9
     iput-object p8, p0, Lbux;->h:Lilp;
 
-    .line 10
     iput-object p9, p0, Lbux;->i:Lilp;
 
-    .line 11
     iput-object p10, p0, Lbux;->j:Lilp;
 
-    .line 12
     iput-object p11, p0, Lbux;->k:Lilp;
 
-    .line 13
     iput-object p12, p0, Lbux;->l:Lilp;
 
-    .line 14
     iput-object p13, p0, Lbux;->m:Lilp;
 
-    .line 15
     return-void
 .end method
 
 .method public static a(Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;)Lilp;
     .locals 14
 
-    .prologue
-    .line 16
     new-instance v0, Lbux;
 
     move-object v1, p0
@@ -128,87 +110,67 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 17
-    .line 18
     iget-object v0, p0, Lbux;->a:Lilp;
 
-    .line 19
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Lbux;->b:Lilp;
 
-    .line 20
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Lbux;->c:Lilp;
 
-    .line 21
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Lbux;->d:Lilp;
 
-    .line 22
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Lbux;->e:Lilp;
 
-    .line 23
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Lbux;->f:Lilp;
 
-    .line 24
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Lbux;->g:Lilp;
 
-    .line 25
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Lbux;->h:Lilp;
 
-    .line 26
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Lbux;->i:Lilp;
 
-    .line 27
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Lbux;->j:Lilp;
 
-    .line 28
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Lbux;->k:Lilp;
 
-    .line 29
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Lbux;->l:Lilp;
 
-    .line 30
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Lbux;->m:Lilp;
 
-    .line 31
     invoke-interface {v0}, Lilp;->a()Ljava/lang/Object;
 
-    .line 32
     sget-object v0, Lipc;->a:Lipc;
 
-    .line 33
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 34
     invoke-static {v0, v1}, Ldt;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Set;
 
-    .line 35
     return-object v0
 .end method

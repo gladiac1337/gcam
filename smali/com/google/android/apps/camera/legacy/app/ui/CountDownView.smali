@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 53
     const-string v0, "CountDownView"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -37,25 +35,18 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 2
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->a:I
 
-    .line 3
     new-instance v0, Lepz;
 
-    .line 4
     invoke-direct {v0, p0}, Lepz;-><init>(Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;)V
 
-    .line 5
     iput-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->e:Landroid/os/Handler;
 
-    .line 6
     return-void
 .end method
 
@@ -64,11 +55,8 @@
 .method public final a(I)V
     .locals 3
 
-    .prologue
-    .line 40
     if-gtz p1, :cond_0
 
-    .line 41
     sget-object v0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->c:Ljava/lang/String;
 
     const/16 v1, 0x36
@@ -99,11 +87,9 @@
 
     invoke-static {v0, v1}, Lbgj;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 47
     :goto_0
     return-void
 
-    .line 43
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->a()Z
 
@@ -111,16 +97,13 @@
 
     if-eqz v0, :cond_1
 
-    .line 44
     invoke-virtual {p0}, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->b()V
 
-    .line 45
     :cond_1
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->setVisibility(I)V
 
-    .line 46
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0, p1}, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->a(ZI)V
@@ -131,55 +114,44 @@
 .method public final a(ZI)V
     .locals 8
 
-    .prologue
     const/4 v7, 0x1
 
     const/high16 v6, 0x3fb00000    # 1.375f
 
     const/high16 v5, 0x3f800000    # 1.0f
 
-    .line 8
     iput p2, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->a:I
 
-    .line 9
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->b:Leqa;
 
     if-eqz v0, :cond_0
 
-    .line 10
     if-eqz p1, :cond_2
 
-    .line 11
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->b:Leqa;
 
     invoke-interface {v0}, Leqa;->o()V
 
-    .line 13
     :cond_0
     :goto_0
     if-nez p2, :cond_3
 
-    .line 14
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->setVisibility(I)V
 
-    .line 15
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->b:Leqa;
 
     if-eqz v0, :cond_1
 
-    .line 16
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->b:Leqa;
 
     invoke-interface {v0}, Leqa;->n()V
 
-    .line 36
     :cond_1
     :goto_1
     return-void
 
-    .line 12
     :cond_2
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->b:Leqa;
 
@@ -189,7 +161,6 @@
 
     goto :goto_0
 
-    .line 17
     :cond_3
     invoke-virtual {p0}, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->getResources()Landroid/content/res/Resources;
 
@@ -201,7 +172,6 @@
 
     iget-object v0, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 18
     const-string v1, "%d"
 
     new-array v2, v7, [Ljava/lang/Object;
@@ -218,36 +188,30 @@
 
     move-result-object v0
 
-    .line 19
     iget-object v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->d:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 21
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->d:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getMeasuredWidth()I
 
     move-result v0
 
-    .line 22
     iget-object v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->d:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getMeasuredHeight()I
 
     move-result v1
 
-    .line 23
     iget-object v2, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->d:Landroid/widget/TextView;
 
     invoke-virtual {v2, v5}, Landroid/widget/TextView;->setScaleX(F)V
 
-    .line 24
     iget-object v2, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->d:Landroid/widget/TextView;
 
     invoke-virtual {v2, v5}, Landroid/widget/TextView;->setScaleY(F)V
 
-    .line 25
     iget-object v2, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->d:Landroid/widget/TextView;
 
     div-int/lit8 v0, v0, 0x2
@@ -256,7 +220,6 @@
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setPivotX(F)V
 
-    .line 26
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->d:Landroid/widget/TextView;
 
     div-int/lit8 v1, v1, 0x2
@@ -265,47 +228,38 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setPivotY(F)V
 
-    .line 27
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->d:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 28
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->d:Landroid/widget/TextView;
 
-    .line 29
     invoke-virtual {v0}, Landroid/widget/TextView;->animate()Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    .line 30
     invoke-virtual {v0, v6}, Landroid/view/ViewPropertyAnimator;->scaleX(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    .line 31
     invoke-virtual {v0, v6}, Landroid/view/ViewPropertyAnimator;->scaleY(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 32
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
     const-wide/16 v2, 0x320
 
-    .line 33
     invoke-virtual {v0, v2, v3}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    .line 34
     invoke-virtual {v0}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 35
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->e:Landroid/os/Handler;
 
     const-wide/16 v2, 0x3e8
@@ -318,8 +272,6 @@
 .method public final a()Z
     .locals 1
 
-    .prologue
-    .line 7
     iget v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->a:I
 
     if-lez v0, :cond_0
@@ -338,30 +290,24 @@
 .method public final b()V
     .locals 2
 
-    .prologue
-    .line 48
     iget v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->a:I
 
     if-lez v0, :cond_0
 
-    .line 49
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->a:I
 
-    .line 50
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->e:Landroid/os/Handler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 51
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->setVisibility(I)V
 
-    .line 52
     :cond_0
     return-void
 .end method
@@ -369,11 +315,8 @@
 .method protected onFinishInflate()V
     .locals 1
 
-    .prologue
-    .line 37
     invoke-super {p0}, Landroid/widget/FrameLayout;->onFinishInflate()V
 
-    .line 38
     const v0, 0x7f0e0107
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->findViewById(I)Landroid/view/View;
@@ -384,6 +327,5 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/CountDownView;->d:Landroid/widget/TextView;
 
-    .line 39
     return-void
 .end method

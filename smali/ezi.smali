@@ -11,8 +11,6 @@
 .method constructor <init>(Lezh;)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lezi;->a:Lezh;
 
     const/4 v0, 0x0
@@ -27,19 +25,13 @@
 .method public a(ZLfsq;)V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lezi;->a:Lezh;
 
-    .line 3
     iput-boolean p1, v0, Lezh;->g:Z
 
-    .line 4
     iget-object v0, p0, Lezi;->a:Lezh;
 
-    .line 5
     iput-object p2, v0, Lezh;->h:Lfsq;
 
-    .line 6
     return-void
 .end method

@@ -29,17 +29,13 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgpx;->a:Lgpw;
 
     iget-boolean v1, p0, Lgpx;->b:Z
 
-    .line 2
     iget-object v0, v0, Lgpw;->b:Lgqe;
 
     invoke-virtual {v0, v1}, Lgqe;->a(Z)V
 
-    .line 3
     return-void
 .end method

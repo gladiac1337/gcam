@@ -11,43 +11,34 @@
 .method constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/BackingStore;)V
     .locals 1
 
-    .prologue
-    .line 11
     invoke-direct {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/Frame;-><init>(Lcom/google/android/libraries/smartburst/filterfw/BackingStore;)V
 
-    .line 12
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer1D;->mLength:I
 
-    .line 13
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->getDimensions()[I
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer1D;->updateLength([I)V
 
-    .line 14
     return-void
 .end method
 
 .method static assertCanCreate(Lcom/google/android/libraries/smartburst/filterfw/BackingStore;)V
     .locals 4
 
-    .prologue
-    .line 15
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->getFrameType()Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v0
 
-    .line 16
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->getElementSize()I
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 17
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -92,20 +83,17 @@
 
     throw v1
 
-    .line 18
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/BackingStore;->getDimensions()[I
 
     move-result-object v0
 
-    .line 19
     if-eqz v0, :cond_1
 
     array-length v0, v0
 
     if-nez v0, :cond_2
 
-    .line 20
     :cond_1
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -115,7 +103,6 @@
 
     throw v0
 
-    .line 21
     :cond_2
     return-void
 .end method
@@ -123,11 +110,8 @@
 .method static create(Lcom/google/android/libraries/smartburst/filterfw/BackingStore;)Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer1D;
     .locals 1
 
-    .prologue
-    .line 9
     invoke-static {p0}, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer1D;->assertCanCreate(Lcom/google/android/libraries/smartburst/filterfw/BackingStore;)V
 
-    .line 10
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer1D;
 
     invoke-direct {v0, p0}, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer1D;-><init>(Lcom/google/android/libraries/smartburst/filterfw/BackingStore;)V
@@ -140,8 +124,6 @@
 .method public getDimensions()[I
     .locals 1
 
-    .prologue
-    .line 6
     invoke-super {p0}, Lcom/google/android/libraries/smartburst/filterfw/Frame;->getDimensions()[I
 
     move-result-object v0
@@ -152,8 +134,6 @@
 .method public getLength()I
     .locals 1
 
-    .prologue
-    .line 5
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer1D;->mLength:I
 
     return v0
@@ -165,11 +145,8 @@
         value = 0xb
     .end annotation
 
-    .prologue
-    .line 3
     invoke-virtual {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer1D;->assertAccessible(I)V
 
-    .line 4
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer1D;->mBackingStore:Lcom/google/android/libraries/smartburst/filterfw/BackingStore;
 
     const/16 v1, 0x20
@@ -186,11 +163,8 @@
 .method public lockBytes(I)Ljava/nio/ByteBuffer;
     .locals 2
 
-    .prologue
-    .line 1
     invoke-virtual {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer1D;->assertAccessible(I)V
 
-    .line 2
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer1D;->mBackingStore:Lcom/google/android/libraries/smartburst/filterfw/BackingStore;
 
     const/4 v1, 0x1
@@ -207,24 +181,18 @@
 .method public resize([I)V
     .locals 0
 
-    .prologue
-    .line 7
     invoke-super {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/Frame;->resize([I)V
 
-    .line 8
     return-void
 .end method
 
 .method updateLength([I)V
     .locals 4
 
-    .prologue
-    .line 22
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer1D;->mLength:I
 
-    .line 23
     array-length v1, p1
 
     const/4 v0, 0x0
@@ -234,19 +202,16 @@
 
     aget v2, p1, v0
 
-    .line 24
     iget v3, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer1D;->mLength:I
 
     mul-int/2addr v2, v3
 
     iput v2, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameBuffer1D;->mLength:I
 
-    .line 25
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 26
     :cond_0
     return-void
 .end method

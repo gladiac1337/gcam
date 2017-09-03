@@ -16,8 +16,6 @@
 .method constructor <init>(Lvz;[B)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lwb;->b:Lvz;
 
     iput-object p2, p0, Lwb;->a:[B
@@ -32,8 +30,6 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lwb;->b:Lvz;
 
     iget-object v0, v0, Lvz;->b:Lye;
@@ -42,6 +38,5 @@
 
     invoke-interface {v0, v1}, Lye;->a([B)V
 
-    .line 3
     return-void
 .end method

@@ -20,8 +20,6 @@
 .method constructor <init>(Lhro;Lhro;Lhpz;Lhse;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhru;->d:Lhro;
 
     iput-object p2, p0, Lhru;->a:Lhro;
@@ -40,38 +38,28 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lhru;->d:Lhro;
 
-    .line 3
     iget-object v0, v0, Lhro;->a:Ljava/lang/Object;
 
-    .line 5
     if-eqz v0, :cond_0
 
-    .line 6
     iget-object v1, p0, Lhru;->a:Lhro;
 
     invoke-virtual {v1, v0}, Lhro;->a(Ljava/lang/Object;)Z
 
-    .line 11
     :goto_0
     return-void
 
-    .line 7
     :cond_0
     iget-object v0, p0, Lhru;->d:Lhro;
 
-    .line 8
     iget-object v0, v0, Lhro;->b:Lhra;
 
-    .line 9
     iget-object v1, p0, Lhru;->b:Lhpz;
 
     iget-object v2, p0, Lhru;->a:Lhro;
 
-    .line 10
     invoke-static {v0, v1, v2}, Lhro;->a(Lhra;Lhpz;Lhro;)V
 
     goto :goto_0
@@ -80,8 +68,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 12
     iget-object v0, p0, Lhru;->d:Lhro;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

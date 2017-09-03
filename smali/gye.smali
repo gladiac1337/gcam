@@ -39,27 +39,22 @@
 .method protected final synthetic a(Ljava/lang/Object;)V
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
     const/4 v2, 0x1
 
-    .line 1
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 2
     if-nez p1, :cond_1
 
     iget-object v0, p0, Lgye;->e:Lgyd;
 
     invoke-static {v0, v2}, Lgyd;->a(Lgyd;I)V
 
-    .line 3
     :cond_0
     :goto_0
     return-void
 
-    .line 2
     :cond_1
     iget v1, p0, Lgye;->c:I
 

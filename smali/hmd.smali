@@ -14,14 +14,10 @@
 .method public constructor <init>(Landroid/hardware/camera2/TotalCaptureResult;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Lhlp;-><init>(Landroid/hardware/camera2/CaptureResult;)V
 
-    .line 2
     iput-object p1, p0, Lhmd;->b:Landroid/hardware/camera2/TotalCaptureResult;
 
-    .line 3
     return-void
 .end method
 
@@ -30,8 +26,6 @@
 .method public final b()Lhmb;
     .locals 2
 
-    .prologue
-    .line 4
     new-instance v0, Lhmb;
 
     iget-object v1, p0, Lhmd;->b:Landroid/hardware/camera2/TotalCaptureResult;
@@ -44,33 +38,26 @@
 .method public final toString()Ljava/lang/String;
     .locals 8
 
-    .prologue
-    .line 5
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 6
     new-instance v0, Ljava/util/ArrayList;
 
-    .line 7
     iget-object v1, p0, Lhlp;->a:Landroid/hardware/camera2/CaptureResult;
 
     invoke-virtual {v1}, Landroid/hardware/camera2/CaptureResult;->getKeys()Ljava/util/List;
 
     move-result-object v1
 
-    .line 8
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 9
     new-instance v1, Lhme;
 
     invoke-direct {v1}, Lhme;-><init>()V
 
     invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 10
     check-cast v0, Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -92,7 +79,6 @@
 
     check-cast v1, Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 11
     invoke-virtual {v1}, Landroid/hardware/camera2/CaptureResult$Key;->getName()Ljava/lang/String;
 
     move-result-object v5
@@ -151,7 +137,6 @@
 
     goto :goto_0
 
-    .line 13
     :cond_0
     const-string v0, ", "
 

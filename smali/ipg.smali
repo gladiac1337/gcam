@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method public removeAll(Ljava/util/Collection;)Z
     .locals 1
 
-    .prologue
-    .line 2
     invoke-static {p0, p1}, Lkk;->a(Ljava/util/Set;Ljava/util/Collection;)Z
 
     move-result v0
@@ -31,8 +27,6 @@
 .method public retainAll(Ljava/util/Collection;)Z
     .locals 1
 
-    .prologue
-    .line 3
     invoke-static {p1}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0

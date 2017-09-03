@@ -34,8 +34,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 71
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x0
@@ -50,32 +48,24 @@
 .method public constructor <init>(Lhib;Lhic;Ldvq;Lcfq;Ldgr;Liwe;Lavm;Lavm;Lfxg;Lavm;Lavm;Lftk;Lhjh;Lavm;)V
     .locals 9
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldvb;->c:Lhiz;
 
-    .line 3
     iput-object p5, p0, Ldvb;->f:Ldgr;
 
-    .line 4
     iput-object p6, p0, Ldvb;->g:Liwe;
 
-    .line 5
     move-object/from16 v0, p9
 
     iput-object v0, p0, Ldvb;->h:Lfxg;
 
-    .line 6
     new-instance v1, Ldvi;
 
     invoke-direct {v1, p3, p2, p4}, Ldvi;-><init>(Ldvq;Lhic;Lcfq;)V
 
     iput-object v1, p0, Ldvb;->e:Ldvi;
 
-    .line 7
     sget-object v1, Ldvb;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
@@ -110,7 +100,6 @@
 
     iput-object v1, p0, Ldvb;->a:Lhjh;
 
-    .line 8
     new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v2, 0x0
@@ -119,15 +108,12 @@
 
     iput-object v1, p0, Ldvb;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 9
     const/4 v1, 0x0
 
     iput-object v1, p0, Ldvb;->j:Liwe;
 
-    .line 10
     new-instance v1, Ldde;
 
-    .line 11
     move-object/from16 v0, p12
 
     iget-object v4, v0, Lftk;->a:Latr;
@@ -144,19 +130,16 @@
 
     move-object/from16 v8, p14
 
-    .line 12
     invoke-direct/range {v1 .. v8}, Ldde;-><init>(Ldvq;Lavm;Lavm;Lavm;Lavm;Lavm;Lavm;)V
 
     iput-object v1, p0, Ldvb;->i:Ldde;
 
-    .line 13
     iget-object v1, p0, Ldvb;->a:Lhjh;
 
     const-string v2, "OneCamera created."
 
     invoke-interface {v1, v2}, Lhjh;->d(Ljava/lang/String;)V
 
-    .line 14
     return-void
 .end method
 
@@ -165,8 +148,6 @@
 .method public final a()Ldde;
     .locals 1
 
-    .prologue
-    .line 43
     iget-object v0, p0, Ldvb;->i:Ldde;
 
     return-object v0
@@ -175,35 +156,28 @@
 .method public final a(Ldct;Lejj;)Liwe;
     .locals 7
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 17
     iget-object v0, p0, Ldvb;->e:Ldvi;
 
-    .line 18
     iget-object v3, v0, Ldvi;->a:Ldvq;
 
     iget-object v2, v0, Ldvi;->b:Lhic;
 
     iget-object v0, v0, Ldvi;->c:Lcfq;
 
-    .line 20
     new-instance v4, Ldvr;
 
     invoke-direct {v4, p1, v2, p2}, Ldvr;-><init>(Ldct;Lhic;Lejj;)V
 
-    .line 21
     new-instance v5, Ldvt;
 
     invoke-direct {v5, p1, p2, v2, v0}, Ldvt;-><init>(Ldct;Lejj;Lhic;Lcfq;)V
 
-    .line 22
     new-instance v6, Ldvs;
 
     invoke-direct {v6, p1, p2, v4, v5}, Ldvs;-><init>(Ldct;Lejj;Ldvr;Ldvt;)V
 
-    .line 24
     iget-object v0, v3, Ldvq;->b:Ldvk;
 
     invoke-interface {v0}, Ldvk;->a()Lavm;
@@ -230,7 +204,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 25
     :cond_0
     iget-object v0, v3, Ldvq;->c:Lhjh;
 
@@ -270,19 +243,14 @@
 
     invoke-interface {v0, v2}, Lhjh;->c(Ljava/lang/String;)V
 
-    .line 27
     iget-object v0, v6, Ldvs;->d:Ldvt;
 
-    .line 28
     invoke-virtual {v0}, Ldvt;->close()V
 
-    .line 30
     iget-object v0, v6, Ldvs;->c:Ldvr;
 
-    .line 31
     invoke-virtual {v0}, Ldvr;->b()V
 
-    .line 32
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
@@ -291,17 +259,14 @@
 
     move-result-object v0
 
-    .line 42
     :goto_0
     return-object v0
 
-    .line 33
     :cond_1
     new-instance v2, Liwp;
 
     invoke-direct {v2}, Liwp;-><init>()V
 
-    .line 35
     iget-object v4, v3, Ldvq;->e:Latr;
 
     iget-object v0, v3, Ldvq;->f:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -321,72 +286,57 @@
 
     invoke-virtual {v4, v0}, Latr;->a(Ljava/lang/Object;)V
 
-    .line 36
     iget-object v0, v3, Ldvq;->d:Lawe;
 
     invoke-virtual {v0}, Lawe;->b()V
 
-    .line 37
     new-instance v0, Ldvl;
 
     invoke-direct {v0, v3, v2}, Ldvl;-><init>(Ldvq;Liwp;)V
 
-    .line 38
     iget-object v1, v3, Ldvq;->a:Ldhg;
 
     new-instance v4, Ldzb;
 
-    .line 39
     invoke-direct {v4, v3, v0, v6}, Ldzb;-><init>(Ldvq;Ldvl;Ldvs;)V
 
-    .line 40
     invoke-virtual {v1, v4}, Ldhg;->a(Ldhf;)Liwe;
 
     move-object v0, v2
 
-    .line 42
     goto :goto_0
 
     :cond_2
     move v0, v1
 
-    .line 35
     goto :goto_1
 .end method
 
 .method public final a(Lapn;)V
     .locals 1
 
-    .prologue
-    .line 15
     iget-object v0, p0, Ldvb;->f:Ldgr;
 
     invoke-interface {v0, p1}, Ldgr;->a(Lapn;)V
 
-    .line 16
     return-void
 .end method
 
 .method public final b()Liwe;
     .locals 4
 
-    .prologue
-    .line 44
     iget-object v0, p0, Ldvb;->a:Lhjh;
 
     const-string v1, "One camera starting."
 
     invoke-interface {v0, v1}, Lhjh;->d(Ljava/lang/String;)V
 
-    .line 45
     iget-object v0, p0, Ldvb;->h:Lfxg;
 
-    .line 46
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 47
     iget-object v0, v0, Lfxg;->a:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -406,7 +356,6 @@
 
     check-cast v0, Lhhn;
 
-    .line 48
     invoke-interface {v0}, Lhhn;->a()Liwe;
 
     move-result-object v0
@@ -415,7 +364,6 @@
 
     goto :goto_0
 
-    .line 51
     :cond_0
     invoke-static {v1}, Livs;->a(Ljava/lang/Iterable;)Liwe;
 
@@ -423,23 +371,18 @@
 
     sget-object v1, Lfxh;->a:Lhpz;
 
-    .line 52
     sget-object v2, Liwj;->a:Liwj;
 
-    .line 53
     invoke-static {v0, v1, v2}, Livs;->a(Liwe;Lhpz;Ljava/util/concurrent/Executor;)Liwe;
 
     move-result-object v0
 
-    .line 54
     invoke-static {v0}, Livs;->a(Liwe;)Liwe;
 
     move-result-object v0
 
-    .line 55
     monitor-enter p0
 
-    .line 56
     :try_start_0
     iget-object v1, p0, Ldvb;->a:Lhjh;
 
@@ -453,14 +396,12 @@
 
     iput-object v0, p0, Ldvb;->j:Liwe;
 
-    .line 57
     iget-object v0, p0, Ldvb;->j:Liwe;
 
     monitor-exit p0
 
     return-object v0
 
-    .line 58
     :catchall_0
     move-exception v0
 
@@ -474,10 +415,8 @@
 .method public final close()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 59
     iget-object v0, p0, Ldvb;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -488,65 +427,53 @@
 
     if-eqz v0, :cond_1
 
-    .line 60
     iget-object v0, p0, Ldvb;->a:Lhjh;
 
     const-string v1, "Closing one camera."
 
     invoke-interface {v0, v1}, Lhjh;->d(Ljava/lang/String;)V
 
-    .line 61
     iget-object v0, p0, Ldvb;->c:Lhiz;
 
     invoke-interface {v0}, Lhiz;->close()V
 
-    .line 62
     monitor-enter p0
 
-    .line 63
     :try_start_0
     iget-object v0, p0, Ldvb;->j:Liwe;
 
     if-eqz v0, :cond_0
 
-    .line 64
     iget-object v0, p0, Ldvb;->j:Liwe;
 
     const/4 v1, 0x1
 
     invoke-interface {v0, v1}, Liwe;->cancel(Z)Z
 
-    .line 65
     :cond_0
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 66
     iget-object v0, p0, Ldvb;->g:Liwe;
 
     new-instance v1, Ldvc;
 
     invoke-direct {v1, p0}, Ldvc;-><init>(Ldvb;)V
 
-    .line 67
     sget-object v2, Liwj;->a:Liwj;
 
-    .line 68
     invoke-static {v0, v1, v2}, Livs;->a(Liwe;Livr;Ljava/util/concurrent/Executor;)V
 
-    .line 69
     iget-object v0, p0, Ldvb;->a:Lhjh;
 
     const-string v1, "OneCamera closed."
 
     invoke-interface {v0, v1}, Lhjh;->d(Ljava/lang/String;)V
 
-    .line 70
     :cond_1
     return-void
 
-    .line 65
     :catchall_0
     move-exception v0
 

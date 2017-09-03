@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/BitmapTarget;Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/BitmapTarget$1;->this$0:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/BitmapTarget;
 
     iput-object p2, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/BitmapTarget$1;->val$bitmap:Landroid/graphics/Bitmap;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/BitmapTarget$1;->this$0:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/BitmapTarget;
 
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/BitmapTarget;->access$000(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/BitmapTarget;)Landroid/widget/ImageView;
@@ -44,6 +40,5 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 3
     return-void
 .end method

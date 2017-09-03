@@ -31,7 +31,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -42,7 +41,6 @@
 
     const/4 v3, 0x0
 
-    .line 3
     new-instance v0, Lgle;
 
     const-string v1, "UNINITIALIZED"
@@ -51,7 +49,6 @@
 
     sput-object v0, Lgle;->a:Lgle;
 
-    .line 4
     new-instance v0, Lgle;
 
     const-string v1, "PHOTO"
@@ -60,7 +57,6 @@
 
     sput-object v0, Lgle;->b:Lgle;
 
-    .line 5
     new-instance v0, Lgle;
 
     const-string v1, "VIDEO"
@@ -69,7 +65,6 @@
 
     sput-object v0, Lgle;->c:Lgle;
 
-    .line 6
     new-instance v0, Lgle;
 
     const-string v1, "PANORAMA"
@@ -78,7 +73,6 @@
 
     sput-object v0, Lgle;->d:Lgle;
 
-    .line 7
     new-instance v0, Lgle;
 
     const-string v1, "PHOTO_SPHERE"
@@ -87,7 +81,6 @@
 
     sput-object v0, Lgle;->e:Lgle;
 
-    .line 8
     new-instance v0, Lgle;
 
     const-string v1, "SLOW_MOTION"
@@ -98,7 +91,6 @@
 
     sput-object v0, Lgle;->f:Lgle;
 
-    .line 9
     new-instance v0, Lgle;
 
     const-string v1, "LENS_BLUR"
@@ -109,7 +101,6 @@
 
     sput-object v0, Lgle;->g:Lgle;
 
-    .line 10
     new-instance v0, Lgle;
 
     const-string v1, "PORTRAIT"
@@ -120,7 +111,6 @@
 
     sput-object v0, Lgle;->h:Lgle;
 
-    .line 11
     new-instance v0, Lgle;
 
     const-string v1, "IMAGE_INTENT"
@@ -131,7 +121,6 @@
 
     sput-object v0, Lgle;->i:Lgle;
 
-    .line 12
     new-instance v0, Lgle;
 
     const-string v1, "VIDEO_INTENT"
@@ -142,7 +131,6 @@
 
     sput-object v0, Lgle;->j:Lgle;
 
-    .line 13
     const/16 v0, 0xa
 
     new-array v0, v0, [Lgle;
@@ -205,8 +193,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -215,8 +201,6 @@
 .method public static values()[Lgle;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lgle;->k:[Lgle;
 
     invoke-virtual {v0}, [Lgle;->clone()Ljava/lang/Object;

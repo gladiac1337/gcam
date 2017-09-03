@@ -15,50 +15,36 @@
 .method public constructor <init>(II)V
     .locals 1
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     iput p1, p0, Lhja;->a:I
 
-    .line 5
     iput p2, p0, Lhja;->b:I
 
-    .line 6
     const/4 v0, 0x0
 
     iput-object v0, p0, Lhja;->c:Lhja;
 
-    .line 7
     return-void
 .end method
 
 .method private constructor <init>(IILhja;)V
     .locals 0
 
-    .prologue
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9
     iput p1, p0, Lhja;->a:I
 
-    .line 10
     iput p2, p0, Lhja;->b:I
 
-    .line 11
     iput-object p3, p0, Lhja;->c:Lhja;
 
-    .line 12
     return-void
 .end method
 
 .method public static a(II)Lhja;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Lhja;
 
     invoke-direct {v0, p0, p1}, Lhja;-><init>(II)V
@@ -69,8 +55,6 @@
 .method public static a(Landroid/graphics/Point;)Lhja;
     .locals 3
 
-    .prologue
-    .line 2
     new-instance v0, Lhja;
 
     iget v1, p0, Landroid/graphics/Point;->x:I
@@ -87,14 +71,10 @@
 .method public final a()Lhja;
     .locals 3
 
-    .prologue
-    .line 13
     iget-object v0, p0, Lhja;->c:Lhja;
 
-    .line 14
     if-nez v0, :cond_0
 
-    .line 15
     new-instance v0, Lhja;
 
     iget v1, p0, Lhja;->b:I
@@ -103,10 +83,8 @@
 
     invoke-direct {v0, v1, v2, p0}, Lhja;-><init>(IILhja;)V
 
-    .line 16
     iput-object v0, p0, Lhja;->c:Lhja;
 
-    .line 17
     :cond_0
     return-object v0
 .end method
@@ -114,15 +92,12 @@
 .method public final a(Lhix;)Lhja;
     .locals 1
 
-    .prologue
-    .line 28
     invoke-virtual {p1}, Lhix;->ordinal()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 31
     :goto_0
     :pswitch_0
     return-object p0
@@ -134,7 +109,6 @@
 
     goto :goto_0
 
-    .line 28
     nop
 
     :pswitch_data_0
@@ -148,8 +122,6 @@
 .method public final b()J
     .locals 2
 
-    .prologue
-    .line 18
     iget v0, p0, Lhja;->a:I
 
     iget v1, p0, Lhja;->b:I
@@ -164,8 +136,6 @@
 .method public final c()F
     .locals 2
 
-    .prologue
-    .line 19
     iget v0, p0, Lhja;->a:I
 
     int-to-float v0, v0
@@ -182,16 +152,12 @@
 .method public final d()Lhja;
     .locals 2
 
-    .prologue
-    .line 20
-    .line 21
     iget v0, p0, Lhja;->a:I
 
     iget v1, p0, Lhja;->b:I
 
     if-lt v0, v1, :cond_0
 
-    .line 23
     :goto_0
     return-object p0
 
@@ -206,16 +172,12 @@
 .method public final e()Lhja;
     .locals 2
 
-    .prologue
-    .line 24
-    .line 25
     iget v0, p0, Lhja;->b:I
 
     iget v1, p0, Lhja;->a:I
 
     if-lt v0, v1, :cond_0
 
-    .line 27
     :goto_0
     return-object p0
 
@@ -230,20 +192,16 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 32
     if-ne p0, p1, :cond_1
 
-    .line 37
     :cond_0
     :goto_0
     return v0
 
-    .line 34
     :cond_1
     if-eqz p1, :cond_2
 
@@ -260,14 +218,11 @@
     :cond_2
     move v0, v1
 
-    .line 35
     goto :goto_0
 
-    .line 36
     :cond_3
     check-cast p1, Lhja;
 
-    .line 37
     iget v2, p0, Lhja;->a:I
 
     iget v3, p1, Lhja;->a:I
@@ -289,8 +244,6 @@
 .method public final hashCode()I
     .locals 3
 
-    .prologue
-    .line 38
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -315,20 +268,16 @@
 
     aput-object v2, v0, v1
 
-    .line 39
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 40
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 41
     iget v0, p0, Lhja;->a:I
 
     iget v1, p0, Lhja;->b:I

@@ -11,14 +11,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbkr;->a:Landroid/content/Context;
 
-    .line 3
     return-void
 .end method
 
@@ -27,19 +23,16 @@
 .method public final a()Z
     .locals 12
 
-    .prologue
     const-wide/16 v10, 0x2
 
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 4
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 5
     :try_start_0
     iget-object v4, p0, Lbkr;->a:Landroid/content/Context;
 
@@ -57,18 +50,14 @@
 
     move-result-object v4
 
-    .line 10
     if-nez v4, :cond_0
 
-    .line 33
     :goto_0
     return v1
 
-    .line 7
     :catch_0
     move-exception v0
 
-    .line 8
     const-string v2, "PhotosOemApiDet"
 
     const-string v3, "Unable to locate Google Photos App as com.google.android.apps.photos"
@@ -77,7 +66,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_0
     iget-object v5, v4, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
@@ -89,7 +77,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 13
     const-string v1, "PhotosOemApiDet"
 
     const-string v2, "local build of photos detected, gallery support will be enabled."
@@ -98,10 +85,8 @@
 
     move v1, v0
 
-    .line 14
     goto :goto_0
 
-    .line 15
     :cond_1
     iget-object v5, v4, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
@@ -111,7 +96,6 @@
 
     move-result-object v5
 
-    .line 16
     if-eqz v5, :cond_2
 
     array-length v6, v5
@@ -120,7 +104,6 @@
 
     if-ge v6, v7, :cond_4
 
-    .line 17
     :cond_2
     const-string v2, "PhotosOemApiDet"
 
@@ -154,7 +137,6 @@
 
     goto :goto_1
 
-    .line 19
     :cond_4
     const/4 v6, 0x0
 
@@ -171,7 +153,6 @@
 
     move-result-wide v6
 
-    .line 24
     const/4 v8, 0x1
 
     :try_start_2
@@ -187,7 +168,6 @@
 
     move-result-wide v8
 
-    .line 29
     cmp-long v5, v6, v10
 
     if-gtz v5, :cond_5
@@ -202,14 +182,12 @@
 
     if-ltz v5, :cond_8
 
-    .line 30
     :cond_5
     :goto_2
     const-string v1, "PhotosOemApiDet"
 
     iget-object v4, v4, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
-    .line 31
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
@@ -270,15 +248,12 @@
 
     move-result-object v2
 
-    .line 32
     invoke-static {v1, v2}, Lbgj;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     move v1, v0
 
-    .line 33
     goto/16 :goto_0
 
-    .line 22
     :catch_1
     move-exception v0
 
@@ -314,7 +289,6 @@
 
     goto :goto_3
 
-    .line 27
     :catch_2
     move-exception v0
 
@@ -353,6 +327,5 @@
     :cond_8
     move v0, v1
 
-    .line 29
     goto/16 :goto_2
 .end method

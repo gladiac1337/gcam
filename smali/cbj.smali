@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 43
     const-string v0, "FilmstripQuery"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -23,7 +21,6 @@
 
     sput-object v0, Lcbj;->a:Ljava/lang/String;
 
-    .line 44
     invoke-static {}, Leoc;->a()Lgjh;
 
     move-result-object v0
@@ -44,7 +41,6 @@
 
     sput-object v0, Lcbj;->b:Ljava/lang/String;
 
-    .line 45
     return-void
 .end method
 
@@ -54,13 +50,10 @@
         value = 0x15
     .end annotation
 
-    .prologue
     const/4 v6, 0x0
 
-    .line 1
     const-string v3, "_data LIKE ? AND _id > ?"
 
-    .line 2
     const/4 v0, 0x2
 
     new-array v4, v0, [Ljava/lang/String;
@@ -87,21 +80,17 @@
 
     move-object v5, p5
 
-    .line 4
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v2
 
-    .line 6
     :try_start_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 7
     if-eqz v2, :cond_3
 
-    .line 8
     :goto_0
     invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -109,15 +98,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 9
     invoke-interface {p6, v2}, Lcbk;->a(Landroid/database/Cursor;)Lfqu;
 
     move-result-object v0
 
-    .line 10
     if-eqz v0, :cond_1
 
-    .line 11
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
@@ -125,7 +111,6 @@
 
     goto :goto_0
 
-    .line 18
     :catch_0
     move-exception v0
 
@@ -134,7 +119,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 19
     :catchall_0
     move-exception v1
 
@@ -152,7 +136,6 @@
     :cond_0
     throw v0
 
-    .line 12
     :cond_1
     :try_start_2
     const-string v0, "_data"
@@ -161,7 +144,6 @@
 
     move-result v0
 
-    .line 13
     sget-object v3, Lcbj;->a:Ljava/lang/String;
 
     const-string v4, "Error loading filmstrip item: "
@@ -189,7 +171,6 @@
 
     goto :goto_0
 
-    .line 19
     :catchall_1
     move-exception v0
 
@@ -197,7 +178,6 @@
 
     goto :goto_1
 
-    .line 13
     :cond_2
     new-instance v0, Ljava/lang/String;
 
@@ -208,13 +188,11 @@
 
     goto :goto_2
 
-    .line 16
     :cond_3
     if-eqz v2, :cond_4
 
     invoke-static {v6, v2}, Lcbj;->a(Ljava/lang/Throwable;Ljava/lang/AutoCloseable;)V
 
-    .line 17
     :cond_4
     return-object v1
 .end method
@@ -225,15 +203,12 @@
         value = 0x15
     .end annotation
 
-    .prologue
     const/4 v6, 0x0
 
     const/4 v1, 0x0
 
-    .line 20
     const-string v3, "_data LIKE ? AND _id > ?"
 
-    .line 21
     const/4 v0, 0x2
 
     new-array v4, v0, [Ljava/lang/String;
@@ -260,21 +235,17 @@
 
     move-object v5, p3
 
-    .line 23
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v2
 
-    .line 25
     :try_start_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 26
     if-eqz v2, :cond_3
 
-    .line 27
     :goto_0
     invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -282,14 +253,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 28
     invoke-virtual {p1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
 
     const/4 v3, 0x0
 
-    .line 29
     invoke-interface {v2, v3}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v4
@@ -298,20 +267,16 @@
 
     move-result-object v3
 
-    .line 30
     invoke-virtual {v0, v3}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 31
     invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 32
     if-eqz v0, :cond_1
 
-    .line 33
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
@@ -319,7 +284,6 @@
 
     goto :goto_0
 
-    .line 40
     :catch_0
     move-exception v0
 
@@ -328,7 +292,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 41
     :catchall_0
     move-exception v1
 
@@ -346,7 +309,6 @@
     :cond_0
     throw v0
 
-    .line 34
     :cond_1
     :try_start_2
     const-string v0, "_data"
@@ -355,7 +317,6 @@
 
     move-result v0
 
-    .line 35
     sget-object v3, Lcbj;->a:Ljava/lang/String;
 
     const-string v4, "Error loading filmstrip item: "
@@ -383,7 +344,6 @@
 
     goto :goto_0
 
-    .line 41
     :catchall_1
     move-exception v0
 
@@ -391,7 +351,6 @@
 
     goto :goto_1
 
-    .line 35
     :cond_2
     new-instance v0, Ljava/lang/String;
 
@@ -402,13 +361,11 @@
 
     goto :goto_2
 
-    .line 38
     :cond_3
     if-eqz v2, :cond_4
 
     invoke-static {v6, v2}, Lcbj;->a(Ljava/lang/Throwable;Ljava/lang/AutoCloseable;)V
 
-    .line 39
     :cond_4
     return-object v1
 .end method
@@ -416,8 +373,6 @@
 .method private static synthetic a(Ljava/lang/Throwable;Ljava/lang/AutoCloseable;)V
     .locals 1
 
-    .prologue
-    .line 42
     if-eqz p0, :cond_0
 
     :try_start_0

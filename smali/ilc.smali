@@ -14,8 +14,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,8 +22,6 @@
 .method public static b(Ljava/lang/Object;)Lilc;
     .locals 2
 
-    .prologue
-    .line 1
     new-instance v0, Lilo;
 
     invoke-static {p0}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
@@ -40,18 +36,13 @@
 .method public static c(Ljava/lang/Object;)Lilc;
     .locals 1
 
-    .prologue
-    .line 2
     if-nez p0, :cond_0
 
-    .line 3
     sget-object v0, Liku;->a:Liku;
 
-    .line 6
     :goto_0
     return-object v0
 
-    .line 5
     :cond_0
     new-instance v0, Lilo;
 

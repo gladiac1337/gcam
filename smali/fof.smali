@@ -14,11 +14,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lgvb;
 
     const-string v1, "ANDROID_CAMERA"
@@ -27,15 +24,12 @@
 
     iput-object v0, p0, Lfof;->a:Lgvb;
 
-    .line 3
     sget-object v0, Lbgq;->a:Lbgp;
 
-    .line 4
     const-string v1, "GcaClearcutLog"
 
     invoke-interface {v0, v1}, Lhji;->a(Ljava/lang/String;)Lhjh;
 
-    .line 5
     return-void
 .end method
 
@@ -44,21 +38,16 @@
 .method public final a(Lcom/google/common/logging/nano/eventprotos$CameraEvent;)V
     .locals 13
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lfof;->a:Lgvb;
 
     invoke-static {p1}, Lixo;->toByteArray(Lixo;)[B
 
     move-result-object v1
 
-    .line 7
     new-instance v9, Lgvd;
 
-    .line 8
     invoke-direct {v9, v0, v1}, Lgvd;-><init>(Lgvb;[B)V
 
-    .line 10
     iget-boolean v0, v9, Lgvd;->g:Z
 
     if-eqz v0, :cond_0
@@ -88,7 +77,6 @@
 
     move-result-object v11
 
-    .line 11
     new-instance v12, Lcom/google/android/gms/clearcut/LogEventParcelable;
 
     new-instance v0, Lcom/google/android/gms/playlog/internal/PlayLoggerContext;
@@ -131,9 +119,7 @@
 
     invoke-direct {v12, v0, v1, v2, v3}, Lcom/google/android/gms/clearcut/LogEventParcelable;-><init>(Lcom/google/android/gms/playlog/internal/PlayLoggerContext;Lhbh;Lf;[I)V
 
-    .line 12
     invoke-interface {v10, v11, v12}, Lgvf;->a(Landroid/content/Context;Lcom/google/android/gms/clearcut/LogEventParcelable;)Lgvz;
 
-    .line 13
     return-void
 .end method

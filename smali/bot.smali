@@ -11,8 +11,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/legacy/app/activity/TrampolineActivity;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbot;->a:Lcom/google/android/apps/camera/legacy/app/activity/TrampolineActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,13 +23,9 @@
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbot;->a:Lcom/google/android/apps/camera/legacy/app/activity/TrampolineActivity;
 
-    .line 3
     invoke-virtual {v0, p1}, Lcom/google/android/apps/camera/legacy/app/activity/TrampolineActivity;->a(Landroid/content/Context;)V
 
-    .line 4
     return-void
 .end method

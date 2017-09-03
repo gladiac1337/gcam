@@ -16,8 +16,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;Z)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lggu;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     iput-boolean p2, p0, Lggu;->a:Z
@@ -32,8 +30,6 @@
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 2
 
-    .prologue
-    .line 2
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -44,7 +40,6 @@
 
     move-result v0
 
-    .line 3
     iget-boolean v1, p0, Lggu;->a:Z
 
     if-eqz v1, :cond_0
@@ -69,7 +64,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 4
     :cond_0
     iget-object v1, p0, Lggu;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
@@ -79,12 +73,10 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lggu;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->invalidate()V
 
-    .line 6
     return-void
 .end method

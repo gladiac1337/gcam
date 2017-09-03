@@ -30,11 +30,8 @@
 .method public constructor <init>(Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;Lilp;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Laqr;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -45,10 +42,8 @@
 
     iput-object v0, p0, Laqr;->a:Lilp;
 
-    .line 3
     const/4 v0, 0x2
 
-    .line 4
     invoke-static {p2, v0}, Laqr;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v0
@@ -57,7 +52,6 @@
 
     iput-object v0, p0, Laqr;->b:Lilp;
 
-    .line 5
     const/4 v0, 0x3
 
     invoke-static {p3, v0}, Laqr;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -68,7 +62,6 @@
 
     iput-object v0, p0, Laqr;->c:Lilp;
 
-    .line 6
     const/4 v0, 0x4
 
     invoke-static {p4, v0}, Laqr;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -79,7 +72,6 @@
 
     iput-object v0, p0, Laqr;->d:Lilp;
 
-    .line 7
     const/4 v0, 0x5
 
     invoke-static {p5, v0}, Laqr;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -90,7 +82,6 @@
 
     iput-object v0, p0, Laqr;->e:Lilp;
 
-    .line 8
     const/4 v0, 0x6
 
     invoke-static {p6, v0}, Laqr;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -101,7 +92,6 @@
 
     iput-object v0, p0, Laqr;->f:Lilp;
 
-    .line 9
     const/4 v0, 0x7
 
     invoke-static {p7, v0}, Laqr;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -112,7 +102,6 @@
 
     iput-object v0, p0, Laqr;->g:Lilp;
 
-    .line 10
     const/16 v0, 0x8
 
     invoke-static {p8, v0}, Laqr;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -123,7 +112,6 @@
 
     iput-object v0, p0, Laqr;->h:Lilp;
 
-    .line 11
     const/16 v0, 0x9
 
     invoke-static {p9, v0}, Laqr;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -134,18 +122,14 @@
 
     iput-object v0, p0, Laqr;->i:Lilp;
 
-    .line 12
     return-void
 .end method
 
 .method private static a(Ljava/lang/Object;I)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 13
     if-nez p0, :cond_0
 
-    .line 14
     new-instance v0, Ljava/lang/NullPointerException;
 
     const/16 v1, 0x5d
@@ -172,7 +156,6 @@
 
     throw v0
 
-    .line 15
     :cond_0
     return-object p0
 .end method
@@ -182,14 +165,10 @@
 .method public final synthetic a(Lape;Lfsq;Lavm;Lilc;Lavm;)Lapk;
     .locals 14
 
-    .prologue
-    .line 16
-    .line 17
     new-instance v1, Laqp;
 
     iget-object v2, p0, Laqr;->a:Lilp;
 
-    .line 18
     invoke-interface {v2}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -206,7 +185,6 @@
 
     iget-object v3, p0, Laqr;->b:Lilp;
 
-    .line 19
     invoke-interface {v3}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -223,7 +201,6 @@
 
     iget-object v4, p0, Laqr;->c:Lilp;
 
-    .line 20
     invoke-interface {v4}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v4
@@ -240,7 +217,6 @@
 
     iget-object v5, p0, Laqr;->d:Lilp;
 
-    .line 21
     invoke-interface {v5}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v5
@@ -257,7 +233,6 @@
 
     iget-object v6, p0, Laqr;->e:Lilp;
 
-    .line 22
     invoke-interface {v6}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -274,7 +249,6 @@
 
     iget-object v7, p0, Laqr;->f:Lilp;
 
-    .line 23
     invoke-interface {v7}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v7
@@ -291,7 +265,6 @@
 
     iget-object v8, p0, Laqr;->g:Lilp;
 
-    .line 24
     invoke-interface {v8}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v8
@@ -308,7 +281,6 @@
 
     iget-object v9, p0, Laqr;->h:Lilp;
 
-    .line 25
     invoke-interface {v9}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v9
@@ -325,7 +297,6 @@
 
     iget-object v10, p0, Laqr;->i:Lilp;
 
-    .line 26
     invoke-interface {v10}, Lilp;->a()Ljava/lang/Object;
 
     move-result-object v10
@@ -338,7 +309,6 @@
 
     const/16 v10, 0xa
 
-    .line 27
     invoke-static {p1, v10}, Laqr;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v10
@@ -347,7 +317,6 @@
 
     const/16 v11, 0xb
 
-    .line 28
     move-object/from16 v0, p2
 
     invoke-static {v0, v11}, Laqr;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -358,7 +327,6 @@
 
     const/16 v12, 0xc
 
-    .line 29
     move-object/from16 v0, p3
 
     invoke-static {v0, v12}, Laqr;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -369,14 +337,12 @@
 
     const/16 v13, 0xd
 
-    .line 30
     move-object/from16 v0, p4
 
     invoke-static {v0, v13}, Laqr;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     const/16 v13, 0xe
 
-    .line 31
     move-object/from16 v0, p5
 
     invoke-static {v0, v13}, Laqr;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -387,6 +353,5 @@
 
     invoke-direct/range {v1 .. v13}, Laqp;-><init>(Lapf;Lapp;Lapq;Lfsj;Lbhg;Lgow;Lgou;Lhic;Lape;Lfsq;Lavm;Lavm;)V
 
-    .line 32
     return-object v1
 .end method

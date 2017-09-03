@@ -7,21 +7,16 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 2
     const-string v0, "smartburst-jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 3
     return-void
 .end method
 
 .method public static a(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;IIIIIIII)[B
     .locals 10
 
-    .prologue
-    .line 1
     const/4 v9, 0x0
 
     move-object v0, p0

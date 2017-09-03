@@ -18,8 +18,6 @@
 .method constructor <init>(Lcuc;[BI)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcud;->c:Lcuc;
 
     iput-object p2, p0, Lcud;->a:[B
@@ -36,35 +34,27 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcud;->a:[B
 
     iget v1, p0, Lcud;->b:I
 
-    .line 3
     invoke-static {v0, v1}, Lkk;->a([BI)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 4
     iget-object v1, p0, Lcud;->c:Lcuc;
 
     iget-object v1, v1, Lcuc;->a:Lcti;
 
-    .line 5
     iget-object v1, v1, Lcjy;->a:Lcjz;
 
-    .line 6
     new-instance v2, Lcrx;
 
     iget-object v3, p0, Lcud;->a:[B
 
     invoke-direct {v2, v0, v3}, Lcrx;-><init>(Landroid/graphics/Bitmap;[B)V
 
-    .line 7
     invoke-interface {v1, v2}, Lcjz;->a(Ljava/lang/Object;)V
 
-    .line 8
     return-void
 .end method

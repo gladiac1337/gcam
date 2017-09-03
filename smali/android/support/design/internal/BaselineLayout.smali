@@ -11,54 +11,42 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p1, v0, v1}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 2
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/support/design/internal/BaselineLayout;->a:I
 
-    .line 3
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .prologue
-    .line 4
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 5
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/support/design/internal/BaselineLayout;->a:I
 
-    .line 6
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 1
 
-    .prologue
-    .line 7
     invoke-direct {p0, p1, p2, p3}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 8
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/support/design/internal/BaselineLayout;->a:I
 
-    .line 9
     return-void
 .end method
 
@@ -67,8 +55,6 @@
 .method public getBaseline()I
     .locals 1
 
-    .prologue
-    .line 56
     iget v0, p0, Landroid/support/design/internal/BaselineLayout;->a:I
 
     return v0
@@ -77,18 +63,14 @@
 .method protected onLayout(ZIIII)V
     .locals 11
 
-    .prologue
-    .line 39
     invoke-virtual {p0}, Landroid/support/design/internal/BaselineLayout;->getChildCount()I
 
     move-result v3
 
-    .line 40
     invoke-virtual {p0}, Landroid/support/design/internal/BaselineLayout;->getPaddingLeft()I
 
     move-result v4
 
-    .line 41
     sub-int v0, p4, p2
 
     invoke-virtual {p0}, Landroid/support/design/internal/BaselineLayout;->getPaddingRight()I
@@ -97,15 +79,12 @@
 
     sub-int/2addr v0, v1
 
-    .line 42
     sub-int v5, v0, v4
 
-    .line 43
     invoke-virtual {p0}, Landroid/support/design/internal/BaselineLayout;->getPaddingTop()I
 
     move-result v1
 
-    .line 44
     const/4 v0, 0x0
 
     move v2, v0
@@ -113,12 +92,10 @@
     :goto_0
     if-ge v2, v3, :cond_2
 
-    .line 45
     invoke-virtual {p0, v2}, Landroid/support/design/internal/BaselineLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v6
 
-    .line 46
     invoke-virtual {v6}, Landroid/view/View;->getVisibility()I
 
     move-result v0
@@ -127,24 +104,20 @@
 
     if-eq v0, v7, :cond_0
 
-    .line 47
     invoke-virtual {v6}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v7
 
-    .line 48
     invoke-virtual {v6}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v8
 
-    .line 49
     sub-int v0, v5, v7
 
     div-int/lit8 v0, v0, 0x2
 
     add-int v9, v4, v0
 
-    .line 50
     iget v0, p0, Landroid/support/design/internal/BaselineLayout;->a:I
 
     const/4 v10, -0x1
@@ -159,7 +132,6 @@
 
     if-eq v0, v10, :cond_1
 
-    .line 51
     iget v0, p0, Landroid/support/design/internal/BaselineLayout;->a:I
 
     add-int/2addr v0, v1
@@ -170,7 +142,6 @@
 
     sub-int/2addr v0, v10
 
-    .line 53
     :goto_1
     add-int/2addr v7, v9
 
@@ -178,7 +149,6 @@
 
     invoke-virtual {v6, v9, v0, v7, v8}, Landroid/view/View;->layout(IIII)V
 
-    .line 54
     :cond_0
     add-int/lit8 v0, v2, 0x1
 
@@ -189,10 +159,8 @@
     :cond_1
     move v0, v1
 
-    .line 52
     goto :goto_1
 
-    .line 55
     :cond_2
     return-void
 .end method
@@ -200,12 +168,10 @@
 .method protected onMeasure(II)V
     .locals 12
 
-    .prologue
     const/4 v0, 0x0
 
     const/4 v6, -0x1
 
-    .line 10
     invoke-virtual {p0}, Landroid/support/design/internal/BaselineLayout;->getChildCount()I
 
     move-result v7
@@ -222,16 +188,13 @@
 
     move v0, v6
 
-    .line 16
     :goto_0
     if-ge v5, v7, :cond_1
 
-    .line 17
     invoke-virtual {p0, v5}, Landroid/support/design/internal/BaselineLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v8
 
-    .line 18
     invoke-virtual {v8}, Landroid/view/View;->getVisibility()I
 
     move-result v9
@@ -240,23 +203,18 @@
 
     if-eq v9, v10, :cond_3
 
-    .line 19
     invoke-virtual {p0, v8, p1, p2}, Landroid/support/design/internal/BaselineLayout;->measureChild(Landroid/view/View;II)V
 
-    .line 20
     invoke-virtual {v8}, Landroid/view/View;->getBaseline()I
 
     move-result v9
 
-    .line 21
     if-eq v9, v6, :cond_0
 
-    .line 22
     invoke-static {v1, v9}, Ljava/lang/Math;->max(II)I
 
     move-result v1
 
-    .line 23
     invoke-virtual {v8}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v10
@@ -267,7 +225,6 @@
 
     move-result v0
 
-    .line 24
     :cond_0
     invoke-virtual {v8}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -277,7 +234,6 @@
 
     move-result v4
 
-    .line 25
     invoke-virtual {v8}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v9
@@ -286,7 +242,6 @@
 
     move-result v3
 
-    .line 26
     invoke-virtual {v8}, Landroid/view/View;->getMeasuredState()I
 
     move-result v8
@@ -303,7 +258,6 @@
 
     move v0, v11
 
-    .line 27
     :goto_1
     add-int/lit8 v5, v5, 0x1
 
@@ -317,11 +271,9 @@
 
     goto :goto_0
 
-    .line 28
     :cond_1
     if-eq v1, v6, :cond_2
 
-    .line 29
     invoke-virtual {p0}, Landroid/support/design/internal/BaselineLayout;->getPaddingBottom()I
 
     move-result v5
@@ -330,17 +282,14 @@
 
     move-result v0
 
-    .line 30
     add-int/2addr v0, v1
 
     invoke-static {v3, v0}, Ljava/lang/Math;->max(II)I
 
     move-result v3
 
-    .line 31
     iput v1, p0, Landroid/support/design/internal/BaselineLayout;->a:I
 
-    .line 32
     :cond_2
     invoke-virtual {p0}, Landroid/support/design/internal/BaselineLayout;->getSuggestedMinimumHeight()I
 
@@ -350,7 +299,6 @@
 
     move-result v0
 
-    .line 33
     invoke-virtual {p0}, Landroid/support/design/internal/BaselineLayout;->getSuggestedMinimumWidth()I
 
     move-result v1
@@ -359,22 +307,18 @@
 
     move-result v1
 
-    .line 35
     invoke-static {v1, p1, v2}, Landroid/view/View;->resolveSizeAndState(III)I
 
     move-result v1
 
     shl-int/lit8 v2, v2, 0x10
 
-    .line 36
     invoke-static {v0, p2, v2}, Landroid/view/View;->resolveSizeAndState(III)I
 
     move-result v0
 
-    .line 37
     invoke-virtual {p0, v1, v0}, Landroid/support/design/internal/BaselineLayout;->setMeasuredDimension(II)V
 
-    .line 38
     return-void
 
     :cond_3

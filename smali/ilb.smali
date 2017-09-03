@@ -7,8 +7,6 @@
 .method public static a(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 1
     if-eq p0, p1, :cond_0
 
     if-eqz p0, :cond_1

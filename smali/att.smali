@@ -16,8 +16,6 @@
 .method constructor <init>(Latr;Laud;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Latt;->b:Latr;
 
     iput-object p2, p0, Latt;->a:Laud;
@@ -32,18 +30,13 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Latt;->a:Laud;
 
     iget-object v1, p0, Latt;->b:Latr;
 
-    .line 3
     iget-object v1, v1, Latr;->b:Ljava/lang/Object;
 
-    .line 4
     invoke-virtual {v0, v1}, Laud;->a(Ljava/lang/Object;)V
 
-    .line 5
     return-void
 .end method

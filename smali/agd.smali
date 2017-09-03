@@ -14,8 +14,6 @@
 .method constructor <init>(Ljava/util/regex/Pattern;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lagd;->a:Ljava/util/regex/Pattern;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lagd;->a:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;

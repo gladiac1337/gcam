@@ -61,16 +61,12 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 2
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->isReversed:Z
 
-    .line 3
     sget v0, Lcom/google/android/apps/camera/bottombar/R$color;->bottom_bar_background_color:I
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getColor(I)I
@@ -79,48 +75,38 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->backgroundColor:I
 
-    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->inProgressAnimators:Ljava/util/List;
 
-    .line 5
     invoke-direct {p0, p1}, Lcom/google/android/apps/camera/bottombar/BottomBar;->inflate(Landroid/content/Context;)V
 
-    .line 6
     return-void
 .end method
 
 .method private fadeView(Landroid/view/View;ZZ)V
     .locals 6
 
-    .prologue
     const/4 v4, 0x2
 
     const/4 v2, 0x0
 
     const/4 v1, 0x0
 
-    .line 93
     invoke-static {}, Lhic;->a()V
 
-    .line 94
     if-eqz p3, :cond_1
 
-    .line 95
     invoke-virtual {p1}, Landroid/view/View;->isClickable()Z
 
     move-result v3
 
-    .line 96
     invoke-virtual {p1, v1}, Landroid/view/View;->setClickable(Z)V
 
-    .line 97
     if-eqz p2, :cond_0
 
-    .line 98
     const-string v0, "alpha"
 
     new-array v4, v4, [F
@@ -131,30 +117,24 @@
 
     move-result-object v0
 
-    .line 99
     const-wide/16 v4, 0x64
 
     invoke-virtual {v0, v4, v5}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 100
     const-wide/16 v4, 0xc8
 
     invoke-virtual {v0, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 101
     new-instance v4, Lgw;
 
     invoke-direct {v4}, Lgw;-><init>()V
 
     invoke-virtual {v0, v4}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 102
     invoke-virtual {p1, v2}, Landroid/view/View;->setAlpha(F)V
 
-    .line 103
     invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 107
     :goto_0
     new-instance v1, Lcom/google/android/apps/camera/bottombar/BottomBar$1;
 
@@ -162,19 +142,15 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 108
     iget-object v1, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->inProgressAnimators:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 109
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 113
     :goto_1
     return-void
 
-    .line 104
     :cond_0
     const-string v0, "alpha"
 
@@ -186,12 +162,10 @@
 
     move-result-object v0
 
-    .line 105
     const-wide/16 v4, 0x96
 
     invoke-virtual {v0, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 106
     new-instance v1, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v1}, Landroid/view/animation/LinearInterpolator;-><init>()V
@@ -200,7 +174,6 @@
 
     goto :goto_0
 
-    .line 111
     :cond_1
     if-eqz p2, :cond_2
 
@@ -209,7 +182,6 @@
     :goto_2
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 112
     if-eqz p2, :cond_3
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -219,7 +191,6 @@
 
     goto :goto_1
 
-    .line 111
     :cond_2
     const/16 v0, 0x8
 
@@ -228,10 +199,8 @@
     :cond_3
     move v0, v2
 
-    .line 112
     goto :goto_3
 
-    .line 98
     nop
 
     :array_0
@@ -240,7 +209,6 @@
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 104
     :array_1
     .array-data 4
         0x3f800000    # 1.0f
@@ -251,31 +219,24 @@
 .method private inflate(Landroid/content/Context;)V
     .locals 3
 
-    .prologue
-    .line 7
     const-string v0, "layout_inflater"
 
-    .line 8
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    .line 9
     sget v1, Lcom/google/android/apps/camera/bottombar/R$layout;->bottom_bar_layout:I
 
-    .line 10
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
-    .line 11
     invoke-static {v0}, Lgmu;->a(Landroid/view/View;)Lgmu;
 
     move-result-object v1
 
-    .line 12
     sget v0, Lcom/google/android/apps/camera/bottombar/R$id;->shutter_button:I
 
     invoke-virtual {v1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -286,7 +247,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->shutterButton:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
-    .line 13
     sget v0, Lcom/google/android/apps/camera/bottombar/R$id;->photo_switch_button:I
 
     invoke-virtual {v1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -297,15 +257,12 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->photoSwitchButton:Lcom/google/android/apps/camera/shutterbutton/SmoothRotateSwitchButton;
 
-    .line 14
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->photoSwitchButton:Lcom/google/android/apps/camera/shutterbutton/SmoothRotateSwitchButton;
 
-    .line 15
     const/4 v2, 0x1
 
     iput-boolean v2, v0, Lcom/google/android/apps/camera/shutterbutton/SmoothRotateSwitchButton;->a:Z
 
-    .line 16
     sget v0, Lcom/google/android/apps/camera/bottombar/R$id;->video_switch_button:I
 
     invoke-virtual {v1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -316,15 +273,12 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->videoSwitchButton:Lcom/google/android/apps/camera/shutterbutton/SmoothRotateSwitchButton;
 
-    .line 17
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->videoSwitchButton:Lcom/google/android/apps/camera/shutterbutton/SmoothRotateSwitchButton;
 
-    .line 18
     const/4 v2, 0x0
 
     iput-boolean v2, v0, Lcom/google/android/apps/camera/shutterbutton/SmoothRotateSwitchButton;->a:Z
 
-    .line 19
     sget v0, Lcom/google/android/apps/camera/bottombar/R$id;->pause_resume_button:I
 
     invoke-virtual {v1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -335,7 +289,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->pauseResumeButton:Lcom/google/android/apps/camera/bottombar/PauseResumeButton;
 
-    .line 20
     sget v0, Lcom/google/android/apps/camera/bottombar/R$id;->camera_switch_button:I
 
     invoke-virtual {v1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -346,7 +299,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->cameraSwitchButton:Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;
 
-    .line 21
     sget v0, Lcom/google/android/apps/camera/bottombar/R$id;->snapshot_button:I
 
     invoke-virtual {v1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -357,7 +309,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->snapshotButton:Lcom/google/android/apps/camera/bottombar/SnapshotButton;
 
-    .line 22
     sget v0, Lcom/google/android/apps/camera/bottombar/R$id;->thumbnail_button:I
 
     invoke-virtual {v1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -368,7 +319,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->thumbnailView:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;
 
-    .line 23
     sget v0, Lcom/google/android/apps/camera/bottombar/R$id;->hfr_button:I
 
     invoke-virtual {v1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -379,7 +329,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->hfrButton:Lcom/google/android/apps/camera/bottombar/HfrButton;
 
-    .line 24
     sget v0, Lcom/google/android/apps/camera/bottombar/R$id;->cancel_button:I
 
     invoke-virtual {v1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -390,7 +339,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->cancelButton:Landroid/widget/ImageButton;
 
-    .line 25
     sget v0, Lcom/google/android/apps/camera/bottombar/R$id;->retake_button:I
 
     invoke-virtual {v1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -401,7 +349,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->retakeButton:Landroid/widget/ImageButton;
 
-    .line 26
     sget v0, Lcom/google/android/apps/camera/bottombar/R$id;->review_play_button:I
 
     invoke-virtual {v1, v0}, Lgmu;->a(I)Ljava/lang/Object;
@@ -412,31 +359,24 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->reviewPlayButton:Landroid/widget/ImageButton;
 
-    .line 27
     return-void
 .end method
 
 .method private reorderChildren(Z)V
     .locals 3
 
-    .prologue
-    .line 57
     iget-boolean v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->isReversed:Z
 
     if-ne v0, p1, :cond_1
 
-    .line 65
     :cond_0
     return-void
 
-    .line 59
     :cond_1
     iput-boolean p1, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->isReversed:Z
 
-    .line 60
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/BottomBar;->removeAllViews()V
 
-    .line 61
     if-eqz p1, :cond_2
 
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->children:Ljava/util/List;
@@ -445,7 +385,6 @@
 
     move-result-object v0
 
-    .line 62
     :goto_0
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -464,7 +403,6 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 63
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
@@ -473,7 +411,6 @@
 
     goto :goto_1
 
-    .line 61
     :cond_2
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->children:Ljava/util/List;
 
@@ -485,15 +422,12 @@
 .method changeSideButtons(Landroid/view/View;Landroid/view/View;Z)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 77
     invoke-static {}, Lhic;->a()V
 
-    .line 78
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->inProgressAnimators:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -513,59 +447,46 @@
 
     check-cast v0, Landroid/animation/ObjectAnimator;
 
-    .line 79
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->end()V
 
     goto :goto_0
 
-    .line 81
     :cond_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->inProgressAnimators:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 82
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->currentLeftButton:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
-    .line 83
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->currentLeftButton:Landroid/view/View;
 
     invoke-direct {p0, v0, v2, p3}, Lcom/google/android/apps/camera/bottombar/BottomBar;->fadeView(Landroid/view/View;ZZ)V
 
-    .line 84
     :cond_1
     iput-object p1, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->currentLeftButton:Landroid/view/View;
 
-    .line 85
     if-eqz p1, :cond_2
 
-    .line 86
     invoke-direct {p0, p1, v3, p3}, Lcom/google/android/apps/camera/bottombar/BottomBar;->fadeView(Landroid/view/View;ZZ)V
 
-    .line 87
     :cond_2
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->currentRightButton:Landroid/view/View;
 
     if-eqz v0, :cond_3
 
-    .line 88
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->currentRightButton:Landroid/view/View;
 
     invoke-direct {p0, v0, v2, p3}, Lcom/google/android/apps/camera/bottombar/BottomBar;->fadeView(Landroid/view/View;ZZ)V
 
-    .line 89
     :cond_3
     iput-object p2, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->currentRightButton:Landroid/view/View;
 
-    .line 90
     if-eqz p2, :cond_4
 
-    .line 91
     invoke-direct {p0, p2, v3, p3}, Lcom/google/android/apps/camera/bottombar/BottomBar;->fadeView(Landroid/view/View;ZZ)V
 
-    .line 92
     :cond_4
     return-void
 .end method
@@ -573,21 +494,16 @@
 .method fadeBackground(ZZ)V
     .locals 6
 
-    .prologue
     const-wide/16 v4, 0xd9
 
     const/4 v2, 0x2
 
-    .line 66
     invoke-static {}, Lhic;->a()V
 
-    .line 67
     if-eqz p2, :cond_1
 
-    .line 68
     if-eqz p1, :cond_0
 
-    .line 69
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/BottomBar;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -602,21 +518,16 @@
 
     move-result-object v0
 
-    .line 71
     :goto_0
     invoke-virtual {v0, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 72
     invoke-virtual {v0, v4, v5}, Landroid/animation/ObjectAnimator;->setStartDelay(J)V
 
-    .line 73
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 76
     :goto_1
     return-void
 
-    .line 70
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/BottomBar;->getBackground()Landroid/graphics/drawable/Drawable;
 
@@ -634,7 +545,6 @@
 
     goto :goto_0
 
-    .line 75
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/BottomBar;->getBackground()Landroid/graphics/drawable/Drawable;
 
@@ -654,7 +564,6 @@
 
     goto :goto_2
 
-    .line 69
     nop
 
     :array_0
@@ -663,7 +572,6 @@
         0xff
     .end array-data
 
-    .line 70
     :array_1
     .array-data 4
         0xff
@@ -674,8 +582,6 @@
 .method public getBackgroundColorProperty()Lgll;
     .locals 1
 
-    .prologue
-    .line 122
     new-instance v0, Lcom/google/android/apps/camera/bottombar/BottomBar$2;
 
     invoke-direct {v0, p0}, Lcom/google/android/apps/camera/bottombar/BottomBar$2;-><init>(Lcom/google/android/apps/camera/bottombar/BottomBar;)V
@@ -686,8 +592,6 @@
 .method getCameraSwitchButton()Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;
     .locals 1
 
-    .prologue
-    .line 129
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->cameraSwitchButton:Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;
 
     return-object v0
@@ -696,8 +600,6 @@
 .method getCancelButton()Landroid/widget/ImageButton;
     .locals 1
 
-    .prologue
-    .line 133
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->cancelButton:Landroid/widget/ImageButton;
 
     return-object v0
@@ -706,8 +608,6 @@
 .method getHfrButton()Lcom/google/android/apps/camera/bottombar/HfrButton;
     .locals 1
 
-    .prologue
-    .line 132
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->hfrButton:Lcom/google/android/apps/camera/bottombar/HfrButton;
 
     return-object v0
@@ -716,8 +616,6 @@
 .method getPauseResumeButton()Lcom/google/android/apps/camera/bottombar/PauseResumeButton;
     .locals 1
 
-    .prologue
-    .line 128
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->pauseResumeButton:Lcom/google/android/apps/camera/bottombar/PauseResumeButton;
 
     return-object v0
@@ -726,8 +624,6 @@
 .method public getPhotoSwitchButton()Lcom/google/android/apps/camera/shutterbutton/SmoothRotateSwitchButton;
     .locals 1
 
-    .prologue
-    .line 126
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->photoSwitchButton:Lcom/google/android/apps/camera/shutterbutton/SmoothRotateSwitchButton;
 
     return-object v0
@@ -736,8 +632,6 @@
 .method getRetakeButton()Landroid/widget/ImageButton;
     .locals 1
 
-    .prologue
-    .line 134
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->retakeButton:Landroid/widget/ImageButton;
 
     return-object v0
@@ -746,8 +640,6 @@
 .method getReviewPlayButton()Landroid/widget/ImageButton;
     .locals 1
 
-    .prologue
-    .line 135
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->reviewPlayButton:Landroid/widget/ImageButton;
 
     return-object v0
@@ -756,8 +648,6 @@
 .method public getShutterButton()Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
     .locals 1
 
-    .prologue
-    .line 125
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->shutterButton:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     return-object v0
@@ -766,8 +656,6 @@
 .method getSnapshotButton()Lcom/google/android/apps/camera/bottombar/SnapshotButton;
     .locals 1
 
-    .prologue
-    .line 130
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->snapshotButton:Lcom/google/android/apps/camera/bottombar/SnapshotButton;
 
     return-object v0
@@ -776,8 +664,6 @@
 .method public getThumbnailButton()Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;
     .locals 1
 
-    .prologue
-    .line 131
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->thumbnailView:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;
 
     return-object v0
@@ -786,8 +672,6 @@
 .method public getVideoSwitchButton()Lcom/google/android/apps/camera/shutterbutton/SmoothRotateSwitchButton;
     .locals 1
 
-    .prologue
-    .line 127
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->videoSwitchButton:Lcom/google/android/apps/camera/shutterbutton/SmoothRotateSwitchButton;
 
     return-object v0
@@ -796,18 +680,14 @@
 .method protected onFinishInflate()V
     .locals 3
 
-    .prologue
-    .line 28
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
-    .line 29
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->children:Ljava/util/List;
 
-    .line 30
     const/4 v0, 0x0
 
     :goto_0
@@ -817,7 +697,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 31
     iget-object v1, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->children:Ljava/util/List;
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/bottombar/BottomBar;->getChildAt(I)Landroid/view/View;
@@ -826,12 +705,10 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 32
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 33
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/BottomBar;->getResources()Landroid/content/res/Resources;
 
@@ -845,7 +722,6 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->verticalOffset:I
 
-    .line 34
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/BottomBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -858,46 +734,38 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->contentSidePadding:I
 
-    .line 35
     iget v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->backgroundColor:I
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/bottombar/BottomBar;->setBackgroundColor(I)V
 
-    .line 36
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/BottomBar;->getCameraSwitchButton()Lcom/google/android/apps/camera/bottombar/CameraSwitchButton;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->currentLeftButton:Landroid/view/View;
 
-    .line 37
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/BottomBar;->getThumbnailButton()Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->currentRightButton:Landroid/view/View;
 
-    .line 38
     return-void
 .end method
 
 .method protected onMeasure(II)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v1, 0x0
 
-    .line 39
     const/16 v0, 0x11
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/bottombar/BottomBar;->setGravity(I)V
 
-    .line 40
     iget v2, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->verticalOffset:I
 
-    .line 41
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x18
@@ -918,7 +786,6 @@
 
     move v0, v1
 
-    .line 43
     :goto_0
     iget-object v2, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->orientation:Lgls;
 
@@ -932,29 +799,23 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 44
     :cond_0
     invoke-virtual {p0, v1}, Lcom/google/android/apps/camera/bottombar/BottomBar;->setOrientation(I)V
 
-    .line 45
     invoke-direct {p0, v1}, Lcom/google/android/apps/camera/bottombar/BottomBar;->reorderChildren(Z)V
 
-    .line 46
     iget v2, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->contentSidePadding:I
 
     iget v3, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->contentSidePadding:I
 
     invoke-virtual {p0, v2, v0, v3, v1}, Lcom/google/android/apps/camera/bottombar/BottomBar;->setPadding(IIII)V
 
-    .line 55
     :cond_1
     :goto_1
     invoke-super {p0, p1, p2}, Landroid/widget/LinearLayout;->onMeasure(II)V
 
-    .line 56
     return-void
 
-    .line 47
     :cond_2
     iget-object v2, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->orientation:Lgls;
 
@@ -962,13 +823,10 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 48
     invoke-virtual {p0, v4}, Lcom/google/android/apps/camera/bottombar/BottomBar;->setOrientation(I)V
 
-    .line 49
     invoke-direct {p0, v4}, Lcom/google/android/apps/camera/bottombar/BottomBar;->reorderChildren(Z)V
 
-    .line 50
     iget v2, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->contentSidePadding:I
 
     iget v3, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->contentSidePadding:I
@@ -977,7 +835,6 @@
 
     goto :goto_1
 
-    .line 51
     :cond_3
     iget-object v2, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->orientation:Lgls;
 
@@ -985,13 +842,10 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 52
     invoke-virtual {p0, v4}, Lcom/google/android/apps/camera/bottombar/BottomBar;->setOrientation(I)V
 
-    .line 53
     invoke-direct {p0, v1}, Lcom/google/android/apps/camera/bottombar/BottomBar;->reorderChildren(Z)V
 
-    .line 54
     iget v2, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->contentSidePadding:I
 
     iget v3, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->contentSidePadding:I
@@ -1009,47 +863,37 @@
 .method public setClickable(Z)V
     .locals 1
 
-    .prologue
-    .line 119
     invoke-virtual {p0}, Lcom/google/android/apps/camera/bottombar/BottomBar;->getShutterButton()Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->setClickEnabled(Z)V
 
-    .line 120
     invoke-virtual {p0, p1}, Lcom/google/android/apps/camera/bottombar/BottomBar;->setSideButtonsClickable(Z)V
 
-    .line 121
     return-void
 .end method
 
 .method setSideButtonsClickable(Z)V
     .locals 1
 
-    .prologue
-    .line 114
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->currentRightButton:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 115
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->currentRightButton:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setClickable(Z)V
 
-    .line 116
     :cond_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->currentLeftButton:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
-    .line 117
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->currentLeftButton:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setClickable(Z)V
 
-    .line 118
     :cond_1
     return-void
 .end method
@@ -1057,10 +901,7 @@
 .method public setUiOrientation(Lgls;)V
     .locals 0
 
-    .prologue
-    .line 123
     iput-object p1, p0, Lcom/google/android/apps/camera/bottombar/BottomBar;->orientation:Lgls;
 
-    .line 124
     return-void
 .end method

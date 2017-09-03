@@ -29,8 +29,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 181
     const-string v0, "SettingsManager"
 
     invoke-static {v0}, Lbgj;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -45,45 +43,36 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/content/SharedPreferences;Lhjz;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lgft;-><init>()V
 
-    .line 2
     new-instance v0, Lgfi;
 
     invoke-direct {v0}, Lgfi;-><init>()V
 
-    .line 3
     const/4 v0, 0x0
 
     iput-object v0, p0, Lgfl;->g:Ljava/lang/String;
 
-    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lgfl;->h:Ljava/util/List;
 
-    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lgfl;->i:Ljava/util/List;
 
-    .line 6
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lgfl;->b:Ljava/lang/Object;
 
-    .line 7
     iput-object p1, p0, Lgfl;->c:Landroid/content/Context;
 
-    .line 8
     iget-object v0, p0, Lgfl;->c:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -92,33 +81,26 @@
 
     iput-object v0, p0, Lgfl;->d:Ljava/lang/String;
 
-    .line 9
     iput-object p2, p0, Lgfl;->e:Landroid/content/SharedPreferences;
 
-    .line 11
     sput-object p3, Lcom/google/android/apps/camera/backup/CameraBackupAgent;->a:Lhjz;
 
-    .line 12
     new-instance v0, Lgfm;
 
     invoke-direct {v0, p1}, Lgfm;-><init>(Landroid/content/Context;)V
 
     invoke-virtual {p0, v0}, Lgfl;->a(Lgfo;)V
 
-    .line 13
     return-void
 .end method
 
 .method private final b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 102
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 103
     :try_start_0
     invoke-direct {p0, p1}, Lgfl;->d(Ljava/lang/String;)Landroid/content/SharedPreferences;
     :try_end_0
@@ -126,7 +108,6 @@
 
     move-result-object v0
 
-    .line 104
     :try_start_1
     invoke-interface {v0, p2, p3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     :try_end_1
@@ -138,22 +119,18 @@
     :try_start_2
     monitor-exit v1
 
-    .line 108
     :goto_0
     return-object p3
 
-    .line 105
     :catch_0
     move-exception v2
 
-    .line 106
     sget-object v3, Lgfl;->a:Ljava/lang/String;
 
     const-string v4, "existing preference with invalid type, removing and returning default"
 
     invoke-static {v3, v4, v2}, Lbgj;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 107
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -164,12 +141,10 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 108
     monitor-exit v1
 
     goto :goto_0
 
-    .line 109
     :catchall_0
     move-exception v0
 
@@ -183,13 +158,10 @@
 .method private final d(Ljava/lang/String;)Landroid/content/SharedPreferences;
     .locals 5
 
-    .prologue
-    .line 59
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 60
     :try_start_0
     const-string v0, "default_scope"
 
@@ -199,16 +171,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 61
     iget-object v0, p0, Lgfl;->e:Landroid/content/SharedPreferences;
 
     monitor-exit v1
 
-    .line 73
     :goto_0
     return-object v0
 
-    .line 62
     :cond_0
     iget-object v0, p0, Lgfl;->g:Ljava/lang/String;
 
@@ -218,14 +187,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 63
     iget-object v0, p0, Lgfl;->f:Landroid/content/SharedPreferences;
 
     monitor-exit v1
 
     goto :goto_0
 
-    .line 74
     :catchall_0
     move-exception v0
 
@@ -235,24 +202,20 @@
 
     throw v0
 
-    .line 64
     :cond_1
     :try_start_1
     iget-object v0, p0, Lgfl;->f:Landroid/content/SharedPreferences;
 
     if-eqz v0, :cond_3
 
-    .line 65
     iget-object v2, p0, Lgfl;->f:Landroid/content/SharedPreferences;
 
-    .line 66
     iget-object v3, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 67
     :try_start_2
     iget-object v0, p0, Lgfl;->i:Ljava/util/List;
 
@@ -273,12 +236,10 @@
 
     check-cast v0, Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 
-    .line 68
     invoke-interface {v2, v0}, Landroid/content/SharedPreferences;->unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
     goto :goto_1
 
-    .line 71
     :catchall_1
     move-exception v0
 
@@ -291,19 +252,16 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 70
     :cond_2
     const/4 v0, 0x0
 
     :try_start_4
     iput-object v0, p0, Lgfl;->g:Ljava/lang/String;
 
-    .line 71
     monitor-exit v3
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 72
     :cond_3
     :try_start_5
     invoke-virtual {p0, p1}, Lgfl;->a(Ljava/lang/String;)Landroid/content/SharedPreferences;
@@ -312,7 +270,6 @@
 
     iput-object v0, p0, Lgfl;->f:Landroid/content/SharedPreferences;
 
-    .line 73
     iget-object v0, p0, Lgfl;->f:Landroid/content/SharedPreferences;
 
     monitor-exit v1
@@ -325,13 +282,10 @@
 .method private final e(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 91
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 92
     :try_start_0
     invoke-static {p1}, Lgfi;->a(Ljava/lang/String;)Ljava/lang/String;
 
@@ -341,7 +295,6 @@
 
     return-object v0
 
-    .line 93
     :catchall_0
     move-exception v0
 
@@ -355,19 +308,15 @@
 .method private final f(Ljava/lang/String;)Ljava/lang/Integer;
     .locals 2
 
-    .prologue
-    .line 94
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 95
     :try_start_0
     invoke-static {p1}, Lgfi;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 96
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
@@ -388,7 +337,6 @@
 
     goto :goto_0
 
-    .line 97
     :catchall_0
     move-exception v0
 
@@ -402,19 +350,15 @@
 .method private final g(Ljava/lang/String;)Z
     .locals 2
 
-    .prologue
-    .line 98
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 99
     :try_start_0
     invoke-static {p1}, Lgfi;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 100
     if-eqz v0, :cond_0
 
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -435,7 +379,6 @@
 
     goto :goto_0
 
-    .line 101
     :catchall_0
     move-exception v0
 
@@ -451,13 +394,10 @@
 .method public final a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;)I
     .locals 2
 
-    .prologue
-    .line 113
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 114
     :try_start_0
     invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
 
@@ -467,37 +407,30 @@
 
     move-result-object v0
 
-    .line 115
     invoke-direct {p0, p1, p2, v0}, Lgfl;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 116
     if-nez v0, :cond_0
 
-    .line 117
     invoke-virtual {p3}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
     monitor-exit v1
 
-    .line 120
     :goto_0
     return v0
 
-    .line 119
     :cond_0
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 120
     monitor-exit v1
 
     goto :goto_0
 
-    .line 121
     :catchall_0
     move-exception v0
 
@@ -511,13 +444,10 @@
 .method public final a()Landroid/content/SharedPreferences;
     .locals 2
 
-    .prologue
-    .line 14
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 15
     :try_start_0
     iget-object v0, p0, Lgfl;->e:Landroid/content/SharedPreferences;
 
@@ -525,7 +455,6 @@
 
     return-object v0
 
-    .line 16
     :catchall_0
     move-exception v0
 
@@ -539,13 +468,10 @@
 .method public final a(Ljava/lang/String;)Landroid/content/SharedPreferences;
     .locals 5
 
-    .prologue
-    .line 17
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 18
     :try_start_0
     iget-object v2, p0, Lgfl;->c:Landroid/content/Context;
 
@@ -576,7 +502,6 @@
 
     move-result-object v2
 
-    .line 19
     iget-object v0, p0, Lgfl;->i:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -596,12 +521,10 @@
 
     check-cast v0, Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 
-    .line 20
     invoke-interface {v2, v0}, Landroid/content/SharedPreferences;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
     goto :goto_1
 
-    .line 24
     :catchall_0
     move-exception v0
 
@@ -611,7 +534,6 @@
 
     throw v0
 
-    .line 18
     :cond_0
     :try_start_1
     new-instance v0, Ljava/lang/String;
@@ -620,11 +542,9 @@
 
     goto :goto_0
 
-    .line 22
     :cond_1
     iput-object p1, p0, Lgfl;->g:Ljava/lang/String;
 
-    .line 23
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -635,13 +555,10 @@
 .method public final a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 110
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 111
     :try_start_0
     invoke-direct {p0, p2}, Lgfl;->e(Ljava/lang/String;)Ljava/lang/String;
 
@@ -655,7 +572,6 @@
 
     return-object v0
 
-    .line 112
     :catchall_0
     move-exception v0
 
@@ -669,28 +585,22 @@
 .method public final a(Lgfo;)V
     .locals 5
 
-    .prologue
-    .line 25
     iget-object v0, p0, Lgfl;->b:Ljava/lang/Object;
 
     invoke-static {v0}, Lkk;->j(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 26
     iget-object v0, p0, Lgfl;->i:Ljava/util/List;
 
     invoke-static {v0}, Lkk;->j(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 27
     iget-object v0, p0, Lgfl;->e:Landroid/content/SharedPreferences;
 
     invoke-static {v0}, Lkk;->j(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 28
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 29
     :try_start_0
     iget-object v0, p0, Lgfl;->h:Ljava/util/List;
 
@@ -700,45 +610,36 @@
 
     if-eqz v0, :cond_0
 
-    .line 30
     monitor-exit v1
 
-    .line 41
     :goto_0
     return-void
 
-    .line 31
     :cond_0
     iget-object v0, p0, Lgfl;->h:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 34
     new-instance v0, Lgfn;
 
     invoke-direct {v0, p1}, Lgfn;-><init>(Lgfo;)V
 
-    .line 36
     iget-object v2, p0, Lgfl;->i:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 37
     iget-object v2, p0, Lgfl;->e:Landroid/content/SharedPreferences;
 
     invoke-interface {v2, v0}, Landroid/content/SharedPreferences;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
-    .line 38
     iget-object v2, p0, Lgfl;->f:Landroid/content/SharedPreferences;
 
     if-eqz v2, :cond_1
 
-    .line 39
     iget-object v2, p0, Lgfl;->f:Landroid/content/SharedPreferences;
 
     invoke-interface {v2, v0}, Landroid/content/SharedPreferences;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
-    .line 40
     :cond_1
     sget-object v0, Lgfl;->a:Ljava/lang/String;
 
@@ -778,7 +679,6 @@
 
     invoke-static {v0, v2}, Lbgj;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 41
     monitor-exit v1
 
     goto :goto_0
@@ -796,24 +696,19 @@
 .method public final a(Ljava/lang/String;I[I)V
     .locals 5
 
-    .prologue
-    .line 78
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 79
     :try_start_0
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 80
     array-length v0, p3
 
     new-array v3, v0, [Ljava/lang/String;
 
-    .line 81
     const/4 v0, 0x0
 
     :goto_0
@@ -821,7 +716,6 @@
 
     if-ge v0, v4, :cond_0
 
-    .line 82
     aget v4, p3, v0
 
     invoke-static {v4}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -830,16 +724,13 @@
 
     aput-object v4, v3, v0
 
-    .line 83
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 84
     :cond_0
     invoke-static {p1, v2, v3}, Lgfi;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 85
     monitor-exit v1
 
     return-void
@@ -857,22 +748,17 @@
 .method public final a(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 2
 
-    .prologue
-    .line 152
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 154
     :try_start_0
     invoke-static {p3}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 155
     invoke-virtual {p0, p1, p2, v0}, Lgfl;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 156
     monitor-exit v1
 
     return-void
@@ -890,19 +776,15 @@
 .method public final a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 148
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 149
     :try_start_0
     invoke-direct {p0, p1}, Lgfl;->d(Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 150
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -913,7 +795,6 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 151
     monitor-exit v1
 
     return-void
@@ -931,17 +812,13 @@
 .method public final a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 75
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 76
     :try_start_0
     invoke-static {p1, p2, p3}, Lgfi;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 77
     monitor-exit v1
 
     return-void
@@ -959,19 +836,15 @@
 .method public final a(Ljava/lang/String;Z)V
     .locals 5
 
-    .prologue
-    .line 86
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 87
     if-eqz p2, :cond_0
 
     :try_start_0
     const-string v0, "1"
 
-    .line 88
     :goto_0
     const/4 v2, 0x2
 
@@ -989,21 +862,17 @@
 
     aput-object v4, v2, v3
 
-    .line 89
     invoke-static {p1, v0, v2}, Lgfi;->a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 90
     monitor-exit v1
 
     return-void
 
-    .line 87
     :cond_0
     const-string v0, "0"
 
     goto :goto_0
 
-    .line 90
     :catchall_0
     move-exception v0
 
@@ -1017,41 +886,32 @@
 .method public final a(Ljava/lang/String;Ljava/lang/String;Z)Z
     .locals 2
 
-    .prologue
-    .line 125
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 126
     if-eqz p3, :cond_0
 
     :try_start_0
     const-string v0, "1"
 
-    .line 127
     :goto_0
     invoke-direct {p0, p1, p2, v0}, Lgfl;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 128
     if-nez v0, :cond_1
 
-    .line 129
     monitor-exit v1
 
-    .line 132
     :goto_1
     return p3
 
-    .line 126
     :cond_0
     const-string v0, "0"
 
     goto :goto_0
 
-    .line 131
     :cond_1
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -1061,13 +921,11 @@
 
     const/4 p3, 0x1
 
-    .line 132
     :goto_2
     monitor-exit v1
 
     goto :goto_1
 
-    .line 133
     :catchall_0
     move-exception v0
 
@@ -1077,7 +935,6 @@
 
     throw v0
 
-    .line 131
     :cond_2
     const/4 p3, 0x0
 
@@ -1087,13 +944,10 @@
 .method public final b(Ljava/lang/String;Ljava/lang/String;)I
     .locals 2
 
-    .prologue
-    .line 122
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 123
     :try_start_0
     invoke-direct {p0, p2}, Lgfl;->f(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -1107,7 +961,6 @@
 
     return v0
 
-    .line 124
     :catchall_0
     move-exception v0
 
@@ -1121,31 +974,24 @@
 .method public final b(Lgfo;)V
     .locals 4
 
-    .prologue
-    .line 42
     iget-object v0, p0, Lgfl;->b:Ljava/lang/Object;
 
     invoke-static {v0}, Lkk;->j(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 43
     iget-object v0, p0, Lgfl;->i:Ljava/util/List;
 
     invoke-static {v0}, Lkk;->j(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 44
     iget-object v0, p0, Lgfl;->e:Landroid/content/SharedPreferences;
 
     invoke-static {v0}, Lkk;->j(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 45
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 46
     if-nez p1, :cond_0
 
-    .line 47
     :try_start_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1153,7 +999,6 @@
 
     throw v0
 
-    .line 58
     :catchall_0
     move-exception v0
 
@@ -1163,7 +1008,6 @@
 
     throw v0
 
-    .line 48
     :cond_0
     :try_start_1
     iget-object v0, p0, Lgfl;->h:Ljava/util/List;
@@ -1174,14 +1018,11 @@
 
     if-nez v0, :cond_1
 
-    .line 49
     monitor-exit v1
 
-    .line 58
     :goto_0
     return-void
 
-    .line 50
     :cond_1
     iget-object v0, p0, Lgfl;->h:Ljava/util/List;
 
@@ -1189,42 +1030,34 @@
 
     move-result v2
 
-    .line 51
     iget-object v0, p0, Lgfl;->h:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 52
     iget-object v0, p0, Lgfl;->i:Ljava/util/List;
 
-    .line 53
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 
-    .line 54
     iget-object v3, p0, Lgfl;->i:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 55
     iget-object v2, p0, Lgfl;->e:Landroid/content/SharedPreferences;
 
     invoke-interface {v2, v0}, Landroid/content/SharedPreferences;->unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
-    .line 56
     iget-object v2, p0, Lgfl;->f:Landroid/content/SharedPreferences;
 
     if-eqz v2, :cond_2
 
-    .line 57
     iget-object v2, p0, Lgfl;->f:Landroid/content/SharedPreferences;
 
     invoke-interface {v2, v0}, Landroid/content/SharedPreferences;->unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
 
-    .line 58
     :cond_2
     monitor-exit v1
     :try_end_1
@@ -1236,26 +1069,21 @@
 .method public final b(Ljava/lang/String;Ljava/lang/String;I)V
     .locals 4
 
-    .prologue
-    .line 165
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 166
     :try_start_0
     invoke-static {p2}, Lgfi;->b(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 167
     if-eqz v0, :cond_0
 
     array-length v2, v0
 
     if-nez v2, :cond_1
 
-    .line 168
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1311,7 +1139,6 @@
 
     throw v0
 
-    .line 172
     :catchall_0
     move-exception v0
 
@@ -1321,7 +1148,6 @@
 
     throw v0
 
-    .line 169
     :cond_1
     if-ltz p3, :cond_2
 
@@ -1330,17 +1156,14 @@
 
     if-ge p3, v2, :cond_2
 
-    .line 170
     aget-object v0, v0, p3
 
     invoke-virtual {p0, p1, p2, v0}, Lgfl;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 172
     monitor-exit v1
 
     return-void
 
-    .line 171
     :cond_2
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -1402,13 +1225,10 @@
 .method public final b(Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 2
 
-    .prologue
-    .line 157
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 158
     :try_start_0
     invoke-static {p3}, Lgfl;->a(Z)Ljava/lang/String;
 
@@ -1416,7 +1236,6 @@
 
     invoke-virtual {p0, p1, p2, v0}, Lgfl;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 159
     monitor-exit v1
 
     return-void
@@ -1434,13 +1253,10 @@
 .method public final c(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 2
 
-    .prologue
-    .line 134
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 135
     :try_start_0
     invoke-direct {p0, p2}, Lgfl;->g(Ljava/lang/String;)Z
 
@@ -1454,7 +1270,6 @@
 
     return v0
 
-    .line 136
     :catchall_0
     move-exception v0
 
@@ -1468,26 +1283,21 @@
 .method public final d(Ljava/lang/String;Ljava/lang/String;)I
     .locals 5
 
-    .prologue
-    .line 137
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 138
     :try_start_0
     invoke-static {p2}, Lgfi;->b(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 139
     if-eqz v2, :cond_0
 
     array-length v0, v2
 
     if-nez v0, :cond_1
 
-    .line 140
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1543,7 +1353,6 @@
 
     throw v0
 
-    .line 147
     :catchall_0
     move-exception v0
 
@@ -1553,14 +1362,12 @@
 
     throw v0
 
-    .line 141
     :cond_1
     :try_start_1
     invoke-virtual {p0, p1, p2}, Lgfl;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 142
     const/4 v0, 0x0
 
     :goto_0
@@ -1568,7 +1375,6 @@
 
     if-ge v0, v4, :cond_3
 
-    .line 143
     if-eqz v3, :cond_2
 
     aget-object v4, v2, v0
@@ -1579,18 +1385,15 @@
 
     if-eqz v4, :cond_2
 
-    .line 144
     monitor-exit v1
 
     return v0
 
-    .line 145
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 146
     :cond_3
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -1658,25 +1461,19 @@
 .method public final e(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 160
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 161
     :try_start_0
     invoke-direct {p0, p2}, Lgfl;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 162
     if-eqz v0, :cond_0
 
-    .line 163
     invoke-virtual {p0, p1, p2, v0}, Lgfl;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 164
     :cond_0
     monitor-exit v1
 
@@ -1695,19 +1492,15 @@
 .method public final f(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 2
 
-    .prologue
-    .line 173
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 174
     :try_start_0
     invoke-direct {p0, p1}, Lgfl;->d(Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 175
     invoke-interface {v0, p2}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
 
     move-result v0
@@ -1716,7 +1509,6 @@
 
     return v0
 
-    .line 176
     :catchall_0
     move-exception v0
 
@@ -1730,19 +1522,15 @@
 .method public final g(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 177
     iget-object v1, p0, Lgfl;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 178
     :try_start_0
     invoke-direct {p0, p1}, Lgfl;->d(Ljava/lang/String;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 179
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -1753,7 +1541,6 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 180
     monitor-exit v1
 
     return-void

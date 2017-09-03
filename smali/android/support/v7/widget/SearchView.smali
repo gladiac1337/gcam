@@ -14,8 +14,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 13
     new-instance v0, Lst;
 
     invoke-direct {v0}, Lst;-><init>()V
@@ -28,8 +26,6 @@
 .method static a(Landroid/content/Context;)Z
     .locals 2
 
-    .prologue
-    .line 12
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -58,8 +54,6 @@
 .method static d()V
     .locals 1
 
-    .prologue
-    .line 6
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -72,8 +66,6 @@
 .method public final a()V
     .locals 1
 
-    .prologue
-    .line 9
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -84,8 +76,6 @@
 .method public final b()V
     .locals 1
 
-    .prologue
-    .line 8
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -96,8 +86,6 @@
 .method public final clearFocus()V
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -108,8 +96,6 @@
 .method protected final onDetachedFromWindow()V
     .locals 1
 
-    .prologue
-    .line 5
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -120,8 +106,6 @@
 .method protected final onLayout(ZIIII)V
     .locals 1
 
-    .prologue
-    .line 4
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -132,8 +116,6 @@
 .method protected final onMeasure(II)V
     .locals 1
 
-    .prologue
-    .line 3
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -144,8 +126,6 @@
 .method protected final onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 1
 
-    .prologue
-    .line 11
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -156,8 +136,6 @@
 .method protected final onSaveInstanceState()Landroid/os/Parcelable;
     .locals 1
 
-    .prologue
-    .line 10
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -168,8 +146,6 @@
 .method public final onWindowFocusChanged(Z)V
     .locals 1
 
-    .prologue
-    .line 7
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -180,8 +156,6 @@
 .method public final requestFocus(ILandroid/graphics/Rect;)Z
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V

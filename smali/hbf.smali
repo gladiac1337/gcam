@@ -22,8 +22,6 @@
 .method public static final a(Lhbf;)[B
     .locals 3
 
-    .prologue
-    .line 1
     invoke-virtual {p0}, Lhbf;->d()I
 
     move-result v0
@@ -32,7 +30,6 @@
 
     array-length v1, v0
 
-    .line 2
     :try_start_0
     invoke-static {v0, v1}, Lhaz;->a([BI)Lhaz;
 
@@ -40,14 +37,12 @@
 
     invoke-virtual {p0, v1}, Lhbf;->a(Lhaz;)V
 
-    .line 3
     iget-object v1, v1, Lhaz;->a:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v1
 
-    .line 4
     if-eqz v1, :cond_0
 
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -60,7 +55,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5
     :catch_0
     move-exception v0
 
@@ -72,7 +66,6 @@
 
     throw v1
 
-    .line 6
     :cond_0
     return-object v0
 .end method

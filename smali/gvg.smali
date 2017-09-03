@@ -19,11 +19,8 @@
 .method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 8
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 4
-    .line 5
     invoke-static {p1}, Lkk;->a(Landroid/os/Parcel;)I
 
     move-result v6
@@ -45,25 +42,20 @@
 
     if-ge v0, v6, :cond_1
 
-    .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 8
     const v7, 0xffff
 
     and-int/2addr v7, v0
 
-    .line 9
     packed-switch v7, :pswitch_data_0
 
-    .line 11
     invoke-static {p1, v0}, Lkk;->b(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
-    .line 9
     :pswitch_0
     invoke-static {p1, v0}, Lkk;->e(Landroid/os/Parcel;I)I
 
@@ -95,7 +87,6 @@
 
     goto :goto_0
 
-    .line 10
     :pswitch_3
     invoke-static {p1, v0}, Lkk;->a(Landroid/os/Parcel;I)I
 
@@ -112,10 +103,8 @@
     :goto_1
     move-object v1, v0
 
-    .line 11
     goto :goto_0
 
-    .line 10
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->createIntArray()[I
 
@@ -127,7 +116,6 @@
 
     goto :goto_1
 
-    .line 11
     :cond_1
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
@@ -160,10 +148,8 @@
 
     invoke-direct {v0, v5, v4, v3, v1}, Lcom/google/android/gms/clearcut/LogEventParcelable;-><init>(ILcom/google/android/gms/playlog/internal/PlayLoggerContext;[B[I)V
 
-    .line 12
     return-object v0
 
-    .line 9
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -176,11 +162,7 @@
 .method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     new-array v0, p1, [Lcom/google/android/gms/clearcut/LogEventParcelable;
 
-    .line 3
     return-object v0
 .end method

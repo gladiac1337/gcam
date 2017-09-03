@@ -20,8 +20,6 @@
 .method constructor <init>(Lbep;JLjava/lang/Boolean;Ljava/lang/Float;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbeu;->d:Lbep;
 
     iput-wide p2, p0, Lbeu;->a:J
@@ -38,26 +36,20 @@
 .method private final a(Lhop;Lhoz;)Liwe;
     .locals 14
 
-    .prologue
-    .line 2
     invoke-interface/range {p2 .. p2}, Lhoz;->e()J
 
     move-result-wide v2
 
-    .line 3
     sget-object v0, Landroid/hardware/camera2/TotalCaptureResult;->SENSOR_TIMESTAMP:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 4
     invoke-interface {p1, v0}, Lhop;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Long;
 
-    .line 5
     invoke-static {v0}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
@@ -71,25 +63,20 @@
     :goto_0
     invoke-static {v0}, Lid;->b(Z)V
 
-    .line 7
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v10
 
-    .line 8
     sget-object v0, Landroid/hardware/camera2/TotalCaptureResult;->JPEG_ORIENTATION:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 9
     invoke-interface {p1, v0}, Lhop;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 10
     invoke-static {v0}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 11
     invoke-interface/range {p2 .. p2}, Lhoz;->d()Ljava/util/List;
 
     move-result-object v0
@@ -106,70 +93,54 @@
 
     move-result-object v0
 
-    .line 12
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->capacity()I
 
     move-result v1
 
     new-array v4, v1, [B
 
-    .line 13
     invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    .line 14
     invoke-interface/range {p2 .. p2}, Lhoz;->close()V
 
-    .line 15
     new-instance v2, Lcom/google/android/libraries/camera/exif/ExifInterface;
 
     invoke-direct {v2}, Lcom/google/android/libraries/camera/exif/ExifInterface;-><init>()V
 
-    .line 16
     :try_start_0
     invoke-virtual {v2, v4}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a([B)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 22
     const/4 v0, 0x0
 
-    .line 23
     sget v1, Lcom/google/android/libraries/camera/exif/ExifInterface;->x:I
 
-    .line 24
     invoke-virtual {v2, v1}, Lcom/google/android/libraries/camera/exif/ExifInterface;->b(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 25
     if-eqz v1, :cond_0
 
-    .line 26
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    .line 27
     :cond_0
     const/4 v1, 0x0
 
-    .line 28
     sget v3, Lcom/google/android/libraries/camera/exif/ExifInterface;->y:I
 
-    .line 29
     invoke-virtual {v2, v3}, Lcom/google/android/libraries/camera/exif/ExifInterface;->b(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    .line 30
     if-eqz v3, :cond_1
 
-    .line 31
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
 
-    .line 32
     :cond_1
     sget v3, Lcom/google/android/libraries/camera/exif/ExifInterface;->b:I
 
@@ -181,18 +152,15 @@
 
     sget v3, Lcom/google/android/libraries/camera/exif/ExifInterface;->a:I
 
-    .line 33
     invoke-virtual {v2, v3}, Lcom/google/android/libraries/camera/exif/ExifInterface;->d(I)Lhlf;
 
     move-result-object v3
 
     if-nez v3, :cond_3
 
-    .line 34
     :cond_2
     sget v3, Lcom/google/android/libraries/camera/exif/ExifInterface;->a:I
 
-    .line 35
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -201,13 +169,10 @@
 
     move-result-object v3
 
-    .line 36
     invoke-virtual {v2, v3}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(Lhlf;)Lhlf;
 
-    .line 37
     sget v3, Lcom/google/android/libraries/camera/exif/ExifInterface;->b:I
 
-    .line 38
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -216,42 +181,33 @@
 
     move-result-object v3
 
-    .line 39
     invoke-virtual {v2, v3}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(Lhlf;)Lhlf;
 
-    .line 40
     :cond_3
     iget-object v3, p0, Lbeu;->d:Lbep;
 
-    .line 41
     iget-object v3, v3, Lbep;->d:Lgjj;
 
-    .line 42
     invoke-virtual {v3, v10, v11}, Lgjj;->a(J)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 43
     iget-object v5, p0, Lbeu;->d:Lbep;
 
-    .line 44
     iget-object v5, v5, Lbep;->d:Lgjj;
 
-    .line 45
     sget-object v6, Lgje;->c:Lgje;
 
     invoke-virtual {v5, v3, v6}, Lgjj;->a(Ljava/lang/String;Lgje;)Ljava/io/File;
 
     move-result-object v3
 
-    .line 46
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result v5
 
     if-eqz v5, :cond_5
 
-    .line 47
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "snapshot file already exists."
@@ -262,89 +218,68 @@
 
     move-result-object v0
 
-    .line 73
     :goto_1
     return-object v0
 
-    .line 6
     :cond_4
     const/4 v0, 0x0
 
     goto/16 :goto_0
 
-    .line 18
     :catch_0
     move-exception v0
 
-    .line 19
     sget-object v1, Lbep;->a:Ljava/lang/String;
 
-    .line 20
     const-string v2, "fail to read EXIF from JPEG byte array."
 
     invoke-static {v1, v2}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 21
     throw v0
 
-    .line 48
     :cond_5
     new-instance v5, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v5, v4}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 49
     iget-object v4, p0, Lbeu;->d:Lbep;
 
-    .line 50
     iget-object v4, v4, Lbep;->e:Lgiz;
 
-    .line 52
     invoke-static {v2}, Lilc;->b(Ljava/lang/Object;)Lilc;
 
     move-result-object v6
 
-    .line 53
     invoke-interface {v4, v3, v5, v6}, Lgiz;->a(Ljava/io/File;Ljava/io/InputStream;Lilc;)J
 
-    .line 54
     invoke-static {v2}, Lhky;->a(Lcom/google/android/libraries/camera/exif/ExifInterface;)Lhky;
 
     move-result-object v4
 
-    .line 55
     invoke-static {v4}, Lhky;->a(Lhky;)Lhix;
 
     move-result-object v9
 
-    .line 56
     new-instance v6, Lhja;
 
     invoke-direct {v6, v0, v1}, Lhja;-><init>(II)V
 
-    .line 57
     sget-object v4, Liku;->a:Liku;
 
-    .line 59
     iget-object v0, p0, Lbeu;->d:Lbep;
 
-    .line 60
     iget-object v0, v0, Lbep;->g:Lilc;
 
-    .line 61
     invoke-virtual {v0}, Lilc;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    .line 62
     iget-object v0, p0, Lbeu;->d:Lbep;
 
-    .line 63
     iget-object v0, v0, Lbep;->g:Lilc;
 
-    .line 64
     invoke-virtual {v0}, Lilc;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -359,7 +294,6 @@
 
     move-result-object v4
 
-    .line 65
     :cond_6
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -369,38 +303,30 @@
 
     sub-long v12, v0, v12
 
-    .line 66
     new-instance v1, Lbek;
 
     sget-object v5, Lgje;->c:Lgje;
 
     iget-object v0, p0, Lbeu;->b:Ljava/lang/Boolean;
 
-    .line 67
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v7
 
     iget-object v0, p0, Lbeu;->c:Ljava/lang/Float;
 
-    .line 68
     invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
     move-result v8
 
-    .line 69
     iget v9, v9, Lhix;->e:I
 
-    .line 70
     invoke-direct/range {v1 .. v13}, Lbek;-><init>(Lhkv;Ljava/io/File;Lilc;Lgje;Lhja;ZFIJJ)V
 
-    .line 71
     iget-object v0, p0, Lbeu;->d:Lbep;
 
-    .line 72
     invoke-virtual {v0}, Lbep;->b()V
 
-    .line 73
     invoke-static {v1}, Livs;->a(Ljava/lang/Object;)Liwe;
 
     move-result-object v0
@@ -413,8 +339,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;Ljava/lang/Object;)Liwe;
     .locals 1
 
-    .prologue
-    .line 74
     check-cast p1, Lhop;
 
     check-cast p2, Lhoz;

@@ -215,9 +215,6 @@
 .method public static b(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 1
-    .line 2
     sget-object v0, Lgvl;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -243,7 +240,6 @@
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3
     :cond_0
     :goto_0
     return-void

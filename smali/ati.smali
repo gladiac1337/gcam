@@ -11,8 +11,6 @@
 .method public constructor <init>(Latg;Ljava/util/List;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p2, p0, Lati;->a:Ljava/util/List;
 
     invoke-direct {p0, p1}, Lauu;-><init>(Latg;)V
@@ -25,8 +23,6 @@
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lati;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -46,15 +42,12 @@
 
     check-cast v0, Latg;
 
-    .line 3
     invoke-interface {v0}, Latg;->close()V
 
     goto :goto_0
 
-    .line 5
     :cond_0
     invoke-super {p0}, Lauu;->close()V
 
-    .line 6
     return-void
 .end method

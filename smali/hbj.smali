@@ -35,8 +35,6 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
-    .line 12
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -45,10 +43,8 @@
 
     new-instance v0, Lhbq;
 
-    .line 13
     invoke-direct {v0}, Lhbq;-><init>()V
 
-    .line 14
     sput-object v0, Lhbj;->a:Lhbq;
 
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
@@ -171,9 +167,6 @@
 .method static synthetic a(Lcom/google/android/gms/clearcut/LogEventParcelable;)V
     .locals 2
 
-    .prologue
-    .line 9
-    .line 10
     iget-object v0, p0, Lcom/google/android/gms/clearcut/LogEventParcelable;->c:Lf;
 
     if-eqz v0, :cond_0
@@ -207,7 +200,6 @@
 
     iput-object v0, p0, Lcom/google/android/gms/clearcut/LogEventParcelable;->a:[B
 
-    .line 11
     return-void
 .end method
 
@@ -250,8 +242,6 @@
 .method public final a(Landroid/content/Context;Lcom/google/android/gms/clearcut/LogEventParcelable;)Lgvz;
     .locals 6
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lhbj;->f:Ljava/lang/Object;
 
     monitor-enter v1
@@ -261,7 +251,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Lgvu;
 
     invoke-direct {v0, p1}, Lgvu;-><init>(Landroid/content/Context;)V
@@ -276,7 +265,6 @@
 
     move-result-object v0
 
-    .line 3
     iput-object v0, p0, Lhbj;->j:Lgvt;
 
     iget-object v0, p0, Lhbj;->j:Lgvt;
@@ -325,7 +313,6 @@
 
     iget-object v0, p0, Lhbj;->j:Lgvt;
 
-    .line 5
     sget-object v2, Lhbj;->a:Lhbq;
 
     invoke-virtual {v2}, Lhbq;->a()V
@@ -340,7 +327,6 @@
 
     invoke-virtual {v2, v3}, Lhbp;->a(Lgwa;)V
 
-    .line 7
     invoke-static {}, Lhbj;->a()Ljava/util/concurrent/ScheduledExecutorService;
 
     move-result-object v3
@@ -351,7 +337,6 @@
 
     invoke-interface {v3, v4}, Ljava/util/concurrent/ScheduledExecutorService;->execute(Ljava/lang/Runnable;)V
 
-    .line 8
     monitor-exit v1
 
     return-object v2

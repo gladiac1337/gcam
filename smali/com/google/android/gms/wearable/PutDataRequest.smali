@@ -113,9 +113,6 @@
 .method public static a(Ljava/lang/String;)Lcom/google/android/gms/wearable/PutDataRequest;
     .locals 2
 
-    .prologue
-    .line 15
-    .line 16
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -183,7 +180,6 @@
 
     move-result-object v0
 
-    .line 17
     invoke-static {v0}, Lcom/google/android/gms/wearable/PutDataRequest;->a(Landroid/net/Uri;)Lcom/google/android/gms/wearable/PutDataRequest;
 
     move-result-object v0
@@ -268,8 +264,6 @@
 .method public toString()Ljava/lang/String;
     .locals 6
 
-    .prologue
-    .line 18
     const-string v0, "DataMap"
 
     const/4 v1, 0x3
@@ -278,7 +272,6 @@
 
     move-result v1
 
-    .line 19
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v0, "PutDataRequest["
@@ -376,11 +369,9 @@
 
     move-result-object v0
 
-    .line 20
     :goto_1
     return-object v0
 
-    .line 19
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/wearable/PutDataRequest;->b:[B
 
@@ -469,16 +460,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 4
 
-    .prologue
-    .line 1
-    .line 3
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lkk;->l(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 4
     const/4 v1, 0x1
 
     iget v2, p0, Lcom/google/android/gms/wearable/PutDataRequest;->e:I
@@ -487,39 +474,29 @@
 
     const/4 v1, 0x2
 
-    .line 5
     iget-object v2, p0, Lcom/google/android/gms/wearable/PutDataRequest;->a:Landroid/net/Uri;
 
-    .line 6
     invoke-static {p1, v1, v2, p2}, Lkk;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
     const/4 v1, 0x4
 
-    .line 7
     iget-object v2, p0, Lcom/google/android/gms/wearable/PutDataRequest;->f:Landroid/os/Bundle;
 
-    .line 8
     invoke-static {p1, v1, v2}, Lkk;->a(Landroid/os/Parcel;ILandroid/os/Bundle;)V
 
     const/4 v1, 0x5
 
-    .line 9
     iget-object v2, p0, Lcom/google/android/gms/wearable/PutDataRequest;->b:[B
 
-    .line 10
     invoke-static {p1, v1, v2}, Lkk;->a(Landroid/os/Parcel;I[B)V
 
     const/4 v1, 0x6
 
-    .line 11
     iget-wide v2, p0, Lcom/google/android/gms/wearable/PutDataRequest;->c:J
 
-    .line 12
     invoke-static {p1, v1, v2, v3}, Lkk;->a(Landroid/os/Parcel;IJ)V
 
-    .line 13
     invoke-static {p1, v0}, Lkk;->m(Landroid/os/Parcel;I)V
 
-    .line 14
     return-void
 .end method

@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lgd;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method constructor <init>(B)V
     .locals 0
 
-    .prologue
-    .line 6
     invoke-direct {p0}, Lge;-><init>()V
 
     return-void
@@ -29,8 +25,6 @@
 .method public final a(I)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 2
     new-instance v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     const/4 v1, 0x0
@@ -43,10 +37,8 @@
 .method public final a(II)Ljava/lang/Object;
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 3
     invoke-static {p1, p2, v0, v0}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;->obtain(IIZI)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionInfo;
 
     move-result-object v0
@@ -57,8 +49,6 @@
 .method public final a(IIIIZ)Ljava/lang/Object;
     .locals 6
 
-    .prologue
-    .line 5
     const/4 v5, 0x0
 
     move v0, p1
@@ -81,8 +71,6 @@
 .method public final c(Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 4
     check-cast p2, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
 
     invoke-virtual {p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->removeAction(Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;)Z

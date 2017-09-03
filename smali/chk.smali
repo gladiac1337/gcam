@@ -14,11 +14,8 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lhic;
 
     invoke-direct {v0}, Lhic;-><init>()V
@@ -33,22 +30,17 @@
 .method public final execute(Ljava/lang/Runnable;)V
     .locals 1
 
-    .prologue
-    .line 3
     invoke-static {}, Lhic;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 6
     :goto_0
     return-void
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lchk;->a:Ljava/util/concurrent/Executor;
 

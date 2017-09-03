@@ -38,8 +38,6 @@
 .method public constructor <init>([Landroid/graphics/Bitmap;)V
     .locals 4
 
-    .prologue
-    .line 6
     const-wide/16 v0, 0x7d0
 
     new-instance v2, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder$DefaultTimestampProvider;
@@ -50,57 +48,46 @@
 
     invoke-direct {p0, p1, v0, v1, v2}, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;-><init>([Landroid/graphics/Bitmap;JLcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder$TimestampProvider;)V
 
-    .line 7
     return-void
 .end method
 
 .method public constructor <init>([Landroid/graphics/Bitmap;JLcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder$TimestampProvider;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mWaitingConsumers:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 10
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mImageIndex:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 11
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mConsumers:Ljava/util/List;
 
-    .line 12
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mIsClosed:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 13
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mImages:[Landroid/graphics/Bitmap;
 
-    .line 14
     iput-wide p2, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mConsumerRegistrationDelay:J
 
-    .line 15
     iput-object p4, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mTimestampProvider:Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder$TimestampProvider;
 
-    .line 16
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "ImageDecoder"
@@ -109,12 +96,10 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mDecoderThread:Landroid/os/HandlerThread;
 
-    .line 17
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mDecoderThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 18
     new-instance v0, Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mDecoderThread:Landroid/os/HandlerThread;
@@ -127,15 +112,12 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mHandler:Landroid/os/Handler;
 
-    .line 19
     return-void
 .end method
 
 .method static synthetic access$100(Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 62
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mConsumers:Ljava/util/List;
 
     return-object v0
@@ -144,8 +126,6 @@
 .method static synthetic access$202(Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;Z)Z
     .locals 0
 
-    .prologue
-    .line 63
     iput-boolean p1, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mIsRunning:Z
 
     return p1
@@ -154,8 +134,6 @@
 .method static synthetic access$300(Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;)V
     .locals 0
 
-    .prologue
-    .line 64
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->signalNewFrame()V
 
     return-void
@@ -164,8 +142,6 @@
 .method static synthetic access$400(Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;)J
     .locals 2
 
-    .prologue
-    .line 65
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->getTimestampForCurrentFrame()J
 
     move-result-wide v0
@@ -176,21 +152,16 @@
 .method public static createFromUri(Landroid/net/Uri;)Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;
     .locals 5
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 1
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 2
     iput-boolean v2, v0, Landroid/graphics/BitmapFactory$Options;->inPreferQualityOverSpeed:Z
 
-    .line 3
     if-nez p0, :cond_0
 
-    .line 4
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Image uri is empty!"
@@ -199,7 +170,6 @@
 
     throw v0
 
-    .line 5
     :cond_0
     new-instance v1, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;
 
@@ -225,13 +195,10 @@
 .method private decrementConsumersAndSignalNextFrame()V
     .locals 3
 
-    .prologue
-    .line 50
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mWaitingConsumers:Ljava/util/concurrent/atomic/AtomicInteger;
 
     monitor-enter v1
 
-    .line 51
     :try_start_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mWaitingConsumers:Ljava/util/concurrent/atomic/AtomicInteger;
 
@@ -241,7 +208,6 @@
 
     if-nez v0, :cond_0
 
-    .line 52
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mImageIndex:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
@@ -254,7 +220,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 53
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mWaitingConsumers:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mConsumers:Ljava/util/List;
@@ -265,23 +230,19 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 54
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->signalNewFrame()V
 
-    .line 56
     :cond_0
     :goto_0
     monitor-exit v1
 
     return-void
 
-    .line 55
     :cond_1
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->signalStop()V
 
     goto :goto_0
 
-    .line 56
     :catchall_0
     move-exception v0
 
@@ -295,8 +256,6 @@
 .method private getTimestampForCurrentFrame()J
     .locals 2
 
-    .prologue
-    .line 57
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mTimestampProvider:Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder$TimestampProvider;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mImageIndex:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -315,8 +274,6 @@
 .method private signalNewFrame()V
     .locals 4
 
-    .prologue
-    .line 58
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder$2;
@@ -327,15 +284,12 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 59
     return-void
 .end method
 
 .method private signalStop()V
     .locals 4
 
-    .prologue
-    .line 60
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder$3;
@@ -346,7 +300,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 61
     return-void
 .end method
 
@@ -355,24 +308,19 @@
 .method public addVideoFrameConsumer(Lcom/google/android/libraries/smartburst/filterfw/VideoFrameConsumer;)V
     .locals 3
 
-    .prologue
-    .line 37
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mConsumers:Ljava/util/List;
 
     monitor-enter v1
 
-    .line 38
     :try_start_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mConsumers:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 39
     iget-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mIsRunning:Z
 
     if-nez v0, :cond_0
 
-    .line 40
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mWaitingConsumers:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mConsumers:Ljava/util/List;
@@ -383,7 +331,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 41
     :cond_0
     monitor-exit v1
 
@@ -402,8 +349,6 @@
 .method public close()V
     .locals 3
 
-    .prologue
-    .line 47
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mIsClosed:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -416,10 +361,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 48
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->stop()V
 
-    .line 49
     :cond_0
     return-void
 .end method
@@ -427,8 +370,6 @@
 .method public getDurationNs()J
     .locals 2
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mImages:[Landroid/graphics/Bitmap;
 
     array-length v0, v0
@@ -441,12 +382,10 @@
 .method public grabVideoFrame(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;Lcom/google/android/libraries/smartburst/filterfw/FrameValue;Lcom/google/android/libraries/smartburst/filterfw/geometry/Scaler;)Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 27
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mWaitingConsumers:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
@@ -467,7 +406,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 28
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mImages:[Landroid/graphics/Bitmap;
 
     iget-object v3, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mImageIndex:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -478,7 +416,6 @@
 
     aget-object v2, v2, v3
 
-    .line 29
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
@@ -491,7 +428,6 @@
 
     move-result-object v3
 
-    .line 30
     aget v4, v3, v1
 
     aget v5, v3, v0
@@ -500,23 +436,18 @@
 
     move-result-object v1
 
-    .line 31
     invoke-virtual {p1, v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->resize([I)V
 
-    .line 32
     invoke-virtual {p1, v1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 33
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->getTimestampForCurrentFrame()J
 
     move-result-wide v2
 
     invoke-virtual {p1, v2, v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->setTimestamp(J)V
 
-    .line 34
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->decrementConsumersAndSignalNextFrame()V
 
-    .line 36
     :goto_0
     return v0
 
@@ -529,24 +460,19 @@
 .method public removeVideoFrameConsumer(Lcom/google/android/libraries/smartburst/filterfw/VideoFrameConsumer;)V
     .locals 3
 
-    .prologue
-    .line 42
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mConsumers:Ljava/util/List;
 
     monitor-enter v1
 
-    .line 43
     :try_start_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mConsumers:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 44
     iget-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mIsRunning:Z
 
     if-nez v0, :cond_0
 
-    .line 45
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mWaitingConsumers:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mConsumers:Ljava/util/List;
@@ -557,7 +483,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 46
     :cond_0
     monitor-exit v1
 
@@ -576,19 +501,14 @@
 .method public skipVideoFrame()V
     .locals 0
 
-    .prologue
-    .line 25
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->decrementConsumersAndSignalNextFrame()V
 
-    .line 26
     return-void
 .end method
 
 .method public start()V
     .locals 4
 
-    .prologue
-    .line 20
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mHandler:Landroid/os/Handler;
 
     new-instance v1, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder$1;
@@ -599,19 +519,15 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 21
     return-void
 .end method
 
 .method public stop()V
     .locals 1
 
-    .prologue
-    .line 22
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder;->mDecoderThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->quitSafely()Z
 
-    .line 23
     return-void
 .end method

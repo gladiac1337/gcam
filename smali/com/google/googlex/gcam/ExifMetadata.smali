@@ -13,8 +13,6 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
-    .line 14
     invoke-static {}, Lcom/google/googlex/gcam/GcamModuleJNI;->new_ExifMetadata__SWIG_0()J
 
     move-result-wide v0
@@ -23,32 +21,24 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/ExifMetadata;-><init>(JZ)V
 
-    .line 15
     return-void
 .end method
 
 .method protected constructor <init>(JZ)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-boolean p3, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCMemOwn:Z
 
-    .line 3
     iput-wide p1, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
-    .line 4
     return-void
 .end method
 
 .method public constructor <init>(Lcom/google/googlex/gcam/ExifMetadata;)V
     .locals 3
 
-    .prologue
-    .line 82
     invoke-static {p1}, Lcom/google/googlex/gcam/ExifMetadata;->getCPtr(Lcom/google/googlex/gcam/ExifMetadata;)J
 
     move-result-wide v0
@@ -61,15 +51,12 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/ExifMetadata;-><init>(JZ)V
 
-    .line 83
     return-void
 .end method
 
 .method protected static getCPtr(Lcom/google/googlex/gcam/ExifMetadata;)J
     .locals 2
 
-    .prologue
-    .line 5
     if-nez p0, :cond_0
 
     const-wide/16 v0, 0x0
@@ -88,8 +75,6 @@
 .method public ApertureValue()D
     .locals 2
 
-    .prologue
-    .line 73
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_ApertureValue(JLcom/google/googlex/gcam/ExifMetadata;)D
@@ -102,8 +87,6 @@
 .method public BrightnessValue()D
     .locals 2
 
-    .prologue
-    .line 75
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_BrightnessValue(JLcom/google/googlex/gcam/ExifMetadata;)D
@@ -116,8 +99,6 @@
 .method public Flash()I
     .locals 2
 
-    .prologue
-    .line 66
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_Flash(JLcom/google/googlex/gcam/ExifMetadata;)I
@@ -130,8 +111,6 @@
 .method public Iso()I
     .locals 2
 
-    .prologue
-    .line 69
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_Iso(JLcom/google/googlex/gcam/ExifMetadata;)I
@@ -144,8 +123,6 @@
 .method public NoiseModelRgb(Lcom/google/googlex/gcam/DngNoiseModel;)V
     .locals 6
 
-    .prologue
-    .line 76
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/DngNoiseModel;->getCPtr(Lcom/google/googlex/gcam/DngNoiseModel;)J
@@ -158,15 +135,12 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_NoiseModelRgb(JLcom/google/googlex/gcam/ExifMetadata;JLcom/google/googlex/gcam/DngNoiseModel;)V
 
-    .line 77
     return-void
 .end method
 
 .method public Orientation()I
     .locals 2
 
-    .prologue
-    .line 63
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_Orientation(JLcom/google/googlex/gcam/ExifMetadata;)I
@@ -179,8 +153,6 @@
 .method public SensitivityValue()D
     .locals 2
 
-    .prologue
-    .line 74
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_SensitivityValue(JLcom/google/googlex/gcam/ExifMetadata;)D
@@ -193,34 +165,26 @@
 .method public SetFlash(I)V
     .locals 2
 
-    .prologue
-    .line 67
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_SetFlash(JLcom/google/googlex/gcam/ExifMetadata;I)V
 
-    .line 68
     return-void
 .end method
 
 .method public SetIso(I)V
     .locals 2
 
-    .prologue
-    .line 70
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_SetIso(JLcom/google/googlex/gcam/ExifMetadata;I)V
 
-    .line 71
     return-void
 .end method
 
 .method public SetNoiseModelRgb([Lcom/google/googlex/gcam/DngNoiseModel;)V
     .locals 3
 
-    .prologue
-    .line 78
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/DngNoiseModel;->cArrayUnwrap([Lcom/google/googlex/gcam/DngNoiseModel;)[J
@@ -229,41 +193,32 @@
 
     invoke-static {v0, v1, p0, v2}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_SetNoiseModelRgb(JLcom/google/googlex/gcam/ExifMetadata;[J)V
 
-    .line 79
     return-void
 .end method
 
 .method public SetOrientation(I)V
     .locals 2
 
-    .prologue
-    .line 64
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_SetOrientation(JLcom/google/googlex/gcam/ExifMetadata;I)V
 
-    .line 65
     return-void
 .end method
 
 .method public SetTimestampCurrent()V
     .locals 2
 
-    .prologue
-    .line 80
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_SetTimestampCurrent(JLcom/google/googlex/gcam/ExifMetadata;)V
 
-    .line 81
     return-void
 .end method
 
 .method public ShutterSpeedValue()D
     .locals 2
 
-    .prologue
-    .line 72
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_ShutterSpeedValue(JLcom/google/googlex/gcam/ExifMetadata;)D
@@ -276,10 +231,8 @@
 .method public declared-synchronized delete()V
     .locals 4
 
-    .prologue
     const-wide/16 v2, 0x0
 
-    .line 8
     monitor-enter p0
 
     :try_start_0
@@ -289,22 +242,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 9
     iget-boolean v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCMemOwn:Z
 
     if-eqz v0, :cond_0
 
-    .line 10
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCMemOwn:Z
 
-    .line 11
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1}, Lcom/google/googlex/gcam/GcamModuleJNI;->delete_ExifMetadata(J)V
 
-    .line 12
     :cond_0
     const-wide/16 v0, 0x0
 
@@ -312,13 +261,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 13
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 8
     :catchall_0
     move-exception v0
 
@@ -330,26 +277,20 @@
 .method protected finalize()V
     .locals 0
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Lcom/google/googlex/gcam/ExifMetadata;->delete()V
 
-    .line 7
     return-void
 .end method
 
 .method public getClient_exif()Lcom/google/googlex/gcam/ClientExifMetadata;
     .locals 4
 
-    .prologue
-    .line 26
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_client_exif_get(JLcom/google/googlex/gcam/ExifMetadata;)J
 
     move-result-wide v2
 
-    .line 27
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -374,15 +315,12 @@
 .method public getDng_crop()Lcom/google/googlex/gcam/PixelRect;
     .locals 4
 
-    .prologue
-    .line 30
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_dng_crop_get(JLcom/google/googlex/gcam/ExifMetadata;)J
 
     move-result-wide v2
 
-    .line 31
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -407,8 +345,6 @@
 .method public getExposure_compensation()F
     .locals 2
 
-    .prologue
-    .line 56
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_exposure_compensation_get(JLcom/google/googlex/gcam/ExifMetadata;)F
@@ -421,8 +357,6 @@
 .method public getFlash_mode()I
     .locals 2
 
-    .prologue
-    .line 59
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_flash_mode_get(JLcom/google/googlex/gcam/ExifMetadata;)I
@@ -435,15 +369,12 @@
 .method public getFrame_metadata()Lcom/google/googlex/gcam/FrameMetadata;
     .locals 4
 
-    .prologue
-    .line 22
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_frame_metadata_get(JLcom/google/googlex/gcam/ExifMetadata;)J
 
     move-result-wide v2
 
-    .line 23
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -468,15 +399,12 @@
 .method public getGain_map_rggb()Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__TImageT_float_gcam__kPixelContiguous_t;
     .locals 4
 
-    .prologue
-    .line 52
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_gain_map_rggb_get(JLcom/google/googlex/gcam/ExifMetadata;)J
 
     move-result-wide v2
 
-    .line 53
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -501,8 +429,6 @@
 .method public getIcc_profile()I
     .locals 2
 
-    .prologue
-    .line 43
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_icc_profile_get(JLcom/google/googlex/gcam/ExifMetadata;)I
@@ -515,8 +441,6 @@
 .method public getImage_rotation()I
     .locals 2
 
-    .prologue
-    .line 62
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_image_rotation_get(JLcom/google/googlex/gcam/ExifMetadata;)I
@@ -529,8 +453,6 @@
 .method public getMakernote()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 37
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_makernote_get(JLcom/google/googlex/gcam/ExifMetadata;)Ljava/lang/String;
@@ -543,8 +465,6 @@
 .method public getRange_compression()F
     .locals 2
 
-    .prologue
-    .line 34
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_range_compression_get(JLcom/google/googlex/gcam/ExifMetadata;)F
@@ -557,8 +477,6 @@
 .method public getSoftware_suffix()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 40
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_software_suffix_get(JLcom/google/googlex/gcam/ExifMetadata;)Ljava/lang/String;
@@ -571,15 +489,12 @@
 .method public getStatic_metadata()Lcom/google/googlex/gcam/StaticMetadata;
     .locals 4
 
-    .prologue
-    .line 18
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_static_metadata_get(JLcom/google/googlex/gcam/ExifMetadata;)J
 
     move-result-wide v2
 
-    .line 19
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -604,8 +519,6 @@
 .method public getTimestamp_unix_us()J
     .locals 2
 
-    .prologue
-    .line 49
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_timestamp_unix_us_get(JLcom/google/googlex/gcam/ExifMetadata;)J
@@ -618,8 +531,6 @@
 .method public getWb_mode()I
     .locals 2
 
-    .prologue
-    .line 46
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_wb_mode_get(JLcom/google/googlex/gcam/ExifMetadata;)I
@@ -632,8 +543,6 @@
 .method public setClient_exif(Lcom/google/googlex/gcam/ClientExifMetadata;)V
     .locals 6
 
-    .prologue
-    .line 24
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/ClientExifMetadata;->getCPtr(Lcom/google/googlex/gcam/ClientExifMetadata;)J
@@ -646,15 +555,12 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_client_exif_set(JLcom/google/googlex/gcam/ExifMetadata;JLcom/google/googlex/gcam/ClientExifMetadata;)V
 
-    .line 25
     return-void
 .end method
 
 .method public setDng_crop(Lcom/google/googlex/gcam/PixelRect;)V
     .locals 6
 
-    .prologue
-    .line 28
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/PixelRect;->getCPtr(Lcom/google/googlex/gcam/PixelRect;)J
@@ -667,41 +573,32 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_dng_crop_set(JLcom/google/googlex/gcam/ExifMetadata;JLcom/google/googlex/gcam/PixelRect;)V
 
-    .line 29
     return-void
 .end method
 
 .method public setExposure_compensation(F)V
     .locals 2
 
-    .prologue
-    .line 54
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_exposure_compensation_set(JLcom/google/googlex/gcam/ExifMetadata;F)V
 
-    .line 55
     return-void
 .end method
 
 .method public setFlash_mode(I)V
     .locals 2
 
-    .prologue
-    .line 57
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_flash_mode_set(JLcom/google/googlex/gcam/ExifMetadata;I)V
 
-    .line 58
     return-void
 .end method
 
 .method public setFrame_metadata(Lcom/google/googlex/gcam/FrameMetadata;)V
     .locals 6
 
-    .prologue
-    .line 20
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/FrameMetadata;->getCPtr(Lcom/google/googlex/gcam/FrameMetadata;)J
@@ -714,15 +611,12 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_frame_metadata_set(JLcom/google/googlex/gcam/ExifMetadata;JLcom/google/googlex/gcam/FrameMetadata;)V
 
-    .line 21
     return-void
 .end method
 
 .method public setGain_map_rggb(Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__TImageT_float_gcam__kPixelContiguous_t;)V
     .locals 4
 
-    .prologue
-    .line 50
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__TImageT_float_gcam__kPixelContiguous_t;->getCPtr(Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__TImageT_float_gcam__kPixelContiguous_t;)J
@@ -731,80 +625,62 @@
 
     invoke-static {v0, v1, p0, v2, v3}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_gain_map_rggb_set(JLcom/google/googlex/gcam/ExifMetadata;J)V
 
-    .line 51
     return-void
 .end method
 
 .method public setIcc_profile(I)V
     .locals 2
 
-    .prologue
-    .line 41
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_icc_profile_set(JLcom/google/googlex/gcam/ExifMetadata;I)V
 
-    .line 42
     return-void
 .end method
 
 .method public setImage_rotation(I)V
     .locals 2
 
-    .prologue
-    .line 60
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_image_rotation_set(JLcom/google/googlex/gcam/ExifMetadata;I)V
 
-    .line 61
     return-void
 .end method
 
 .method public setMakernote(Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 35
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_makernote_set(JLcom/google/googlex/gcam/ExifMetadata;Ljava/lang/String;)V
 
-    .line 36
     return-void
 .end method
 
 .method public setRange_compression(F)V
     .locals 2
 
-    .prologue
-    .line 32
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_range_compression_set(JLcom/google/googlex/gcam/ExifMetadata;F)V
 
-    .line 33
     return-void
 .end method
 
 .method public setSoftware_suffix(Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 38
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_software_suffix_set(JLcom/google/googlex/gcam/ExifMetadata;Ljava/lang/String;)V
 
-    .line 39
     return-void
 .end method
 
 .method public setStatic_metadata(Lcom/google/googlex/gcam/StaticMetadata;)V
     .locals 6
 
-    .prologue
-    .line 16
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/StaticMetadata;->getCPtr(Lcom/google/googlex/gcam/StaticMetadata;)J
@@ -817,32 +693,25 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_static_metadata_set(JLcom/google/googlex/gcam/ExifMetadata;JLcom/google/googlex/gcam/StaticMetadata;)V
 
-    .line 17
     return-void
 .end method
 
 .method public setTimestamp_unix_us(J)V
     .locals 3
 
-    .prologue
-    .line 47
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1, p2}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_timestamp_unix_us_set(JLcom/google/googlex/gcam/ExifMetadata;J)V
 
-    .line 48
     return-void
 .end method
 
 .method public setWb_mode(I)V
     .locals 2
 
-    .prologue
-    .line 44
     iget-wide v0, p0, Lcom/google/googlex/gcam/ExifMetadata;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->ExifMetadata_wb_mode_set(JLcom/google/googlex/gcam/ExifMetadata;I)V
 
-    .line 45
     return-void
 .end method

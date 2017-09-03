@@ -18,8 +18,6 @@
 .method constructor <init>(Lcot;Lcdo;Lcdo;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcou;->c:Lcot;
 
     iput-object p2, p0, Lcou;->a:Lcdo;
@@ -36,46 +34,33 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcou;->a:Lcdo;
 
     invoke-interface {v0}, Lcdo;->b()V
 
-    .line 3
     iget-object v0, p0, Lcou;->c:Lcot;
 
-    .line 4
     iget-object v0, v0, Lcot;->g:Lhjm;
 
-    .line 5
     const-string v1, "CameraActivityUi#inflate"
 
     invoke-interface {v0, v1}, Lhjm;->a(Ljava/lang/String;)V
 
-    .line 6
     iget-object v0, p0, Lcou;->c:Lcot;
 
-    .line 7
     iget-object v0, v0, Lcot;->e:Liya;
 
-    .line 8
     invoke-interface {v0}, Liya;->a()Ljava/lang/Object;
 
-    .line 9
     iget-object v0, p0, Lcou;->b:Lcdo;
 
     invoke-interface {v0}, Lcdo;->b()V
 
-    .line 10
     iget-object v0, p0, Lcou;->c:Lcot;
 
-    .line 11
     iget-object v0, v0, Lcot;->g:Lhjm;
 
-    .line 12
     invoke-interface {v0}, Lhjm;->a()V
 
-    .line 13
     return-void
 .end method

@@ -20,18 +20,14 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
-    .line 2
     const/4 v0, 0x0
 
     invoke-static {p0, p1, v1, v0, v1}, Lgvk;->b(ILandroid/app/Activity;Landroid/support/v4/app/Fragment;ILandroid/content/DialogInterface$OnCancelListener;)Landroid/app/Dialog;
 
     move-result-object v0
 
-    .line 3
     return-object v0
 .end method
 
@@ -41,10 +37,8 @@
         value = 0xb
     .end annotation
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 24
     instance-of v0, p0, Landroid/support/v4/app/FragmentActivity;
 
     if-eqz v0, :cond_1
@@ -55,7 +49,6 @@
 
     move-result-object v1
 
-    .line 25
     new-instance v2, Lgvn;
 
     invoke-direct {v2}, Lgvn;-><init>()V
@@ -78,15 +71,12 @@
 
     iput-object p1, v2, Lgvn;->a:Landroid/content/DialogInterface$OnCancelListener;
 
-    .line 26
     :cond_0
     invoke-virtual {v2, v1, p2}, Landroid/support/v4/app/DialogFragment;->show(Landroid/support/v4/app/FragmentManager;Ljava/lang/String;)V
 
-    .line 30
     :goto_0
     return-void
 
-    .line 27
     :cond_1
     const/16 v0, 0xb
 
@@ -94,14 +84,12 @@
 
     move-result v0
 
-    .line 28
     if-eqz v0, :cond_3
 
     invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
-    .line 29
     new-instance v2, Lgvh;
 
     invoke-direct {v2}, Lgvh;-><init>()V
@@ -124,7 +112,6 @@
 
     iput-object p1, v2, Lgvh;->b:Landroid/content/DialogInterface$OnCancelListener;
 
-    .line 30
     :cond_2
     invoke-virtual {v2, v1, p2}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
@@ -170,7 +157,6 @@
         value = 0xe
     .end annotation
 
-    .prologue
     const/4 v8, 0x3
 
     const/4 v4, 0x0
@@ -179,16 +165,13 @@
 
     const/4 v3, 0x0
 
-    .line 4
     if-nez p0, :cond_0
 
     move-object v0, v4
 
-    .line 23
     :goto_0
     return-object v0
 
-    .line 4
     :cond_0
     invoke-static {p1}, Lkk;->a(Landroid/content/Context;)Z
 
@@ -202,18 +185,15 @@
 
     const/16 p0, 0x2a
 
-    .line 5
     :cond_1
     invoke-static {p1, p0}, Lgvl;->a(Landroid/content/Context;I)Z
 
     move-result v0
 
-    .line 6
     if-eqz v0, :cond_2
 
     const/16 p0, 0x12
 
-    .line 7
     :cond_2
     const/16 v0, 0xe
 
@@ -221,7 +201,6 @@
 
     move-result v0
 
-    .line 8
     if-eqz v0, :cond_f
 
     new-instance v0, Landroid/util/TypedValue;
@@ -272,14 +251,12 @@
 
     move-result-object v5
 
-    .line 9
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v6
 
     sparse-switch p0, :sswitch_data_0
 
-    .line 17
     const v1, 0x7f110092
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -290,7 +267,6 @@
 
     move-result-object v1
 
-    .line 18
     :goto_2
     invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
@@ -298,7 +274,6 @@
 
     invoke-virtual {v0, p4}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 19
     :cond_4
     const-string v1, "d"
 
@@ -312,7 +287,6 @@
 
     invoke-direct {v1, p1, v2, p3}, Lgyb;-><init>(Landroid/app/Activity;Landroid/content/Intent;I)V
 
-    .line 20
     :goto_3
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -326,13 +300,11 @@
 
     move-result-object v2
 
-    .line 21
     :goto_4
     if-eqz v2, :cond_5
 
     invoke-virtual {v0, v2, v1}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 22
     :cond_5
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -358,7 +330,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 23
     :goto_5
     :sswitch_0
     if-eqz v4, :cond_6
@@ -372,7 +343,6 @@
 
     goto/16 :goto_0
 
-    .line 10
     :sswitch_1
     if-eqz v6, :cond_c
 
@@ -388,7 +358,6 @@
 
     move v1, v2
 
-    .line 11
     :goto_6
     const/16 v7, 0xb
 
@@ -396,25 +365,21 @@
 
     move-result v7
 
-    .line 12
     if-eqz v7, :cond_7
 
     if-nez v1, :cond_8
 
-    .line 13
     :cond_7
     invoke-virtual {v6}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
     move-result-object v1
 
-    .line 14
     const/16 v7, 0xd
 
     invoke-static {v7}, Lkk;->d(I)Z
 
     move-result v7
 
-    .line 15
     if-eqz v7, :cond_b
 
     iget v7, v1, Landroid/content/res/Configuration;->screenLayout:I
@@ -431,14 +396,12 @@
 
     move v1, v2
 
-    .line 16
     :goto_7
     if-eqz v1, :cond_c
 
     :cond_8
     move v1, v2
 
-    .line 17
     :goto_8
     if-eqz v1, :cond_d
 
@@ -457,13 +420,11 @@
     :cond_9
     move v1, v3
 
-    .line 10
     goto :goto_6
 
     :cond_a
     move v1, v3
 
-    .line 15
     goto :goto_7
 
     :cond_b
@@ -474,10 +435,8 @@
     :cond_c
     move v1, v3
 
-    .line 16
     goto :goto_8
 
-    .line 17
     :cond_d
     const v1, 0x7f110086
 
@@ -601,7 +560,6 @@
 
     goto/16 :goto_2
 
-    .line 19
     :cond_e
     new-instance v1, Lgyb;
 
@@ -609,7 +567,6 @@
 
     goto/16 :goto_3
 
-    .line 20
     :pswitch_0
     const v3, 0x7f110085
 
@@ -637,7 +594,6 @@
 
     goto/16 :goto_4
 
-    .line 22
     :sswitch_c
     const v2, 0x7f110088
 
@@ -790,7 +746,6 @@
 
     goto/16 :goto_1
 
-    .line 9
     nop
 
     :sswitch_data_0
@@ -808,7 +763,6 @@
         0x2a -> :sswitch_5
     .end sparse-switch
 
-    .line 20
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -816,7 +770,6 @@
         :pswitch_1
     .end packed-switch
 
-    .line 22
     :sswitch_data_1
     .sparse-switch
         0x1 -> :sswitch_c
@@ -843,17 +796,13 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 31
-    .line 32
     const/4 v0, 0x0
 
     invoke-static {p0, p1, v1, v0, v1}, Lgvk;->a(ILandroid/app/Activity;Landroid/support/v4/app/Fragment;ILandroid/content/DialogInterface$OnCancelListener;)Z
 
     move-result v0
 
-    .line 33
     return v0
 .end method

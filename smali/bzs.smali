@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 15
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "yyyyMMddHHmmss"
@@ -27,8 +25,6 @@
 .method static a(Ljava/io/File;)Ljava/io/File;
     .locals 2
 
-    .prologue
-    .line 14
     new-instance v0, Ljava/io/File;
 
     const-string v1, ".medresframes"
@@ -41,8 +37,6 @@
 .method static a(Lhsy;J)Ljava/lang/String;
     .locals 7
 
-    .prologue
-    .line 1
     sget-object v0, Lbzs;->a:Ljava/text/SimpleDateFormat;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -53,7 +47,6 @@
 
     move-result-object v1
 
-    .line 2
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v3, "%s_%s"
@@ -64,22 +57,18 @@
 
     const/4 v5, 0x0
 
-    .line 3
     iget-object v0, p0, Lhsy;->a:Ljava/lang/String;
 
-    .line 4
     invoke-static {v0}, Lbzv;->a(Ljava/lang/String;)Lbzv;
 
     move-result-object v0
 
-    .line 5
     invoke-virtual {v0}, Lbzv;->ordinal()I
 
     move-result v6
 
     packed-switch v6, :pswitch_data_0
 
-    .line 11
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -118,11 +107,9 @@
 
     throw v1
 
-    .line 6
     :pswitch_0
     const-string v0, "Burst_Cover_Collage"
 
-    .line 12
     :goto_0
     aput-object v0, v4, v5
 
@@ -130,38 +117,32 @@
 
     aput-object v1, v4, v0
 
-    .line 13
     invoke-static {v2, v3, v4}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 7
     :pswitch_1
     const-string v0, "Burst_Cover_GIF_Action"
 
     goto :goto_0
 
-    .line 8
     :pswitch_2
     const-string v0, "Burst_Cover_Group_Smiles"
 
     goto :goto_0
 
-    .line 9
     :pswitch_3
     const-string v0, "Burst_Cover_Collage"
 
     goto :goto_0
 
-    .line 10
     :pswitch_4
     const-string v0, "Burst_Cover_Video"
 
     goto :goto_0
 
-    .line 5
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

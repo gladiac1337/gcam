@@ -17,44 +17,34 @@
 .method constructor <init>(Lbz;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable$ConstantState;-><init>()V
 
-    .line 2
     const/4 v0, 0x0
 
     iput-object v0, p0, Lbz;->c:Landroid/content/res/ColorStateList;
 
-    .line 3
     sget-object v0, Lby;->a:Landroid/graphics/PorterDuff$Mode;
 
     iput-object v0, p0, Lbz;->d:Landroid/graphics/PorterDuff$Mode;
 
-    .line 4
     if-eqz p1, :cond_0
 
-    .line 5
     iget v0, p1, Lbz;->a:I
 
     iput v0, p0, Lbz;->a:I
 
-    .line 6
     iget-object v0, p1, Lbz;->b:Landroid/graphics/drawable/Drawable$ConstantState;
 
     iput-object v0, p0, Lbz;->b:Landroid/graphics/drawable/Drawable$ConstantState;
 
-    .line 7
     iget-object v0, p1, Lbz;->c:Landroid/content/res/ColorStateList;
 
     iput-object v0, p0, Lbz;->c:Landroid/content/res/ColorStateList;
 
-    .line 8
     iget-object v0, p1, Lbz;->d:Landroid/graphics/PorterDuff$Mode;
 
     iput-object v0, p0, Lbz;->d:Landroid/graphics/PorterDuff$Mode;
 
-    .line 9
     :cond_0
     return-void
 .end method
@@ -64,8 +54,6 @@
 .method public getChangingConfigurations()I
     .locals 2
 
-    .prologue
-    .line 11
     iget v1, p0, Lbz;->a:I
 
     iget-object v0, p0, Lbz;->b:Landroid/graphics/drawable/Drawable$ConstantState;
@@ -74,7 +62,6 @@
 
     iget-object v0, p0, Lbz;->b:Landroid/graphics/drawable/Drawable$ConstantState;
 
-    .line 12
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable$ConstantState;->getChangingConfigurations()I
 
     move-result v0
@@ -93,8 +80,6 @@
 .method public newDrawable()Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    .prologue
-    .line 10
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lbz;->newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
