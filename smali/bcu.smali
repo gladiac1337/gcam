@@ -13,7 +13,7 @@
 .end method
 
 .method private static a(Landroid/media/CamcorderProfile;)Lbcx;
-    .locals 12
+    .locals 13
 
     iget v1, p0, Landroid/media/CamcorderProfile;->audioBitRate:I
 
@@ -37,6 +37,17 @@
 
     iget v11, p0, Landroid/media/CamcorderProfile;->videoFrameWidth:I
 
+    const v12, 0x870
+
+    if-eq v9, v12, :cond_0
+
+    const v12, 0x1e
+
+    if-ne v10, v12, :cond_0
+
+    const v10, 0x3c
+
+    :cond_0
     new-instance v0, Lbcz;
 
     invoke-direct/range {v0 .. v11}, Lbcz;-><init>(IIIIIIIIIII)V
