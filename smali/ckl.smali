@@ -105,8 +105,19 @@
 
     move-result v0
 
+    iget-object v1, p0, Lckl;->e:Lcom/google/android/apps/camera/config/GservicesHelper;
+
+    invoke-virtual {v1}, Lcom/google/android/apps/camera/config/GservicesHelper;->bs()I
+
+    move-result v1
+
+    const/4 v3, 0x3
+
+    if-ge v1, v3, :cond_0
+
     const/4 v1, 0x3
 
+    :cond_0
     iget-object v2, p0, Lckl;->g:Lhoc;
 
     const-string v3, "persist.gcam.zsl_buffer_size"

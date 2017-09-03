@@ -366,7 +366,7 @@
 .end method
 
 .method public static a(Lhop;Lfsq;Lckn;Ljava/lang/String;ZF[Landroid/hardware/camera2/params/Face;)Lcom/google/googlex/gcam/FrameMetadata;
-    .locals 6
+    .locals 7
 
     new-instance v3, Lcom/google/googlex/gcam/FrameMetadata;
 
@@ -437,6 +437,14 @@
     long-to-float v0, v0
 
     const v1, 0x49742400    # 1000000.0f
+
+    float-to-int v1, v1
+
+    const/4 v6, 0x2
+
+    div-int v1, v1, v6
+
+    int-to-float v1, v1
 
     div-float/2addr v0, v1
 
@@ -1309,8 +1317,6 @@
     const-string v0, "payload_burst_actual_hal3.txt"
 
     goto :goto_6
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -2272,6 +2278,14 @@
     invoke-virtual {p0, v4, v5}, Lfvc;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)Lfvc;
 
     const v4, 0x49742400    # 1000000.0f
+
+    float-to-int v4, v4
+
+    const/4 v6, 0x2
+
+    div-int v4, v4, v6
+
+    int-to-float v4, v4
 
     mul-float/2addr v0, v4
 
@@ -3613,7 +3627,7 @@
 .end method
 
 .method public static c(Lhop;Lfsq;)F
-    .locals 3
+    .locals 4
 
     if-nez p0, :cond_0
 
@@ -3652,6 +3666,14 @@
     long-to-float v0, v0
 
     const v1, 0x49742400    # 1000000.0f
+
+    float-to-int v1, v1
+
+    const/4 v3, 0x2
+
+    div-int v1, v1, v3
+
+    int-to-float v1, v1
 
     div-float v1, v0, v1
 

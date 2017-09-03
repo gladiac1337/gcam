@@ -15,7 +15,7 @@
 
 .field public final c:Lbge;
 
-.field private d:Landroid/content/SharedPreferences;
+.field public d:Landroid/content/SharedPreferences;
 
 
 # direct methods
@@ -142,6 +142,40 @@
     return v0
 
     :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public bs()I
+    .locals 4
+
+    iget-object v1, p0, Lcom/google/android/apps/camera/config/GservicesHelper;->d:Landroid/content/SharedPreferences;
+
+    const-string v2, "pref_buffer_size_key"
+
+    invoke-interface {v1, v2}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v3, 0x0
+
+    iget-object v1, p0, Lcom/google/android/apps/camera/config/GservicesHelper;->d:Landroid/content/SharedPreferences;
+
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
@@ -492,6 +526,8 @@
 
     iget-boolean v1, v1, Lhnx;->f:Z
 
+    const/4 v1, 0x1
+
     if-nez v1, :cond_3
 
     iget-object v1, p0, Lcom/google/android/apps/camera/config/GservicesHelper;->b:Lcom/google/android/apps/camera/util/ApiHelper;
@@ -514,8 +550,6 @@
 
     move-result v1
 
-    const/4 v1, 0x1
-
     if-eqz v1, :cond_0
 
     shl-int/lit8 v0, v0, 0x2
@@ -530,7 +564,7 @@
 
     const-string v1, "camera:zsl_enabled"
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/apps/camera/config/GservicesHelper;->a(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 

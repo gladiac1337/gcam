@@ -1169,6 +1169,8 @@
     goto :goto_4
 
     :cond_6
+    const/4 v2, 0x0
+
     if-eqz v2, :cond_0
 
     const-string v2, "pref_category_smartburst"
@@ -1481,6 +1483,8 @@
 
     move-result v1
 
+    const/4 v1, 0x1
+
     if-nez v1, :cond_12
 
     const-string v1, "pref_category_general"
@@ -1590,7 +1594,7 @@
 
     iget-object v0, p0, Lekv;->i:Lzf;
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_4
 
     sget-object v0, Lekv;->g:Ljava/lang/String;
 
@@ -1721,54 +1725,11 @@
     invoke-direct {p0, v0}, Lekv;->a(Landroid/preference/PreferenceScreen;)V
 
     :cond_3
-    const-string v0, "pref_launch_help"
-
-    invoke-virtual {p0, v0}, Lekv;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
-
-    move-result-object v0
-
-    new-instance v1, Lekx;
-
-    invoke-direct {v1, v2}, Lekx;-><init>(Landroid/app/Activity;)V
-
-    invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
-
-    const-string v0, "pref_launch_feedback"
-
-    invoke-virtual {p0, v0}, Lekv;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
-
-    move-result-object v0
-
-    new-instance v1, Leky;
-
-    invoke-direct {v1, v2}, Leky;-><init>(Landroid/app/Activity;)V
-
-    invoke-virtual {v0, v1}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
-
-    invoke-virtual {p0}, Lekv;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/preference/PreferenceScreen;->getSharedPreferences()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    invoke-interface {v0, p0}, Landroid/content/SharedPreferences;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
-
-    invoke-virtual {p0}, Lekv;->b()Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    invoke-virtual {p0}, Lekv;->a()V
-
-    :cond_4
     invoke-direct {p0}, Lekv;->c()V
 
     return-void
 
-    :cond_5
+    :cond_4
     iget-object v0, p0, Lekv;->a:Lelg;
 
     sget-object v1, Lhmr;->b:Lhmr;
