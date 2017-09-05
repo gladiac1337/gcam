@@ -881,8 +881,6 @@
 
     move-result v0
 
-    const/4 v0, 0x1
-
     iput-boolean v0, p0, Lekv;->l:Z
 
     const-string v0, "is_hybrid_burst_supported"
@@ -890,8 +888,6 @@
     invoke-virtual {v9, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v2
-
-    const/4 v2, 0x1
 
     const-string v0, "is_developer_settings_supported"
 

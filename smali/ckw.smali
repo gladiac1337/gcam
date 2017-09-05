@@ -438,14 +438,6 @@
 
     const v1, 0x49742400    # 1000000.0f
 
-    float-to-int v1, v1
-
-    const/4 v6, 0x2
-
-    div-int v1, v1, v6
-
-    int-to-float v1, v1
-
     div-float/2addr v0, v1
 
     invoke-virtual {v3, v0}, Lcom/google/googlex/gcam/FrameMetadata;->setActual_exposure_time_ms(F)V
@@ -1317,6 +1309,8 @@
     const-string v0, "payload_burst_actual_hal3.txt"
 
     goto :goto_6
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -2278,14 +2272,6 @@
     invoke-virtual {p0, v4, v5}, Lfvc;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)Lfvc;
 
     const v4, 0x49742400    # 1000000.0f
-
-    float-to-int v4, v4
-
-    const/4 v6, 0x2
-
-    div-int v4, v4, v6
-
-    int-to-float v4, v4
 
     mul-float/2addr v0, v4
 
@@ -3666,14 +3652,6 @@
     long-to-float v0, v0
 
     const v1, 0x49742400    # 1000000.0f
-
-    float-to-int v1, v1
-
-    const/4 v3, 0x2
-
-    div-int v1, v1, v3
-
-    int-to-float v1, v1
 
     div-float v1, v0, v1
 

@@ -381,11 +381,11 @@
 
     move-result v4
 
-    const/4 v5, 0x3
+    const/4 v5, 0x1
 
     if-ge v4, v5, :cond_2
 
-    const/4 v4, 0x3
+    const/4 v4, 0x1
 
     :cond_2
     iget-object v1, v1, Lckl;->g:Lhoc;
