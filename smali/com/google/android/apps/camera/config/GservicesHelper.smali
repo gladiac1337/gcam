@@ -105,9 +105,9 @@
 
     move-result v0
 
-    const/4 v2, 0x4
+    const/4 v1, 0x3
 
-    if-lt v0, v2, :cond_0
+    if-lt v0, v1, :cond_0
 
     const/4 v0, 0x1
 
@@ -199,11 +199,11 @@
 .method public final c()Z
     .locals 3
 
+    const/4 v0, 0x1
+
     iget-object v1, p0, Lcom/google/android/apps/camera/config/GservicesHelper;->a:Landroid/content/ContentResolver;
 
     const-string v2, "camera:gcam_enabled"
-
-    const/4 v0, 0x1
 
     invoke-virtual {p0, v1, v2, v0}, Lcom/google/android/apps/camera/config/GservicesHelper;->a(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
@@ -291,7 +291,7 @@
 
     if-gt v2, v0, :cond_0
 
-    const/16 v2, 0x14
+    const/16 v2, 0xf
 
     :cond_0
     add-int/lit8 v0, v2, 0x6
@@ -321,20 +321,6 @@
     const/16 v0, 0x3
 
     :cond_0
-    const/16 v1, 0x8
-
-    invoke-virtual {p0}, Lcom/google/android/apps/camera/config/GservicesHelper;->cgc()I
-
-    move-result v2
-
-    const/4 v3, 0x3
-
-    if-ne v2, v3, :cond_2
-
-    const/4 v0, 0x5
-
-    :cond_1
-    :goto_0
     iget-object v1, p0, Lcom/google/android/apps/camera/config/GservicesHelper;->a:Landroid/content/ContentResolver;
 
     const-string v2, "camera:max_hdr_plus_burst_frame_count"
@@ -344,92 +330,34 @@
     move-result v0
 
     return v0
-
-    :cond_2
-    invoke-virtual {p0}, Lcom/google/android/apps/camera/config/GservicesHelper;->cgc()I
-
-    move-result v2
-
-    const/4 v3, 0x1
-
-    if-eq v2, v3, :cond_1
-
-    const/4 v3, 0x4
-
-    if-eq v2, v3, :cond_1
-
-    const/4 v3, 0x5
-
-    if-eq v2, v3, :cond_1
-
-    const/4 v3, 0x6
-
-    if-eq v2, v3, :cond_1
-
-    const/4 v3, 0x7
-
-    if-eq v2, v3, :cond_1
-
-    move v0, v1
-
-    goto :goto_0
 .end method
 
 .method public final f()I
-    .locals 5
+    .locals 3
 
-    invoke-virtual {p0}, Lcom/google/android/apps/camera/config/GservicesHelper;->iic()I
+    invoke-virtual {p0}, Lcom/google/android/apps/camera/config/GservicesHelper;->e()I
 
     move-result v0
 
-    const/4 v1, 0x3
-
-    if-ge v0, v1, :cond_0
-
-    const/4 v0, 0x3
-
-    :cond_0
     invoke-virtual {p0}, Lcom/google/android/apps/camera/config/GservicesHelper;->ciic()I
 
-    move-result v3
+    move-result v1
 
-    const/4 v4, 0x0
+    const/4 v2, 0x1
 
-    if-le v3, v4, :cond_4
+    if-eq v1, v2, :cond_0
 
-    const/4 v4, 0x1
+    const/4 v2, 0x2
 
-    if-eq v3, v4, :cond_1
+    if-eq v1, v2, :cond_1
 
-    const/4 v4, 0x2
+    const/4 v2, 0x3
 
-    if-eq v3, v4, :cond_2
+    if-eq v1, v2, :cond_2
 
-    const/4 v4, 0x3
+    const/4 v2, 0x4
 
-    if-eq v3, v4, :cond_3
-
-    const/4 v4, 0x4
-
-    if-eq v3, v4, :cond_4
-
-    :cond_1
-    shl-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    mul-int/lit8 v0, v0, 0x3
-
-    goto :goto_0
-
-    :cond_3
-    mul-int/lit8 v0, v0, 0x5
-
-    goto :goto_0
-
-    :cond_4
-    shl-int/lit8 v0, v0, 0x2
+    if-eq v1, v2, :cond_3
 
     :goto_0
     iget-object v1, p0, Lcom/google/android/apps/camera/config/GservicesHelper;->a:Landroid/content/ContentResolver;
@@ -441,6 +369,26 @@
     move-result v0
 
     return v0
+
+    :cond_0
+    shl-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    mul-int/lit8 v0, v0, 0x3
+
+    goto :goto_0
+
+    :cond_2
+    mul-int/lit8 v0, v0, 0x5
+
+    goto :goto_0
+
+    :cond_3
+    shl-int/lit8 v0, v0, 0x2
+
+    goto :goto_0
 .end method
 
 .method public final g()Z
@@ -475,42 +423,8 @@
     return v0
 .end method
 
-.method public iic()I
-    .locals 4
-
-    iget-object v1, p0, Lcom/google/android/apps/camera/config/GservicesHelper;->d:Landroid/content/SharedPreferences;
-
-    const-string v2, "pref_imagereader_image_count_key"
-
-    invoke-interface {v1, v2}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v3, 0x0
-
-    iget-object v1, p0, Lcom/google/android/apps/camera/config/GservicesHelper;->d:Landroid/content/SharedPreferences;
-
-    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
 .method public isSmartBurstEnabled()Z
-    .locals 4
+    .locals 3
     .annotation build Lcom/google/android/apps/common/proguard/UsedByReflection;
     .end annotation
 
@@ -518,39 +432,10 @@
 
     move-result v0
 
-    const/4 v3, 0x0
+    const/4 v1, 0x3
 
-    if-le v0, v3, :cond_0
+    if-ge v0, v1, :cond_0
 
-    const/4 v3, 0x1
-
-    if-eq v0, v3, :cond_1
-
-    const/4 v3, 0x2
-
-    if-eq v0, v3, :cond_0
-
-    const/4 v3, 0x3
-
-    if-eq v0, v3, :cond_0
-
-    const/4 v3, 0x4
-
-    if-eq v0, v3, :cond_1
-
-    const/4 v3, 0x5
-
-    if-eq v0, v3, :cond_1
-
-    const/4 v3, 0x6
-
-    if-eq v0, v3, :cond_1
-
-    const/4 v3, 0x7
-
-    if-eq v0, v3, :cond_1
-
-    :cond_0
     const/4 v0, 0x0
 
     :goto_0
@@ -564,7 +449,7 @@
 
     return v0
 
-    :cond_1
+    :cond_0
     const/4 v0, 0x1
 
     goto :goto_0
