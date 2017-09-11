@@ -162,9 +162,9 @@
         <item>auto</item>
     </string-array>
     <string-array name="pref_camera_jpeg_quality_entryvalues">
-        <item>@string/pref_camera_jpeg_quality_normal</item>
-        <item>@string/pref_camera_jpeg_quality_fine</item>
         <item>@string/pref_camera_jpeg_quality_superfine</item>
+        <item>@string/pref_camera_jpeg_quality_fine</item>
+        <item>@string/pref_camera_jpeg_quality_normal</item>
     </string-array>
     <string-array name="pref_camera_pano_orientation_entryvalues">
         <item>@string/pano_orientation_horizontal</item>
@@ -310,5 +310,135 @@
     <string-array name="video_flash_descriptions">
         <item>@string/torch_on_desc</item>
         <item>@string/torch_off_desc</item>
+    </string-array>
+    <string-array name="pref_config_camera_entries">
+        <item>@string/pref_config_camera_0</item>
+        <item>@string/pref_config_camera_1</item>
+        <item>@string/pref_config_camera_2</item>
+        <item>@string/pref_config_camera_3</item>
+        <item>@string/pref_config_camera_4</item>
+        <item>@string/pref_config_camera_5</item>
+        <item>@string/pref_config_camera_6</item>
+        <item>@string/pref_config_camera_7</item>
+        <item>@string/pref_config_camera_8</item>
+        <item>@string/pref_config_camera_9</item>
+        <item>@string/pref_config_camera_10</item>
+        <item>@string/pref_config_camera_11</item>
+        <item>@string/pref_config_camera_12</item>
+    </string-array>
+    <string-array name="pref_config_camera_entryvalues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="pref_buffer_size_entries">
+        <item>@string/pref_buffer_size_Def</item>
+        <item>@string/pref_buffer_size_optim</item>
+        <item>@string/pref_buffer_size_1</item>
+        <item>@string/pref_buffer_size_2</item>
+        <item>@string/pref_buffer_size_20</item>
+        <item>@string/pref_buffer_size_24</item>
+        <item>@string/pref_buffer_size_28</item>
+        <item>@string/pref_buffer_size_32</item>
+        <item>@string/pref_buffer_size_37</item>
+        <item>@string/pref_buffer_size_45</item>
+        <item>@string/pref_buffer_size_52</item>
+        <item>@string/pref_buffer_size_53</item>
+        <item>@string/pref_buffer_size_54</item>
+        <item>@string/pref_buffer_size_55</item>
+    </string-array>
+    <string-array name="pref_buffer_size_entryvalues">
+        <item>3</item>
+        <item>15</item>
+        <item>1</item>
+        <item>2</item>
+        <item>20</item>
+        <item>24</item>
+        <item>28</item>
+        <item>32</item>
+        <item>37</item>
+        <item>45</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+    </string-array>
+    <string-array name="pref_burst_frame_count_entries">
+        <item>@string/pref_burst_frame_count_3</item>
+        <item>@string/pref_burst_frame_count_4</item>
+        <item>@string/pref_burst_frame_count_5</item>
+        <item>@string/pref_burst_frame_count_6</item>
+        <item>@string/pref_burst_frame_count_7</item>
+        <item>@string/pref_burst_frame_count_8</item>
+        <item>@string/pref_burst_frame_count_9</item>
+        <item>@string/pref_burst_frame_count_10</item>
+        <item>@string/pref_burst_frame_count_11</item>
+        <item>@string/pref_burst_frame_count_12</item>
+        <item>@string/pref_burst_frame_count_13</item>
+        <item>@string/pref_burst_frame_count_14</item>
+        <item>@string/pref_burst_frame_count_15</item>
+        <item>@string/pref_burst_frame_count_16</item>
+    </string-array>
+    <string-array name="pref_burst_frame_count_entryvalues">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+    </string-array>
+    <string-array name="pref_calc_imagereader_image_count_entries">
+        <item>@string/pref_calc_imagereader_image_count_Other</item>
+        <item>@string/pref_calc_imagereader_image_count_N5X</item>
+        <item>@string/pref_calc_imagereader_image_count_N6P</item>
+        <item>@string/pref_calc_imagereader_image_count_P_PXL</item>
+        <item>@string/pref_calc_imagereader_image_count_AllExp</item>
+    </string-array>
+    <string-array name="pref_calc_imagereader_image_count_entryvalues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="pref_total_imagereader_image_count_entries">
+        <item>@string/pref_total_imagereader_image_count_1</item>
+        <item>@string/pref_total_imagereader_image_count_3</item>
+        <item>@string/pref_total_imagereader_image_count_9</item>
+        <item>@string/pref_total_imagereader_image_count_14</item>
+        <item>@string/pref_total_imagereader_image_count_15</item>
+        <item>@string/pref_total_imagereader_image_count_20</item>
+        <item>@string/pref_total_imagereader_image_count_30</item>
+        <item>@string/pref_total_imagereader_image_count_40</item>
+        <item>@string/pref_total_imagereader_image_count_52</item>
+    </string-array>
+    <string-array name="pref_total_imagereader_image_count_entryvalues">
+        <item>1</item>
+        <item>3</item>
+        <item>9</item>
+        <item>14</item>
+        <item>15</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>52</item>
     </string-array>
 </resources>

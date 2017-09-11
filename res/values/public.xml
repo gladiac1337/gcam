@@ -1083,6 +1083,16 @@
     <public type="array" name="toybox_hfr_mode_rates" id="0x7f0a0039" />
     <public type="array" name="trusted_certificates" id="0x7f0a003a" />
     <public type="array" name="video_flash_descriptions" id="0x7f0a003b" />
+    <public type="array" name="pref_config_camera_entries" id="0x7f0a003c" />
+    <public type="array" name="pref_config_camera_entryvalues" id="0x7f0a003d" />
+    <public type="array" name="pref_buffer_size_entries" id="0x7f0a003e" />
+    <public type="array" name="pref_buffer_size_entryvalues" id="0x7f0a003f" />
+    <public type="array" name="pref_burst_frame_count_entries" id="0x7f0a0040" />
+    <public type="array" name="pref_burst_frame_count_entryvalues" id="0x7f0a0041" />
+    <public type="array" name="pref_calc_imagereader_image_count_entries" id="0x7f0a0042" />
+    <public type="array" name="pref_calc_imagereader_image_count_entryvalues" id="0x7f0a0043" />
+    <public type="array" name="pref_total_imagereader_image_count_entries" id="0x7f0a0044" />
+    <public type="array" name="pref_total_imagereader_image_count_entryvalues" id="0x7f0a0045" />
     <public type="bool" name="abc_action_bar_embed_tabs" id="0x7f0b0000" />
     <public type="bool" name="abc_allow_stacked_button_bar" id="0x7f0b0001" />
     <public type="bool" name="abc_config_actionMenuItemAllCaps" id="0x7f0b0002" />
@@ -3437,6 +3447,87 @@
     <public type="string" name="zoom_announcement" id="0x7f1102e0" />
     <public type="string" name="zoom_minus_desc" id="0x7f1102e1" />
     <public type="string" name="zoom_plus_desc" id="0x7f1102e2" />
+    <public type="string" name="pref_config_camera_title" id="0x7f1102e3" />
+    <public type="string" name="pref_config_camera_default" id="0x7f1102e4" />
+    <public type="string" name="pref_config_camera_1" id="0x7f1102e5" />
+    <public type="string" name="pref_config_camera_2" id="0x7f1102e6" />
+    <public type="string" name="pref_config_camera_3" id="0x7f1102e7" />
+    <public type="string" name="pref_config_camera_4" id="0x7f1102e8" />
+    <public type="string" name="pref_config_camera_5" id="0x7f1102e9" />
+    <public type="string" name="pref_config_camera_6" id="0x7f1102ea" />
+    <public type="string" name="pref_config_camera_7" id="0x7f1102eb" />
+    <public type="string" name="pref_buffer_size_title" id="0x7f1102ec" />
+    <public type="string" name="pref_buffer_size_default" id="0x7f1102ed" />
+    <public type="string" name="pref_buffer_size_Def" id="0x7f1102ee" />
+    <public type="string" name="pref_buffer_size_optim" id="0x7f1102ef" />
+    <public type="string" name="pref_buffer_size_20" id="0x7f1102f0" />
+    <public type="string" name="pref_buffer_size_24" id="0x7f1102f1" />
+    <public type="string" name="pref_buffer_size_28" id="0x7f1102f2" />
+    <public type="string" name="pref_buffer_size_32" id="0x7f1102f3" />
+    <public type="string" name="pref_buffer_size_37" id="0x7f1102f4" />
+    <public type="string" name="pref_buffer_size_title_summary" id="0x7f1102f5" />
+    <public type="string" name="pref_burst_frame_count_default" id="0x7f1102f6" />
+    <public type="string" name="pref_burst_frame_count_title" id="0x7f1102f7" />
+    <public type="string" name="pref_buffer_size_45" id="0x7f1102f8" />
+    <public type="string" name="pref_buffer_size_52" id="0x7f1102f9" />
+    <public type="string" name="pref_burst_frame_count_3" id="0x7f1102fa" />
+    <public type="string" name="pref_burst_frame_count_4" id="0x7f1102fb" />
+    <public type="string" name="pref_burst_frame_count_5" id="0x7f1102fc" />
+    <public type="string" name="pref_burst_frame_count_6" id="0x7f1102fd" />
+    <public type="string" name="pref_burst_frame_count_7" id="0x7f1102fe" />
+    <public type="string" name="pref_burst_frame_count_8" id="0x7f1102ff" />
+    <public type="string" name="pref_burst_frame_count_9" id="0x7f110300" />
+    <public type="string" name="pref_burst_frame_count_10" id="0x7f110301" />
+    <public type="string" name="pref_buffer_size_55" id="0x7f110302" />
+    <public type="string" name="pref_burst_frame_count_11" id="0x7f110303" />
+    <public type="string" name="APKTOOL_DUMMY_304" id="0x7f110304" />
+    <public type="string" name="APKTOOL_DUMMY_305" id="0x7f110305" />
+    <public type="string" name="APKTOOL_DUMMY_306" id="0x7f110306" />
+    <public type="string" name="APKTOOL_DUMMY_307" id="0x7f110307" />
+    <public type="string" name="APKTOOL_DUMMY_308" id="0x7f110308" />
+    <public type="string" name="APKTOOL_DUMMY_309" id="0x7f110309" />
+    <public type="string" name="APKTOOL_DUMMY_30a" id="0x7f11030a" />
+    <public type="string" name="APKTOOL_DUMMY_30b" id="0x7f11030b" />
+    <public type="string" name="APKTOOL_DUMMY_30c" id="0x7f11030c" />
+    <public type="string" name="APKTOOL_DUMMY_30d" id="0x7f11030d" />
+    <public type="string" name="pref_buffer_size_1" id="0x7f11030e" />
+    <public type="string" name="pref_buffer_size_2" id="0x7f11030f" />
+    <public type="string" name="APKTOOL_DUMMY_310" id="0x7f110310" />
+    <public type="string" name="pref_buffer_size_53" id="0x7f110311" />
+    <public type="string" name="pref_buffer_size_54" id="0x7f110312" />
+    <public type="string" name="pref_calc_imagereader_image_count_title" id="0x7f110313" />
+    <public type="string" name="pref_calc_imagereader_image_count_default" id="0x7f110314" />
+    <public type="string" name="pref_calc_imagereader_image_count_Other" id="0x7f110315" />
+    <public type="string" name="pref_calc_imagereader_image_count_N5X" id="0x7f110316" />
+    <public type="string" name="pref_calc_imagereader_image_count_N6P" id="0x7f110317" />
+    <public type="string" name="pref_calc_imagereader_image_count_P_PXL" id="0x7f110318" />
+    <public type="string" name="pref_calc_imagereader_image_count_AllExp" id="0x7f110319" />
+    <public type="string" name="pref_burst_frame_count_12" id="0x7f11031a" />
+    <public type="string" name="pref_burst_frame_count_13" id="0x7f11031b" />
+    <public type="string" name="pref_burst_frame_count_14" id="0x7f11031c" />
+    <public type="string" name="pref_burst_frame_count_15" id="0x7f11031d" />
+    <public type="string" name="pref_burst_frame_count_16" id="0x7f11031e" />
+    <public type="string" name="pref_total_imagereader_image_count_15" id="0x7f11031f" />
+    <public type="string" name="APKTOOL_DUMMY_320" id="0x7f110320" />
+    <public type="string" name="APKTOOL_DUMMY_321" id="0x7f110321" />
+    <public type="string" name="APKTOOL_DUMMY_322" id="0x7f110322" />
+    <public type="string" name="APKTOOL_DUMMY_323" id="0x7f110323" />
+    <public type="string" name="pref_total_imagereader_image_count_title" id="0x7f110324" />
+    <public type="string" name="pref_total_imagereader_image_count_default" id="0x7f110325" />
+    <public type="string" name="pref_total_imagereader_image_count_1" id="0x7f110326" />
+    <public type="string" name="pref_total_imagereader_image_count_3" id="0x7f110327" />
+    <public type="string" name="pref_total_imagereader_image_count_9" id="0x7f110328" />
+    <public type="string" name="pref_total_imagereader_image_count_14" id="0x7f110329" />
+    <public type="string" name="pref_total_imagereader_image_count_20" id="0x7f11032a" />
+    <public type="string" name="pref_total_imagereader_image_count_30" id="0x7f11032b" />
+    <public type="string" name="pref_total_imagereader_image_count_40" id="0x7f11032c" />
+    <public type="string" name="pref_total_imagereader_image_count_52" id="0x7f11032d" />
+    <public type="string" name="pref_config_camera_0" id="0x7f11032e" />
+    <public type="string" name="pref_config_camera_8" id="0x7f11032f" />
+    <public type="string" name="pref_config_camera_9" id="0x7f110330" />
+    <public type="string" name="pref_config_camera_10" id="0x7f110331" />
+    <public type="string" name="pref_config_camera_11" id="0x7f110332" />
+    <public type="string" name="pref_config_camera_12" id="0x7f110333" />
     <public type="style" name="AlertDialog.AppCompat" id="0x7f120000" />
     <public type="style" name="AlertDialog.AppCompat.Light" id="0x7f120001" />
     <public type="style" name="Animation.AppCompat.Dialog" id="0x7f120002" />

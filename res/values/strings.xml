@@ -752,4 +752,86 @@ Move device slowly"</string>
     <string name="zoom_announcement">Zoom value is %.1f</string>
     <string name="zoom_minus_desc">Zoom out</string>
     <string name="zoom_plus_desc">Zoom in</string>
+    <string name="pref_config_camera_title">Config camera</string>
+    <string name="pref_config_camera_default">0</string>
+    <string name="pref_config_camera_1">Nexus6 HdrPlusAuto</string>
+    <string name="pref_config_camera_2">Nexus5X</string>
+    <string name="pref_config_camera_3">Nexus6P</string>
+    <string name="pref_config_camera_4">Pixel 2016 Zsl Hdr</string>
+    <string name="pref_config_camera_5">Pixel 2017 Zsl Hdr #1</string>
+    <string name="pref_config_camera_6">Pixel 2017 Zsl Hdr #2</string>
+    <string name="pref_config_camera_7">Pixel 2017 Hardware Zsl Hdr+</string>
+    <string name="pref_buffer_size_title">Buffers size</string>
+    <string name="pref_buffer_size_default">3</string>
+    <string name="pref_buffer_size_Def">3 (Default)</string>
+    <string name="pref_buffer_size_optim">15 (Optimal)</string>
+    <string name="pref_buffer_size_20">20</string>
+    <string name="pref_buffer_size_24">24</string>
+    <string name="pref_buffer_size_28">28</string>
+    <string name="pref_buffer_size_32">32</string>
+    <string name="pref_buffer_size_37">37</string>
+    <string name="pref_buffer_size_title_summary">"%s
+It is necessary to completely close the application, the changes will take effect at the next start."</string>
+    <string name="pref_burst_frame_count_default">8</string>
+    <string name="pref_burst_frame_count_title">hdr+ burst frame count</string>
+    <string name="pref_buffer_size_45">45</string>
+    <string name="pref_buffer_size_52">52</string>
+    <string name="pref_burst_frame_count_3">3</string>
+    <string name="pref_burst_frame_count_4">4</string>
+    <string name="pref_burst_frame_count_5">5 (N5X)</string>
+    <string name="pref_burst_frame_count_6">6</string>
+    <string name="pref_burst_frame_count_7">7 (N6P+AllPixel+AllExp)</string>
+    <string name="pref_burst_frame_count_8">8 (Nexus 6)</string>
+    <string name="pref_burst_frame_count_9">9</string>
+    <string name="pref_burst_frame_count_10">10</string>
+    <string name="pref_buffer_size_55">55</string>
+    <string name="pref_burst_frame_count_11">11</string>
+    <item type="string" name="APKTOOL_DUMMY_304">false</item>
+    <item type="string" name="APKTOOL_DUMMY_305">false</item>
+    <item type="string" name="APKTOOL_DUMMY_306">false</item>
+    <item type="string" name="APKTOOL_DUMMY_307">false</item>
+    <item type="string" name="APKTOOL_DUMMY_308">false</item>
+    <item type="string" name="APKTOOL_DUMMY_309">false</item>
+    <item type="string" name="APKTOOL_DUMMY_30a">false</item>
+    <item type="string" name="APKTOOL_DUMMY_30b">false</item>
+    <item type="string" name="APKTOOL_DUMMY_30c">false</item>
+    <item type="string" name="APKTOOL_DUMMY_30d">false</item>
+    <string name="pref_buffer_size_1">1</string>
+    <string name="pref_buffer_size_2">2</string>
+    <item type="string" name="APKTOOL_DUMMY_310">false</item>
+    <string name="pref_buffer_size_53">53</string>
+    <string name="pref_buffer_size_54">54</string>
+    <string name="pref_calc_imagereader_image_count_title">Calculation hdr+ imagereader image count</string>
+    <string name="pref_calc_imagereader_image_count_default">0</string>
+    <string name="pref_calc_imagereader_image_count_Other">Others</string>
+    <string name="pref_calc_imagereader_image_count_N5X">Nexus5X</string>
+    <string name="pref_calc_imagereader_image_count_N6P">Nexus6P</string>
+    <string name="pref_calc_imagereader_image_count_P_PXL">Pixel, PixelXL</string>
+    <string name="pref_calc_imagereader_image_count_AllExp">AllExpConfig</string>
+    <string name="pref_burst_frame_count_12">12</string>
+    <string name="pref_burst_frame_count_13">13</string>
+    <string name="pref_burst_frame_count_14">14</string>
+    <string name="pref_burst_frame_count_15">15</string>
+    <string name="pref_burst_frame_count_16">16</string>
+    <string name="pref_total_imagereader_image_count_15">15 (Others)</string>
+    <item type="string" name="APKTOOL_DUMMY_320">false</item>
+    <item type="string" name="APKTOOL_DUMMY_321">false</item>
+    <item type="string" name="APKTOOL_DUMMY_322">false</item>
+    <item type="string" name="APKTOOL_DUMMY_323">false</item>
+    <string name="pref_total_imagereader_image_count_title">Total imagereader image count</string>
+    <string name="pref_total_imagereader_image_count_default">15</string>
+    <string name="pref_total_imagereader_image_count_1">1 (N6 NoZSL)</string>
+    <string name="pref_total_imagereader_image_count_3">3 (N5X NoZSL)</string>
+    <string name="pref_total_imagereader_image_count_9">9 (ZSL (N6, N6P, N5X))</string>
+    <string name="pref_total_imagereader_image_count_14">14 (AllPixel+AllExp)</string>
+    <string name="pref_total_imagereader_image_count_20">20</string>
+    <string name="pref_total_imagereader_image_count_30">30</string>
+    <string name="pref_total_imagereader_image_count_40">40</string>
+    <string name="pref_total_imagereader_image_count_52">52</string>
+    <string name="pref_config_camera_0">No HDR+</string>
+    <string name="pref_config_camera_8">Pixel 2016 Device Dogfood Features</string>
+    <string name="pref_config_camera_9">Pixel 2017 (DR Dogfood)</string>
+    <string name="pref_config_camera_10">Pixel 2017 Hardware Zsl (DR Dogfood)</string>
+    <string name="pref_config_camera_11">Pixel Experimental Features</string>
+    <string name="pref_config_camera_12">Nexus Experimental 2016 Tuning</string>
 </resources>
