@@ -2550,6 +2550,8 @@
 
     iget-boolean v1, v1, Lhnx;->f:Z
 
+    const/4 v1, 0x1
+
     if-nez v1, :cond_0
 
     iget-object v1, p3, Lcom/google/android/apps/camera/util/ApiHelper;->b:Lhnx;

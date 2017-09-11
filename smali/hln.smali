@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private a:Landroid/hardware/camera2/CameraDevice;
+.field public a:Landroid/hardware/camera2/CameraDevice;
 
 
 # direct methods
@@ -26,16 +26,24 @@
 .method public final a(I)Lhon;
     .locals 3
 
-    if-ltz p1, :cond_0
-
-    const/4 p1, 0x3
-
-    :cond_0
     :try_start_0
     new-instance v0, Lhon;
 
     iget-object v1, p0, Lhln;->a:Landroid/hardware/camera2/CameraDevice;
 
+    invoke-virtual {v1}, Landroid/hardware/camera2/CameraDevice;->getId()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/4 p1, 0x1
+
+    :cond_0
     invoke-virtual {v1, p1}, Landroid/hardware/camera2/CameraDevice;->createCaptureRequest(I)Landroid/hardware/camera2/CaptureRequest$Builder;
 
     move-result-object v1

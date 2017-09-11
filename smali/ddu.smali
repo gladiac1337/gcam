@@ -21,7 +21,7 @@
 
 .field private c:Lddp;
 
-.field private d:Lcom/google/android/apps/camera/config/GservicesHelper;
+.field public d:Lcom/google/android/apps/camera/config/GservicesHelper;
 
 .field private e:Lcom/google/android/apps/camera/util/ApiHelper;
 
@@ -589,7 +589,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_11
 
     sget-object v0, Ldds;->e:Ldds;
 
@@ -597,7 +597,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_10
+    if-eqz v0, :cond_11
 
     iget-object v0, p0, Lddu;->d:Lcom/google/android/apps/camera/config/GservicesHelper;
 
@@ -607,7 +607,7 @@
 
     const/4 v8, 0x0
 
-    if-le v0, v8, :cond_10
+    if-le v0, v8, :cond_11
 
     const/4 v8, 0x1
 
@@ -615,51 +615,51 @@
 
     const/4 v8, 0x2
 
-    if-eq v0, v8, :cond_4
+    if-eq v0, v8, :cond_5
 
     const/4 v8, 0x3
 
-    if-eq v0, v8, :cond_6
+    if-eq v0, v8, :cond_7
 
     const/4 v8, 0x4
 
-    if-eq v0, v8, :cond_7
+    if-eq v0, v8, :cond_8
 
     const/4 v8, 0x5
 
-    if-eq v0, v8, :cond_8
+    if-eq v0, v8, :cond_9
 
     const/4 v8, 0x6
 
-    if-eq v0, v8, :cond_9
+    if-eq v0, v8, :cond_a
 
     const/4 v8, 0x7
 
-    if-eq v0, v8, :cond_a
+    if-eq v0, v8, :cond_b
 
     const/16 v8, 0x8
 
-    if-eq v0, v8, :cond_b
+    if-eq v0, v8, :cond_c
 
     const/16 v8, 0x9
 
-    if-eq v0, v8, :cond_c
+    if-eq v0, v8, :cond_d
 
     const/16 v8, 0xa
 
-    if-eq v0, v8, :cond_d
+    if-eq v0, v8, :cond_e
 
     const/16 v8, 0xb
 
-    if-eq v0, v8, :cond_e
+    if-eq v0, v8, :cond_f
 
     const/16 v8, 0xc
 
-    if-eq v0, v8, :cond_f
+    if-eq v0, v8, :cond_10
 
     const/16 v8, 0xd
 
-    if-ge v0, v8, :cond_10
+    if-ge v0, v8, :cond_11
 
     :cond_0
     invoke-interface {p2}, Lfsq;->b()Lhmr;
@@ -668,8 +668,9 @@
 
     sget-object v6, Lhmr;->b:Lhmr;
 
-    if-ne v0, v6, :cond_2
+    if-ne v0, v6, :cond_3
 
+    :cond_1
     invoke-static {p4}, Lddu;->a(Lddr;)I
 
     move-result v0
@@ -698,7 +699,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
@@ -712,7 +713,7 @@
 
     return-object v0
 
-    :cond_1
+    :cond_2
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v5, "Selected Nexus6HdrPlusAutoNoZsl OneCamera configuration."
@@ -725,35 +726,14 @@
 
     return-object v0
 
-    :cond_2
+    :cond_3
     invoke-interface {p2}, Lfsq;->b()Lhmr;
 
     move-result-object v0
 
     sget-object v6, Lhmr;->b:Lhmr;
 
-    if-ne v0, v6, :cond_3
-
-    sget-object v0, Lddu;->a:Ljava/lang/String;
-
-    const-string v3, "Selected Nexus6ZslYuv OneCamera configuration."
-
-    invoke-static {v0, v3}, Lbgj;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2}, Ldjp;->d(Ldlj;)Ldjk;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_3
-    invoke-interface {p2}, Lfsq;->b()Lhmr;
-
-    move-result-object v0
-
-    sget-object v6, Lhmr;->a:Lhmr;
-
-    if-ne v0, v6, :cond_10
+    if-ne v0, v6, :cond_4
 
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
@@ -768,6 +748,27 @@
     return-object v0
 
     :cond_4
+    invoke-interface {p2}, Lfsq;->b()Lhmr;
+
+    move-result-object v0
+
+    sget-object v6, Lhmr;->a:Lhmr;
+
+    if-ne v0, v6, :cond_1
+
+    sget-object v0, Lddu;->a:Ljava/lang/String;
+
+    const-string v3, "Selected Nexus6ZslYuv OneCamera configuration."
+
+    invoke-static {v0, v3}, Lbgj;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v1, v2}, Ldjp;->d(Ldlj;)Ldjk;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_5
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v3, "Selected Nexus5X OneCamera configuration."
@@ -780,7 +781,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     invoke-static {p4, p2}, Lddu;->a(Lddr;Lfsq;)Ldlp;
 
@@ -798,7 +799,7 @@
 
     return-object v0
 
-    :cond_5
+    :cond_6
     invoke-static {p4, p2}, Lddu;->a(Lddr;Lfsq;)Ldlp;
 
     move-result-object v3
@@ -815,7 +816,7 @@
 
     return-object v0
 
-    :cond_6
+    :cond_7
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v3, "Selected Nexus6P OneCamera configuration."
@@ -838,7 +839,7 @@
 
     return-object v0
 
-    :cond_7
+    :cond_8
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v3, "Selected Pixel 2016 Zsl Hdr OneCamera configuration."
@@ -861,7 +862,7 @@
 
     return-object v0
 
-    :cond_8
+    :cond_9
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v3, "Selected Pixel 2017 Zsl Hdr OneCamera configuration."
@@ -884,7 +885,7 @@
 
     return-object v0
 
-    :cond_9
+    :cond_a
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v3, "Selected Pixel 2017 Zsl Hdr OneCamera configuration."
@@ -907,7 +908,7 @@
 
     return-object v0
 
-    :cond_a
+    :cond_b
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v3, "Selected Pixel 2017 Hardware Zsl Hdr+ OneCamera configuration."
@@ -938,7 +939,7 @@
 
     return-object v0
 
-    :cond_b
+    :cond_c
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v3, "Selected pixel2016DeviceDogfoodFeatures OneCamera configuration."
@@ -961,7 +962,7 @@
 
     return-object v0
 
-    :cond_c
+    :cond_d
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v3, "Selected Pixel 2017 (DR Dogfood) OneCamera configuration."
@@ -984,7 +985,7 @@
 
     return-object v0
 
-    :cond_d
+    :cond_e
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v3, "Selected Pixel 2017 Hardware Zsl (DR Dogfood) OneCamera configuration."
@@ -1007,7 +1008,7 @@
 
     return-object v0
 
-    :cond_e
+    :cond_f
     iget-object v0, p0, Lddu;->f:Lbgx;
 
     const-string v3, "EXPERIMENTAL CONFIG: Experimental Features (Pixel)"
@@ -1038,7 +1039,7 @@
 
     return-object v0
 
-    :cond_f
+    :cond_10
     iget-object v0, p0, Lddu;->f:Lbgx;
 
     const-string v3, "EXPERIMENTAL CONFIG: Pixel2016 Tuning"
@@ -1069,7 +1070,7 @@
 
     return-object v0
 
-    :cond_10
+    :cond_11
     invoke-virtual {v3}, Ldds;->ordinal()I
 
     move-result v0

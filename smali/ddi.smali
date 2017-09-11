@@ -219,6 +219,8 @@
 
     iget-boolean v0, v0, Lhnx;->c:Z
 
+    const/4 v0, 0x1
+
     if-eqz v0, :cond_2
 
     :cond_1
@@ -241,6 +243,8 @@
     move-result v0
 
     goto :goto_1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

@@ -31,7 +31,7 @@
 .end method
 
 .method public constructor <init>(Lcom/google/android/apps/camera/config/GservicesHelper;Lcom/google/android/apps/camera/util/ApiHelper;Lbnn;)V
-    .locals 6
+    .locals 8
 
     const-wide/16 v4, 0x3e8
 
@@ -103,7 +103,7 @@
 
     :cond_1
     :goto_1
-    if-lez v0, :cond_5
+    if-lez v0, :cond_9
 
     sget-object v1, Lfqa;->b:Ljava/lang/String;
 
@@ -140,32 +140,22 @@
 
     iget-boolean v2, v2, Lhnx;->c:Z
 
+    const/4 v2, 0x1
+
+    invoke-virtual {p1}, Lcom/google/android/apps/camera/config/GservicesHelper;->cgc()I
+
+    move-result v6
+
+    const/16 v7, 0x1
+
+    if-eq v6, v7, :cond_3
+
     const/4 v2, 0x0
 
-    if-eqz v2, :cond_3
-
-    const/16 v0, 0x244
-
-    goto :goto_1
-
     :cond_3
-    iget-object v2, p0, Lfqa;->c:Lcom/google/android/apps/camera/util/ApiHelper;
-
-    iget-object v2, v2, Lcom/google/android/apps/camera/util/ApiHelper;->b:Lhnx;
-
-    iget-boolean v2, v2, Lhnx;->d:Z
-
-    if-nez v2, :cond_1
-
-    iget-object v2, p0, Lfqa;->c:Lcom/google/android/apps/camera/util/ApiHelper;
-
-    iget-object v2, v2, Lcom/google/android/apps/camera/util/ApiHelper;->b:Lhnx;
-
-    iget-boolean v2, v2, Lhnx;->b:Z
-
     if-eqz v2, :cond_4
 
-    const/16 v0, 0x172
+    const/16 v0, 0x244
 
     goto :goto_1
 
@@ -174,8 +164,68 @@
 
     iget-object v2, v2, Lcom/google/android/apps/camera/util/ApiHelper;->b:Lhnx;
 
+    iget-boolean v2, v2, Lhnx;->d:Z
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1}, Lcom/google/android/apps/camera/config/GservicesHelper;->cgc()I
+
+    move-result v6
+
+    const/16 v7, 0x3
+
+    if-eq v6, v7, :cond_5
+
+    const/4 v2, 0x0
+
+    :cond_5
+    if-nez v2, :cond_1
+
+    iget-object v2, p0, Lfqa;->c:Lcom/google/android/apps/camera/util/ApiHelper;
+
+    iget-object v2, v2, Lcom/google/android/apps/camera/util/ApiHelper;->b:Lhnx;
+
+    iget-boolean v2, v2, Lhnx;->b:Z
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1}, Lcom/google/android/apps/camera/config/GservicesHelper;->cgc()I
+
+    move-result v6
+
+    const/16 v7, 0x2
+
+    if-eq v6, v7, :cond_6
+
+    const/4 v2, 0x0
+
+    :cond_6
+    if-eqz v2, :cond_7
+
+    const/16 v0, 0x172
+
+    goto :goto_1
+
+    :cond_7
+    iget-object v2, p0, Lfqa;->c:Lcom/google/android/apps/camera/util/ApiHelper;
+
+    iget-object v2, v2, Lcom/google/android/apps/camera/util/ApiHelper;->b:Lhnx;
+
     iget-boolean v2, v2, Lhnx;->f:Z
 
+    const/4 v2, 0x1
+
+    invoke-virtual {p1}, Lcom/google/android/apps/camera/config/GservicesHelper;->cgc()I
+
+    move-result v6
+
+    const/16 v7, 0x4
+
+    if-ge v6, v7, :cond_8
+
+    const/4 v2, 0x0
+
+    :cond_8
     if-nez v2, :cond_1
 
     iget-object v2, p0, Lfqa;->c:Lcom/google/android/apps/camera/util/ApiHelper;
@@ -198,7 +248,7 @@
 
     goto :goto_1
 
-    :cond_5
+    :cond_9
     iget-object v0, p0, Lfqa;->d:Lbnn;
 
     invoke-virtual {v0}, Lbnn;->a()Landroid/app/ActivityManager;
@@ -227,5 +277,5 @@
 
     int-to-long v0, v0
 
-    goto :goto_0
+    goto/16 :goto_0
 .end method
