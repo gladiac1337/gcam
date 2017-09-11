@@ -115,8 +115,6 @@
     const/4 v0, 0x1
 
     :cond_2
-    const/4 v0, 0x1
-
     if-nez v0, :cond_4
 
     iget-object v0, p0, Lddj;->b:Lcom/google/android/apps/camera/util/ApiHelper;
