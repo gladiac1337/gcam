@@ -523,7 +523,7 @@ Clean your lens for better photo quality."</string>
     <string name="pref_title_refocus_quality">Image quality</string>
     <string name="pref_video_effect_default">none</string>
     <string name="pref_video_effect_title">Effects</string>
-    <string name="pref_video_encoding_default">@string/pref_video_encoding_h264</string>
+    <string name="pref_video_encoding_default">@string/pref_video_encoding_h265</string>
     <string name="pref_video_encoding_h264">H.264</string>
     <string name="pref_video_encoding_h265">H.265</string>
     <string name="pref_video_quality_entry_1080p">HD 1080p</string>
