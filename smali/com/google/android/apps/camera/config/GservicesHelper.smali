@@ -455,6 +455,108 @@
     goto :goto_0
 .end method
 
+.method public shlb()I
+    .locals 4
+
+    iget-object v1, p0, Lcom/google/android/apps/camera/config/GservicesHelper;->d:Landroid/content/SharedPreferences;
+
+    const-string v2, "pref_SUPPORTED_HARDWARE_LEVEL_BACK_key"
+
+    invoke-interface {v1, v2}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v3, 0x0
+
+    iget-object v1, p0, Lcom/google/android/apps/camera/config/GservicesHelper;->d:Landroid/content/SharedPreferences;
+
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public shlf()I
+    .locals 4
+
+    iget-object v1, p0, Lcom/google/android/apps/camera/config/GservicesHelper;->d:Landroid/content/SharedPreferences;
+
+    const-string v2, "pref_SUPPORTED_HARDWARE_LEVEL_FRONT_key"
+
+    invoke-interface {v1, v2}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v3, 0x0
+
+    iget-object v1, p0, Lcom/google/android/apps/camera/config/GservicesHelper;->d:Landroid/content/SharedPreferences;
+
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public slo()I
+    .locals 4
+
+    iget-object v1, p0, Lcom/google/android/apps/camera/config/GservicesHelper;->d:Landroid/content/SharedPreferences;
+
+    const-string v2, "pref_support_level_override_key"
+
+    invoke-interface {v1, v2}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v3, 0x0
+
+    iget-object v1, p0, Lcom/google/android/apps/camera/config/GservicesHelper;->d:Landroid/content/SharedPreferences;
+
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public tiic()I
     .locals 4
 

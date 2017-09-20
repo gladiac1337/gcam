@@ -445,7 +445,7 @@ Clean your lens for better photo quality."</string>
     <string name="pref_camera_jpeg_quality_normal">normal</string>
     <string name="pref_camera_jpeg_quality_superfine">superfine</string>
     <string name="pref_camera_location_label">LOCATION</string>
-    <string name="pref_camera_picturesize_default">large</string>
+    <string name="pref_camera_picturesize_default">@string/pref_camera_picturesize_entry_large</string>
     <string name="pref_camera_picturesize_entry_large">Large</string>
     <string name="pref_camera_picturesize_entry_medium">Medium</string>
     <string name="pref_camera_picturesize_entry_small">Small</string>
@@ -754,7 +754,7 @@ Move device slowly"</string>
     <string name="zoom_plus_desc">Zoom in</string>
     <string name="pref_config_camera_title">Config camera</string>
     <string name="pref_config_camera_default">0</string>
-    <string name="pref_config_camera_1">Nexus6 HdrPlusAuto</string>
+    <string name="pref_config_camera_1">Nexus6 Hdr+ Auto</string>
     <string name="pref_config_camera_2">Nexus5X</string>
     <string name="pref_config_camera_3">Nexus6P</string>
     <string name="pref_config_camera_4">Pixel 2016 Zsl Hdr</string>
@@ -834,4 +834,23 @@ It is necessary to completely close the application, the changes will take effec
     <string name="pref_config_camera_10">Pixel 2017 Hardware Zsl (DR Dogfood)</string>
     <string name="pref_config_camera_11">Pixel Experimental Features</string>
     <string name="pref_config_camera_12">Nexus Experimental 2016 Tuning</string>
+    <string name="pref_SUPPORTED_HARDWARE_LEVEL_BACK_title">SUPPORTED HW LEVEL BACK CAMERA</string>
+    <string name="pref_SUPPORTED_HARDWARE_LEVEL_BACK_default">1</string>
+    <string name="pref_SUPPORTED_HARDWARE_LEVEL_BACK_0">LIMITED</string>
+    <string name="pref_SUPPORTED_HARDWARE_LEVEL_BACK_1">FULL</string>
+    <string name="pref_SUPPORTED_HARDWARE_LEVEL_BACK_2">LEGACY</string>
+    <string name="pref_SUPPORTED_HARDWARE_LEVEL_BACK_3">LEVEL_3</string>
+    <string name="pref_SUPPORTED_HARDWARE_LEVEL_FRONT_title">SUPPORTED HW LEVEL FRONT CAMERA</string>
+    <string name="pref_SUPPORTED_HARDWARE_LEVEL_FRONT_default">1</string>
+    <string name="pref_SUPPORTED_HARDWARE_LEVEL_FRONT_0">LIMITED</string>
+    <string name="pref_SUPPORTED_HARDWARE_LEVEL_FRONT_1">FULL</string>
+    <string name="pref_SUPPORTED_HARDWARE_LEVEL_FRONT_2">LEGACY</string>
+    <string name="pref_SUPPORTED_HARDWARE_LEVEL_FRONT_3">LEVEL_3</string>
+    <string name="pref_support_level_override_title">Support level override</string>
+    <string name="pref_support_level_override_default">3</string>
+    <string name="pref_support_level_override_a">ZSL</string>
+    <string name="pref_support_level_override_b">LEGACY_JPEG</string>
+    <string name="pref_support_level_override_c">LIMITED_JPEG</string>
+    <string name="pref_support_level_override_d">ZSL_REPROCESSING</string>
+    <string name="pref_support_level_override_e">NEXUS_2015</string>
 </resources>

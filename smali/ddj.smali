@@ -94,83 +94,6 @@
     goto :goto_0
 
     :cond_1
-    iget-object v5, p0, Lddj;->a:Lcom/google/android/apps/camera/config/GservicesHelper;
-
-    invoke-virtual {v5}, Lcom/google/android/apps/camera/config/GservicesHelper;->cgc()I
-
-    move-result v5
-
-    const/16 v6, 0x3
-
-    if-eq v5, v6, :cond_2
-
-    iget-object v5, p0, Lddj;->a:Lcom/google/android/apps/camera/config/GservicesHelper;
-
-    invoke-virtual {v5}, Lcom/google/android/apps/camera/config/GservicesHelper;->cgc()I
-
-    move-result v5
-
-    const/16 v6, 0x2
-
-    if-eq v5, v6, :cond_3
-
-    :cond_2
-    sget-object v0, Ldds;->e:Ldds;
-
-    goto :goto_1
-
-    :cond_3
-    iget-object v5, p0, Lddj;->a:Lcom/google/android/apps/camera/config/GservicesHelper;
-
-    invoke-virtual {v5}, Lcom/google/android/apps/camera/config/GservicesHelper;->cgc()I
-
-    move-result v5
-
-    const/16 v6, 0x4
-
-    if-eq v5, v6, :cond_4
-
-    const/16 v6, 0x7
-
-    if-gt v5, v6, :cond_4
-
-    const/16 v6, 0x5
-
-    if-eq v5, v6, :cond_5
-
-    const/16 v6, 0x6
-
-    if-eq v5, v6, :cond_5
-
-    const/16 v6, 0x7
-
-    if-eq v5, v6, :cond_5
-
-    :cond_4
-    sget-object v0, Ldds;->e:Ldds;
-
-    goto :goto_1
-
-    :cond_5
-    iget-object v5, p0, Lddj;->a:Lcom/google/android/apps/camera/config/GservicesHelper;
-
-    invoke-virtual {v5}, Lcom/google/android/apps/camera/config/GservicesHelper;->cgc()I
-
-    move-result v5
-
-    const/16 v6, 0x5
-
-    if-lt v5, v6, :cond_6
-
-    const/16 v6, 0x7
-
-    if-gt v5, v6, :cond_6
-
-    sget-object v0, Ldds;->e:Ldds;
-
-    goto :goto_1
-
-    :cond_6
     sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->INFO_SUPPORTED_HARDWARE_LEVEL:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     invoke-interface {p1, v0}, Lfsq;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
@@ -179,7 +102,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    if-nez v0, :cond_7
+    if-nez v0, :cond_2
 
     sget-object v0, Lddi;->a:Ljava/lang/String;
 
@@ -191,170 +114,66 @@
 
     goto :goto_1
 
-    :cond_7
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    :cond_2
+    iget-object v5, p0, Lddj;->a:Lcom/google/android/apps/camera/config/GservicesHelper;
 
-    move-result v1
+    invoke-virtual {v5}, Lcom/google/android/apps/camera/config/GservicesHelper;->slo()I
 
-    const/4 v2, 0x2
+    move-result v5
 
-    if-ne v1, v2, :cond_8
+    const/4 v0, 0x1
 
+    const/16 v6, 0x0
+
+    if-le v5, v6, :cond_3
+
+    const/16 v6, 0x1
+
+    if-eq v5, v6, :cond_4
+
+    const/16 v6, 0x2
+
+    if-eq v5, v6, :cond_5
+
+    const/16 v6, 0x3
+
+    if-eq v5, v6, :cond_6
+
+    const/16 v6, 0x4
+
+    if-eq v5, v6, :cond_7
+
+    const/16 v6, 0x5
+
+    if-eq v5, v6, :cond_8
+
+    :cond_3
+    sget-object v0, Ldds;->c:Ldds;
+
+    goto :goto_1
+
+    :cond_4
+    sget-object v0, Ldds;->a:Ldds;
+
+    goto :goto_1
+
+    :cond_5
     sget-object v0, Ldds;->b:Ldds;
 
     goto :goto_1
 
-    :cond_8
-    iget-object v1, p0, Lddj;->b:Lcom/google/android/apps/camera/util/ApiHelper;
-
-    iget-object v1, v1, Lcom/google/android/apps/camera/util/ApiHelper;->b:Lhnx;
-
-    iget-boolean v1, v1, Lhnx;->a:Z
-
-    if-nez v1, :cond_9
-
-    iget-object v5, p0, Lddj;->a:Lcom/google/android/apps/camera/config/GservicesHelper;
-
-    invoke-virtual {v5}, Lcom/google/android/apps/camera/config/GservicesHelper;->cgc()I
-
-    move-result v5
-
-    const/16 v6, 0x1
-
-    if-eq v5, v6, :cond_9
-
-    const/16 v6, 0x2
-
-    if-ne v5, v6, :cond_a
-
-    :cond_9
+    :cond_6
     sget-object v0, Ldds;->c:Ldds;
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    :cond_a
-    iget-object v5, p0, Lddj;->a:Lcom/google/android/apps/camera/config/GservicesHelper;
-
-    invoke-virtual {v5}, Lcom/google/android/apps/camera/config/GservicesHelper;->cgc()I
-
-    move-result v5
-
-    const/16 v6, 0x0
-
-    if-eq v5, v6, :cond_c
-
-    const/16 v6, 0x3
-
-    if-gt v5, v6, :cond_c
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_c
-
-    invoke-interface {p1, v3}, Lfsq;->a(I)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {p1, v3}, Lfsq;->b(I)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_b
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_b
-
+    :cond_7
     sget-object v0, Ldds;->d:Ldds;
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    :cond_b
-    sget-object v0, Ldds;->a:Ldds;
+    :cond_8
+    sget-object v0, Ldds;->e:Ldds;
 
-    goto/16 :goto_1
-
-    :cond_c
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    if-nez v1, :cond_d
-
-    sget-object v0, Ldds;->c:Ldds;
-
-    goto/16 :goto_1
-
-    :cond_d
-    sget-object v1, Lddi;->a:Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sget-object v2, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    add-int/lit8 v3, v3, 0x24
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/String;->length()I
-
-    move-result v4
-
-    add-int/2addr v3, v4
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v3, "Unknown device or support level: "
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v3, " / "
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lbgj;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v0, Ldds;->c:Ldds;
-
-    goto/16 :goto_1
+    goto :goto_1
 .end method

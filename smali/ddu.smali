@@ -457,6 +457,77 @@
     goto :goto_1
 .end method
 
+.method private static aa(Lddr;Lfsq;)Ldlp;
+    .locals 6
+
+    const/4 v5, 0x3
+
+    new-array v1, v5, [I
+
+    fill-array-data v1, :array_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, v5, :cond_1
+
+    aget v2, v1, v0
+
+    invoke-interface {p1, v2}, Lfsq;->a(I)Ljava/util/List;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    new-instance v0, Lhnd;
+
+    invoke-static {v3}, Lkk;->c(Ljava/util/List;)Lhja;
+
+    move-result-object v1
+
+    invoke-direct {v0, v2, v1}, Lhnd;-><init>(ILhja;)V
+
+    :goto_1
+    invoke-static {v0}, Lid;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v1, Ldlp;
+
+    iget v2, p0, Lddr;->c:I
+
+    add-int/lit8 v2, v2, 0x3
+
+    add-int/lit8 v2, v2, 0x2
+
+    iget-object v3, v0, Lhnd;->b:Lhja;
+
+    iget v0, v0, Lhnd;->a:I
+
+    invoke-direct {v1, v2, v3, v0}, Ldlp;-><init>(ILhja;I)V
+
+    return-object v1
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :array_0
+    .array-data 4
+        0x25
+        0x26
+        0x20
+    .end array-data
+.end method
+
 .method private static b(Lddr;Lfsq;)Ldlp;
     .locals 4
 
@@ -519,9 +590,28 @@
 
     invoke-direct {v0, p5}, Lfsu;-><init>(Lfsp;)V
 
+    iget-object v1, p0, Lddu;->d:Lcom/google/android/apps/camera/config/GservicesHelper;
+
+    invoke-virtual {v1}, Lcom/google/android/apps/camera/config/GservicesHelper;->cgc()I
+
+    move-result v1
+
+    const/4 v8, 0x6
+
+    if-eq v1, v8, :cond_0
+
+    const/4 v8, 0x7
+
+    if-eq v1, v8, :cond_0
+
     new-instance v1, Lddv;
 
     invoke-direct {v1, p6}, Lddv;-><init>(Lcom/google/android/apps/camera/legacy/app/stats/CameraDeviceInstrumentationSession;)V
+
+    :cond_0
+    new-instance v1, Lddy;
+
+    invoke-direct {v1, p6}, Lddy;-><init>(Lcom/google/android/apps/camera/legacy/app/stats/CameraDeviceInstrumentationSession;)V
 
     sget-object v2, Liwj;->a:Liwj;
 
@@ -577,19 +667,34 @@
 
     invoke-interface {v0}, Lhjm;->a()V
 
+    iget-object v0, p0, Lddu;->d:Lcom/google/android/apps/camera/config/GservicesHelper;
+
+    invoke-virtual {v0}, Lcom/google/android/apps/camera/config/GservicesHelper;->cgc()I
+
+    move-result v0
+
+    const/4 v8, 0x6
+
+    if-eq v0, v8, :cond_1
+
+    const/4 v8, 0x7
+
+    if-eq v0, v8, :cond_1
+
     invoke-static {}, Lddp;->g()Z
 
     invoke-static {}, Lddp;->g()Z
 
     invoke-static {}, Lddp;->h()Z
 
+    :cond_1
     iget-object v0, p0, Lddu;->d:Lcom/google/android/apps/camera/config/GservicesHelper;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/config/GservicesHelper;->c()Z
 
     move-result v0
 
-    if-eqz v0, :cond_11
+    if-eqz v0, :cond_13
 
     sget-object v0, Ldds;->e:Ldds;
 
@@ -597,7 +702,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_11
+    if-eqz v0, :cond_13
 
     iget-object v0, p0, Lddu;->d:Lcom/google/android/apps/camera/config/GservicesHelper;
 
@@ -607,70 +712,70 @@
 
     const/4 v8, 0x0
 
-    if-le v0, v8, :cond_11
+    if-le v0, v8, :cond_13
 
     const/4 v8, 0x1
 
-    if-eq v0, v8, :cond_0
+    if-eq v0, v8, :cond_2
 
     const/4 v8, 0x2
 
-    if-eq v0, v8, :cond_5
+    if-eq v0, v8, :cond_7
 
     const/4 v8, 0x3
 
-    if-eq v0, v8, :cond_7
+    if-eq v0, v8, :cond_9
 
     const/4 v8, 0x4
 
-    if-eq v0, v8, :cond_8
+    if-eq v0, v8, :cond_a
 
     const/4 v8, 0x5
 
-    if-eq v0, v8, :cond_9
+    if-eq v0, v8, :cond_b
 
     const/4 v8, 0x6
 
-    if-eq v0, v8, :cond_a
+    if-eq v0, v8, :cond_c
 
     const/4 v8, 0x7
 
-    if-eq v0, v8, :cond_b
+    if-eq v0, v8, :cond_d
 
     const/16 v8, 0x8
 
-    if-eq v0, v8, :cond_c
+    if-eq v0, v8, :cond_e
 
     const/16 v8, 0x9
 
-    if-eq v0, v8, :cond_d
+    if-eq v0, v8, :cond_f
 
     const/16 v8, 0xa
 
-    if-eq v0, v8, :cond_e
+    if-eq v0, v8, :cond_10
 
     const/16 v8, 0xb
 
-    if-eq v0, v8, :cond_f
+    if-eq v0, v8, :cond_11
 
     const/16 v8, 0xc
 
-    if-eq v0, v8, :cond_10
+    if-eq v0, v8, :cond_12
 
     const/16 v8, 0xd
 
-    if-ge v0, v8, :cond_11
+    if-ge v0, v8, :cond_13
 
-    :cond_0
+    :cond_2
     invoke-interface {p2}, Lfsq;->b()Lhmr;
 
     move-result-object v0
 
     sget-object v6, Lhmr;->b:Lhmr;
 
-    if-ne v0, v6, :cond_3
+    if-ne v0, v6, :cond_5
 
-    :cond_1
+    :cond_3
     invoke-static {p4}, Lddu;->a(Lddr;)I
 
     move-result v0
@@ -699,7 +804,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_4
 
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
@@ -713,7 +818,7 @@
 
     return-object v0
 
-    :cond_2
+    :cond_4
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v5, "Selected Nexus6HdrPlusAutoNoZsl OneCamera configuration."
@@ -726,14 +831,14 @@
 
     return-object v0
 
-    :cond_3
+    :cond_5
     invoke-interface {p2}, Lfsq;->b()Lhmr;
 
     move-result-object v0
 
     sget-object v6, Lhmr;->b:Lhmr;
 
-    if-ne v0, v6, :cond_4
+    if-ne v0, v6, :cond_6
 
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
@@ -747,14 +852,14 @@
 
     return-object v0
 
-    :cond_4
+    :cond_6
     invoke-interface {p2}, Lfsq;->b()Lhmr;
 
     move-result-object v0
 
     sget-object v6, Lhmr;->a:Lhmr;
 
-    if-ne v0, v6, :cond_1
+    if-ne v0, v6, :cond_3
 
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
@@ -768,7 +873,7 @@
 
     return-object v0
 
-    :cond_5
+    :cond_7
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v3, "Selected Nexus5X OneCamera configuration."
@@ -781,13 +886,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_8
 
     invoke-static {p4, p2}, Lddu;->a(Lddr;Lfsq;)Ldlp;
 
     move-result-object v3
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lddu;->a(Z)Lebv;
 
@@ -799,12 +904,12 @@
 
     return-object v0
 
-    :cond_6
+    :cond_8
     invoke-static {p4, p2}, Lddu;->a(Lddr;Lfsq;)Ldlp;
 
     move-result-object v3
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lddu;->a(Z)Lebv;
 
@@ -816,7 +921,7 @@
 
     return-object v0
 
-    :cond_7
+    :cond_9
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v3, "Selected Nexus6P OneCamera configuration."
@@ -839,7 +944,7 @@
 
     return-object v0
 
-    :cond_8
+    :cond_a
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v3, "Selected Pixel 2016 Zsl Hdr OneCamera configuration."
@@ -850,7 +955,7 @@
 
     move-result-object v3
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lddu;->a(Z)Lebv;
 
@@ -862,7 +967,7 @@
 
     return-object v0
 
-    :cond_9
+    :cond_b
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v3, "Selected Pixel 2017 Zsl Hdr OneCamera configuration."
@@ -873,7 +978,7 @@
 
     move-result-object v3
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lddu;->a(Z)Lebv;
 
@@ -885,20 +990,18 @@
 
     return-object v0
 
-    :cond_a
+    :cond_c
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v3, "Selected Pixel 2017 Zsl Hdr OneCamera configuration."
 
     invoke-static {v0, v3}, Lbgj;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p4, p2}, Lddu;->a(Lddr;Lfsq;)Ldlp;
+    invoke-static {p4, p2}, Lddu;->aa(Lddr;Lfsq;)Ldlp;
 
     move-result-object v3
 
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Lddu;->a(Z)Lebv;
+    invoke-direct {p0}, Lddu;->a()Lebv;
 
     move-result-object v6
 
@@ -908,7 +1011,7 @@
 
     return-object v0
 
-    :cond_b
+    :cond_d
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v3, "Selected Pixel 2017 Hardware Zsl Hdr+ OneCamera configuration."
@@ -917,19 +1020,17 @@
 
     iget-object v0, p0, Lddu;->f:Lbgx;
 
-    const-string v3, "Pixel 2017 Hw Zsl HDR+ configuration"
+    const-string v3, "Nexus 2017 Hw Zsl HDR+ configuration"
 
     const/4 v6, 0x1
 
     invoke-virtual {v0, v3, v6}, Lbgx;->a(Ljava/lang/String;I)V
 
-    invoke-static {p4, p2}, Lddu;->a(Lddr;Lfsq;)Ldlp;
+    invoke-static {p4, p2}, Lddu;->aa(Lddr;Lfsq;)Ldlp;
 
     move-result-object v3
 
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Lddu;->a(Z)Lebv;
+    invoke-direct {p0}, Lddu;->a()Lebv;
 
     move-result-object v6
 
@@ -939,7 +1040,7 @@
 
     return-object v0
 
-    :cond_c
+    :cond_e
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v3, "Selected pixel2016DeviceDogfoodFeatures OneCamera configuration."
@@ -950,7 +1051,7 @@
 
     move-result-object v3
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lddu;->a(Z)Lebv;
 
@@ -962,7 +1063,7 @@
 
     return-object v0
 
-    :cond_d
+    :cond_f
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v3, "Selected Pixel 2017 (DR Dogfood) OneCamera configuration."
@@ -973,7 +1074,7 @@
 
     move-result-object v3
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lddu;->a(Z)Lebv;
 
@@ -985,7 +1086,7 @@
 
     return-object v0
 
-    :cond_e
+    :cond_10
     sget-object v0, Lddu;->a:Ljava/lang/String;
 
     const-string v3, "Selected Pixel 2017 Hardware Zsl (DR Dogfood) OneCamera configuration."
@@ -996,7 +1097,7 @@
 
     move-result-object v3
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lddu;->a(Z)Lebv;
 
@@ -1008,7 +1109,7 @@
 
     return-object v0
 
-    :cond_f
+    :cond_11
     iget-object v0, p0, Lddu;->f:Lbgx;
 
     const-string v3, "EXPERIMENTAL CONFIG: Experimental Features (Pixel)"
@@ -1027,7 +1128,7 @@
 
     move-result-object v3
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lddu;->a(Z)Lebv;
 
@@ -1039,7 +1140,7 @@
 
     return-object v0
 
-    :cond_10
+    :cond_12
     iget-object v0, p0, Lddu;->f:Lbgx;
 
     const-string v3, "EXPERIMENTAL CONFIG: Pixel2016 Tuning"
@@ -1058,7 +1159,7 @@
 
     move-result-object v3
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lddu;->a(Z)Lebv;
 
@@ -1070,7 +1171,7 @@
 
     return-object v0
 
-    :cond_11
+    :cond_13
     invoke-virtual {v3}, Ldds;->ordinal()I
 
     move-result v0
@@ -1172,6 +1273,8 @@
     move-result-object v0
 
     return-object v0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

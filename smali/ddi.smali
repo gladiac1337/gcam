@@ -139,7 +139,7 @@
 .end method
 
 .method static a(Lfsq;Lcom/google/android/apps/camera/config/GservicesHelper;)Lilc;
-    .locals 3
+    .locals 5
 
     const/4 v2, -0x1
 
@@ -190,6 +190,17 @@
 
     move-result v0
 
+    invoke-virtual {p1}, Lcom/google/android/apps/camera/config/GservicesHelper;->shlb()I
+
+    move-result v0
+
+    const/16 v1, 0x0
+
+    if-ge v0, v1, :cond_1
+
+    const/16 v0, 0x1
+
+    :cond_1
     invoke-static {v0}, Ldds;->a(I)Lilc;
 
     move-result-object v0
@@ -197,43 +208,6 @@
     goto :goto_0
 
     :pswitch_1
-    iget-object v0, p1, Lcom/google/android/apps/camera/config/GservicesHelper;->b:Lcom/google/android/apps/camera/util/ApiHelper;
-
-    iget-object v0, v0, Lcom/google/android/apps/camera/util/ApiHelper;->c:Lhnw;
-
-    iget-boolean v0, v0, Lhnw;->b:Z
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p1, Lcom/google/android/apps/camera/config/GservicesHelper;->b:Lcom/google/android/apps/camera/util/ApiHelper;
-
-    iget-object v0, v0, Lcom/google/android/apps/camera/util/ApiHelper;->b:Lhnx;
-
-    iget-boolean v0, v0, Lhnx;->a:Z
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p1, Lcom/google/android/apps/camera/config/GservicesHelper;->b:Lcom/google/android/apps/camera/util/ApiHelper;
-
-    iget-object v0, v0, Lcom/google/android/apps/camera/util/ApiHelper;->b:Lhnx;
-
-    iget-boolean v0, v0, Lhnx;->c:Z
-
-    const/4 v0, 0x1
-
-    if-eqz v0, :cond_2
-
-    :cond_1
-    const/4 v0, 0x1
-
-    :goto_1
-    invoke-static {v0}, Ldds;->a(I)Lilc;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_2
     iget-object v0, p1, Lcom/google/android/apps/camera/config/GservicesHelper;->a:Landroid/content/ContentResolver;
 
     const-string v1, "camera:capture_support_level_override_front"
@@ -242,9 +216,22 @@
 
     move-result v0
 
-    goto :goto_1
+    invoke-virtual {p1}, Lcom/google/android/apps/camera/config/GservicesHelper;->shlf()I
 
-    nop
+    move-result v0
+
+    const/16 v1, 0x0
+
+    if-ge v0, v1, :cond_2
+
+    const/16 v0, 0x1
+
+    :cond_2
+    invoke-static {v0}, Ldds;->a(I)Lilc;
+
+    move-result-object v0
+
+    goto :goto_0
 
     :pswitch_data_0
     .packed-switch 0x0
