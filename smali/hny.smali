@@ -32,8 +32,6 @@
 .method protected final a(Lhog;)V
     .locals 7
 
-    .prologue
-    .line 1
     :try_start_0
     iget-object v0, p0, Lhny;->a:Landroid/os/Bundle;
 
@@ -45,7 +43,6 @@
 
     invoke-direct {v4, p0}, Lhnz;-><init>(Lhny;)V
 
-    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -104,11 +101,9 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 5
     :goto_2
     return-void
 
-    .line 2
     :cond_0
     const/4 v0, 0x0
 
@@ -129,7 +124,6 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 3
     :catch_0
     move-exception v0
 
@@ -139,15 +133,12 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4
     sget-object v0, Lhnv;->a:Lcom/google/android/gms/common/api/Status;
 
-    .line 5
     invoke-virtual {p0, v0}, Lhny;->c(Lcom/google/android/gms/common/api/Status;)V
 
     goto :goto_2
 
-    .line 2
     :cond_1
     const/4 v0, 0x0
 

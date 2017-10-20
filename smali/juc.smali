@@ -13,11 +13,8 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 6
     const-class v0, Ljuc;
 
-    .line 7
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -34,7 +31,6 @@
 
     sput-object v0, Ljuc;->b:Ljava/lang/String;
 
-    .line 8
     invoke-static {}, Ljuc;->a()Ljub;
 
     move-result-object v0
@@ -47,8 +43,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -57,8 +51,6 @@
 .method private static a()Ljub;
     .locals 2
 
-    .prologue
-    .line 2
     :try_start_0
     sget-object v0, Ljuc;->b:Ljava/lang/String;
 
@@ -66,7 +58,6 @@
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {v0}, Ljava/lang/Class;->getEnumConstants()[Ljava/lang/Object;
 
     move-result-object v0
@@ -79,7 +70,6 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5
     :goto_0
     return-object v0
 

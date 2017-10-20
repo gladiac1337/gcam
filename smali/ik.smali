@@ -14,8 +14,6 @@
 .method constructor <init>(Lia;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lik;->a:Lia;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,20 +26,16 @@
 .method public final onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
     .locals 2
 
-    .prologue
-    .line 2
     invoke-static {p2}, Ljp;->a(Ljava/lang/Object;)Ljp;
 
     move-result-object v0
 
-    .line 3
     iget-object v1, p0, Lik;->a:Lia;
 
     invoke-interface {v1, p1, v0}, Lia;->a(Landroid/view/View;Ljp;)Ljp;
 
     move-result-object v0
 
-    .line 4
     invoke-static {v0}, Ljp;->a(Ljp;)Ljava/lang/Object;
 
     move-result-object v0

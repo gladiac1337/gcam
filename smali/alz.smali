@@ -18,8 +18,6 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
-    .line 10
     new-instance v0, Ljava/util/HashSet;
 
     const/4 v1, 0x2
@@ -38,7 +36,6 @@
 
     aput-object v3, v1, v2
 
-    .line 11
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
@@ -51,21 +48,16 @@
 
     sput-object v0, Lalz;->a:Ljava/util/Set;
 
-    .line 12
     return-void
 .end method
 
 .method public constructor <init>(Lakv;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lalz;->b:Lakv;
 
-    .line 3
     return-void
 .end method
 
@@ -74,11 +66,8 @@
 .method public final synthetic a(Ljava/lang/Object;IILaeo;)Lakw;
     .locals 3
 
-    .prologue
-    .line 7
     check-cast p1, Landroid/net/Uri;
 
-    .line 8
     iget-object v0, p0, Lalz;->b:Lakv;
 
     new-instance v1, Lakh;
@@ -93,18 +82,14 @@
 
     move-result-object v0
 
-    .line 9
     return-object v0
 .end method
 
 .method public final synthetic a(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 4
     check-cast p1, Landroid/net/Uri;
 
-    .line 5
     sget-object v0, Lalz;->a:Ljava/util/Set;
 
     invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
@@ -115,6 +100,5 @@
 
     move-result v0
 
-    .line 6
     return v0
 .end method

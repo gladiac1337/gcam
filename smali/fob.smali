@@ -11,16 +11,12 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lfoa;-><init>()V
 
-    .line 2
     const-string v0, "precision mediump float;                            \nvarying vec2 vTexCoord;                             \nuniform sampler2D sTexture;                         \nvoid main()                                         \n{                                                   \n  gl_FragColor = texture2D( sTexture, vTexCoord );  \n}                                                   \n"
 
     iput-object v0, p0, Lfob;->e:Ljava/lang/String;
 
-    .line 3
     const-string v0, "uniform mat4 uMvpMatrix;                   \nattribute vec4 aPosition;                   \nattribute vec2 aTextureCoord;               \nvarying vec2 vTexCoord;                     \nvoid main()                                 \n{                                           \n   gl_Position = uMvpMatrix * aPosition;    \n   vTexCoord = aTextureCoord;               \n}                                           \n"
 
     iget-object v1, p0, Lfob;->e:Ljava/lang/String;
@@ -31,7 +27,6 @@
 
     iput v0, p0, Lfob;->d:I
 
-    .line 4
     iget v0, p0, Lfob;->d:I
 
     const-string v1, "aPosition"
@@ -42,7 +37,6 @@
 
     iput v0, p0, Lfob;->a:I
 
-    .line 5
     iget v0, p0, Lfob;->d:I
 
     const-string v1, "aTextureCoord"
@@ -53,7 +47,6 @@
 
     iput v0, p0, Lfob;->b:I
 
-    .line 6
     iget v0, p0, Lfob;->d:I
 
     const-string v1, "uMvpMatrix"
@@ -64,6 +57,5 @@
 
     iput v0, p0, Lfob;->c:I
 
-    .line 7
     return-void
 .end method

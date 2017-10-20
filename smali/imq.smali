@@ -35,32 +35,26 @@
 .method public constructor <init>(Landroid/media/MediaFormat;Ljgy;ZLandroid/os/Handler;Z)V
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
     const/4 v3, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget-object v1, Liof;->a:Liof;
 
     iput-object v1, p0, Limq;->k:Liof;
 
-    .line 3
     sget-object v1, Linf;->a:Linf;
 
     iput-object v1, p0, Limq;->l:Linf;
 
-    .line 4
     new-instance v1, Ljava/util/concurrent/ConcurrentLinkedDeque;
 
     invoke-direct {v1}, Ljava/util/concurrent/ConcurrentLinkedDeque;-><init>()V
 
     iput-object v1, p0, Limq;->e:Ljava/util/Deque;
 
-    .line 5
     new-instance v1, Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v2, 0x3
@@ -69,49 +63,40 @@
 
     iput-object v1, p0, Limq;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 6
     new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v1, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v1, p0, Limq;->i:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 7
     iput-boolean p3, p0, Limq;->m:Z
 
-    .line 8
     iput-object v0, p0, Limq;->c:Landroid/view/Surface;
 
-    .line 10
     new-instance v1, Ljuw;
 
     invoke-direct {v1}, Ljuw;-><init>()V
 
-    .line 11
     iput-object v1, p0, Limq;->f:Ljuw;
 
-    .line 12
     new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v1, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v1, p0, Limq;->h:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 13
     new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v1, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v1, p0, Limq;->g:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 14
     new-instance v1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v1, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v1, p0, Limq;->j:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 15
     const-string v1, "mime"
 
     invoke-virtual {p1, v1}, Landroid/media/MediaFormat;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -124,28 +109,22 @@
 
     iput-object v1, p0, Limq;->a:Landroid/media/MediaCodec;
 
-    .line 16
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x17
 
     if-lt v1, v2, :cond_1
 
-    .line 17
     if-eqz p4, :cond_0
 
-    .line 18
     iget-object v1, p0, Limq;->a:Landroid/media/MediaCodec;
 
     new-instance v2, Limi;
 
-    .line 19
     invoke-direct {v2, p0}, Limi;-><init>(Limq;)V
 
-    .line 20
     invoke-virtual {v1, v2, p4}, Landroid/media/MediaCodec;->setCallback(Landroid/media/MediaCodec$Callback;Landroid/os/Handler;)V
 
-    .line 31
     :goto_0
     :try_start_0
     iget-object v1, p0, Limq;->a:Landroid/media/MediaCodec;
@@ -160,72 +139,57 @@
     :try_end_0
     .catch Landroid/media/MediaCodec$CodecException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 36
     if-nez p2, :cond_4
 
-    .line 37
     :goto_1
     iput-object v0, p0, Limq;->d:Landroid/view/Surface;
 
-    .line 38
     return-void
 
-    .line 21
     :cond_0
     iget-object v1, p0, Limq;->a:Landroid/media/MediaCodec;
 
     new-instance v2, Limi;
 
-    .line 22
     invoke-direct {v2, p0}, Limi;-><init>(Limq;)V
 
-    .line 23
     invoke-virtual {v1, v2}, Landroid/media/MediaCodec;->setCallback(Landroid/media/MediaCodec$Callback;)V
 
     goto :goto_0
 
-    .line 24
     :cond_1
     if-eqz p4, :cond_2
 
-    .line 25
     iget-object v1, p0, Limq;->a:Landroid/media/MediaCodec;
 
     new-instance v2, Limj;
 
     new-instance v3, Limi;
 
-    .line 26
     invoke-direct {v3, p0}, Limi;-><init>(Limq;)V
 
-    .line 27
     invoke-direct {v2, v3, p4}, Limj;-><init>(Landroid/media/MediaCodec$Callback;Landroid/os/Handler;)V
 
     invoke-virtual {v1, v2}, Landroid/media/MediaCodec;->setCallback(Landroid/media/MediaCodec$Callback;)V
 
     goto :goto_0
 
-    .line 28
     :cond_2
     iget-object v1, p0, Limq;->a:Landroid/media/MediaCodec;
 
     new-instance v2, Limi;
 
-    .line 29
     invoke-direct {v2, p0}, Limi;-><init>(Limq;)V
 
-    .line 30
     invoke-virtual {v1, v2}, Landroid/media/MediaCodec;->setCallback(Landroid/media/MediaCodec$Callback;)V
 
     goto :goto_0
 
-    .line 33
     :catch_0
     move-exception v0
 
     move-object v1, v0
 
-    .line 34
     const-string v2, "AsynchMediaCodec"
 
     const-string v3, "Error while configuring codec: "
@@ -251,10 +215,8 @@
     :goto_2
     invoke-static {v2, v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 35
     throw v1
 
-    .line 34
     :cond_3
     new-instance v0, Ljava/lang/String;
 
@@ -262,7 +224,6 @@
 
     goto :goto_2
 
-    .line 37
     :cond_4
     iget-object v0, p0, Limq;->a:Landroid/media/MediaCodec;
 
@@ -280,11 +241,8 @@
 .method public final a()I
     .locals 1
 
-    .prologue
-    .line 39
     monitor-enter p0
 
-    .line 40
     :try_start_0
     iget-object v0, p0, Limq;->e:Ljava/util/Deque;
 
@@ -294,12 +252,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 41
     const/4 v0, -0x1
 
     monitor-exit p0
 
-    .line 42
     :goto_0
     return v0
 
@@ -320,7 +276,6 @@
 
     goto :goto_0
 
-    .line 43
     :catchall_0
     move-exception v0
 
@@ -334,22 +289,18 @@
 .method public final a(I)V
     .locals 7
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 44
     iget-object v0, p0, Limq;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    .line 45
     iget-object v0, p0, Limq;->d:Landroid/view/Surface;
 
     if-nez v0, :cond_0
 
-    .line 46
     iget-object v0, p0, Limq;->a:Landroid/media/MediaCodec;
 
     const-wide/16 v4, 0x0
@@ -362,11 +313,9 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/media/MediaCodec;->queueInputBuffer(IIIJI)V
 
-    .line 48
     :goto_0
     return-void
 
-    .line 47
     :cond_0
     iget-object v0, p0, Limq;->a:Landroid/media/MediaCodec;
 
@@ -378,8 +327,6 @@
 .method public final b()V
     .locals 2
 
-    .prologue
-    .line 49
     iget-object v0, p0, Limq;->j:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -390,12 +337,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 50
     iget-object v0, p0, Limq;->a:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->stop()V
 
-    .line 51
     :cond_0
     iget-object v0, p0, Limq;->f:Ljuw;
 
@@ -405,12 +350,10 @@
 
     if-nez v0, :cond_2
 
-    .line 52
     iget-object v0, p0, Limq;->a:Landroid/media/MediaCodec;
 
     invoke-virtual {v0}, Landroid/media/MediaCodec;->release()V
 
-    .line 53
     iget-object v0, p0, Limq;->d:Landroid/view/Surface;
 
     if-eqz v0, :cond_1
@@ -419,12 +362,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 54
     iget-object v0, p0, Limq;->d:Landroid/view/Surface;
 
     invoke-virtual {v0}, Landroid/view/Surface;->release()V
 
-    .line 55
     :cond_1
     iget-object v0, p0, Limq;->f:Ljuw;
 
@@ -436,7 +377,6 @@
 
     invoke-virtual {v0, v1}, Ljsl;->a(Ljava/lang/Object;)Z
 
-    .line 56
     :cond_2
     return-void
 .end method

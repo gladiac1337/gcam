@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/ImageRegionSource;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/ImageRegionSource$1;->this$0:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/ImageRegionSource;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onFrameReceived(Lcom/google/android/libraries/smartburst/filterfw/InputPort;Lcom/google/android/libraries/smartburst/filterfw/Frame;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/ImageRegionSource$1;->this$0:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/ImageRegionSource;
 
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/ImageRegionSource;->access$000(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/ImageRegionSource;)Landroid/graphics/RectF;
@@ -48,6 +44,5 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/RectF;->set(Landroid/graphics/RectF;)V
 
-    .line 3
     return-void
 .end method

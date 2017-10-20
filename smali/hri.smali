@@ -36,12 +36,8 @@
 .method public final b(Lhtc;)V
     .locals 3
 
-    .prologue
-    .line 1
-    .line 2
     iget-object v0, p1, Lhtc;->d:Ljava/util/Map;
 
-    .line 3
     iget-object v1, p0, Lhri;->b:Lhtp;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -52,14 +48,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
 
     throw v0
 
-    .line 5
     :cond_0
     const-string v0, "UnregisterListenerTask"
 

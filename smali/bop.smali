@@ -14,14 +14,10 @@
 .method constructor <init>(Ljxb;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbop;->a:Ljxb;
 
-    .line 3
     return-void
 .end method
 
@@ -30,8 +26,6 @@
 .method public final a(Landroid/graphics/Bitmap;)Ljava/io/ByteArrayOutputStream;
     .locals 4
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lbop;->a:Ljxb;
 
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
@@ -40,7 +34,6 @@
 
     check-cast v0, Ljava/io/ByteArrayOutputStream;
 
-    .line 6
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getRowBytes()I
 
     move-result v1
@@ -51,45 +44,37 @@
 
     mul-int/2addr v1, v2
 
-    .line 7
     invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v1
 
-    .line 8
     invoke-virtual {p1, v1}, Landroid/graphics/Bitmap;->copyPixelsToBuffer(Ljava/nio/Buffer;)V
 
-    .line 9
     invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v1
 
-    .line 10
     new-instance v2, Ljava/io/DataOutputStream;
 
     invoke-direct {v2, v0}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 11
     :try_start_0
     array-length v3, v1
 
     invoke-virtual {v2, v3}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 12
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
     invoke-virtual {v2, v3}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 13
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v3
 
     invoke-virtual {v2, v3}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 14
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
 
     move-result-object v3
@@ -100,23 +85,18 @@
 
     invoke-virtual {v2, v3}, Ljava/io/DataOutputStream;->writeUTF(Ljava/lang/String;)V
 
-    .line 15
     invoke-virtual {v2, v1}, Ljava/io/DataOutputStream;->write([B)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 16
     invoke-virtual {v2}, Ljava/io/DataOutputStream;->close()V
 
-    .line 21
     return-object v0
 
-    .line 18
     :catch_0
     move-exception v0
 
-    .line 19
     :try_start_1
     new-instance v1, Ljava/io/IOException;
 
@@ -128,7 +108,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 20
     :catchall_0
     move-exception v0
 

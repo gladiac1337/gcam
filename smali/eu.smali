@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lex;-><init>()V
 
     return-void
@@ -17,10 +15,8 @@
 .method private static a(Landroid/os/ParcelFileDescriptor;)Ljava/io/File;
     .locals 3
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 2
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -44,7 +40,6 @@
 
     move-result-object v2
 
-    .line 3
     invoke-static {v2}, Landroid/system/Os;->stat(Ljava/lang/String;)Landroid/system/StructStat;
 
     move-result-object v0
@@ -57,24 +52,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
     :try_end_0
     .catch Landroid/system/ErrnoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7
     :goto_0
     return-object v0
 
     :cond_0
     move-object v0, v1
 
-    .line 5
     goto :goto_0
 
-    .line 7
     :catch_0
     move-exception v0
 
@@ -88,34 +79,27 @@
 .method public a(Landroid/content/Context;[Lfv;I)Landroid/graphics/Typeface;
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 8
     array-length v1, p2
 
     if-gtz v1, :cond_0
 
-    .line 28
     :goto_0
     return-object v0
 
-    .line 10
     :cond_0
     invoke-static {p2, p3}, Leu;->a([Lfv;I)Lfv;
 
     move-result-object v1
 
-    .line 11
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    .line 13
     :try_start_0
     iget-object v1, v1, Lfv;->a:Landroid/net/Uri;
 
-    .line 14
     const-string v3, "r"
 
     const/4 v4, 0x0
@@ -126,13 +110,11 @@
 
     move-result-object v3
 
-    .line 16
     :try_start_1
     invoke-static {v3}, Leu;->a(Landroid/os/ParcelFileDescriptor;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 17
     if-eqz v1, :cond_1
 
     invoke-virtual {v1}, Ljava/io/File;->canRead()Z
@@ -141,7 +123,6 @@
 
     if-nez v2, :cond_5
 
-    .line 18
     :cond_1
     new-instance v4, Ljava/io/FileInputStream;
 
@@ -154,7 +135,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 19
     :try_start_2
     invoke-static {p1, v4}, Lex;->a(Landroid/content/Context;Ljava/io/InputStream;)Landroid/graphics/Typeface;
     :try_end_2
@@ -163,14 +143,12 @@
 
     move-result-object v1
 
-    .line 20
     :try_start_3
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 21
     if-eqz v3, :cond_2
 
     :try_start_4
@@ -183,7 +161,6 @@
 
     goto :goto_0
 
-    .line 22
     :catch_0
     move-exception v2
 
@@ -192,7 +169,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 23
     :catchall_0
     move-exception v1
 
@@ -212,7 +188,6 @@
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_1
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 26
     :catch_1
     move-exception v1
 
@@ -221,7 +196,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 27
     :catchall_1
     move-exception v2
 
@@ -249,13 +223,11 @@
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_2
 
-    .line 28
     :catch_2
     move-exception v1
 
     goto :goto_0
 
-    .line 23
     :catch_3
     move-exception v4
 
@@ -264,7 +236,6 @@
 
     goto :goto_2
 
-    .line 27
     :catchall_2
     move-exception v1
 
@@ -272,13 +243,11 @@
 
     goto :goto_3
 
-    .line 23
     :cond_4
     invoke-virtual {v4}, Ljava/io/FileInputStream;->close()V
 
     goto :goto_2
 
-    .line 24
     :cond_5
     invoke-static {v1}, Landroid/graphics/Typeface;->createFromFile(Ljava/io/File;)Landroid/graphics/Typeface;
     :try_end_b
@@ -287,7 +256,6 @@
 
     move-result-object v1
 
-    .line 25
     if-eqz v3, :cond_6
 
     :try_start_c
@@ -298,7 +266,6 @@
 
     goto :goto_0
 
-    .line 27
     :catch_4
     move-exception v3
 
@@ -313,7 +280,6 @@
 
     goto :goto_4
 
-    .line 23
     :catchall_3
     move-exception v1
 

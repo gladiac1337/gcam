@@ -15,8 +15,6 @@
 .method public constructor <init>(Landroid/content/res/Resources;Lblr;Lcom/google/android/apps/camera/focusindicator/FocusIndicatorView;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbml;->a:Landroid/content/res/Resources;
 
     iput-object p2, p0, Lbml;->b:Lblr;
@@ -33,8 +31,6 @@
 .method public final onAnimationStart(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbml;->a:Landroid/content/res/Resources;
 
     const v1, 0x7f0d004b
@@ -43,12 +39,10 @@
 
     move-result v0
 
-    .line 3
     iget-object v1, p0, Lbml;->b:Lblr;
 
     invoke-virtual {v1, v0}, Lblr;->d(F)V
 
-    .line 4
     iget-object v0, p0, Lbml;->a:Landroid/content/res/Resources;
 
     const v1, 0x7f0d00f2
@@ -61,16 +55,13 @@
 
     div-float/2addr v0, v1
 
-    .line 5
     iget-object v1, p0, Lbml;->b:Lblr;
 
     invoke-virtual {v1, v0}, Lblr;->b(F)V
 
-    .line 6
     iget-object v0, p0, Lbml;->c:Lcom/google/android/apps/camera/focusindicator/FocusIndicatorView;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/focusindicator/FocusIndicatorView;->invalidate()V
 
-    .line 7
     return-void
 .end method

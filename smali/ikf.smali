@@ -14,8 +14,6 @@
 .method constructor <init>(Ljava/lang/Runnable;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Likf;->a:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,8 +24,6 @@
 .method private final a(Ljava/lang/Throwable;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 2
     :try_start_0
     iget-object v0, p0, Likf;->a:Ljava/lang/Runnable;
 
@@ -35,15 +31,12 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6
     :goto_0
     throw p1
 
-    .line 4
     :catch_0
     move-exception v0
 
-    .line 5
     invoke-static {p1, v0}, Ljvg;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
     goto :goto_0
@@ -54,8 +47,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 7
     check-cast p1, Ljava/lang/Throwable;
 
     invoke-direct {p0, p1}, Likf;->a(Ljava/lang/Throwable;)Ljava/lang/Object;

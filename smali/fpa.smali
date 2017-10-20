@@ -17,8 +17,6 @@
 .method public constructor <init>(Lfpc;JLjava/io/File;)V
     .locals 2
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfpa;->c:Lfpc;
 
     iput-wide p2, p0, Lfpa;->d:J
@@ -27,7 +25,6 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iget-wide v0, p0, Lfpa;->d:J
 
     iput-wide v0, p0, Lfpa;->a:J

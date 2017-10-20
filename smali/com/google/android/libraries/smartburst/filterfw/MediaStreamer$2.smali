@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer$2;->this$0:Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,17 +26,13 @@
 .method public onVideoSizeChanged(Landroid/media/MediaPlayer;II)V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer$2;->this$0:Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;
 
     invoke-static {v0, p2}, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->access$102(Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;I)I
 
-    .line 3
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer$2;->this$0:Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;
 
     invoke-static {v0, p3}, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->access$202(Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;I)I
 
-    .line 4
     return-void
 .end method

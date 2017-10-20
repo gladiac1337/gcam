@@ -21,7 +21,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x4
 
     const/4 v5, 0x3
@@ -32,7 +31,6 @@
 
     const/4 v2, 0x0
 
-    .line 3
     new-instance v0, Ldcm;
 
     const-string v1, "NO_RECORDING"
@@ -41,7 +39,6 @@
 
     sput-object v0, Ldcm;->a:Ldcm;
 
-    .line 4
     new-instance v0, Ldcm;
 
     const-string v1, "CLOSED"
@@ -50,7 +47,6 @@
 
     sput-object v0, Ldcm;->b:Ldcm;
 
-    .line 5
     new-instance v0, Ldcm;
 
     const-string v1, "STARTING_RECORDING"
@@ -59,7 +55,6 @@
 
     sput-object v0, Ldcm;->c:Ldcm;
 
-    .line 6
     new-instance v0, Ldcm;
 
     const-string v1, "STOPPING_RECORDING"
@@ -68,7 +63,6 @@
 
     sput-object v0, Ldcm;->d:Ldcm;
 
-    .line 7
     new-instance v0, Ldcm;
 
     const-string v1, "RECORDING"
@@ -77,7 +71,6 @@
 
     sput-object v0, Ldcm;->e:Ldcm;
 
-    .line 8
     const/4 v0, 0x5
 
     new-array v0, v0, [Ldcm;
@@ -110,8 +103,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -120,8 +111,6 @@
 .method public static values()[Ldcm;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Ldcm;->f:[Ldcm;
 
     invoke-virtual {v0}, [Ldcm;->clone()Ljava/lang/Object;

@@ -73,8 +73,6 @@
 .method public final run()V
     .locals 14
 
-    .prologue
-    .line 1
     iget-object v13, p0, Lbxq;->a:Lchi;
 
     iget-object v1, p0, Lbxq;->b:Liin;
@@ -101,24 +99,19 @@
 
     iget-object v12, p0, Lbxq;->m:Liiw;
 
-    .line 2
     new-instance v0, Lchk;
 
-    .line 3
     invoke-static {v6, v8}, Lbxn;->a(Liaj;Ldiu;)Liaj;
 
     move-result-object v6
 
-    .line 4
     invoke-static {}, Lbwp;->b()Ljava/util/concurrent/Executor;
 
     move-result-object v8
 
     invoke-direct/range {v0 .. v12}, Lchk;-><init>(Liin;Lchu;Ljuk;Ldok;Lgha;Liaj;Ldlu;Ljava/util/concurrent/Executor;Lbpm;Lbpo;Liir;Liiw;)V
 
-    .line 5
     iput-object v0, v13, Lchi;->a:Lchh;
 
-    .line 6
     return-void
 .end method

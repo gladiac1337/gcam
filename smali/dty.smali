@@ -40,61 +40,42 @@
 .method private constructor <init>(Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldty;->a:Ljxb;
 
-    .line 3
     iput-object p2, p0, Ldty;->b:Ljxb;
 
-    .line 4
     iput-object p3, p0, Ldty;->c:Ljxb;
 
-    .line 5
     iput-object p4, p0, Ldty;->d:Ljxb;
 
-    .line 6
     iput-object p5, p0, Ldty;->e:Ljxb;
 
-    .line 7
     iput-object p6, p0, Ldty;->f:Ljxb;
 
-    .line 8
     iput-object p7, p0, Ldty;->g:Ljxb;
 
-    .line 9
     iput-object p8, p0, Ldty;->h:Ljxb;
 
-    .line 10
     iput-object p9, p0, Ldty;->i:Ljxb;
 
-    .line 11
     iput-object p10, p0, Ldty;->j:Ljxb;
 
-    .line 12
     iput-object p11, p0, Ldty;->k:Ljxb;
 
-    .line 13
     iput-object p12, p0, Ldty;->l:Ljxb;
 
-    .line 14
     iput-object p13, p0, Ldty;->m:Ljxb;
 
-    .line 15
     iput-object p14, p0, Ldty;->n:Ljxb;
 
-    .line 16
     return-void
 .end method
 
 .method public static a(Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;)Ljxb;
     .locals 15
 
-    .prologue
-    .line 17
     new-instance v0, Ldty;
 
     move-object v1, p0
@@ -135,12 +116,8 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 15
 
-    .prologue
-    .line 18
-    .line 19
     iget-object v0, p0, Ldty;->a:Ljxb;
 
-    .line 20
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -149,14 +126,12 @@
 
     iget-object v0, p0, Ldty;->b:Ljxb;
 
-    .line 21
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     iget-object v4, p0, Ldty;->c:Ljxb;
 
     iget-object v0, p0, Ldty;->d:Ljxb;
 
-    .line 22
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -165,7 +140,6 @@
 
     iget-object v0, p0, Ldty;->e:Ljxb;
 
-    .line 23
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v5
@@ -174,7 +148,6 @@
 
     iget-object v0, p0, Ldty;->f:Ljxb;
 
-    .line 24
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -183,7 +156,6 @@
 
     iget-object v0, p0, Ldty;->g:Ljxb;
 
-    .line 25
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v8
@@ -192,7 +164,6 @@
 
     iget-object v0, p0, Ldty;->h:Ljxb;
 
-    .line 26
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -203,7 +174,6 @@
 
     iget-object v0, p0, Ldty;->i:Ljxb;
 
-    .line 27
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -212,17 +182,14 @@
 
     iget-object v0, p0, Ldty;->j:Ljxb;
 
-    .line 28
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Ldty;->k:Ljxb;
 
-    .line 29
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Ldty;->l:Ljxb;
 
-    .line 30
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v9
@@ -231,7 +198,6 @@
 
     iget-object v0, p0, Ldty;->m:Ljxb;
 
-    .line 31
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v10
@@ -240,14 +206,12 @@
 
     iget-object v0, p0, Ldty;->n:Ljxb;
 
-    .line 32
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v11
 
     check-cast v11, Liaj;
 
-    .line 34
     new-instance v0, Ldvd;
 
     new-instance v7, Lggh;
@@ -256,26 +220,22 @@
 
     const/high16 v14, 0x3f800000    # 1.0f
 
-    .line 35
     invoke-static {v14}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v14
 
     invoke-direct {v7, v13, v14}, Lggh;-><init>(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 36
     invoke-static {v7}, Ljkt;->a(Ljava/lang/Object;)Ljkt;
 
     move-result-object v7
 
     invoke-direct/range {v0 .. v11}, Ldvd;-><init>(Lick;Lija;Ldtl;Ljxb;Ldwq;Lfkj;Ljava/util/Set;Ldxb;Lgzq;Ljhi;Liaj;)V
 
-    .line 37
     new-instance v1, Ldtr;
 
     const/16 v2, 0x23
 
-    .line 38
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -286,21 +246,17 @@
 
     invoke-direct {v1, v0, v2}, Ldtr;-><init>(Ldvb;Ljava/util/Set;)V
 
-    .line 39
     new-instance v0, Ldyo;
 
     invoke-direct {v0, v1, v12}, Ldyo;-><init>(Ldvb;Ldyx;)V
 
-    .line 40
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 41
     invoke-static {v0, v1}, Ljvr;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ldvb;
 
-    .line 42
     return-object v0
 .end method

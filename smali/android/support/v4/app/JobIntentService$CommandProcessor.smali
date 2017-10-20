@@ -11,8 +11,6 @@
 .method constructor <init>(Landroid/support/v4/app/JobIntentService;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Landroid/support/v4/app/JobIntentService$CommandProcessor;->this$0:Landroid/support/v4/app/JobIntentService;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -25,8 +23,6 @@
 .method protected final bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 12
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Landroid/support/v4/app/JobIntentService$CommandProcessor;->doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
@@ -39,8 +35,6 @@
 .method protected final varargs doInBackground([Ljava/lang/Void;)Ljava/lang/Void;
     .locals 3
 
-    .prologue
-    .line 2
     :goto_0
     iget-object v0, p0, Landroid/support/v4/app/JobIntentService$CommandProcessor;->this$0:Landroid/support/v4/app/JobIntentService;
 
@@ -50,7 +44,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v1, p0, Landroid/support/v4/app/JobIntentService$CommandProcessor;->this$0:Landroid/support/v4/app/JobIntentService;
 
     invoke-interface {v0}, Landroid/support/v4/app/JobIntentService$GenericWorkItem;->getIntent()Landroid/content/Intent;
@@ -59,12 +52,10 @@
 
     invoke-virtual {v1, v2}, Landroid/support/v4/app/JobIntentService;->onHandleWork(Landroid/content/Intent;)V
 
-    .line 4
     invoke-interface {v0}, Landroid/support/v4/app/JobIntentService$GenericWorkItem;->complete()V
 
     goto :goto_0
 
-    .line 5
     :cond_0
     const/4 v0, 0x0
 
@@ -74,8 +65,6 @@
 .method protected final bridge synthetic onCancelled(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 10
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Landroid/support/v4/app/JobIntentService$CommandProcessor;->onCancelled(Ljava/lang/Void;)V
@@ -86,21 +75,16 @@
 .method protected final onCancelled(Ljava/lang/Void;)V
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Landroid/support/v4/app/JobIntentService$CommandProcessor;->this$0:Landroid/support/v4/app/JobIntentService;
 
     invoke-virtual {v0}, Landroid/support/v4/app/JobIntentService;->processorFinished()V
 
-    .line 7
     return-void
 .end method
 
 .method protected final bridge synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 11
     check-cast p1, Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Landroid/support/v4/app/JobIntentService$CommandProcessor;->onPostExecute(Ljava/lang/Void;)V
@@ -111,12 +95,9 @@
 .method protected final onPostExecute(Ljava/lang/Void;)V
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Landroid/support/v4/app/JobIntentService$CommandProcessor;->this$0:Landroid/support/v4/app/JobIntentService;
 
     invoke-virtual {v0}, Landroid/support/v4/app/JobIntentService;->processorFinished()V
 
-    .line 9
     return-void
 .end method

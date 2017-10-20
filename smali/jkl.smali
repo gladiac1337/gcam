@@ -11,8 +11,6 @@
 .method constructor <init>(Ljkk;II)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljkl;->a:Ljkk;
 
     invoke-direct {p0, p2, p3}, Ljnw;-><init>(II)V
@@ -25,8 +23,6 @@
 .method protected final a(I)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ljkl;->a:Ljkk;
 
     invoke-virtual {v0, p1}, Ljkk;->get(I)Ljava/lang/Object;

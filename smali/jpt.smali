@@ -21,54 +21,40 @@
 .method public constructor <init>()V
     .locals 4
 
-    .prologue
     const-wide/16 v2, 0x0
 
     const/4 v0, 0x0
 
-    .line 4
     invoke-direct {p0}, Ljvx;-><init>()V
 
-    .line 6
     iput v0, p0, Ljpt;->a:I
 
-    .line 7
     iput v0, p0, Ljpt;->b:I
 
-    .line 8
     iput-wide v2, p0, Ljpt;->c:J
 
-    .line 9
     iput-wide v2, p0, Ljpt;->d:J
 
-    .line 10
     iput v0, p0, Ljpt;->e:I
 
-    .line 11
     iput-boolean v0, p0, Ljpt;->f:Z
 
-    .line 12
     const/4 v0, 0x0
 
     iput-object v0, p0, Ljpt;->unknownFieldData:Ljvz;
 
-    .line 13
     const/4 v0, -0x1
 
     iput v0, p0, Ljpt;->cachedSize:I
 
-    .line 14
     return-void
 .end method
 
 .method private static a(I)I
     .locals 3
 
-    .prologue
-    .line 1
     packed-switch p0, :pswitch_data_0
 
-    .line 3
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const/16 v1, 0x26
@@ -95,11 +81,9 @@
 
     throw v0
 
-    .line 2
     :pswitch_0
     return p0
 
-    .line 1
     nop
 
     :pswitch_data_0
@@ -113,47 +97,39 @@
 .method private final a(Ljvv;)Ljpt;
     .locals 11
 
-    .prologue
     const-wide/16 v2, 0x0
 
     const/16 v10, 0x40
 
     const/4 v5, 0x0
 
-    .line 54
     :cond_0
     :goto_0
     invoke-virtual {p1}, Ljvv;->a()I
 
     move-result v0
 
-    .line 55
     sparse-switch v0, :sswitch_data_0
 
-    .line 57
     invoke-super {p0, p1, v0}, Ljvx;->storeUnknownField(Ljvv;I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 58
     :sswitch_0
     return-object p0
 
-    .line 59
     :sswitch_1
     invoke-virtual {p1}, Ljvv;->i()I
 
     move-result v1
 
-    .line 61
     :try_start_0
     invoke-virtual {p1}, Ljvv;->d()I
 
     move-result v4
 
-    .line 62
     invoke-static {v4}, Ljpt;->a(I)I
 
     move-result v4
@@ -164,30 +140,25 @@
 
     goto :goto_0
 
-    .line 65
     :catch_0
     move-exception v4
 
     invoke-virtual {p1, v1}, Ljvv;->e(I)V
 
-    .line 66
     invoke-virtual {p0, p1, v0}, Ljpt;->storeUnknownField(Ljvv;I)Z
 
     goto :goto_0
 
-    .line 68
     :sswitch_2
     invoke-virtual {p1}, Ljvv;->i()I
 
     move-result v1
 
-    .line 70
     :try_start_1
     invoke-virtual {p1}, Ljvv;->d()I
 
     move-result v4
 
-    .line 71
     invoke-static {v4}, Ljpt;->a(I)I
 
     move-result v4
@@ -198,13 +169,11 @@
 
     goto :goto_0
 
-    .line 74
     :catch_1
     move-exception v4
 
     invoke-virtual {p1, v1}, Ljvv;->e(I)V
 
-    .line 75
     invoke-virtual {p0, p1, v0}, Ljpt;->storeUnknownField(Ljvv;I)Z
 
     goto :goto_0
@@ -214,16 +183,13 @@
 
     move v4, v5
 
-    .line 81
     :goto_1
     if-ge v4, v10, :cond_2
 
-    .line 82
     invoke-virtual {p1}, Ljvv;->j()B
 
     move-result v6
 
-    .line 83
     and-int/lit8 v7, v6, 0x7f
 
     int-to-long v8, v7
@@ -232,24 +198,19 @@
 
     or-long/2addr v0, v8
 
-    .line 84
     and-int/lit16 v6, v6, 0x80
 
     if-nez v6, :cond_1
 
-    .line 89
     iput-wide v0, p0, Ljpt;->c:J
 
     goto :goto_0
 
-    .line 86
     :cond_1
     add-int/lit8 v4, v4, 0x7
 
-    .line 87
     goto :goto_1
 
-    .line 88
     :cond_2
     invoke-static {}, Ljwc;->c()Ljwc;
 
@@ -262,16 +223,13 @@
 
     move v4, v5
 
-    .line 95
     :goto_2
     if-ge v4, v10, :cond_4
 
-    .line 96
     invoke-virtual {p1}, Ljvv;->j()B
 
     move-result v6
 
-    .line 97
     and-int/lit8 v7, v6, 0x7f
 
     int-to-long v8, v7
@@ -280,24 +238,19 @@
 
     or-long/2addr v0, v8
 
-    .line 98
     and-int/lit16 v6, v6, 0x80
 
     if-nez v6, :cond_3
 
-    .line 103
     iput-wide v0, p0, Ljpt;->d:J
 
     goto :goto_0
 
-    .line 100
     :cond_3
     add-int/lit8 v4, v4, 0x7
 
-    .line 101
     goto :goto_2
 
-    .line 102
     :cond_4
     invoke-static {}, Ljwc;->c()Ljwc;
 
@@ -305,22 +258,18 @@
 
     throw v0
 
-    .line 105
     :sswitch_5
     invoke-virtual {p1}, Ljvv;->i()I
 
     move-result v1
 
-    .line 107
     :try_start_2
     invoke-virtual {p1}, Ljvv;->d()I
 
     move-result v4
 
-    .line 109
     packed-switch v4, :pswitch_data_0
 
-    .line 111
     new-instance v6, Ljava/lang/IllegalArgumentException;
 
     const/16 v7, 0x2c
@@ -349,18 +298,15 @@
     :try_end_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 115
     :catch_2
     move-exception v4
 
     invoke-virtual {p1, v1}, Ljvv;->e(I)V
 
-    .line 116
     invoke-virtual {p0, p1, v0}, Ljpt;->storeUnknownField(Ljvv;I)Z
 
     goto/16 :goto_0
 
-    .line 112
     :pswitch_0
     :try_start_3
     iput v4, p0, Ljpt;->e:I
@@ -369,7 +315,6 @@
 
     goto/16 :goto_0
 
-    .line 118
     :sswitch_6
     invoke-virtual {p1}, Ljvv;->b()Z
 
@@ -379,7 +324,6 @@
 
     goto/16 :goto_0
 
-    .line 55
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -391,7 +335,6 @@
         0x30 -> :sswitch_6
     .end sparse-switch
 
-    .line 109
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -404,50 +347,41 @@
 .method protected final computeSerializedSize()I
     .locals 6
 
-    .prologue
     const-wide/16 v4, 0x0
 
-    .line 29
     invoke-super {p0}, Ljvx;->computeSerializedSize()I
 
     move-result v0
 
-    .line 30
     iget v1, p0, Ljpt;->a:I
 
     if-eqz v1, :cond_0
 
-    .line 31
     const/4 v1, 0x1
 
     iget v2, p0, Ljpt;->a:I
 
-    .line 32
     invoke-static {v1, v2}, Ljvw;->b(II)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 33
     :cond_0
     iget v1, p0, Ljpt;->b:I
 
     if-eqz v1, :cond_1
 
-    .line 34
     const/4 v1, 0x2
 
     iget v2, p0, Ljpt;->b:I
 
-    .line 35
     invoke-static {v1, v2}, Ljvw;->b(II)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 36
     :cond_1
     iget-wide v2, p0, Ljpt;->c:J
 
@@ -455,19 +389,16 @@
 
     if-eqz v1, :cond_2
 
-    .line 37
     const/4 v1, 0x3
 
     iget-wide v2, p0, Ljpt;->c:J
 
-    .line 38
     invoke-static {v1, v2, v3}, Ljvw;->b(IJ)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 39
     :cond_2
     iget-wide v2, p0, Ljpt;->d:J
 
@@ -475,57 +406,46 @@
 
     if-eqz v1, :cond_3
 
-    .line 40
     const/4 v1, 0x4
 
     iget-wide v2, p0, Ljpt;->d:J
 
-    .line 41
     invoke-static {v1, v2, v3}, Ljvw;->b(IJ)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 42
     :cond_3
     iget v1, p0, Ljpt;->e:I
 
     if-eqz v1, :cond_4
 
-    .line 43
     const/4 v1, 0x5
 
     iget v2, p0, Ljpt;->e:I
 
-    .line 44
     invoke-static {v1, v2}, Ljvw;->b(II)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 45
     :cond_4
     iget-boolean v1, p0, Ljpt;->f:Z
 
     if-eqz v1, :cond_5
 
-    .line 49
     const/16 v1, 0x30
 
-    .line 50
     invoke-static {v1}, Ljvw;->d(I)I
 
     move-result v1
 
-    .line 51
     add-int/lit8 v1, v1, 0x1
 
-    .line 52
     add-int/2addr v0, v1
 
-    .line 53
     :cond_5
     return v0
 .end method
@@ -533,8 +453,6 @@
 .method public final synthetic mergeFrom(Ljvv;)Ljwd;
     .locals 1
 
-    .prologue
-    .line 120
     invoke-direct {p0, p1}, Ljpt;->a(Ljvv;)Ljpt;
 
     move-result-object v0
@@ -545,35 +463,29 @@
 .method public final writeTo(Ljvw;)V
     .locals 6
 
-    .prologue
     const-wide/16 v4, 0x0
 
-    .line 15
     iget v0, p0, Ljpt;->a:I
 
     if-eqz v0, :cond_0
 
-    .line 16
     const/4 v0, 0x1
 
     iget v1, p0, Ljpt;->a:I
 
     invoke-virtual {p1, v0, v1}, Ljvw;->a(II)V
 
-    .line 17
     :cond_0
     iget v0, p0, Ljpt;->b:I
 
     if-eqz v0, :cond_1
 
-    .line 18
     const/4 v0, 0x2
 
     iget v1, p0, Ljpt;->b:I
 
     invoke-virtual {p1, v0, v1}, Ljvw;->a(II)V
 
-    .line 19
     :cond_1
     iget-wide v0, p0, Ljpt;->c:J
 
@@ -581,14 +493,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 20
     const/4 v0, 0x3
 
     iget-wide v2, p0, Ljpt;->c:J
 
     invoke-virtual {p1, v0, v2, v3}, Ljvw;->a(IJ)V
 
-    .line 21
     :cond_2
     iget-wide v0, p0, Ljpt;->d:J
 
@@ -596,43 +506,36 @@
 
     if-eqz v0, :cond_3
 
-    .line 22
     const/4 v0, 0x4
 
     iget-wide v2, p0, Ljpt;->d:J
 
     invoke-virtual {p1, v0, v2, v3}, Ljvw;->a(IJ)V
 
-    .line 23
     :cond_3
     iget v0, p0, Ljpt;->e:I
 
     if-eqz v0, :cond_4
 
-    .line 24
     const/4 v0, 0x5
 
     iget v1, p0, Ljpt;->e:I
 
     invoke-virtual {p1, v0, v1}, Ljvw;->a(II)V
 
-    .line 25
     :cond_4
     iget-boolean v0, p0, Ljpt;->f:Z
 
     if-eqz v0, :cond_5
 
-    .line 26
     const/4 v0, 0x6
 
     iget-boolean v1, p0, Ljpt;->f:Z
 
     invoke-virtual {p1, v0, v1}, Ljvw;->a(IZ)V
 
-    .line 27
     :cond_5
     invoke-super {p0, p1}, Ljvx;->writeTo(Ljvw;)V
 
-    .line 28
     return-void
 .end method

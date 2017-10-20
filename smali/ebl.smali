@@ -18,20 +18,14 @@
 .method public constructor <init>(Ljxb;Ljxb;Ljxb;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lebl;->a:Ljxb;
 
-    .line 3
     iput-object p2, p0, Lebl;->b:Ljxb;
 
-    .line 4
     iput-object p3, p0, Lebl;->c:Ljxb;
 
-    .line 5
     return-void
 .end method
 
@@ -40,14 +34,10 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 19
 
-    .prologue
-    .line 6
-    .line 7
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lebl;->a:Ljxb;
 
-    .line 8
     invoke-interface {v2}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -78,35 +68,28 @@
 
     check-cast v13, Ledj;
 
-    .line 10
     new-instance v16, Ledo;
 
-    .line 11
     invoke-virtual {v2}, Ledg;->a()Leah;
 
     move-result-object v17
 
-    .line 12
     invoke-static {}, Lfsl;->d()Lggm;
 
     move-result-object v2
 
-    .line 13
     iget-object v3, v13, Ledj;->e:Ljuk;
 
     new-instance v4, Ledk;
 
     invoke-direct {v4, v2}, Ledk;-><init>(Lggm;)V
 
-    .line 14
     sget-object v2, Ljuq;->a:Ljuq;
 
-    .line 15
     invoke-static {v3, v4, v2}, Ljtv;->a(Ljuk;Ljgy;Ljava/util/concurrent/Executor;)Ljuk;
 
     move-result-object v9
 
-    .line 16
     new-instance v18, Ledp;
 
     new-instance v2, Lecn;
@@ -143,7 +126,6 @@
 
     invoke-direct {v0, v2, v3, v4}, Ledp;-><init>(Leah;IZ)V
 
-    .line 17
     move-object/from16 v0, v17
 
     move-object/from16 v1, v18
@@ -156,10 +138,8 @@
 
     invoke-direct {v0, v2}, Ledo;-><init>(Leah;)V
 
-    .line 18
     const-string v2, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 19
     move-object/from16 v0, v16
 
     invoke-static {v0, v2}, Ljvr;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
@@ -168,6 +148,5 @@
 
     check-cast v2, Ledo;
 
-    .line 20
     return-object v2
 .end method

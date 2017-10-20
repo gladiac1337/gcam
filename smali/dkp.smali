@@ -14,11 +14,8 @@
 .method public constructor <init>(Lick;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const-string v0, "SimpleTorchSwitch"
 
     invoke-interface {p1, v0}, Lick;->a(Ljava/lang/String;)Licj;
@@ -27,7 +24,6 @@
 
     iput-object v0, p0, Ldkp;->a:Licj;
 
-    .line 3
     return-void
 .end method
 
@@ -36,8 +32,6 @@
 .method public final a(Lggj;Lggg;)Lgfm;
     .locals 6
 
-    .prologue
-    .line 4
     new-instance v1, Ldkr;
 
     new-instance v0, Lggi;
@@ -46,7 +40,6 @@
 
     invoke-direct {v1, p0, p1, v0}, Ldkr;-><init>(Ldkp;Lggj;Lggi;)V
 
-    .line 7
     :try_start_0
     new-instance v0, Ldkq;
 
@@ -54,14 +47,12 @@
 
     invoke-direct {v0, v2}, Ldkq;-><init>(I)V
 
-    .line 8
     new-instance v2, Lggi;
 
     iget-object v3, v1, Ldkr;->b:Lggi;
 
     invoke-direct {v2, v3}, Lggi;-><init>(Lggi;)V
 
-    .line 9
     sget-object v3, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     const/4 v4, 0x1
@@ -72,7 +63,6 @@
 
     invoke-virtual {v2, v3, v4}, Lggi;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)Lggi;
 
-    .line 10
     sget-object v3, Landroid/hardware/camera2/CaptureRequest;->FLASH_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     const/4 v4, 0x2
@@ -83,19 +73,16 @@
 
     invoke-virtual {v2, v3, v4}, Lggi;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)Lggi;
 
-    .line 11
     invoke-static {v0}, Lfsl;->b(Licc;)Lggq;
 
     move-result-object v3
 
     invoke-virtual {v2, v3}, Lggi;->a(Lggq;)Lggi;
 
-    .line 12
     invoke-virtual {v2}, Lggi;->c()Lggg;
 
     move-result-object v2
 
-    .line 13
     iget-object v3, v1, Ldkr;->a:Lggj;
 
     const/4 v4, 0x1
@@ -114,19 +101,15 @@
 
     invoke-interface {v3, v2, v4}, Lggj;->a(Ljava/util/List;Lggp;)V
 
-    .line 14
     invoke-virtual {v0}, Ldkq;->a()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 18
     return-object v1
 
-    .line 16
     :catchall_0
     move-exception v0
 
-    .line 17
     invoke-virtual {v1}, Ldkr;->close()V
 
     throw v0
@@ -135,7 +118,5 @@
 .method public final a()V
     .locals 0
 
-    .prologue
-    .line 19
     return-void
 .end method

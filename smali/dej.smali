@@ -11,8 +11,6 @@
 .method constructor <init>(Lddz;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldej;->a:Lddz;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

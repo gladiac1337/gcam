@@ -7,8 +7,6 @@
 .method public constructor <init>(Liaj;Liaj;)V
     .locals 2
 
-    .prologue
-    .line 1
     const/4 v0, 0x2
 
     new-array v0, v0, [Liaj;
@@ -27,7 +25,6 @@
 
     invoke-direct {p0, v0}, Liaz;-><init>(Liaj;)V
 
-    .line 2
     return-void
 .end method
 
@@ -36,15 +33,12 @@
 .method protected final synthetic b(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    .line 3
     check-cast p1, Ljava/util/List;
 
-    .line 4
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -58,21 +52,18 @@
     :goto_0
     invoke-static {v0}, Lixp;->a(Z)V
 
-    .line 5
     invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Boolean;
 
-    .line 6
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/Boolean;
 
-    .line 7
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v1
@@ -90,18 +81,15 @@
 
     move-result-object v0
 
-    .line 8
     return-object v0
 
     :cond_0
     move v0, v3
 
-    .line 4
     goto :goto_0
 
     :cond_1
     move v2, v3
 
-    .line 7
     goto :goto_1
 .end method

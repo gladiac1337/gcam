@@ -37,10 +37,8 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 25
     new-instance v0, Ljava/util/Date;
 
     const-wide/16 v2, 0x0
@@ -49,7 +47,6 @@
 
     sput-object v0, Lfvg;->l:Ljava/util/Date;
 
-    .line 26
     new-instance v0, Libx;
 
     invoke-direct {v0, v1, v1}, Libx;-><init>(II)V
@@ -62,73 +59,56 @@
 .method public constructor <init>(Landroid/net/Uri;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lfvg;->b:J
 
-    .line 3
     const-string v0, ""
 
     iput-object v0, p0, Lfvg;->c:Ljava/lang/String;
 
-    .line 4
     const-string v0, ""
 
     iput-object v0, p0, Lfvg;->d:Ljava/lang/String;
 
-    .line 5
     sget-object v0, Lfvg;->l:Ljava/util/Date;
 
     iput-object v0, p0, Lfvg;->e:Ljava/util/Date;
 
-    .line 6
     sget-object v0, Lfvg;->l:Ljava/util/Date;
 
     iput-object v0, p0, Lfvg;->f:Ljava/util/Date;
 
-    .line 7
     const-string v0, ""
 
     iput-object v0, p0, Lfvg;->g:Ljava/lang/String;
 
-    .line 8
     iput-boolean v2, p0, Lfvg;->h:Z
 
-    .line 9
     sget-object v0, Lfvg;->m:Libx;
 
     iput-object v0, p0, Lfvg;->i:Libx;
 
-    .line 10
     sget-object v0, Lfvh;->a:Lfvh;
 
     iput-object v0, p0, Lfvg;->j:Lfvh;
 
-    .line 11
     iput-boolean v2, p0, Lfvg;->k:Z
 
-    .line 12
     iput-object p1, p0, Lfvg;->a:Landroid/net/Uri;
 
-    .line 13
     return-void
 .end method
 
 .method public constructor <init>(Landroid/net/Uri;B)V
     .locals 0
 
-    .prologue
-    .line 27
     invoke-direct {p0, p1}, Lfvg;-><init>(Landroid/net/Uri;)V
 
-    .line 28
     return-void
 .end method
 
@@ -137,11 +117,8 @@
 .method public final a(J)Lfvg;
     .locals 1
 
-    .prologue
-    .line 17
     iput-wide p1, p0, Lfvg;->b:J
 
-    .line 18
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
@@ -155,11 +132,8 @@
 .method public final a(Ljava/util/Date;)Lfvg;
     .locals 1
 
-    .prologue
-    .line 19
     iput-object p1, p0, Lfvg;->e:Ljava/util/Date;
 
-    .line 20
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
@@ -173,8 +147,6 @@
 .method public b()Lfvf;
     .locals 19
 
-    .prologue
-    .line 14
     new-instance v3, Lfvf;
 
     move-object/from16 v0, p0
@@ -213,7 +185,6 @@
 
     iget-object v2, v0, Lfvg;->i:Libx;
 
-    .line 15
     invoke-static {v2}, Ljhi;->b(Ljava/lang/Object;)Ljhi;
 
     move-result-object v13
@@ -236,18 +207,14 @@
 
     invoke-direct/range {v3 .. v18}, Lfvf;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;Ljava/lang/String;Landroid/net/Uri;ZLjhi;JILfvh;Z)V
 
-    .line 16
     return-object v3
 .end method
 
 .method public final b(Ljava/util/Date;)Lfvg;
     .locals 1
 
-    .prologue
-    .line 21
     iput-object p1, p0, Lfvg;->f:Ljava/util/Date;
 
-    .line 22
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
@@ -261,13 +228,10 @@
 .method public final c()Lfvg;
     .locals 1
 
-    .prologue
-    .line 23
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lfvg;->h:Z
 
-    .line 24
     if-nez p0, :cond_0
 
     const/4 v0, 0x0

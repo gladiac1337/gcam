@@ -14,8 +14,6 @@
 .method constructor <init>(Landroid/app/Activity;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leqk;->a:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final onPreferenceClick(Landroid/preference/Preference;)Z
     .locals 3
 
-    .prologue
-    .line 2
     new-instance v0, Lfkf;
 
     iget-object v1, p0, Leqk;->a:Landroid/app/Activity;
@@ -40,13 +36,10 @@
 
     new-instance v2, Leql;
 
-    .line 3
     invoke-direct {v2}, Leql;-><init>()V
 
-    .line 4
     invoke-virtual {v0, v1, v2}, Lfkf;->a(ILjava/lang/Exception;)V
 
-    .line 5
     const/4 v0, 0x1
 
     return v0

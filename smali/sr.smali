@@ -21,40 +21,28 @@
 .method private constructor <init>(Lvm;Lvm;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lsr;->a:Lvm;
 
-    .line 3
     iput-object p2, p0, Lsr;->b:Lvm;
 
-    .line 4
     return-void
 .end method
 
 .method constructor <init>(Lvm;Lvm;IIII)V
     .locals 0
 
-    .prologue
-    .line 5
     invoke-direct {p0, p1, p2}, Lsr;-><init>(Lvm;Lvm;)V
 
-    .line 6
     iput p3, p0, Lsr;->c:I
 
-    .line 7
     iput p4, p0, Lsr;->d:I
 
-    .line 8
     iput p5, p0, Lsr;->e:I
 
-    .line 9
     iput p6, p0, Lsr;->f:I
 
-    .line 10
     return-void
 .end method
 
@@ -63,8 +51,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 11
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "ChangeInfo{oldHolder="

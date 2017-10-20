@@ -24,20 +24,14 @@
 .method public constructor <init>(Lgid;Lgvl;Leon;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lelm;->a:Lgid;
 
-    .line 3
     iput-object p2, p0, Lelm;->c:Lgvl;
 
-    .line 4
     iput-object p3, p0, Lelm;->b:Leon;
 
-    .line 5
     return-void
 .end method
 
@@ -46,9 +40,6 @@
 .method public final a(Lgid;)Ljava/io/File;
     .locals 5
 
-    .prologue
-    .line 6
-    .line 7
     sget-object v0, Lgif;->e:Lgie;
 
     invoke-virtual {p1, v0}, Lgid;->a(Lgie;)Ljava/lang/Object;
@@ -57,7 +48,6 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    .line 8
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v2, "burst-%d"
@@ -70,12 +60,10 @@
 
     aput-object v0, v3, v4
 
-    .line 9
     invoke-static {v1, v2, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 10
     iget-object v1, p0, Lelm;->b:Leon;
 
     const-string v2, "burst"
@@ -84,12 +72,10 @@
 
     move-result-object v1
 
-    .line 11
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v1, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 12
     iget-object v0, p0, Lelm;->c:Lgvl;
 
     invoke-interface {v0, v2}, Lgvl;->e(Ljava/io/File;)Z
@@ -98,7 +84,6 @@
 
     if-nez v0, :cond_0
 
-    .line 13
     new-instance v0, Ljava/io/IOException;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -137,30 +122,24 @@
 
     throw v0
 
-    .line 15
     :cond_0
     invoke-virtual {p1}, Lgid;->e()J
 
     move-result-wide v0
 
-    .line 16
     new-instance v3, Ljava/io/File;
 
-    .line 17
     invoke-static {v0, v1}, Ljdy;->a(J)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {v3, v2, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 18
     return-object v3
 .end method
 
 .method public final close()V
     .locals 0
 
-    .prologue
-    .line 19
     return-void
 .end method

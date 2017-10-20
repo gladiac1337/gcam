@@ -27,21 +27,16 @@
 .method public constructor <init>(I)V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Ljfk;->a:I
 
-    .line 3
     iget v0, p0, Ljfk;->a:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Ljfk;->b:I
 
-    .line 4
     iget v0, p0, Ljfk;->a:I
 
     iget v1, p0, Ljfk;->a:I
@@ -60,7 +55,6 @@
 
     iput-object v0, p0, Ljfk;->c:[[F
 
-    .line 5
     new-instance v0, Ljfl;
 
     iget v1, p0, Ljfk;->a:I
@@ -73,7 +67,6 @@
 
     iput-object v0, p0, Ljfk;->f:Ljfl;
 
-    .line 6
     new-instance v0, Ljfl;
 
     iget v1, p0, Ljfk;->a:I
@@ -82,7 +75,6 @@
 
     iput-object v0, p0, Ljfk;->e:Ljfl;
 
-    .line 7
     iget v0, p0, Ljfk;->a:I
 
     iget v1, p0, Ljfk;->a:I
@@ -101,66 +93,53 @@
 
     iput-object v0, p0, Ljfk;->d:[[I
 
-    .line 8
     iget v0, p0, Ljfk;->a:I
 
     new-array v0, v0, [Z
 
     iput-object v0, p0, Ljfk;->g:[Z
 
-    .line 9
     iget v0, p0, Ljfk;->a:I
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Ljfk;->h:[I
 
-    .line 10
     return-void
 .end method
 
 .method private final a()F
     .locals 7
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 35
     const v0, 0x7f7fffff    # Float.MAX_VALUE
 
     move v2, v0
 
     move v0, v1
 
-    .line 36
     :goto_0
     iget-object v3, p0, Ljfk;->e:Ljfl;
 
-    .line 37
     iget v3, v3, Ljfl;->b:I
 
-    .line 38
     if-ge v0, v3, :cond_0
 
-    .line 39
     iget-object v3, p0, Ljfk;->e:Ljfl;
 
-    .line 40
     iget-object v3, v3, Ljfl;->a:[I
 
     aget v3, v3, v0
 
-    .line 42
     iget-object v4, p0, Ljfk;->e:Ljfl;
 
     add-int/lit8 v5, v0, -0x1
 
-    .line 43
     iget-object v4, v4, Ljfl;->a:[I
 
     aget v4, v4, v5
 
-    .line 45
     iget-object v5, p0, Ljfk;->i:[[F
 
     aget-object v5, v5, v3
@@ -179,41 +158,32 @@
 
     move-result v2
 
-    .line 46
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 47
     :cond_0
     :goto_1
     iget-object v0, p0, Ljfk;->e:Ljfl;
 
-    .line 48
     iget v0, v0, Ljfl;->b:I
 
-    .line 49
     if-ge v1, v0, :cond_1
 
-    .line 50
     iget-object v0, p0, Ljfk;->e:Ljfl;
 
-    .line 51
     iget-object v0, v0, Ljfl;->a:[I
 
     aget v0, v0, v1
 
-    .line 53
     iget-object v3, p0, Ljfk;->e:Ljfl;
 
     add-int/lit8 v4, v1, -0x1
 
-    .line 54
     iget-object v3, v3, Ljfl;->a:[I
 
     aget v3, v3, v4
 
-    .line 56
     iget-object v4, p0, Ljfk;->c:[[F
 
     aget-object v4, v4, v0
@@ -224,7 +194,6 @@
 
     aput v5, v4, v3
 
-    .line 57
     iget-object v4, p0, Ljfk;->c:[[F
 
     aget-object v3, v4, v3
@@ -235,12 +204,10 @@
 
     aput v4, v3, v0
 
-    .line 58
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 59
     :cond_1
     return v2
 .end method
@@ -248,61 +215,48 @@
 .method private final a(Z)Z
     .locals 8
 
-    .prologue
     const/4 v7, 0x0
 
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 60
     iget-object v0, p0, Ljfk;->g:[Z
 
     invoke-static {v0, v2}, Ljava/util/Arrays;->fill([ZZ)V
 
-    .line 61
     iget-object v0, p0, Ljfk;->e:Ljfl;
 
-    .line 62
     iput v2, v0, Ljfl;->b:I
 
-    .line 63
     iget-object v0, p0, Ljfk;->f:Ljfl;
 
-    .line 64
     iput v2, v0, Ljfl;->b:I
 
-    .line 65
     iget-object v0, p0, Ljfk;->f:Ljfl;
 
     invoke-virtual {v0, v2}, Ljfl;->a(I)V
 
-    .line 66
     :goto_0
     iget-object v0, p0, Ljfk;->f:Ljfl;
 
-    .line 67
     iget v0, v0, Ljfl;->b:I
 
     if-nez v0, :cond_2
 
     move v0, v3
 
-    .line 68
     :goto_1
     if-nez v0, :cond_1
 
-    .line 69
     iget-object v0, p0, Ljfk;->f:Ljfl;
 
-    .line 70
     iget v1, v0, Ljfl;->b:I
 
     add-int/lit8 v1, v1, -0x1
 
     iput v1, v0, Ljfl;->b:I
 
-    .line 71
     iget-object v1, v0, Ljfl;->a:[I
 
     iget v0, v0, Ljfl;->b:I
@@ -311,7 +265,6 @@
 
     move v1, v2
 
-    .line 73
     :goto_2
     iget v4, p0, Ljfk;->a:I
 
@@ -325,21 +278,18 @@
 
     if-eqz v4, :cond_8
 
-    .line 74
     iget-object v4, p0, Ljfk;->d:[[I
 
     aget-object v4, v4, v0
 
     aget v5, v4, v1
 
-    .line 75
     iget-object v4, p0, Ljfk;->g:[Z
 
     aget-boolean v4, v4, v5
 
     if-nez v4, :cond_7
 
-    .line 76
     iget-object v4, p0, Ljfk;->i:[[F
 
     aget-object v4, v4, v0
@@ -360,7 +310,6 @@
 
     move v4, v3
 
-    .line 77
     :goto_3
     if-eqz p1, :cond_0
 
@@ -378,55 +327,45 @@
 
     move v4, v3
 
-    .line 78
     :cond_0
     :goto_4
     if-eqz v4, :cond_7
 
-    .line 79
     iget v4, p0, Ljfk;->b:I
 
     if-ne v5, v4, :cond_6
 
-    .line 80
     iget-object v1, p0, Ljfk;->e:Ljfl;
 
     invoke-virtual {v1, v5}, Ljfl;->a(I)V
 
-    .line 81
     :goto_5
     iget-object v1, p0, Ljfk;->e:Ljfl;
 
     invoke-virtual {v1, v0}, Ljfl;->a(I)V
 
-    .line 82
     if-nez v0, :cond_5
 
     move v2, v3
 
-    .line 90
     :cond_1
     return v2
 
     :cond_2
     move v0, v2
 
-    .line 67
     goto :goto_1
 
     :cond_3
     move v4, v2
 
-    .line 76
     goto :goto_3
 
     :cond_4
     move v4, v2
 
-    .line 77
     goto :goto_4
 
-    .line 84
     :cond_5
     iget-object v1, p0, Ljfk;->h:[I
 
@@ -434,24 +373,20 @@
 
     goto :goto_5
 
-    .line 85
     :cond_6
     iget-object v4, p0, Ljfk;->h:[I
 
     aput v0, v4, v5
 
-    .line 86
     iget-object v4, p0, Ljfk;->f:Ljfl;
 
     invoke-virtual {v4, v5}, Ljfl;->a(I)V
 
-    .line 87
     :cond_7
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 88
     :cond_8
     iget-object v1, p0, Ljfk;->g:[Z
 
@@ -465,14 +400,12 @@
 .method public final a([[F)F
     .locals 7
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v4, 0x0
 
     const/4 v2, 0x0
 
-    .line 11
     array-length v0, p1
 
     iget v3, p0, Ljfk;->a:I
@@ -484,7 +417,6 @@
     :goto_0
     invoke-static {v0}, Lixp;->a(Z)V
 
-    .line 12
     aget-object v0, p1, v2
 
     array-length v0, v0
@@ -498,10 +430,8 @@
     :goto_1
     invoke-static {v0}, Lixp;->a(Z)V
 
-    .line 13
     iput-object p1, p0, Ljfk;->i:[[F
 
-    .line 15
     iget-object v3, p0, Ljfk;->d:[[I
 
     array-length v5, v3
@@ -513,10 +443,8 @@
 
     aget-object v6, v3, v0
 
-    .line 16
     invoke-static {v6, v2}, Ljava/util/Arrays;->fill([II)V
 
-    .line 17
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
@@ -524,25 +452,21 @@
     :cond_0
     move v0, v2
 
-    .line 11
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 12
     goto :goto_1
 
     :cond_2
     move v0, v2
 
-    .line 18
     :goto_3
     iget v3, p0, Ljfk;->a:I
 
     if-ge v0, v3, :cond_6
 
-    .line 20
     iget v3, p0, Ljfk;->a:I
 
     add-int/lit8 v3, v3, -0x1
@@ -554,7 +478,6 @@
     :goto_4
     if-lez v5, :cond_5
 
-    .line 21
     iget-object v6, p0, Ljfk;->i:[[F
 
     aget-object v6, v6, v0
@@ -575,7 +498,6 @@
 
     if-lez v6, :cond_4
 
-    .line 22
     :cond_3
     iget-object v6, p0, Ljfk;->d:[[I
 
@@ -583,22 +505,18 @@
 
     aput v5, v6, v3
 
-    .line 23
     add-int/lit8 v3, v3, 0x1
 
-    .line 24
     :cond_4
     add-int/lit8 v5, v5, -0x1
 
     goto :goto_4
 
-    .line 25
     :cond_5
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 26
     :cond_6
     iget-object v3, p0, Ljfk;->c:[[F
 
@@ -611,10 +529,8 @@
 
     aget-object v6, v3, v0
 
-    .line 27
     invoke-static {v6, v4}, Ljava/util/Arrays;->fill([FF)V
 
-    .line 28
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_5
@@ -622,7 +538,6 @@
     :cond_7
     move v0, v4
 
-    .line 30
     :goto_6
     invoke-direct {p0, v1}, Ljfk;->a(Z)Z
 
@@ -630,7 +545,6 @@
 
     if-eqz v3, :cond_8
 
-    .line 31
     invoke-direct {p0}, Ljfk;->a()F
 
     move-result v3
@@ -639,7 +553,6 @@
 
     goto :goto_6
 
-    .line 32
     :cond_8
     :goto_7
     invoke-direct {p0, v2}, Ljfk;->a(Z)Z
@@ -648,7 +561,6 @@
 
     if-eqz v1, :cond_9
 
-    .line 33
     invoke-direct {p0}, Ljfk;->a()F
 
     move-result v1
@@ -657,7 +569,6 @@
 
     goto :goto_7
 
-    .line 34
     :cond_9
     return v0
 .end method

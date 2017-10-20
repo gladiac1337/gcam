@@ -25,14 +25,12 @@
 .method static constructor <clinit>()V
     .locals 13
 
-    .prologue
     const/4 v3, 0x2
 
     const/4 v2, 0x0
 
     const/4 v6, 0x1
 
-    .line 15
     new-instance v0, Lbdo;
 
     const-string v1, "MPEG_4"
@@ -45,7 +43,6 @@
 
     sput-object v0, Lbdo;->d:Lbdo;
 
-    .line 16
     new-instance v4, Lbdo;
 
     const-string v5, "WEBM"
@@ -60,7 +57,6 @@
 
     sput-object v4, Lbdo;->e:Lbdo;
 
-    .line 17
     new-instance v7, Lbdo;
 
     const-string v8, "THREE_GPP"
@@ -77,7 +73,6 @@
 
     sput-object v7, Lbdo;->f:Lbdo;
 
-    .line 18
     const/4 v0, 0x3
 
     new-array v0, v0, [Lbdo;
@@ -102,35 +97,26 @@
 .method private constructor <init>(Ljava/lang/String;IIILgvp;)V
     .locals 0
 
-    .prologue
-    .line 10
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 11
     iput p3, p0, Lbdo;->a:I
 
-    .line 12
     iput p4, p0, Lbdo;->b:I
 
-    .line 13
     iput-object p5, p0, Lbdo;->c:Lgvp;
 
-    .line 14
     return-void
 .end method
 
 .method public static a(Lbee;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 2
     invoke-interface {p0}, Lbee;->e()I
 
     move-result v1
 
-    .line 3
     const/4 v2, 0x2
 
     if-eq v1, v2, :cond_0
@@ -150,23 +136,18 @@
 .method public static b(Lbee;)Lbdo;
     .locals 4
 
-    .prologue
-    .line 4
     invoke-static {p0}, Lbdo;->a(Lbee;)Z
 
     move-result v0
 
     invoke-static {v0}, Lixp;->a(Z)V
 
-    .line 5
     invoke-interface {p0}, Lbee;->e()I
 
     move-result v0
 
-    .line 6
     packed-switch v0, :pswitch_data_0
 
-    .line 9
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const/16 v2, 0x29
@@ -193,11 +174,9 @@
 
     throw v1
 
-    .line 7
     :pswitch_0
     sget-object v0, Lbdo;->f:Lbdo;
 
-    .line 8
     :goto_0
     return-object v0
 
@@ -206,7 +185,6 @@
 
     goto :goto_0
 
-    .line 6
     nop
 
     :pswitch_data_0
@@ -219,8 +197,6 @@
 .method public static values()[Lbdo;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lbdo;->g:[Lbdo;
 
     invoke-virtual {v0}, [Lbdo;->clone()Ljava/lang/Object;

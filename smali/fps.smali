@@ -13,8 +13,6 @@
 .method public constructor <init>(Lfme;Lfpp;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfps;->b:Lfme;
 
     iput-object p2, p0, Lfps;->a:Lfpp;

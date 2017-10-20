@@ -19,11 +19,8 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x0
 
     iput v0, p0, Lwr;->a:I
@@ -34,27 +31,20 @@
 .method private static a(II)I
     .locals 1
 
-    .prologue
-    .line 10
     if-le p0, p1, :cond_0
 
-    .line 11
     const/4 v0, 0x1
 
-    .line 14
     :goto_0
     return v0
 
-    .line 12
     :cond_0
     if-ne p0, p1, :cond_1
 
-    .line 13
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 14
     :cond_1
     const/4 v0, 0x4
 
@@ -66,52 +56,40 @@
 .method final a(I)V
     .locals 1
 
-    .prologue
-    .line 8
     iget v0, p0, Lwr;->a:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Lwr;->a:I
 
-    .line 9
     return-void
 .end method
 
 .method final a(IIII)V
     .locals 0
 
-    .prologue
-    .line 3
     iput p1, p0, Lwr;->b:I
 
-    .line 4
     iput p2, p0, Lwr;->c:I
 
-    .line 5
     iput p3, p0, Lwr;->d:I
 
-    .line 6
     iput p4, p0, Lwr;->e:I
 
-    .line 7
     return-void
 .end method
 
 .method final a()Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 15
     iget v1, p0, Lwr;->a:I
 
     and-int/lit8 v1, v1, 0x7
 
     if-eqz v1, :cond_1
 
-    .line 16
     iget v1, p0, Lwr;->a:I
 
     iget v2, p0, Lwr;->d:I
@@ -126,12 +104,10 @@
 
     if-nez v1, :cond_1
 
-    .line 27
     :cond_0
     :goto_0
     return v0
 
-    .line 18
     :cond_1
     iget v1, p0, Lwr;->a:I
 
@@ -139,7 +115,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 19
     iget v1, p0, Lwr;->a:I
 
     iget v2, p0, Lwr;->d:I
@@ -156,7 +131,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 21
     :cond_2
     iget v1, p0, Lwr;->a:I
 
@@ -164,7 +138,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 22
     iget v1, p0, Lwr;->a:I
 
     iget v2, p0, Lwr;->e:I
@@ -181,7 +154,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 24
     :cond_3
     iget v1, p0, Lwr;->a:I
 
@@ -189,7 +161,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 25
     iget v1, p0, Lwr;->a:I
 
     iget v2, p0, Lwr;->e:I
@@ -206,7 +177,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 27
     :cond_4
     const/4 v0, 0x1
 

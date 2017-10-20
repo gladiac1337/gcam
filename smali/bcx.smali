@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,11 +20,8 @@
 .method public final synthetic a(Lihi;Lihp;)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 2
     check-cast p1, Lihl;
 
-    .line 3
     invoke-virtual {p2}, Lihp;->a()Lihq;
 
     move-result-object v0
@@ -35,6 +30,5 @@
 
     move-result-object v0
 
-    .line 4
     return-object v0
 .end method

@@ -11,11 +11,8 @@
 .method public constructor <init>()V
     .locals 4
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lhzv;
 
     new-instance v1, Lgiv;
@@ -34,6 +31,5 @@
 
     iput-object v0, p0, Ldzt;->a:Lhzv;
 
-    .line 3
     return-void
 .end method

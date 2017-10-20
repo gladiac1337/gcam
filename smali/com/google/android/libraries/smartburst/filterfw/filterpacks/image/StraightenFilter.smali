@@ -23,43 +23,34 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/Filter;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
 
-    .line 2
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->mAngle:F
 
-    .line 3
     const/high16 v0, 0x42340000    # 45.0f
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->mMaxAngle:F
 
-    .line 4
     iput v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->mWidth:I
 
-    .line 5
     iput v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->mHeight:I
 
-    .line 6
     return-void
 .end method
 
 .method private updateParameters()V
     .locals 9
 
-    .prologue
     const/high16 v0, 0x42b40000    # 90.0f
 
     const v4, 0x3c8efa35
 
     const/high16 v8, 0x3f000000    # 0.5f
 
-    .line 41
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->mAngle:F
 
     mul-float/2addr v1, v4
@@ -72,7 +63,6 @@
 
     double-to-float v1, v2
 
-    .line 42
     iget v2, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->mAngle:F
 
     mul-float/2addr v2, v4
@@ -85,7 +75,6 @@
 
     double-to-float v2, v2
 
-    .line 43
     iget v3, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->mMaxAngle:F
 
     const/4 v4, 0x0
@@ -94,7 +83,6 @@
 
     if-gtz v3, :cond_0
 
-    .line 44
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Max angle is out of range (0-180)."
@@ -103,7 +91,6 @@
 
     throw v0
 
-    .line 45
     :cond_0
     iget v3, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->mMaxAngle:F
 
@@ -114,7 +101,6 @@
     :goto_0
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->mMaxAngle:F
 
-    .line 46
     new-instance v0, Landroid/graphics/PointF;
 
     neg-float v3, v1
@@ -151,7 +137,6 @@
 
     invoke-direct {v0, v3, v4}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 47
     new-instance v3, Landroid/graphics/PointF;
 
     iget v4, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->mWidth:I
@@ -184,7 +169,6 @@
 
     invoke-direct {v3, v4, v5}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 48
     new-instance v4, Landroid/graphics/PointF;
 
     neg-float v5, v1
@@ -221,7 +205,6 @@
 
     invoke-direct {v4, v5, v6}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 49
     new-instance v5, Landroid/graphics/PointF;
 
     iget v6, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->mWidth:I
@@ -254,7 +237,6 @@
 
     invoke-direct {v5, v6, v1}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 50
     iget v1, v0, Landroid/graphics/PointF;->x:F
 
     invoke-static {v1}, Ljava/lang/Math;->abs(F)F
@@ -271,7 +253,6 @@
 
     move-result v1
 
-    .line 51
     iget v2, v0, Landroid/graphics/PointF;->y:F
 
     invoke-static {v2}, Ljava/lang/Math;->abs(F)F
@@ -288,7 +269,6 @@
 
     move-result v2
 
-    .line 52
     iget v6, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->mWidth:I
 
     int-to-float v6, v6
@@ -307,7 +287,6 @@
 
     mul-float/2addr v1, v8
 
-    .line 53
     iget v2, v0, Landroid/graphics/PointF;->x:F
 
     mul-float/2addr v2, v1
@@ -334,7 +313,6 @@
 
     invoke-virtual {v0, v2, v6}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 54
     iget v2, v3, Landroid/graphics/PointF;->x:F
 
     mul-float/2addr v2, v1
@@ -361,7 +339,6 @@
 
     invoke-virtual {v3, v2, v6}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 55
     iget v2, v4, Landroid/graphics/PointF;->x:F
 
     mul-float/2addr v2, v1
@@ -388,7 +365,6 @@
 
     invoke-virtual {v4, v2, v6}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 56
     iget v2, v5, Landroid/graphics/PointF;->x:F
 
     mul-float/2addr v2, v1
@@ -415,7 +391,6 @@
 
     invoke-virtual {v5, v2, v1}, Landroid/graphics/PointF;->set(FF)V
 
-    .line 57
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->mShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     const/16 v2, 0x8
@@ -472,10 +447,8 @@
 
     invoke-virtual {v1, v2}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->setSourceCoords([F)V
 
-    .line 58
     return-void
 
-    .line 45
     :cond_1
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->mMaxAngle:F
 
@@ -487,33 +460,28 @@
 .method public getSignature()Lcom/google/android/libraries/smartburst/filterfw/Signature;
     .locals 6
 
-    .prologue
     const/16 v2, 0x12d
 
     const/4 v5, 0x1
 
     const/4 v4, 0x2
 
-    .line 7
     invoke-static {v2, v4}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->image2D(II)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v0
 
-    .line 8
     const/16 v1, 0x10
 
     invoke-static {v2, v1}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->image2D(II)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v1
 
-    .line 9
     new-instance v2, Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     invoke-direct {v2}, Lcom/google/android/libraries/smartburst/filterfw/Signature;-><init>()V
 
     const-string v3, "image"
 
-    .line 10
     invoke-virtual {v2, v3, v4, v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addInputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
@@ -522,7 +490,6 @@
 
     sget-object v3, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
-    .line 11
     invoke-static {v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->single(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v3
@@ -535,7 +502,6 @@
 
     sget-object v3, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
-    .line 12
     invoke-static {v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->single(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v3
@@ -546,27 +512,22 @@
 
     const-string v2, "image"
 
-    .line 13
     invoke-virtual {v0, v2, v4, v1}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addOutputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 14
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->disallowOtherPorts()Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 15
     return-object v0
 .end method
 
 .method public onInputPortOpen(Lcom/google/android/libraries/smartburst/filterfw/InputPort;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 16
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -579,20 +540,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 17
     const-string v0, "mAngle"
 
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->bindToFieldNamed(Ljava/lang/String;)V
 
-    .line 18
     invoke-virtual {p1, v2}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->setAutoPullEnabled(Z)V
 
-    .line 22
     :cond_0
     :goto_0
     return-void
 
-    .line 19
     :cond_1
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->getName()Ljava/lang/String;
 
@@ -606,12 +563,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 20
     const-string v0, "mMaxAngle"
 
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->bindToFieldNamed(Ljava/lang/String;)V
 
-    .line 21
     invoke-virtual {p1, v2}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->setAutoPullEnabled(Z)V
 
     goto :goto_0
@@ -620,37 +575,30 @@
 .method protected onPrepare()V
     .locals 2
 
-    .prologue
-    .line 23
     const-string v0, "StraightenFilter"
 
     const-string v1, "onPrepare BEGIN"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 24
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->createIdentity()Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->mShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
-    .line 25
     const-string v0, "StraightenFilter"
 
     const-string v1, "onPrepare END"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 26
     return-void
 .end method
 
 .method protected declared-synchronized onProcess()V
     .locals 5
 
-    .prologue
-    .line 27
     monitor-enter p0
 
     :try_start_0
@@ -660,14 +608,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 28
     const-string v0, "image"
 
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->getConnectedOutputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/OutputPort;
 
     move-result-object v0
 
-    .line 29
     const-string v1, "image"
 
     invoke-virtual {p0, v1}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->getConnectedInputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/InputPort;
@@ -682,12 +628,10 @@
 
     move-result-object v1
 
-    .line 30
     invoke-virtual {v1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->getDimensions()[I
 
     move-result-object v2
 
-    .line 31
     invoke-virtual {v0, v2}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->fetchAvailableFrame([I)Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
     move-result-object v2
@@ -696,7 +640,6 @@
 
     move-result-object v2
 
-    .line 32
     invoke-virtual {v1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->getWidth()I
 
     move-result v3
@@ -713,7 +656,6 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 33
     :cond_0
     invoke-virtual {v1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->getWidth()I
 
@@ -721,33 +663,27 @@
 
     iput v3, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->mWidth:I
 
-    .line 34
     invoke-virtual {v1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->getHeight()I
 
     move-result v3
 
     iput v3, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->mHeight:I
 
-    .line 35
     :cond_1
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->updateParameters()V
 
-    .line 36
     const-string v3, "StraightenFilter"
 
     const-string v4, "onProcess SHADER"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 37
     iget-object v3, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/image/StraightenFilter;->mShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     invoke-virtual {v3, v1, v2}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->process(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)V
 
-    .line 38
     invoke-virtual {v0, v2}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->pushFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;)V
 
-    .line 39
     const-string v0, "StraightenFilter"
 
     const-string v1, "onProcess END"
@@ -756,12 +692,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 40
     monitor-exit p0
 
     return-void
 
-    .line 27
     :catchall_0
     move-exception v0
 

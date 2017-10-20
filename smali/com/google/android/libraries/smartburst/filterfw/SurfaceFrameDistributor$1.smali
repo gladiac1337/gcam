@@ -14,8 +14,6 @@
 .method constructor <init>(Landroid/graphics/SurfaceTexture;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$1;->val$surfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public createSurfaceTexture()Landroid/graphics/SurfaceTexture;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$1;->val$surfaceTexture:Landroid/graphics/SurfaceTexture;
 
     return-object v0
@@ -38,7 +34,5 @@
 .method public releaseSurfaceTexture(Landroid/graphics/SurfaceTexture;)V
     .locals 0
 
-    .prologue
-    .line 3
     return-void
 .end method

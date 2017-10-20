@@ -15,38 +15,28 @@
 .method public constructor <init>(Ljava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Ljgd;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 4
     sget-object v0, Ljgb;->a:Ljgb;
 
-    .line 5
     invoke-virtual {v0, p0}, Ljgb;->a(Ljava/lang/Object;)V
 
-    .line 6
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/Object;B)V
     .locals 0
 
-    .prologue
-    .line 26
     invoke-direct {p0, p1}, Ljgd;-><init>(Ljava/lang/Object;)V
 
-    .line 27
     return-void
 .end method
 
@@ -58,8 +48,6 @@
 .method public close()V
     .locals 2
 
-    .prologue
-    .line 19
     iget-object v0, p0, Ljgd;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v1, 0x0
@@ -68,19 +56,14 @@
 
     move-result-object v0
 
-    .line 20
     if-eqz v0, :cond_0
 
-    .line 21
     sget-object v1, Ljgb;->a:Ljgb;
 
-    .line 22
     invoke-virtual {v1, p0}, Ljgb;->b(Ljava/lang/Object;)V
 
-    .line 23
     invoke-virtual {p0, v0}, Ljgd;->a(Ljava/lang/Object;)V
 
-    .line 24
     :cond_0
     return-void
 .end method
@@ -88,8 +71,6 @@
 .method public final d()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 12
     iget-object v0, p0, Ljgd;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v1, 0x0
@@ -98,59 +79,47 @@
 
     move-result-object v0
 
-    .line 13
     if-nez v0, :cond_0
 
-    .line 14
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Attempting to interact with disposed value!"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 15
     check-cast v0, Ljava/lang/IllegalStateException;
 
     throw v0
 
-    .line 16
     :cond_0
     sget-object v1, Ljgb;->a:Ljgb;
 
-    .line 17
     invoke-virtual {v1, p0}, Ljgb;->b(Ljava/lang/Object;)V
 
-    .line 18
     return-object v0
 .end method
 
 .method public final e()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 7
     iget-object v0, p0, Ljgd;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 8
     if-nez v0, :cond_0
 
-    .line 9
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Attempting to interact with disposed value!"
 
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 10
     check-cast v0, Ljava/lang/IllegalStateException;
 
     throw v0
 
-    .line 11
     :cond_0
     return-object v0
 .end method
@@ -158,8 +127,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 25
     iget-object v0, p0, Ljgd;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;

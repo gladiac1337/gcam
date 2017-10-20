@@ -24,8 +24,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 27
     const-string v0, "VideoItemFact"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -40,11 +38,8 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/content/ContentResolver;Lcfd;Lgvq;Lcfr;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -53,7 +48,6 @@
 
     iput-object v0, p0, Lcfz;->a:Landroid/content/Context;
 
-    .line 3
     invoke-static {p2}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -62,7 +56,6 @@
 
     iput-object v0, p0, Lcfz;->c:Landroid/content/ContentResolver;
 
-    .line 4
     invoke-static {p3}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -71,7 +64,6 @@
 
     iput-object v0, p0, Lcfz;->b:Lcfd;
 
-    .line 5
     invoke-static {p4}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -80,26 +72,20 @@
 
     iput-object v0, p0, Lcfz;->d:Lgvq;
 
-    .line 6
     invoke-static {p5}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     return-void
 .end method
 
 .method private final b(Landroid/database/Cursor;)Lcfu;
     .locals 4
 
-    .prologue
-    .line 8
     invoke-static {p1}, Lcfr;->a(Landroid/database/Cursor;)Lcfx;
 
     move-result-object v1
 
-    .line 9
     if-eqz v1, :cond_0
 
-    .line 10
     new-instance v0, Lcfu;
 
     iget-object v2, p0, Lcfz;->a:Landroid/content/Context;
@@ -108,11 +94,9 @@
 
     invoke-direct {v0, v2, v3, v1, p0}, Lcfu;-><init>(Landroid/content/Context;Lcfd;Lcfx;Lcfz;)V
 
-    .line 12
     :goto_0
     return-object v0
 
-    .line 11
     :cond_0
     sget-object v0, Lcfz;->e:Ljava/lang/String;
 
@@ -120,7 +104,6 @@
 
     invoke-static {v0, v1}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     const/4 v0, 0x0
 
     goto :goto_0
@@ -134,11 +117,8 @@
         value = 0x15
     .end annotation
 
-    .prologue
     const/4 v6, 0x0
 
-    .line 13
-    .line 14
     :try_start_0
     iget-object v0, p0, Lcfz;->a:Landroid/content/Context;
 
@@ -162,10 +142,8 @@
 
     move-result-object v2
 
-    .line 15
     if-eqz v2, :cond_3
 
-    .line 16
     :try_start_1
     invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -173,7 +151,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 17
     invoke-direct {p0, v2}, Lcfz;->b(Landroid/database/Cursor;)Lcfu;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
@@ -181,7 +158,6 @@
 
     move-result-object v0
 
-    .line 18
     :goto_0
     if-eqz v2, :cond_0
 
@@ -190,12 +166,10 @@
     :try_end_2
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 25
     :cond_0
     :goto_1
     return-object v0
 
-    .line 19
     :catch_0
     move-exception v0
 
@@ -204,7 +178,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 20
     :catchall_0
     move-exception v1
 
@@ -232,11 +205,9 @@
     :try_end_5
     .catch Landroid/database/sqlite/SQLiteException; {:try_start_5 .. :try_end_5} :catch_1
 
-    .line 22
     :catch_1
     move-exception v0
 
-    .line 23
     sget-object v1, Lcfz;->e:Ljava/lang/String;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -275,10 +246,8 @@
 
     move-object v0, v6
 
-    .line 24
     goto :goto_1
 
-    .line 20
     :catch_2
     move-exception v2
 
@@ -310,8 +279,6 @@
 .method public final synthetic a(Landroid/database/Cursor;)Lfvb;
     .locals 1
 
-    .prologue
-    .line 26
     invoke-direct {p0, p1}, Lcfz;->b(Landroid/database/Cursor;)Lcfu;
 
     move-result-object v0

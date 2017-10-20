@@ -11,24 +11,18 @@
 .method public varargs constructor <init>([Ljat;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljat;-><init>()V
 
-    .line 3
     array-length v0, p1
 
     invoke-static {v0}, Litx;->c(I)Ljava/util/HashSet;
 
     move-result-object v0
 
-    .line 4
     invoke-static {v0, p1}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    .line 6
     iput-object v0, p0, Ljbj;->a:Ljava/util/Set;
 
-    .line 7
     return-void
 .end method
 
@@ -37,13 +31,10 @@
 .method public final a(Ljao;)Ljao;
     .locals 3
 
-    .prologue
-    .line 8
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    .line 9
     iget-object v0, p0, Ljbj;->a:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -63,24 +54,20 @@
 
     check-cast v0, Ljat;
 
-    .line 10
     invoke-virtual {v0, p1}, Ljat;->a(Ljao;)Ljao;
 
     move-result-object v0
 
-    .line 12
     iget-object v0, v0, Ljao;->a:Ljava/util/List;
 
     invoke-static {v0}, Ljkk;->a(Ljava/util/Collection;)Ljkk;
 
     move-result-object v0
 
-    .line 13
     invoke-interface {v1, v0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
     goto :goto_0
 
-    .line 15
     :cond_0
     new-instance v0, Ljao;
 
@@ -92,8 +79,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 16
     const-string v0, " | "
 
     invoke-static {v0}, Ljhb;->a(Ljava/lang/String;)Ljhb;

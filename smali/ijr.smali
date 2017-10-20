@@ -16,19 +16,14 @@
 .method public constructor <init>([B)V
     .locals 1
 
-    .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7
     iput-object p1, p0, Lijr;->a:[B
 
-    .line 8
     const/4 v0, 0x0
 
     iput v0, p0, Lijr;->b:I
 
-    .line 9
     return-void
 .end method
 
@@ -37,8 +32,6 @@
 .method public final a()I
     .locals 3
 
-    .prologue
-    .line 1
     iget v0, p0, Lijr;->b:I
 
     iget-object v1, p0, Lijr;->a:[B
@@ -71,8 +64,6 @@
 .method public final a(II)Lijq;
     .locals 4
 
-    .prologue
-    .line 2
     invoke-virtual {p0}, Lijr;->b()I
 
     move-result v0
@@ -81,7 +72,6 @@
 
     move-result v0
 
-    .line 3
     new-instance v1, Lijq;
 
     iget-object v2, p0, Lijr;->a:[B
@@ -90,22 +80,18 @@
 
     invoke-direct {v1, v2, p2, v3, v0}, Lijq;-><init>([BIII)V
 
-    .line 4
     iget v2, p0, Lijr;->b:I
 
     add-int/2addr v0, v2
 
     iput v0, p0, Lijr;->b:I
 
-    .line 5
     return-object v1
 .end method
 
 .method public final b()I
     .locals 2
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lijr;->a:[B
 
     array-length v0, v0
@@ -120,7 +106,5 @@
 .method public final close()V
     .locals 0
 
-    .prologue
-    .line 10
     return-void
 .end method

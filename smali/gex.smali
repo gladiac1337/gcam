@@ -11,14 +11,10 @@
 .method public constructor <init>(Lgez;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgex;->a:Lgez;
 
-    .line 3
     return-void
 .end method
 
@@ -27,13 +23,10 @@
 .method public final a(Landroid/hardware/camera2/params/MeteringRectangle;Landroid/graphics/Rect;)Landroid/graphics/PointF;
     .locals 5
 
-    .prologue
     const/high16 v4, 0x3f800000    # 1.0f
 
-    .line 4
     new-instance v1, Landroid/graphics/PointF;
 
-    .line 5
     invoke-virtual {p1}, Landroid/hardware/camera2/params/MeteringRectangle;->getRect()Landroid/graphics/Rect;
 
     move-result-object v0
@@ -42,7 +35,6 @@
 
     move-result v0
 
-    .line 6
     invoke-virtual {p1}, Landroid/hardware/camera2/params/MeteringRectangle;->getRect()Landroid/graphics/Rect;
 
     move-result-object v2
@@ -53,7 +45,6 @@
 
     invoke-direct {v1, v0, v2}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 9
     new-instance v0, Landroid/graphics/PointF;
 
     iget v2, v1, Landroid/graphics/PointF;->x:F
@@ -64,7 +55,6 @@
 
     sub-float/2addr v2, v3
 
-    .line 10
     invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
     move-result v3
@@ -81,7 +71,6 @@
 
     sub-float/2addr v1, v3
 
-    .line 11
     invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
 
     move-result v3
@@ -92,15 +81,12 @@
 
     invoke-direct {v0, v2, v1}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 13
     iget-object v1, p0, Lgex;->a:Lgez;
 
-    .line 15
     iget v1, v1, Lgez;->a:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 20
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Unsupported Sensor Orientation"
@@ -109,7 +95,6 @@
 
     throw v0
 
-    .line 17
     :sswitch_0
     new-instance v1, Landroid/graphics/PointF;
 
@@ -123,12 +108,10 @@
 
     move-object v0, v1
 
-    .line 19
     :goto_0
     :sswitch_1
     return-object v0
 
-    .line 18
     :sswitch_2
     new-instance v1, Landroid/graphics/PointF;
 
@@ -146,7 +129,6 @@
 
     goto :goto_0
 
-    .line 19
     :sswitch_3
     new-instance v1, Landroid/graphics/PointF;
 
@@ -162,7 +144,6 @@
 
     goto :goto_0
 
-    .line 15
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_1

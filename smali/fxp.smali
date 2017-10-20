@@ -59,87 +59,64 @@
 .method public constructor <init>(Landroid/media/MediaFormat;Landroid/media/MediaFormat;Landroid/media/MediaFormat;Lifw;Lfzz;Ljhi;Lfyl;Ljuk;Lfxl;Lfyb;Ljava/util/concurrent/Executor;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p5, p0, Lfxp;->v:Lfzz;
 
-    .line 3
     iput-object p6, p0, Lfxp;->n:Ljhi;
 
-    .line 4
     iput-object p7, p0, Lfxp;->i:Lfyl;
 
-    .line 5
     iput-object p1, p0, Lfxp;->d:Landroid/media/MediaFormat;
 
-    .line 6
     iput-object p2, p0, Lfxp;->f:Landroid/media/MediaFormat;
 
-    .line 7
     iput-object p3, p0, Lfxp;->h:Landroid/media/MediaFormat;
 
-    .line 8
     iput-object p4, p0, Lfxp;->u:Lifw;
 
-    .line 9
     iput-object p8, p0, Lfxp;->o:Ljuk;
 
-    .line 10
     iput-object p9, p0, Lfxp;->b:Lfxl;
 
-    .line 11
     iput-object p10, p0, Lfxp;->t:Lfyb;
 
-    .line 12
     iput-object p11, p0, Lfxp;->c:Ljava/util/concurrent/Executor;
 
-    .line 13
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Lfxp;->k:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 14
     invoke-virtual {p10, v2}, Lfyb;->b(Z)V
 
-    .line 15
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lfxp;->a:Ljava/lang/Object;
 
-    .line 16
     iput-object v1, p0, Lfxp;->s:Limx;
 
-    .line 17
     iput-object v1, p0, Lfxp;->p:Limv;
 
-    .line 18
     iput-object v1, p0, Lfxp;->q:Limv;
 
-    .line 19
     iput-object v1, p0, Lfxp;->r:Limu;
 
-    .line 20
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "mv-vid-encoder"
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 21
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 22
     new-instance v1, Landroid/os/Handler;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -150,17 +127,14 @@
 
     iput-object v1, p0, Lfxp;->e:Landroid/os/Handler;
 
-    .line 23
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "mv-aud-encoder"
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 24
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 25
     new-instance v1, Landroid/os/Handler;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -171,22 +145,18 @@
 
     iput-object v1, p0, Lfxp;->g:Landroid/os/Handler;
 
-    .line 26
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Lfxp;->l:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 28
     new-instance v0, Ljuw;
 
     invoke-direct {v0}, Ljuw;-><init>()V
 
-    .line 29
     iput-object v0, p0, Lfxp;->m:Ljuw;
 
-    .line 30
     return-void
 .end method
 
@@ -195,30 +165,23 @@
 .method final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 131
     iget-object v1, p0, Lfxp;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 132
     const/4 v0, 0x0
 
     :try_start_0
     iput-object v0, p0, Lfxp;->j:Lfya;
 
-    .line 133
     const/4 v0, 0x0
 
     iput-object v0, p0, Lfxp;->s:Limx;
 
-    .line 134
     monitor-exit v1
 
-    .line 135
     return-object p1
 
-    .line 134
     :catchall_0
     move-exception v0
 
@@ -232,10 +195,8 @@
 .method public final a()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 31
     iget-object v0, p0, Lfxp;->k:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
@@ -244,17 +205,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 35
     :goto_0
     return-void
 
-    .line 33
     :cond_0
     iget-object v0, p0, Lfxp;->t:Lfyb;
 
     invoke-virtual {v0, v1}, Lfyb;->b(Z)V
 
-    .line 34
     iget-object v0, p0, Lfxp;->e:Landroid/os/Handler;
 
     new-instance v1, Lfxr;
@@ -269,15 +227,12 @@
 .method final b()Z
     .locals 8
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v1, 0x0
 
-    .line 36
     iget-object v3, p0, Lfxp;->q:Limv;
 
-    .line 37
     iget-object v0, p0, Lfxp;->n:Ljhi;
 
     invoke-virtual {v0}, Ljhi;->a()Z
@@ -291,11 +246,9 @@
     :cond_0
     move v0, v1
 
-    .line 63
     :goto_0
     return v0
 
-    .line 39
     :cond_1
     iget-object v0, p0, Lfxp;->n:Ljhi;
 
@@ -311,24 +264,19 @@
 
     check-cast v0, Limc;
 
-    .line 40
     if-nez v0, :cond_2
 
     move v0, v1
 
-    .line 41
     goto :goto_0
 
-    .line 43
     :cond_2
     iget-object v4, v3, Limv;->a:Limq;
 
-    .line 44
     iget-object v3, v4, Limq;->d:Landroid/view/Surface;
 
     if-eqz v3, :cond_3
 
-    .line 45
     new-instance v0, Ljava/lang/AssertionError;
 
     const-string v1, "MediaCodec configured to use input surface. Should not be requesting for a byte buffer"
@@ -337,22 +285,18 @@
 
     throw v0
 
-    .line 46
     :cond_3
     invoke-virtual {v4}, Limq;->a()I
 
     move-result v5
 
-    .line 47
     if-gez v5, :cond_5
 
     move-object v3, v2
 
-    .line 52
     :goto_1
     if-nez v3, :cond_6
 
-    .line 53
     if-eqz v3, :cond_4
 
     invoke-interface {v3}, Limr;->close()V
@@ -360,10 +304,8 @@
     :cond_4
     move v0, v1
 
-    .line 54
     goto :goto_0
 
-    .line 49
     :cond_5
     iget-object v3, v4, Limq;->a:Landroid/media/MediaCodec;
 
@@ -371,14 +313,12 @@
 
     move-result-object v6
 
-    .line 50
     new-instance v3, Limg;
 
     invoke-direct {v3, v4, v6, v5}, Limg;-><init>(Limq;Ljava/nio/ByteBuffer;I)V
 
     goto :goto_1
 
-    .line 55
     :cond_6
     :try_start_0
     invoke-interface {v3}, Limr;->a()Ljava/lang/Object;
@@ -397,7 +337,6 @@
 
     invoke-virtual {v1, v4}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
-    .line 56
     invoke-interface {v3}, Limr;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -414,10 +353,8 @@
 
     invoke-virtual {v1, v4}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 57
     sget-object v1, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    .line 58
     invoke-virtual {v0}, Limc;->c()J
 
     move-result-wide v4
@@ -428,24 +365,20 @@
 
     move-result-wide v0
 
-    .line 59
     invoke-interface {v3, v0, v1}, Limr;->a(J)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 60
     if-eqz v3, :cond_7
 
     invoke-interface {v3}, Limr;->close()V
 
-    .line 63
     :cond_7
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 61
     :catch_0
     move-exception v0
 
@@ -454,7 +387,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 62
     :catchall_0
     move-exception v1
 
@@ -501,14 +433,12 @@
 .method final c()Z
     .locals 14
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
     const/4 v1, 0x0
 
-    .line 64
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -535,27 +465,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 65
     const-string v0, "OOMicroEncoder"
 
     const-string v4, "Sampling video on a non-video-encoder thread"
 
     invoke-static {v0, v4}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 66
     :cond_0
     iget-object v4, p0, Lfxp;->a:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 67
     :try_start_0
     iget-object v0, p0, Lfxp;->p:Limv;
 
-    .line 68
     iget-object v6, p0, Lfxp;->j:Lfya;
 
-    .line 69
     if-eqz v0, :cond_1
 
     if-eqz v6, :cond_1
@@ -568,31 +493,25 @@
 
     if-nez v5, :cond_2
 
-    .line 70
     :cond_1
     monitor-exit v4
 
     move v0, v1
 
-    .line 119
     :goto_0
     return v0
 
-    .line 71
     :cond_2
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 73
     iget-object v4, v0, Limv;->a:Limq;
 
-    .line 74
     iget-object v0, v4, Limq;->d:Landroid/view/Surface;
 
     if-eqz v0, :cond_3
 
-    .line 75
     new-instance v0, Ljava/lang/AssertionError;
 
     const-string v1, "MediaCodec configured to use input surface. Should not be requesting for a byte buffer"
@@ -601,7 +520,6 @@
 
     throw v0
 
-    .line 71
     :catchall_0
     move-exception v0
 
@@ -612,22 +530,18 @@
 
     throw v0
 
-    .line 76
     :cond_3
     invoke-virtual {v4}, Limq;->a()I
 
     move-result v5
 
-    .line 77
     if-gez v5, :cond_5
 
     move-object v5, v3
 
-    .line 83
     :goto_1
     if-nez v5, :cond_7
 
-    .line 84
     if-eqz v5, :cond_4
 
     invoke-interface {v5}, Limr;->close()V
@@ -635,10 +549,8 @@
     :cond_4
     move v0, v1
 
-    .line 85
     goto :goto_0
 
-    .line 79
     :cond_5
     iget-object v0, v4, Limq;->a:Landroid/media/MediaCodec;
 
@@ -650,14 +562,12 @@
 
     move-result v7
 
-    .line 80
     iget-object v0, v4, Limq;->a:Landroid/media/MediaCodec;
 
     invoke-virtual {v0, v5}, Landroid/media/MediaCodec;->getInputImage(I)Landroid/media/Image;
 
     move-result-object v8
 
-    .line 81
     new-instance v0, Limh;
 
     invoke-direct {v0, v4, v8, v5, v7}, Limh;-><init>(Limq;Landroid/media/Image;II)V
@@ -666,7 +576,6 @@
 
     goto :goto_1
 
-    .line 120
     :cond_6
     :try_start_2
     const-string v4, "OOMicroEncoder"
@@ -702,13 +611,11 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_4
 
-    .line 121
     if-eqz v0, :cond_7
 
     :try_start_3
     invoke-interface {v0}, Liia;->close()V
 
-    .line 86
     :cond_7
     iget-object v0, p0, Lfxp;->v:Lfzz;
 
@@ -721,10 +628,8 @@
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
-    .line 87
     if-nez v0, :cond_b
 
-    .line 88
     :try_start_4
     iget-object v2, p0, Lfxp;->l:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -734,7 +639,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 89
     iget-object v2, p0, Lfxp;->m:Ljuw;
 
     invoke-virtual {p0}, Lfxp;->d()Ljuk;
@@ -746,7 +650,6 @@
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_4
 
-    .line 90
     :cond_8
     if-eqz v0, :cond_9
 
@@ -756,7 +659,6 @@
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 91
     :cond_9
     if-eqz v5, :cond_a
 
@@ -765,17 +667,14 @@
     :cond_a
     move v0, v1
 
-    .line 92
     goto/16 :goto_0
 
-    .line 93
     :cond_b
     :try_start_6
     invoke-interface {v0}, Liia;->e()J
 
     move-result-wide v8
 
-    .line 94
     sget-object v4, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
 
     sget-object v7, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
@@ -784,41 +683,34 @@
 
     move-result-wide v10
 
-    .line 95
     new-instance v4, Lfxs;
 
     invoke-direct {v4, v10, v11}, Lfxs;-><init>(J)V
 
-    .line 96
     invoke-interface {v6, v10, v11}, Lfya;->b(J)Lfxz;
 
     move-result-object v4
 
-    .line 98
     sget-object v7, Lfxz;->a:Lfxz;
 
     invoke-virtual {v4, v7}, Lfxz;->equals(Ljava/lang/Object;)Z
 
     move-result v7
 
-    .line 99
     if-eqz v7, :cond_c
 
-    .line 100
     iget-object v7, p0, Lfxp;->k:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v12, 0x0
 
     invoke-virtual {v7, v12}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 101
     iget-object v7, p0, Lfxp;->t:Lfyb;
 
     const/4 v12, 0x0
 
     invoke-virtual {v7, v12}, Lfyb;->b(Z)V
 
-    .line 103
     :cond_c
     sget-object v7, Lfxz;->c:Lfxz;
 
@@ -839,16 +731,13 @@
     :cond_d
     move v4, v2
 
-    .line 104
     :goto_2
     if-eqz v4, :cond_6
 
-    .line 105
     new-instance v1, Lfxt;
 
     invoke-direct {v1, v10, v11}, Lfxt;-><init>(J)V
 
-    .line 106
     iget-object v4, p0, Lfxp;->u:Lifw;
 
     new-instance v6, Liev;
@@ -863,15 +752,12 @@
 
     invoke-virtual {v4, v0, v6}, Lifw;->a(Liia;Liia;)V
 
-    .line 107
     invoke-interface {v5, v10, v11}, Limr;->a(J)V
 
-    .line 109
     new-instance v1, Lfxu;
 
     invoke-direct {v1, v10, v11}, Lfxu;-><init>(J)V
 
-    .line 110
     iget-object v1, p0, Lfxp;->i:Lfyl;
 
     if-eqz v1, :cond_e
@@ -880,24 +766,18 @@
 
     if-eqz v1, :cond_e
 
-    .line 111
     invoke-static {}, Lfxf;->a()V
 
-    .line 112
     iget-object v1, p0, Lfxp;->i:Lfyl;
 
-    .line 113
     invoke-virtual {v1, v8, v9, v10, v11}, Lfyl;->a(JJ)Ljuk;
 
     move-result-object v1
 
-    .line 114
     invoke-static {}, Lfxf;->a()V
 
-    .line 115
     invoke-static {}, Lfxf;->d()V
 
-    .line 116
     new-instance v4, Lfxw;
 
     invoke-direct {v4, p0}, Lfxw;-><init>(Lfxp;)V
@@ -909,7 +789,6 @@
     .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_4
 
-    .line 117
     :cond_e
     if-eqz v0, :cond_f
 
@@ -919,7 +798,6 @@
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_1
     .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
-    .line 118
     :cond_f
     if-eqz v5, :cond_10
 
@@ -928,16 +806,13 @@
     :cond_10
     move v0, v2
 
-    .line 119
     goto/16 :goto_0
 
     :cond_11
     move v4, v1
 
-    .line 103
     goto :goto_2
 
-    .line 122
     :catch_0
     move-exception v1
 
@@ -946,7 +821,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 123
     :catchall_1
     move-exception v2
 
@@ -975,7 +849,6 @@
     .catch Ljava/lang/Throwable; {:try_start_a .. :try_end_a} :catch_1
     .catchall {:try_start_a .. :try_end_a} :catchall_3
 
-    .line 124
     :catch_1
     move-exception v0
 
@@ -984,7 +857,6 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_2
 
-    .line 125
     :catchall_2
     move-exception v1
 
@@ -1006,7 +878,6 @@
     :goto_6
     throw v0
 
-    .line 123
     :catch_2
     move-exception v0
 
@@ -1015,13 +886,11 @@
 
     goto :goto_4
 
-    .line 125
     :catchall_3
     move-exception v0
 
     goto :goto_5
 
-    .line 123
     :cond_14
     invoke-interface {v0}, Liia;->close()V
     :try_end_d
@@ -1030,7 +899,6 @@
 
     goto :goto_4
 
-    .line 125
     :catch_3
     move-exception v1
 
@@ -1043,7 +911,6 @@
 
     goto :goto_6
 
-    .line 123
     :catchall_4
     move-exception v1
 
@@ -1055,19 +922,15 @@
 .method final d()Ljuk;
     .locals 4
 
-    .prologue
-    .line 126
     iget-object v1, p0, Lfxp;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 127
     :try_start_0
     iget-object v0, p0, Lfxp;->s:Limx;
 
     if-eqz v0, :cond_0
 
-    .line 128
     iget-object v0, p0, Lfxp;->s:Limx;
 
     invoke-virtual {v0}, Limx;->b()Ljuk;
@@ -1086,7 +949,6 @@
 
     monitor-exit v1
 
-    .line 129
     :goto_0
     return-object v0
 
@@ -1101,7 +963,6 @@
 
     goto :goto_0
 
-    .line 130
     :catchall_0
     move-exception v0
 

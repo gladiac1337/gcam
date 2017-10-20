@@ -14,8 +14,6 @@
 .method constructor <init>(Landroid/app/Activity;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leqj;->a:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,17 +26,14 @@
 .method public final onPreferenceClick(Landroid/preference/Preference;)Z
     .locals 8
 
-    .prologue
     const/4 v7, 0x1
 
-    .line 2
     new-instance v0, Lfkf;
 
     iget-object v1, p0, Leqj;->a:Landroid/app/Activity;
 
     invoke-direct {v0, v1}, Lfkf;-><init>(Landroid/app/Activity;)V
 
-    .line 4
     new-instance v1, Lcom/google/android/gms/googlehelp/GoogleHelp;
 
     const-string v2, "android_default"
@@ -47,15 +42,12 @@
 
     sget-object v2, Lfkf;->b:Landroid/net/Uri;
 
-    .line 5
     iput-object v2, v1, Lcom/google/android/gms/googlehelp/GoogleHelp;->b:Landroid/net/Uri;
 
-    .line 7
     const/4 v2, 0x0
 
     iget-object v3, v0, Lfkf;->f:Landroid/content/Context;
 
-    .line 8
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -74,13 +66,10 @@
 
     invoke-direct {v4, v5, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 9
     invoke-virtual {v1, v2, v3, v4}, Lcom/google/android/gms/googlehelp/GoogleHelp;->a(ILjava/lang/String;Landroid/content/Intent;)Lcom/google/android/gms/googlehelp/GoogleHelp;
 
-    .line 10
     iget-object v2, v0, Lfkf;->f:Landroid/content/Context;
 
-    .line 11
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -99,15 +88,12 @@
 
     invoke-direct {v3, v4, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 12
     invoke-virtual {v1, v7, v2, v3}, Lcom/google/android/gms/googlehelp/GoogleHelp;->a(ILjava/lang/String;Landroid/content/Intent;)Lcom/google/android/gms/googlehelp/GoogleHelp;
 
-    .line 13
     const/4 v2, 0x2
 
     iget-object v3, v0, Lfkf;->f:Landroid/content/Context;
 
-    .line 14
     invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
@@ -126,10 +112,8 @@
 
     invoke-direct {v4, v5, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 15
     invoke-virtual {v1, v2, v3, v4}, Lcom/google/android/gms/googlehelp/GoogleHelp;->a(ILjava/lang/String;Landroid/content/Intent;)Lcom/google/android/gms/googlehelp/GoogleHelp;
 
-    .line 17
     new-instance v2, Landroid/content/Intent;
 
     const-string v3, "com.google.android.gms.googlehelp.HELP"
@@ -148,14 +132,12 @@
 
     move-result-object v1
 
-    .line 19
     new-instance v2, Lhnq;
 
     iget-object v0, v0, Lfkf;->g:Landroid/app/Activity;
 
     invoke-direct {v2, v0}, Lhnq;-><init>(Landroid/app/Activity;)V
 
-    .line 21
     invoke-virtual {v1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -185,7 +167,6 @@
 
     throw v0
 
-    .line 23
     :cond_1
     iget-object v0, v2, Lhnq;->a:Landroid/app/Activity;
 
@@ -193,10 +174,8 @@
 
     move-result v0
 
-    .line 24
     if-nez v0, :cond_2
 
-    .line 26
     const-string v0, "EXTRA_GOOGLE_HELP"
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -205,18 +184,14 @@
 
     check-cast v0, Lcom/google/android/gms/googlehelp/GoogleHelp;
 
-    .line 27
     sget v3, Lhjk;->b:I
 
-    .line 28
     iput v3, v0, Lcom/google/android/gms/googlehelp/GoogleHelp;->d:I
 
-    .line 29
     const-string v3, "EXTRA_GOOGLE_HELP"
 
     invoke-virtual {v1, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 30
     iget-object v0, v2, Lhnq;->b:Lhka;
 
     new-instance v3, Lhnr;
@@ -227,11 +202,9 @@
 
     invoke-static {v0, v3}, Lhor;->a(Lhka;Lhov;)V
 
-    .line 32
     :goto_0
     return v7
 
-    .line 31
     :cond_2
     invoke-virtual {v2, v0, v1}, Lhnq;->a(ILandroid/content/Intent;)V
 

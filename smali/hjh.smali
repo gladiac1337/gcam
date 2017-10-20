@@ -19,13 +19,10 @@
 .method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 12
 
-    .prologue
     const/4 v7, 0x0
 
     const/4 v9, 0x0
 
-    .line 4
-    .line 5
     invoke-static {p1}, Lhiv;->a(Landroid/os/Parcel;)I
 
     move-result v0
@@ -51,17 +48,14 @@
 
     if-ge v10, v0, :cond_0
 
-    .line 6
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v10
 
-    .line 8
     const v11, 0xffff
 
     and-int/2addr v11, v10
 
-    .line 9
     packed-switch v11, :pswitch_data_0
 
     invoke-static {p1, v10}, Lhiv;->b(Landroid/os/Parcel;I)V
@@ -169,10 +163,8 @@
 
     invoke-direct/range {v0 .. v9}, Lcom/google/android/gms/clearcut/internal/PlayLoggerContext;-><init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;ZLjava/lang/String;ZI)V
 
-    .line 10
     return-object v0
 
-    .line 9
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0
@@ -190,11 +182,7 @@
 .method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     new-array v0, p1, [Lcom/google/android/gms/clearcut/internal/PlayLoggerContext;
 
-    .line 3
     return-object v0
 .end method

@@ -25,20 +25,15 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lasg;->a:Lasf;
 
-    .line 2
     iget-object v1, v0, Lasf;->a:Lass;
 
     invoke-interface {v1}, Lass;->a()V
 
-    .line 3
     iget-object v0, v0, Lasf;->b:Lgdi;
 
     invoke-interface {v0}, Lgdi;->b()V
 
-    .line 4
     return-void
 .end method

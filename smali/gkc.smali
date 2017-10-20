@@ -18,16 +18,12 @@
 .method public constructor <init>(Lgjx;Lgjy;)V
     .locals 2
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgkc;->c:Lgjx;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p2, p0, Lgkc;->b:Lgjy;
 
-    .line 3
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -36,7 +32,6 @@
 
     iput-object v0, p0, Lgkc;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 4
     return-void
 .end method
 
@@ -45,8 +40,6 @@
 .method public final close()V
     .locals 4
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lgkc;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -57,71 +50,53 @@
 
     if-eqz v0, :cond_0
 
-    .line 23
     :goto_0
     return-void
 
-    .line 7
     :cond_0
     iget-object v0, p0, Lgkc;->c:Lgjx;
 
-    .line 8
     iget-object v1, v0, Lgjx;->b:Ljava/lang/Object;
 
-    .line 9
     monitor-enter v1
 
-    .line 10
     :try_start_0
     iget-object v0, p0, Lgkc;->c:Lgjx;
 
-    .line 11
     iget-object v0, v0, Lgjx;->c:Ljava/util/LinkedHashSet;
 
-    .line 12
     iget-object v2, p0, Lgkc;->b:Lgjy;
 
     invoke-virtual {v0, v2}, Ljava/util/LinkedHashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 13
     iget-object v0, p0, Lgkc;->c:Lgjx;
 
-    .line 14
     iget-object v0, v0, Lgjx;->d:Libq;
 
-    .line 15
     new-instance v2, Ljava/util/ArrayList;
 
     iget-object v3, p0, Lgkc;->c:Lgjx;
 
-    .line 16
     iget-object v3, v3, Lgjx;->c:Ljava/util/LinkedHashSet;
 
-    .line 17
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 18
     iput-object v2, v0, Libq;->b:Ljava/lang/Object;
 
-    .line 19
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 20
     iget-object v0, p0, Lgkc;->c:Lgjx;
 
-    .line 21
     iget-object v0, v0, Lgjx;->d:Libq;
 
-    .line 22
     iget-object v0, v0, Libq;->a:Libn;
 
     invoke-virtual {v0}, Libn;->a()V
 
     goto :goto_0
 
-    .line 19
     :catchall_0
     move-exception v0
 

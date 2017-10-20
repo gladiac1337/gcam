@@ -25,11 +25,8 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lfiy;->a:Lfiw;
 
-    .line 2
     iget-object v1, v0, Lfiw;->b:Lhzi;
 
     new-instance v2, Lfjc;
@@ -38,6 +35,5 @@
 
     invoke-virtual {v1, v2}, Lhzi;->a(Ljava/lang/Runnable;)V
 
-    .line 3
     return-void
 .end method

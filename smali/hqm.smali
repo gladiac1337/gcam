@@ -16,13 +16,10 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Lhqs;-><init>()V
 
-    .line 2
     const-string v0, ""
 
     iput-object v0, p0, Lhqm;->a:Ljava/lang/String;
@@ -35,7 +32,6 @@
 
     iput v0, p0, Lhqm;->p:I
 
-    .line 3
     return-void
 .end method
 

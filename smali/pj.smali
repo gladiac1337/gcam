@@ -7,11 +7,8 @@
 .method public constructor <init>(Landroid/content/Context;Lfl;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Lpe;-><init>(Landroid/content/Context;Lfl;)V
 
-    .line 2
     return-void
 .end method
 
@@ -20,8 +17,6 @@
 .method final a(Landroid/view/ActionProvider;)Lpf;
     .locals 2
 
-    .prologue
-    .line 3
     new-instance v0, Lpk;
 
     iget-object v1, p0, Lpj;->a:Landroid/content/Context;

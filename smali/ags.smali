@@ -57,18 +57,14 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 68
     new-instance v0, Lagt;
 
     invoke-direct {v0}, Lagt;-><init>()V
 
     sput-object v0, Lags;->p:Lagt;
 
-    .line 69
     new-instance v0, Landroid/os/Handler;
 
-    .line 70
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
@@ -81,15 +77,12 @@
 
     sput-object v0, Lags;->q:Landroid/os/Handler;
 
-    .line 71
     return-void
 .end method
 
 .method constructor <init>(Laja;Laja;Laja;Lagv;Lha;)V
     .locals 7
 
-    .prologue
-    .line 1
     const/4 v6, 0x0
 
     move-object v0, p0
@@ -106,18 +99,14 @@
 
     invoke-direct/range {v0 .. v6}, Lags;-><init>(Laja;Laja;Laja;Lagv;Lha;B)V
 
-    .line 2
     return-void
 .end method
 
 .method private constructor <init>(Laja;Laja;Laja;Lagv;Lha;B)V
     .locals 2
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x2
@@ -126,32 +115,24 @@
 
     iput-object v0, p0, Lags;->a:Ljava/util/List;
 
-    .line 6
     new-instance v0, Lasa;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Lasa;-><init>(B)V
 
-    .line 7
     iput-object v0, p0, Lags;->b:Lasa;
 
-    .line 8
     iput-object p1, p0, Lags;->d:Laja;
 
-    .line 9
     iput-object p2, p0, Lags;->s:Laja;
 
-    .line 10
     iput-object p3, p0, Lags;->t:Laja;
 
-    .line 11
     iput-object p4, p0, Lags;->c:Lagv;
 
-    .line 12
     iput-object p5, p0, Lags;->r:Lha;
 
-    .line 13
     return-void
 .end method
 
@@ -160,8 +141,6 @@
 .method public final a()Laja;
     .locals 1
 
-    .prologue
-    .line 22
     iget-boolean v0, p0, Lags;->g:Z
 
     if-eqz v0, :cond_0
@@ -180,26 +159,20 @@
 .method public final a(Lafv;)V
     .locals 1
 
-    .prologue
-    .line 49
     invoke-virtual {p0}, Lags;->a()Laja;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Laja;->execute(Ljava/lang/Runnable;)V
 
-    .line 50
     return-void
 .end method
 
 .method public final a(Laha;)V
     .locals 2
 
-    .prologue
-    .line 46
     iput-object p1, p0, Lags;->u:Laha;
 
-    .line 47
     sget-object v0, Lags;->q:Landroid/os/Handler;
 
     const/4 v1, 0x2
@@ -210,21 +183,16 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 48
     return-void
 .end method
 
 .method public final a(Lahg;Laed;)V
     .locals 2
 
-    .prologue
-    .line 42
     iput-object p1, p0, Lags;->h:Lahg;
 
-    .line 43
     iput-object p2, p0, Lags;->i:Laed;
 
-    .line 44
     sget-object v0, Lags;->q:Landroid/os/Handler;
 
     const/4 v1, 0x1
@@ -235,52 +203,42 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 45
     return-void
 .end method
 
 .method public final a(Laqh;)V
     .locals 2
 
-    .prologue
-    .line 14
     invoke-static {}, Larq;->a()V
 
-    .line 15
     iget-object v0, p0, Lags;->b:Lasa;
 
     invoke-virtual {v0}, Lasa;->a()V
 
-    .line 16
     iget-boolean v0, p0, Lags;->j:Z
 
     if-eqz v0, :cond_0
 
-    .line 17
     iget-object v0, p0, Lags;->m:Lagy;
 
     iget-object v1, p0, Lags;->i:Laed;
 
     invoke-interface {p1, v0, v1}, Laqh;->a(Lahg;Laed;)V
 
-    .line 21
     :goto_0
     return-void
 
-    .line 18
     :cond_0
     iget-boolean v0, p0, Lags;->k:Z
 
     if-eqz v0, :cond_1
 
-    .line 19
     iget-object v0, p0, Lags;->u:Laha;
 
     invoke-interface {p1, v0}, Laqh;->a(Laha;)V
 
     goto :goto_0
 
-    .line 20
     :cond_1
     iget-object v0, p0, Lags;->a:Ljava/util/List;
 
@@ -292,8 +250,6 @@
 .method final b(Laqh;)Z
     .locals 1
 
-    .prologue
-    .line 23
     iget-object v0, p0, Lags;->l:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -320,52 +276,39 @@
 .method final c()V
     .locals 3
 
-    .prologue
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
-    .line 24
     invoke-static {}, Larq;->a()V
 
-    .line 25
     iget-object v0, p0, Lags;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 26
     iput-object v2, p0, Lags;->e:Laek;
 
-    .line 27
     iput-object v2, p0, Lags;->m:Lagy;
 
-    .line 28
     iput-object v2, p0, Lags;->h:Lahg;
 
-    .line 29
     iget-object v0, p0, Lags;->l:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 30
     iget-object v0, p0, Lags;->l:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 31
     :cond_0
     iput-boolean v1, p0, Lags;->k:Z
 
-    .line 32
     iput-boolean v1, p0, Lags;->o:Z
 
-    .line 33
     iput-boolean v1, p0, Lags;->j:Z
 
-    .line 34
     iget-object v0, p0, Lags;->n:Lafv;
 
-    .line 35
     iget-object v1, v0, Lafv;->d:Lafz;
 
     invoke-virtual {v1}, Lafz;->a()Z
@@ -374,50 +317,38 @@
 
     if-eqz v1, :cond_1
 
-    .line 36
     invoke-virtual {v0}, Lafv;->a()V
 
-    .line 37
     :cond_1
     iput-object v2, p0, Lags;->n:Lafv;
 
-    .line 38
     iput-object v2, p0, Lags;->u:Laha;
 
-    .line 39
     iput-object v2, p0, Lags;->i:Laed;
 
-    .line 40
     iget-object v0, p0, Lags;->r:Lha;
 
     invoke-interface {v0, p0}, Lha;->a(Ljava/lang/Object;)Z
 
-    .line 41
     return-void
 .end method
 
 .method final d()V
     .locals 3
 
-    .prologue
-    .line 51
     iget-object v0, p0, Lags;->b:Lasa;
 
     invoke-virtual {v0}, Lasa;->a()V
 
-    .line 52
     iget-boolean v0, p0, Lags;->o:Z
 
     if-eqz v0, :cond_0
 
-    .line 53
     invoke-virtual {p0}, Lags;->c()V
 
-    .line 66
     :goto_0
     return-void
 
-    .line 55
     :cond_0
     iget-object v0, p0, Lags;->a:Ljava/util/List;
 
@@ -427,7 +358,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 56
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Received an exception without any callbacks to notify"
@@ -436,13 +366,11 @@
 
     throw v0
 
-    .line 57
     :cond_1
     iget-boolean v0, p0, Lags;->k:Z
 
     if-eqz v0, :cond_2
 
-    .line 58
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Already failed once"
@@ -451,13 +379,11 @@
 
     throw v0
 
-    .line 59
     :cond_2
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lags;->k:Z
 
-    .line 60
     iget-object v0, p0, Lags;->c:Lagv;
 
     iget-object v1, p0, Lags;->e:Laek;
@@ -466,7 +392,6 @@
 
     invoke-interface {v0, v1, v2}, Lagv;->a(Laek;Lagy;)V
 
-    .line 61
     iget-object v0, p0, Lags;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -487,21 +412,18 @@
 
     check-cast v0, Laqh;
 
-    .line 62
     invoke-virtual {p0, v0}, Lags;->b(Laqh;)Z
 
     move-result v2
 
     if-nez v2, :cond_3
 
-    .line 63
     iget-object v2, p0, Lags;->u:Laha;
 
     invoke-interface {v0, v2}, Laqh;->a(Laha;)V
 
     goto :goto_1
 
-    .line 65
     :cond_4
     invoke-virtual {p0}, Lags;->c()V
 
@@ -511,8 +433,6 @@
 .method public final d_()Lasa;
     .locals 1
 
-    .prologue
-    .line 67
     iget-object v0, p0, Lags;->b:Lasa;
 
     return-object v0

@@ -22,26 +22,18 @@
 .method public final synthetic a(Lcom/google/android/gms/common/api/Status;)Lhkh;
     .locals 0
 
-    .prologue
-    .line 5
-    .line 6
     return-object p1
 .end method
 
 .method protected final synthetic a(Lhjv;)V
     .locals 6
 
-    .prologue
-    .line 1
     check-cast p1, Lhxv;
 
-    .line 2
     iget-object v2, p0, Lhxh;->a:Lhvt;
 
-    .line 3
     iget-object v3, p1, Lhxv;->h:Lhxe;
 
-    .line 4
     iget-object v4, v3, Lhxe;->a:Ljava/util/Map;
 
     monitor-enter v4

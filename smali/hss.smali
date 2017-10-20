@@ -39,11 +39,8 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhss;->a:Lhsx;
 
-    .line 2
     iget-object v0, v0, Lhsx;->f:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -71,7 +68,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lhss;->a:Lhsx;
 
@@ -127,11 +123,8 @@
 .method public final c()V
     .locals 8
 
-    .prologue
-    .line 4
     iget-object v1, p0, Lhss;->a:Lhsx;
 
-    .line 5
     iget-object v0, v1, Lhsx;->a:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V

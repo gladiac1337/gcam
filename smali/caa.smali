@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,16 +20,12 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
-    .prologue
-    .line 2
     check-cast p1, Lipe;
 
-    .line 3
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    .line 4
     invoke-virtual {p1}, Lipe;->c()Ljava/util/List;
 
     move-result-object v0
@@ -54,27 +48,22 @@
 
     check-cast v0, Lipb;
 
-    .line 6
     iget-object v3, v0, Lipb;->a:Ljava/lang/String;
 
-    .line 7
     invoke-static {v3}, Lcdb;->a(Ljava/lang/String;)Lcdb;
 
     move-result-object v3
 
-    .line 8
     invoke-interface {v1, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 9
     invoke-interface {v1, v3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 12
     :cond_1
     return-object v1
 .end method

@@ -7,8 +7,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 4
     new-instance v0, Lbld;
 
     const-string v1, "camera.strict_vm"
@@ -21,15 +19,11 @@
 .method public constructor <init>(Lick;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const-string v0, "StrictModePolicy"
 
     invoke-interface {p1, v0}, Lick;->a(Ljava/lang/String;)Licj;
 
-    .line 3
     return-void
 .end method

@@ -16,8 +16,6 @@
 .method public constructor <init>(Ljava/io/File;Lgbn;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgch;->a:Ljava/io/File;
 
     iput-object p2, p0, Lgch;->b:Lgbn;
@@ -32,8 +30,6 @@
 .method public final a()V
     .locals 4
 
-    .prologue
-    .line 5
     const-string v0, "MvLogging"
 
     iget-object v1, p0, Lgch;->a:Ljava/io/File;
@@ -78,20 +74,16 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     iget-object v0, p0, Lgch;->b:Lgbn;
 
     invoke-interface {v0}, Lgbn;->a()V
 
-    .line 7
     return-void
 .end method
 
 .method public final a(J)V
     .locals 5
 
-    .prologue
-    .line 2
     const-string v0, "MvLogging"
 
     iget-object v1, p0, Lgch;->a:Ljava/io/File;
@@ -140,11 +132,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, p0, Lgch;->b:Lgbn;
 
     invoke-interface {v0, p1, p2}, Lgbn;->a(J)V
 
-    .line 4
     return-void
 .end method

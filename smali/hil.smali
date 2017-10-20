@@ -34,12 +34,10 @@
 .method public final a()Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
     .locals 10
 
-    .prologue
     const/4 v3, 0x0
 
     const/4 v4, 0x0
 
-    .line 1
     new-instance v0, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
 
     new-instance v2, Ljava/util/ArrayList;
@@ -50,7 +48,6 @@
 
     iget-object v9, p0, Lhil;->b:Ljava/util/Map;
 
-    .line 2
     const/4 v1, 0x3
 
     move v5, v4
@@ -63,6 +60,5 @@
 
     invoke-direct/range {v0 .. v9}, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;-><init>(ILjava/util/ArrayList;Landroid/accounts/Account;ZZZLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
-    .line 3
     return-object v0
 .end method

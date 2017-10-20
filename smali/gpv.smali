@@ -31,7 +31,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -42,7 +41,6 @@
 
     const/4 v0, 0x0
 
-    .line 5
     new-instance v1, Lgpv;
 
     const-string v2, "INACTIVE"
@@ -51,7 +49,6 @@
 
     sput-object v1, Lgpv;->a:Lgpv;
 
-    .line 6
     new-instance v1, Lgpv;
 
     const-string v2, "PASSIVE_SCAN"
@@ -60,7 +57,6 @@
 
     sput-object v1, Lgpv;->b:Lgpv;
 
-    .line 7
     new-instance v1, Lgpv;
 
     const-string v2, "PASSIVE_FOCUSED"
@@ -69,7 +65,6 @@
 
     sput-object v1, Lgpv;->c:Lgpv;
 
-    .line 8
     new-instance v1, Lgpv;
 
     const-string v2, "ACTIVE_SCAN"
@@ -78,7 +73,6 @@
 
     sput-object v1, Lgpv;->d:Lgpv;
 
-    .line 9
     new-instance v1, Lgpv;
 
     const-string v2, "FOCUSED_LOCKED"
@@ -87,7 +81,6 @@
 
     sput-object v1, Lgpv;->e:Lgpv;
 
-    .line 10
     new-instance v1, Lgpv;
 
     const-string v2, "NOT_FOCUSED_LOCKED"
@@ -100,7 +93,6 @@
 
     sput-object v1, Lgpv;->f:Lgpv;
 
-    .line 11
     new-instance v1, Lgpv;
 
     const-string v2, "PASSIVE_UNFOCUSED"
@@ -113,7 +105,6 @@
 
     sput-object v1, Lgpv;->g:Lgpv;
 
-    .line 12
     const/4 v1, 0x7
 
     new-array v1, v1, [Lgpv;
@@ -152,14 +143,12 @@
 
     sput-object v1, Lgpv;->j:[Lgpv;
 
-    .line 13
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     sput-object v1, Lgpv;->h:Ljava/util/Map;
 
-    .line 14
     invoke-static {}, Lgpv;->values()[Lgpv;
 
     move-result-object v1
@@ -171,7 +160,6 @@
 
     aget-object v3, v1, v0
 
-    .line 15
     sget-object v4, Lgpv;->h:Ljava/util/Map;
 
     iget v5, v3, Lgpv;->i:I
@@ -182,12 +170,10 @@
 
     invoke-interface {v4, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 16
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 17
     :cond_0
     return-void
 .end method
@@ -195,22 +181,16 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput p3, p0, Lgpv;->i:I
 
-    .line 4
     return-void
 .end method
 
 .method public static values()[Lgpv;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lgpv;->j:[Lgpv;
 
     invoke-virtual {v0}, [Lgpv;->clone()Ljava/lang/Object;

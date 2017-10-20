@@ -14,22 +14,16 @@
 .method private constructor <init>(Ljxb;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcoy;->a:Ljxb;
 
-    .line 3
     return-void
 .end method
 
 .method public static a(Ljxb;)Ljxb;
     .locals 1
 
-    .prologue
-    .line 4
     new-instance v0, Lcoy;
 
     invoke-direct {v0, p0}, Lcoy;-><init>(Ljxb;)V
@@ -42,24 +36,18 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 5
-    .line 6
     iget-object v0, p0, Lcoy;->a:Ljxb;
 
-    .line 7
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcpq;
 
-    .line 8
     invoke-static {v0}, Lfsl;->a(Licc;)Lggq;
 
     move-result-object v0
 
-    .line 9
     invoke-static {v0}, Ljkk;->a(Ljava/lang/Object;)Ljkk;
 
     move-result-object v0
@@ -68,16 +56,13 @@
 
     move-result-object v0
 
-    .line 10
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 11
     invoke-static {v0, v1}, Ljvr;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lggm;
 
-    .line 12
     return-object v0
 .end method

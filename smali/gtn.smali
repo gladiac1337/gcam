@@ -13,8 +13,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;Z)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgtn;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     iput-boolean p2, p0, Lgtn;->a:Z
@@ -29,35 +27,28 @@
 .method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lgtn;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$1202(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;Z)Z
 
-    .line 8
     return-void
 .end method
 
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
-    .line 4
     iget-boolean v0, p0, Lgtn;->a:Z
 
     if-nez v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lgtn;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$1202(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;Z)Z
 
-    .line 6
     :cond_0
     return-void
 .end method
@@ -65,14 +56,11 @@
 .method public final onAnimationStart(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgtn;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$1202(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;Z)Z
 
-    .line 3
     return-void
 .end method

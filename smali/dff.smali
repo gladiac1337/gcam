@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 20
     const-string v0, "VidStateCompleted"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -33,17 +31,12 @@
 .method public constructor <init>(Ldhd;ZLandroid/net/Uri;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Ldhd;-><init>(Lcnf;)V
 
-    .line 2
     iput-boolean p2, p0, Ldff;->d:Z
 
-    .line 3
     iput-object p3, p0, Ldff;->e:Landroid/net/Uri;
 
-    .line 4
     return-void
 .end method
 
@@ -52,8 +45,6 @@
 .method public final synthetic b()Lcnf;
     .locals 1
 
-    .prologue
-    .line 19
     invoke-virtual {p0}, Ldff;->e()Ldhd;
 
     move-result-object v0
@@ -64,19 +55,14 @@
 .method public final e()Ldhd;
     .locals 5
 
-    .prologue
-    .line 5
-    .line 6
     iget-boolean v0, p0, Ldff;->d:Z
 
     if-eqz v0, :cond_0
 
-    .line 7
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 8
     sget-object v0, Ldff;->c:Ljava/lang/String;
 
     iget-object v2, p0, Ldff;->e:Landroid/net/Uri;
@@ -115,36 +101,29 @@
 
     invoke-static {v0, v2}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 9
     iget-object v0, p0, Ldff;->e:Landroid/net/Uri;
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 10
     const/4 v0, 0x1
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 11
     invoke-virtual {p0}, Lcnf;->d()Libw;
 
     move-result-object v0
 
     check-cast v0, Ldhb;
 
-    .line 12
     iget-object v0, v0, Ldhb;->J:Lbtw;
 
-    .line 13
     invoke-interface {v0, v1}, Lbtw;->b(Landroid/content/Intent;)V
 
-    .line 18
     :goto_0
     const/4 v0, 0x0
 
     return-object v0
 
-    .line 15
     :cond_0
     invoke-virtual {p0}, Lcnf;->d()Libw;
 
@@ -152,10 +131,8 @@
 
     check-cast v0, Ldhb;
 
-    .line 16
     iget-object v0, v0, Ldhb;->J:Lbtw;
 
-    .line 17
     invoke-interface {v0}, Lbtw;->u()V
 
     goto :goto_0

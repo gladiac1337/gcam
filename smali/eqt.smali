@@ -17,22 +17,15 @@
 .method constructor <init>(Ljava/util/List;Ljava/util/List;Ljhi;Ljhi;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Leqt;->a:Ljava/util/List;
 
-    .line 3
     iput-object p2, p0, Leqt;->b:Ljava/util/List;
 
-    .line 4
     iput-object p3, p0, Leqt;->c:Ljhi;
 
-    .line 5
     iput-object p4, p0, Leqt;->d:Ljhi;
 
-    .line 6
     return-void
 .end method

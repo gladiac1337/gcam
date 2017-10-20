@@ -13,11 +13,8 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 28
     new-instance v0, Ljeb;
 
-    .line 29
     invoke-static {}, Ljee;->a()Ljed;
 
     move-result-object v1
@@ -26,10 +23,8 @@
 
     sput-object v0, Ljdy;->a:Ljef;
 
-    .line 30
     new-instance v0, Ljeb;
 
-    .line 31
     invoke-static {}, Ljee;->b()Ljed;
 
     move-result-object v1
@@ -38,15 +33,12 @@
 
     sput-object v0, Ljdy;->b:Ljef;
 
-    .line 32
     return-void
 .end method
 
 .method public static a(IJLjava/lang/String;ZZ)Ljava/lang/String;
     .locals 9
 
-    .prologue
-    .line 7
     const/4 v7, 0x0
 
     const-string v8, "yyyyMMddHHmmss"
@@ -71,13 +63,10 @@
 .method public static a(IJLjava/lang/String;ZZZLjava/lang/String;)Ljava/lang/String;
     .locals 7
 
-    .prologue
-    .line 8
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     invoke-direct {v0, p7}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 9
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -86,10 +75,8 @@
 
     move-result-object v1
 
-    .line 10
     if-nez p5, :cond_3
 
-    .line 11
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v3, "%05d%s%s_%05d_BURST%s%s"
@@ -100,7 +87,6 @@
 
     const/4 v0, 0x0
 
-    .line 12
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -109,7 +95,6 @@
 
     const/4 v0, 0x1
 
-    .line 13
     if-eqz p3, :cond_0
 
     :goto_0
@@ -117,7 +102,6 @@
 
     const/4 v5, 0x2
 
-    .line 14
     if-eqz p6, :cond_1
 
     const-string v0, "PORTRAIT"
@@ -127,7 +111,6 @@
 
     const/4 v0, 0x3
 
-    .line 15
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -140,7 +123,6 @@
 
     const/4 v1, 0x5
 
-    .line 16
     if-eqz p4, :cond_2
 
     const-string v0, "_COVER"
@@ -148,34 +130,28 @@
     :goto_2
     aput-object v0, v4, v1
 
-    .line 17
     invoke-static {v2, v3, v4}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 20
     :goto_3
     return-object v0
 
-    .line 13
     :cond_0
     const-string p3, ""
 
     goto :goto_0
 
-    .line 14
     :cond_1
     const-string v0, "IMG"
 
     goto :goto_1
 
-    .line 16
     :cond_2
     const-string v0, ""
 
     goto :goto_2
 
-    .line 18
     :cond_3
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -187,7 +163,6 @@
 
     const/4 v4, 0x0
 
-    .line 19
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -212,7 +187,6 @@
 
     aput-object v1, v3, v4
 
-    .line 20
     invoke-static {v0, v2, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -223,8 +197,6 @@
 .method public static a(J)Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 25
     const-string v0, "frame-"
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -265,13 +237,10 @@
 .method public static a(JZLjava/lang/String;)Ljava/lang/String;
     .locals 6
 
-    .prologue
-    .line 21
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     invoke-direct {v0, p3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 22
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -280,7 +249,6 @@
 
     move-result-object v0
 
-    .line 23
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string v2, "BURST%s%s"
@@ -317,8 +285,6 @@
 .method public static a()Ljef;
     .locals 3
 
-    .prologue
-    .line 1
     new-instance v0, Ljdx;
 
     sget-object v1, Ljdy;->b:Ljef;
@@ -333,13 +299,10 @@
 .method public static a(Ljdt;)Ljef;
     .locals 6
 
-    .prologue
-    .line 2
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3
     invoke-virtual {p0}, Ljdt;->a()Ljava/util/List;
 
     move-result-object v0
@@ -361,7 +324,6 @@
 
     check-cast v0, Ljdh;
 
-    .line 4
     sget-object v3, Ljdh;->a:Ljdp;
 
     invoke-virtual {v0, v3}, Ljdh;->a(Ljdp;)Ljava/lang/Object;
@@ -382,7 +344,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     new-instance v0, Ljei;
 
@@ -398,8 +359,6 @@
 .method public static b(J)Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 26
     const-string v0, "med-res-frame-"
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -440,8 +399,6 @@
 .method public static b()Ljef;
     .locals 2
 
-    .prologue
-    .line 24
     new-instance v0, Ljeb;
 
     invoke-static {}, Ljee;->c()Ljed;
@@ -456,8 +413,6 @@
 .method public static c()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 27
     const-string v0, "sb_video_temp.mp4"
 
     return-object v0

@@ -26,8 +26,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 9
     const-string v0, "CamCapSesCreator"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -42,17 +40,12 @@
 .method public constructor <init>(Lihn;Lhzc;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbcr;->b:Lihn;
 
-    .line 3
     iput-object p2, p0, Lbcr;->c:Lhzc;
 
-    .line 4
     return-void
 .end method
 
@@ -61,13 +54,10 @@
 .method public final a(Landroid/view/Surface;Landroid/view/Surface;Ljhi;)Ljuk;
     .locals 7
 
-    .prologue
-    .line 5
     new-instance v5, Ljuw;
 
     invoke-direct {v5}, Ljuw;-><init>()V
 
-    .line 7
     iget-object v6, p0, Lbcr;->c:Lhzc;
 
     new-instance v0, Lbcs;
@@ -84,6 +74,5 @@
 
     invoke-virtual {v6, v0}, Lhzc;->execute(Ljava/lang/Runnable;)V
 
-    .line 8
     return-object v5
 .end method

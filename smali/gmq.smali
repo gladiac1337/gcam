@@ -11,14 +11,10 @@
 .method public constructor <init>(Lgmo;Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgmq;->a:Lgmo;
 
-    .line 2
     invoke-direct {p0, p2}, Landroid/view/OrientationEventListener;-><init>(Landroid/content/Context;)V
 
-    .line 3
     return-void
 .end method
 
@@ -27,21 +23,16 @@
 .method public final onOrientationChanged(I)V
     .locals 6
 
-    .prologue
-    .line 4
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_1
 
-    .line 37
     :cond_0
     return-void
 
-    .line 6
     :cond_1
     iget-object v1, p0, Lgmq;->a:Lgmo;
 
-    .line 8
     if-ltz p1, :cond_2
 
     const/16 v0, 0x168
@@ -53,32 +44,26 @@
     :goto_0
     invoke-static {v0}, Lixp;->a(Z)V
 
-    .line 9
     iget-object v0, v1, Lgmo;->e:Libu;
 
-    .line 10
     iget v0, v0, Libu;->e:I
 
-    .line 11
     sub-int v0, p1, v0
 
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
 
     move-result v0
 
-    .line 12
     rsub-int v2, v0, 0x168
 
     invoke-static {v0, v2}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
-    .line 13
     const/16 v2, 0x32
 
     if-lt v0, v2, :cond_3
 
-    .line 14
     add-int/lit8 v0, p1, 0x2d
 
     div-int/lit8 v0, v0, 0x5a
@@ -87,36 +72,27 @@
 
     rem-int/lit16 v0, v0, 0x168
 
-    .line 15
     invoke-static {v0}, Libu;->a(I)Libu;
 
     move-result-object v0
 
     move-object v1, v0
 
-    .line 18
     :goto_1
     iget-object v0, p0, Lgmq;->a:Lgmo;
 
-    .line 19
     iget-object v0, v0, Lgmo;->e:Libu;
 
-    .line 20
     if-eq v1, v0, :cond_0
 
-    .line 22
     iget-object v0, p0, Lgmq;->a:Lgmo;
 
-    .line 23
     iget-object v0, v0, Lgmo;->f:Licj;
 
-    .line 24
     iget-object v2, p0, Lgmq;->a:Lgmo;
 
-    .line 25
     iget-object v2, v2, Lgmo;->e:Libu;
 
-    .line 26
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -173,22 +149,16 @@
 
     move-result-object v2
 
-    .line 27
     invoke-interface {v0, v2}, Licj;->b(Ljava/lang/String;)V
 
-    .line 28
     iget-object v0, p0, Lgmq;->a:Lgmo;
 
-    .line 29
     iput-object v1, v0, Lgmo;->e:Libu;
 
-    .line 30
     iget-object v0, p0, Lgmq;->a:Lgmo;
 
-    .line 31
     iget-object v0, v0, Lgmo;->a:Ljava/util/List;
 
-    .line 32
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -206,13 +176,10 @@
 
     check-cast v0, Lgmp;
 
-    .line 33
     iget-object v3, p0, Lgmq;->a:Lgmo;
 
-    .line 34
     iget-object v3, v3, Lgmo;->c:Lhzi;
 
-    .line 35
     new-instance v4, Lgmr;
 
     invoke-direct {v4, v0, v1}, Lgmr;-><init>(Lgmp;Libu;)V
@@ -221,13 +188,11 @@
 
     goto :goto_2
 
-    .line 8
     :cond_2
     const/4 v0, 0x0
 
     goto/16 :goto_0
 
-    .line 16
     :cond_3
     iget-object v0, v1, Lgmo;->e:Libu;
 

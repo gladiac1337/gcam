@@ -16,8 +16,6 @@
 .method constructor <init>(Ldfz;Landroid/os/Handler;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldgj;->a:Ldfz;
 
     iput-object p2, p0, Ldgj;->b:Landroid/os/Handler;
@@ -32,11 +30,8 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 6
     check-cast p1, Ljava/util/List;
 
-    .line 7
     iget-object v0, p0, Ldgj;->b:Landroid/os/Handler;
 
     new-instance v1, Ldgk;
@@ -45,27 +40,21 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 8
     return-void
 .end method
 
 .method public final a(Ljava/lang/Throwable;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ldgj;->a:Ldfz;
 
-    .line 3
     iget-object v0, v0, Lcnf;->a:Lcng;
 
-    .line 4
     new-instance v1, Ldev;
 
     invoke-direct {v1}, Ldev;-><init>()V
 
     invoke-interface {v0, v1}, Lcng;->a(Ljava/lang/Object;)V
 
-    .line 5
     return-void
 .end method

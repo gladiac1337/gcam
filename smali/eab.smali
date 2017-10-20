@@ -25,10 +25,7 @@
 .method public final a()Ljuk;
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Leab;->a:Ljuw;
 
-    .line 2
     return-object v0
 .end method

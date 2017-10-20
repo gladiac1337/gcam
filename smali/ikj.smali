@@ -14,8 +14,6 @@
 .method constructor <init>(Lilk;Lima;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Likj;->a:Lilk;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,11 +26,8 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 3
 
-    .prologue
-    .line 2
     if-nez p1, :cond_0
 
-    .line 3
     iget-object v1, p0, Likj;->a:Lilk;
 
     new-instance v0, Ljava/lang/NullPointerException;
@@ -41,22 +36,17 @@
 
     invoke-direct {v0, v2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    .line 4
     invoke-static {v0}, Likw;->a(Ljava/lang/Throwable;)Likw;
 
     move-result-object v0
 
-    .line 5
     check-cast v0, Likw;
 
-    .line 6
     invoke-virtual {v1, v0}, Lilk;->a(Likw;)Z
 
-    .line 8
     :goto_0
     return-void
 
-    .line 7
     :cond_0
     iget-object v0, p0, Likj;->a:Lilk;
 
@@ -68,21 +58,15 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 2
 
-    .prologue
-    .line 9
     iget-object v1, p0, Likj;->a:Lilk;
 
-    .line 10
     invoke-static {p1}, Likw;->a(Ljava/lang/Throwable;)Likw;
 
     move-result-object v0
 
-    .line 11
     check-cast v0, Likw;
 
-    .line 12
     invoke-virtual {v1, v0}, Lilk;->a(Likw;)Z
 
-    .line 13
     return-void
 .end method

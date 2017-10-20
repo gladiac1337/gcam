@@ -20,22 +20,16 @@
 .method public constructor <init>(Ljava/lang/Object;I)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljlu;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljly;->a:Ljava/lang/Object;
 
-    .line 3
     iput p2, p0, Ljly;->b:I
 
-    .line 4
     const-string v0, "count"
 
     invoke-static {p2, v0}, Litx;->a(ILjava/lang/String;)I
 
-    .line 5
     return-void
 .end method
 
@@ -44,8 +38,6 @@
 .method public final a()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Ljly;->a:Ljava/lang/Object;
 
     return-object v0
@@ -54,8 +46,6 @@
 .method public final b()I
     .locals 1
 
-    .prologue
-    .line 7
     iget v0, p0, Ljly;->b:I
 
     return v0

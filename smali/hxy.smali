@@ -25,15 +25,11 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 1
     check-cast p1, Lhvt;
 
-    .line 2
     iget-object v0, p0, Lhxy;->a:Lcom/google/android/gms/wearable/internal/zzbz;
 
     invoke-interface {p1, v0}, Lhvt;->a(Lhvu;)V
 
-    .line 3
     return-void
 .end method

@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,45 +15,36 @@
 .method public static g()Lbbt;
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 2
     new-instance v0, Lbbt;
 
     invoke-direct {v0, v1}, Lbbt;-><init>(B)V
 
-    .line 3
     invoke-virtual {v0, v1}, Lbbt;->a(Z)Lbbt;
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {v0, v1}, Lbbt;->b(Z)Lbbt;
 
     move-result-object v0
 
-    .line 5
     invoke-virtual {v0, v1}, Lbbt;->c(Z)Lbbt;
 
     move-result-object v0
 
-    .line 6
     invoke-virtual {v0, v1}, Lbbt;->d(Z)Lbbt;
 
     move-result-object v0
 
-    .line 7
     invoke-virtual {v0, v1}, Lbbt;->e(Z)Lbbt;
 
     move-result-object v0
 
-    .line 8
     invoke-virtual {v0, v1}, Lbbt;->f(Z)Lbbt;
 
     move-result-object v0
 
-    .line 9
     return-object v0
 .end method
 

@@ -18,14 +18,10 @@
 .method constructor <init>(Ljava/util/EnumSet;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljkj;->a:Ljava/util/EnumSet;
 
-    .line 3
     return-void
 .end method
 
@@ -34,8 +30,6 @@
 .method final readResolve()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 4
     new-instance v0, Ljki;
 
     iget-object v1, p0, Ljkj;->a:Ljava/util/EnumSet;
@@ -44,9 +38,7 @@
 
     move-result-object v1
 
-    .line 5
     invoke-direct {v0, v1}, Ljki;-><init>(Ljava/util/EnumSet;)V
 
-    .line 6
     return-object v0
 .end method

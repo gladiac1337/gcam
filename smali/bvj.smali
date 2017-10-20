@@ -18,8 +18,6 @@
 .method constructor <init>(Lbvf;Laav;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbvj;->c:Lbvf;
 
     iput-object p2, p0, Lbvj;->a:Laav;
@@ -36,20 +34,15 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbvj;->a:Laav;
 
     iget v1, p0, Lbvj;->b:I
 
     invoke-interface {v0, v1}, Laav;->a(I)V
 
-    .line 3
     iget-object v0, p0, Lbvj;->c:Lbvf;
 
-    .line 4
     invoke-virtual {v0}, Lbvf;->c()V
 
-    .line 5
     return-void
 .end method

@@ -18,8 +18,6 @@
 .method constructor <init>(Limj;Landroid/media/MediaCodec;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Limk;->c:Limj;
 
     iput-object p2, p0, Limk;->a:Landroid/media/MediaCodec;
@@ -36,20 +34,15 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Limk;->c:Limj;
 
-    .line 3
     iget-object v0, v0, Limj;->a:Landroid/media/MediaCodec$Callback;
 
-    .line 4
     iget-object v1, p0, Limk;->a:Landroid/media/MediaCodec;
 
     iget v2, p0, Limk;->b:I
 
     invoke-virtual {v0, v1, v2}, Landroid/media/MediaCodec$Callback;->onInputBufferAvailable(Landroid/media/MediaCodec;I)V
 
-    .line 5
     return-void
 .end method

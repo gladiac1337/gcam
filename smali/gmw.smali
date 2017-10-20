@@ -16,8 +16,6 @@
 .method constructor <init>(Ljava/util/concurrent/Executor;Licc;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgmw;->b:Ljava/util/concurrent/Executor;
 
     iput-object p2, p0, Lgmw;->a:Licc;
@@ -32,8 +30,6 @@
 .method public final a(Libu;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgmw;->b:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lgmx;
@@ -42,6 +38,5 @@
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 3
     return-void
 .end method

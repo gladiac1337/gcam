@@ -35,44 +35,32 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, -0x1
 
     iput v0, p0, Lvk;->a:I
 
-    .line 3
     iput v1, p0, Lvk;->b:I
 
-    .line 4
     iput v1, p0, Lvk;->c:I
 
-    .line 5
     const/4 v0, 0x1
 
     iput v0, p0, Lvk;->d:I
 
-    .line 6
     iput v1, p0, Lvk;->e:I
 
-    .line 7
     iput-boolean v1, p0, Lvk;->f:Z
 
-    .line 8
     iput-boolean v1, p0, Lvk;->g:Z
 
-    .line 9
     iput-boolean v1, p0, Lvk;->h:Z
 
-    .line 10
     iput-boolean v1, p0, Lvk;->i:Z
 
-    .line 11
     iput-boolean v1, p0, Lvk;->j:Z
 
     return-void
@@ -83,8 +71,6 @@
 .method public final a()I
     .locals 2
 
-    .prologue
-    .line 17
     iget-boolean v0, p0, Lvk;->g:Z
 
     if-eqz v0, :cond_0
@@ -107,15 +93,12 @@
 .method public final a(I)V
     .locals 3
 
-    .prologue
-    .line 12
     iget v0, p0, Lvk;->d:I
 
     and-int/2addr v0, p1
 
     if-nez v0, :cond_0
 
-    .line 13
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -124,7 +107,6 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 14
     invoke-static {p1}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -141,7 +123,6 @@
 
     iget v2, p0, Lvk;->d:I
 
-    .line 15
     invoke-static {v2}, Ljava/lang/Integer;->toBinaryString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -158,7 +139,6 @@
 
     throw v0
 
-    .line 16
     :cond_0
     return-void
 .end method
@@ -166,8 +146,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 18
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "State{mTargetPosition="

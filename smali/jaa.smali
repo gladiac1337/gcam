@@ -7,11 +7,8 @@
 .method public constructor <init>(Ljce;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Lizx;-><init>(Ljce;)V
 
-    .line 2
     return-void
 .end method
 
@@ -20,13 +17,10 @@
 .method public final a(J)Ljfm;
     .locals 3
 
-    .prologue
-    .line 3
     iget-object v1, p0, Ljaa;->c:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 4
     :try_start_0
     iget-object v0, p0, Ljaa;->a:Ljava/util/TreeSet;
 
@@ -40,7 +34,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     new-instance v0, Ljfj;
 
     const/high16 v2, 0x3f800000    # 1.0f
@@ -49,7 +42,6 @@
 
     monitor-exit v1
 
-    .line 6
     :goto_0
     return-object v0
 
@@ -64,7 +56,6 @@
 
     goto :goto_0
 
-    .line 7
     :catchall_0
     move-exception v0
 

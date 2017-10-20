@@ -13,21 +13,16 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lfoa;-><init>()V
 
-    .line 2
     const/4 v0, 0x0
 
     iput v0, p0, Lfpm;->e:I
 
-    .line 3
     const-string v0, "precision highp float;                            \nuniform float uAlphaFactor;                         \nvarying vec2 vTexCoord;                             \nuniform sampler2D sTexture;                         \nvoid main()                                         \n{                                                   \n  vec4 texcolor;                                    \n  texcolor = texture2D( sTexture, vTexCoord );      \n  texcolor.a = uAlphaFactor;                        \n  gl_FragColor = texcolor;                          \n}                                                   \n"
 
     iput-object v0, p0, Lfpm;->f:Ljava/lang/String;
 
-    .line 4
     const-string v0, "uniform mat4 uMvpMatrix;                   \nattribute vec4 aPosition;                   \nattribute vec2 aTextureCoord;               \nvarying vec2 vTexCoord;                     \nvoid main()                                 \n{                                           \n   gl_Position = uMvpMatrix * aPosition;    \n   vTexCoord = aTextureCoord;               \n}                                           \n"
 
     iget-object v1, p0, Lfpm;->f:Ljava/lang/String;
@@ -38,7 +33,6 @@
 
     iput v0, p0, Lfpm;->d:I
 
-    .line 5
     iget v0, p0, Lfpm;->d:I
 
     const-string v1, "aPosition"
@@ -49,7 +43,6 @@
 
     iput v0, p0, Lfpm;->a:I
 
-    .line 6
     iget v0, p0, Lfpm;->d:I
 
     const-string v1, "aTextureCoord"
@@ -60,7 +53,6 @@
 
     iput v0, p0, Lfpm;->b:I
 
-    .line 7
     iget v0, p0, Lfpm;->d:I
 
     const-string v1, "uMvpMatrix"
@@ -71,7 +63,6 @@
 
     iput v0, p0, Lfpm;->c:I
 
-    .line 8
     iget v0, p0, Lfpm;->d:I
 
     const-string v1, "uAlphaFactor"
@@ -82,19 +73,16 @@
 
     iput v0, p0, Lfpm;->e:I
 
-    .line 10
     iget v0, p0, Lfoa;->d:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 11
     iget v0, p0, Lfpm;->e:I
 
     const v1, 0x3f666666    # 0.9f
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 12
     return-void
 .end method
 
@@ -103,12 +91,9 @@
 .method public final a(F)V
     .locals 1
 
-    .prologue
-    .line 13
     iget v0, p0, Lfpm;->e:I
 
     invoke-static {v0, p1}, Landroid/opengl/GLES20;->glUniform1f(IF)V
 
-    .line 14
     return-void
 .end method

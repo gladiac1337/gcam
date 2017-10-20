@@ -15,7 +15,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
     const/high16 v5, -0x40800000    # -1.0f
@@ -24,7 +23,6 @@
 
     const/4 v4, 0x0
 
-    .line 13
     const-string v0, "DeviceManager"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -33,14 +31,12 @@
 
     sput-object v0, Lfof;->b:Ljava/lang/String;
 
-    .line 14
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lfof;->c:Ljava/util/Map;
 
-    .line 15
     const-string v0, "LGE"
 
     const-string v1, "hammerhead"
@@ -51,7 +47,6 @@
 
     invoke-static {v0, v1, v2}, Lfof;->a(Ljava/lang/String;Ljava/lang/String;Lfog;)V
 
-    .line 16
     const-string v0, "LGE"
 
     const-string v1, "g3"
@@ -62,7 +57,6 @@
 
     invoke-static {v0, v1, v2}, Lfof;->a(Ljava/lang/String;Ljava/lang/String;Lfog;)V
 
-    .line 17
     const-string v0, "LGE"
 
     const-string v1, "b1"
@@ -73,7 +67,6 @@
 
     invoke-static {v0, v1, v2}, Lfof;->a(Ljava/lang/String;Ljava/lang/String;Lfog;)V
 
-    .line 18
     const-string v0, "LGE"
 
     const-string v1, "b1w"
@@ -84,7 +77,6 @@
 
     invoke-static {v0, v1, v2}, Lfof;->a(Ljava/lang/String;Ljava/lang/String;Lfog;)V
 
-    .line 19
     const-string v0, "HTC"
 
     const-string v1, "m7"
@@ -95,7 +87,6 @@
 
     invoke-static {v0, v1, v2}, Lfof;->a(Ljava/lang/String;Ljava/lang/String;Lfog;)V
 
-    .line 20
     const-string v0, "HTC"
 
     const-string v1, "m7cdtu"
@@ -106,7 +97,6 @@
 
     invoke-static {v0, v1, v2}, Lfof;->a(Ljava/lang/String;Ljava/lang/String;Lfog;)V
 
-    .line 21
     const-string v0, "HTC"
 
     const-string v1, "m7cdug"
@@ -117,7 +107,6 @@
 
     invoke-static {v0, v1, v2}, Lfof;->a(Ljava/lang/String;Ljava/lang/String;Lfog;)V
 
-    .line 22
     const-string v0, "HTC"
 
     const-string v1, "m7cdwg"
@@ -128,7 +117,6 @@
 
     invoke-static {v0, v1, v2}, Lfof;->a(Ljava/lang/String;Ljava/lang/String;Lfog;)V
 
-    .line 23
     const-string v0, "HTC"
 
     const-string v1, "m7wls"
@@ -139,7 +127,6 @@
 
     invoke-static {v0, v1, v2}, Lfof;->a(Ljava/lang/String;Ljava/lang/String;Lfog;)V
 
-    .line 24
     const-string v0, "HTC"
 
     const-string v1, "m7wlv"
@@ -150,7 +137,6 @@
 
     invoke-static {v0, v1, v2}, Lfof;->a(Ljava/lang/String;Ljava/lang/String;Lfog;)V
 
-    .line 25
     const-string v0, "motorola"
 
     const-string v1, "ghost"
@@ -163,7 +149,6 @@
 
     invoke-static {v0, v1, v2}, Lfof;->a(Ljava/lang/String;Ljava/lang/String;Lfog;)V
 
-    .line 26
     const-string v0, "Default"
 
     const-string v1, ""
@@ -174,7 +159,6 @@
 
     invoke-static {v0, v1, v2}, Lfof;->a(Ljava/lang/String;Ljava/lang/String;Lfog;)V
 
-    .line 27
     sget-object v0, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -211,7 +195,6 @@
 
     move-result-object v0
 
-    .line 28
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -266,7 +249,6 @@
 
     move-result-object v0
 
-    .line 29
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -321,7 +303,6 @@
 
     move-result-object v0
 
-    .line 30
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -376,7 +357,6 @@
 
     move-result-object v0
 
-    .line 31
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -431,7 +411,6 @@
 
     move-result-object v0
 
-    .line 32
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -486,7 +465,6 @@
 
     move-result-object v0
 
-    .line 33
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -541,7 +519,6 @@
 
     move-result-object v0
 
-    .line 34
     sget-object v1, Lfof;->b:Ljava/lang/String;
 
     const-string v2, "Build : \n"
@@ -563,7 +540,6 @@
     :goto_0
     invoke-static {v1, v0}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 35
     sget-object v0, Lfof;->c:Ljava/util/Map;
 
     invoke-static {}, Lfof;->c()Ljava/lang/String;
@@ -572,12 +548,10 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    .line 36
     invoke-static {}, Lfof;->c()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 37
     sget-object v1, Lfof;->c:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -586,16 +560,13 @@
 
     check-cast v0, Lfog;
 
-    .line 38
     if-eqz v0, :cond_1
 
-    .line 41
     :goto_1
     sput-object v0, Lfof;->a:Lfog;
 
     return-void
 
-    .line 34
     :cond_0
     new-instance v0, Ljava/lang/String;
 
@@ -603,7 +574,6 @@
 
     goto :goto_0
 
-    .line 40
     :cond_1
     sget-object v0, Lfof;->c:Ljava/util/Map;
 
@@ -621,8 +591,6 @@
 .method public static a(F)F
     .locals 3
 
-    .prologue
-    .line 1
     sget-object v0, Lfof;->a:Lfog;
 
     iget v0, v0, Lfog;->a:F
@@ -633,17 +601,14 @@
 
     if-lez v0, :cond_1
 
-    .line 2
     sget-object v0, Lfof;->a:Lfog;
 
     iget p0, v0, Lfog;->a:F
 
-    .line 6
     :cond_0
     :goto_0
     return p0
 
-    .line 3
     :cond_1
     const/high16 v0, 0x43200000    # 160.0f
 
@@ -651,7 +616,6 @@
 
     if-lez v0, :cond_0
 
-    .line 4
     sget-object v0, Lfof;->b:Ljava/lang/String;
 
     const/16 v1, 0x44
@@ -676,7 +640,6 @@
 
     invoke-static {v0, v1}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     const/high16 p0, 0x425c0000    # 55.0f
 
     goto :goto_0
@@ -685,8 +648,6 @@
 .method private static a(Ljava/lang/String;Ljava/lang/String;Lfog;)V
     .locals 4
 
-    .prologue
-    .line 10
     sget-object v1, Lfof;->c:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -710,10 +671,8 @@
     :goto_0
     invoke-interface {v1, v0, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 11
     return-void
 
-    .line 10
     :cond_0
     new-instance v0, Ljava/lang/String;
 
@@ -725,8 +684,6 @@
 .method public static a()Z
     .locals 2
 
-    .prologue
-    .line 8
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v1, "GalaxySZ"
@@ -741,8 +698,6 @@
 .method public static a(D)Z
     .locals 4
 
-    .prologue
-    .line 7
     invoke-static {p0, p1}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide v0
@@ -767,8 +722,6 @@
 .method public static b()Z
     .locals 2
 
-    .prologue
-    .line 9
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
     const-string v1, "Nexus 5"
@@ -783,8 +736,6 @@
 .method private static c()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 12
     sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

@@ -14,8 +14,6 @@
 .method constructor <init>(Loq;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lot;->a:Loq;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,34 +26,28 @@
 .method public final a(Loz;Landroid/view/MenuItem;)V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lot;->a:Loq;
 
     iget-object v0, v0, Loq;->a:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 3
     return-void
 .end method
 
 .method public final b(Loz;Landroid/view/MenuItem;)V
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
     const/4 v3, -0x1
 
-    .line 4
     iget-object v0, p0, Lot;->a:Loq;
 
     iget-object v0, v0, Loq;->a:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 6
     const/4 v2, 0x0
 
     iget-object v0, p0, Lot;->a:Loq;
@@ -69,7 +61,6 @@
     :goto_0
     if-ge v2, v4, :cond_3
 
-    .line 7
     iget-object v0, p0, Lot;->a:Loq;
 
     iget-object v0, v0, Loq;->b:Ljava/util/List;
@@ -86,25 +77,20 @@
 
     move v0, v2
 
-    .line 11
     :goto_1
     if-ne v0, v3, :cond_1
 
-    .line 20
     :goto_2
     return-void
 
-    .line 10
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 13
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
-    .line 14
     iget-object v2, p0, Lot;->a:Loq;
 
     iget-object v2, v2, Loq;->b:Ljava/util/List;
@@ -115,7 +101,6 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 15
     iget-object v1, p0, Lot;->a:Loq;
 
     iget-object v1, v1, Loq;->b:Ljava/util/List;
@@ -126,13 +111,11 @@
 
     check-cast v0, Lov;
 
-    .line 17
     :goto_3
     new-instance v1, Lou;
 
     invoke-direct {v1, p0, v0, p2, p1}, Lou;-><init>(Lot;Lov;Landroid/view/MenuItem;Loz;)V
 
-    .line 18
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
@@ -141,7 +124,6 @@
 
     add-long/2addr v2, v4
 
-    .line 19
     iget-object v0, p0, Lot;->a:Loq;
 
     iget-object v0, v0, Loq;->a:Landroid/os/Handler;
@@ -153,7 +135,6 @@
     :cond_2
     move-object v0, v1
 
-    .line 16
     goto :goto_3
 
     :cond_3

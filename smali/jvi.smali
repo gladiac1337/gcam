@@ -13,11 +13,8 @@
 .method constructor <init>()V
     .locals 4
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     const/16 v1, 0x10
@@ -30,7 +27,6 @@
 
     iput-object v0, p0, Ljvi;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 3
     new-instance v0, Ljava/lang/ref/ReferenceQueue;
 
     invoke-direct {v0}, Ljava/lang/ref/ReferenceQueue;-><init>()V
@@ -45,9 +41,6 @@
 .method public final a(Ljava/lang/Throwable;Z)Ljava/util/List;
     .locals 4
 
-    .prologue
-    .line 4
-    .line 5
     iget-object v0, p0, Ljvi;->b:Ljava/lang/ref/ReferenceQueue;
 
     invoke-virtual {v0}, Ljava/lang/ref/ReferenceQueue;->poll()Ljava/lang/ref/Reference;
@@ -57,12 +50,10 @@
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 6
     iget-object v1, p0, Ljvi;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     iget-object v0, p0, Ljvi;->b:Ljava/lang/ref/ReferenceQueue;
 
     invoke-virtual {v0}, Ljava/lang/ref/ReferenceQueue;->poll()Ljava/lang/ref/Reference;
@@ -71,7 +62,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     new-instance v0, Ljvj;
 
@@ -79,7 +69,6 @@
 
     invoke-direct {v0, p1, v1}, Ljvj;-><init>(Ljava/lang/Throwable;Ljava/lang/ref/ReferenceQueue;)V
 
-    .line 9
     iget-object v1, p0, Ljvi;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -88,26 +77,21 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 10
     if-nez p2, :cond_2
 
-    .line 16
     :cond_1
     :goto_1
     return-object v0
 
-    .line 12
     :cond_2
     if-nez v0, :cond_1
 
-    .line 14
     new-instance v1, Ljava/util/Vector;
 
     const/4 v0, 0x2
 
     invoke-direct {v1, v0}, Ljava/util/Vector;-><init>(I)V
 
-    .line 15
     iget-object v0, p0, Ljvi;->a:Ljava/util/concurrent/ConcurrentHashMap;
 
     new-instance v2, Ljvj;
@@ -122,7 +106,6 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 16
     if-nez v0, :cond_1
 
     move-object v0, v1

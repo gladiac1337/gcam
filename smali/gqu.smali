@@ -25,14 +25,10 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgqu;->a:Lgqt;
 
-    .line 2
     iget-object v1, v0, Lgqt;->b:Lgrk;
 
-    .line 3
     invoke-interface {v1}, Lgrk;->b()Ljuk;
 
     move-result-object v1
@@ -41,12 +37,9 @@
 
     invoke-direct {v2, v0}, Lgqw;-><init>(Lgqt;)V
 
-    .line 4
     sget-object v0, Ljuq;->a:Ljuq;
 
-    .line 5
     invoke-static {v1, v2, v0}, Ljtv;->a(Ljuk;Ljtu;Ljava/util/concurrent/Executor;)V
 
-    .line 6
     return-void
 .end method

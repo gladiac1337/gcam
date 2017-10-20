@@ -17,10 +17,8 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     sget-object v0, Lhig;->a:[I
 
     const/4 v2, 0x1
@@ -29,10 +27,8 @@
 
     move-result v0
 
-    .line 2
     sput-boolean v0, Lhih;->c:Z
 
-    .line 3
     sget-object v0, Lhig;->a:[I
 
     const/4 v2, 0x2
@@ -41,10 +37,8 @@
 
     move-result v0
 
-    .line 4
     sput-boolean v0, Lhih;->d:Z
 
-    .line 5
     sget-boolean v0, Lhih;->c:Z
 
     if-eqz v0, :cond_1
@@ -54,7 +48,6 @@
     :goto_0
     sput-object v0, Lhih;->a:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 6
     sget-boolean v0, Lhih;->c:Z
 
     if-eqz v0, :cond_3
@@ -67,7 +60,6 @@
 
     return-void
 
-    .line 5
     :cond_1
     sget-boolean v0, Lhih;->d:Z
 
@@ -82,7 +74,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_3
     sget-boolean v0, Lhih;->d:Z
 

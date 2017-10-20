@@ -16,8 +16,6 @@
 .method constructor <init>(Ldjm;Ljava/lang/Integer;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldjq;->a:Ldjm;
 
     iput-object p2, p0, Ldjq;->b:Ljava/lang/Integer;
@@ -32,8 +30,6 @@
 .method public final a()J
     .locals 2
 
-    .prologue
-    .line 6
     iget-object v0, p0, Ldjq;->a:Ldjm;
 
     invoke-interface {v0}, Ldjm;->a()J
@@ -46,8 +42,6 @@
 .method public final a(Lggg;)Lggg;
     .locals 3
 
-    .prologue
-    .line 2
     new-instance v0, Lggi;
 
     iget-object v1, p0, Ldjq;->a:Ldjm;
@@ -62,29 +56,23 @@
 
     iget-object v2, p0, Ldjq;->b:Ljava/lang/Integer;
 
-    .line 3
     invoke-virtual {v0, v1, v2}, Lggi;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)Lggi;
 
     move-result-object v0
 
-    .line 4
     invoke-virtual {v0}, Lggi;->c()Lggg;
 
     move-result-object v0
 
-    .line 5
     return-object v0
 .end method
 
 .method public final close()V
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Ldjq;->a:Ldjm;
 
     invoke-interface {v0}, Ldjm;->close()V
 
-    .line 8
     return-void
 .end method

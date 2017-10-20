@@ -19,8 +19,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,8 +29,6 @@
 .method public final a(JDD)V
     .locals 15
 
-    .prologue
-    .line 2
     const-wide v2, 0xdc6d62da00L
 
     sub-long v2, p1, v2
@@ -43,7 +39,6 @@
 
     div-float/2addr v2, v3
 
-    .line 3
     const v3, 0x40c7ae92
 
     const v4, 0x3c8ceb25
@@ -52,7 +47,6 @@
 
     add-float/2addr v3, v4
 
-    .line 4
     float-to-double v4, v3
 
     const-wide v6, 0x3fa11c5fc0000000L    # 0.03341960161924362
@@ -75,7 +69,6 @@
 
     float-to-double v8, v8
 
-    .line 5
     invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v8
@@ -100,7 +93,6 @@
 
     add-double/2addr v4, v6
 
-    .line 6
     const-wide v6, 0x3ffcbed85e1ce332L    # 1.796593063
 
     add-double/2addr v4, v6
@@ -109,7 +101,6 @@
 
     add-double/2addr v4, v6
 
-    .line 7
     move-wide/from16 v0, p5
 
     neg-double v6, v0
@@ -118,7 +109,6 @@
 
     div-double/2addr v6, v8
 
-    .line 8
     const v8, 0x3a6bedfa    # 9.0E-4f
 
     sub-float/2addr v2, v8
@@ -133,7 +123,6 @@
 
     long-to-float v2, v8
 
-    .line 9
     const v8, 0x3a6bedfa    # 9.0E-4f
 
     add-float/2addr v2, v8
@@ -160,7 +149,6 @@
 
     mul-double/2addr v8, v4
 
-    .line 10
     invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v8
@@ -169,7 +157,6 @@
 
     add-double/2addr v2, v6
 
-    .line 11
     invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v4
@@ -186,12 +173,10 @@
 
     move-result-wide v4
 
-    .line 12
     const-wide v6, 0x3f91df46a0000000L    # 0.01745329238474369
 
     mul-double v6, v6, p3
 
-    .line 13
     const-wide v8, -0x4045311600000000L    # -0.10471975803375244
 
     invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
@@ -202,7 +187,6 @@
 
     move-result-wide v10
 
-    .line 14
     invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
 
     move-result-wide v12
@@ -223,33 +207,27 @@
 
     div-double v4, v8, v4
 
-    .line 15
     const-wide/high16 v6, 0x3ff0000000000000L    # 1.0
 
     cmpl-double v6, v4, v6
 
     if-ltz v6, :cond_0
 
-    .line 16
     const/4 v2, 0x1
 
     iput v2, p0, Lnk;->d:I
 
-    .line 17
     const-wide/16 v2, -0x1
 
     iput-wide v2, p0, Lnk;->b:J
 
-    .line 18
     const-wide/16 v2, -0x1
 
     iput-wide v2, p0, Lnk;->c:J
 
-    .line 31
     :goto_0
     return-void
 
-    .line 20
     :cond_0
     const-wide/high16 v6, -0x4010000000000000L    # -1.0
 
@@ -257,24 +235,20 @@
 
     if-gtz v6, :cond_1
 
-    .line 21
     const/4 v2, 0x0
 
     iput v2, p0, Lnk;->d:I
 
-    .line 22
     const-wide/16 v2, -0x1
 
     iput-wide v2, p0, Lnk;->b:J
 
-    .line 23
     const-wide/16 v2, -0x1
 
     iput-wide v2, p0, Lnk;->c:J
 
     goto :goto_0
 
-    .line 25
     :cond_1
     invoke-static {v4, v5}, Ljava/lang/Math;->acos(D)D
 
@@ -286,7 +260,6 @@
 
     double-to-float v4, v4
 
-    .line 26
     float-to-double v6, v4
 
     add-double/2addr v6, v2
@@ -305,7 +278,6 @@
 
     iput-wide v6, p0, Lnk;->b:J
 
-    .line 27
     float-to-double v4, v4
 
     sub-double/2addr v2, v4
@@ -324,7 +296,6 @@
 
     iput-wide v2, p0, Lnk;->c:J
 
-    .line 28
     iget-wide v2, p0, Lnk;->c:J
 
     cmp-long v2, v2, p1
@@ -337,14 +308,12 @@
 
     if-lez v2, :cond_2
 
-    .line 29
     const/4 v2, 0x0
 
     iput v2, p0, Lnk;->d:I
 
     goto :goto_0
 
-    .line 30
     :cond_2
     const/4 v2, 0x1
 

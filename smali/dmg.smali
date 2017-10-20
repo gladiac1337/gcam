@@ -15,39 +15,30 @@
 .method public constructor <init>(Ljava/util/Collection;Ljava/util/Collection;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-static {}, Lfsl;->d()Lggm;
 
     move-result-object v0
 
     invoke-direct {p0, p1, p2, v0}, Ldmg;-><init>(Ljava/util/Collection;Ljava/util/Collection;Lggm;)V
 
-    .line 2
     return-void
 .end method
 
 .method private constructor <init>(Ljava/util/Collection;Ljava/util/Collection;Lggm;)V
     .locals 1
 
-    .prologue
-    .line 3
     invoke-static {p2}, Liak;->d(Ljava/util/Collection;)Liaj;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Liaz;-><init>(Liaj;)V
 
-    .line 4
     iput-object p1, p0, Ldmg;->b:Ljava/util/Collection;
 
-    .line 5
     iput-object p2, p0, Ldmg;->c:Ljava/util/Collection;
 
-    .line 6
     iput-object p3, p0, Ldmg;->d:Lggm;
 
-    .line 7
     return-void
 .end method
 
@@ -56,8 +47,6 @@
 .method public final varargs a([Lggm;)Ldmg;
     .locals 6
 
-    .prologue
-    .line 8
     new-instance v0, Ldmg;
 
     iget-object v1, p0, Ldmg;->b:Ljava/util/Collection;
@@ -76,7 +65,6 @@
 
     const/4 v4, 0x1
 
-    .line 9
     invoke-static {p1}, Lfsl;->a([Lggm;)Lggm;
 
     move-result-object v5
@@ -89,23 +77,18 @@
 
     invoke-direct {v0, v1, v2, v3}, Ldmg;-><init>(Ljava/util/Collection;Ljava/util/Collection;Lggm;)V
 
-    .line 10
     return-object v0
 .end method
 
 .method protected final synthetic b(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 11
     check-cast p1, Ljava/util/List;
 
-    .line 12
     new-instance v1, Lggi;
 
     invoke-direct {v1}, Lggi;-><init>()V
 
-    .line 13
     iget-object v0, p0, Ldmg;->b:Ljava/util/Collection;
 
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -125,12 +108,10 @@
 
     check-cast v0, Lggm;
 
-    .line 14
     invoke-virtual {v0, v1}, Lggm;->a(Lggi;)V
 
     goto :goto_0
 
-    .line 16
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -149,22 +130,18 @@
 
     check-cast v0, Lggm;
 
-    .line 17
     invoke-virtual {v0, v1}, Lggm;->a(Lggi;)V
 
     goto :goto_1
 
-    .line 19
     :cond_1
     iget-object v0, p0, Ldmg;->d:Lggm;
 
     invoke-virtual {v0, v1}, Lggm;->a(Lggi;)V
 
-    .line 20
     invoke-virtual {v1}, Lggi;->c()Lggg;
 
     move-result-object v0
 
-    .line 21
     return-object v0
 .end method

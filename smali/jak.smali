@@ -18,37 +18,28 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Ljak;-><init>(B)V
 
-    .line 2
     return-void
 .end method
 
 .method private constructor <init>(B)V
     .locals 2
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     new-instance v0, Ljava/util/TreeSet;
 
     invoke-direct {v0}, Ljava/util/TreeSet;-><init>()V
 
-    .line 6
     iput-object v0, p0, Ljak;->c:Ljava/util/TreeSet;
 
-    .line 7
     const/high16 v0, 0x41f00000    # 30.0f
 
     iput v0, p0, Ljak;->a:F
 
-    .line 8
     const v0, 0x523a43b7    # 1.99999996E11f
 
     iget v1, p0, Ljak;->a:F
@@ -57,7 +48,6 @@
 
     iput v0, p0, Ljak;->b:F
 
-    .line 9
     return-void
 .end method
 
@@ -66,14 +56,12 @@
 .method public final a(J)Ljfm;
     .locals 9
 
-    .prologue
     const-wide/16 v4, 0x0
 
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    .line 10
     iget-object v0, p0, Ljak;->c:Ljava/util/TreeSet;
 
     invoke-virtual {v0}, Ljava/util/TreeSet;->size()I
@@ -87,7 +75,6 @@
     :goto_0
     invoke-static {v0}, Lixp;->a(Z)V
 
-    .line 11
     iget-object v0, p0, Ljak;->c:Ljava/util/TreeSet;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -100,7 +87,6 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    .line 12
     iget-object v1, p0, Ljak;->c:Ljava/util/TreeSet;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -113,10 +99,8 @@
 
     check-cast v1, Ljava/lang/Long;
 
-    .line 16
     if-eqz v0, :cond_3
 
-    .line 17
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v6
@@ -125,42 +109,34 @@
 
     move v0, v2
 
-    .line 19
     :goto_1
     if-eqz v1, :cond_2
 
-    .line 20
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v2
 
     sub-long/2addr v2, p1
 
-    .line 21
     add-int/lit8 v0, v0, 0x1
 
-    .line 22
     :goto_2
     if-nez v0, :cond_1
 
-    .line 23
     new-instance v0, Ljfj;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, v1}, Ljfj;-><init>(F)V
 
-    .line 25
     :goto_3
     return-object v0
 
     :cond_0
     move v0, v3
 
-    .line 10
     goto :goto_0
 
-    .line 24
     :cond_1
     add-long/2addr v2, v6
 
@@ -168,7 +144,6 @@
 
     div-long/2addr v2, v0
 
-    .line 25
     new-instance v0, Ljfj;
 
     long-to-float v1, v2
@@ -197,21 +172,16 @@
 .method public final a()V
     .locals 1
 
-    .prologue
-    .line 30
     iget-object v0, p0, Ljak;->c:Ljava/util/TreeSet;
 
     invoke-virtual {v0}, Ljava/util/TreeSet;->clear()V
 
-    .line 31
     return-void
 .end method
 
 .method public final b(J)V
     .locals 3
 
-    .prologue
-    .line 26
     iget-object v0, p0, Ljak;->c:Ljava/util/TreeSet;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -220,15 +190,12 @@
 
     invoke-virtual {v0, v1}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
 
-    .line 27
     return-void
 .end method
 
 .method public final c(J)V
     .locals 3
 
-    .prologue
-    .line 28
     iget-object v0, p0, Ljak;->c:Ljava/util/TreeSet;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -237,15 +204,12 @@
 
     invoke-virtual {v0, v1}, Ljava/util/TreeSet;->remove(Ljava/lang/Object;)Z
 
-    .line 29
     return-void
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 32
     const-string v0, "TimestampGapScorer[rate="
 
     iget v1, p0, Ljak;->a:F

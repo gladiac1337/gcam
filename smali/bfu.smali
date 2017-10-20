@@ -29,11 +29,8 @@
 .method public constructor <init>(Lidx;Ljava/io/File;Ljhi;Lgvp;Libx;ZFIJJ)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -42,7 +39,6 @@
 
     iput-object v0, p0, Lbfu;->a:Lidx;
 
-    .line 3
     invoke-static {p2}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -51,7 +47,6 @@
 
     iput-object v0, p0, Lbfu;->b:Ljava/io/File;
 
-    .line 4
     invoke-static {p3}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -60,7 +55,6 @@
 
     iput-object v0, p0, Lbfu;->c:Ljhi;
 
-    .line 5
     invoke-static {p4}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -69,7 +63,6 @@
 
     iput-object v0, p0, Lbfu;->d:Lgvp;
 
-    .line 6
     invoke-static {p5}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -78,21 +71,15 @@
 
     iput-object v0, p0, Lbfu;->e:Libx;
 
-    .line 7
     iput-boolean p6, p0, Lbfu;->f:Z
 
-    .line 8
     iput p7, p0, Lbfu;->g:F
 
-    .line 9
     iput p8, p0, Lbfu;->h:I
 
-    .line 10
     iput-wide p9, p0, Lbfu;->i:J
 
-    .line 11
     iput-wide p11, p0, Lbfu;->j:J
 
-    .line 12
     return-void
 .end method

@@ -25,8 +25,6 @@
 .method public constructor <init>(Lhtn;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lhuv;-><init>()V
 
     iput-object p1, p0, Lhuv;->a:Lhtn;
@@ -39,26 +37,21 @@
 .method public final declared-synchronized a()V
     .locals 2
 
-    .prologue
-    .line 3
     monitor-enter p0
 
     :try_start_0
     iget-object v0, p0, Lhuv;->a:Lhtn;
 
-    .line 4
     const/4 v1, 0x0
 
     iput-object v1, v0, Lhtn;->a:Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     monitor-exit p0
 
     return-void
 
-    .line 3
     :catchall_0
     move-exception v0
 
@@ -70,8 +63,6 @@
 .method public final declared-synchronized a(Landroid/location/Location;)V
     .locals 2
 
-    .prologue
-    .line 2
     monitor-enter p0
 
     :try_start_0

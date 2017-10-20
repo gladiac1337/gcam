@@ -29,30 +29,23 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgly;->a:Lglq;
 
     iget-boolean v1, p0, Lgly;->b:Z
 
-    .line 2
     iget-object v2, v0, Lglq;->b:Lcom/google/android/apps/camera/optionsbar/OptionsBarView;
 
-    .line 3
     if-eqz v1, :cond_1
 
-    .line 4
     const v0, 0x7f0200cb
 
     move v1, v0
 
-    .line 7
     :goto_0
     iget-object v0, v2, Lcom/google/android/apps/camera/optionsbar/OptionsBarView;->d:Lgkr;
 
     sget-object v2, Lgkw;->b:Lgkw;
 
-    .line 8
     iget-object v3, v0, Lgkr;->b:Ljava/util/Map;
 
     invoke-interface {v3, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -61,7 +54,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 9
     iget-object v0, v0, Lgkr;->b:Ljava/util/Map;
 
     invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -72,11 +64,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 
-    .line 10
     :cond_0
     return-void
 
-    .line 5
     :cond_1
     iget-object v0, v0, Lglq;->h:Lgku;
 

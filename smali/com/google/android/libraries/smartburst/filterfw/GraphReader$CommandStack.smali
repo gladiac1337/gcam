@@ -21,28 +21,22 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mCommands:Ljava/util/ArrayList;
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mPostCommands:Ljava/util/ArrayList;
 
-    .line 4
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mContext:Lcom/google/android/libraries/smartburst/filterfw/MffContext;
 
-    .line 5
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/FilterGraph$Builder;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mContext:Lcom/google/android/libraries/smartburst/filterfw/MffContext;
@@ -51,14 +45,12 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mBuilder:Lcom/google/android/libraries/smartburst/filterfw/FilterGraph$Builder;
 
-    .line 6
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/FilterFactory;
 
     invoke-direct {v0}, Lcom/google/android/libraries/smartburst/filterfw/FilterFactory;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mFactory:Lcom/google/android/libraries/smartburst/filterfw/FilterFactory;
 
-    .line 7
     return-void
 .end method
 
@@ -67,23 +59,18 @@
 .method public append(Lcom/google/android/libraries/smartburst/filterfw/GraphReader$Command;)V
     .locals 1
 
-    .prologue
-    .line 29
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mCommands:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 30
     return-void
 .end method
 
 .method public compileToBuilder(Lcom/google/android/libraries/smartburst/filterfw/GraphReader$GraphFactorySource;)V
     .locals 6
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 22
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mCommands:Ljava/util/ArrayList;
 
     check-cast v0, Ljava/util/ArrayList;
@@ -105,14 +92,12 @@
 
     check-cast v1, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$Command;
 
-    .line 23
     iget-object v5, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mContext:Lcom/google/android/libraries/smartburst/filterfw/MffContext;
 
     invoke-interface {v1, v5, p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$Command;->compileToJava(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Lcom/google/android/libraries/smartburst/filterfw/GraphReader$GraphFactorySource;)V
 
     goto :goto_0
 
-    .line 25
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mPostCommands:Ljava/util/ArrayList;
 
@@ -133,14 +118,12 @@
 
     check-cast v1, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$Command;
 
-    .line 26
     iget-object v4, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mContext:Lcom/google/android/libraries/smartburst/filterfw/MffContext;
 
     invoke-interface {v1, v4, p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$Command;->compileToJava(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Lcom/google/android/libraries/smartburst/filterfw/GraphReader$GraphFactorySource;)V
 
     goto :goto_1
 
-    .line 28
     :cond_1
     return-void
 .end method
@@ -148,33 +131,26 @@
 .method public compileToJava(Ljava/lang/String;Ljava/lang/String;Ljava/io/Writer;)V
     .locals 2
 
-    .prologue
-    .line 18
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$JavaSource;
 
     invoke-direct {v0, p2}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$JavaSource;-><init>(Ljava/lang/String;)V
 
-    .line 19
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$JavaSource;->mainGraphFactory()Lcom/google/android/libraries/smartburst/filterfw/GraphReader$GraphFactorySource;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->compileToBuilder(Lcom/google/android/libraries/smartburst/filterfw/GraphReader$GraphFactorySource;)V
 
-    .line 20
     invoke-virtual {v0, p1, p3}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$JavaSource;->writeSourceCode(Ljava/lang/String;Ljava/io/Writer;)V
 
-    .line 21
     return-void
 .end method
 
 .method public execute(Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;)Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
     .locals 5
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 8
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mCommands:Ljava/util/ArrayList;
 
     check-cast v0, Ljava/util/ArrayList;
@@ -196,16 +172,13 @@
 
     check-cast v1, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$Command;
 
-    .line 9
     invoke-interface {v1, p0}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$Command;->execute(Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;)V
 
     goto :goto_0
 
-    .line 11
     :cond_0
     if-nez p1, :cond_1
 
-    .line 12
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mBuilder:Lcom/google/android/libraries/smartburst/filterfw/FilterGraph$Builder;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FilterGraph$Builder;->build()Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
@@ -214,7 +187,6 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mGraph:Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
 
-    .line 14
     :goto_1
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mPostCommands:Ljava/util/ArrayList;
 
@@ -235,12 +207,10 @@
 
     check-cast v1, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$Command;
 
-    .line 15
     invoke-interface {v1, p0}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$Command;->execute(Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;)V
 
     goto :goto_2
 
-    .line 13
     :cond_1
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mBuilder:Lcom/google/android/libraries/smartburst/filterfw/FilterGraph$Builder;
 
@@ -252,7 +222,6 @@
 
     goto :goto_1
 
-    .line 17
     :cond_2
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mGraph:Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
 
@@ -262,8 +231,6 @@
 .method protected getBuilder()Lcom/google/android/libraries/smartburst/filterfw/FilterGraph$Builder;
     .locals 1
 
-    .prologue
-    .line 36
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mBuilder:Lcom/google/android/libraries/smartburst/filterfw/FilterGraph$Builder;
 
     return-object v0
@@ -272,8 +239,6 @@
 .method public getContext()Lcom/google/android/libraries/smartburst/filterfw/MffContext;
     .locals 1
 
-    .prologue
-    .line 34
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mContext:Lcom/google/android/libraries/smartburst/filterfw/MffContext;
 
     return-object v0
@@ -282,8 +247,6 @@
 .method public getFactory()Lcom/google/android/libraries/smartburst/filterfw/FilterFactory;
     .locals 1
 
-    .prologue
-    .line 33
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mFactory:Lcom/google/android/libraries/smartburst/filterfw/FilterFactory;
 
     return-object v0
@@ -292,8 +255,6 @@
 .method public getGraph()Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
     .locals 1
 
-    .prologue
-    .line 35
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mGraph:Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
 
     return-object v0
@@ -302,12 +263,9 @@
 .method public postAppend(Lcom/google/android/libraries/smartburst/filterfw/GraphReader$Command;)V
     .locals 1
 
-    .prologue
-    .line 31
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->mPostCommands:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 32
     return-void
 .end method

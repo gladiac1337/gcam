@@ -301,32 +301,24 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 4
 
-    .prologue
-    .line 1
     or-int/lit8 v0, p2, 0x1
 
-    .line 3
     const/16 v1, 0x4f45
 
     invoke-static {p1, v1}, Lhiv;->m(Landroid/os/Parcel;I)I
 
     move-result v1
 
-    .line 4
     const/4 v2, 0x2
 
-    .line 5
     iget-object v3, p0, Lcom/google/android/gms/wearable/Asset;->a:[B
 
-    .line 6
     invoke-static {p1, v2, v3}, Lhiv;->a(Landroid/os/Parcel;I[B)V
 
     const/4 v2, 0x3
 
-    .line 7
     iget-object v3, p0, Lcom/google/android/gms/wearable/Asset;->b:Ljava/lang/String;
 
-    .line 8
     invoke-static {p1, v2, v3}, Lhiv;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/4 v2, 0x4
@@ -341,9 +333,7 @@
 
     invoke-static {p1, v2, v3, v0}, Lhiv;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    .line 9
     invoke-static {p1, v1}, Lhiv;->n(Landroid/os/Parcel;I)V
 
-    .line 10
     return-void
 .end method

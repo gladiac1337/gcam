@@ -25,11 +25,8 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lfja;->a:Lfiw;
 
-    .line 2
     iget-object v0, v0, Lfiw;->e:Liaj;
 
     const/4 v1, 0x1
@@ -40,6 +37,5 @@
 
     invoke-interface {v0, v1}, Liaj;->a(Ljava/lang/Object;)V
 
-    .line 3
     return-void
 .end method

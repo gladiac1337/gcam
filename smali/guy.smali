@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 3
     new-instance v0, Lgvb;
 
     invoke-direct {v0}, Lgvb;-><init>()V
@@ -25,10 +23,7 @@
 .method public static a(Lguz;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-interface {p0}, Lguz;->i()V
 
-    .line 2
     return-void
 .end method

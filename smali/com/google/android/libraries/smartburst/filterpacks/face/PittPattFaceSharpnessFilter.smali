@@ -25,29 +25,22 @@
 .method static constructor <clinit>()V
     .locals 0
 
-    .prologue
-    .line 52
     return-void
 .end method
 
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/Filter;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
 
-    .line 2
     const-wide/high16 v0, -0x8000000000000000L
 
     iput-wide v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/PittPattFaceSharpnessFilter;->mPreviousTimestamp:J
 
-    .line 3
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/PittPattFaceSharpnessFilter;->mFaceSharpnessCalculator:Lcom/google/android/libraries/smartburst/filterpacks/face/FaceSharpnessCalculator;
 
-    .line 4
     return-void
 .end method
 
@@ -56,10 +49,8 @@
 .method public getSignature()Lcom/google/android/libraries/smartburst/filterfw/Signature;
     .locals 4
 
-    .prologue
     const/4 v3, 0x2
 
-    .line 5
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     invoke-direct {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;-><init>()V
@@ -68,12 +59,10 @@
 
     const/16 v2, 0x12d
 
-    .line 6
     invoke-static {v2, v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->image2D(II)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v2
 
-    .line 7
     invoke-virtual {v0, v1, v3, v2}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addInputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
@@ -82,12 +71,10 @@
 
     const-class v2, Lcom/google/android/vision/face/Face;
 
-    .line 8
     invoke-static {v2}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->array(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v2
 
-    .line 9
     invoke-virtual {v0, v1, v3, v2}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addInputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
@@ -96,45 +83,36 @@
 
     const-class v2, Lcom/google/android/libraries/smartburst/utils/Feature;
 
-    .line 10
     invoke-static {v2}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->single(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v2
 
-    .line 11
     invoke-virtual {v0, v1, v3, v2}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addOutputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 12
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->disallowOtherPorts()Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 13
     return-object v0
 .end method
 
 .method protected onClose()V
     .locals 1
 
-    .prologue
-    .line 48
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/PittPattFaceSharpnessFilter;->mFaceSharpnessCalculator:Lcom/google/android/libraries/smartburst/filterpacks/face/FaceSharpnessCalculator;
 
     if-eqz v0, :cond_0
 
-    .line 49
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/PittPattFaceSharpnessFilter;->mFaceSharpnessCalculator:Lcom/google/android/libraries/smartburst/filterpacks/face/FaceSharpnessCalculator;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceSharpnessCalculator;->release()V
 
-    .line 50
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/PittPattFaceSharpnessFilter;->mFaceSharpnessCalculator:Lcom/google/android/libraries/smartburst/filterpacks/face/FaceSharpnessCalculator;
 
-    .line 51
     :cond_0
     return-void
 .end method
@@ -142,8 +120,6 @@
 .method public onInputPortOpen(Lcom/google/android/libraries/smartburst/filterfw/InputPort;)V
     .locals 2
 
-    .prologue
-    .line 16
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -156,17 +132,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 17
     const-string v0, "mScale"
 
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->bindToFieldNamed(Ljava/lang/String;)V
 
-    .line 18
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->setAutoPullEnabled(Z)V
 
-    .line 19
     :cond_0
     return-void
 .end method
@@ -174,8 +147,6 @@
 .method protected onPrepare()V
     .locals 2
 
-    .prologue
-    .line 14
     new-instance v0, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceSharpnessCalculator;
 
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterpacks/face/PittPattFaceSharpnessFilter;->isOpenGLSupported()Z
@@ -186,26 +157,22 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/PittPattFaceSharpnessFilter;->mFaceSharpnessCalculator:Lcom/google/android/libraries/smartburst/filterpacks/face/FaceSharpnessCalculator;
 
-    .line 15
     return-void
 .end method
 
 .method protected onProcess()V
     .locals 12
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v1, 0x0
 
-    .line 20
     const-string v0, "faceSharpness"
 
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterpacks/face/PittPattFaceSharpnessFilter;->getConnectedOutputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/OutputPort;
 
     move-result-object v5
 
-    .line 21
     const-string v0, "image"
 
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterpacks/face/PittPattFaceSharpnessFilter;->getConnectedInputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/InputPort;
@@ -216,32 +183,26 @@
 
     move-result-object v0
 
-    .line 22
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Frame;->asFrameImage2D()Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;
 
     move-result-object v6
 
-    .line 23
     invoke-virtual {v6}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->getTimestamp()J
 
     move-result-wide v8
 
-    .line 24
     iget-wide v10, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/PittPattFaceSharpnessFilter;->mPreviousTimestamp:J
 
     cmp-long v0, v8, v10
 
     if-gtz v0, :cond_0
 
-    .line 47
     :goto_0
     return-void
 
-    .line 26
     :cond_0
     iput-wide v8, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/PittPattFaceSharpnessFilter;->mPreviousTimestamp:J
 
-    .line 28
     const-string v0, "faces"
 
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterpacks/face/PittPattFaceSharpnessFilter;->getConnectedInputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/InputPort;
@@ -252,31 +213,25 @@
 
     move-result-object v0
 
-    .line 29
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Frame;->asFrameValues()Lcom/google/android/libraries/smartburst/filterfw/FrameValues;
 
     move-result-object v7
 
-    .line 30
     invoke-virtual {v7}, Lcom/google/android/libraries/smartburst/filterfw/FrameValues;->getCount()I
 
     move-result v8
 
-    .line 31
     if-lez v8, :cond_2
 
-    .line 32
     new-array v9, v8, [Lcom/google/android/vision/face/Face;
 
     move v3, v2
 
     move v4, v1
 
-    .line 34
     :goto_1
     if-ge v3, v8, :cond_1
 
-    .line 35
     invoke-virtual {v7, v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameValues;->getFrameValueAtIndex(I)Lcom/google/android/libraries/smartburst/filterfw/FrameValue;
 
     move-result-object v0
@@ -289,7 +244,6 @@
 
     aput-object v0, v9, v3
 
-    .line 36
     aget-object v0, v9, v3
 
     invoke-virtual {v0}, Lcom/google/android/vision/face/Face;->getHeight()F
@@ -306,14 +260,12 @@
 
     add-float/2addr v4, v0
 
-    .line 37
     add-int/lit8 v0, v3, 0x1
 
     move v3, v0
 
     goto :goto_1
 
-    .line 38
     :cond_1
     const v0, 0x33d6bf95    # 1.0E-7f
 
@@ -325,20 +277,17 @@
 
     move v1, v2
 
-    .line 39
     :goto_2
     if-ge v1, v8, :cond_3
 
     aget-object v2, v9, v1
 
-    .line 40
     iget-object v3, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/PittPattFaceSharpnessFilter;->mFaceSharpnessCalculator:Lcom/google/android/libraries/smartburst/filterpacks/face/FaceSharpnessCalculator;
 
     invoke-virtual {v3, v6, v2}, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceSharpnessCalculator;->computeFaceSharpness(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;Lcom/google/android/vision/face/Face;)F
 
     move-result v3
 
-    .line 41
     invoke-virtual {v2}, Lcom/google/android/vision/face/Face;->getWidth()F
 
     move-result v7
@@ -355,7 +304,6 @@
 
     add-float/2addr v2, v0
 
-    .line 42
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
@@ -367,7 +315,6 @@
     :cond_2
     move v0, v1
 
-    .line 43
     :cond_3
     const/4 v1, 0x0
 
@@ -379,17 +326,14 @@
 
     move-result-object v1
 
-    .line 44
     new-instance v2, Lcom/google/android/libraries/smartburst/utils/Feature;
 
     sget-object v3, Ljfh;->k:Ljfh;
 
     invoke-direct {v2, v3, v0}, Lcom/google/android/libraries/smartburst/utils/Feature;-><init>(Ljfh;F)V
 
-    .line 45
     invoke-virtual {v1, v2}, Lcom/google/android/libraries/smartburst/filterfw/FrameValue;->setValue(Ljava/lang/Object;)V
 
-    .line 46
     invoke-virtual {v5, v1}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->pushFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;)V
 
     goto :goto_0

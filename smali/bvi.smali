@@ -14,8 +14,6 @@
 .method constructor <init>(Lbvf;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbvi;->a:Lbvf;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,22 +26,16 @@
 .method public final a(I)V
     .locals 2
 
-    .prologue
-    .line 2
     sget-object v0, Lbvf;->a:Ljava/lang/String;
 
-    .line 3
     const-string v1, "CameraExceptionHandler: onCameraError"
 
     invoke-static {v0, v1}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lbvi;->a:Lbvf;
 
-    .line 5
     iget-object v0, v0, Lbvf;->k:Ljava/util/HashSet;
 
-    .line 6
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -61,12 +53,10 @@
 
     check-cast v0, Lacf;
 
-    .line 7
     invoke-virtual {v0, p1}, Lacf;->a(I)V
 
     goto :goto_0
 
-    .line 9
     :cond_0
     return-void
 .end method
@@ -74,22 +64,16 @@
 .method public final a(Ljava/lang/RuntimeException;)V
     .locals 2
 
-    .prologue
-    .line 18
     sget-object v0, Lbvf;->a:Ljava/lang/String;
 
-    .line 19
     const-string v1, "CameraExceptionHandler: onDispatchThreadException"
 
     invoke-static {v0, v1}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 20
     iget-object v0, p0, Lbvi;->a:Lbvf;
 
-    .line 21
     iget-object v0, v0, Lbvf;->k:Ljava/util/HashSet;
 
-    .line 22
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -107,12 +91,10 @@
 
     check-cast v0, Lacf;
 
-    .line 23
     invoke-virtual {v0, p1}, Lacf;->a(Ljava/lang/RuntimeException;)V
 
     goto :goto_0
 
-    .line 25
     :cond_0
     return-void
 .end method
@@ -120,22 +102,16 @@
 .method public final a(Ljava/lang/RuntimeException;Ljava/lang/String;II)V
     .locals 2
 
-    .prologue
-    .line 10
     sget-object v0, Lbvf;->a:Ljava/lang/String;
 
-    .line 11
     const-string v1, "CameraExceptionHandler: onCameraException"
 
     invoke-static {v0, v1}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     iget-object v0, p0, Lbvi;->a:Lbvf;
 
-    .line 13
     iget-object v0, v0, Lbvf;->k:Ljava/util/HashSet;
 
-    .line 14
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -153,12 +129,10 @@
 
     check-cast v0, Lacf;
 
-    .line 15
     invoke-virtual {v0, p1, p2, p3, p4}, Lacf;->a(Ljava/lang/RuntimeException;Ljava/lang/String;II)V
 
     goto :goto_0
 
-    .line 17
     :cond_0
     return-void
 .end method

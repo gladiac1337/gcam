@@ -10,8 +10,6 @@
 .method protected constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljjv;-><init>()V
 
     return-void
@@ -25,8 +23,6 @@
 .method protected synthetic c()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 7
     invoke-virtual {p0}, Ljtr;->a()Ljava/util/concurrent/Future;
 
     move-result-object v0
@@ -37,8 +33,6 @@
 .method public cancel(Z)Z
     .locals 1
 
-    .prologue
-    .line 2
     invoke-virtual {p0}, Ljtr;->a()Ljava/util/concurrent/Future;
 
     move-result-object v0
@@ -53,8 +47,6 @@
 .method public get()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 5
     invoke-virtual {p0}, Ljtr;->a()Ljava/util/concurrent/Future;
 
     move-result-object v0
@@ -69,8 +61,6 @@
 .method public get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Ljtr;->a()Ljava/util/concurrent/Future;
 
     move-result-object v0
@@ -85,8 +75,6 @@
 .method public isCancelled()Z
     .locals 1
 
-    .prologue
-    .line 3
     invoke-virtual {p0}, Ljtr;->a()Ljava/util/concurrent/Future;
 
     move-result-object v0
@@ -101,8 +89,6 @@
 .method public isDone()Z
     .locals 1
 
-    .prologue
-    .line 4
     invoke-virtual {p0}, Ljtr;->a()Ljava/util/concurrent/Future;
 
     move-result-object v0

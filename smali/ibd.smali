@@ -25,29 +25,22 @@
 .method public final a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
-    .prologue
-    .line 1
     iget-object v0, p0, Libd;->a:Libc;
 
-    .line 3
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     invoke-virtual {v0, p1}, Libc;->c(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 5
     if-nez v1, :cond_0
 
-    .line 6
     new-instance v1, Ljava/lang/NullPointerException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 7
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -108,7 +101,6 @@
 
     throw v1
 
-    .line 9
     :cond_0
     return-object v1
 .end method

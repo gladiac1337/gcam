@@ -95,12 +95,10 @@
         value = 0x15
     .end annotation
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 20
     const-string v0, "com.google.android.gms"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -154,11 +152,9 @@
 
     move v0, v1
 
-    .line 23
     :goto_0
     return v0
 
-    .line 20
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -182,14 +178,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 21
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x12
 
     if-lt v0, v3, :cond_3
 
-    .line 22
     const-string v0, "user"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -226,7 +220,6 @@
 
     move v0, v1
 
-    .line 23
     :goto_1
     if-nez v0, :cond_4
 
@@ -237,13 +230,11 @@
     :cond_3
     move v0, v2
 
-    .line 22
     goto :goto_1
 
     :cond_4
     move v0, v2
 
-    .line 23
     goto :goto_0
 
     :catch_0
@@ -293,14 +284,12 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
     const/16 v0, 0x9
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
@@ -329,7 +318,6 @@
 
     if-nez v3, :cond_1
 
-    .line 2
     sget-object v3, Lhjo;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -352,7 +340,6 @@
 
     throw v0
 
-    .line 1
     :catch_0
     move-exception v3
 
@@ -364,7 +351,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     sget v4, Lhjo;->a:I
 
@@ -438,7 +424,6 @@
 
     throw v0
 
-    .line 3
     :cond_1
     invoke-static {p0}, Lhiv;->a(Landroid/content/Context;)Z
 
@@ -446,7 +431,6 @@
 
     if-nez v3, :cond_4
 
-    .line 4
     sget-object v3, Lhiv;->a:Ljava/lang/Boolean;
 
     if-nez v3, :cond_2
@@ -474,7 +458,6 @@
 
     move-result v3
 
-    .line 5
     if-nez v3, :cond_4
 
     move v4, v1
@@ -525,14 +508,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     :goto_2
     return v0
 
     :cond_4
     move v4, v2
 
-    .line 5
     goto :goto_1
 
     :catch_1
@@ -598,16 +579,12 @@
     :cond_7
     sget v0, Lhjo;->a:I
 
-    .line 6
     div-int/lit16 v0, v0, 0x3e8
 
-    .line 7
     iget v3, v6, Landroid/content/pm/PackageInfo;->versionCode:I
 
-    .line 8
     div-int/lit16 v3, v3, 0x3e8
 
-    .line 9
     if-ge v3, v0, :cond_8
 
     const-string v0, "GooglePlayServicesUtil"
@@ -699,18 +676,14 @@
 .method public static d(Landroid/content/Context;)Z
     .locals 7
 
-    .prologue
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    .line 10
-    .line 12
     sget-boolean v2, Lhjo;->d:Z
 
     if-nez v2, :cond_0
 
-    .line 14
     :try_start_0
     sget-object v2, Lhpk;->a:Lhpk;
 
@@ -718,7 +691,6 @@
 
     move-result-object v2
 
-    .line 15
     const-string v3, "com.google.android.gms"
 
     const/16 v4, 0x40
@@ -761,15 +733,12 @@
     :goto_0
     sput-boolean v1, Lhjo;->d:Z
 
-    .line 16
     :cond_0
     :goto_1
     sget-boolean v2, Lhjo;->c:Z
 
-    .line 17
     if-nez v2, :cond_1
 
-    .line 18
     const-string v2, "user"
 
     sget-object v3, Landroid/os/Build;->TYPE:Ljava/lang/String;
@@ -778,7 +747,6 @@
 
     move-result v2
 
-    .line 19
     if-nez v2, :cond_2
 
     :cond_1
@@ -787,7 +755,6 @@
     :cond_2
     return v0
 
-    .line 15
     :cond_3
     const/4 v2, 0x0
 

@@ -25,11 +25,8 @@
 .method public final a(Lbpp;)V
     .locals 6
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgav;->a:Lgat;
 
-    .line 2
     iget-object v0, v0, Lgat;->b:Lcom/google/android/apps/camera/jni/gyro/GyroQueue;
 
     iget v1, p1, Lbpp;->f:F
@@ -46,6 +43,5 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/google/android/apps/camera/jni/gyro/GyroQueue;->a(FFFJ)Z
 
-    .line 3
     return-void
 .end method

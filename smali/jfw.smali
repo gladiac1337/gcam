@@ -13,25 +13,18 @@
 .method public constructor <init>(II)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Ljfw;->a:I
 
-    .line 3
     iput p2, p0, Ljfw;->b:I
 
-    .line 4
     return-void
 .end method
 
 .method public static a(II)Ljfw;
     .locals 1
 
-    .prologue
-    .line 5
     new-instance v0, Ljfw;
 
     invoke-direct {v0, p0, p1}, Ljfw;-><init>(II)V
@@ -42,8 +35,6 @@
 .method public static a(Liwz;)Ljfw;
     .locals 3
 
-    .prologue
-    .line 6
     new-instance v0, Ljfw;
 
     invoke-interface {p0}, Liwz;->a()I
@@ -64,20 +55,16 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 7
     if-ne p0, p1, :cond_1
 
-    .line 12
     :cond_0
     :goto_0
     return v0
 
-    .line 9
     :cond_1
     instance-of v2, p1, Ljfw;
 
@@ -85,14 +72,11 @@
 
     move v0, v1
 
-    .line 10
     goto :goto_0
 
-    .line 11
     :cond_2
     check-cast p1, Ljfw;
 
-    .line 12
     iget v2, p0, Ljfw;->a:I
 
     iget v3, p1, Ljfw;->a:I
@@ -114,8 +98,6 @@
 .method public final hashCode()I
     .locals 3
 
-    .prologue
-    .line 13
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -150,8 +132,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 14
     const-string v0, "Size(%d, %d)"
 
     const/4 v1, 0x2

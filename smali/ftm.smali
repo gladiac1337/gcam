@@ -22,8 +22,6 @@
 .method constructor <init>(Lftk;JLjava/lang/String;Lgrr;Ljuk;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lftm;->e:Lftk;
 
     iput-wide p2, p0, Lftm;->a:J
@@ -44,22 +42,16 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 6
 
-    .prologue
-    .line 2
     move-object v1, p1
 
     check-cast v1, Landroid/net/Uri;
 
-    .line 3
     invoke-static {v1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     iget-object v0, p0, Lftm;->e:Lftk;
 
-    .line 5
     iget-object v0, v0, Lftk;->c:Lftv;
 
-    .line 6
     iget-wide v2, p0, Lftm;->a:J
 
     iget-object v4, p0, Lftm;->b:Ljava/lang/String;
@@ -70,17 +62,13 @@
 
     move-result-object v0
 
-    .line 7
     iget-object v1, p0, Lftm;->d:Ljuk;
 
     iget-object v2, p0, Lftm;->e:Lftk;
 
-    .line 8
     iget-object v2, v2, Lftk;->d:Ljum;
 
-    .line 9
     invoke-static {v1, v0, v2}, Ljtv;->a(Ljuk;Ljtu;Ljava/util/concurrent/Executor;)V
 
-    .line 11
     return-object v0
 .end method

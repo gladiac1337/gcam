@@ -18,8 +18,6 @@
 .method constructor <init>(Ljava/util/concurrent/Callable;Landroid/os/Handler;Lgb;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfy;->b:Ljava/util/concurrent/Callable;
 
     iput-object p2, p0, Lfy;->c:Landroid/os/Handler;
@@ -36,8 +34,6 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     :try_start_0
     iget-object v0, p0, Lfy;->b:Ljava/util/concurrent/Callable;
 
@@ -47,7 +43,6 @@
 
     move-result-object v0
 
-    .line 7
     :goto_0
     iget-object v1, p0, Lfy;->c:Landroid/os/Handler;
 
@@ -57,10 +52,8 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 8
     return-void
 
-    .line 5
     :catch_0
     move-exception v0
 

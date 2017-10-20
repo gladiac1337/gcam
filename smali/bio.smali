@@ -63,12 +63,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 22
     new-instance v0, Lbla;
 
     const-string v1, "camera.onscreen_log"
@@ -77,7 +75,6 @@
 
     sput-object v0, Lbio;->c:Lbla;
 
-    .line 23
     new-instance v0, Lbla;
 
     const-string v1, "camera.onscreen_logcat"
@@ -86,7 +83,6 @@
 
     sput-object v0, Lbio;->d:Lbla;
 
-    .line 24
     new-instance v0, Lbla;
 
     const-string v1, "camera.syshealth_info"
@@ -95,7 +91,6 @@
 
     sput-object v0, Lbio;->e:Lbla;
 
-    .line 25
     new-instance v0, Lbkt;
 
     const-string v1, "camera.faceboxes"
@@ -104,7 +99,6 @@
 
     sput-object v0, Lbio;->f:Lbkt;
 
-    .line 26
     new-instance v0, Lbkt;
 
     const-string v1, "camera.use_local_logger"
@@ -113,7 +107,6 @@
 
     sput-object v0, Lbio;->g:Lbkt;
 
-    .line 27
     new-instance v0, Lbkt;
 
     const-string v1, "camera.use_perf_logger"
@@ -122,7 +115,6 @@
 
     sput-object v0, Lbio;->h:Lbkt;
 
-    .line 28
     new-instance v0, Lbkt;
 
     const-string v1, "camera.af.debug.show"
@@ -131,7 +123,6 @@
 
     sput-object v0, Lbio;->i:Lbkt;
 
-    .line 29
     new-instance v0, Lbkt;
 
     const-string v1, "camera.af.ring.hide"
@@ -140,7 +131,6 @@
 
     sput-object v0, Lbio;->y:Lbkt;
 
-    .line 30
     new-instance v0, Lbkt;
 
     const-string v1, "camera.op.nes"
@@ -149,7 +139,6 @@
 
     sput-object v0, Lbio;->j:Lbkt;
 
-    .line 31
     new-instance v0, Lbkt;
 
     const-string v1, "camera.flash.ind"
@@ -158,7 +147,6 @@
 
     sput-object v0, Lbio;->k:Lbkt;
 
-    .line 32
     new-instance v0, Lble;
 
     const-string v1, "camera.enable_hwhdr"
@@ -167,7 +155,6 @@
 
     sput-object v0, Lbio;->l:Lble;
 
-    .line 33
     new-instance v0, Lbkt;
 
     const-string v1, "camera.enable_pd"
@@ -176,7 +163,6 @@
 
     sput-object v0, Lbio;->m:Lbkt;
 
-    .line 34
     new-instance v0, Lbkt;
 
     const-string v1, "camera.enable_pd_blur"
@@ -185,7 +171,6 @@
 
     sput-object v0, Lbio;->n:Lbkt;
 
-    .line 35
     new-instance v0, Lbkt;
 
     const-string v1, "cameraprogress_overlay"
@@ -194,7 +179,6 @@
 
     sput-object v0, Lbio;->o:Lbkt;
 
-    .line 36
     new-instance v0, Lbkt;
 
     const-string v1, "camera.enable_micro_he"
@@ -203,7 +187,6 @@
 
     sput-object v0, Lbio;->p:Lbkt;
 
-    .line 37
     new-instance v0, Lbkt;
 
     const-string v1, "camera.micro_no_trim"
@@ -212,7 +195,6 @@
 
     sput-object v0, Lbio;->q:Lbkt;
 
-    .line 38
     new-instance v0, Lbkt;
 
     const-string v1, "camera.micro_audio"
@@ -221,7 +203,6 @@
 
     sput-object v0, Lbio;->r:Lbkt;
 
-    .line 39
     new-instance v0, Lbkt;
 
     const-string v1, "camera.micro_trimtoast"
@@ -230,7 +211,6 @@
 
     sput-object v0, Lbio;->s:Lbkt;
 
-    .line 40
     new-instance v0, Lbkt;
 
     const-string v1, "camera.optbar.hdr"
@@ -245,50 +225,38 @@
 .method public constructor <init>(Lblh;Lgzo;Lbmx;Ljhi;)V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbio;->a:Lblh;
 
-    .line 3
     iput-object p2, p0, Lbio;->b:Lgzo;
 
-    .line 4
     iput-object p3, p0, Lbio;->z:Lbmx;
 
-    .line 5
     new-instance v0, Lbkt;
 
     const-string v1, "camera.use_photos"
 
-    .line 6
     invoke-virtual {p2}, Lgzo;->c()Z
 
     move-result v2
 
-    .line 7
     invoke-direct {v0, v1, v2}, Lbkt;-><init>(Ljava/lang/String;Z)V
 
     iput-object v0, p0, Lbio;->u:Lbkt;
 
-    .line 8
     new-instance v0, Lbkt;
 
     const-string v1, "camera.diet_burst"
 
-    .line 9
     invoke-virtual {p2}, Lgzo;->c()Z
 
     move-result v2
 
-    .line 10
     invoke-direct {v0, v1, v2}, Lbkt;-><init>(Ljava/lang/String;Z)V
 
     iput-object v0, p0, Lbio;->v:Lbkt;
 
-    .line 11
     sget-object v0, Lbrl;->a:Lbld;
 
     invoke-virtual {p4, v0}, Ljhi;->a(Ljava/lang/Object;)Ljava/lang/Object;
@@ -299,7 +267,6 @@
 
     iput-object v0, p0, Lbio;->w:Lbld;
 
-    .line 12
     new-instance v0, Lbkt;
 
     const-string v1, "camera.enable_micro"
@@ -312,7 +279,6 @@
 
     iput-object v0, p0, Lbio;->x:Lbkt;
 
-    .line 13
     return-void
 .end method
 
@@ -321,8 +287,6 @@
 .method public final a()Z
     .locals 2
 
-    .prologue
-    .line 14
     iget-object v0, p0, Lbio;->z:Lbmx;
 
     invoke-virtual {v0}, Lbmx;->a()Z
@@ -355,8 +319,6 @@
 .method public final b()Z
     .locals 2
 
-    .prologue
-    .line 15
     iget-object v0, p0, Lbio;->a:Lblh;
 
     iget-object v1, p0, Lbio;->v:Lbkt;
@@ -371,8 +333,6 @@
 .method public final c()Z
     .locals 2
 
-    .prologue
-    .line 16
     iget-object v0, p0, Lbio;->a:Lblh;
 
     sget-object v1, Lbio;->f:Lbkt;
@@ -387,8 +347,6 @@
 .method public final d()Z
     .locals 2
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lbio;->a:Lblh;
 
     sget-object v1, Lbio;->y:Lbkt;
@@ -403,8 +361,6 @@
 .method public final e()Z
     .locals 2
 
-    .prologue
-    .line 18
     iget-object v0, p0, Lbio;->a:Lblh;
 
     sget-object v1, Lbio;->j:Lbkt;
@@ -419,8 +375,6 @@
 .method public final f()Z
     .locals 2
 
-    .prologue
-    .line 19
     iget-object v0, p0, Lbio;->b:Lgzo;
 
     invoke-virtual {v0}, Lgzo;->g()Z
@@ -453,8 +407,6 @@
 .method public final g()Z
     .locals 2
 
-    .prologue
-    .line 20
     iget-object v0, p0, Lbio;->a:Lblh;
 
     sget-object v1, Lbio;->q:Lbkt;
@@ -469,8 +421,6 @@
 .method public final h()Z
     .locals 2
 
-    .prologue
-    .line 21
     iget-object v0, p0, Lbio;->a:Lblh;
 
     sget-object v1, Lbio;->m:Lbkt;

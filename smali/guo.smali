@@ -14,8 +14,6 @@
 .method constructor <init>(Lgun;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lguo;->a:Lgun;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,46 +26,33 @@
 .method public final onLoadComplete(Landroid/media/SoundPool;II)V
     .locals 7
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lguo;->a:Lgun;
 
-    .line 3
     iget-object v1, v0, Lgun;->b:Ljava/lang/Object;
 
-    .line 4
     monitor-enter v1
 
-    .line 5
     :try_start_0
     iget-object v0, p0, Lguo;->a:Lgun;
 
-    .line 6
     iget-boolean v0, v0, Lgun;->c:Z
 
-    .line 7
     if-eqz v0, :cond_0
 
-    .line 8
     monitor-exit v1
 
-    .line 17
     :goto_0
     return-void
 
-    .line 9
     :cond_0
     iget-object v0, p0, Lguo;->a:Lgun;
 
-    .line 10
     invoke-virtual {v0, p2}, Lgun;->e(I)Lgur;
 
     move-result-object v2
 
-    .line 12
     sget-object v0, Lgun;->a:Ljava/lang/String;
 
-    .line 13
     iget v3, v2, Lgur;->a:I
 
     iget v4, v2, Lgur;->b:I
@@ -104,17 +89,14 @@
 
     invoke-static {v0, v3}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 14
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 15
     if-nez p3, :cond_1
 
     const/4 v0, 0x1
 
-    .line 16
     :goto_1
     iget-object v1, v2, Lgur;->c:Ljuw;
 
@@ -126,7 +108,6 @@
 
     goto :goto_0
 
-    .line 14
     :catchall_0
     move-exception v0
 
@@ -137,7 +118,6 @@
 
     throw v0
 
-    .line 15
     :cond_1
     const/4 v0, 0x0
 

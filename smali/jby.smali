@@ -20,33 +20,24 @@
 .method public constructor <init>(FF)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {v1}, Lixp;->a(Z)V
 
-    .line 3
     invoke-static {v1}, Lixp;->a(Z)V
 
-    .line 4
     const/4 v0, 0x2
 
     iput v0, p0, Ljby;->a:I
 
-    .line 5
     iput v1, p0, Ljby;->b:I
 
-    .line 6
     iput p1, p0, Ljby;->c:F
 
-    .line 7
     iput p2, p0, Ljby;->d:F
 
-    .line 8
     return-void
 .end method
 
@@ -55,25 +46,18 @@
 .method public final a(Ljao;J)F
     .locals 4
 
-    .prologue
-    .line 9
-    .line 10
     iget-wide v0, p1, Ljao;->c:J
 
-    .line 11
     cmp-long v0, p2, v0
 
     if-ltz v0, :cond_0
 
-    .line 12
     iget-wide v0, p1, Ljao;->d:J
 
-    .line 13
     cmp-long v0, p2, v0
 
     if-lez v0, :cond_1
 
-    .line 14
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -83,7 +67,6 @@
 
     throw v0
 
-    .line 16
     :cond_1
     iget-object v0, p1, Ljao;->a:Ljava/util/List;
 
@@ -91,7 +74,6 @@
 
     move-result-object v0
 
-    .line 17
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
@@ -100,7 +82,6 @@
 
     move-result v0
 
-    .line 18
     iget v1, p0, Ljby;->a:I
 
     if-lt v0, v1, :cond_2
@@ -115,10 +96,8 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 19
     iget v0, p0, Ljby;->d:F
 
-    .line 20
     :goto_0
     return v0
 
@@ -131,8 +110,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 7
 
-    .prologue
-    .line 21
     const-string v0, "DifferentStartEndThresholdGenerator[threshold for start/end frames="
 
     iget v1, p0, Ljby;->c:F

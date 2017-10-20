@@ -18,8 +18,6 @@
 .method constructor <init>(Labe;Landroid/os/Handler;Labq;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Labn;->c:Labe;
 
     iput-object p2, p0, Labn;->a:Landroid/os/Handler;
@@ -36,8 +34,6 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 2
     iget-object v0, p0, Labn;->c:Labe;
 
     invoke-virtual {v0}, Labe;->h()Landroid/os/Handler;
@@ -50,16 +46,13 @@
 
     iget-object v4, p0, Labn;->b:Labq;
 
-    .line 3
     if-eqz v3, :cond_0
 
     if-nez v4, :cond_1
 
-    .line 4
     :cond_0
     const/4 v0, 0x0
 
-    .line 6
     :goto_0
     invoke-virtual {v1, v2, v0}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
@@ -67,10 +60,8 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 7
     return-void
 
-    .line 5
     :cond_1
     new-instance v0, Labr;
 

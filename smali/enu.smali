@@ -14,8 +14,6 @@
 .method constructor <init>(Lenm;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lenu;->a:Lenm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,11 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 2
     :try_start_0
     iget-object v0, p0, Lenu;->a:Lenm;
 
-    .line 3
     iget-object v0, v0, Lenm;->i:Lgvl;
 
-    .line 4
     iget-object v1, p0, Lenu;->a:Lenm;
 
     invoke-static {v1}, Lenm;->a(Lenm;)Leqo;
@@ -53,7 +47,6 @@
 
     move-result-object v0
 
-    .line 12
     new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
 
     new-instance v2, Ljava/io/ByteArrayInputStream;
@@ -62,21 +55,18 @@
 
     invoke-direct {v1, v2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Ljava/io/InputStream;)V
 
-    .line 13
     invoke-virtual {v1}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    .line 14
     iget-object v1, p0, Lenu;->a:Lenm;
 
     const-string v2, "Could not decode preview file: "
 
     iget-object v0, p0, Lenu;->a:Lenm;
 
-    .line 15
     invoke-static {v0}, Lenm;->a(Lenm;)Leqo;
 
     move-result-object v0
@@ -103,24 +93,19 @@
 
     move-result-object v0
 
-    .line 16
     :goto_0
     invoke-virtual {v1, v0}, Lenm;->b(Ljava/lang/String;)V
 
-    .line 29
     :goto_1
     return-void
 
-    .line 6
     :catch_0
     move-exception v0
 
-    .line 7
     iget-object v1, p0, Lenu;->a:Lenm;
 
     iget-object v2, p0, Lenu;->a:Lenm;
 
-    .line 8
     invoke-static {v2}, Lenm;->a(Lenm;)Leqo;
 
     move-result-object v2
@@ -133,7 +118,6 @@
 
     move-result-object v2
 
-    .line 9
     invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -186,12 +170,10 @@
 
     move-result-object v0
 
-    .line 10
     invoke-virtual {v1, v0}, Lenm;->b(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 15
     :cond_0
     new-instance v0, Ljava/lang/String;
 
@@ -199,20 +181,15 @@
 
     goto :goto_0
 
-    .line 18
     :cond_1
     iget-object v0, p0, Lenu;->a:Lenm;
 
-    .line 19
     iget-object v0, v0, Lenm;->g:Leny;
 
-    .line 20
     iget-object v2, p0, Lenu;->a:Lenm;
 
-    .line 21
     iget-object v2, v2, Lenm;->h:Lenz;
 
-    .line 22
     new-instance v3, Laml;
 
     new-instance v4, Laht;
@@ -221,22 +198,16 @@
 
     invoke-direct {v3, v1, v4}, Laml;-><init>(Landroid/graphics/drawable/BitmapDrawable;Lahs;)V
 
-    .line 23
     invoke-virtual {v0, v2, v3}, Leny;->a(Lenz;Lany;)V
 
-    .line 24
     iget-object v0, p0, Lenu;->a:Lenm;
 
-    .line 25
     iget-object v0, v0, Lenm;->e:Leom;
 
-    .line 26
     iget-object v1, p0, Lenu;->a:Lenm;
 
-    .line 27
     iget-object v1, v1, Lenm;->o:Landroid/net/Uri;
 
-    .line 28
     invoke-virtual {v0, v1}, Leom;->c(Landroid/net/Uri;)V
 
     goto :goto_1

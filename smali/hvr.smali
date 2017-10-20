@@ -38,48 +38,40 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 6
 
-    .prologue
     const/4 v4, 0x1
 
     const/4 v3, 0x0
 
-    .line 1
     instance-of v0, p1, Lhvr;
 
     if-nez v0, :cond_0
 
     move v0, v3
 
-    .line 21
     :goto_0
     return v0
 
-    .line 1
     :cond_0
     check-cast p1, Lhvr;
 
-    .line 3
     iget-object v0, p0, Lhvr;->a:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->size()I
 
     move-result v0
 
-    .line 5
     iget-object v1, p1, Lhvr;->a:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->size()I
 
     move-result v1
 
-    .line 6
     if-eq v0, v1, :cond_1
 
     move v0, v3
 
     goto :goto_0
 
-    .line 7
     :cond_1
     iget-object v0, p0, Lhvr;->a:Ljava/util/HashMap;
 
@@ -87,7 +79,6 @@
 
     move-result-object v0
 
-    .line 8
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -134,7 +125,6 @@
 
     check-cast v1, Lcom/google/android/gms/wearable/Asset;
 
-    .line 9
     if-eqz v0, :cond_4
 
     if-nez v1, :cond_6
@@ -144,7 +134,6 @@
 
     move v0, v4
 
-    .line 20
     :goto_1
     if-nez v0, :cond_2
 
@@ -155,48 +144,38 @@
     :cond_5
     move v0, v3
 
-    .line 9
     goto :goto_1
 
-    .line 10
     :cond_6
     iget-object v2, v0, Lcom/google/android/gms/wearable/Asset;->b:Ljava/lang/String;
 
-    .line 11
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-nez v2, :cond_7
 
-    .line 12
     iget-object v0, v0, Lcom/google/android/gms/wearable/Asset;->b:Ljava/lang/String;
 
-    .line 14
     iget-object v1, v1, Lcom/google/android/gms/wearable/Asset;->b:Ljava/lang/String;
 
-    .line 15
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     goto :goto_1
 
-    .line 16
     :cond_7
     iget-object v0, v0, Lcom/google/android/gms/wearable/Asset;->a:[B
 
-    .line 18
     iget-object v1, v1, Lcom/google/android/gms/wearable/Asset;->a:[B
 
-    .line 19
     invoke-static {v0, v1}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result v0
 
     goto :goto_1
 
-    .line 20
     :cond_8
     instance-of v0, v1, [Ljava/lang/String;
 
@@ -335,7 +314,6 @@
     :cond_13
     move v0, v4
 
-    .line 21
     goto/16 :goto_0
 .end method
 

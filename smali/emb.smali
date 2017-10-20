@@ -26,11 +26,8 @@
 .method public constructor <init>(Lgvl;Leny;Leon;Leor;Ljava/util/concurrent/Executor;Lgvq;Lgzq;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -39,7 +36,6 @@
 
     iput-object v0, p0, Lemb;->a:Lgvl;
 
-    .line 3
     invoke-static {p2}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -48,7 +44,6 @@
 
     iput-object v0, p0, Lemb;->b:Leny;
 
-    .line 4
     invoke-static {p3}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -57,7 +52,6 @@
 
     iput-object v0, p0, Lemb;->c:Leon;
 
-    .line 5
     invoke-static {p4}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -66,7 +60,6 @@
 
     iput-object v0, p0, Lemb;->d:Leor;
 
-    .line 6
     invoke-static {p5}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -75,7 +68,6 @@
 
     iput-object v0, p0, Lemb;->e:Ljava/util/concurrent/Executor;
 
-    .line 7
     invoke-static {p6}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -84,7 +76,6 @@
 
     iput-object v0, p0, Lemb;->f:Lgvq;
 
-    .line 8
     invoke-static {p7}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -93,7 +84,6 @@
 
     iput-object v0, p0, Lemb;->g:Lgzq;
 
-    .line 9
     return-void
 .end method
 
@@ -102,9 +92,6 @@
 .method public final a(Lgrp;Leom;Ljava/lang/String;JLandroid/location/Location;Lavk;)Leot;
     .locals 18
 
-    .prologue
-    .line 10
-    .line 11
     new-instance v7, Leqo;
 
     move-object/from16 v0, p0
@@ -117,10 +104,8 @@
 
     invoke-direct {v7, v2, v3, v0}, Leqo;-><init>(Leon;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     new-instance v2, Lemc;
 
-    .line 13
     invoke-static/range {p6 .. p6}, Ljhi;->c(Ljava/lang/Object;)Ljhi;
 
     move-result-object v6
@@ -161,6 +146,5 @@
 
     invoke-direct/range {v2 .. v16}, Lemc;-><init>(Ljava/lang/String;JLjhi;Leqo;Lgrp;Leom;Leny;Leor;Ljava/util/concurrent/Executor;Lgvq;Lgvl;Lgzq;Lavk;)V
 
-    .line 14
     return-object v2
 .end method

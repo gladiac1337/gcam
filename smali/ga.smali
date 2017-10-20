@@ -22,8 +22,6 @@
 .method constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/Callable;Ljava/util/concurrent/locks/ReentrantLock;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/locks/Condition;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lga;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     iput-object p2, p0, Lga;->b:Ljava/util/concurrent/Callable;
@@ -44,8 +42,6 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     :try_start_0
     iget-object v0, p0, Lga;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -59,13 +55,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5
     :goto_0
     iget-object v0, p0, Lga;->c:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 6
     :try_start_1
     iget-object v0, p0, Lga;->d:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -73,22 +67,18 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 7
     iget-object v0, p0, Lga;->e:Ljava/util/concurrent/locks/Condition;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Condition;->signal()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 8
     iget-object v0, p0, Lga;->c:Ljava/util/concurrent/locks/ReentrantLock;
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 9
     return-void
 
-    .line 10
     :catchall_0
     move-exception v0
 

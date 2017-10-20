@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 13
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -35,27 +33,20 @@
 .method private constructor <init>(Ljxb;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget-object v0, Ljwy;->a:Ljava/lang/Object;
 
     iput-object v0, p0, Ljwy;->c:Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Ljwy;->b:Ljxb;
 
-    .line 4
     return-void
 .end method
 
 .method public static a(Ljxb;)Ljxb;
     .locals 2
 
-    .prologue
-    .line 10
     instance-of v0, p0, Ljwy;
 
     if-nez v0, :cond_0
@@ -64,7 +55,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 12
     :cond_0
     :goto_0
     return-object p0
@@ -90,30 +80,24 @@
 .method public final a()Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 5
     iget-object v0, p0, Ljwy;->b:Ljxb;
 
-    .line 6
     iget-object v1, p0, Ljwy;->c:Ljava/lang/Object;
 
     sget-object v2, Ljwy;->a:Ljava/lang/Object;
 
     if-ne v1, v2, :cond_0
 
-    .line 7
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Ljwy;->c:Ljava/lang/Object;
 
-    .line 8
     const/4 v0, 0x0
 
     iput-object v0, p0, Ljwy;->b:Ljxb;
 
-    .line 9
     :cond_0
     iget-object v0, p0, Ljwy;->c:Ljava/lang/Object;
 

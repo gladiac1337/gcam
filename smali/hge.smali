@@ -11,8 +11,6 @@
 .method public constructor <init>(Lhgi;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhge;->a:Lhgi;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -25,9 +23,6 @@
 .method protected final synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 18
 
-    .prologue
-    .line 5
-    .line 6
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lhge;->a:Lhgi;
@@ -36,7 +31,6 @@
 
     move-object/from16 v16, v0
 
-    .line 8
     move-object/from16 v0, v16
 
     iget-object v2, v0, Lcom/google/android/apps/refocus/ViewerActivity;->h:Lcom/google/android/apps/refocus/image/RGBZ;
@@ -57,38 +51,29 @@
 
     iget-object v2, v0, Lcom/google/android/apps/refocus/ViewerActivity;->g:Lhhy;
 
-    .line 9
     iget-boolean v2, v2, Lhhy;->l:Z
 
-    .line 10
     if-nez v2, :cond_1
 
-    .line 62
     :cond_0
     :goto_0
     sget-object v2, Lcom/google/android/apps/refocus/ViewerActivity;->d:Ljava/lang/String;
 
-    .line 63
     const-string v3, "reprocess the data"
 
     invoke-static {v2, v3}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 64
     const/4 v2, 0x0
 
-    .line 65
     return-object v2
 
-    .line 12
     :cond_1
     move-object/from16 v0, v16
 
     iget-object v2, v0, Lcom/google/android/apps/refocus/ViewerActivity;->g:Lhhy;
 
-    .line 13
     iget-object v4, v2, Lhhy;->k:Lcom/google/android/apps/refocus/processing/FocusSettings;
 
-    .line 15
     new-instance v9, Lcom/google/android/apps/refocus/processing/FaceDetector;
 
     invoke-virtual/range {v16 .. v16}, Lcom/google/android/apps/refocus/ViewerActivity;->getApplicationContext()Landroid/content/Context;
@@ -101,19 +86,16 @@
 
     invoke-direct {v9, v2, v3}, Lcom/google/android/apps/refocus/processing/FaceDetector;-><init>(Landroid/content/Context;Lbhm;)V
 
-    .line 16
     move-object/from16 v0, v16
 
     iget-boolean v2, v0, Lcom/google/android/apps/refocus/ViewerActivity;->j:Z
 
     if-eqz v2, :cond_3
 
-    .line 18
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
 
-    .line 19
     move-object/from16 v0, v16
 
     iget-object v2, v0, Lcom/google/android/apps/refocus/ViewerActivity;->p:Lgvu;
@@ -122,7 +104,6 @@
 
     move-result-object v8
 
-    .line 20
     move-object/from16 v0, v16
 
     iget-object v2, v0, Lcom/google/android/apps/refocus/ViewerActivity;->p:Lgvu;
@@ -133,37 +114,30 @@
 
     move-result-object v3
 
-    .line 21
     move-object/from16 v0, v16
 
     iget-object v2, v0, Lcom/google/android/apps/refocus/ViewerActivity;->q:Ljxb;
 
-    .line 22
     invoke-interface {v2}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lfts;
 
-    .line 23
     invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 24
     iput-object v5, v2, Lfts;->a:Ljava/lang/String;
 
-    .line 27
     invoke-virtual {v2, v6, v7}, Lfts;->a(J)Lfts;
 
     move-result-object v2
 
-    .line 28
     invoke-virtual {v2}, Lfts;->a()Lfte;
 
     move-result-object v2
 
-    .line 29
     sget-object v5, Lcom/google/android/apps/refocus/ViewerActivity;->d:Ljava/lang/String;
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -210,7 +184,6 @@
 
     invoke-static {v5, v3}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 30
     move-object/from16 v0, v16
 
     iget-object v3, v0, Lcom/google/android/apps/refocus/ViewerActivity;->o:Landroid/content/ContentResolver;
@@ -219,18 +192,14 @@
 
     iget-object v5, v0, Lcom/google/android/apps/refocus/ViewerActivity;->n:Landroid/net/Uri;
 
-    .line 31
     iget-object v2, v2, Lfte;->a:Landroid/content/ContentValues;
 
-    .line 32
     invoke-virtual {v3, v5, v2}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 33
     invoke-static {v3}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 34
     sget-object v2, Lcom/google/android/apps/refocus/ViewerActivity;->d:Ljava/lang/String;
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -287,7 +256,6 @@
 
     invoke-static {v2, v5}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 35
     new-instance v2, Lcom/google/android/apps/refocus/processing/RenderingTask;
 
     move-object/from16 v0, v16
@@ -300,10 +268,8 @@
 
     sget-object v6, Lgvp;->c:Lgvp;
 
-    .line 36
     iget-object v6, v6, Lgvp;->j:Ljava/lang/String;
 
-    .line 37
     invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v6
@@ -325,7 +291,6 @@
 
     iget-object v8, v0, Lcom/google/android/apps/refocus/ViewerActivity;->k:Lgrp;
 
-    .line 38
     invoke-virtual/range {v16 .. v16}, Lcom/google/android/apps/refocus/ViewerActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v10
@@ -336,12 +301,10 @@
 
     invoke-direct/range {v2 .. v10}, Lcom/google/android/apps/refocus/processing/RenderingTask;-><init>(Landroid/net/Uri;Lcom/google/android/apps/refocus/processing/FocusSettings;Lcom/google/android/apps/refocus/image/RGBZ;Ljava/lang/String;Landroid/location/Location;Lgrp;Lcom/google/android/apps/refocus/processing/FaceDetector;Landroid/content/ContentResolver;)V
 
-    .line 39
     new-instance v4, Ljuw;
 
     invoke-direct {v4}, Ljuw;-><init>()V
 
-    .line 41
     new-instance v5, Lhgg;
 
     move-object/from16 v0, v16
@@ -350,14 +313,12 @@
 
     invoke-virtual {v2, v5}, Lcom/google/android/apps/refocus/processing/RenderingTask;->addFinishedCallback(Libj;)V
 
-    .line 42
     move-object/from16 v0, v16
 
     iget-object v3, v0, Lcom/google/android/apps/refocus/ViewerActivity;->m:Lgos;
 
     invoke-interface {v3, v2}, Lgos;->a(Lgor;)V
 
-    .line 43
     move-object/from16 v0, v16
 
     iget-object v2, v0, Lcom/google/android/apps/refocus/ViewerActivity;->s:Landroid/os/Handler;
@@ -370,7 +331,6 @@
 
     invoke-virtual {v2, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 44
     const/4 v3, -0x1
 
     :try_start_0
@@ -389,7 +349,6 @@
 
     goto/16 :goto_0
 
-    .line 47
     :catch_0
     move-exception v2
 
@@ -402,7 +361,6 @@
 
     goto/16 :goto_0
 
-    .line 37
     :cond_2
     new-instance v6, Ljava/lang/String;
 
@@ -410,7 +368,6 @@
 
     goto :goto_1
 
-    .line 50
     :cond_3
     invoke-virtual/range {v16 .. v16}, Lcom/google/android/apps/refocus/ViewerActivity;->getIntent()Landroid/content/Intent;
 
@@ -420,7 +377,6 @@
 
     move-result-object v11
 
-    .line 51
     invoke-virtual/range {v16 .. v16}, Lcom/google/android/apps/refocus/ViewerActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v10
@@ -439,18 +395,15 @@
 
     const/4 v3, 0x0
 
-    .line 52
     :try_start_1
     invoke-interface {v5}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 53
     const-string v2, "_display_name"
 
     invoke-interface {v5, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 54
     invoke-interface {v5, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
@@ -458,12 +411,10 @@
 
     move-result-object v6
 
-    .line 55
     if-eqz v5, :cond_4
 
     invoke-interface {v5}, Landroid/database/Cursor;->close()V
 
-    .line 58
     :cond_4
     sget-object v2, Lcom/google/android/apps/refocus/ViewerActivity;->d:Ljava/lang/String;
 
@@ -521,7 +472,6 @@
 
     invoke-static {v2, v3}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 59
     new-instance v2, Lcom/google/android/apps/refocus/processing/RenderingTask;
 
     move-object/from16 v0, v16
@@ -534,7 +484,6 @@
 
     iget-object v8, v0, Lcom/google/android/apps/refocus/ViewerActivity;->k:Lgrp;
 
-    .line 60
     invoke-virtual/range {v16 .. v16}, Lcom/google/android/apps/refocus/ViewerActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v3
@@ -547,7 +496,6 @@
 
     invoke-direct/range {v2 .. v10}, Lcom/google/android/apps/refocus/processing/RenderingTask;-><init>(Landroid/net/Uri;Lcom/google/android/apps/refocus/processing/FocusSettings;Lcom/google/android/apps/refocus/image/RGBZ;Ljava/lang/String;Landroid/location/Location;Lgrp;Lcom/google/android/apps/refocus/processing/FaceDetector;Landroid/content/ContentResolver;)V
 
-    .line 61
     move-object/from16 v0, v16
 
     iget-object v3, v0, Lcom/google/android/apps/refocus/ViewerActivity;->m:Lgos;
@@ -556,7 +504,6 @@
 
     goto/16 :goto_0
 
-    .line 56
     :catch_1
     move-exception v2
 
@@ -565,7 +512,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 57
     :catchall_0
     move-exception v3
 
@@ -606,7 +552,6 @@
 
     goto :goto_3
 
-    .line 47
     :catch_3
     move-exception v2
 
@@ -616,15 +561,11 @@
 .method protected final synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 2
-    .line 3
     iget-object v0, p0, Lhge;->a:Lhgi;
 
     iget-object v0, v0, Lhgi;->a:Lcom/google/android/apps/refocus/ViewerActivity;
 
     invoke-virtual {v0}, Lcom/google/android/apps/refocus/ViewerActivity;->finish()V
 
-    .line 4
     return-void
 .end method

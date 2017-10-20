@@ -221,8 +221,6 @@
 .method public final hashCode()I
     .locals 3
 
-    .prologue
-    .line 1
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -259,34 +257,28 @@
 
     aput-object v2, v0, v1
 
-    .line 2
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 3
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 4
     invoke-static {p0}, Lhiv;->a(Ljava/lang/Object;)Lhks;
 
     move-result-object v1
 
     const-string v2, "statusCode"
 
-    .line 5
     iget-object v0, p0, Lcom/google/android/gms/common/api/Status;->f:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/google/android/gms/common/api/Status;->f:Ljava/lang/String;
 
-    .line 6
     :goto_0
     invoke-virtual {v1, v2, v0}, Lhks;->a(Ljava/lang/String;Ljava/lang/Object;)Lhks;
 
@@ -306,7 +298,6 @@
 
     return-object v0
 
-    .line 5
     :cond_0
     iget v0, p0, Lcom/google/android/gms/common/api/Status;->e:I
 
@@ -320,38 +311,28 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 7
-    .line 9
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lhiv;->m(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 10
     const/4 v1, 0x1
 
-    .line 11
     iget v2, p0, Lcom/google/android/gms/common/api/Status;->e:I
 
-    .line 12
     invoke-static {p1, v1, v2}, Lhiv;->c(Landroid/os/Parcel;II)V
 
     const/4 v1, 0x2
 
-    .line 13
     iget-object v2, p0, Lcom/google/android/gms/common/api/Status;->f:Ljava/lang/String;
 
-    .line 14
     invoke-static {p1, v1, v2}, Lhiv;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/4 v1, 0x3
 
-    .line 15
     iget-object v2, p0, Lcom/google/android/gms/common/api/Status;->h:Landroid/app/PendingIntent;
 
-    .line 16
     invoke-static {p1, v1, v2, p2}, Lhiv;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
     const/16 v1, 0x3e8
@@ -360,9 +341,7 @@
 
     invoke-static {p1, v1, v2}, Lhiv;->c(Landroid/os/Parcel;II)V
 
-    .line 17
     invoke-static {p1, v0}, Lhiv;->n(Landroid/os/Parcel;I)V
 
-    .line 18
     return-void
 .end method

@@ -20,8 +20,6 @@
 .method constructor <init>(Lena;Ljava/io/File;Lgvp;Lgrs;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leni;->d:Lena;
 
     iput-object p2, p0, Leni;->a:Ljava/io/File;
@@ -40,8 +38,6 @@
 .method public final a()Ljava/io/File;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Leni;->a:Ljava/io/File;
 
     return-object v0
@@ -50,8 +46,6 @@
 .method public final b()Lgvp;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Leni;->b:Lgvp;
 
     return-object v0
@@ -60,14 +54,10 @@
 .method public final c()Libu;
     .locals 2
 
-    .prologue
-    .line 4
     iget-object v0, p0, Leni;->c:Lgrs;
 
-    .line 5
     iget-object v0, v0, Lgrs;->c:Ljhi;
 
-    .line 6
     const/4 v1, 0x0
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -94,28 +84,20 @@
 .method public final d()Libx;
     .locals 3
 
-    .prologue
-    .line 7
     new-instance v0, Libx;
 
     iget-object v1, p0, Leni;->c:Lgrs;
 
-    .line 8
     iget-object v1, v1, Lgrs;->a:Libx;
 
-    .line 9
     iget v1, v1, Libx;->a:I
 
-    .line 10
     iget-object v2, p0, Leni;->c:Lgrs;
 
-    .line 11
     iget-object v2, v2, Lgrs;->a:Libx;
 
-    .line 12
     iget v2, v2, Libx;->b:I
 
-    .line 13
     invoke-direct {v0, v1, v2}, Libx;-><init>(II)V
 
     return-object v0
@@ -124,24 +106,17 @@
 .method public final e()Ljhi;
     .locals 1
 
-    .prologue
-    .line 14
     iget-object v0, p0, Leni;->d:Lena;
 
-    .line 15
     iget-object v0, v0, Lena;->h:Ljhi;
 
-    .line 16
     return-object v0
 .end method
 
 .method public final f()Ljhi;
     .locals 1
 
-    .prologue
-    .line 17
     sget-object v0, Ljgx;->a:Ljgx;
 
-    .line 18
     return-object v0
 .end method

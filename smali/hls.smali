@@ -49,8 +49,6 @@
 .method public final a()V
     .locals 4
 
-    .prologue
-    .line 1
     const/4 v0, 0x3
 
     iput v0, p0, Lhls;->b:I
@@ -71,7 +69,6 @@
 
     move-result-object v1
 
-    .line 2
     invoke-static {v0, v1}, Lhmd;->a(Landroid/content/Context;Landroid/content/Intent;)Z
 
     move-result v2
@@ -86,7 +83,6 @@
 
     const/4 v0, 0x0
 
-    .line 3
     :goto_0
     iput-boolean v0, p0, Lhls;->c:Z
 
@@ -125,7 +121,6 @@
     :goto_1
     return-void
 
-    .line 2
     :cond_0
     const/16 v2, 0x81
 
@@ -135,7 +130,6 @@
 
     goto :goto_0
 
-    .line 3
     :cond_1
     const/4 v0, 0x2
 

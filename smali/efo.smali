@@ -14,26 +14,20 @@
 .method public constructor <init>(Ljava/util/Map;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Ljkq;->a(Ljava/util/Map;)Ljkq;
 
     move-result-object v0
 
     iput-object v0, p0, Lefo;->a:Ljava/util/Map;
 
-    .line 3
     return-void
 .end method
 
 .method private final a(Lihr;)Z
     .locals 3
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lefo;->a:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -57,7 +51,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 10
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -78,10 +71,8 @@
 
     if-nez v0, :cond_0
 
-    .line 11
     const/4 v0, 0x0
 
-    .line 13
     :goto_0
     return v0
 
@@ -96,8 +87,6 @@
 .method public final a(Ljava/util/List;)Ljava/util/List;
     .locals 3
 
-    .prologue
-    .line 4
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -106,7 +95,6 @@
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 5
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -124,7 +112,6 @@
 
     check-cast v0, Lihr;
 
-    .line 6
     invoke-direct {p0, v0}, Lefo;->a(Lihr;)Z
 
     move-result v0
@@ -137,7 +124,6 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     return-object v1
 .end method

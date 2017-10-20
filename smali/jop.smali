@@ -13,19 +13,14 @@
 .method public constructor <init>(Ljava/io/InputStream;J)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 2
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Ljop;->b:J
 
-    .line 3
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     const-wide/16 v0, 0x0
 
     cmp-long v0, p2, v0
@@ -39,13 +34,10 @@
 
     invoke-static {v0, v1}, Lixp;->a(ZLjava/lang/Object;)V
 
-    .line 5
     iput-wide p2, p0, Ljop;->a:J
 
-    .line 6
     return-void
 
-    .line 4
     :cond_0
     const/4 v0, 0x0
 
@@ -57,8 +49,6 @@
 .method public final available()I
     .locals 4
 
-    .prologue
-    .line 7
     iget-object v0, p0, Ljop;->in:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->available()I
@@ -81,8 +71,6 @@
 .method public final declared-synchronized mark(I)V
     .locals 2
 
-    .prologue
-    .line 8
     monitor-enter p0
 
     :try_start_0
@@ -90,19 +78,16 @@
 
     invoke-virtual {v0, p1}, Ljava/io/InputStream;->mark(I)V
 
-    .line 9
     iget-wide v0, p0, Ljop;->a:J
 
     iput-wide v0, p0, Ljop;->b:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10
     monitor-exit p0
 
     return-void
 
-    .line 8
     :catchall_0
     move-exception v0
 
@@ -114,10 +99,8 @@
 .method public final read()I
     .locals 6
 
-    .prologue
     const/4 v0, -0x1
 
-    .line 11
     iget-wide v2, p0, Ljop;->a:J
 
     const-wide/16 v4, 0x0
@@ -126,11 +109,9 @@
 
     if-nez v1, :cond_0
 
-    .line 16
     :goto_0
     return v0
 
-    .line 13
     :cond_0
     iget-object v1, p0, Ljop;->in:Ljava/io/InputStream;
 
@@ -138,10 +119,8 @@
 
     move-result v1
 
-    .line 14
     if-eq v1, v0, :cond_1
 
-    .line 15
     iget-wide v2, p0, Ljop;->a:J
 
     const-wide/16 v4, 0x1
@@ -153,17 +132,14 @@
     :cond_1
     move v0, v1
 
-    .line 16
     goto :goto_0
 .end method
 
 .method public final read([BII)I
     .locals 6
 
-    .prologue
     const/4 v0, -0x1
 
-    .line 17
     iget-wide v2, p0, Ljop;->a:J
 
     const-wide/16 v4, 0x0
@@ -172,11 +148,9 @@
 
     if-nez v1, :cond_0
 
-    .line 23
     :goto_0
     return v0
 
-    .line 19
     :cond_0
     int-to-long v2, p3
 
@@ -188,17 +162,14 @@
 
     long-to-int v1, v2
 
-    .line 20
     iget-object v2, p0, Ljop;->in:Ljava/io/InputStream;
 
     invoke-virtual {v2, p1, p2, v1}, Ljava/io/InputStream;->read([BII)I
 
     move-result v1
 
-    .line 21
     if-eq v1, v0, :cond_1
 
-    .line 22
     iget-wide v2, p0, Ljop;->a:J
 
     int-to-long v4, v1
@@ -210,15 +181,12 @@
     :cond_1
     move v0, v1
 
-    .line 23
     goto :goto_0
 .end method
 
 .method public final declared-synchronized reset()V
     .locals 4
 
-    .prologue
-    .line 24
     monitor-enter p0
 
     :try_start_0
@@ -230,7 +198,6 @@
 
     if-nez v0, :cond_0
 
-    .line 25
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "Mark not supported"
@@ -241,7 +208,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 24
     :catchall_0
     move-exception v0
 
@@ -249,7 +215,6 @@
 
     throw v0
 
-    .line 26
     :cond_0
     :try_start_1
     iget-wide v0, p0, Ljop;->b:J
@@ -260,7 +225,6 @@
 
     if-nez v0, :cond_1
 
-    .line 27
     new-instance v0, Ljava/io/IOException;
 
     const-string v1, "Mark not set"
@@ -269,20 +233,17 @@
 
     throw v0
 
-    .line 28
     :cond_1
     iget-object v0, p0, Ljop;->in:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->reset()V
 
-    .line 29
     iget-wide v0, p0, Ljop;->b:J
 
     iput-wide v0, p0, Ljop;->a:J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 30
     monitor-exit p0
 
     return-void
@@ -291,28 +252,23 @@
 .method public final skip(J)J
     .locals 5
 
-    .prologue
-    .line 31
     iget-wide v0, p0, Ljop;->a:J
 
     invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v0
 
-    .line 32
     iget-object v2, p0, Ljop;->in:Ljava/io/InputStream;
 
     invoke-virtual {v2, v0, v1}, Ljava/io/InputStream;->skip(J)J
 
     move-result-wide v0
 
-    .line 33
     iget-wide v2, p0, Ljop;->a:J
 
     sub-long/2addr v2, v0
 
     iput-wide v2, p0, Ljop;->a:J
 
-    .line 34
     return-wide v0
 .end method

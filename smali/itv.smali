@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,16 +20,12 @@
 .method public final synthetic a(Lisz;)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 2
-    .line 3
     new-instance v1, Ljcl;
 
     const-class v0, Ljch;
 
     const-string v2, "FixedFrameRateSavingFrameDropper"
 
-    .line 4
     invoke-virtual {p1, v0, v2}, Lisz;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -40,6 +34,5 @@
 
     invoke-direct {v1, v0}, Ljcl;-><init>(Ljch;)V
 
-    .line 5
     return-object v1
 .end method

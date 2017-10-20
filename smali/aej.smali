@@ -31,7 +31,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -42,7 +41,6 @@
 
     const/4 v3, 0x0
 
-    .line 5
     new-instance v0, Laej;
 
     const-string v1, "GIF"
@@ -51,7 +49,6 @@
 
     sput-object v0, Laej;->a:Laej;
 
-    .line 6
     new-instance v0, Laej;
 
     const-string v1, "JPEG"
@@ -60,7 +57,6 @@
 
     sput-object v0, Laej;->b:Laej;
 
-    .line 7
     new-instance v0, Laej;
 
     const-string v1, "RAW"
@@ -69,7 +65,6 @@
 
     sput-object v0, Laej;->i:Laej;
 
-    .line 8
     new-instance v0, Laej;
 
     const-string v1, "PNG_A"
@@ -78,7 +73,6 @@
 
     sput-object v0, Laej;->c:Laej;
 
-    .line 9
     new-instance v0, Laej;
 
     const-string v1, "PNG"
@@ -87,7 +81,6 @@
 
     sput-object v0, Laej;->d:Laej;
 
-    .line 10
     new-instance v0, Laej;
 
     const-string v1, "WEBP_A"
@@ -98,7 +91,6 @@
 
     sput-object v0, Laej;->e:Laej;
 
-    .line 11
     new-instance v0, Laej;
 
     const-string v1, "WEBP"
@@ -109,7 +101,6 @@
 
     sput-object v0, Laej;->f:Laej;
 
-    .line 12
     new-instance v0, Laej;
 
     const-string v1, "UNKNOWN"
@@ -120,7 +111,6 @@
 
     sput-object v0, Laej;->g:Laej;
 
-    .line 13
     const/16 v0, 0x8
 
     new-array v0, v0, [Laej;
@@ -171,22 +161,16 @@
 .method private constructor <init>(Ljava/lang/String;IZ)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput-boolean p3, p0, Laej;->h:Z
 
-    .line 4
     return-void
 .end method
 
 .method public static values()[Laej;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Laej;->j:[Laej;
 
     invoke-virtual {v0}, [Laej;->clone()Ljava/lang/Object;

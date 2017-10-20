@@ -21,8 +21,6 @@
 .method public constructor <init>(B)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lhwx;-><init>()V
 
     return-void
@@ -33,8 +31,6 @@
 .method public final a()V
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -45,8 +41,6 @@
 .method public a(Lcom/google/android/gms/common/api/Status;)V
     .locals 1
 
-    .prologue
-    .line 22
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -57,8 +51,6 @@
 .method public a(Lcom/google/android/gms/wearable/internal/zzch;)V
     .locals 1
 
-    .prologue
-    .line 7
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -75,8 +67,6 @@
 .method public final b()V
     .locals 1
 
-    .prologue
-    .line 3
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -89,8 +79,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 4
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -101,8 +89,6 @@
 .method public final d()V
     .locals 1
 
-    .prologue
-    .line 6
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -113,8 +99,6 @@
 .method public final e()V
     .locals 1
 
-    .prologue
-    .line 5
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -125,8 +109,6 @@
 .method public final f()V
     .locals 1
 
-    .prologue
-    .line 8
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -137,8 +119,6 @@
 .method public final g()V
     .locals 1
 
-    .prologue
-    .line 9
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -149,8 +129,6 @@
 .method public final h()V
     .locals 1
 
-    .prologue
-    .line 10
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -161,8 +139,6 @@
 .method public final i()V
     .locals 1
 
-    .prologue
-    .line 11
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -173,8 +149,6 @@
 .method public final j()V
     .locals 1
 
-    .prologue
-    .line 12
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -185,8 +159,6 @@
 .method public final k()V
     .locals 1
 
-    .prologue
-    .line 13
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -197,8 +169,6 @@
 .method public final l()V
     .locals 1
 
-    .prologue
-    .line 14
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -209,8 +179,6 @@
 .method public final m()V
     .locals 1
 
-    .prologue
-    .line 15
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -221,8 +189,6 @@
 .method public final n()V
     .locals 1
 
-    .prologue
-    .line 16
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -233,8 +199,6 @@
 .method public final o()V
     .locals 1
 
-    .prologue
-    .line 17
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -934,8 +898,6 @@
 .method public final p()V
     .locals 1
 
-    .prologue
-    .line 18
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -946,8 +908,6 @@
 .method public final q()V
     .locals 1
 
-    .prologue
-    .line 19
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -958,8 +918,6 @@
 .method public final r()V
     .locals 1
 
-    .prologue
-    .line 20
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -970,8 +928,6 @@
 .method public final s()V
     .locals 1
 
-    .prologue
-    .line 21
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -982,8 +938,6 @@
 .method public final t()V
     .locals 1
 
-    .prologue
-    .line 23
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -994,8 +948,6 @@
 .method public final u()V
     .locals 1
 
-    .prologue
-    .line 24
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1006,8 +958,6 @@
 .method public final v()V
     .locals 1
 
-    .prologue
-    .line 25
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1018,8 +968,6 @@
 .method public final w()V
     .locals 1
 
-    .prologue
-    .line 26
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -1030,8 +978,6 @@
 .method public final x()V
     .locals 1
 
-    .prologue
-    .line 27
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

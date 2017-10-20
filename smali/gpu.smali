@@ -29,7 +29,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -40,7 +39,6 @@
 
     const/4 v0, 0x0
 
-    .line 5
     new-instance v1, Lgpu;
 
     const-string v2, "OFF"
@@ -49,7 +47,6 @@
 
     sput-object v1, Lgpu;->a:Lgpu;
 
-    .line 6
     new-instance v1, Lgpu;
 
     const-string v2, "AUTO"
@@ -58,7 +55,6 @@
 
     sput-object v1, Lgpu;->b:Lgpu;
 
-    .line 7
     new-instance v1, Lgpu;
 
     const-string v2, "MACRO"
@@ -67,7 +63,6 @@
 
     sput-object v1, Lgpu;->f:Lgpu;
 
-    .line 8
     new-instance v1, Lgpu;
 
     const-string v2, "CONTINUOUS_VIDEO"
@@ -76,7 +71,6 @@
 
     sput-object v1, Lgpu;->g:Lgpu;
 
-    .line 9
     new-instance v1, Lgpu;
 
     const-string v2, "CONTINUOUS_PICTURE"
@@ -85,7 +79,6 @@
 
     sput-object v1, Lgpu;->c:Lgpu;
 
-    .line 10
     new-instance v1, Lgpu;
 
     const-string v2, "EDOF"
@@ -98,7 +91,6 @@
 
     sput-object v1, Lgpu;->h:Lgpu;
 
-    .line 11
     const/4 v1, 0x6
 
     new-array v1, v1, [Lgpu;
@@ -131,14 +123,12 @@
 
     sput-object v1, Lgpu;->i:[Lgpu;
 
-    .line 12
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     sput-object v1, Lgpu;->d:Ljava/util/Map;
 
-    .line 13
     invoke-static {}, Lgpu;->values()[Lgpu;
 
     move-result-object v1
@@ -150,7 +140,6 @@
 
     aget-object v3, v1, v0
 
-    .line 14
     sget-object v4, Lgpu;->d:Ljava/util/Map;
 
     iget v5, v3, Lgpu;->e:I
@@ -161,12 +150,10 @@
 
     invoke-interface {v4, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 15
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 16
     :cond_0
     return-void
 .end method
@@ -174,22 +161,16 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput p3, p0, Lgpu;->e:I
 
-    .line 4
     return-void
 .end method
 
 .method public static values()[Lgpu;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lgpu;->i:[Lgpu;
 
     invoke-virtual {v0}, [Lgpu;->clone()Ljava/lang/Object;

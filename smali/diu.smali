@@ -13,13 +13,10 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lhzv;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -30,7 +27,6 @@
 
     iput-object v0, p0, Ldiu;->a:Liaj;
 
-    .line 3
     new-instance v0, Lhzv;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -41,7 +37,6 @@
 
     iput-object v0, p0, Ldiu;->b:Liaj;
 
-    .line 4
     return-void
 .end method
 
@@ -50,10 +45,8 @@
 .method public final a()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 5
     iget-object v0, p0, Ldiu;->b:Liaj;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -62,7 +55,6 @@
 
     invoke-interface {v0, v1}, Liaj;->a(Ljava/lang/Object;)V
 
-    .line 6
     iget-object v0, p0, Ldiu;->a:Liaj;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -71,6 +63,5 @@
 
     invoke-interface {v0, v1}, Liaj;->a(Ljava/lang/Object;)V
 
-    .line 7
     return-void
 .end method

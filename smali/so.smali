@@ -21,8 +21,6 @@
 .method constructor <init>(Lsi;Lvm;ILandroid/view/View;ILandroid/view/ViewPropertyAnimator;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lso;->f:Lsi;
 
     iput-object p2, p0, Lso;->a:Lvm;
@@ -45,31 +43,25 @@
 .method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 3
     iget v0, p0, Lso;->b:I
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lso;->c:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 5
     :cond_0
     iget v0, p0, Lso;->d:I
 
     if-eqz v0, :cond_1
 
-    .line 6
     iget-object v0, p0, Lso;->c:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 7
     :cond_1
     return-void
 .end method
@@ -77,23 +69,18 @@
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lso;->e:Landroid/view/ViewPropertyAnimator;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    .line 9
     iget-object v0, p0, Lso;->f:Lsi;
 
     iget-object v1, p0, Lso;->a:Lvm;
 
-    .line 10
     invoke-virtual {v0, v1}, Lvt;->e(Lvm;)V
 
-    .line 11
     iget-object v0, p0, Lso;->f:Lsi;
 
     iget-object v0, v0, Lsi;->e:Ljava/util/ArrayList;
@@ -102,19 +89,15 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 12
     iget-object v0, p0, Lso;->f:Lsi;
 
     invoke-virtual {v0}, Lsi;->c()V
 
-    .line 13
     return-void
 .end method
 
 .method public final onAnimationStart(Landroid/animation/Animator;)V
     .locals 0
 
-    .prologue
-    .line 2
     return-void
 .end method

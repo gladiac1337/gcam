@@ -11,16 +11,12 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/buffers/FeatureTable;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Lizu;-><init>(Lcom/google/android/libraries/smartburst/buffers/FeatureTable;)V
 
-    .line 2
     const v0, 0x3e4ccccd    # 0.2f
 
     iput v0, p0, Lizn;->b:F
 
-    .line 3
     return-void
 .end method
 
@@ -29,10 +25,8 @@
 .method public final a(JLirh;)Ljfm;
     .locals 4
 
-    .prologue
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 4
     sget-object v0, Ljfh;->m:Ljfh;
 
     invoke-virtual {p3, v0}, Lirh;->a(Ljfh;)Lcom/google/android/libraries/smartburst/utils/Feature;
@@ -43,24 +37,20 @@
 
     move-result-object v0
 
-    .line 6
     array-length v2, v0
 
     const/4 v3, 0x2
 
     if-ne v2, v3, :cond_1
 
-    .line 7
     const/4 v2, 0x0
 
     aget v2, v0, v2
 
-    .line 8
     const/4 v3, 0x1
 
     aget v0, v0, v3
 
-    .line 9
     mul-float/2addr v2, v2
 
     mul-float/2addr v0, v0
@@ -69,14 +59,12 @@
 
     float-to-double v2, v0
 
-    .line 10
     invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v2
 
     double-to-float v0, v2
 
-    .line 11
     :goto_0
     iget v2, p0, Lizn;->b:F
 
@@ -84,7 +72,6 @@
 
     if-gez v2, :cond_0
 
-    .line 14
     :goto_1
     new-instance v1, Ljfj;
 
@@ -95,7 +82,6 @@
     :cond_0
     move v0, v1
 
-    .line 13
     goto :goto_1
 
     :cond_1
@@ -107,8 +93,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 15
     const-string v0, "CameraMotionScorer[threshold="
 
     iget v1, p0, Lizn;->b:F

@@ -21,7 +21,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x4
 
     const/4 v5, 0x3
@@ -32,7 +31,6 @@
 
     const/4 v2, 0x0
 
-    .line 3
     new-instance v0, Lbws;
 
     const-string v1, "ABSENT"
@@ -41,7 +39,6 @@
 
     sput-object v0, Lbws;->a:Lbws;
 
-    .line 4
     new-instance v0, Lbws;
 
     const-string v1, "SHUTTER_BUTTON"
@@ -50,7 +47,6 @@
 
     sput-object v0, Lbws;->b:Lbws;
 
-    .line 5
     new-instance v0, Lbws;
 
     const-string v1, "VOLUME_BUTTON"
@@ -59,7 +55,6 @@
 
     sput-object v0, Lbws;->c:Lbws;
 
-    .line 6
     new-instance v0, Lbws;
 
     const-string v1, "A11Y_BUTTON"
@@ -68,7 +63,6 @@
 
     sput-object v0, Lbws;->d:Lbws;
 
-    .line 7
     new-instance v0, Lbws;
 
     const-string v1, "FORCE_STOP"
@@ -77,7 +71,6 @@
 
     sput-object v0, Lbws;->e:Lbws;
 
-    .line 8
     const/4 v0, 0x5
 
     new-array v0, v0, [Lbws;
@@ -110,8 +103,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -120,8 +111,6 @@
 .method public static values()[Lbws;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lbws;->f:[Lbws;
 
     invoke-virtual {v0}, [Lbws;->clone()Ljava/lang/Object;

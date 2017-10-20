@@ -18,8 +18,6 @@
 .method constructor <init>(Landroid/support/v4/app/FragmentTransitionImpl;Ljava/util/ArrayList;Ljava/util/Map;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Landroid/support/v4/app/FragmentTransitionImpl$2;->this$0:Landroid/support/v4/app/FragmentTransitionImpl;
 
     iput-object p2, p0, Landroid/support/v4/app/FragmentTransitionImpl$2;->val$sharedElementsIn:Ljava/util/ArrayList;
@@ -36,15 +34,12 @@
 .method public run()V
     .locals 5
 
-    .prologue
-    .line 2
     iget-object v0, p0, Landroid/support/v4/app/FragmentTransitionImpl$2;->val$sharedElementsIn:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    .line 3
     const/4 v0, 0x0
 
     move v1, v0
@@ -52,7 +47,6 @@
     :goto_0
     if-ge v1, v2, :cond_1
 
-    .line 4
     iget-object v0, p0, Landroid/support/v4/app/FragmentTransitionImpl$2;->val$sharedElementsIn:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -61,27 +55,22 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 6
     sget-object v3, Lid;->a:Lim;
 
     invoke-virtual {v3, v0}, Lim;->t(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 8
     if-eqz v3, :cond_0
 
-    .line 9
     iget-object v4, p0, Landroid/support/v4/app/FragmentTransitionImpl$2;->val$nameOverrides:Ljava/util/Map;
 
     invoke-static {v4, v3}, Landroid/support/v4/app/FragmentTransitionImpl;->findKeyForValue(Ljava/util/Map;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 10
     invoke-static {v0, v3}, Lid;->a(Landroid/view/View;Ljava/lang/String;)V
 
-    .line 11
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -89,7 +78,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_1
     return-void
 .end method

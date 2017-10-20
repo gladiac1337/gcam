@@ -16,8 +16,6 @@
 .method constructor <init>(Lbai;Lbeo;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbak;->b:Lbai;
 
     iput-object p2, p0, Lbak;->a:Lbeo;
@@ -32,19 +30,14 @@
 .method public final bridge synthetic a(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 14
     return-void
 .end method
 
 .method public final a(Ljava/lang/Throwable;)V
     .locals 4
 
-    .prologue
-    .line 2
     sget-object v0, Lbai;->a:Ljava/lang/String;
 
-    .line 3
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -79,28 +72,21 @@
 
     invoke-static {v0, v1}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lbak;->b:Lbai;
 
-    .line 5
     iget-object v1, v0, Lbai;->f:Ljava/lang/Object;
 
-    .line 6
     monitor-enter v1
 
-    .line 7
     :try_start_0
     iget-object v0, p0, Lbak;->a:Lbeo;
 
     invoke-interface {v0}, Lbeo;->close()V
 
-    .line 8
     iget-object v0, p0, Lbak;->b:Lbai;
 
-    .line 9
     iget-object v0, v0, Lbai;->g:Lbar;
 
-    .line 10
     sget-object v2, Lbar;->c:Lbar;
 
     invoke-virtual {v0, v2}, Lbar;->equals(Ljava/lang/Object;)Z
@@ -109,15 +95,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 11
     iget-object v0, p0, Lbak;->b:Lbai;
 
     sget-object v2, Lbar;->b:Lbar;
 
-    .line 12
     iput-object v2, v0, Lbai;->g:Lbar;
 
-    .line 13
     :cond_0
     monitor-exit v1
 

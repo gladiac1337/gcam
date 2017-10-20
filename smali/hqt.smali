@@ -10,8 +10,6 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -22,8 +20,6 @@
 .method public final hashCode()I
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V

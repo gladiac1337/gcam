@@ -23,8 +23,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 65
     const-string v0, "AHDRSmrtMtrProc"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -39,12 +37,10 @@
 .method public constructor <init>(Lgdm;Leeo;Liaj;Liaj;Liaj;Liaj;Liaj;Ldif;Ldiu;)V
     .locals 6
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 1
     const/4 v2, 0x7
 
     new-array v2, v2, [Liaj;
@@ -71,28 +67,22 @@
 
     const/4 v3, 0x6
 
-    .line 2
     iget-object v4, p9, Ldiu;->b:Liaj;
 
-    .line 3
     aput-object v4, v2, v3
 
-    .line 4
     invoke-static {v2}, Liak;->b([Liaj;)Liaj;
 
     move-result-object v2
 
-    .line 5
     invoke-direct {p0, v2}, Liaz;-><init>(Liaj;)V
 
-    .line 6
     invoke-interface {p1}, Lgdm;->y()Z
 
     move-result v2
 
     iput-boolean v2, p0, Lefy;->d:Z
 
-    .line 7
     invoke-interface {p1}, Lgdm;->b()Lift;
 
     move-result-object v2
@@ -104,41 +94,34 @@
     :goto_0
     iput-boolean v0, p0, Lefy;->e:Z
 
-    .line 9
     const-string v0, "persist.gcam.sm.log"
 
     invoke-virtual {p8, v0, v1}, Ldif;->a(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    .line 10
     iput-boolean v0, p0, Lefy;->c:Z
 
-    .line 11
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lefy;->f:Ljava/lang/Object;
 
-    .line 12
     new-instance v0, Legg;
 
     invoke-direct {v0}, Legg;-><init>()V
 
     iput-object v0, p0, Lefy;->g:Legg;
 
-    .line 13
     iget-object v2, p0, Lefy;->g:Legg;
 
-    .line 14
     invoke-interface {p3}, Liaj;->b()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lgds;
 
-    .line 15
     invoke-interface {p5}, Liaj;->b()Ljava/lang/Object;
 
     move-result-object v1
@@ -149,7 +132,6 @@
 
     move-result v3
 
-    .line 16
     invoke-virtual {p2}, Leeo;->b()Ljava/lang/Object;
 
     move-result-object v1
@@ -158,43 +140,35 @@
 
     iget-boolean v4, p0, Lefy;->d:Z
 
-    .line 18
     sget-object v5, Lgdr;->c:Lgdr;
 
     if-ne v1, v5, :cond_2
 
     if-eqz v4, :cond_2
 
-    .line 19
     sget-object v1, Lgds;->a:Lgds;
 
     if-ne v0, v1, :cond_1
 
     if-eqz v3, :cond_1
 
-    .line 20
     sget-object v0, Lefx;->d:Lefx;
 
-    .line 25
     :goto_1
     invoke-virtual {v2, v0}, Legg;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 26
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 7
     goto :goto_0
 
-    .line 21
     :cond_1
     sget-object v0, Lefx;->b:Lefx;
 
     goto :goto_1
 
-    .line 22
     :cond_2
     sget-object v1, Lgds;->a:Lgds;
 
@@ -202,12 +176,10 @@
 
     if-eqz v3, :cond_3
 
-    .line 23
     sget-object v0, Lefx;->c:Lefx;
 
     goto :goto_1
 
-    .line 24
     :cond_3
     sget-object v0, Lefx;->a:Lefx;
 
@@ -217,13 +189,10 @@
 .method private final a(Ljava/util/List;)Lefx;
     .locals 12
 
-    .prologue
-    .line 27
     iget-object v11, p0, Lefy;->f:Ljava/lang/Object;
 
     monitor-enter v11
 
-    .line 28
     const/4 v1, 0x4
 
     :try_start_0
@@ -237,7 +206,6 @@
 
     move-object v8, v0
 
-    .line 29
     const/4 v1, 0x0
 
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -250,7 +218,6 @@
 
     move-object v9, v0
 
-    .line 30
     const/4 v1, 0x5
 
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -263,7 +230,6 @@
 
     move-object v10, v0
 
-    .line 31
     const/4 v1, 0x2
 
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -276,33 +242,26 @@
 
     move-result v6
 
-    .line 32
     new-instance v1, Lgje;
 
     iget-boolean v2, p0, Lefy;->d:Z
 
     iget-boolean v3, p0, Lefy;->e:Z
 
-    .line 33
     iget v4, v9, Lgdr;->e:I
 
-    .line 34
     const/4 v5, 0x1
 
-    .line 35
     invoke-interface {p1, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lgds;
 
-    .line 36
     iget v5, v5, Lgds;->e:I
 
-    .line 37
     const/4 v7, 0x3
 
-    .line 38
     invoke-interface {p1, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -315,14 +274,12 @@
 
     invoke-direct/range {v1 .. v7}, Lgje;-><init>(ZZIIZZ)V
 
-    .line 39
     invoke-virtual {v10}, Lcom/google/googlex/gcam/AeResults;->getValid()Z
 
     move-result v2
 
     if-eqz v2, :cond_5
 
-    .line 40
     iget-boolean v2, p0, Lefy;->c:Z
 
     if-eqz v2, :cond_0
@@ -333,14 +290,12 @@
 
     if-eqz v6, :cond_0
 
-    .line 41
     sget-object v2, Lefy;->b:Ljava/lang/String;
 
     const-string v3, "Camera doesn\'t have flash but HAL recommended flash."
 
     invoke-static {v2, v3}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 44
     :cond_0
     sget-object v2, Lefx;->c:Lefx;
 
@@ -350,13 +305,11 @@
 
     if-ne v8, v2, :cond_2
 
-    .line 45
     :cond_1
     iget-boolean v2, v1, Lgje;->e:Z
 
     if-nez v2, :cond_2
 
-    .line 46
     iget-boolean v2, p0, Lefy;->d:Z
 
     if-eqz v2, :cond_4
@@ -365,10 +318,8 @@
 
     if-eqz v2, :cond_4
 
-    .line 47
     sget-object v8, Lefx;->b:Lefx;
 
-    .line 51
     :cond_2
     :goto_0
     iget-object v2, p0, Lefy;->g:Legg;
@@ -379,27 +330,21 @@
 
     invoke-virtual {v2, v1}, Legg;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 57
     :goto_1
     iget-object v1, p0, Lefy;->g:Legg;
 
-    .line 58
     iget-object v1, v1, Legg;->a:Ljava/lang/Object;
 
-    .line 59
     check-cast v1, Lefx;
 
-    .line 60
     monitor-exit v11
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 61
     iget-boolean v2, p0, Lefy;->c:Z
 
     if-eqz v2, :cond_3
 
-    .line 62
     sget-object v2, Lefy;->b:Ljava/lang/String;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -436,22 +381,18 @@
 
     invoke-static {v2, v3}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 63
     :cond_3
     return-object v1
 
-    .line 48
     :cond_4
     :try_start_1
     sget-object v8, Lefx;->a:Lefx;
 
     goto :goto_0
 
-    .line 53
     :cond_5
     sget-object v2, Lefx;->a:Lefx;
 
-    .line 54
     sget-object v3, Lgdr;->c:Lgdr;
 
     if-ne v9, v3, :cond_6
@@ -460,10 +401,8 @@
 
     if-eqz v3, :cond_6
 
-    .line 55
     sget-object v2, Lefx;->b:Lefx;
 
-    .line 56
     :cond_6
     iget-object v3, p0, Lefy;->g:Legg;
 
@@ -475,7 +414,6 @@
 
     goto :goto_1
 
-    .line 60
     :catchall_0
     move-exception v1
 
@@ -491,8 +429,6 @@
 .method protected final synthetic b(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 64
     check-cast p1, Ljava/util/List;
 
     invoke-direct {p0, p1}, Lefy;->a(Ljava/util/List;)Lefx;

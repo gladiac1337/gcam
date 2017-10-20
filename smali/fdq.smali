@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 6
     const-string v0, "PanoStatechart"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -35,8 +33,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lfdp;-><init>()V
 
     return-void
@@ -47,16 +43,11 @@
 .method public a(Lcom/google/android/apps/camera/bottombar/BottomBarController;Lgtv;Ljhi;)V
     .locals 0
 
-    .prologue
-    .line 2
     iput-object p1, p0, Lfdq;->g:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
-    .line 3
     iput-object p2, p0, Lfdq;->h:Lgtv;
 
-    .line 4
     iput-object p3, p0, Lfdq;->i:Ljhi;
 
-    .line 5
     return-void
 .end method

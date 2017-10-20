@@ -14,40 +14,30 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 9
     const-string v0, "smartburst-jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 10
     return-void
 .end method
 
 .method private constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/android/libraries/smartburst/artifacts/gifutils/HeckbertQuantizer;->a:Z
 
-    .line 3
     return-void
 .end method
 
 .method public constructor <init>(B)V
     .locals 0
 
-    .prologue
-    .line 4
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/artifacts/gifutils/HeckbertQuantizer;-><init>()V
 
-    .line 5
     return-void
 .end method
 
@@ -59,8 +49,6 @@
 .method public final a(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;II)V
     .locals 6
 
-    .prologue
-    .line 6
     iget-boolean v5, p0, Lcom/google/android/libraries/smartburst/artifacts/gifutils/HeckbertQuantizer;->a:Z
 
     move-object v0, p1
@@ -75,15 +63,12 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/android/libraries/smartburst/artifacts/gifutils/HeckbertQuantizer;->process(Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;IIZ)V
 
-    .line 7
     return-void
 .end method
 
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 8
     const-string v0, "HeckbertQuantizer[useDither="
 
     iget-boolean v1, p0, Lcom/google/android/libraries/smartburst/artifacts/gifutils/HeckbertQuantizer;->a:Z

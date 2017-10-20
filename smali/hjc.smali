@@ -21,8 +21,6 @@
 .method constructor <init>(B)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lhjc;-><init>()V
 
     return-void
@@ -33,8 +31,6 @@
 .method public final a()V
     .locals 1
 
-    .prologue
-    .line 3
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -45,8 +41,6 @@
 .method public a(Lcom/google/android/gms/common/api/Status;)V
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -63,8 +57,6 @@
 .method public final b()V
     .locals 1
 
-    .prologue
-    .line 4
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -75,8 +67,6 @@
 .method public final c()V
     .locals 1
 
-    .prologue
-    .line 5
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -87,8 +77,6 @@
 .method public final d()V
     .locals 1
 
-    .prologue
-    .line 6
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

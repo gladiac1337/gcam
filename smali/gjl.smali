@@ -16,19 +16,14 @@
 .method constructor <init>(Lgjj;)V
     .locals 2
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgjl;->b:Lgjj;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iget-object v0, p1, Lgjj;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 4
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    .line 5
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -37,7 +32,6 @@
 
     iput-object v0, p0, Lgjl;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 6
     return-void
 .end method
 
@@ -46,8 +40,6 @@
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lgjl;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -58,18 +50,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 12
     :goto_0
     return-void
 
-    .line 9
     :cond_0
     iget-object v0, p0, Lgjl;->b:Lgjj;
 
-    .line 10
     iget-object v0, v0, Lgjj;->a:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 11
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
 
     goto :goto_0

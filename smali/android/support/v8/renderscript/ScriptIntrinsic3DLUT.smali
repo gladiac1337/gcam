@@ -17,22 +17,16 @@
 .method protected constructor <init>(JLandroid/support/v8/renderscript/RenderScript;Landroid/support/v8/renderscript/Element;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Landroid/support/v8/renderscript/ScriptIntrinsic;-><init>(JLandroid/support/v8/renderscript/RenderScript;)V
 
-    .line 2
     iput-object p4, p0, Landroid/support/v8/renderscript/ScriptIntrinsic3DLUT;->mElement:Landroid/support/v8/renderscript/Element;
 
-    .line 3
     return-void
 .end method
 
 .method public static create(Landroid/support/v8/renderscript/RenderScript;Landroid/support/v8/renderscript/Element;)Landroid/support/v8/renderscript/ScriptIntrinsic3DLUT;
     .locals 4
 
-    .prologue
-    .line 4
     invoke-static {p0}, Landroid/support/v8/renderscript/Element;->U8_4(Landroid/support/v8/renderscript/RenderScript;)Landroid/support/v8/renderscript/Element;
 
     move-result-object v0
@@ -43,7 +37,6 @@
 
     if-nez v0, :cond_0
 
-    .line 5
     new-instance v0, Landroid/support/v8/renderscript/RSIllegalArgumentException;
 
     const-string v1, "Element must be compatible with uchar4."
@@ -52,7 +45,6 @@
 
     throw v0
 
-    .line 6
     :cond_0
     invoke-virtual {p0}, Landroid/support/v8/renderscript/RenderScript;->isUseNative()Z
 
@@ -68,7 +60,6 @@
 
     const/4 v0, 0x1
 
-    .line 7
     :goto_0
     const/16 v1, 0x8
 
@@ -80,18 +71,14 @@
 
     move-result-wide v2
 
-    .line 8
     new-instance v1, Landroid/support/v8/renderscript/ScriptIntrinsic3DLUT;
 
     invoke-direct {v1, v2, v3, p0, p1}, Landroid/support/v8/renderscript/ScriptIntrinsic3DLUT;-><init>(JLandroid/support/v8/renderscript/RenderScript;Landroid/support/v8/renderscript/Element;)V
 
-    .line 9
     invoke-virtual {v1, v0}, Landroid/support/v8/renderscript/ScriptIntrinsic3DLUT;->setIncSupp(Z)V
 
-    .line 10
     return-object v1
 
-    .line 6
     :cond_1
     const/4 v0, 0x0
 
@@ -103,25 +90,20 @@
 .method public forEach(Landroid/support/v8/renderscript/Allocation;Landroid/support/v8/renderscript/Allocation;)V
     .locals 2
 
-    .prologue
-    .line 19
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, p1, p2, v1}, Landroid/support/v8/renderscript/ScriptIntrinsic3DLUT;->forEach(ILandroid/support/v8/renderscript/Allocation;Landroid/support/v8/renderscript/Allocation;Landroid/support/v8/renderscript/FieldPacker;)V
 
-    .line 20
     return-void
 .end method
 
 .method public getKernelID()Landroid/support/v8/renderscript/Script$KernelID;
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 21
     const/4 v0, 0x0
 
     const/4 v1, 0x3
@@ -136,20 +118,16 @@
 .method public setLUT(Landroid/support/v8/renderscript/Allocation;)V
     .locals 2
 
-    .prologue
-    .line 11
     invoke-virtual {p1}, Landroid/support/v8/renderscript/Allocation;->getType()Landroid/support/v8/renderscript/Type;
 
     move-result-object v0
 
-    .line 12
     invoke-virtual {v0}, Landroid/support/v8/renderscript/Type;->getZ()I
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 13
     new-instance v0, Landroid/support/v8/renderscript/RSIllegalArgumentException;
 
     const-string v1, "LUT must be 3d."
@@ -158,7 +136,6 @@
 
     throw v0
 
-    .line 14
     :cond_0
     invoke-virtual {v0}, Landroid/support/v8/renderscript/Type;->getElement()Landroid/support/v8/renderscript/Element;
 
@@ -172,7 +149,6 @@
 
     if-nez v0, :cond_1
 
-    .line 15
     new-instance v0, Landroid/support/v8/renderscript/RSIllegalArgumentException;
 
     const-string v1, "LUT element type must match."
@@ -181,17 +157,14 @@
 
     throw v0
 
-    .line 16
     :cond_1
     iput-object p1, p0, Landroid/support/v8/renderscript/ScriptIntrinsic3DLUT;->mLUT:Landroid/support/v8/renderscript/Allocation;
 
-    .line 17
     const/4 v0, 0x0
 
     iget-object v1, p0, Landroid/support/v8/renderscript/ScriptIntrinsic3DLUT;->mLUT:Landroid/support/v8/renderscript/Allocation;
 
     invoke-virtual {p0, v0, v1}, Landroid/support/v8/renderscript/ScriptIntrinsic3DLUT;->setVar(ILandroid/support/v8/renderscript/BaseObj;)V
 
-    .line 18
     return-void
 .end method

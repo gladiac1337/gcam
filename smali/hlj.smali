@@ -22,8 +22,6 @@
 .method private static a(Landroid/content/Context;)Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 1
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
@@ -40,7 +38,6 @@
 
     move-result-object v0
 
-    .line 2
     :try_start_0
     sget-object v1, Lhpk;->a:Lhpk;
 
@@ -48,12 +45,10 @@
 
     move-result-object v1
 
-    .line 3
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 4
     iget-object v3, v1, Lhpj;->a:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -76,7 +71,6 @@
 
     move-result-object v1
 
-    .line 5
     invoke-interface {v1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0

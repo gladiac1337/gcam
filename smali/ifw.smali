@@ -11,11 +11,8 @@
 .method public constructor <init>(Lick;)V
     .locals 1
 
-    .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     const-string v0, "NatY420_888Copier"
 
     invoke-interface {p1, v0}, Lick;->a(Ljava/lang/String;)Licj;
@@ -24,37 +21,30 @@
 
     iput-object v0, p0, Lifw;->a:Licj;
 
-    .line 20
     return-void
 .end method
 
 .method private static b(Liia;Liia;)V
     .locals 15
 
-    .prologue
-    .line 21
     invoke-interface {p0}, Liia;->d()Ljava/util/List;
 
     move-result-object v7
 
-    .line 22
     invoke-interface/range {p1 .. p1}, Liia;->d()Ljava/util/List;
 
     move-result-object v13
 
-    .line 24
     invoke-interface {p0}, Liia;->f()I
 
     move-result v0
 
-    .line 25
     invoke-interface {p0}, Liia;->c()I
 
     move-result v1
 
     const/4 v2, 0x0
 
-    .line 26
     invoke-interface {v7, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -67,7 +57,6 @@
 
     const/4 v3, 0x1
 
-    .line 27
     invoke-interface {v7, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
@@ -80,7 +69,6 @@
 
     const/4 v4, 0x2
 
-    .line 28
     invoke-interface {v7, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -93,7 +81,6 @@
 
     const/4 v5, 0x0
 
-    .line 29
     invoke-interface {v7, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -106,7 +93,6 @@
 
     const/4 v6, 0x1
 
-    .line 30
     invoke-interface {v7, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -119,7 +105,6 @@
 
     const/4 v8, 0x1
 
-    .line 31
     invoke-interface {v7, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -132,7 +117,6 @@
 
     const/4 v8, 0x0
 
-    .line 32
     invoke-interface {v13, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -145,7 +129,6 @@
 
     const/4 v9, 0x1
 
-    .line 33
     invoke-interface {v13, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v9
@@ -158,7 +141,6 @@
 
     const/4 v10, 0x2
 
-    .line 34
     invoke-interface {v13, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v10
@@ -171,7 +153,6 @@
 
     const/4 v11, 0x0
 
-    .line 35
     invoke-interface {v13, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v11
@@ -184,7 +165,6 @@
 
     const/4 v12, 0x1
 
-    .line 36
     invoke-interface {v13, v12}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v12
@@ -197,7 +177,6 @@
 
     const/4 v14, 0x1
 
-    .line 37
     invoke-interface {v13, v14}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v13
@@ -208,15 +187,12 @@
 
     move-result v13
 
-    .line 38
     invoke-static/range {v0 .. v13}, Lcom/google/android/libraries/camera/jni/yuv/YuvUtilNative;->a(IILjava/nio/ByteBuffer;Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;IIILjava/nio/ByteBuffer;Ljava/nio/ByteBuffer;Ljava/nio/ByteBuffer;III)Z
 
     move-result v0
 
-    .line 39
     if-nez v0, :cond_0
 
-    .line 40
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Copy failed."
@@ -225,7 +201,6 @@
 
     throw v0
 
-    .line 41
     :cond_0
     invoke-interface/range {p1 .. p1}, Liia;->d()Ljava/util/List;
 
@@ -248,7 +223,6 @@
 
     check-cast v0, Liib;
 
-    .line 42
     invoke-interface {v0}, Liib;->c()Ljava/nio/ByteBuffer;
 
     move-result-object v0
@@ -257,7 +231,6 @@
 
     goto :goto_0
 
-    .line 44
     :cond_1
     return-void
 .end method
@@ -267,20 +240,16 @@
 .method public final a(Liia;Liia;)V
     .locals 5
 
-    .prologue
     const/16 v4, 0x22
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 1
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     invoke-static {p2}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     invoke-interface {p1}, Liia;->l_()I
 
     move-result v0
@@ -296,7 +265,6 @@
     :goto_0
     invoke-static {v0}, Lixp;->a(Z)V
 
-    .line 4
     invoke-interface {p1}, Liia;->l_()I
 
     move-result v0
@@ -308,7 +276,6 @@
     :goto_1
     invoke-static {v0}, Lixp;->a(Z)V
 
-    .line 5
     invoke-interface {p2}, Liia;->l_()I
 
     move-result v0
@@ -318,7 +285,6 @@
     :goto_2
     invoke-static {v1}, Lixp;->a(Z)V
 
-    .line 6
     new-instance v0, Libx;
 
     invoke-interface {p1}, Liia;->f()I
@@ -331,7 +297,6 @@
 
     invoke-direct {v0, v1, v2}, Libx;-><init>(II)V
 
-    .line 7
     new-instance v1, Libx;
 
     invoke-interface {p2}, Liia;->f()I
@@ -344,7 +309,6 @@
 
     invoke-direct {v1, v2, v3}, Libx;-><init>(II)V
 
-    .line 9
     invoke-virtual {v0, v1}, Libx;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -405,10 +369,8 @@
 
     move-result-object v0
 
-    .line 10
     invoke-static {v2, v0}, Lixp;->a(ZLjava/lang/Object;)V
 
-    .line 11
     invoke-interface {p1}, Liia;->l_()I
 
     move-result v0
@@ -417,15 +379,12 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 12
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v0
 
-    .line 13
     invoke-static {p1, p2}, Lifw;->b(Liia;Liia;)V
 
-    .line 14
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v2
@@ -438,7 +397,6 @@
 
     div-double/2addr v0, v2
 
-    .line 15
     iget-object v2, p0, Lifw;->a:Licj;
 
     const/16 v3, 0x2c
@@ -469,28 +427,23 @@
 
     invoke-interface {v2, v0}, Licj;->e(Ljava/lang/String;)V
 
-    .line 16
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 3
     goto/16 :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 4
     goto/16 :goto_1
 
     :cond_2
     move v1, v2
 
-    .line 5
     goto/16 :goto_2
 
-    .line 17
     :cond_3
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 

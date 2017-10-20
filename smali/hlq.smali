@@ -119,8 +119,6 @@
 .method public final hashCode()I
     .locals 3
 
-    .prologue
-    .line 1
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -137,12 +135,10 @@
 
     aput-object v2, v0, v1
 
-    .line 2
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 3
     return v0
 .end method
 

@@ -17,8 +17,6 @@
 .method constructor <init>(Lyq;Labp;Landroid/os/Handler;Labc;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lyx;->c:Lyq;
 
     iput-object p2, p0, Lyx;->a:Labp;
@@ -27,10 +25,8 @@
 
     iput-object p4, p0, Lyx;->b:Labc;
 
-    .line 2
     invoke-direct {p0}, Lzi;-><init>()V
 
-    .line 3
     return-void
 .end method
 
@@ -39,13 +35,10 @@
 .method public final onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
     .locals 2
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lyx;->a:Labp;
 
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lyx;->d:Landroid/os/Handler;
 
     new-instance v1, Lyy;
@@ -54,7 +47,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 6
     :cond_0
     return-void
 .end method
@@ -62,21 +54,17 @@
 .method public final onImageAvailable(Landroid/media/ImageReader;)V
     .locals 6
 
-    .prologue
-    .line 7
     invoke-virtual {p1}, Landroid/media/ImageReader;->acquireNextImage()Landroid/media/Image;
 
     move-result-object v2
 
     const/4 v1, 0x0
 
-    .line 8
     :try_start_0
     iget-object v0, p0, Lyx;->b:Labc;
 
     if-eqz v0, :cond_0
 
-    .line 9
     invoke-virtual {v2}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
 
     move-result-object v0
@@ -89,17 +77,14 @@
 
     move-result-object v0
 
-    .line 10
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->remaining()I
 
     move-result v3
 
     new-array v3, v3, [B
 
-    .line 11
     invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    .line 12
     iget-object v0, p0, Lyx;->d:Landroid/os/Handler;
 
     new-instance v4, Lyz;
@@ -111,17 +96,14 @@
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 13
     :cond_0
     if-eqz v2, :cond_1
 
     invoke-virtual {v2}, Landroid/media/Image;->close()V
 
-    .line 16
     :cond_1
     return-void
 
-    .line 14
     :catch_0
     move-exception v0
 
@@ -130,7 +112,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 15
     :catchall_0
     move-exception v1
 

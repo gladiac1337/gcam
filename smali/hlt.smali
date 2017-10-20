@@ -74,15 +74,12 @@
 .method public static a(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
     .locals 3
 
-    .prologue
-    .line 1
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.VIEW"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2
     const-string v1, "market://details"
 
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -114,7 +111,6 @@
 
     move-result-object v1
 
-    .line 3
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     const-string v1, "com.android.vending"

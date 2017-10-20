@@ -14,14 +14,10 @@
 .method public constructor <init>([Lizm;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lizl;->a:[Lizm;
 
-    .line 3
     return-void
 .end method
 
@@ -30,16 +26,12 @@
 .method public final a(Landroid/graphics/Bitmap;)Ljava/util/List;
     .locals 5
 
-    .prologue
-    .line 4
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 6
     iget-object v2, p0, Lizl;->a:[Lizm;
 
     array-length v3, v2
@@ -51,19 +43,16 @@
 
     aget-object v4, v2, v0
 
-    .line 7
     invoke-interface {v4, p1}, Lizm;->a(Landroid/graphics/Bitmap;)Ljava/util/List;
 
     move-result-object v4
 
     invoke-interface {v1, v4}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 8
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 9
     :cond_0
     return-object v1
 .end method
@@ -71,8 +60,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 10
     const-string v0, "ComboFeatureExtractor[extractors="
 
     iget-object v1, p0, Lizl;->a:[Lizm;

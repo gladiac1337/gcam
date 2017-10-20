@@ -11,17 +11,12 @@
 .method constructor <init>(Lihe;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Lbku;->a:Lihe;
 
-    .line 4
     return-void
 .end method
 
@@ -30,29 +25,21 @@
 .method public final a(Lbky;)Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 5
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     iget-object v0, p0, Lbku;->a:Lihe;
 
-    .line 7
     iget-object v1, p1, Lbky;->b:Ljava/lang/String;
 
-    .line 8
     invoke-virtual {v0, v1}, Lihe;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 9
     if-eqz v0, :cond_0
 
-    .line 13
     :goto_0
     return-object v0
 
-    .line 11
     :cond_0
     iget-object v1, p0, Lbku;->a:Lihe;
 
@@ -62,10 +49,8 @@
 
     move-result-object v2
 
-    .line 12
     iget-object v0, p1, Lbky;->b:Ljava/lang/String;
 
-    .line 13
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0

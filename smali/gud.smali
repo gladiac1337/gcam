@@ -18,11 +18,8 @@
 .method constructor <init>(Lguf;Lico;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -31,13 +28,10 @@
 
     iput-object v0, p0, Lgud;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 3
     iput-object p1, p0, Lgud;->b:Lguf;
 
-    .line 4
     iput-object p2, p0, Lgud;->a:Lico;
 
-    .line 5
     return-void
 .end method
 
@@ -46,8 +40,6 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lgud;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -58,24 +50,20 @@
 
     if-nez v0, :cond_0
 
-    .line 7
     iget-object v0, p0, Lgud;->a:Lico;
 
     const-string v1, "AllAudioInit"
 
     invoke-interface {v0, v1}, Lico;->a(Ljava/lang/String;)V
 
-    .line 8
     iget-object v0, p0, Lgud;->b:Lguf;
 
     invoke-interface {v0}, Lguf;->d()V
 
-    .line 9
     iget-object v0, p0, Lgud;->a:Lico;
 
     invoke-interface {v0}, Lico;->a()V
 
-    .line 10
     :cond_0
     return-void
 .end method

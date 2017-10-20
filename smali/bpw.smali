@@ -7,8 +7,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 3
     new-instance v0, Lbld;
 
     const-string v1, "camera.enable_imax"
@@ -23,10 +21,7 @@
 .method public static a()Ljhi;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Ljgx;->a:Ljgx;
 
-    .line 2
     return-object v0
 .end method

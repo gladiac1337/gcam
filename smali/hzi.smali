@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 11
     new-instance v0, Lhzj;
 
     invoke-direct {v0}, Lhzj;-><init>()V
@@ -25,8 +23,6 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 1
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -37,15 +33,12 @@
 
     invoke-direct {p0, v0}, Lhzc;-><init>(Landroid/os/Handler;)V
 
-    .line 2
     return-void
 .end method
 
 .method public static a()V
     .locals 2
 
-    .prologue
-    .line 3
     invoke-static {}, Lhzi;->b()Z
 
     move-result v0
@@ -54,15 +47,12 @@
 
     invoke-static {v0, v1}, Lixp;->b(ZLjava/lang/Object;)V
 
-    .line 4
     return-void
 .end method
 
 .method public static b()Z
     .locals 1
 
-    .prologue
-    .line 5
     sget-object v0, Lhzi;->a:Ljava/lang/ThreadLocal;
 
     invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
@@ -71,7 +61,6 @@
 
     check-cast v0, Ljava/lang/Boolean;
 
-    .line 6
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -96,22 +85,17 @@
 .method public final a(Ljava/lang/Runnable;)V
     .locals 1
 
-    .prologue
-    .line 7
     invoke-static {}, Lhzi;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 8
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 10
     :goto_0
     return-void
 
-    .line 9
     :cond_0
     invoke-virtual {p0, p1}, Lhzi;->execute(Ljava/lang/Runnable;)V
 

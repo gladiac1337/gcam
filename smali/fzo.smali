@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 1
     const v0, 0xac44
 
     const/16 v1, 0xc

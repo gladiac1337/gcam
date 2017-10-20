@@ -11,8 +11,6 @@
 .method constructor <init>(Lcpa;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcpm;->a:Lcpa;
 
     invoke-direct {p0}, Lcom/google/googlex/gcam/BurstCallback;-><init>()V
@@ -25,17 +23,14 @@
 .method public final Run(Lcom/google/googlex/gcam/IShot;Lcom/google/googlex/gcam/ShotLogData;)V
     .locals 9
 
-    .prologue
     const/4 v1, 0x0
 
     const/4 v8, 0x0
 
     const/4 v3, 0x1
 
-    .line 2
     sget-object v0, Lcpa;->a:Ljava/lang/String;
 
-    .line 3
     const-string v2, "Payload processing complete, shot_id = %d"
 
     new-array v3, v3, [Ljava/lang/Object;
@@ -50,27 +45,22 @@
 
     aput-object v4, v3, v1
 
-    .line 4
     invoke-static {v8, v2, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 5
     invoke-static {v0, v2}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
     new-instance v2, Lfsy;
 
     invoke-direct {v2, p2}, Lfsy;-><init>(Lcom/google/googlex/gcam/ShotLogData;)V
 
-    .line 7
     iget-object v0, p0, Lcpm;->a:Lcpa;
 
     iget-object v3, v0, Lcpa;->b:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 8
     :try_start_0
     iget-object v0, p0, Lcpm;->a:Lcpa;
 
@@ -90,24 +80,18 @@
 
     check-cast v0, Lcpr;
 
-    .line 9
     iget-object v4, p0, Lcpm;->a:Lcpa;
 
-    .line 10
     iget-object v4, v4, Lcpa;->u:Lbhk;
 
-    .line 11
     sget-object v5, Lbhk;->e:Lbhk;
 
     if-eq v4, v5, :cond_3
 
-    .line 12
     iget-object v4, p0, Lcpm;->a:Lcpa;
 
-    .line 13
     iget-object v4, v4, Lcpa;->c:Lcom/google/googlex/gcam/InitParams;
 
-    .line 14
     invoke-virtual {v4}, Lcom/google/googlex/gcam/InitParams;->getUse_hexagon()Z
 
     move-result v4
@@ -120,29 +104,22 @@
 
     if-nez v4, :cond_0
 
-    .line 15
     sget-object v4, Lcpa;->a:Ljava/lang/String;
 
-    .line 16
     const-string v5, "Hexagon failed"
 
     invoke-static {v4, v5}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 17
     iget-object v4, p0, Lcpm;->a:Lcpa;
 
-    .line 18
     iget-object v4, v4, Lcpa;->v:Lbiu;
 
-    .line 19
     const-string v5, "Hexagon failed! Please immediately take and file a bug report."
 
-    .line 20
     const/4 v6, 0x1
 
     invoke-virtual {v4, v5, v6}, Lbiu;->a(Ljava/lang/String;I)V
 
-    .line 21
     :cond_0
     :goto_0
     int-to-long v4, v1
@@ -159,7 +136,6 @@
 
     if-gez v4, :cond_1
 
-    .line 22
     invoke-virtual {p2}, Lcom/google/googlex/gcam/ShotLogData;->getFinal_payload_frame_sharpness()Lcom/google/googlex/gcam/FloatVector;
 
     move-result-object v4
@@ -174,29 +150,22 @@
 
     if-nez v4, :cond_4
 
-    .line 23
     sget-object v1, Lcpa;->a:Ljava/lang/String;
 
-    .line 24
     const-string v4, "Black frame detected"
 
     invoke-static {v1, v4}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 25
     iget-object v1, p0, Lcpm;->a:Lcpa;
 
-    .line 26
     iget-object v1, v1, Lcpa;->v:Lbiu;
 
-    .line 27
     const-string v4, "Black frame detected! Please immediately take and file a bug report."
 
-    .line 28
     const/4 v5, 0x1
 
     invoke-virtual {v1, v4, v5}, Lbiu;->a(Ljava/lang/String;I)V
 
-    .line 31
     :cond_1
     invoke-virtual {v0}, Lcpr;->a()J
 
@@ -210,10 +179,8 @@
 
     if-nez v1, :cond_2
 
-    .line 32
     sget-object v1, Lcpa;->a:Ljava/lang/String;
 
-    .line 33
     iget-object v4, p0, Lcpm;->a:Lcpa;
 
     iget-wide v4, v4, Lcpa;->h:J
@@ -240,21 +207,16 @@
 
     invoke-static {v1, v4}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 34
     iget-object v1, p0, Lcpm;->a:Lcpa;
 
-    .line 35
     iget-object v1, v1, Lcpa;->v:Lbiu;
 
-    .line 36
     const-string v4, "Repeated burst detected! Please immediately take and file a bug report."
 
-    .line 37
     const/4 v5, 0x1
 
     invoke-virtual {v1, v4, v5}, Lbiu;->a(Ljava/lang/String;I)V
 
-    .line 38
     :cond_2
     iget-object v1, p0, Lcpm;->a:Lcpa;
 
@@ -264,65 +226,51 @@
 
     iput-wide v4, v1, Lcpa;->h:J
 
-    .line 39
     :cond_3
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 40
     iget-object v1, p0, Lcpm;->a:Lcpa;
 
-    .line 41
     iget-object v1, v1, Lcpa;->t:Lavo;
 
-    .line 42
     invoke-virtual {v1}, Lavo;->a()Lavp;
 
     move-result-object v1
 
-    .line 43
     if-eqz v1, :cond_5
 
-    .line 45
     iget-object v0, v0, Lcpr;->a:Leap;
 
-    .line 46
     iget-object v0, v0, Leap;->b:Leot;
 
-    .line 47
     invoke-interface {v0}, Lgon;->n()Lavk;
 
     move-result-object v0
 
     iget-wide v4, v1, Lavp;->a:J
 
-    .line 48
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
     iget v1, v1, Lavp;->b:I
 
-    .line 49
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 50
     invoke-interface {v0, v2, v3, v1}, Lavk;->a(Lfsy;Ljava/lang/Long;Ljava/lang/Integer;)V
 
-    .line 56
     :goto_1
     return-void
 
-    .line 30
     :cond_4
     add-int/lit8 v1, v1, 0x1
 
     goto/16 :goto_0
 
-    .line 39
     :catchall_0
     move-exception v0
 
@@ -333,19 +281,15 @@
 
     throw v0
 
-    .line 52
     :cond_5
     iget-object v0, v0, Lcpr;->a:Leap;
 
-    .line 53
     iget-object v0, v0, Leap;->b:Leot;
 
-    .line 54
     invoke-interface {v0}, Lgon;->n()Lavk;
 
     move-result-object v0
 
-    .line 55
     invoke-interface {v0, v2, v8, v8}, Lavk;->a(Lfsy;Ljava/lang/Long;Ljava/lang/Integer;)V
 
     goto :goto_1

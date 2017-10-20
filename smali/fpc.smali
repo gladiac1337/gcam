@@ -40,8 +40,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 105
     const-string v0, "LightCycleStTask"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -56,41 +54,32 @@
 .method public constructor <init>(Lfpp;Lidb;Lboc;Lbne;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/Semaphore;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/Semaphore;-><init>(I)V
 
     iput-object v0, p0, Lfpc;->h:Ljava/util/concurrent/Semaphore;
 
-    .line 3
     iput-boolean v1, p0, Lfpc;->i:Z
 
-    .line 4
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
     iput-object v0, p0, Lfpc;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 5
     iput-object p1, p0, Lfpc;->a:Lfpp;
 
-    .line 6
     iput-object p2, p0, Lfpc;->k:Lidb;
 
-    .line 7
     iget-object v0, p1, Lfpp;->c:Ljava/lang/String;
 
     iput-object v0, p0, Lfpc;->d:Ljava/lang/String;
 
-    .line 8
     iget-object v0, p1, Lfpp;->b:Leot;
 
     invoke-interface {v0}, Leot;->j()Leqo;
@@ -103,7 +92,6 @@
 
     iput-object v0, p0, Lfpc;->e:Ljava/io/File;
 
-    .line 9
     iget-object v0, p1, Lfpp;->b:Leot;
 
     invoke-interface {v0}, Leot;->a()Ljava/lang/String;
@@ -112,25 +100,20 @@
 
     iput-object v0, p0, Lfpc;->f:Ljava/lang/String;
 
-    .line 10
     iget v0, p1, Lfpp;->g:I
 
     iput v0, p0, Lfpc;->g:I
 
-    .line 11
     iput-object p3, p0, Lfpc;->l:Lboc;
 
-    .line 12
     iput-object p4, p0, Lfpc;->m:Lbne;
 
-    .line 13
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lfpc;->j:Ljava/util/List;
 
-    .line 14
     return-void
 .end method
 
@@ -139,13 +122,10 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 99
     iget-boolean v0, p0, Lfpc;->i:Z
 
     if-eqz v0, :cond_0
 
-    .line 100
     :try_start_0
     iget-object v0, p0, Lfpc;->h:Ljava/util/concurrent/Semaphore;
 
@@ -153,16 +133,13 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 104
     :cond_0
     :goto_0
     return-void
 
-    .line 102
     :catch_0
     move-exception v0
 
-    .line 103
     sget-object v1, Ljvg;->a:Ljvh;
 
     invoke-virtual {v1, v0}, Ljvh;->b(Ljava/lang/Throwable;)V
@@ -173,24 +150,18 @@
 .method public final addFinishedCallback(Libj;)V
     .locals 1
 
-    .prologue
-    .line 93
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 94
     iget-object v0, p0, Lfpc;->j:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 95
     return-void
 .end method
 
 .method public final getSession()Lgon;
     .locals 1
 
-    .prologue
-    .line 86
     iget-object v0, p0, Lfpc;->a:Lfpp;
 
     iget-object v0, v0, Lfpp;->b:Leot;
@@ -201,36 +172,29 @@
 .method public final process(Landroid/content/Context;)V
     .locals 12
 
-    .prologue
     const/16 v2, 0xb
 
     const/4 v4, 0x1
 
     const/4 v6, 0x0
 
-    .line 15
     iget-object v0, p0, Lfpc;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, v6}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 17
     :try_start_0
     invoke-virtual {p0}, Lfpc;->a()V
 
-    .line 18
     invoke-static {}, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->l()I
 
     move-result v1
 
-    .line 19
     iget-object v0, p0, Lfpc;->e:Ljava/io/File;
 
-    .line 20
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
     move-result-wide v8
 
-    .line 21
     iget-object v3, p0, Lfpc;->a:Lfpp;
 
     iget-object v3, v3, Lfpp;->b:Leot;
@@ -239,12 +203,10 @@
 
     invoke-interface {v3, v5}, Leot;->a(I)V
 
-    .line 22
     new-instance v3, Lfpa;
 
     invoke-direct {v3, p0, v8, v9, v0}, Lfpa;-><init>(Lfpc;JLjava/io/File;)V
 
-    .line 23
     sget-object v0, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->c:Ljava/util/Map;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -253,12 +215,10 @@
 
     invoke-interface {v0, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 24
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v8
 
-    .line 25
     sget-object v3, Lfpc;->c:Ljava/lang/String;
 
     const-string v5, "Rendering panorama from source images at "
@@ -282,25 +242,20 @@
     :goto_0
     invoke-static {v3, v0}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 26
     invoke-static {v1}, Lcom/google/android/apps/camera/legacy/lightcycle/panorama/LightCycle;->c(I)Z
 
-    .line 27
     iget-object v0, p0, Lfpc;->a:Lfpp;
 
     iget-object v0, v0, Lfpp;->e:Ljava/lang/String;
 
-    .line 28
     invoke-static {v0}, Lfqd;->a(Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v1
 
-    .line 29
     invoke-static {v1}, Lfqd;->a(Ljava/util/Map;)F
 
     move-result v0
 
-    .line 30
     iget v3, p0, Lfpc;->g:I
 
     sget v5, Leh;->aO:I
@@ -315,7 +270,6 @@
 
     move v5, v4
 
-    .line 31
     :goto_1
     iget v3, p0, Lfpc;->g:I
 
@@ -335,7 +289,6 @@
     :cond_1
     move v3, v4
 
-    .line 32
     :goto_2
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -343,7 +296,6 @@
 
     sub-long v8, v10, v8
 
-    .line 33
     sget-object v0, Lfpc;->c:Ljava/lang/String;
 
     const/16 v7, 0x31
@@ -368,10 +320,8 @@
 
     invoke-static {v0, v7}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 34
     const/4 v0, 0x5
 
-    .line 36
     iget v7, p0, Lfpc;->g:I
 
     sget v10, Leh;->aO:I
@@ -380,7 +330,6 @@
 
     move v0, v4
 
-    .line 48
     :goto_3
     iget-object v7, p0, Lfpc;->k:Lidb;
 
@@ -402,10 +351,8 @@
 
     mul-float/2addr v8, v11
 
-    .line 49
     invoke-interface {v7, v2, v0, v10, v8}, Lidb;->a(IILjava/lang/String;F)V
 
-    .line 50
     iget v0, p0, Lfpc;->g:I
 
     sget v2, Leh;->aN:I
@@ -414,7 +361,6 @@
 
     if-eqz v5, :cond_9
 
-    .line 51
     :cond_2
     :goto_4
     iget-object v0, p0, Lfpc;->a:Lfpp;
@@ -425,24 +371,20 @@
 
     move-result-object v0
 
-    .line 52
     iget-object v2, p0, Lfpc;->m:Lbne;
 
     invoke-interface {v2, v0}, Lbne;->a(Landroid/net/Uri;)Ljhi;
 
     move-result-object v2
 
-    .line 53
     sget-object v5, Ljgx;->a:Ljgx;
 
-    .line 55
     invoke-virtual {v2}, Ljhi;->a()Z
 
     move-result v7
 
     if-eqz v7, :cond_b
 
-    .line 56
     invoke-virtual {v2}, Ljhi;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -457,21 +399,18 @@
 
     move-result-wide v8
 
-    .line 57
     iget-object v0, p0, Lfpc;->l:Lboc;
 
     invoke-interface {v0, v8, v9}, Lboc;->a(J)Ljhi;
 
     move-result-object v0
 
-    .line 58
     invoke-virtual {v0}, Ljhi;->a()Z
 
     move-result v2
 
     if-eqz v2, :cond_a
 
-    .line 59
     invoke-virtual {v0}, Ljhi;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -486,28 +425,23 @@
 
     move-result-object v5
 
-    .line 63
     :goto_5
     iget-object v0, p0, Lfpc;->e:Ljava/io/File;
 
-    .line 64
     invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v0
 
     iget-object v2, p0, Lfpc;->d:Ljava/lang/String;
 
-    .line 65
     invoke-static/range {v0 .. v5}, Lfqd;->a(Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;ZZLjhi;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 66
     iget-object v2, p0, Lfpc;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     monitor-enter v2
 
-    .line 67
     :try_start_1
     iget-object v0, p0, Lfpc;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -515,14 +449,12 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 68
     iget-object v0, p0, Lfpc;->a:Lfpp;
 
     iget-object v0, v0, Lfpp;->b:Leot;
 
     invoke-interface {v0}, Leot;->h()V
 
-    .line 69
     new-instance v0, Lejy;
 
     iget-object v1, p0, Lfpc;->a:Lfpp;
@@ -531,21 +463,18 @@
 
     invoke-direct {v0, v1}, Lejy;-><init>(Leot;)V
 
-    .line 70
     iget-object v1, p0, Lfpc;->a:Lfpp;
 
     iget-object v1, v1, Lfpp;->b:Leot;
 
     invoke-interface {v1, v0}, Leot;->a(Lejy;)V
 
-    .line 71
     iget-object v0, p0, Lfpc;->j:Ljava/util/List;
 
     invoke-static {v0}, Ljkk;->a(Ljava/util/Collection;)Ljkk;
 
     move-result-object v0
 
-    .line 72
     check-cast v0, Ljkk;
 
     invoke-virtual {v0}, Ljkk;->size()I
@@ -563,12 +492,10 @@
 
     check-cast v1, Libj;
 
-    .line 73
     invoke-interface {v1, p0}, Libj;->a(Ljava/lang/Object;)V
 
     goto :goto_6
 
-    .line 75
     :catchall_0
     move-exception v0
 
@@ -578,7 +505,6 @@
 
     throw v0
 
-    .line 25
     :cond_3
     :try_start_2
     new-instance v0, Ljava/lang/String;
@@ -589,7 +515,6 @@
 
     goto/16 :goto_0
 
-    .line 76
     :catchall_1
     move-exception v0
 
@@ -599,7 +524,6 @@
 
     monitor-enter v4
 
-    .line 77
     :try_start_3
     iget-object v0, p0, Lfpc;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -607,14 +531,12 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 78
     iget-object v0, p0, Lfpc;->a:Lfpp;
 
     iget-object v0, v0, Lfpp;->b:Leot;
 
     invoke-interface {v0}, Leot;->h()V
 
-    .line 79
     new-instance v0, Lejy;
 
     iget-object v1, p0, Lfpc;->a:Lfpp;
@@ -623,21 +545,18 @@
 
     invoke-direct {v0, v1}, Lejy;-><init>(Leot;)V
 
-    .line 80
     iget-object v1, p0, Lfpc;->a:Lfpp;
 
     iget-object v1, v1, Lfpp;->b:Leot;
 
     invoke-interface {v1, v0}, Leot;->a(Lejy;)V
 
-    .line 81
     iget-object v0, p0, Lfpc;->j:Ljava/util/List;
 
     invoke-static {v0}, Ljkk;->a(Ljava/util/Collection;)Ljkk;
 
     move-result-object v0
 
-    .line 82
     check-cast v0, Ljkk;
 
     invoke-virtual {v0}, Ljkk;->size()I
@@ -657,12 +576,10 @@
 
     check-cast v1, Libj;
 
-    .line 83
     invoke-interface {v1, p0}, Libj;->a(Ljava/lang/Object;)V
 
     goto :goto_7
 
-    .line 85
     :catchall_2
     move-exception v0
 
@@ -675,16 +592,13 @@
     :cond_4
     move v5, v6
 
-    .line 30
     goto/16 :goto_1
 
     :cond_5
     move v3, v6
 
-    .line 31
     goto/16 :goto_2
 
-    .line 39
     :cond_6
     :try_start_4
     iget v7, p0, Lfpc;->g:I
@@ -693,12 +607,10 @@
 
     if-ne v7, v10, :cond_7
 
-    .line 41
     const/4 v0, 0x2
 
     goto/16 :goto_3
 
-    .line 42
     :cond_7
     iget v7, p0, Lfpc;->g:I
 
@@ -706,12 +618,10 @@
 
     if-ne v7, v10, :cond_8
 
-    .line 44
     const/4 v0, 0x4
 
     goto/16 :goto_3
 
-    .line 45
     :cond_8
     iget v7, p0, Lfpc;->g:I
 
@@ -719,7 +629,6 @@
 
     if-ne v7, v10, :cond_e
 
-    .line 47
     const/4 v0, 0x3
 
     goto/16 :goto_3
@@ -727,10 +636,8 @@
     :cond_9
     move v4, v6
 
-    .line 50
     goto/16 :goto_4
 
-    .line 60
     :cond_a
     sget-object v0, Lfpc;->c:Ljava/lang/String;
 
@@ -758,7 +665,6 @@
 
     goto/16 :goto_5
 
-    .line 62
     :cond_b
     sget-object v2, Lfpc;->c:Ljava/lang/String;
 
@@ -800,7 +706,6 @@
 
     goto/16 :goto_5
 
-    .line 75
     :cond_c
     :try_start_5
     monitor-exit v2
@@ -809,7 +714,6 @@
 
     return-void
 
-    .line 85
     :cond_d
     :try_start_6
     monitor-exit v4
@@ -829,24 +733,18 @@
 .method public final removeFinishedCallback(Libj;)V
     .locals 1
 
-    .prologue
-    .line 96
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 97
     iget-object v0, p0, Lfpc;->j:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 98
     return-void
 .end method
 
 .method public final declared-synchronized resume()V
     .locals 1
 
-    .prologue
-    .line 87
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -854,19 +752,16 @@
     :try_start_0
     iput-boolean v0, p0, Lfpc;->i:Z
 
-    .line 88
     iget-object v0, p0, Lfpc;->h:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 89
     monitor-exit p0
 
     return-void
 
-    .line 87
     :catchall_0
     move-exception v0
 
@@ -878,8 +773,6 @@
 .method public final declared-synchronized suspend()V
     .locals 1
 
-    .prologue
-    .line 90
     monitor-enter p0
 
     :try_start_0
@@ -887,19 +780,16 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->drainPermits()I
 
-    .line 91
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lfpc;->i:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 92
     monitor-exit p0
 
     return-void
 
-    .line 90
     :catchall_0
     move-exception v0
 

@@ -11,14 +11,10 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Lbie;
 
-    .line 2
     invoke-direct {v0}, Lbie;-><init>()V
 
-    .line 3
     sput-object v0, Lbif;->a:Lbie;
 
     return-void

@@ -18,15 +18,12 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 11
     new-instance v0, Lfki;
 
     invoke-direct {v0}, Lfki;-><init>()V
 
     sput-object v0, Lfki;->a:Lfki;
 
-    .line 12
     const/16 v0, 0x65
 
     new-array v0, v0, [F
@@ -35,7 +32,6 @@
 
     sput-object v0, Lfki;->b:[F
 
-    .line 13
     const/high16 v0, 0x3f800000    # 1.0f
 
     sget-object v1, Lfki;->b:[F
@@ -52,7 +48,6 @@
 
     return-void
 
-    .line 12
     :array_0
     .array-data 4
         0x0
@@ -162,8 +157,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -174,21 +167,17 @@
 .method public final getInterpolation(F)F
     .locals 5
 
-    .prologue
     const/high16 v0, 0x3f800000    # 1.0f
 
     const/4 v1, 0x0
 
-    .line 2
     cmpl-float v2, p1, v0
 
     if-ltz v2, :cond_0
 
-    .line 10
     :goto_0
     return v0
 
-    .line 4
     :cond_0
     cmpg-float v0, p1, v1
 
@@ -196,10 +185,8 @@
 
     move v0, v1
 
-    .line 5
     goto :goto_0
 
-    .line 6
     :cond_1
     sget-object v0, Lfki;->b:[F
 
@@ -223,22 +210,18 @@
 
     move-result v0
 
-    .line 7
     int-to-float v1, v0
 
     sget v2, Lfki;->c:F
 
     mul-float/2addr v1, v2
 
-    .line 8
     sub-float v1, p1, v1
 
-    .line 9
     sget v2, Lfki;->c:F
 
     div-float/2addr v1, v2
 
-    .line 10
     sget-object v2, Lfki;->b:[F
 
     aget v2, v2, v0

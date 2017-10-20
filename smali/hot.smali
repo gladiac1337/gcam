@@ -26,9 +26,6 @@
 .method protected final synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 1
-    .line 2
     iget-object v0, p0, Lhot;->a:Lhka;
 
     invoke-virtual {v0}, Lhka;->c()Lcom/google/android/gms/common/ConnectionResult;
@@ -56,10 +53,8 @@
     :goto_0
     const/4 v0, 0x0
 
-    .line 3
     return-object v0
 
-    .line 2
     :cond_0
     iget-object v0, p0, Lhot;->b:Lhov;
 

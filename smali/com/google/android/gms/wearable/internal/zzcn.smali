@@ -42,16 +42,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 1
-    .line 3
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lhiv;->m(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 4
     const/4 v1, 0x2
 
     iget v2, p0, Lcom/google/android/gms/wearable/internal/zzcn;->a:I
@@ -64,9 +60,7 @@
 
     invoke-static {p1, v1, v2}, Lhiv;->c(Landroid/os/Parcel;II)V
 
-    .line 5
     invoke-static {p1, v0}, Lhiv;->n(Landroid/os/Parcel;I)V
 
-    .line 6
     return-void
 .end method

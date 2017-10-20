@@ -25,9 +25,6 @@
 .method public final synthetic call()Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 1
-    .line 2
     iget-object v0, p0, Lhnp;->a:Landroid/content/Context;
 
     const-string v1, "google_sdk_flags"
@@ -38,6 +35,5 @@
 
     move-result-object v0
 
-    .line 3
     return-object v0
 .end method

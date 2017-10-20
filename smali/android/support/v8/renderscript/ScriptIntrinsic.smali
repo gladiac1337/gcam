@@ -7,18 +7,14 @@
 .method constructor <init>(JLandroid/support/v8/renderscript/RenderScript;)V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2, p3}, Landroid/support/v8/renderscript/Script;-><init>(JLandroid/support/v8/renderscript/RenderScript;)V
 
-    .line 2
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
 
     if-nez v0, :cond_0
 
-    .line 3
     new-instance v0, Landroid/support/v8/renderscript/RSRuntimeException;
 
     const-string v1, "Loading of ScriptIntrinsic failed."
@@ -27,7 +23,6 @@
 
     throw v0
 
-    .line 4
     :cond_0
     return-void
 .end method

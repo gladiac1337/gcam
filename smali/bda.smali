@@ -32,8 +32,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 17
     const-string v0, "CdrPreviewStarter"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -48,32 +46,24 @@
 .method public constructor <init>(Lbcn;Lbcw;Lhzc;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lbda;->d:Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Lbda;->b:Lbcn;
 
-    .line 4
     iput-object p2, p0, Lbda;->c:Lbcw;
 
-    .line 5
     iput-object p3, p0, Lbda;->f:Lhzc;
 
-    .line 6
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lbda;->e:Z
 
-    .line 7
     return-void
 .end method
 
@@ -82,28 +72,22 @@
 .method public final a(Lihi;Landroid/view/Surface;Lbcu;)Ljuk;
     .locals 7
 
-    .prologue
-    .line 11
     if-nez p1, :cond_0
 
-    .line 12
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljtv;->b(Ljava/lang/Object;)Ljuk;
 
     move-result-object v5
 
-    .line 16
     :goto_0
     return-object v5
 
-    .line 13
     :cond_0
     new-instance v5, Ljuw;
 
     invoke-direct {v5}, Ljuw;-><init>()V
 
-    .line 15
     iget-object v6, p0, Lbda;->f:Lhzc;
 
     new-instance v0, Lbdb;
@@ -126,19 +110,15 @@
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 8
     iget-object v1, p0, Lbda;->d:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 9
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Lbda;->e:Z
 
-    .line 10
     monitor-exit v1
 
     return-void

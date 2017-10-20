@@ -16,13 +16,10 @@
 .method public constructor <init>(Lgjf;)V
     .locals 2
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgjg;->b:Lgjf;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -31,7 +28,6 @@
 
     iput-object v0, p0, Lgjg;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 3
     return-void
 .end method
 
@@ -40,8 +36,6 @@
 .method public final close()V
     .locals 4
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lgjg;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -50,18 +44,14 @@
 
     move-result v0
 
-    .line 5
     if-nez v0, :cond_1
 
-    .line 6
     iget-object v0, p0, Lgjg;->b:Lgjf;
 
-    .line 8
     iget-object v1, v0, Lgjf;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 9
     :try_start_0
     iget v2, v0, Lgjf;->e:I
 
@@ -69,7 +59,6 @@
 
     iput v2, v0, Lgjf;->e:I
 
-    .line 10
     iget-object v2, v0, Lgjf;->d:Libq;
 
     invoke-virtual {v0}, Lgjf;->b()I
@@ -80,23 +69,18 @@
 
     move-result-object v3
 
-    .line 11
     iput-object v3, v2, Libq;->b:Ljava/lang/Object;
 
-    .line 12
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 13
     iget-object v1, v0, Lgjf;->d:Libq;
 
-    .line 14
     iget-object v1, v1, Libq;->a:Libn;
 
     invoke-virtual {v1}, Libn;->a()V
 
-    .line 15
     :cond_0
     invoke-virtual {v0}, Lgjf;->a()Z
 
@@ -104,11 +88,9 @@
 
     if-nez v1, :cond_0
 
-    .line 16
     :cond_1
     return-void
 
-    .line 12
     :catchall_0
     move-exception v0
 

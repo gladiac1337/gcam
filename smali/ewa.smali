@@ -16,8 +16,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;Lewd;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lewa;->b:Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;
 
     iput-object p2, p0, Lewa;->a:Lewd;
@@ -32,13 +30,10 @@
 .method public final close()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lewa;->b:Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;
 
     iget-object v1, p0, Lewa;->a:Lewd;
 
-    .line 3
     iget-object v2, v0, Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;->c:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -47,7 +42,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 4
     iget-object v2, v0, Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;->c:Ljava/util/List;
 
     iget-object v0, v0, Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;->c:Ljava/util/List;
@@ -58,7 +52,6 @@
 
     invoke-interface {v2, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 5
     :cond_0
     return-void
 .end method

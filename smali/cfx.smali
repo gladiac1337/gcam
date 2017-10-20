@@ -11,9 +11,6 @@
 .method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;Ljava/lang/String;Landroid/net/Uri;ZLibx;JLfvh;J)V
     .locals 21
 
-    .prologue
-    .line 1
-    .line 2
     invoke-static/range {p10 .. p10}, Ljhi;->b(Ljava/lang/Object;)Ljhi;
 
     move-result-object v15
@@ -44,17 +41,14 @@
 
     move-object/from16 v19, p13
 
-    .line 3
     invoke-direct/range {v5 .. v20}, Lfvf;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/util/Date;Ljava/util/Date;Ljava/lang/String;Landroid/net/Uri;ZLjhi;JILfvh;Z)V
 
-    .line 4
     move-wide/from16 v0, p14
 
     move-object/from16 v2, p0
 
     iput-wide v0, v2, Lcfx;->a:J
 
-    .line 5
     return-void
 .end method
 
@@ -63,19 +57,14 @@
 .method public final a()Landroid/net/Uri;
     .locals 4
 
-    .prologue
-    .line 6
     sget-object v0, Landroid/provider/MediaStore$Video$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
-    .line 7
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 8
     iget-wide v2, p0, Lfvf;->b:J
 
-    .line 9
     invoke-static {v2, v3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v1
@@ -84,11 +73,9 @@
 
     move-result-object v0
 
-    .line 10
     invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 11
     return-object v0
 .end method

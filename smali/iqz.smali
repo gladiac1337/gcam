@@ -17,22 +17,15 @@
 .method public constructor <init>(Lipj;JLandroid/graphics/RectF;Landroid/graphics/RectF;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Liqz;->a:Lipj;
 
-    .line 3
     iput-wide p2, p0, Liqz;->b:J
 
-    .line 4
     iput-object p4, p0, Liqz;->c:Landroid/graphics/RectF;
 
-    .line 5
     iput-object p5, p0, Liqz;->d:Landroid/graphics/RectF;
 
-    .line 6
     return-void
 .end method

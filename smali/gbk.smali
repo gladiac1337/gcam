@@ -11,14 +11,10 @@
 .method public constructor <init>(Lgap;)V
     .locals 0
 
-    .prologue
-    .line 104
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 105
     iput-object p1, p0, Lgbk;->a:Lgap;
 
-    .line 106
     return-void
 .end method
 
@@ -27,8 +23,6 @@
 .method public final a(Lfzs;Lfzs;)F
     .locals 42
 
-    .prologue
-    .line 1
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lgbk;->a:Lgap;
@@ -39,168 +33,136 @@
 
     iget-object v2, v0, Lgbk;->a:Lgap;
 
-    .line 2
     iget-boolean v2, v2, Lgap;->d:Z
 
-    .line 3
     if-eqz v2, :cond_1
 
-    .line 4
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lgbk;->a:Lgap;
 
-    .line 5
     move-object/from16 v0, p1
 
     iget-wide v4, v0, Lfzs;->a:J
 
-    .line 7
     move-object/from16 v0, p2
 
     iget-wide v6, v0, Lfzs;->a:J
 
-    .line 8
     invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v4
 
-    .line 9
     invoke-virtual {v2, v4, v5}, Lgap;->a(J)V
 
-    .line 10
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lgbk;->a:Lgap;
 
-    .line 11
     iget-object v3, v2, Lgap;->b:Lgbd;
 
-    .line 13
     if-eqz v3, :cond_1
 
-    .line 14
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lgbk;->a:Lgap;
 
-    .line 15
     iget-object v0, v2, Lgap;->g:Libx;
 
     move-object/from16 v39, v0
 
-    .line 20
     move-object/from16 v0, p1
 
     iget-wide v0, v0, Lfzs;->b:J
 
     move-wide/from16 v20, v0
 
-    .line 23
     move-object/from16 v0, p1
 
     iget v2, v0, Lfzs;->e:F
 
-    .line 26
     move-object/from16 v0, p1
 
     iget v15, v0, Lfzs;->f:F
 
-    .line 29
     move-object/from16 v0, p1
 
     iget-object v4, v0, Lfzs;->h:Landroid/graphics/Rect;
 
-    .line 30
     invoke-virtual {v3, v4}, Lgao;->a(Landroid/graphics/Rect;)[F
 
     move-result-object v8
 
-    .line 32
     move-object/from16 v0, p1
 
     iget-wide v4, v0, Lfzs;->a:J
 
-    .line 35
     move-object/from16 v0, p1
 
     iget-wide v6, v0, Lfzs;->c:J
 
-    .line 38
     move-object/from16 v0, p1
 
     iget-wide v0, v0, Lfzs;->g:J
 
     move-wide/from16 v18, v0
 
-    .line 41
     move-object/from16 v0, p2
 
     iget-wide v0, v0, Lfzs;->b:J
 
     move-wide/from16 v26, v0
 
-    .line 44
     move-object/from16 v0, p2
 
     iget v0, v0, Lfzs;->e:F
 
     move/from16 v28, v0
 
-    .line 47
     move-object/from16 v0, p2
 
     iget v0, v0, Lfzs;->f:F
 
     move/from16 v29, v0
 
-    .line 50
     move-object/from16 v0, p2
 
     iget-object v9, v0, Lfzs;->h:Landroid/graphics/Rect;
 
-    .line 51
     invoke-virtual {v3, v9}, Lgao;->a(Landroid/graphics/Rect;)[F
 
     move-result-object v14
 
-    .line 53
     move-object/from16 v0, p2
 
     iget-wide v10, v0, Lfzs;->a:J
 
-    .line 56
     move-object/from16 v0, p2
 
     iget-wide v12, v0, Lfzs;->c:J
 
-    .line 59
     move-object/from16 v0, p2
 
     iget-wide v0, v0, Lfzs;->g:J
 
     move-wide/from16 v24, v0
 
-    .line 61
     invoke-virtual/range {v3 .. v8}, Lgao;->a(JJ[F)J
 
     move-result-wide v16
 
     move-wide/from16 v4, v18
 
-    .line 62
     invoke-virtual/range {v3 .. v8}, Lgao;->a(JJ[F)J
 
     move-result-wide v30
 
-    .line 63
     invoke-virtual {v3, v6, v7, v8}, Lgao;->a(J[F)J
 
     move-result-wide v18
 
     move-object v9, v3
 
-    .line 64
     invoke-virtual/range {v9 .. v14}, Lgao;->a(JJ[F)J
 
     move-result-wide v22
@@ -209,32 +171,26 @@
 
     move-wide/from16 v10, v24
 
-    .line 65
     invoke-virtual/range {v9 .. v14}, Lgao;->a(JJ[F)J
 
     move-result-wide v40
 
-    .line 66
     invoke-virtual {v3, v12, v13, v14}, Lgao;->a(J[F)J
 
     move-result-wide v24
 
-    .line 67
     invoke-static/range {v16 .. v21}, Lgao;->a(JJJ)J
 
     move-result-wide v4
 
-    .line 69
     invoke-virtual {v3, v2, v15, v8}, Lgao;->a(FF[F)F
 
     move-result v6
 
-    .line 70
     invoke-static/range {v22 .. v27}, Lgao;->a(JJJ)J
 
     move-result-wide v9
 
-    .line 72
     move/from16 v0, v28
 
     move/from16 v1, v29
@@ -243,7 +199,6 @@
 
     move-result v11
 
-    .line 73
     iget-object v0, v3, Lgao;->c:Libx;
 
     move-object/from16 v36, v0
@@ -258,12 +213,10 @@
 
     move-object/from16 v37, v8
 
-    .line 74
     invoke-virtual/range {v29 .. v38}, Lgao;->a(JJJLibx;[FZ)[F
 
     move-result-object v2
 
-    .line 75
     iget-object v0, v3, Lgao;->c:Libx;
 
     move-object/from16 v28, v0
@@ -276,12 +229,10 @@
 
     move-object/from16 v29, v14
 
-    .line 76
     invoke-virtual/range {v21 .. v30}, Lgao;->a(JJJLibx;[FZ)[F
 
     move-result-object v13
 
-    .line 77
     iget-object v0, v3, Lgao;->a:Lcom/google/android/apps/camera/jni/gyro/GyroQueue;
 
     move-object/from16 v16, v0
@@ -310,17 +261,14 @@
 
     move-result-object v2
 
-    .line 78
     invoke-static {v2}, Lgbl;->a([F)Lgbl;
 
     move-result-object v6
 
-    .line 79
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 80
     const/4 v3, 0x2
 
     new-array v3, v3, [F
@@ -329,19 +277,16 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 81
     const/4 v3, 0x2
 
     new-array v3, v3, [F
 
     const/4 v4, 0x0
 
-    .line 82
     move-object/from16 v0, v39
 
     iget v5, v0, Libx;->a:I
 
-    .line 83
     int-to-float v5, v5
 
     aput v5, v3, v4
@@ -354,7 +299,6 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 84
     const/4 v3, 0x2
 
     new-array v3, v3, [F
@@ -367,53 +311,44 @@
 
     const/4 v4, 0x1
 
-    .line 85
     move-object/from16 v0, v39
 
     iget v5, v0, Libx;->b:I
 
-    .line 86
     int-to-float v5, v5
 
     aput v5, v3, v4
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 87
     const/4 v3, 0x2
 
     new-array v3, v3, [F
 
     const/4 v4, 0x0
 
-    .line 88
     move-object/from16 v0, v39
 
     iget v5, v0, Libx;->a:I
 
-    .line 89
     int-to-float v5, v5
 
     aput v5, v3, v4
 
     const/4 v4, 0x1
 
-    .line 90
     move-object/from16 v0, v39
 
     iget v5, v0, Libx;->b:I
 
-    .line 91
     int-to-float v5, v5
 
     aput v5, v3, v4
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 92
     const/4 v4, 0x0
 
-    .line 93
     check-cast v2, Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -435,7 +370,6 @@
 
     check-cast v3, [F
 
-    .line 95
     iget-object v8, v6, Lgbl;->a:[F
 
     const/4 v9, 0x6
@@ -470,7 +404,6 @@
 
     add-float/2addr v8, v9
 
-    .line 96
     const/4 v9, 0x2
 
     new-array v9, v9, [F
@@ -555,7 +488,6 @@
 
     aput v8, v9, v10
 
-    .line 98
     float-to-double v10, v4
 
     const/4 v4, 0x0
@@ -582,25 +514,21 @@
 
     float-to-double v8, v3
 
-    .line 99
     invoke-static {v12, v13, v8, v9}, Ljava/lang/Math;->hypot(DD)D
 
     move-result-wide v8
 
-    .line 100
     invoke-static {v10, v11, v8, v9}, Ljava/lang/Math;->max(DD)D
 
     move-result-wide v8
 
     double-to-float v4, v8
 
-    .line 101
     goto :goto_0
 
     :cond_0
     move v2, v4
 
-    .line 103
     :goto_1
     return v2
 
@@ -609,7 +537,6 @@
 
     goto :goto_1
 
-    .line 80
     nop
 
     :array_0

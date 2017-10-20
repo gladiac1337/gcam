@@ -18,8 +18,6 @@
 .method public constructor <init>(Licj;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbib;->a:Licj;
 
     iput-object p2, p0, Lbib;->b:Ljava/lang/String;
@@ -36,29 +34,23 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbib;->a:Licj;
 
     iget-object v1, p0, Lbib;->b:Ljava/lang/String;
 
     invoke-interface {v0, v1}, Licj;->d(Ljava/lang/String;)V
 
-    .line 3
     return-void
 .end method
 
 .method public final a(Ljava/lang/Throwable;)V
     .locals 2
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lbib;->a:Licj;
 
     iget-object v1, p0, Lbib;->c:Ljava/lang/String;
 
     invoke-interface {v0, v1, p1}, Licj;->c(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 5
     return-void
 .end method

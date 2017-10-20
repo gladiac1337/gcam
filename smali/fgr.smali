@@ -16,8 +16,6 @@
 .method public constructor <init>(Ljhi;Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfgr;->a:Ljhi;
 
     iput-object p2, p0, Lfgr;->b:Landroid/content/Context;
@@ -32,18 +30,14 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v1, 0x0
 
-    .line 2
     check-cast p1, Ljava/util/List;
 
-    .line 3
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -54,7 +48,6 @@
 
     move-result v3
 
-    .line 5
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -65,7 +58,6 @@
 
     move-result v0
 
-    .line 6
     iget-object v4, p0, Lfgr;->a:Ljhi;
 
     invoke-virtual {v4}, Ljhi;->a()Z
@@ -79,7 +71,6 @@
     :cond_0
     iget-object v3, p0, Lfgr;->b:Landroid/content/Context;
 
-    .line 7
     invoke-static {v3}, Levm;->a(Landroid/content/Context;)Z
 
     move-result v3
@@ -91,18 +82,15 @@
     :cond_1
     move v0, v2
 
-    .line 8
     :goto_0
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    .line 9
     return-object v0
 
     :cond_2
     move v0, v1
 
-    .line 7
     goto :goto_0
 .end method

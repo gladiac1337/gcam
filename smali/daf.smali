@@ -44,11 +44,8 @@
 .method public constructor <init>(Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v1, 0x1
 
     invoke-static {p1, v1}, Ldaf;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -59,7 +56,6 @@
 
     iput-object v1, p0, Ldaf;->a:Ljxb;
 
-    .line 3
     const/4 v1, 0x2
 
     invoke-static {p2, v1}, Ldaf;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -70,7 +66,6 @@
 
     iput-object v1, p0, Ldaf;->b:Ljxb;
 
-    .line 4
     const/4 v1, 0x3
 
     invoke-static {p3, v1}, Ldaf;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -81,7 +76,6 @@
 
     iput-object v1, p0, Ldaf;->c:Ljxb;
 
-    .line 5
     const/4 v1, 0x4
 
     invoke-static {p4, v1}, Ldaf;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -92,7 +86,6 @@
 
     iput-object v1, p0, Ldaf;->d:Ljxb;
 
-    .line 6
     const/4 v1, 0x5
 
     invoke-static {p5, v1}, Ldaf;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -103,7 +96,6 @@
 
     iput-object v1, p0, Ldaf;->e:Ljxb;
 
-    .line 7
     const/4 v1, 0x6
 
     invoke-static {p6, v1}, Ldaf;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -114,7 +106,6 @@
 
     iput-object v1, p0, Ldaf;->f:Ljxb;
 
-    .line 8
     const/4 v1, 0x7
 
     invoke-static {p7, v1}, Ldaf;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -125,7 +116,6 @@
 
     iput-object v1, p0, Ldaf;->g:Ljxb;
 
-    .line 9
     const/16 v1, 0x8
 
     invoke-static {p8, v1}, Ldaf;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -136,7 +126,6 @@
 
     iput-object v1, p0, Ldaf;->h:Ljxb;
 
-    .line 10
     const/16 v1, 0x9
 
     invoke-static {p9, v1}, Ldaf;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -147,7 +136,6 @@
 
     iput-object v1, p0, Ldaf;->i:Ljxb;
 
-    .line 11
     const/16 v1, 0xa
 
     invoke-static {p10, v1}, Ldaf;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -158,7 +146,6 @@
 
     iput-object v1, p0, Ldaf;->j:Ljxb;
 
-    .line 12
     const/16 v1, 0xb
 
     invoke-static {p11, v1}, Ldaf;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -169,7 +156,6 @@
 
     iput-object v1, p0, Ldaf;->k:Ljxb;
 
-    .line 13
     const/16 v1, 0xc
 
     invoke-static {p12, v1}, Ldaf;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -180,7 +166,6 @@
 
     iput-object v1, p0, Ldaf;->l:Ljxb;
 
-    .line 14
     const/16 v1, 0xd
 
     invoke-static {p13, v1}, Ldaf;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -191,7 +176,6 @@
 
     iput-object v1, p0, Ldaf;->m:Ljxb;
 
-    .line 15
     const/16 v1, 0xe
 
     move-object/from16 v0, p14
@@ -204,10 +188,8 @@
 
     iput-object v1, p0, Ldaf;->n:Ljxb;
 
-    .line 16
     const/16 v1, 0xf
 
-    .line 17
     move-object/from16 v0, p15
 
     invoke-static {v0, v1}, Ldaf;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -218,7 +200,6 @@
 
     iput-object v1, p0, Ldaf;->o:Ljxb;
 
-    .line 18
     const/16 v1, 0x10
 
     move-object/from16 v0, p16
@@ -231,18 +212,14 @@
 
     iput-object v1, p0, Ldaf;->p:Ljxb;
 
-    .line 19
     return-void
 .end method
 
 .method private static a(Ljava/lang/Object;I)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 20
     if-nez p0, :cond_0
 
-    .line 21
     new-instance v0, Ljava/lang/NullPointerException;
 
     const/16 v1, 0x5d
@@ -269,7 +246,6 @@
 
     throw v0
 
-    .line 22
     :cond_0
     return-object p0
 .end method
@@ -279,16 +255,12 @@
 .method public final synthetic a(Liaj;Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;Lbev;Lbdp;)Ldat;
     .locals 20
 
-    .prologue
-    .line 23
-    .line 24
     new-instance v2, Ldad;
 
     move-object/from16 v0, p0
 
     iget-object v3, v0, Ldaf;->a:Ljxb;
 
-    .line 25
     invoke-interface {v3}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -303,7 +275,6 @@
 
     iget-object v3, v0, Ldaf;->b:Ljxb;
 
-    .line 26
     invoke-interface {v3}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -322,7 +293,6 @@
 
     iget-object v4, v0, Ldaf;->c:Ljxb;
 
-    .line 27
     invoke-interface {v4}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v4
@@ -341,7 +311,6 @@
 
     iget-object v5, v0, Ldaf;->d:Ljxb;
 
-    .line 28
     invoke-interface {v5}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v5
@@ -360,7 +329,6 @@
 
     iget-object v6, v0, Ldaf;->e:Ljxb;
 
-    .line 29
     invoke-interface {v6}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -375,7 +343,6 @@
 
     iget-object v6, v0, Ldaf;->f:Ljxb;
 
-    .line 30
     invoke-interface {v6}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -394,7 +361,6 @@
 
     iget-object v7, v0, Ldaf;->g:Ljxb;
 
-    .line 31
     invoke-interface {v7}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v7
@@ -413,7 +379,6 @@
 
     iget-object v8, v0, Ldaf;->h:Ljxb;
 
-    .line 32
     invoke-interface {v8}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v8
@@ -432,7 +397,6 @@
 
     iget-object v9, v0, Ldaf;->i:Ljxb;
 
-    .line 33
     invoke-interface {v9}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v9
@@ -451,7 +415,6 @@
 
     iget-object v10, v0, Ldaf;->j:Ljxb;
 
-    .line 34
     invoke-interface {v10}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v10
@@ -470,7 +433,6 @@
 
     iget-object v11, v0, Ldaf;->k:Ljxb;
 
-    .line 35
     invoke-interface {v11}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v11
@@ -489,7 +451,6 @@
 
     iget-object v12, v0, Ldaf;->l:Ljxb;
 
-    .line 36
     invoke-interface {v12}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v12
@@ -504,7 +465,6 @@
 
     iget-object v12, v0, Ldaf;->m:Ljxb;
 
-    .line 37
     invoke-interface {v12}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v12
@@ -523,7 +483,6 @@
 
     iget-object v13, v0, Ldaf;->n:Ljxb;
 
-    .line 38
     invoke-interface {v13}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v13
@@ -542,7 +501,6 @@
 
     iget-object v14, v0, Ldaf;->o:Ljxb;
 
-    .line 39
     invoke-interface {v14}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v14
@@ -561,7 +519,6 @@
 
     iget-object v15, v0, Ldaf;->p:Ljxb;
 
-    .line 40
     invoke-interface {v15}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v15
@@ -578,7 +535,6 @@
 
     const/16 v16, 0x11
 
-    .line 41
     move-object/from16 v0, p1
 
     move/from16 v1, v16
@@ -591,7 +547,6 @@
 
     const/16 v17, 0x12
 
-    .line 42
     move-object/from16 v0, p2
 
     move/from16 v1, v17
@@ -604,7 +559,6 @@
 
     const/16 v18, 0x13
 
-    .line 43
     move-object/from16 v0, p3
 
     move/from16 v1, v18
@@ -617,7 +571,6 @@
 
     const/16 v19, 0x14
 
-    .line 44
     move-object/from16 v0, p4
 
     move/from16 v1, v19
@@ -626,6 +579,5 @@
 
     invoke-direct/range {v2 .. v18}, Ldad;-><init>(Lbah;Leqd;Lhag;Lhzv;Lgdo;Lgnb;Ldcp;Ldda;Lfia;Liaj;Lasl;Ldbl;Lbiu;Liaj;Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;Lbev;)V
 
-    .line 45
     return-object v2
 .end method

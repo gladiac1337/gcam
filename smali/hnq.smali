@@ -56,10 +56,8 @@
 .method public final a(ILandroid/content/Intent;)V
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     const-string v0, "EXTRA_GOOGLE_HELP"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -74,10 +72,8 @@
 
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2
     iget-object v0, v0, Lcom/google/android/gms/googlehelp/GoogleHelp;->b:Landroid/net/Uri;
 
-    .line 3
     invoke-virtual {v2, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     move-result-object v2
@@ -86,7 +82,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Lhnq;->a:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -105,7 +100,6 @@
 
     const/4 v0, 0x1
 
-    .line 5
     :goto_0
     if-eqz v0, :cond_1
 
@@ -119,10 +113,8 @@
     :cond_0
     move v0, v1
 
-    .line 4
     goto :goto_0
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lhnq;->a:Landroid/app/Activity;
 

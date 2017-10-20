@@ -30,18 +30,14 @@
 .method public final a(ILandroid/os/Bundle;ILandroid/content/Intent;)V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhpt;->a:Landroid/content/Context;
 
     iget-object v1, p0, Lhpt;->b:Landroid/net/Uri;
 
-    .line 2
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->revokeUriPermission(Landroid/net/Uri;I)V
 
-    .line 3
     iget-object v0, p0, Lhpt;->c:Lhpq;
 
     invoke-interface {v0, p1, p2, p3, p4}, Lhpq;->a(ILandroid/os/Bundle;ILandroid/content/Intent;)V

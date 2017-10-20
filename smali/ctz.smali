@@ -29,21 +29,17 @@
 .method public final a(Ljava/lang/Object;)Ljuk;
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lctz;->a:Lcty;
 
     iget-object v1, p0, Lctz;->b:Lcqq;
 
     check-cast p1, Lfhs;
 
-    .line 2
     iget-object v1, v1, Lcqq;->d:Lfhu;
 
     invoke-virtual {v0, v1, p1}, Lcty;->a(Lfhu;Lfhs;)Ljuk;
 
     move-result-object v0
 
-    .line 3
     return-object v0
 .end method

@@ -33,11 +33,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
-    .line 2
     new-instance v0, Lbhq;
 
     invoke-direct {v0}, Lbhq;-><init>()V
@@ -50,34 +47,28 @@
 .method private final a(Landroid/net/Uri;Lhfc;)Landroid/os/ParcelFileDescriptor;
     .locals 9
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v8, 0x0
 
     const/4 v2, 0x0
 
-    .line 123
     invoke-virtual {p1}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
 
     move-result-object v0
 
-    .line 124
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 125
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 126
     iget-object v0, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->h:Lbhs;
 
-    .line 127
     invoke-virtual {p0}, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -86,10 +77,8 @@
 
     move-result-object v4
 
-    .line 128
     iget v5, p2, Lhfc;->d:I
 
-    .line 129
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v4
@@ -98,7 +87,6 @@
 
     if-ne p2, v5, :cond_0
 
-    .line 131
     :goto_0
     iget-object v0, v0, Lbhs;->a:Landroid/content/Context;
 
@@ -106,17 +94,14 @@
 
     move-result-object v0
 
-    .line 132
     const/4 v5, 0x0
 
     invoke-virtual {v0, v3, v5}, Landroid/content/res/Resources;->getDrawable(ILandroid/content/res/Resources$Theme;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 133
     if-nez v0, :cond_1
 
-    .line 134
     new-instance v0, Ljava/io/FileNotFoundException;
 
     const/16 v1, 0x25
@@ -146,23 +131,19 @@
     :cond_0
     move v1, v2
 
-    .line 129
     goto :goto_0
 
-    .line 135
     :cond_1
     instance-of v3, v0, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v3, :cond_2
 
-    .line 136
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 144
     :goto_1
     invoke-static {v0}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -170,22 +151,18 @@
 
     check-cast v0, Landroid/graphics/Bitmap;
 
-    .line 145
     invoke-static {v0, v4, v4, v2}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 147
     if-eqz v1, :cond_3
 
-    .line 148
     const/16 v0, 0x14
 
     new-array v1, v0, [F
 
     fill-array-data v1, :array_0
 
-    .line 150
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -198,32 +175,26 @@
 
     move-result-object v4
 
-    .line 151
     invoke-static {v0, v3, v4}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 152
     new-instance v3, Landroid/graphics/Canvas;
 
     invoke-direct {v3, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 153
     new-instance v4, Landroid/graphics/Paint;
 
     invoke-direct {v4}, Landroid/graphics/Paint;-><init>()V
 
-    .line 154
     new-instance v5, Landroid/graphics/ColorMatrixColorFilter;
 
     invoke-direct {v5, v1}, Landroid/graphics/ColorMatrixColorFilter;-><init>([F)V
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 155
     invoke-virtual {v3, v2, v8, v8, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 157
     :goto_2
     sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -231,10 +202,8 @@
 
     move-result-object v0
 
-    .line 158
     return-object v0
 
-    .line 138
     :cond_2
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -246,17 +215,14 @@
 
     sget-object v6, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    .line 139
     invoke-static {v3, v5, v6}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v3
 
-    .line 140
     new-instance v5, Landroid/graphics/Canvas;
 
     invoke-direct {v5, v3}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 141
     invoke-virtual {v5}, Landroid/graphics/Canvas;->getWidth()I
 
     move-result v6
@@ -267,7 +233,6 @@
 
     invoke-virtual {v0, v2, v2, v6, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 142
     invoke-virtual {v0, v5}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     move-object v0, v3
@@ -279,7 +244,6 @@
 
     goto :goto_2
 
-    .line 148
     nop
 
     :array_0
@@ -310,14 +274,12 @@
 .method private final a(Ljava/lang/String;)Ljava/io/File;
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
     const/4 v5, 0x0
 
     const/4 v3, 0x0
 
-    .line 108
     invoke-virtual {p0}, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -328,7 +290,6 @@
 
     const-string v1, "external"
 
-    .line 109
     invoke-static {v1}, Landroid/provider/MediaStore$Files;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
@@ -355,12 +316,10 @@
 
     move-object v5, v3
 
-    .line 110
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v2
 
-    .line 111
     if-eqz v2, :cond_0
 
     :try_start_0
@@ -373,23 +332,19 @@
 
     if-eq v0, v6, :cond_2
 
-    .line 112
     :cond_0
     if-eqz v2, :cond_1
 
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    .line 117
     :cond_1
     :goto_0
     return-object v3
 
-    .line 114
     :cond_2
     :try_start_1
     invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 115
     new-instance v0, Ljava/io/File;
 
     const/4 v1, 0x0
@@ -403,7 +358,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 116
     if-eqz v2, :cond_3
 
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
@@ -411,10 +365,8 @@
     :cond_3
     move-object v3, v0
 
-    .line 117
     goto :goto_0
 
-    .line 118
     :catch_0
     move-exception v0
 
@@ -423,7 +375,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 119
     :catchall_0
     move-exception v1
 
@@ -466,8 +417,6 @@
 .method private final a()V
     .locals 2
 
-    .prologue
-    .line 120
     iget-object v0, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->b:Lbht;
 
     invoke-virtual {p0}, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->getCallingPackage()Ljava/lang/String;
@@ -480,14 +429,12 @@
 
     if-nez v0, :cond_0
 
-    .line 121
     new-instance v0, Ljava/lang/SecurityException;
 
     invoke-direct {v0}, Ljava/lang/SecurityException;-><init>()V
 
     throw v0
 
-    .line 122
     :cond_0
     return-void
 .end method
@@ -497,22 +444,16 @@
 .method public attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V
     .locals 0
 
-    .prologue
-    .line 3
     iput-object p2, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->c:Landroid/content/pm/ProviderInfo;
 
-    .line 4
     invoke-super {p0, p1, p2}, Landroid/content/ContentProvider;->attachInfo(Landroid/content/Context;Landroid/content/pm/ProviderInfo;)V
 
-    .line 5
     return-void
 .end method
 
 .method public call(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 3
 
-    .prologue
-    .line 62
     const-string v0, "version"
 
     invoke-static {v0, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -521,19 +462,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 63
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 64
     const-string v1, "version"
 
     const/4 v2, 0x3
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 67
     :goto_0
     return-object v0
 
@@ -548,20 +486,16 @@
 .method public delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 5
 
-    .prologue
     const/4 v4, 0x1
 
-    .line 80
     const-string v0, "CamCntProvider"
 
     const-string v1, "request to delete photos"
 
     invoke-static {v0, v1}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 81
     invoke-direct {p0}, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->a()V
 
-    .line 82
     iget-object v0, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->f:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
@@ -572,7 +506,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 83
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -611,21 +544,17 @@
 
     throw v0
 
-    .line 84
     :cond_0
     invoke-virtual {p1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 85
     invoke-direct {p0, v0}, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->a(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 86
     if-nez v0, :cond_1
 
-    .line 87
     const-string v0, "CamCntProvider"
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -662,11 +591,9 @@
 
     invoke-static {v0, v1}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 90
     :goto_0
     return v4
 
-    .line 89
     :cond_1
     iget-object v1, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->a:Lbhq;
 
@@ -678,8 +605,6 @@
 .method public getType(Landroid/net/Uri;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 78
     const/4 v0, 0x0
 
     return-object v0
@@ -688,8 +613,6 @@
 .method public insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
     .locals 1
 
-    .prologue
-    .line 79
     const/4 v0, 0x0
 
     return-object v0
@@ -698,11 +621,8 @@
 .method public onCreate()Z
     .locals 5
 
-    .prologue
-    .line 6
     new-instance v0, Ljava/util/HashSet;
 
-    .line 7
     invoke-virtual {p0}, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -723,7 +643,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 8
     new-instance v1, Lbht;
 
     invoke-virtual {p0}, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->getContext()Landroid/content/Context;
@@ -734,132 +653,102 @@
 
     iput-object v1, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->b:Lbht;
 
-    .line 10
     iget-object v0, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->c:Landroid/content/pm/ProviderInfo;
 
-    .line 12
     new-instance v1, Lbre;
 
     invoke-direct {v1, p0, v0}, Lbre;-><init>(Landroid/content/ContentProvider;Landroid/content/pm/ProviderInfo;)V
 
-    .line 15
     invoke-virtual {p0}, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/apps/camera/contentprovider/HasCameraContentProviderComponent;
 
-    .line 16
     invoke-interface {v0, v1}, Lcom/google/android/apps/camera/contentprovider/HasCameraContentProviderComponent;->cameraContentProviderComponent(Lbre;)Lbhr;
 
     move-result-object v1
 
-    .line 20
     sget-object v0, Lbhl;->a:Lbhl;
 
-    .line 21
     const-string v2, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 22
     invoke-static {v0, v2}, Ljvr;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lbhl;
 
-    .line 24
     iput-object v0, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->d:Lbhl;
 
-    .line 25
     iget-object v0, v1, Lbhr;->a:Lbre;
 
-    .line 26
     iget-object v0, v0, Lbre;->a:Landroid/content/pm/ProviderInfo;
 
     iget-object v0, v0, Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
 
-    .line 27
     const-string v2, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 28
     invoke-static {v0, v2}, Ljvr;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 30
     iput-object v0, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->e:Ljava/lang/String;
 
-    .line 31
     iget-object v0, v1, Lbhr;->a:Lbre;
 
-    .line 32
     iget-object v0, v0, Lbre;->a:Landroid/content/pm/ProviderInfo;
 
     iget-object v0, v0, Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
 
-    .line 33
     const-string v2, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 34
     invoke-static {v0, v2}, Ljvr;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 35
     invoke-static {v0}, Lbjg;->a(Ljava/lang/String;)Landroid/content/UriMatcher;
 
     move-result-object v0
 
     const-string v2, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 36
     invoke-static {v0, v2}, Ljvr;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/content/UriMatcher;
 
-    .line 38
     iput-object v0, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->f:Landroid/content/UriMatcher;
 
-    .line 39
     iget-object v0, v1, Lbhr;->b:Ljxb;
 
-    .line 40
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lbnm;
 
-    .line 42
     iput-object v0, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->g:Lbnm;
 
-    .line 43
     iget-object v0, v1, Lbhr;->d:Lbuz;
 
-    .line 44
     iget-object v0, v0, Lbuz;->bg:Ljxb;
 
-    .line 45
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
-    .line 46
     new-instance v2, Lbhs;
 
     iget-object v0, v1, Lbhr;->a:Lbre;
 
-    .line 47
     iget-object v0, v0, Lbre;->b:Landroid/content/Context;
 
-    .line 48
     const-string v3, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 49
     invoke-static {v0, v3}, Ljvr;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -868,38 +757,30 @@
 
     invoke-direct {v2, v0}, Lbhs;-><init>(Landroid/content/Context;)V
 
-    .line 51
     iput-object v2, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->h:Lbhs;
 
-    .line 52
     iget-object v0, v1, Lbhr;->c:Ljxb;
 
-    .line 53
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lbol;
 
-    .line 55
     iput-object v0, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->i:Lbol;
 
-    .line 56
     iget-object v0, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->e:Ljava/lang/String;
 
     iget-object v1, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->d:Lbhl;
 
-    .line 57
     iget-object v1, v1, Lbhl;->b:Ljava/lang/String;
 
-    .line 58
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 59
     const-string v0, "CamCntProvider"
 
     iget-object v1, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->e:Ljava/lang/String;
@@ -960,10 +841,8 @@
 
     invoke-static {v0, v1}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 60
     const/4 v0, 0x0
 
-    .line 61
     :goto_0
     return v0
 
@@ -976,11 +855,8 @@
 .method public openFile(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
     .locals 6
 
-    .prologue
-    .line 92
     invoke-direct {p0}, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->a()V
 
-    .line 93
     const-string v0, "r"
 
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -989,7 +865,6 @@
 
     if-nez v0, :cond_1
 
-    .line 94
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Unsupported mode: "
@@ -1020,7 +895,6 @@
 
     goto :goto_0
 
-    .line 95
     :cond_1
     iget-object v0, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->f:Landroid/content/UriMatcher;
 
@@ -1030,7 +904,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 107
     :pswitch_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1070,7 +943,6 @@
 
     throw v0
 
-    .line 96
     :pswitch_1
     const-string v0, "CamCntProvider"
 
@@ -1108,18 +980,15 @@
 
     invoke-static {v0, v1}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 97
     sget-object v0, Lhfc;->a:Lhfc;
 
     invoke-direct {p0, p1, v0}, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->a(Landroid/net/Uri;Lhfc;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v0
 
-    .line 103
     :goto_1
     return-object v0
 
-    .line 98
     :pswitch_2
     const-string v0, "CamCntProvider"
 
@@ -1157,7 +1026,6 @@
 
     invoke-static {v0, v1}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 99
     sget-object v0, Lhfc;->b:Lhfc;
 
     invoke-direct {p0, p1, v0}, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->a(Landroid/net/Uri;Lhfc;)Landroid/os/ParcelFileDescriptor;
@@ -1166,7 +1034,6 @@
 
     goto :goto_1
 
-    .line 100
     :pswitch_3
     const-string v0, "CamCntProvider"
 
@@ -1204,7 +1071,6 @@
 
     invoke-static {v0, v1}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 101
     sget-object v0, Lhfc;->c:Lhfc;
 
     invoke-direct {p0, p1, v0}, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->a(Landroid/net/Uri;Lhfc;)Landroid/os/ParcelFileDescriptor;
@@ -1213,7 +1079,6 @@
 
     goto :goto_1
 
-    .line 102
     :pswitch_4
     :try_start_0
     iget-object v0, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->i:Lbol;
@@ -1222,7 +1087,6 @@
 
     move-result-object v5
 
-    .line 103
     sget-object v1, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     const-string v2, ""
@@ -1241,18 +1105,15 @@
 
     goto :goto_1
 
-    .line 104
     :catch_0
     move-exception v0
 
-    .line 105
     new-instance v1, Ljava/io/FileNotFoundException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 106
     invoke-virtual {v0}, Lbor;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -1309,7 +1170,6 @@
 
     throw v1
 
-    .line 95
     nop
 
     :pswitch_data_0
@@ -1326,14 +1186,10 @@
 .method public query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     .locals 4
 
-    .prologue
-    .line 68
     invoke-direct {p0}, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->a()V
 
-    .line 69
     iget-object v0, p0, Lcom/google/android/apps/camera/contentprovider/CameraContentProvider;->g:Lbnm;
 
-    .line 70
     iget-object v1, v0, Lbnm;->d:Landroid/content/UriMatcher;
 
     invoke-virtual {v1, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
@@ -1342,7 +1198,6 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 74
     :pswitch_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -1382,32 +1237,26 @@
 
     throw v0
 
-    .line 71
     :pswitch_1
     iget-object v0, v0, Lbnm;->a:Lbnl;
 
-    .line 76
     :goto_0
     invoke-interface {v0, p1, p2}, Lbnl;->a(Landroid/net/Uri;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 77
     return-object v0
 
-    .line 72
     :pswitch_2
     iget-object v0, v0, Lbnm;->b:Lbnl;
 
     goto :goto_0
 
-    .line 73
     :pswitch_3
     iget-object v0, v0, Lbnm;->c:Lbnl;
 
     goto :goto_0
 
-    .line 70
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -1424,8 +1273,6 @@
 .method public update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
     .locals 1
 
-    .prologue
-    .line 91
     const/4 v0, 0x0
 
     return v0

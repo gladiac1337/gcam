@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 38
     const-string v0, "BlurStack"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -35,8 +33,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,8 +41,6 @@
 .method public static a()F
     .locals 1
 
-    .prologue
-    .line 1
     const/high16 v0, 0x41c80000    # 25.0f
 
     return v0
@@ -55,8 +49,6 @@
 .method public static c(I)I
     .locals 1
 
-    .prologue
-    .line 20
     div-int/lit8 v0, p0, 0x4
 
     rsub-int/lit8 v0, v0, 0x40
@@ -67,8 +59,6 @@
 .method public static d(I)I
     .locals 1
 
-    .prologue
-    .line 21
     rsub-int/lit8 v0, p0, 0x40
 
     shl-int/lit8 v0, v0, 0x2
@@ -81,8 +71,6 @@
 .method public final a(I)F
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lhhk;->b:[F
 
     add-int/lit8 v1, p1, -0x1
@@ -95,8 +83,6 @@
 .method public final a(II)I
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lhhk;->c:[Lhjt;
 
     aget-object v0, v0, p1
@@ -111,10 +97,8 @@
 .method public final a(IF)Ljava/util/ArrayList;
     .locals 6
 
-    .prologue
     const/16 v4, 0x40
 
-    .line 23
     new-instance v1, Ljava/util/ArrayList;
 
     iget-object v0, p0, Lhhk;->b:[F
@@ -123,27 +107,22 @@
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 24
     if-ne p1, v4, :cond_0
 
     move-object v0, v1
 
-    .line 37
     :goto_0
     return-object v0
 
-    .line 26
     :cond_0
     add-int/lit8 v2, p1, 0x1
 
-    .line 27
     new-instance v0, Lhjt;
 
     invoke-direct {v0, v2}, Lhjt;-><init>(I)V
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 28
     invoke-virtual {p0, v2}, Lhhk;->a(I)F
 
     move-result v0
@@ -156,14 +135,11 @@
 
     move v2, v5
 
-    .line 29
     :goto_1
     if-ge v0, v4, :cond_2
 
-    .line 30
     add-int/lit8 v3, v0, 0x1
 
-    .line 31
     invoke-virtual {p0, v3}, Lhhk;->a(I)F
 
     move-result v0
@@ -172,12 +148,10 @@
 
     if-gtz v0, :cond_1
 
-    .line 32
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 33
     add-int/lit8 v0, v0, -0x1
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -190,10 +164,8 @@
 
     move v0, v3
 
-    .line 34
     goto :goto_1
 
-    .line 35
     :cond_1
     new-instance v0, Lhjt;
 
@@ -201,7 +173,6 @@
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 36
     invoke-virtual {p0, v3}, Lhhk;->a(I)F
 
     move-result v0
@@ -217,15 +188,12 @@
     :cond_2
     move-object v0, v1
 
-    .line 37
     goto :goto_0
 .end method
 
 .method public final b(I)I
     .locals 2
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lhhk;->c:[Lhjt;
 
     aget-object v0, v0, p1
@@ -248,11 +216,8 @@
 .method public final toString()Ljava/lang/String;
     .locals 7
 
-    .prologue
-    .line 5
     const-string v0, "disparity range: 64, 1\n"
 
-    .line 6
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -321,17 +286,14 @@
 
     move-result-object v0
 
-    .line 7
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 8
     iget-object v1, p0, Lhhk;->c:[Lhjt;
 
     array-length v1, v1
 
-    .line 9
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -370,7 +332,6 @@
 
     move-result-object v0
 
-    .line 10
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -415,7 +376,6 @@
 
     move-result-object v1
 
-    .line 11
     const/4 v0, 0x0
 
     :goto_0
@@ -425,21 +385,18 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 12
     iget-object v2, p0, Lhhk;->c:[Lhjt;
 
     aget-object v2, v2, v0
 
     iget v2, v2, Lhjt;->a:I
 
-    .line 13
     iget-object v3, p0, Lhhk;->c:[Lhjt;
 
     aget-object v3, v3, v0
 
     iget v4, v3, Lhjt;->b:I
 
-    .line 14
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -496,11 +453,9 @@
 
     move-result-object v1
 
-    .line 15
     :goto_1
     if-lt v2, v4, :cond_0
 
-    .line 16
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -567,7 +522,6 @@
 
     move-result-object v3
 
-    .line 17
     add-int/lit8 v1, v2, -0x1
 
     move v2, v1
@@ -576,13 +530,11 @@
 
     goto :goto_1
 
-    .line 18
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_0
 
-    .line 19
     :cond_1
     return-object v1
 .end method

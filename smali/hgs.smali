@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 25
     const-string v0, "Dataset"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -33,30 +31,22 @@
 .method private constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     iput-object p1, p0, Lhgs;->a:Ljava/lang/String;
 
-    .line 22
     iput-object p2, p0, Lhgs;->b:Ljava/lang/String;
 
-    .line 23
     return-void
 .end method
 
 .method public static a(Ljava/io/File;Lgvu;)Lhgs;
     .locals 5
 
-    .prologue
-    .line 1
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -65,7 +55,6 @@
 
     move-result-object v1
 
-    .line 3
     sget-object v2, Ljava/io/File;->separator:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -116,15 +105,12 @@
 
     move-result-object v2
 
-    .line 4
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5
     const/4 v0, 0x1
 
-    .line 6
     :goto_0
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -132,7 +118,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 7
     new-instance v1, Ljava/io/File;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -169,12 +154,10 @@
 
     invoke-direct {v1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 8
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 9
     :cond_0
     invoke-virtual {v1}, Ljava/io/File;->getParent()Ljava/lang/String;
 
@@ -184,12 +167,10 @@
 
     move-result-object v1
 
-    .line 10
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 11
     invoke-virtual {v2}, Ljava/io/File;->mkdirs()Z
 
     move-result v0
@@ -202,14 +183,12 @@
 
     if-nez v0, :cond_2
 
-    .line 12
     sget-object v0, Lhgs;->c:Ljava/lang/String;
 
     const-string v1, "Failed to create directory"
 
     invoke-static {v0, v1}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 13
     new-instance v1, Ljava/io/FileNotFoundException;
 
     const-string v3, "Failed to create directory "
@@ -244,7 +223,6 @@
 
     goto :goto_1
 
-    .line 14
     :cond_2
     new-instance v0, Lhgs;
 
@@ -258,7 +236,6 @@
 
     invoke-direct {v0, v1, v2}, Lhgs;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 15
     return-object v0
 .end method
 
@@ -267,8 +244,6 @@
 .method public final a()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 16
     invoke-virtual {p0}, Lhgs;->b()Ljava/lang/String;
 
     move-result-object v0
@@ -331,8 +306,6 @@
 .method public final a(I)Ljava/lang/String;
     .locals 7
 
-    .prologue
-    .line 17
     invoke-virtual {p0}, Lhgs;->b()Ljava/lang/String;
 
     move-result-object v0
@@ -349,7 +322,6 @@
 
     const/4 v5, 0x0
 
-    .line 18
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -436,15 +408,12 @@
 
     move-result-object v0
 
-    .line 19
     return-object v0
 .end method
 
 .method public final b()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lhgs;->a:Ljava/lang/String;
 
     sget-object v1, Ljava/io/File;->separator:Ljava/lang/String;

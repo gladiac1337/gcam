@@ -16,17 +16,12 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$AllocateFilterCommand;->mClassName:Ljava/lang/String;
 
-    .line 3
     iput-object p2, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$AllocateFilterCommand;->mFilterName:Ljava/lang/String;
 
-    .line 4
     return-void
 .end method
 
@@ -35,12 +30,10 @@
 .method public compileToJava(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Lcom/google/android/libraries/smartburst/filterfw/GraphReader$GraphFactorySource;)V
     .locals 6
 
-    .prologue
     const/4 v5, 0x1
 
     const/4 v4, 0x0
 
-    .line 13
     const-string v0, "Filter %s = new %s(context, \"%s\");"
 
     const/4 v1, 0x3
@@ -67,7 +60,6 @@
 
     invoke-virtual {p2, v0}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$GraphFactorySource;->addBuildCommand(Ljava/lang/String;)V
 
-    .line 14
     const-string v0, "builder.addFilter(%s);"
 
     new-array v1, v5, [Ljava/lang/Object;
@@ -82,15 +74,12 @@
 
     invoke-virtual {p2, v0}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$GraphFactorySource;->addBuildCommand(Ljava/lang/String;)V
 
-    .line 15
     return-void
 .end method
 
 .method public execute(Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;)V
     .locals 5
 
-    .prologue
-    .line 5
     :try_start_0
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->getFactory()Lcom/google/android/libraries/smartburst/filterfw/FilterFactory;
 
@@ -100,33 +89,27 @@
 
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$AllocateFilterCommand;->mFilterName:Ljava/lang/String;
 
-    .line 6
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->getContext()Lcom/google/android/libraries/smartburst/filterfw/MffContext;
 
     move-result-object v3
 
-    .line 7
     invoke-virtual {v0, v1, v2, v3}, Lcom/google/android/libraries/smartburst/filterfw/FilterFactory;->createFilterByClassName(Ljava/lang/String;Ljava/lang/String;Lcom/google/android/libraries/smartburst/filterfw/MffContext;)Lcom/google/android/libraries/smartburst/filterfw/Filter;
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    .line 11
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->getBuilder()Lcom/google/android/libraries/smartburst/filterfw/FilterGraph$Builder;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Lcom/google/android/libraries/smartburst/filterfw/FilterGraph$Builder;->addFilter(Lcom/google/android/libraries/smartburst/filterfw/Filter;)V
 
-    .line 12
     return-void
 
-    .line 9
     :catch_0
     move-exception v0
 
-    .line 10
     new-instance v1, Ljava/lang/RuntimeException;
 
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$AllocateFilterCommand;->mFilterName:Ljava/lang/String;

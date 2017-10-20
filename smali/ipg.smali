@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 16
     const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/String;
@@ -67,8 +65,6 @@
 .method public static a(Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 1
     const-string v0, "Collage_Action"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -87,7 +83,6 @@
 
     const-string v0, "Collage_CameraPan"
 
-    .line 2
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -97,23 +92,18 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 3
     :goto_0
     return v0
 
-    .line 2
     :cond_1
     const/4 v0, 0x0
 
-    .line 3
     goto :goto_0
 .end method
 
 .method public static b(Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 4
     const-string v0, "GIF_Action"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -145,8 +135,6 @@
 .method public static c(Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 5
     const-string v0, "Video_VFR"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -159,7 +147,6 @@
 .method public static d(Ljava/lang/String;)I
     .locals 6
 
-    .prologue
     const/4 v1, 0x3
 
     const/4 v2, 0x2
@@ -170,7 +157,6 @@
 
     const/4 v3, -0x1
 
-    .line 6
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
     move-result v5
@@ -185,12 +171,10 @@
 
     move v0, v4
 
-    .line 15
     :goto_1
     :pswitch_0
     return v0
 
-    .line 6
     :sswitch_0
     const-string v5, "GIF_Action"
 
@@ -295,7 +279,6 @@
 
     goto :goto_0
 
-    .line 7
     :pswitch_1
     const/4 v0, 0x6
 
@@ -304,10 +287,8 @@
     :pswitch_2
     move v0, v1
 
-    .line 9
     goto :goto_1
 
-    .line 10
     :pswitch_3
     const/4 v0, 0x4
 
@@ -316,16 +297,13 @@
     :pswitch_4
     move v0, v2
 
-    .line 11
     goto :goto_1
 
-    .line 12
     :pswitch_5
     const/4 v0, 0x7
 
     goto :goto_1
 
-    .line 13
     :pswitch_6
     const/4 v0, 0x5
 
@@ -334,10 +312,8 @@
     :pswitch_7
     move v0, v3
 
-    .line 14
     goto :goto_1
 
-    .line 6
     :sswitch_data_0
     .sparse-switch
         -0x7a874caf -> :sswitch_0

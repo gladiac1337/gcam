@@ -17,22 +17,15 @@
 .method public constructor <init>(FFFLandroid/widget/ImageView$ScaleType;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Ljwr;->a:F
 
-    .line 3
     iput p2, p0, Ljwr;->b:F
 
-    .line 4
     iput p3, p0, Ljwr;->c:F
 
-    .line 5
     iput-object p4, p0, Ljwr;->d:Landroid/widget/ImageView$ScaleType;
 
-    .line 6
     return-void
 .end method

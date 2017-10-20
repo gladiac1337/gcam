@@ -21,7 +21,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x4
 
     const/4 v5, 0x3
@@ -32,7 +31,6 @@
 
     const/4 v2, 0x0
 
-    .line 3
     new-instance v0, Lgyy;
 
     const-string v1, "PLACEHOLDER"
@@ -41,7 +39,6 @@
 
     sput-object v0, Lgyy;->a:Lgyy;
 
-    .line 4
     new-instance v0, Lgyy;
 
     const-string v1, "PHOTO"
@@ -50,7 +47,6 @@
 
     sput-object v0, Lgyy;->b:Lgyy;
 
-    .line 5
     new-instance v0, Lgyy;
 
     const-string v1, "BURST"
@@ -59,7 +55,6 @@
 
     sput-object v0, Lgyy;->c:Lgyy;
 
-    .line 6
     new-instance v0, Lgyy;
 
     const-string v1, "VIDEO"
@@ -68,7 +63,6 @@
 
     sput-object v0, Lgyy;->d:Lgyy;
 
-    .line 7
     new-instance v0, Lgyy;
 
     const-string v1, "SECURE"
@@ -77,7 +71,6 @@
 
     sput-object v0, Lgyy;->e:Lgyy;
 
-    .line 8
     const/4 v0, 0x5
 
     new-array v0, v0, [Lgyy;
@@ -110,8 +103,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -120,8 +111,6 @@
 .method public static values()[Lgyy;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lgyy;->f:[Lgyy;
 
     invoke-virtual {v0}, [Lgyy;->clone()Ljava/lang/Object;

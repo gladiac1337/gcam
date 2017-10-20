@@ -14,10 +14,8 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 6
     const/4 v0, 0x1
 
     new-array v6, v0, [Landroid/hardware/camera2/params/MeteringRectangle;
@@ -44,8 +42,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -54,11 +50,8 @@
 .method public static a()Lgeu;
     .locals 1
 
-    .prologue
-    .line 2
     sget-object v0, Lget;->a:Lges;
 
-    .line 3
     return-object v0
 .end method
 
@@ -67,8 +60,6 @@
 .method public final a(Landroid/graphics/Rect;)[Landroid/hardware/camera2/params/MeteringRectangle;
     .locals 1
 
-    .prologue
-    .line 4
     sget-object v0, Lges;->a:[Landroid/hardware/camera2/params/MeteringRectangle;
 
     return-object v0
@@ -77,8 +68,6 @@
 .method public final b(Landroid/graphics/Rect;)[Landroid/hardware/camera2/params/MeteringRectangle;
     .locals 1
 
-    .prologue
-    .line 5
     sget-object v0, Lges;->a:[Landroid/hardware/camera2/params/MeteringRectangle;
 
     return-object v0

@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-static {}, Llb;->g()Z
 
     move-result v0

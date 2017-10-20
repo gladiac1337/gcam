@@ -16,17 +16,12 @@
 .method public constructor <init>(Lgot;Ljuw;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbkg;->a:Lgot;
 
-    .line 3
     iput-object p2, p0, Lbkg;->b:Ljuw;
 
-    .line 4
     return-void
 .end method
 
@@ -35,10 +30,8 @@
 .method public final run()V
     .locals 14
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 5
     :try_start_0
     iget-object v1, p0, Lbkg;->a:Lgot;
 
@@ -46,7 +39,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 6
     iget-object v1, p0, Lbkg;->a:Lgot;
 
     iget-object v1, v1, Lgot;->d:Ljuk;
@@ -57,7 +49,6 @@
 
     check-cast v1, Lihr;
 
-    .line 7
     iget-object v2, p0, Lbkg;->a:Lgot;
 
     iget-object v2, v2, Lgot;->b:Liia;
@@ -78,7 +69,6 @@
 
     move-object v6, v0
 
-    .line 8
     iget-object v2, p0, Lbkg;->a:Lgot;
 
     iget-object v2, v2, Lgot;->b:Liia;
@@ -99,7 +89,6 @@
 
     move-object v9, v0
 
-    .line 9
     iget-object v2, p0, Lbkg;->a:Lgot;
 
     iget-object v2, v2, Lgot;->b:Liia;
@@ -120,7 +109,6 @@
 
     move-object v12, v0
 
-    .line 10
     sget-object v2, Landroid/hardware/camera2/CaptureResult;->STATISTICS_FACES:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {v1, v2}, Lihr;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -129,14 +117,12 @@
 
     check-cast v2, [Landroid/hardware/camera2/params/Face;
 
-    .line 11
     if-eqz v2, :cond_1
 
     array-length v4, v2
 
     if-lez v4, :cond_1
 
-    .line 12
     sget-object v4, Landroid/hardware/camera2/CaptureResult;->SCALER_CROP_REGION:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {v1, v4}, Lihr;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -145,25 +131,21 @@
 
     check-cast v1, Landroid/graphics/Rect;
 
-    .line 13
     array-length v4, v2
 
     new-array v13, v4, [Landroid/graphics/Rect;
 
-    .line 14
     :goto_0
     array-length v4, v2
 
     if-ge v3, v4, :cond_0
 
-    .line 15
     aget-object v4, v2, v3
 
     invoke-virtual {v4}, Landroid/hardware/camera2/params/Face;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v4
 
-    .line 16
     new-instance v5, Landroid/graphics/Rect;
 
     iget v7, v4, Landroid/graphics/Rect;->left:I
@@ -176,7 +158,6 @@
 
     iget-object v8, v8, Lgot;->b:Liia;
 
-    .line 17
     invoke-interface {v8}, Liia;->f()I
 
     move-result v8
@@ -199,7 +180,6 @@
 
     iget-object v10, v10, Lgot;->b:Liia;
 
-    .line 18
     invoke-interface {v10}, Liia;->c()I
 
     move-result v10
@@ -222,7 +202,6 @@
 
     iget-object v11, v11, Lgot;->b:Liia;
 
-    .line 19
     invoke-interface {v11}, Liia;->f()I
 
     move-result v11
@@ -245,7 +224,6 @@
 
     iget-object v11, v11, Lgot;->b:Liia;
 
-    .line 20
     invoke-interface {v11}, Liia;->c()I
 
     move-result v11
@@ -262,18 +240,15 @@
 
     aput-object v5, v13, v3
 
-    .line 21
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 22
     :cond_0
     iget-object v1, p0, Lbkg;->a:Lgot;
 
     iget-object v1, v1, Lgot;->b:Liia;
 
-    .line 23
     invoke-interface {v1}, Liia;->l_()I
 
     move-result v1
@@ -282,7 +257,6 @@
 
     iget-object v2, v2, Lgot;->b:Liia;
 
-    .line 24
     invoke-interface {v2}, Liia;->f()I
 
     move-result v2
@@ -295,7 +269,6 @@
 
     move-result v3
 
-    .line 25
     invoke-interface {v6}, Liib;->c()Ljava/nio/ByteBuffer;
 
     move-result-object v4
@@ -308,7 +281,6 @@
 
     move-result v6
 
-    .line 26
     invoke-interface {v9}, Liib;->c()Ljava/nio/ByteBuffer;
 
     move-result-object v7
@@ -321,7 +293,6 @@
 
     move-result v9
 
-    .line 27
     invoke-interface {v12}, Liib;->c()Ljava/nio/ByteBuffer;
 
     move-result-object v10
@@ -334,24 +305,20 @@
 
     move-result v12
 
-    .line 28
     invoke-static/range {v1 .. v13}, Lcom/google/android/apps/camera/jni/facebeautification/FaceBeautificationNative;->nativeFaceBeautification(IIILjava/nio/ByteBuffer;IILjava/nio/ByteBuffer;IILjava/nio/ByteBuffer;II[Landroid/graphics/Rect;)[B
 
     move-result-object v1
 
-    .line 29
     iget-object v2, p0, Lbkg;->a:Lgot;
 
     iget-object v2, v2, Lgot;->e:Lavk;
 
     if-eqz v2, :cond_1
 
-    .line 30
     iget-object v2, p0, Lbkg;->a:Lgot;
 
     iget-object v2, v2, Lgot;->e:Lavk;
 
-    .line 32
     new-instance v3, Ljpy;
 
     invoke-direct {v3}, Ljpy;-><init>()V
@@ -362,10 +329,8 @@
 
     check-cast v1, Ljpy;
 
-    .line 33
     invoke-interface {v2, v1}, Lavk;->a(Ljpy;)V
 
-    .line 34
     :cond_1
     iget-object v1, p0, Lbkg;->b:Ljuw;
 
@@ -375,15 +340,12 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 38
     :goto_1
     return-void
 
-    .line 36
     :catch_0
     move-exception v1
 
-    .line 37
     iget-object v2, p0, Lbkg;->b:Ljuw;
 
     invoke-virtual {v2, v1}, Ljsl;->a(Ljava/lang/Throwable;)Z

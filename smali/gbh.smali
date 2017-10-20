@@ -29,19 +29,14 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgbh;->a:Lgbg;
 
     iget-object v1, p0, Lgbh;->b:Lgbq;
 
-    .line 2
     iget-object v0, v0, Lgbg;->a:Lgbf;
 
-    .line 3
     iget-object v0, v0, Lgbf;->b:Landroid/content/Context;
 
-    .line 4
     iget-object v2, v1, Lgbq;->a:Ljava/lang/String;
 
     iget-object v1, v1, Lgbq;->b:Ljava/lang/String;
@@ -100,9 +95,7 @@
 
     move-result-object v0
 
-    .line 5
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 6
     return-void
 .end method

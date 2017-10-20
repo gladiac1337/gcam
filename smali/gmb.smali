@@ -13,8 +13,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/optionsbar/OptionsBarView;Landroid/view/View;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgmb;->b:Lcom/google/android/apps/camera/optionsbar/OptionsBarView;
 
     iput-object p2, p0, Lgmb;->a:Landroid/view/View;
@@ -29,18 +27,14 @@
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 2
     iget-object v0, p0, Lgmb;->b:Lcom/google/android/apps/camera/optionsbar/OptionsBarView;
 
-    .line 3
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lcom/google/android/apps/camera/optionsbar/OptionsBarView;->i:Z
 
-    .line 4
     iget-object v1, p0, Lgmb;->b:Lcom/google/android/apps/camera/optionsbar/OptionsBarView;
 
     iget-object v0, p0, Lgmb;->a:Landroid/view/View;
@@ -53,18 +47,13 @@
 
     invoke-virtual {v1, v0}, Lcom/google/android/apps/camera/optionsbar/OptionsBarView;->removeView(Landroid/view/View;)V
 
-    .line 5
     iget-object v0, p0, Lgmb;->b:Lcom/google/android/apps/camera/optionsbar/OptionsBarView;
 
-    .line 6
     iput-object v2, v0, Lcom/google/android/apps/camera/optionsbar/OptionsBarView;->g:Landroid/animation/Animator;
 
-    .line 7
     iget-object v0, p0, Lgmb;->b:Lcom/google/android/apps/camera/optionsbar/OptionsBarView;
 
-    .line 8
     iput-object v2, v0, Lcom/google/android/apps/camera/optionsbar/OptionsBarView;->f:Lglb;
 
-    .line 9
     return-void
 .end method

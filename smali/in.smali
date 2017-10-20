@@ -16,15 +16,12 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 15
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x19
 
     if-ne v0, v1, :cond_0
 
-    .line 16
     :try_start_0
     const-class v0, Landroid/view/ViewConfiguration;
 
@@ -34,7 +31,6 @@
 
     new-array v2, v2, [Ljava/lang/Class;
 
-    .line 17
     invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
@@ -43,12 +39,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 21
     :cond_0
     :goto_0
     return-void
 
-    .line 20
     :catch_0
     move-exception v0
 
@@ -64,20 +58,16 @@
 .method public static a(Landroid/view/ViewConfiguration;Landroid/content/Context;)F
     .locals 2
 
-    .prologue
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
 
     if-lt v0, v1, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Landroid/view/ViewConfiguration;->getScaledHorizontalScrollFactor()F
 
     move-result v0
 
-    .line 3
     :goto_0
     return v0
 
@@ -92,20 +82,16 @@
 .method public static b(Landroid/view/ViewConfiguration;Landroid/content/Context;)F
     .locals 2
 
-    .prologue
-    .line 4
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x1a
 
     if-lt v0, v1, :cond_0
 
-    .line 5
     invoke-virtual {p0}, Landroid/view/ViewConfiguration;->getScaledVerticalScrollFactor()F
 
     move-result v0
 
-    .line 6
     :goto_0
     return v0
 
@@ -120,8 +106,6 @@
 .method private static c(Landroid/view/ViewConfiguration;Landroid/content/Context;)F
     .locals 4
 
-    .prologue
-    .line 7
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x19
@@ -132,7 +116,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 8
     :try_start_0
     sget-object v0, Lin;->a:Ljava/lang/reflect/Method;
 
@@ -154,11 +137,9 @@
 
     int-to-float v0, v0
 
-    .line 14
     :goto_0
     return v0
 
-    .line 10
     :catch_0
     move-exception v0
 
@@ -168,13 +149,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11
     :cond_0
     new-instance v0, Landroid/util/TypedValue;
 
     invoke-direct {v0}, Landroid/util/TypedValue;-><init>()V
 
-    .line 12
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
     move-result-object v1
@@ -189,7 +168,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 13
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -204,7 +182,6 @@
 
     goto :goto_0
 
-    .line 14
     :cond_1
     const/4 v0, 0x0
 

@@ -25,18 +25,14 @@
 .method public final close()V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Ligr;->a:Lihi;
 
-    .line 2
     :try_start_0
     invoke-interface {v0}, Lihi;->c()V
     :try_end_0
     .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Lihh; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 5
     :goto_0
     return-void
 

@@ -376,8 +376,6 @@
 .method public final hashCode()I
     .locals 3
 
-    .prologue
-    .line 1
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -404,12 +402,10 @@
 
     aput-object v2, v0, v1
 
-    .line 2
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 3
     return v0
 .end method
 
@@ -458,16 +454,12 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 4
-    .line 6
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lhiv;->m(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 7
     const/4 v1, 0x1
 
     iget v2, p0, Lcom/google/android/gms/common/ConnectionResult;->e:I
@@ -476,31 +468,23 @@
 
     const/4 v1, 0x2
 
-    .line 8
     iget v2, p0, Lcom/google/android/gms/common/ConnectionResult;->b:I
 
-    .line 9
     invoke-static {p1, v1, v2}, Lhiv;->c(Landroid/os/Parcel;II)V
 
     const/4 v1, 0x3
 
-    .line 10
     iget-object v2, p0, Lcom/google/android/gms/common/ConnectionResult;->c:Landroid/app/PendingIntent;
 
-    .line 11
     invoke-static {p1, v1, v2, p2}, Lhiv;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
     const/4 v1, 0x4
 
-    .line 12
     iget-object v2, p0, Lcom/google/android/gms/common/ConnectionResult;->d:Ljava/lang/String;
 
-    .line 13
     invoke-static {p1, v1, v2}, Lhiv;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    .line 14
     invoke-static {p1, v0}, Lhiv;->n(Landroid/os/Parcel;I)V
 
-    .line 15
     return-void
 .end method

@@ -158,11 +158,8 @@
 .method private final g()V
     .locals 3
 
-    .prologue
-    .line 19
     iget-object v1, p0, Lhsh;->a:Lhsx;
 
-    .line 20
     iget-object v0, v1, Lhsx;->a:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -192,10 +189,8 @@
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 21
     sget-object v0, Lhta;->a:Ljava/util/concurrent/ExecutorService;
 
-    .line 22
     new-instance v1, Lhsi;
 
     invoke-direct {v1, p0}, Lhsi;-><init>(Lhsh;)V
@@ -263,7 +258,6 @@
 
     goto :goto_0
 
-    .line 20
     :catchall_0
     move-exception v0
 
@@ -273,7 +267,6 @@
 
     throw v0
 
-    .line 22
     :cond_2
     iget-object v0, p0, Lhsh;->p:Landroid/os/Bundle;
 
@@ -359,12 +352,10 @@
 .method public final a()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x1
 
     const/4 v6, 0x0
 
-    .line 1
     iget-object v0, p0, Lhsh;->a:Lhsx;
 
     iget-object v0, v0, Lhsx;->g:Ljava/util/Map;
@@ -482,26 +473,20 @@
 
     iget-object v1, v1, Lhsx;->m:Lhst;
 
-    .line 2
     invoke-static {v1}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result v1
 
-    .line 3
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 4
     iput-object v1, v0, Lhlh;->h:Ljava/lang/Integer;
 
-    .line 5
     new-instance v5, Lhsq;
 
-    .line 6
     invoke-direct {v5, p0}, Lhsq;-><init>(Lhsh;)V
 
-    .line 7
     iget-object v0, p0, Lhsh;->t:Lhju;
 
     iget-object v1, p0, Lhsh;->c:Landroid/content/Context;
@@ -510,20 +495,16 @@
 
     iget-object v2, v2, Lhsx;->m:Lhst;
 
-    .line 8
     iget-object v2, v2, Lhst;->c:Landroid/os/Looper;
 
-    .line 9
     iget-object v3, p0, Lhsh;->j:Lhlh;
 
     iget-object v4, p0, Lhsh;->j:Lhlh;
 
-    .line 10
     iget-object v4, v4, Lhlh;->g:Lhqb;
 
     move-object v6, v5
 
-    .line 11
     invoke-virtual/range {v0 .. v6}, Lhju;->a(Landroid/content/Context;Landroid/os/Looper;Lhlh;Ljava/lang/Object;Lhkc;Lhkd;)Lhjy;
 
     move-result-object v0
@@ -545,10 +526,8 @@
 
     iget-object v0, p0, Lhsh;->u:Ljava/util/ArrayList;
 
-    .line 12
     sget-object v1, Lhta;->a:Ljava/util/concurrent/ExecutorService;
 
-    .line 13
     new-instance v2, Lhsk;
 
     invoke-direct {v2, p0, v7}, Lhsk;-><init>(Lhsh;Ljava/util/Map;)V
@@ -714,7 +693,6 @@
 .method final b(Lcom/google/android/gms/common/ConnectionResult;Lhjr;Z)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
     const v3, 0x7fffffff
@@ -723,11 +701,8 @@
 
     const/4 v0, 0x1
 
-    .line 23
-    .line 24
     if-eqz p3, :cond_0
 
-    .line 25
     invoke-virtual {p1}, Lcom/google/android/gms/common/ConnectionResult;->a()Z
 
     move-result v2
@@ -736,7 +711,6 @@
 
     move v2, v0
 
-    .line 30
     :goto_0
     if-eqz v2, :cond_5
 
@@ -749,7 +723,6 @@
 
     if-ge v3, v2, :cond_5
 
-    .line 31
     :cond_1
     :goto_1
     if-eqz v0, :cond_2
@@ -771,16 +744,13 @@
 
     return-void
 
-    .line 26
     :cond_3
     iget v2, p1, Lcom/google/android/gms/common/ConnectionResult;->b:I
 
-    .line 28
     invoke-static {v4, v2, v4}, Lhjm;->a(Landroid/content/Context;ILjava/lang/String;)Landroid/content/Intent;
 
     move-result-object v2
 
-    .line 29
     if-eqz v2, :cond_4
 
     move v2, v0
@@ -795,7 +765,6 @@
     :cond_5
     move v0, v1
 
-    .line 30
     goto :goto_1
 .end method
 
@@ -1082,18 +1051,14 @@
 .method final e()V
     .locals 4
 
-    .prologue
-    .line 14
     iget v0, p0, Lhsh;->o:I
 
     if-eqz v0, :cond_1
 
-    .line 18
     :cond_0
     :goto_0
     return-void
 
-    .line 14
     :cond_1
     iget-boolean v0, p0, Lhsh;->e:Z
 
@@ -1103,7 +1068,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 15
     :cond_2
     new-instance v1, Ljava/util/ArrayList;
 
@@ -1193,10 +1157,8 @@
 
     iget-object v0, p0, Lhsh;->u:Ljava/util/ArrayList;
 
-    .line 16
     sget-object v2, Lhta;->a:Ljava/util/concurrent/ExecutorService;
 
-    .line 17
     new-instance v3, Lhsn;
 
     invoke-direct {v3, p0, v1}, Lhsn;-><init>(Lhsh;Ljava/util/ArrayList;)V

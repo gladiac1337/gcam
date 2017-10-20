@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,18 +20,14 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 3
     instance-of v1, p1, Ljava/util/Map$Entry;
 
     if-eqz v1, :cond_0
 
-    .line 4
     check-cast p1, Ljava/util/Map$Entry;
 
-    .line 5
     invoke-virtual {p0}, Ljiv;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -48,7 +42,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 6
     invoke-virtual {p0}, Ljiv;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -65,7 +58,6 @@
 
     const/4 v0, 0x1
 
-    .line 8
     :cond_0
     return v0
 .end method
@@ -79,20 +71,16 @@
 .method public hashCode()I
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 9
     invoke-virtual {p0}, Ljiv;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 10
     invoke-virtual {p0}, Ljiv;->getValue()Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 11
     if-nez v1, :cond_0
 
     move v1, v0
@@ -123,8 +111,6 @@
 .method public setValue(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -135,8 +121,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 12
     invoke-virtual {p0}, Ljiv;->getKey()Ljava/lang/Object;
 
     move-result-object v0

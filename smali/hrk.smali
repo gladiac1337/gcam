@@ -16,8 +16,6 @@
 .method public constructor <init>(Ljava/lang/Iterable;)V
     .locals 4
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Lhve;
@@ -55,10 +53,8 @@
 
     iget-object v2, p0, Lhrk;->a:Lgm;
 
-    .line 2
     iget-object v0, v0, Lhkk;->b:Lhrj;
 
-    .line 3
     const/4 v3, 0x0
 
     invoke-virtual {v2, v0, v3}, Lgm;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -86,10 +82,8 @@
 .method public final a(Lhrj;Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 4
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 4
     iget-object v0, p0, Lhrk;->a:Lgm;
 
     invoke-virtual {v0, p1, p2}, Lgm;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -125,10 +119,8 @@
 
     iget-object v1, p0, Lhrk;->b:Lhve;
 
-    .line 5
     iget-object v1, v1, Lhve;->a:Lhvi;
 
-    .line 6
     const-string v2, "Exception must not be null"
 
     invoke-static {v0, v2}, Lhiv;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -154,12 +146,10 @@
 
     invoke-virtual {v0, v1}, Lhvh;->a(Lhvd;)V
 
-    .line 7
     :cond_1
     :goto_0
     return-void
 
-    .line 6
     :catchall_0
     move-exception v0
 
@@ -170,7 +160,6 @@
 
     throw v0
 
-    .line 7
     :cond_2
     iget-object v0, p0, Lhrk;->b:Lhve;
 

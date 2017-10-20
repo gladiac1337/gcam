@@ -39,8 +39,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 215
     const-string v0, "GridZoomMgr"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -55,38 +53,30 @@
 .method public constructor <init>(Lcbv;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcbm;->b:Ljava/util/List;
 
-    .line 3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcbm;->k:Ljava/util/Map;
 
-    .line 4
     iput-object p1, p0, Lcbm;->a:Lcbv;
 
-    .line 5
     return-void
 .end method
 
 .method private static a(Landroid/graphics/Rect;Landroid/graphics/Rect;)Landroid/graphics/Rect;
     .locals 8
 
-    .prologue
     const/high16 v6, 0x40000000    # 2.0f
 
-    .line 24
     invoke-virtual {p0}, Landroid/graphics/Rect;->height()I
 
     move-result v0
@@ -99,7 +89,6 @@
 
     if-nez v0, :cond_1
 
-    .line 25
     :cond_0
     sget-object v0, Lcbm;->m:Ljava/lang/String;
 
@@ -107,11 +96,9 @@
 
     invoke-static {v0, v1}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 43
     :goto_0
     return-object p0
 
-    .line 27
     :cond_1
     invoke-virtual {p0}, Landroid/graphics/Rect;->width()I
 
@@ -127,7 +114,6 @@
 
     div-float/2addr v0, v1
 
-    .line 28
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v1
@@ -142,12 +128,10 @@
 
     div-float/2addr v1, v2
 
-    .line 29
     cmpg-float v0, v0, v1
 
     if-gtz v0, :cond_2
 
-    .line 31
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v0
@@ -166,7 +150,6 @@
 
     int-to-float v0, v0
 
-    .line 32
     invoke-virtual {p0}, Landroid/graphics/Rect;->width()I
 
     move-result v1
@@ -175,7 +158,6 @@
 
     sub-float v1, v0, v1
 
-    .line 33
     new-instance v0, Landroid/graphics/Rect;
 
     iget v2, p0, Landroid/graphics/Rect;->left:I
@@ -184,7 +166,6 @@
 
     float-to-double v4, v3
 
-    .line 34
     invoke-static {v4, v5}, Ljava/lang/Math;->floor(D)D
 
     move-result-wide v4
@@ -201,7 +182,6 @@
 
     float-to-double v6, v1
 
-    .line 35
     invoke-static {v6, v7}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide v6
@@ -216,10 +196,8 @@
 
     move-object p0, v0
 
-    .line 36
     goto :goto_0
 
-    .line 38
     :cond_2
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
@@ -239,7 +217,6 @@
 
     int-to-float v0, v0
 
-    .line 39
     invoke-virtual {p0}, Landroid/graphics/Rect;->height()I
 
     move-result v1
@@ -248,7 +225,6 @@
 
     sub-float v1, v0, v1
 
-    .line 40
     new-instance v0, Landroid/graphics/Rect;
 
     iget v2, p0, Landroid/graphics/Rect;->left:I
@@ -259,7 +235,6 @@
 
     float-to-double v4, v4
 
-    .line 41
     invoke-static {v4, v5}, Ljava/lang/Math;->floor(D)D
 
     move-result-wide v4
@@ -276,7 +251,6 @@
 
     float-to-double v6, v1
 
-    .line 42
     invoke-static {v6, v7}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide v6
@@ -289,15 +263,12 @@
 
     move-object p0, v0
 
-    .line 43
     goto/16 :goto_0
 .end method
 
 .method static a(Landroid/view/View;)V
     .locals 1
 
-    .prologue
-    .line 81
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v0
@@ -308,7 +279,6 @@
 
     invoke-virtual {p0, v0}, Landroid/view/View;->setPivotX(F)V
 
-    .line 82
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v0
@@ -319,43 +289,34 @@
 
     invoke-virtual {p0, v0}, Landroid/view/View;->setPivotY(F)V
 
-    .line 83
     return-void
 .end method
 
 .method static b(Landroid/view/View;)V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 84
     invoke-virtual {p0, v0}, Landroid/view/View;->setPivotX(F)V
 
-    .line 85
     invoke-virtual {p0, v0}, Landroid/view/View;->setPivotY(F)V
 
-    .line 86
     return-void
 .end method
 
 .method private static c(Landroid/view/View;)Landroid/graphics/Rect;
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
     const/4 v4, 0x0
 
-    .line 18
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
-    .line 19
     invoke-virtual {p0, v0}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 20
     new-instance v1, Landroid/graphics/Rect;
 
     aget v2, v0, v4
@@ -364,7 +325,6 @@
 
     aget v4, v0, v4
 
-    .line 21
     invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
     move-result v5
@@ -373,7 +333,6 @@
 
     aget v0, v0, v6
 
-    .line 22
     invoke-virtual {p0}, Landroid/view/View;->getHeight()I
 
     move-result v5
@@ -382,7 +341,6 @@
 
     invoke-direct {v1, v2, v3, v4, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 23
     return-object v1
 .end method
 
@@ -391,71 +349,56 @@
 .method final a(Lcom/google/android/apps/camera/legacy/app/burst/editor/grid/BurstImageView;Ljwj;)Lcby;
     .locals 8
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 87
     invoke-static {p1}, Lcbm;->c(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v1
 
-    .line 88
     invoke-static {p2}, Lcbm;->c(Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v7
 
-    .line 89
     iget-object v0, p0, Lcbm;->b:Ljava/util/List;
 
     iget-object v2, p0, Lcbm;->l:Landroid/support/v4/view/ViewPager;
 
-    .line 90
     iget v2, v2, Landroid/support/v4/view/ViewPager;->c:I
 
-    .line 91
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcdv;
 
-    .line 92
     new-instance v2, Landroid/graphics/Rect;
 
-    .line 93
     iget-object v3, v0, Lcfp;->c:Lcfn;
 
     invoke-virtual {v3}, Lcfn;->k()Libx;
 
     move-result-object v3
 
-    .line 94
     iget v3, v3, Libx;->a:I
 
-    .line 96
     iget-object v0, v0, Lcfp;->c:Lcfn;
 
     invoke-virtual {v0}, Lcfn;->k()Libx;
 
     move-result-object v0
 
-    .line 97
     iget v0, v0, Libx;->b:I
 
-    .line 98
     invoke-direct {v2, v4, v4, v3, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 99
     invoke-static {v1, v2}, Lcbm;->a(Landroid/graphics/Rect;Landroid/graphics/Rect;)Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 100
     invoke-static {v0, v7}, Lcbm;->a(Landroid/graphics/Rect;Landroid/graphics/Rect;)Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 101
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v2
@@ -470,7 +413,6 @@
 
     div-float v4, v2, v3
 
-    .line 102
     iget v2, v0, Landroid/graphics/Rect;->left:I
 
     iget v3, v7, Landroid/graphics/Rect;->left:I
@@ -479,7 +421,6 @@
 
     int-to-float v2, v2
 
-    .line 103
     iget v3, v0, Landroid/graphics/Rect;->top:I
 
     iget v5, v7, Landroid/graphics/Rect;->top:I
@@ -488,12 +429,10 @@
 
     int-to-float v3, v3
 
-    .line 104
     new-instance v5, Landroid/graphics/Rect;
 
     invoke-direct {v5, v1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 105
     iget v1, v0, Landroid/graphics/Rect;->left:I
 
     neg-int v1, v1
@@ -504,7 +443,6 @@
 
     invoke-virtual {v5, v1, v0}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 106
     iget v0, v5, Landroid/graphics/Rect;->left:I
 
     int-to-float v0, v0
@@ -515,7 +453,6 @@
 
     iput v0, v5, Landroid/graphics/Rect;->left:I
 
-    .line 107
     iget v0, v5, Landroid/graphics/Rect;->top:I
 
     int-to-float v0, v0
@@ -526,7 +463,6 @@
 
     iput v0, v5, Landroid/graphics/Rect;->top:I
 
-    .line 108
     iget v0, v5, Landroid/graphics/Rect;->right:I
 
     int-to-float v0, v0
@@ -537,7 +473,6 @@
 
     iput v0, v5, Landroid/graphics/Rect;->right:I
 
-    .line 109
     iget v0, v5, Landroid/graphics/Rect;->bottom:I
 
     int-to-float v0, v0
@@ -548,12 +483,10 @@
 
     iput v0, v5, Landroid/graphics/Rect;->bottom:I
 
-    .line 110
     new-instance v6, Landroid/graphics/Rect;
 
     invoke-direct {v6, v7}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 111
     iget v0, v7, Landroid/graphics/Rect;->left:I
 
     neg-int v0, v0
@@ -564,7 +497,6 @@
 
     invoke-virtual {v6, v0, v1}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 112
     new-instance v0, Lcby;
 
     move-object v1, p1
@@ -577,7 +509,6 @@
 .method public final a()V
     .locals 13
 
-    .prologue
     const/4 v10, 0x0
 
     const/4 v3, 0x0
@@ -588,39 +519,31 @@
 
     const/4 v2, 0x0
 
-    .line 113
     iget-object v0, p0, Lcbm;->g:Lcby;
 
     if-nez v0, :cond_0
 
-    .line 188
     :goto_0
     return-void
 
-    .line 115
     :cond_0
     iget-object v0, p0, Lcbm;->d:Landroid/animation/Animator;
 
     if-eqz v0, :cond_1
 
-    .line 116
     iget-object v0, p0, Lcbm;->d:Landroid/animation/Animator;
 
     invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
 
-    .line 117
     :cond_1
     iget-object v0, p0, Lcbm;->f:Landroid/support/v7/widget/RecyclerView;
 
     invoke-virtual {v0, v2}, Landroid/support/v7/widget/RecyclerView;->setVisibility(I)V
 
-    .line 118
     invoke-virtual {p0, v3}, Lcbm;->a(Landroid/net/Uri;)V
 
-    .line 119
     iput-boolean v2, p0, Lcbm;->c:Z
 
-    .line 120
     iget-object v0, p0, Lcbm;->b:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -629,29 +552,24 @@
 
     if-eqz v0, :cond_2
 
-    .line 121
     iget-object v0, p0, Lcbm;->f:Landroid/support/v7/widget/RecyclerView;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->setAlpha(F)V
 
-    .line 122
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Lcbm;->a(I)V
 
-    .line 123
     iget-object v0, p0, Lcbm;->a:Lcbv;
 
     invoke-virtual {v0}, Lcbv;->a()V
 
-    .line 124
     iput-object v3, p0, Lcbm;->g:Lcby;
 
     goto :goto_0
 
-    .line 126
     :cond_2
     iget-object v4, p0, Lcbm;->a:Lcbv;
 
@@ -659,10 +577,8 @@
 
     iget-object v1, p0, Lcbm;->l:Landroid/support/v4/view/ViewPager;
 
-    .line 127
     iget v1, v1, Landroid/support/v4/view/ViewPager;->c:I
 
-    .line 128
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -673,100 +589,74 @@
 
     move v1, v2
 
-    .line 130
     :goto_1
     iget-object v6, v4, Lcbv;->a:Lcap;
 
-    .line 131
     iget-object v6, v6, Lcap;->l:Lcbb;
 
-    .line 132
     invoke-virtual {v6}, Lcbb;->a()I
 
     move-result v6
 
     if-ge v1, v6, :cond_4
 
-    .line 133
     iget-object v6, v4, Lcbv;->a:Lcap;
 
-    .line 134
     iget-object v6, v6, Lcap;->l:Lcbb;
 
-    .line 135
     invoke-virtual {v6, v1}, Lcbb;->a(I)Lcbc;
 
     move-result-object v6
 
-    .line 137
     iget-object v7, v6, Lcbc;->b:Lcbd;
 
-    .line 138
     if-ne v7, v5, :cond_3
 
-    .line 140
     iget-object v6, v6, Lcbc;->a:Lcdv;
 
-    .line 141
     iget-object v6, v6, Lcfp;->c:Lcfn;
 
-    .line 142
     iget-object v6, v6, Lcfa;->e:Lfvf;
 
-    .line 143
     iget-object v6, v6, Lfvf;->h:Landroid/net/Uri;
 
-    .line 145
     iget-object v7, v0, Lcfp;->c:Lcfn;
 
-    .line 146
     iget-object v7, v7, Lcfa;->e:Lfvf;
 
-    .line 147
     iget-object v7, v7, Lfvf;->h:Landroid/net/Uri;
 
-    .line 148
     if-ne v6, v7, :cond_3
 
-    .line 149
     iget-object v0, v4, Lcbv;->a:Lcap;
 
-    .line 150
     iget-object v0, v0, Lcap;->i:Lcbz;
 
-    .line 151
     invoke-virtual {v0, v1}, Lcbz;->a(I)Lccd;
 
     move-result-object v0
 
     move-object v1, v0
 
-    .line 155
     :goto_2
     iget-object v0, p0, Lcbm;->b:Ljava/util/List;
 
     iget-object v4, p0, Lcbm;->l:Landroid/support/v4/view/ViewPager;
 
-    .line 156
     iget v4, v4, Landroid/support/v4/view/ViewPager;->c:I
 
-    .line 157
     invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcdv;
 
-    .line 158
     iget-object v0, v0, Lcfp;->c:Lcfn;
 
-    .line 159
     iget-object v0, v0, Lcfa;->e:Lfvf;
 
-    .line 160
     iget-object v0, v0, Lfvf;->h:Landroid/net/Uri;
 
-    .line 162
     iget-object v4, p0, Lcbm;->k:Ljava/util/Map;
 
     invoke-interface {v4, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -775,36 +665,27 @@
 
     check-cast v0, Ljwj;
 
-    .line 163
     if-eqz v1, :cond_5
 
-    .line 165
     iget-object v1, v1, Lccd;->r:Lcom/google/android/apps/camera/legacy/app/burst/editor/grid/BurstImageView;
 
-    .line 166
     invoke-virtual {p0, v1, v0}, Lcbm;->a(Lcom/google/android/apps/camera/legacy/app/burst/editor/grid/BurstImageView;Ljwj;)Lcby;
 
     move-result-object v1
 
-    .line 168
     :goto_3
     iget-object v4, v1, Lcby;->a:Lcom/google/android/apps/camera/legacy/app/burst/editor/grid/BurstImageView;
 
-    .line 169
     invoke-virtual {v4, v10}, Lcom/google/android/apps/camera/legacy/app/burst/editor/grid/BurstImageView;->setAlpha(F)V
 
-    .line 170
     invoke-virtual {v0}, Ljwj;->a()V
 
-    .line 171
     invoke-static {v0}, Lcbm;->b(Landroid/view/View;)V
 
-    .line 172
     new-instance v5, Landroid/animation/AnimatorSet;
 
     invoke-direct {v5}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 173
     new-array v6, v11, [F
 
     fill-array-data v6, :array_0
@@ -813,14 +694,12 @@
 
     move-result-object v6
 
-    .line 174
     new-instance v7, Lcbl;
 
     invoke-direct {v7, v0, v1}, Lcbl;-><init>(Ljwj;Lcby;)V
 
     invoke-virtual {v6, v7}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 175
     sget-object v7, Landroid/view/View;->TRANSLATION_X:Landroid/util/Property;
 
     new-array v8, v11, [F
@@ -849,7 +728,6 @@
 
     aput v10, v9, v12
 
-    .line 176
     invoke-static {v0, v8, v9}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v8
@@ -870,7 +748,6 @@
 
     aput v10, v9, v12
 
-    .line 177
     invoke-static {v0, v8, v9}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v8
@@ -891,7 +768,6 @@
 
     aput v1, v9, v12
 
-    .line 178
     invoke-static {v0, v8, v9}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v1
@@ -908,7 +784,6 @@
 
     fill-array-data v8, :array_1
 
-    .line 179
     invoke-static {v2, v7, v8}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
@@ -925,7 +800,6 @@
 
     fill-array-data v8, :array_2
 
-    .line 180
     invoke-static {v2, v7, v8}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Landroid/util/Property;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
@@ -934,38 +808,30 @@
 
     move-result-object v1
 
-    .line 181
     invoke-virtual {v1, v6}, Landroid/animation/AnimatorSet$Builder;->with(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 182
     const-wide/16 v6, 0xfa
 
     invoke-virtual {v5, v6, v7}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 183
     sget-object v1, Lfki;->a:Lfki;
 
     invoke-virtual {v5, v1}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 184
     new-instance v1, Lcbr;
 
     invoke-direct {v1, p0, v4, v0}, Lcbr;-><init>(Lcbm;Lcom/google/android/apps/camera/legacy/app/burst/editor/grid/BurstImageView;Ljwj;)V
 
     invoke-virtual {v5, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 185
     invoke-virtual {v5}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 186
     iput-object v5, p0, Lcbm;->d:Landroid/animation/Animator;
 
-    .line 187
     iput-object v3, p0, Lcbm;->g:Lcby;
 
     goto/16 :goto_0
 
-    .line 152
     :cond_3
     add-int/lit8 v1, v1, 0x1
 
@@ -974,30 +840,25 @@
     :cond_4
     move-object v1, v3
 
-    .line 153
     goto/16 :goto_2
 
-    .line 167
     :cond_5
     iget-object v1, p0, Lcbm;->g:Lcby;
 
     goto/16 :goto_3
 
-    .line 173
     :array_0
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 178
     :array_1
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 179
     :array_2
     .array-data 4
         0x3f800000    # 1.0f
@@ -1008,8 +869,6 @@
 .method public final a(I)V
     .locals 2
 
-    .prologue
-    .line 211
     iget-object v1, p0, Lcbm;->l:Landroid/support/v4/view/ViewPager;
 
     if-nez p1, :cond_0
@@ -1019,20 +878,16 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/support/v4/view/ViewPager;->setAlpha(F)V
 
-    .line 212
     iget-object v0, p0, Lcbm;->l:Landroid/support/v4/view/ViewPager;
 
     invoke-virtual {v0, p1}, Landroid/support/v4/view/ViewPager;->setVisibility(I)V
 
-    .line 213
     iget-object v0, p0, Lcbm;->i:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 214
     return-void
 
-    .line 211
     :cond_0
     const/4 v0, 0x0
 
@@ -1042,14 +897,12 @@
 .method final a(Landroid/net/Uri;)V
     .locals 7
 
-    .prologue
     const/16 v6, 0x8
 
     const/4 v5, 0x0
 
     const/4 v4, 0x0
 
-    .line 189
     iget-object v0, p0, Lcbm;->e:Landroid/view/ViewGroup;
 
     const v1, 0x7f0e00ce
@@ -1060,7 +913,6 @@
 
     check-cast v0, Landroid/widget/ImageButton;
 
-    .line 190
     iget-object v1, p0, Lcbm;->e:Landroid/view/ViewGroup;
 
     const v2, 0x7f0e00d0
@@ -1071,7 +923,6 @@
 
     check-cast v1, Landroid/widget/ImageButton;
 
-    .line 191
     iget-object v2, p0, Lcbm;->e:Landroid/view/ViewGroup;
 
     const v3, 0x7f0e00d2
@@ -1082,39 +933,29 @@
 
     check-cast v2, Landroid/widget/ImageButton;
 
-    .line 192
     if-eqz p1, :cond_2
 
-    .line 193
     iget-boolean v3, p0, Lcbm;->j:Z
 
     if-eqz v3, :cond_0
 
-    .line 194
     invoke-virtual {v0, v5}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 195
     invoke-virtual {v0, v4}, Landroid/widget/ImageButton;->setClickable(Z)V
 
-    .line 196
     invoke-virtual {v0, v6}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    .line 198
     :goto_0
     iget-boolean v0, p0, Lcbm;->j:Z
 
     if-eqz v0, :cond_1
 
-    .line 199
     invoke-virtual {v1, v5}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 200
     invoke-virtual {v1, v4}, Landroid/widget/ImageButton;->setClickable(Z)V
 
-    .line 201
     invoke-virtual {v1, v6}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    .line 203
     :goto_1
     new-instance v0, Lcbu;
 
@@ -1122,11 +963,9 @@
 
     invoke-virtual {v2, v0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 210
     :goto_2
     return-void
 
-    .line 197
     :cond_0
     new-instance v3, Lcbs;
 
@@ -1136,7 +975,6 @@
 
     goto :goto_0
 
-    .line 202
     :cond_1
     new-instance v0, Lcbt;
 
@@ -1146,23 +984,17 @@
 
     goto :goto_1
 
-    .line 204
     :cond_2
     invoke-virtual {v0, v5}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 205
     invoke-virtual {v0, v4}, Landroid/widget/ImageButton;->setClickable(Z)V
 
-    .line 206
     invoke-virtual {v1, v5}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 207
     invoke-virtual {v1, v4}, Landroid/widget/ImageButton;->setClickable(Z)V
 
-    .line 208
     invoke-virtual {v2, v5}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 209
     invoke-virtual {v2, v4}, Landroid/widget/ImageButton;->setClickable(Z)V
 
     goto :goto_2
@@ -1171,50 +1003,39 @@
 .method public final a(Lccd;Lcbd;Ljava/util/List;)V
     .locals 7
 
-    .prologue
     const/4 v6, 0x0
 
     const/4 v2, 0x0
 
-    .line 44
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     iput-object v0, p0, Lcbm;->b:Ljava/util/List;
 
-    .line 45
     iget-object v0, p0, Lcbm;->l:Landroid/support/v4/view/ViewPager;
 
-    .line 46
     iget-object v0, v0, Landroid/support/v4/view/ViewPager;->b:Lib;
 
-    .line 47
     invoke-virtual {v0}, Lib;->notifyDataSetChanged()V
 
-    .line 48
     iput-object p2, p0, Lcbm;->n:Lcbd;
 
-    .line 50
     iget-object v3, p1, Lccd;->r:Lcom/google/android/apps/camera/legacy/app/burst/editor/grid/BurstImageView;
 
-    .line 52
     iget-object v0, p0, Lcbm;->d:Landroid/animation/Animator;
 
     if-eqz v0, :cond_0
 
-    .line 53
     iget-object v0, p0, Lcbm;->d:Landroid/animation/Animator;
 
     invoke-virtual {v0}, Landroid/animation/Animator;->cancel()V
 
-    .line 54
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcbm;->c:Z
 
-    .line 56
     iget-object v0, p0, Lcbm;->b:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1236,64 +1057,47 @@
 
     check-cast v0, Lcdv;
 
-    .line 57
     iget-object v0, v0, Lcfp;->c:Lcfn;
 
-    .line 58
     iget-object v0, v0, Lcfa;->e:Lfvf;
 
-    .line 59
     iget-object v0, v0, Lfvf;->h:Landroid/net/Uri;
 
-    .line 61
     iget-object v5, p1, Lccd;->p:Landroid/net/Uri;
 
-    .line 62
     invoke-virtual {v0, v5}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 63
     iget-object v0, p0, Lcbm;->l:Landroid/support/v4/view/ViewPager;
 
     invoke-virtual {v0, v1, v2}, Landroid/support/v4/view/ViewPager;->a(IZ)V
 
-    .line 68
     :cond_1
     iget-object v0, p1, Lccd;->p:Landroid/net/Uri;
 
-    .line 69
     invoke-virtual {p0, v0}, Lcbm;->a(Landroid/net/Uri;)V
 
-    .line 70
     iget-object v0, p0, Lcbm;->a:Lcbv;
 
-    .line 71
     iget-object v0, v0, Lcbv;->a:Lcap;
 
-    .line 72
     iget-object v0, v0, Lcap;->b:Lcaf;
 
-    .line 73
     invoke-virtual {v0}, Lcaf;->a()V
 
-    .line 74
     invoke-virtual {v3, v6}, Lcom/google/android/apps/camera/legacy/app/burst/editor/grid/BurstImageView;->setAlpha(F)V
 
-    .line 75
     iget-object v0, p0, Lcbm;->i:Landroid/view/View;
 
     invoke-virtual {v0, v6}, Landroid/view/View;->setAlpha(F)V
 
-    .line 76
     invoke-virtual {p0, v2}, Lcbm;->a(I)V
 
-    .line 77
     iget-object v0, p0, Lcbm;->l:Landroid/support/v4/view/ViewPager;
 
-    .line 78
     invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
@@ -1302,27 +1106,21 @@
 
     invoke-direct {v1, p0, v3}, Lcbp;-><init>(Lcbm;Lcom/google/android/apps/camera/legacy/app/burst/editor/grid/BurstImageView;)V
 
-    .line 79
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 80
     return-void
 
-    .line 65
     :cond_2
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
-    .line 66
     goto :goto_0
 .end method
 
 .method public final a(Ljava/util/List;)V
     .locals 2
 
-    .prologue
-    .line 6
     const/4 v0, 0x0
 
     move v1, v0
@@ -1336,7 +1134,6 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 7
     iget-object v0, p0, Lcbm;->b:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1345,28 +1142,22 @@
 
     check-cast v0, Lcdv;
 
-    .line 8
     iget-object v0, v0, Lcfp;->c:Lcfn;
 
-    .line 9
     iget-object v0, v0, Lcfa;->e:Lfvf;
 
-    .line 10
     iget-object v0, v0, Lfvf;->h:Landroid/net/Uri;
 
-    .line 11
     invoke-interface {p1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 12
     iget-object v0, p0, Lcbm;->b:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 13
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -1374,16 +1165,12 @@
 
     goto :goto_0
 
-    .line 14
     :cond_1
     iget-object v0, p0, Lcbm;->l:Landroid/support/v4/view/ViewPager;
 
-    .line 15
     iget-object v0, v0, Landroid/support/v4/view/ViewPager;->b:Lib;
 
-    .line 16
     invoke-virtual {v0}, Lib;->notifyDataSetChanged()V
 
-    .line 17
     return-void
 .end method

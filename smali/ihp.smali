@@ -17,14 +17,10 @@
 .method public constructor <init>(Landroid/hardware/camera2/CaptureRequest$Builder;)V
     .locals 0
 
-    .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10
     iput-object p1, p0, Lihp;->a:Landroid/hardware/camera2/CaptureRequest$Builder;
 
-    .line 11
     return-void
 .end method
 
@@ -33,8 +29,6 @@
 .method public final a()Lihq;
     .locals 2
 
-    .prologue
-    .line 3
     new-instance v0, Lieq;
 
     iget-object v1, p0, Lihp;->a:Landroid/hardware/camera2/CaptureRequest$Builder;
@@ -51,8 +45,6 @@
 .method public final a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
     .locals 4
 
-    .prologue
-    .line 4
     iget-object v1, p0, Lihp;->a:Landroid/hardware/camera2/CaptureRequest$Builder;
 
     const-string v2, "Value cannot be null for key "
@@ -82,10 +74,8 @@
 
     invoke-virtual {v1, p1, v0}, Landroid/hardware/camera2/CaptureRequest$Builder;->set(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 5
     return-void
 
-    .line 4
     :cond_0
     new-instance v0, Ljava/lang/String;
 
@@ -97,26 +87,19 @@
 .method public final a(Landroid/view/Surface;)V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lihp;->a:Landroid/hardware/camera2/CaptureRequest$Builder;
 
     invoke-virtual {v0, p1}, Landroid/hardware/camera2/CaptureRequest$Builder;->addTarget(Landroid/view/Surface;)V
 
-    .line 2
     return-void
 .end method
 
 .method public final a(Ljava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lihp;->a:Landroid/hardware/camera2/CaptureRequest$Builder;
 
-    .line 7
     invoke-virtual {v0, p1}, Landroid/hardware/camera2/CaptureRequest$Builder;->setTag(Ljava/lang/Object;)V
 
-    .line 8
     return-void
 .end method

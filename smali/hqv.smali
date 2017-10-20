@@ -31,20 +31,16 @@
 .method private final c()[B
     .locals 2
 
-    .prologue
-    .line 11
     invoke-virtual {p0}, Lhqv;->a()I
 
     move-result v0
 
     new-array v0, v0, [B
 
-    .line 12
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lhqr;->a([BI)Lhqr;
 
-    .line 13
     invoke-virtual {p0}, Lhqv;->b()V
 
     return-object v0
@@ -322,20 +318,16 @@
 .method final a()I
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhqv;->b:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
 
     throw v0
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lhqv;->c:Ljava/util/List;
 
@@ -351,14 +343,12 @@
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
 
     throw v0
 
-    .line 5
     :cond_1
     const/4 v0, 0x0
 
@@ -368,20 +358,16 @@
 .method final b()V
     .locals 2
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lhqv;->b:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    .line 7
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
 
     throw v0
 
-    .line 8
     :cond_0
     iget-object v0, p0, Lhqv;->c:Ljava/util/List;
 
@@ -397,14 +383,12 @@
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 9
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
 
     throw v0
 
-    .line 10
     :cond_1
     return-void
 .end method

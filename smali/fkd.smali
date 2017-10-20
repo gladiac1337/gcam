@@ -13,8 +13,6 @@
 .method constructor <init>(Lihr;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 16
     iput-object p1, p0, Lfkd;->a:Lihr;
 
     iput-object p2, p0, Lfkd;->b:Ljava/lang/String;
@@ -29,31 +27,26 @@
 .method public final a(Ljava/io/Writer;)V
     .locals 8
 
-    .prologue
     const/4 v7, 0x1
 
     const/4 v6, 0x0
 
     const/4 v5, 0x0
 
-    .line 1
     iget-object v0, p0, Lfkd;->a:Lihr;
 
     invoke-interface {v0}, Lihr;->a()Ljava/util/List;
 
     move-result-object v0
 
-    .line 2
     iget-object v1, p0, Lfkd;->b:Ljava/lang/String;
 
     new-array v2, v5, [Ljava/lang/Object;
 
-    .line 3
     invoke-static {v6, v1, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -84,7 +77,6 @@
 
     invoke-virtual {p1, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 5
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -102,7 +94,6 @@
 
     check-cast v0, Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 6
     const-string v2, "    %s\n"
 
     new-array v3, v7, [Ljava/lang/Object;
@@ -113,15 +104,12 @@
 
     aput-object v4, v3, v5
 
-    .line 7
     invoke-static {v6, v2, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 8
     invoke-virtual {p1, v2}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 9
     const-string v2, "        %s\n"
 
     new-array v3, v7, [Ljava/lang/Object;
@@ -132,25 +120,20 @@
 
     move-result-object v0
 
-    .line 10
     invoke-static {v0}, Lfkc;->a(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 11
     aput-object v0, v3, v5
 
-    .line 12
     invoke-static {v6, v2, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 13
     invoke-virtual {p1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 15
     :cond_0
     return-void
 .end method

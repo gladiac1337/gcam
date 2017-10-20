@@ -16,8 +16,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 31
     const-string v0, "ModuleManagerImpl"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -28,23 +26,18 @@
 .method public constructor <init>(Ljava/lang/Iterable;)V
     .locals 5
 
-    .prologue
     const/4 v4, -0x1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcqp;->a:Landroid/util/SparseArray;
 
-    .line 3
     iput v4, p0, Lcqp;->b:I
 
-    .line 4
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -62,10 +55,8 @@
 
     check-cast v0, Lcqn;
 
-    .line 6
     if-nez v0, :cond_0
 
-    .line 7
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "Registering a null ModuleAgent."
@@ -74,19 +65,15 @@
 
     throw v0
 
-    .line 8
     :cond_0
     invoke-interface {v0}, Lcqn;->a()Lcqo;
 
     move-result-object v2
 
-    .line 9
     iget v2, v2, Lcqo;->a:I
 
-    .line 11
     if-ne v2, v4, :cond_1
 
-    .line 12
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "ModuleManager: The module ID can not be MODULE_INDEX_NONE"
@@ -95,7 +82,6 @@
 
     throw v0
 
-    .line 13
     :cond_1
     iget-object v3, p0, Lcqp;->a:Landroid/util/SparseArray;
 
@@ -105,7 +91,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 14
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const/16 v1, 0x2b
@@ -132,7 +117,6 @@
 
     throw v0
 
-    .line 15
     :cond_2
     iget-object v3, p0, Lcqp;->a:Landroid/util/SparseArray;
 
@@ -140,7 +124,6 @@
 
     goto :goto_0
 
-    .line 17
     :cond_3
     return-void
 .end method
@@ -150,13 +133,10 @@
 .method public final a()Ljava/util/List;
     .locals 3
 
-    .prologue
-    .line 18
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 19
     const/4 v0, 0x0
 
     move v1, v0
@@ -170,7 +150,6 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 20
     iget-object v0, p0, Lcqp;->a:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -181,14 +160,12 @@
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 21
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 22
     :cond_0
     return-object v2
 .end method
@@ -196,8 +173,6 @@
 .method public final a(I)Z
     .locals 1
 
-    .prologue
-    .line 23
     iget-object v0, p0, Lcqp;->a:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -206,13 +181,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 24
     iput p1, p0, Lcqp;->b:I
 
-    .line 25
     const/4 v0, 0x1
 
-    .line 26
     :goto_0
     return v0
 
@@ -225,8 +197,6 @@
 .method public final b(I)Lcqn;
     .locals 2
 
-    .prologue
-    .line 27
     iget-object v0, p0, Lcqp;->a:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -235,10 +205,8 @@
 
     check-cast v0, Lcqn;
 
-    .line 28
     if-nez v0, :cond_0
 
-    .line 29
     iget-object v0, p0, Lcqp;->a:Landroid/util/SparseArray;
 
     iget v1, p0, Lcqp;->b:I
@@ -249,7 +217,6 @@
 
     check-cast v0, Lcqn;
 
-    .line 30
     :cond_0
     return-object v0
 .end method

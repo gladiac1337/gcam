@@ -15,10 +15,8 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 10
     new-instance v0, Lfnu;
 
     invoke-direct {v0, v1, v1, v1}, Lfnu;-><init>(FFF)V
@@ -29,8 +27,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,14 +35,10 @@
 .method public constructor <init>(FFF)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     invoke-virtual {p0, p1, p2, p3}, Lfnu;->a(FFF)V
 
-    .line 4
     return-void
 .end method
 
@@ -55,25 +47,18 @@
 .method public final a(FFF)V
     .locals 0
 
-    .prologue
-    .line 5
     iput p1, p0, Lfnu;->a:F
 
-    .line 6
     iput p2, p0, Lfnu;->b:F
 
-    .line 7
     iput p3, p0, Lfnu;->c:F
 
-    .line 8
     return-void
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 9
     iget v0, p0, Lfnu;->a:F
 
     iget v1, p0, Lfnu;->b:F

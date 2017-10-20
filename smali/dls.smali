@@ -34,52 +34,36 @@
 .method private constructor <init>(Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldls;->a:Ljxb;
 
-    .line 3
     iput-object p2, p0, Ldls;->b:Ljxb;
 
-    .line 4
     iput-object p3, p0, Ldls;->c:Ljxb;
 
-    .line 5
     iput-object p4, p0, Ldls;->d:Ljxb;
 
-    .line 6
     iput-object p5, p0, Ldls;->e:Ljxb;
 
-    .line 7
     iput-object p6, p0, Ldls;->f:Ljxb;
 
-    .line 8
     iput-object p7, p0, Ldls;->g:Ljxb;
 
-    .line 9
     iput-object p8, p0, Ldls;->h:Ljxb;
 
-    .line 10
     iput-object p9, p0, Ldls;->i:Ljxb;
 
-    .line 11
     iput-object p10, p0, Ldls;->j:Ljxb;
 
-    .line 12
     iput-object p11, p0, Ldls;->k:Ljxb;
 
-    .line 13
     return-void
 .end method
 
 .method public static a(Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;)Ljxb;
     .locals 12
 
-    .prologue
-    .line 14
     new-instance v0, Ldls;
 
     move-object v1, p0
@@ -114,12 +98,8 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 13
 
-    .prologue
-    .line 15
-    .line 16
     iget-object v0, p0, Ldls;->a:Ljxb;
 
-    .line 17
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -128,7 +108,6 @@
 
     iget-object v0, p0, Ldls;->b:Ljxb;
 
-    .line 18
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -137,7 +116,6 @@
 
     iget-object v0, p0, Ldls;->c:Ljxb;
 
-    .line 19
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -146,7 +124,6 @@
 
     iget-object v0, p0, Ldls;->d:Ljxb;
 
-    .line 20
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v4
@@ -155,7 +132,6 @@
 
     iget-object v0, p0, Ldls;->e:Ljxb;
 
-    .line 21
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v5
@@ -164,12 +140,10 @@
 
     iget-object v0, p0, Ldls;->f:Ljxb;
 
-    .line 22
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Ldls;->g:Ljxb;
 
-    .line 23
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -178,7 +152,6 @@
 
     iget-object v6, p0, Ldls;->h:Ljxb;
 
-    .line 24
     invoke-interface {v6}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -187,7 +160,6 @@
 
     iget-object v7, p0, Ldls;->i:Ljxb;
 
-    .line 25
     invoke-interface {v7}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v7
@@ -198,7 +170,6 @@
 
     iget-object v7, p0, Ldls;->j:Ljxb;
 
-    .line 26
     invoke-interface {v7}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v9
@@ -207,61 +178,45 @@
 
     iget-object v7, p0, Ldls;->k:Ljxb;
 
-    .line 27
     invoke-interface {v7}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v10
 
     check-cast v10, Ljava/util/concurrent/Executor;
 
-    .line 30
     iget-object v0, v0, Lgkk;->a:Ligf;
 
-    .line 32
     new-instance v7, Landroid/hardware/camera2/params/InputConfiguration;
 
-    .line 33
     iget-object v11, v0, Ligf;->b:Libx;
 
-    .line 34
     iget v11, v11, Libx;->a:I
 
-    .line 36
     iget-object v12, v0, Ligf;->b:Libx;
 
-    .line 37
     iget v12, v12, Libx;->b:I
 
-    .line 39
     iget v0, v0, Ligf;->a:I
 
-    .line 40
     invoke-direct {v7, v11, v12, v0}, Landroid/hardware/camera2/params/InputConfiguration;-><init>(III)V
 
-    .line 41
     new-instance v0, Ligm;
 
-    .line 42
     invoke-static {v7}, Ljhi;->b(Ljava/lang/Object;)Ljhi;
 
     move-result-object v7
 
-    .line 43
     iget-object v8, v8, Lgzo;->c:Ligy;
 
-    .line 44
     invoke-direct/range {v0 .. v10}, Ligm;-><init>(Lhzg;Ljuk;Ljava/util/Set;Ligs;Lick;Lidt;Ljhi;Ligy;Lico;Ljava/util/concurrent/Executor;)V
 
-    .line 45
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 46
     invoke-static {v0, v1}, Ljvr;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ligm;
 
-    .line 47
     return-object v0
 .end method

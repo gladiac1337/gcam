@@ -25,8 +25,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 26
     const-string v0, "CdrCamCapCallback"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -41,40 +39,30 @@
 .method public constructor <init>(Landroid/view/Surface;Licc;Lggq;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lgpr;-><init>()V
 
-    .line 3
     new-instance v0, Ljuw;
 
     invoke-direct {v0}, Ljuw;-><init>()V
 
-    .line 4
     iput-object v0, p0, Lbcu;->a:Ljuw;
 
-    .line 5
     const/4 v0, 0x0
 
     iput v0, p0, Lbcu;->b:I
 
-    .line 6
     new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
 
     iput-object v0, p0, Lbcu;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    .line 7
     iput-object p1, p0, Lbcu;->e:Landroid/view/Surface;
 
-    .line 8
     iput-object p2, p0, Lbcu;->f:Licc;
 
-    .line 9
     iput-object p3, p0, Lbcu;->g:Lggq;
 
-    .line 10
     return-void
 .end method
 
@@ -83,20 +71,16 @@
 .method public final a(Lihq;Landroid/view/Surface;J)V
     .locals 1
 
-    .prologue
-    .line 23
     iget-object v0, p0, Lbcu;->e:Landroid/view/Surface;
 
     if-ne p2, v0, :cond_0
 
-    .line 24
     iget v0, p0, Lbcu;->b:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lbcu;->b:I
 
-    .line 25
     :cond_0
     return-void
 .end method
@@ -104,23 +88,18 @@
 .method public final a(Lihq;Liho;)V
     .locals 2
 
-    .prologue
-    .line 21
     sget-object v0, Lbcu;->d:Ljava/lang/String;
 
     const-string v1, "onCaptureFailed"
 
     invoke-static {v0, v1}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 22
     return-void
 .end method
 
 .method public final a(Lihq;Lihr;)V
     .locals 2
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lbcu;->a:Ljuw;
 
     invoke-virtual {v0}, Ljsl;->isDone()Z
@@ -129,14 +108,12 @@
 
     if-nez v0, :cond_0
 
-    .line 12
     iget-object v0, p0, Lbcu;->a:Ljuw;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljsl;->a(Ljava/lang/Object;)Z
 
-    .line 13
     :cond_0
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->SCALER_CROP_REGION:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -146,21 +123,17 @@
 
     check-cast v0, Landroid/graphics/Rect;
 
-    .line 14
     if-eqz v0, :cond_1
 
-    .line 15
     iget-object v1, p0, Lbcu;->f:Licc;
 
     invoke-interface {v1, v0}, Licc;->a(Ljava/lang/Object;)V
 
-    .line 16
     :cond_1
     iget-object v0, p0, Lbcu;->g:Lggq;
 
     invoke-virtual {v0, p2}, Lggq;->a(Lihr;)V
 
-    .line 17
     iget-object v0, p0, Lbcu;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->iterator()Ljava/util/Iterator;
@@ -180,12 +153,10 @@
 
     check-cast v0, Lihj;
 
-    .line 18
     invoke-interface {v0, p1, p2}, Lihj;->a(Lihq;Lihr;)V
 
     goto :goto_0
 
-    .line 20
     :cond_2
     return-void
 .end method

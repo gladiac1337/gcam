@@ -79,9 +79,6 @@
 .method public final b(Lhrn;)Lhrn;
     .locals 3
 
-    .prologue
-    .line 1
-    .line 2
     :try_start_0
     iget-object v0, p0, Lhsf;->a:Lhsx;
 
@@ -95,10 +92,8 @@
 
     iget-object v0, v0, Lhsx;->m:Lhst;
 
-    .line 3
     iget-object v1, p1, Lhrn;->e:Lhjw;
 
-    .line 5
     iget-object v0, v0, Lhst;->e:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -111,7 +106,6 @@
 
     invoke-static {v0, v1}, Lhiv;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     invoke-interface {v0}, Lhjy;->d()Z
 
     move-result v1
@@ -122,10 +116,8 @@
 
     iget-object v1, v1, Lhsx;->g:Ljava/util/Map;
 
-    .line 7
     iget-object v2, p1, Lhrn;->e:Lhjw;
 
-    .line 8
     invoke-interface {v1, v2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
@@ -140,11 +132,9 @@
 
     invoke-virtual {p1, v0}, Lhrn;->b(Lcom/google/android/gms/common/api/Status;)V
 
-    .line 9
     :goto_0
     return-object p1
 
-    .line 8
     :cond_0
     instance-of v1, v0, Lhkv;
 
@@ -161,7 +151,6 @@
 
     goto :goto_0
 
-    .line 9
     :catch_0
     move-exception v0
 
@@ -179,13 +168,10 @@
 .method public final b()Z
     .locals 2
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lhsf;->a:Lhsx;
 
     iget-object v0, v0, Lhsx;->m:Lhst;
 
-    .line 11
     iget-object v1, v0, Lhst;->b:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -194,7 +180,6 @@
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 12
     iget-object v0, p0, Lhsf;->a:Lhsx;
 
     const/4 v1, 0x0

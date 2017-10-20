@@ -10,8 +10,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,8 +18,6 @@
 .method synthetic constructor <init>(B)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Liye;-><init>()V
 
     return-void
@@ -35,8 +31,6 @@
 .method public bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 2
     check-cast p1, Lcom/google/android/vision/face/Face;
 
     invoke-virtual {p0, p1}, Liye;->a(Lcom/google/android/vision/face/Face;)Ljava/lang/Float;

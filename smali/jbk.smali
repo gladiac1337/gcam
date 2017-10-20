@@ -13,20 +13,14 @@
 .method public constructor <init>(Ljac;F)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljat;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Ljbk;->a:Ljac;
 
-    .line 4
     iput p2, p0, Ljbk;->b:F
 
-    .line 5
     return-void
 .end method
 
@@ -35,15 +29,12 @@
 .method public final a(Ljao;)Ljao;
     .locals 13
 
-    .prologue
     const-wide/16 v4, -0x1
 
-    .line 6
     iget-object v0, p0, Ljbk;->a:Ljac;
 
     invoke-interface {v0}, Ljac;->a()V
 
-    .line 7
     invoke-virtual {p1}, Ljao;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -61,7 +52,6 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    .line 8
     iget-object v2, p0, Ljbk;->a:Ljac;
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
@@ -72,13 +62,11 @@
 
     goto :goto_0
 
-    .line 10
     :cond_0
     invoke-static {p1}, Litx;->d(Ljava/lang/Iterable;)Ljava/util/HashSet;
 
     move-result-object v8
 
-    .line 11
     :cond_1
     :goto_1
     invoke-virtual {v8}, Ljava/util/HashSet;->size()I
@@ -87,10 +75,8 @@
 
     if-lez v0, :cond_3
 
-    .line 12
     const v0, 0x7f7fffff    # Float.MAX_VALUE
 
-    .line 14
     invoke-virtual {v8}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v9
@@ -116,7 +102,6 @@
 
     move-result-wide v6
 
-    .line 15
     iget-object v0, p0, Ljbk;->a:Ljac;
 
     invoke-interface {v0, v6, v7}, Ljac;->a(J)Ljfm;
@@ -127,7 +112,6 @@
 
     move-result v0
 
-    .line 16
     cmpg-float v10, v0, v1
 
     if-gez v10, :cond_4
@@ -143,10 +127,8 @@
 
     move-wide v2, v11
 
-    .line 19
     goto :goto_2
 
-    .line 20
     :cond_2
     iget v0, p0, Ljbk;->b:F
 
@@ -154,26 +136,22 @@
 
     if-gez v0, :cond_3
 
-    .line 21
     cmp-long v0, v2, v4
 
     if-eqz v0, :cond_1
 
-    .line 22
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
     invoke-virtual {v8, v0}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 23
     iget-object v0, p0, Ljbk;->a:Ljac;
 
     invoke-interface {v0, v2, v3}, Ljac;->c(J)V
 
     goto :goto_1
 
-    .line 25
     :cond_3
     new-instance v0, Ljao;
 
@@ -198,8 +176,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 26
     const-string v0, "ScoreThresholdSegmentFilter[scorer="
 
     iget-object v1, p0, Ljbk;->a:Ljac;

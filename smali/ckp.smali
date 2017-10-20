@@ -16,8 +16,6 @@
 .method constructor <init>(Lckn;Lcjx;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lckp;->b:Lckn;
 
     iput-object p2, p0, Lckp;->a:Lcjx;
@@ -32,18 +30,13 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lckp;->b:Lckn;
 
-    .line 3
     iget-object v0, v0, Lckn;->a:Lcjw;
 
-    .line 4
     iget-object v1, p0, Lckp;->a:Lcjx;
 
     invoke-interface {v0, v1}, Lcjw;->a(Lcjx;)V
 
-    .line 5
     return-void
 .end method

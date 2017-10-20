@@ -25,14 +25,10 @@
 .method public final run()V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhsi;->a:Lhsh;
 
-    .line 2
     iget-object v0, v0, Lhsh;->c:Landroid/content/Context;
 
-    .line 3
     invoke-static {v0}, Lhjm;->b(Landroid/content/Context;)V
 
     return-void

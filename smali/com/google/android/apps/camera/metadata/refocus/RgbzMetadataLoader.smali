@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,20 +15,16 @@
 .method public static loadRgbzMetadata(Landroid/content/Context;Landroid/net/Uri;Lfus;)Z
     .locals 2
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 2
     invoke-static {p0, p1}, Lcom/google/android/apps/camera/metadata/refocus/RefocusHelper;->isRgbz(Landroid/content/Context;Landroid/net/Uri;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 4
     iput-boolean v0, p2, Lfus;->i:Z
 
-    .line 6
     :goto_0
     return v0
 

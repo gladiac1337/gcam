@@ -25,8 +25,6 @@
 .method public constructor <init>(Landroid/content/Intent;Landroid/app/Activity;I)V
     .locals 0
 
-    .prologue
-    .line 2
     iput-object p1, p0, Lhlk;->a:Landroid/content/Intent;
 
     iput-object p2, p0, Lhlk;->b:Landroid/app/Activity;
@@ -43,8 +41,6 @@
 .method public a()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhlk;->a:Landroid/content/Intent;
 
     if-eqz v0, :cond_0

@@ -19,7 +19,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -28,7 +27,6 @@
 
     const/4 v2, 0x0
 
-    .line 3
     new-instance v0, Lazo;
 
     const-string v1, "CLOSED"
@@ -37,7 +35,6 @@
 
     sput-object v0, Lazo;->a:Lazo;
 
-    .line 4
     new-instance v0, Lazo;
 
     const-string v1, "READY"
@@ -46,7 +43,6 @@
 
     sput-object v0, Lazo;->b:Lazo;
 
-    .line 5
     new-instance v0, Lazo;
 
     const-string v1, "STARTING_RECORD"
@@ -55,7 +51,6 @@
 
     sput-object v0, Lazo;->c:Lazo;
 
-    .line 6
     new-instance v0, Lazo;
 
     const-string v1, "RECORDING"
@@ -64,7 +59,6 @@
 
     sput-object v0, Lazo;->d:Lazo;
 
-    .line 7
     const/4 v0, 0x4
 
     new-array v0, v0, [Lazo;
@@ -93,8 +87,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -103,8 +95,6 @@
 .method public static values()[Lazo;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lazo;->e:[Lazo;
 
     invoke-virtual {v0}, [Lazo;->clone()Ljava/lang/Object;

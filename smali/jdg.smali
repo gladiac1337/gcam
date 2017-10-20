@@ -11,8 +11,6 @@
 .method constructor <init>(Ljdf;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljdg;->a:Ljdf;
 
     invoke-direct {p0}, Ljava/io/ByteArrayOutputStream;-><init>()V
@@ -25,17 +23,12 @@
 .method public final close()V
     .locals 3
 
-    .prologue
-    .line 2
     invoke-super {p0}, Ljava/io/ByteArrayOutputStream;->close()V
 
-    .line 3
     iget-object v0, p0, Ljdg;->a:Ljdf;
 
-    .line 4
     iget-object v0, v0, Ljdf;->a:Ljuw;
 
-    .line 5
     new-instance v1, Ljava/io/ByteArrayInputStream;
 
     invoke-virtual {p0}, Ljdg;->toByteArray()[B
@@ -46,6 +39,5 @@
 
     invoke-virtual {v0, v1}, Ljsl;->a(Ljava/lang/Object;)Z
 
-    .line 6
     return-void
 .end method

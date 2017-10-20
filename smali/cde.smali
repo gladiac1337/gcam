@@ -27,41 +27,30 @@
 .method constructor <init>(Ljava/util/List;Ljava/util/UUID;Ldvl;Ljava/util/concurrent/Executor;Lccu;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcdf;
 
     invoke-direct {v0}, Lcdf;-><init>()V
 
     iput-object v0, p0, Lcde;->b:Lijv;
 
-    .line 3
     iput-object p1, p0, Lcde;->d:Ljava/util/List;
 
-    .line 4
     iput-object p3, p0, Lcde;->e:Ldvl;
 
-    .line 5
     iput-object p2, p0, Lcde;->c:Ljava/util/UUID;
 
-    .line 6
     iput-object p4, p0, Lcde;->a:Ljava/util/concurrent/Executor;
 
-    .line 7
     iput-object p5, p0, Lcde;->f:Lccu;
 
-    .line 8
     return-void
 .end method
 
 .method private final a(J)Lcdn;
     .locals 5
 
-    .prologue
-    .line 58
     iget-object v0, p0, Lcde;->d:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -81,17 +70,14 @@
 
     check-cast v0, Lcdn;
 
-    .line 59
     iget-wide v2, v0, Lcdn;->a:J
 
     cmp-long v2, v2, p1
 
     if-nez v2, :cond_0
 
-    .line 60
     return-object v0
 
-    .line 62
     :cond_1
     new-instance v0, Ljava/util/NoSuchElementException;
 
@@ -131,8 +117,6 @@
 .method final a(Lixn;Libh;I)Ljava/util/List;
     .locals 16
 
-    .prologue
-    .line 9
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-virtual/range {p1 .. p1}, Lixn;->f()I
@@ -141,7 +125,6 @@
 
     invoke-direct {v10, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 10
     invoke-virtual/range {p1 .. p1}, Lixn;->c()Ljava/util/Set;
 
     move-result-object v2
@@ -168,7 +151,6 @@
 
     move-result-wide v2
 
-    .line 12
     :try_start_0
     move-object/from16 v0, p1
 
@@ -188,10 +170,8 @@
     :try_end_0
     .catch Lixh; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 13
     const/4 v9, 0x0
 
-    .line 14
     :try_start_1
     invoke-interface {v8}, Ljgl;->e()Ljava/lang/Object;
 
@@ -199,30 +179,25 @@
 
     check-cast v2, Lbzk;
 
-    .line 15
     iget-object v2, v2, Lbzk;->b:Lbwo;
 
     if-eqz v2, :cond_2
 
     const/4 v2, 0x1
 
-    .line 16
     :goto_1
     if-eqz v2, :cond_4
 
-    .line 17
     invoke-interface {v8}, Ljgl;->e()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lbzk;
 
-    .line 19
     iget-object v3, v2, Lbzk;->b:Lbwo;
 
     if-nez v3, :cond_3
 
-    .line 20
     new-instance v2, Ljava/lang/NullPointerException;
 
     const-string v3, "Attempting to get disk image, which is in memory!"
@@ -234,7 +209,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 52
     :catch_0
     move-exception v2
 
@@ -243,7 +217,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 53
     :catchall_0
     move-exception v3
 
@@ -271,27 +244,22 @@
     :try_end_4
     .catch Lixh; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 56
     :catch_1
     move-exception v2
 
     goto :goto_0
 
-    .line 15
     :cond_2
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 21
     :cond_3
     :try_start_5
     iget-object v3, v2, Lbzk;->b:Lbwo;
 
-    .line 23
     iget-object v2, v3, Lbwo;->b:Ljuk;
 
-    .line 24
     invoke-static {v2}, Ljtv;->b(Ljava/util/concurrent/Future;)Ljava/lang/Object;
 
     move-result-object v2
@@ -302,13 +270,10 @@
 
     move-result-object v2
 
-    .line 25
     iget-wide v4, v3, Lbwo;->a:J
 
-    .line 26
     new-instance v3, Lcdh;
 
-    .line 28
     new-instance v6, Ljgi;
 
     invoke-static {v2}, Litx;->a(Ljava/lang/AutoCloseable;)Ljge;
@@ -317,26 +282,22 @@
 
     invoke-direct {v6, v2}, Ljgi;-><init>(Ljge;)V
 
-    .line 29
     invoke-static {v6}, Litx;->a(Ljgp;)Ljgo;
 
     move-result-object v2
 
-    .line 30
     invoke-direct {v3, v2, v4, v5}, Lcdh;-><init>(Ljgo;J)V
 
     invoke-static {v3}, Licn;->b(Ljava/lang/Object;)Liku;
 
     move-result-object v2
 
-    .line 50
     :goto_4
     invoke-interface {v10, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_5
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 51
     if-eqz v8, :cond_0
 
     :try_start_6
@@ -346,7 +307,6 @@
 
     goto :goto_0
 
-    .line 32
     :cond_4
     :try_start_7
     invoke-interface {v8}, Ljgl;->d()Ljava/lang/Object;
@@ -355,12 +315,10 @@
 
     check-cast v2, Lbzk;
 
-    .line 34
     iget-object v3, v2, Lbzk;->a:Lgid;
 
     if-nez v3, :cond_5
 
-    .line 35
     new-instance v2, Ljava/lang/NullPointerException;
 
     const-string v3, "Attempting to get memory image, which is on disk!"
@@ -369,7 +327,6 @@
 
     throw v2
 
-    .line 53
     :catchall_1
     move-exception v2
 
@@ -377,11 +334,9 @@
 
     goto :goto_2
 
-    .line 36
     :cond_5
     iget-object v3, v2, Lbzk;->a:Lgid;
 
-    .line 39
     invoke-virtual {v3}, Lgid;->a()Landroid/graphics/Rect;
 
     move-result-object v2
@@ -392,7 +347,6 @@
 
     move-result-object v4
 
-    .line 41
     invoke-virtual {v3}, Lgid;->e()J
 
     move-result-wide v6
@@ -403,7 +357,6 @@
 
     move-result-object v5
 
-    .line 42
     new-instance v12, Lcdq;
 
     move-object/from16 v0, p0
@@ -414,7 +367,6 @@
 
     invoke-direct {v12, v2, v6}, Lcdq;-><init>(Ljava/util/UUID;Z)V
 
-    .line 43
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcde;->e:Ldvl;
@@ -435,17 +387,14 @@
 
     move/from16 v5, p3
 
-    .line 44
     invoke-virtual/range {v2 .. v7}, Ldvl;->a(Lgid;Landroid/graphics/Rect;ILgon;Ljgy;)Ljuk;
 
     move-result-object v2
 
-    .line 45
     invoke-static {v2}, Licn;->a(Ljuk;)Liku;
 
     move-result-object v2
 
-    .line 46
     invoke-virtual {v3}, Lgid;->e()J
 
     move-result-wide v4
@@ -454,13 +403,10 @@
 
     iget-object v3, v0, Lcde;->a:Ljava/util/concurrent/Executor;
 
-    .line 47
     invoke-static {v2}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 48
     invoke-static {v3}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 49
     new-instance v6, Lcdi;
 
     invoke-direct {v6, v4, v5}, Lcdi;-><init>(J)V
@@ -474,7 +420,6 @@
 
     goto :goto_4
 
-    .line 53
     :catch_2
     move-exception v4
 
@@ -490,7 +435,6 @@
 
     goto/16 :goto_3
 
-    .line 57
     :cond_7
     return-object v10
 .end method

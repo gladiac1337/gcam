@@ -14,8 +14,6 @@
 .method constructor <init>(Lcup;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcuq;->a:Lcup;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,30 +26,22 @@
 .method public final a(Z)V
     .locals 1
 
-    .prologue
-    .line 2
     if-nez p1, :cond_0
 
     iget-object v0, p0, Lcuq;->a:Lcup;
 
-    .line 3
     invoke-virtual {v0}, Lcup;->m()Z
 
     move-result v0
 
-    .line 4
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lcuq;->a:Lcup;
 
-    .line 6
     iget-object v0, v0, Lcup;->d:Lgtz;
 
-    .line 7
     invoke-interface {v0}, Lgtz;->a()V
 
-    .line 8
     :cond_0
     return-void
 .end method
@@ -59,30 +49,22 @@
 .method public final b(Z)V
     .locals 1
 
-    .prologue
-    .line 9
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcuq;->a:Lcup;
 
-    .line 10
     invoke-virtual {v0}, Lcup;->m()Z
 
     move-result v0
 
-    .line 11
     if-eqz v0, :cond_0
 
-    .line 12
     iget-object v0, p0, Lcuq;->a:Lcup;
 
-    .line 13
     iget-object v0, v0, Lcup;->f:Lheb;
 
-    .line 14
     invoke-interface {v0}, Lheb;->k()V
 
-    .line 15
     :cond_0
     return-void
 .end method
@@ -90,30 +72,22 @@
 .method public final c(Z)V
     .locals 1
 
-    .prologue
-    .line 16
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcuq;->a:Lcup;
 
-    .line 17
     invoke-virtual {v0}, Lcup;->m()Z
 
     move-result v0
 
-    .line 18
     if-eqz v0, :cond_0
 
-    .line 19
     iget-object v0, p0, Lcuq;->a:Lcup;
 
-    .line 20
     iget-object v0, v0, Lcup;->f:Lheb;
 
-    .line 21
     invoke-interface {v0}, Lheb;->j()V
 
-    .line 22
     :cond_0
     return-void
 .end method

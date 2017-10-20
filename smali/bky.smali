@@ -11,14 +11,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 5
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     const-string v0, "persist."
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -27,7 +23,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "persist."
@@ -112,7 +107,6 @@
 
     throw v0
 
-    .line 6
     :cond_0
     const-string v0, "persist."
 
@@ -134,7 +128,6 @@
 
     move-result-object v0
 
-    .line 7
     :goto_0
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -144,7 +137,6 @@
 
     if-le v1, v2, :cond_2
 
-    .line 8
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -199,7 +191,6 @@
 
     throw v1
 
-    .line 6
     :cond_1
     new-instance v0, Ljava/lang/String;
 
@@ -207,10 +198,8 @@
 
     goto :goto_0
 
-    .line 9
     :cond_2
     iput-object p1, p0, Lbky;->b:Ljava/lang/String;
 
-    .line 10
     return-void
 .end method

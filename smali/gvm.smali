@@ -14,8 +14,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 26
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,29 +36,22 @@
 .method public final a(Ljava/io/File;)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-static {p1}, Ljow;->c(Ljava/io/File;)V
 
-    .line 3
     return-void
 .end method
 
 .method public final a(Ljava/io/File;Ljava/io/File;)V
     .locals 1
 
-    .prologue
-    .line 17
     invoke-virtual {p1, p2}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 18
     invoke-static {p1, p2}, Ljow;->a(Ljava/io/File;Ljava/io/File;)V
 
-    .line 19
     :cond_0
     return-void
 .end method
@@ -70,8 +59,6 @@
 .method public final b(Ljava/io/File;)V
     .locals 5
 
-    .prologue
-    .line 4
     invoke-virtual {p1}, Ljava/io/File;->exists()Z
 
     move-result v0
@@ -84,21 +71,17 @@
 
     if-nez v0, :cond_1
 
-    .line 16
     :cond_0
     :goto_0
     return-void
 
-    .line 6
     :cond_1
     invoke-virtual {p1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v1
 
-    .line 7
     if-eqz v1, :cond_0
 
-    .line 9
     array-length v2, v1
 
     const/4 v0, 0x0
@@ -108,17 +91,14 @@
 
     aget-object v3, v1, v0
 
-    .line 10
     invoke-virtual {v3}, Ljava/io/File;->isDirectory()Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    .line 11
     invoke-virtual {p0, v3}, Lgvm;->b(Ljava/io/File;)V
 
-    .line 12
     :cond_2
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
@@ -126,7 +106,6 @@
 
     if-nez v4, :cond_4
 
-    .line 13
     new-instance v1, Ljava/io/IOException;
 
     const-string v2, "Failed to delete file: "
@@ -161,13 +140,11 @@
 
     goto :goto_2
 
-    .line 14
     :cond_4
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 15
     :cond_5
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
@@ -177,8 +154,6 @@
 .method public final c(Ljava/io/File;)[B
     .locals 1
 
-    .prologue
-    .line 20
     invoke-static {p1}, Ljow;->a(Ljava/io/File;)[B
 
     move-result-object v0
@@ -189,24 +164,18 @@
 .method public final d(Ljava/io/File;)V
     .locals 0
 
-    .prologue
-    .line 21
     invoke-static {p1}, Ljow;->b(Ljava/io/File;)V
 
-    .line 22
     return-void
 .end method
 
 .method public final e(Ljava/io/File;)Z
     .locals 2
 
-    .prologue
-    .line 23
     sget-object v1, Lgvm;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 24
     :try_start_0
     invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
@@ -233,7 +202,6 @@
 
     goto :goto_0
 
-    .line 25
     :catchall_0
     move-exception v0
 

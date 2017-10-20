@@ -13,16 +13,11 @@
 .method constructor <init>(ZZ)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lgow;-><init>()V
 
-    .line 2
     iput-boolean p1, p0, Lejj;->a:Z
 
-    .line 3
     iput-boolean p2, p0, Lejj;->b:Z
 
-    .line 4
     return-void
 .end method

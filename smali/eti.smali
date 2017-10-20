@@ -14,8 +14,6 @@
 .method constructor <init>(Leth;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leti;->a:Leth;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,35 +24,27 @@
 .method private final a(Lado;)Ljuk;
     .locals 8
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Leti;->a:Leth;
 
-    .line 3
     iget-object v0, v0, Leth;->c:Ljava/lang/String;
 
-    .line 4
     invoke-virtual {p1, v0}, Lado;->a(Ljava/lang/String;)Ladt;
 
     move-result-object v0
 
-    .line 5
     if-eqz v0, :cond_1
 
-    .line 7
     iget-object v2, v0, Ladt;->a:[Ljava/io/File;
 
     const/4 v3, 0x0
 
     aget-object v2, v2, v3
 
-    .line 9
     sget-object v3, Leth;->a:Ljava/lang/String;
 
-    .line 10
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v4
@@ -89,31 +79,25 @@
 
     invoke-static {v3, v4}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 11
     new-instance v3, Ljava/io/FileInputStream;
 
     invoke-direct {v3, v2}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 12
     :try_start_1
     iget-object v2, p0, Leti;->a:Leth;
 
-    .line 13
     iget-object v2, v2, Leth;->e:Letf;
 
-    .line 16
     invoke-virtual {v3}, Ljava/io/InputStream;->read()I
 
     move-result v2
 
-    .line 17
     invoke-virtual {v3}, Ljava/io/InputStream;->read()I
 
     move-result v4
 
-    .line 18
     and-int/lit16 v4, v4, 0xff
 
     shl-int/lit8 v4, v4, 0x8
@@ -122,12 +106,10 @@
 
     or-int/2addr v2, v4
 
-    .line 19
     invoke-static {v3}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
 
     move-result-object v4
 
-    .line 20
     new-instance v5, Letg;
 
     invoke-static {v2}, Libu;->a(I)Libu;
@@ -136,10 +118,8 @@
 
     invoke-direct {v5, v4, v2}, Letg;-><init>(Landroid/graphics/Bitmap;Libu;)V
 
-    .line 22
     sget-object v2, Leth;->a:Ljava/lang/String;
 
-    .line 23
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -174,31 +154,24 @@
 
     invoke-static {v2, v0}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 24
     iget-object v0, p0, Leti;->a:Leth;
 
-    .line 25
     iget-object v2, v0, Leth;->h:Ljava/lang/Object;
 
-    .line 26
     monitor-enter v2
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 27
     :try_start_2
     iget-object v0, p0, Leti;->a:Leth;
 
-    .line 28
     iput-object v5, v0, Leth;->g:Ljava/lang/Object;
 
-    .line 29
     monitor-exit v2
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 30
     :try_start_3
     invoke-static {v5}, Ljtv;->b(Ljava/lang/Object;)Ljuk;
     :try_end_3
@@ -207,17 +180,14 @@
 
     move-result-object v0
 
-    .line 31
     :try_start_4
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 38
     :goto_0
     return-object v0
 
-    .line 29
     :catchall_0
     move-exception v0
 
@@ -232,7 +202,6 @@
     .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 33
     :catch_0
     move-exception v0
 
@@ -241,7 +210,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 34
     :catchall_1
     move-exception v1
 
@@ -266,7 +234,6 @@
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_1
 
-    .line 38
     :catch_1
     move-exception v0
 
@@ -276,7 +243,6 @@
 
     goto :goto_0
 
-    .line 34
     :catch_2
     move-exception v2
 
@@ -290,16 +256,13 @@
 
     goto :goto_2
 
-    .line 35
     :cond_1
     sget-object v0, Leth;->a:Ljava/lang/String;
 
-    .line 36
     const-string v1, "null value from disk cache"
 
     invoke-static {v0, v1}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 37
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljtv;->b(Ljava/lang/Object;)Ljuk;
@@ -310,7 +273,6 @@
 
     goto :goto_0
 
-    .line 34
     :catchall_2
     move-exception v0
 
@@ -322,8 +284,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;)Ljuk;
     .locals 1
 
-    .prologue
-    .line 39
     check-cast p1, Lado;
 
     invoke-direct {p0, p1}, Leti;->a(Lado;)Ljuk;

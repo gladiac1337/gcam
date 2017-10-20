@@ -37,8 +37,6 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 1
     iget-object v2, p0, Lfyw;->a:Lico;
 
     iget-object v0, p0, Lfyw;->b:Ljxb;
@@ -47,12 +45,10 @@
 
     iget-object v3, p0, Lfyw;->d:Ljxb;
 
-    .line 2
     const-string v4, "MICRO_EncoderModule#shutdown_controller"
 
     invoke-interface {v2, v4}, Lico;->a(Ljava/lang/String;)V
 
-    .line 3
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -61,7 +57,6 @@
 
     invoke-interface {v0}, Lfxc;->close()V
 
-    .line 4
     invoke-interface {v1}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -76,9 +71,7 @@
 
     invoke-interface {v0, v1}, Lfwu;->b(Lfwn;)V
 
-    .line 5
     invoke-interface {v2}, Lico;->a()V
 
-    .line 6
     return-void
 .end method

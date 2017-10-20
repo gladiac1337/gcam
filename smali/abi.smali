@@ -18,8 +18,6 @@
 .method constructor <init>(Labe;ILacl;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Labi;->c:Labe;
 
     iput p2, p0, Labi;->a:I
@@ -36,32 +34,26 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Labi;->c:Labe;
 
     invoke-virtual {v0}, Labe;->j()Lacn;
 
     move-result-object v0
 
-    .line 3
     invoke-virtual {v0}, Lacn;->c()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 7
     :goto_0
     return-void
 
-    .line 5
     :cond_0
     iget v1, p0, Labi;->a:I
 
     invoke-virtual {v0, v1}, Lacn;->b(I)Z
 
-    .line 6
     iget-object v0, p0, Labi;->c:Labe;
 
     invoke-virtual {v0}, Labe;->h()Landroid/os/Handler;

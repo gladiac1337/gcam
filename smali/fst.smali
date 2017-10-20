@@ -21,14 +21,12 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x2
 
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 5
     new-instance v0, Lfst;
 
     const-string v1, "LUCKY_SHOT_FACE_METRIC"
@@ -37,7 +35,6 @@
 
     sput-object v0, Lfst;->d:Lfst;
 
-    .line 6
     new-instance v0, Lfst;
 
     const-string v1, "LUCKY_SHOT_DEFAULT_METRIC"
@@ -46,7 +43,6 @@
 
     sput-object v0, Lfst;->a:Lfst;
 
-    .line 7
     new-instance v0, Lfst;
 
     const-string v1, "UNKNOWN"
@@ -55,7 +51,6 @@
 
     sput-object v0, Lfst;->b:Lfst;
 
-    .line 8
     const/4 v0, 0x3
 
     new-array v0, v0, [Lfst;
@@ -80,22 +75,16 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput p3, p0, Lfst;->c:I
 
-    .line 4
     return-void
 .end method
 
 .method public static values()[Lfst;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lfst;->e:[Lfst;
 
     invoke-virtual {v0}, [Lfst;->clone()Ljava/lang/Object;

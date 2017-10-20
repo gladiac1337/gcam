@@ -25,19 +25,15 @@
 .method public final a(Ljava/lang/Object;)Ljuk;
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Ldgv;->a:Ldgu;
 
     check-cast p1, Landroid/view/Surface;
 
-    .line 2
     iget-object v0, v0, Ldgu;->e:Lazu;
 
     invoke-interface {v0, p1}, Lazu;->a(Landroid/view/Surface;)Ljuk;
 
     move-result-object v0
 
-    .line 3
     return-object v0
 .end method

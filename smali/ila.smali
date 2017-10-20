@@ -14,8 +14,6 @@
 .method public constructor <init>(Liku;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lila;->a:Liku;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,11 +26,8 @@
 .method public final synthetic a(Ljava/lang/Object;Ljava/util/concurrent/Executor;)Liku;
     .locals 3
 
-    .prologue
-    .line 2
     check-cast p1, Likw;
 
-    .line 3
     iget-object v0, p0, Lila;->a:Liku;
 
     new-instance v1, Lilb;
@@ -47,6 +42,5 @@
 
     move-result-object v0
 
-    .line 4
     return-object v0
 .end method

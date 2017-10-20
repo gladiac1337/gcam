@@ -15,11 +15,8 @@
 .method public constructor <init>(Ljxb;Ljxb;Ljxb;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lftz;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -30,7 +27,6 @@
 
     iput-object v0, p0, Lftz;->a:Ljxb;
 
-    .line 3
     const/4 v0, 0x2
 
     invoke-static {p2, v0}, Lftz;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -41,10 +37,8 @@
 
     iput-object v0, p0, Lftz;->b:Ljxb;
 
-    .line 4
     const/4 v0, 0x3
 
-    .line 5
     invoke-static {p3, v0}, Lftz;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v0
@@ -53,18 +47,14 @@
 
     iput-object v0, p0, Lftz;->c:Ljxb;
 
-    .line 6
     return-void
 .end method
 
 .method static a(Ljava/lang/Object;I)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 7
     if-nez p0, :cond_0
 
-    .line 8
     new-instance v0, Ljava/lang/NullPointerException;
 
     const/16 v1, 0x5d
@@ -91,7 +81,6 @@
 
     throw v0
 
-    .line 9
     :cond_0
     return-object p0
 .end method

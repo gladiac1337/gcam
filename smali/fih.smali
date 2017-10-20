@@ -18,20 +18,14 @@
 .method public constructor <init>(Lfif;Ljxb;Ljxb;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lfih;->a:Lfif;
 
-    .line 3
     iput-object p2, p0, Lfih;->b:Ljxb;
 
-    .line 4
     iput-object p3, p0, Lfih;->c:Ljxb;
 
-    .line 5
     return-void
 .end method
 
@@ -40,14 +34,10 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 5
 
-    .prologue
-    .line 6
-    .line 7
     iget-object v2, p0, Lfih;->a:Lfif;
 
     iget-object v0, p0, Lfih;->b:Ljxb;
 
-    .line 8
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -62,35 +52,29 @@
 
     check-cast v1, Lico;
 
-    .line 9
     new-instance v3, Ljuw;
 
     invoke-direct {v3}, Ljuw;-><init>()V
 
-    .line 11
     new-instance v4, Lfig;
 
     invoke-direct {v4, v2, v1, v3}, Lfig;-><init>(Lfif;Lico;Ljuw;)V
 
     invoke-virtual {v0, v4}, Lhzi;->a(Ljava/lang/Runnable;)V
 
-    .line 12
     invoke-static {v3}, Ljtv;->b(Ljava/util/concurrent/Future;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lfic;
 
-    .line 13
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 14
     invoke-static {v0, v1}, Ljvr;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lfic;
 
-    .line 15
     return-object v0
 .end method

@@ -10,8 +10,6 @@
 .method protected constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljjs;-><init>()V
 
     return-void
@@ -25,8 +23,6 @@
 .method protected synthetic b()Ljava/util/Collection;
     .locals 1
 
-    .prologue
-    .line 4
     invoke-virtual {p0}, Ljjw;->a()Ljava/util/Set;
 
     move-result-object v0
@@ -37,8 +33,6 @@
 .method protected synthetic c()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 5
     invoke-virtual {p0}, Ljjw;->a()Ljava/util/Set;
 
     move-result-object v0
@@ -49,8 +43,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 2
     if-eq p1, p0, :cond_0
 
     invoke-virtual {p0}, Ljjw;->a()Ljava/util/Set;
@@ -78,8 +70,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 3
     invoke-virtual {p0}, Ljjw;->a()Ljava/util/Set;
 
     move-result-object v0

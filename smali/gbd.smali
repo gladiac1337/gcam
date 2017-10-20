@@ -13,8 +13,6 @@
 .method private constructor <init>(Landroid/util/SizeF;Libx;Libx;JLcom/google/android/apps/camera/jni/gyro/GyroQueue;Lbrr;)V
     .locals 8
 
-    .prologue
-    .line 1
     const-wide/16 v4, 0x0
 
     move-object v0, p0
@@ -31,21 +29,18 @@
 
     invoke-direct/range {v0 .. v7}, Lgao;-><init>(Landroid/util/SizeF;Libx;Libx;JLcom/google/android/apps/camera/jni/gyro/GyroQueue;Lbrr;)V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lgbd;->e:Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lgbd;->f:Ljava/util/List;
 
-    .line 4
     const/4 v0, 0x0
 
     :goto_0
@@ -53,36 +48,29 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 5
     iget-object v1, p0, Lgbd;->f:Ljava/util/List;
 
     const/4 v2, 0x0
 
-    .line 6
     const/16 v3, 0x9
 
     new-array v3, v3, [F
 
     fill-array-data v3, :array_0
 
-    .line 7
     invoke-static {v3}, Lgbl;->a([F)Lgbl;
 
     move-result-object v3
 
-    .line 8
     invoke-interface {v1, v2, v3}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    .line 9
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 10
     :cond_0
     return-void
 
-    .line 6
     nop
 
     :array_0
@@ -102,8 +90,6 @@
 .method constructor <init>(Landroid/util/SizeF;Libx;Libx;Lcom/google/android/apps/camera/jni/gyro/GyroQueue;Lbrr;)V
     .locals 8
 
-    .prologue
-    .line 11
     const-wide/16 v4, 0x0
 
     move-object v0, p0
@@ -120,7 +106,6 @@
 
     invoke-direct/range {v0 .. v7}, Lgbd;-><init>(Landroid/util/SizeF;Libx;Libx;JLcom/google/android/apps/camera/jni/gyro/GyroQueue;Lbrr;)V
 
-    .line 12
     return-void
 .end method
 
@@ -129,38 +114,30 @@
 .method public final a(Lfzs;)Ljava/util/List;
     .locals 12
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 13
     new-instance v3, Ljava/util/LinkedList;
 
     invoke-direct {v3}, Ljava/util/LinkedList;-><init>()V
 
-    .line 14
     new-instance v4, Ljava/util/LinkedList;
 
     invoke-direct {v4}, Ljava/util/LinkedList;-><init>()V
 
-    .line 15
     invoke-virtual {p0, p1, v3}, Lgbd;->a(Lfzs;Ljava/util/List;)V
 
-    .line 16
     iget-object v5, p0, Lgbd;->e:Ljava/lang/Object;
 
     monitor-enter v5
 
     move v2, v0
 
-    .line 18
     :goto_0
     :try_start_0
     iget v0, p0, Lgao;->b:I
 
-    .line 19
     if-ge v2, v0, :cond_1
 
-    .line 20
     iget-object v0, p0, Lgbd;->f:Ljava/util/List;
 
     invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -169,7 +146,6 @@
 
     check-cast v0, Lgbl;
 
-    .line 21
     const-wide/16 v6, 0x0
 
     iget-object v1, v0, Lgbl;->a:[F
@@ -214,7 +190,6 @@
 
     add-double/2addr v6, v8
 
-    .line 22
     iget-object v1, v0, Lgbl;->a:[F
 
     const/4 v8, 0x1
@@ -257,7 +232,6 @@
 
     sub-double/2addr v6, v8
 
-    .line 23
     iget-object v1, v0, Lgbl;->a:[F
 
     const/4 v8, 0x2
@@ -300,42 +274,35 @@
 
     add-double/2addr v6, v8
 
-    .line 24
     const-wide/16 v8, 0x0
 
     cmpl-double v1, v6, v8
 
     if-nez v1, :cond_0
 
-    .line 25
     const/4 v0, 0x0
 
-    .line 39
     :goto_1
     if-nez v0, :cond_2
 
-    .line 40
     const-string v0, "RelativeGyroTransformCalculator"
 
     const-string v1, "Inverse could not be computed. Defaulting to identity"
 
     invoke-static {v0, v1}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 41
     const/16 v0, 0x9
 
     new-array v0, v0, [F
 
     fill-array-data v0, :array_0
 
-    .line 42
     invoke-static {v0}, Lgbl;->a([F)Lgbl;
 
     move-result-object v0
 
     move-object v1, v0
 
-    .line 44
     :goto_2
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -349,14 +316,12 @@
 
     invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 45
     add-int/lit8 v0, v2, 0x1
 
     move v2, v0
 
     goto/16 :goto_0
 
-    .line 26
     :cond_0
     const-wide/high16 v8, 0x3ff0000000000000L    # 1.0
 
@@ -364,12 +329,10 @@
 
     double-to-float v1, v6
 
-    .line 27
     const/16 v6, 0x9
 
     new-array v6, v6, [F
 
-    .line 28
     const/4 v7, 0x0
 
     iget-object v8, v0, Lgbl;->a:[F
@@ -406,7 +369,6 @@
 
     aput v8, v6, v7
 
-    .line 29
     const/4 v7, 0x1
 
     iget-object v8, v0, Lgbl;->a:[F
@@ -445,7 +407,6 @@
 
     aput v8, v6, v7
 
-    .line 30
     const/4 v7, 0x2
 
     iget-object v8, v0, Lgbl;->a:[F
@@ -482,7 +443,6 @@
 
     aput v8, v6, v7
 
-    .line 31
     const/4 v7, 0x3
 
     iget-object v8, v0, Lgbl;->a:[F
@@ -521,7 +481,6 @@
 
     aput v8, v6, v7
 
-    .line 32
     const/4 v7, 0x4
 
     iget-object v8, v0, Lgbl;->a:[F
@@ -558,7 +517,6 @@
 
     aput v8, v6, v7
 
-    .line 33
     const/4 v7, 0x5
 
     iget-object v8, v0, Lgbl;->a:[F
@@ -597,7 +555,6 @@
 
     aput v8, v6, v7
 
-    .line 34
     const/4 v7, 0x6
 
     iget-object v8, v0, Lgbl;->a:[F
@@ -634,7 +591,6 @@
 
     aput v8, v6, v7
 
-    .line 35
     const/4 v7, 0x7
 
     iget-object v8, v0, Lgbl;->a:[F
@@ -673,7 +629,6 @@
 
     aput v8, v6, v7
 
-    .line 36
     const/16 v7, 0x8
 
     iget-object v8, v0, Lgbl;->a:[F
@@ -710,31 +665,25 @@
 
     aput v0, v6, v7
 
-    .line 37
     invoke-static {v6}, Lgbl;->a([F)Lgbl;
 
     move-result-object v0
 
     goto/16 :goto_1
 
-    .line 46
     :cond_1
     iget-object v0, p0, Lgbd;->f:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 47
     iget-object v0, p0, Lgbd;->f:Ljava/util/List;
 
     invoke-interface {v0, v3}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 48
     monitor-exit v5
 
-    .line 49
     return-object v4
 
-    .line 48
     :catchall_0
     move-exception v0
 
@@ -749,7 +698,6 @@
 
     goto/16 :goto_2
 
-    .line 41
     nop
 
     :array_0
@@ -769,13 +717,10 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 50
     iget-object v1, p0, Lgbd;->e:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 51
     :try_start_0
     iget-object v0, p0, Lgbd;->f:Ljava/util/List;
 
@@ -821,7 +766,6 @@
 
     return-object v0
 
-    .line 52
     :catchall_0
     move-exception v0
 

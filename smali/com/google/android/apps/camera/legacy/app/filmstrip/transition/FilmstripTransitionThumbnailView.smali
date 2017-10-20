@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 15
     const-string v0, "FsTransThumbnail"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -27,21 +25,16 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 2
     const/high16 v0, -0x40800000    # -1.0f
 
     iput v0, p0, Lcom/google/android/apps/camera/legacy/app/filmstrip/transition/FilmstripTransitionThumbnailView;->c:F
 
-    .line 3
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/legacy/app/filmstrip/transition/FilmstripTransitionThumbnailView;->setWillNotDraw(Z)V
 
-    .line 4
     return-void
 .end method
 
@@ -50,25 +43,18 @@
 .method public final a(F)V
     .locals 0
 
-    .prologue
-    .line 5
     iput p1, p0, Lcom/google/android/apps/camera/legacy/app/filmstrip/transition/FilmstripTransitionThumbnailView;->c:F
 
-    .line 6
     invoke-virtual {p0}, Lcom/google/android/apps/camera/legacy/app/filmstrip/transition/FilmstripTransitionThumbnailView;->invalidate()V
 
-    .line 7
     return-void
 .end method
 
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 4
 
-    .prologue
-    .line 8
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 9
     iget v0, p0, Lcom/google/android/apps/camera/legacy/app/filmstrip/transition/FilmstripTransitionThumbnailView;->c:F
 
     const/4 v1, 0x0
@@ -77,11 +63,9 @@
 
     if-gez v0, :cond_0
 
-    .line 14
     :goto_0
     return-void
 
-    .line 11
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
 
@@ -91,7 +75,6 @@
 
     int-to-float v0, v0
 
-    .line 12
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getHeight()I
 
     move-result v1
@@ -100,7 +83,6 @@
 
     int-to-float v1, v1
 
-    .line 13
     iget v2, p0, Lcom/google/android/apps/camera/legacy/app/filmstrip/transition/FilmstripTransitionThumbnailView;->c:F
 
     iget-object v3, p0, Lcom/google/android/apps/camera/legacy/app/filmstrip/transition/FilmstripTransitionThumbnailView;->b:Landroid/graphics/Paint;

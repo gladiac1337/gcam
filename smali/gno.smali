@@ -13,8 +13,6 @@
 .method constructor <init>(Ljuw;Lgof;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgno;->a:Ljuw;
 
     iput-object p2, p0, Lgno;->b:Lgof;
@@ -29,13 +27,10 @@
 .method public final Run(J)V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
-    .line 2
     sget-object v0, Lgnj;->a:Ljava/lang/String;
 
-    .line 3
     const/16 v1, 0x29
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -58,7 +53,6 @@
 
     invoke-static {v0, v1}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lgno;->a:Ljuw;
 
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -67,50 +61,38 @@
 
     invoke-virtual {v0, v1}, Ljsl;->a(Ljava/lang/Object;)Z
 
-    .line 5
     iget-object v0, p0, Lgno;->b:Lgof;
 
     if-eqz v0, :cond_0
 
-    .line 6
     iget-object v0, p0, Lgno;->b:Lgof;
 
-    .line 7
     iget-object v1, v0, Lgof;->b:Ldus;
 
-    .line 8
     iget-object v1, v1, Ldus;->c:Ljqt;
 
-    .line 9
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     iget-object v4, v0, Lgof;->b:Ldus;
 
-    .line 10
     iget-wide v4, v4, Ldus;->i:J
 
-    .line 11
     sub-long/2addr v2, v4
 
     long-to-int v2, v2
 
     iput v2, v1, Ljqt;->b:I
 
-    .line 12
     iget-object v1, v0, Lgof;->b:Ldus;
 
-    .line 13
     iput-boolean v6, v1, Ldus;->k:Z
 
-    .line 14
     iget-object v0, v0, Lgof;->b:Ldus;
 
-    .line 15
     invoke-virtual {v0}, Ldus;->a()V
 
-    .line 16
     :cond_0
     return-void
 .end method

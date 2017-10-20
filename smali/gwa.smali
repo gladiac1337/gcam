@@ -29,13 +29,10 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgwa;->a:Lgvz;
 
     iget-object v1, p0, Lgwa;->b:Lgwc;
 
-    .line 2
     iget-object v2, v0, Lgvz;->a:Lgwh;
 
     const/4 v3, 0x0
@@ -52,6 +49,5 @@
 
     invoke-static {v2, v3, v0}, Ljtv;->a(Ljuk;Ljtu;Ljava/util/concurrent/Executor;)V
 
-    .line 3
     return-void
 .end method

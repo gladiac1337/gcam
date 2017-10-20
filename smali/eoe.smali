@@ -41,8 +41,6 @@
 .method public final run()V
     .locals 7
 
-    .prologue
-    .line 1
     iget-object v1, p0, Leoe;->a:Leob;
 
     iget-object v0, p0, Leoe;->b:Lgvp;
@@ -53,7 +51,6 @@
 
     iget-object v4, p0, Leoe;->e:Lgrs;
 
-    .line 2
     iget-object v5, v1, Leob;->c:Lgvu;
 
     iget-object v6, v1, Leob;->h:Ljava/lang/String;
@@ -62,7 +59,6 @@
 
     move-result-object v5
 
-    .line 4
     :try_start_0
     iget-object v6, v1, Leob;->b:Lgvi;
 
@@ -70,40 +66,32 @@
 
     move-result-wide v2
 
-    .line 5
     iget-object v6, v1, Leob;->n:Lavk;
 
     invoke-interface {v6, v2, v3}, Lavk;->b(J)V
 
-    .line 6
     iget-object v2, v1, Leob;->k:Ljuw;
 
-    .line 8
     new-instance v3, Leoh;
 
     invoke-direct {v3, v1, v5, v0, v4}, Leoh;-><init>(Leob;Ljava/io/File;Lgvp;Lgrs;)V
 
-    .line 9
     invoke-virtual {v2, v3}, Ljsl;->a(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 14
     :goto_0
     return-void
 
-    .line 11
     :catch_0
     move-exception v0
 
-    .line 12
     sget-object v2, Leob;->a:Ljava/lang/String;
 
     const-string v3, "CameraFileUtil.writeFile() throws : "
 
     invoke-static {v2, v3, v0}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 13
     iget-object v1, v1, Leob;->k:Ljuw;
 
     invoke-virtual {v1, v0}, Ljsl;->a(Ljava/lang/Throwable;)Z

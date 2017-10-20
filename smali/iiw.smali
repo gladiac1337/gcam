@@ -13,40 +13,32 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
-    .line 4
     const/16 v0, 0x2328
 
     iput v0, p0, Liiw;->b:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
     iget v1, p0, Liiw;->b:I
 
-    .line 6
     sget-object v2, Libo;->a:Libm;
 
-    .line 7
     invoke-static {v0, v1, v2}, Libq;->a(Ljava/util/NavigableMap;ILibm;)Ljava/util/NavigableMap;
 
     move-result-object v0
 
-    .line 8
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Litx;->a(Ljava/util/NavigableMap;Ljava/lang/Object;)Ljava/util/NavigableMap;
 
     move-result-object v0
 
-    .line 9
     iput-object v0, p0, Liiw;->a:Ljava/util/NavigableMap;
 
-    .line 10
     return-void
 .end method
 
@@ -55,8 +47,6 @@
 .method public final a(J)Ljava/lang/Float;
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Liiw;->a:Ljava/util/NavigableMap;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -75,8 +65,6 @@
 .method public final a(FJ)V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Liiw;->a:Ljava/util/NavigableMap;
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -89,6 +77,5 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/NavigableMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     return-void
 .end method

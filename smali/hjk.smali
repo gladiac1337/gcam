@@ -36,29 +36,23 @@
 .method public static a(Landroid/app/Activity;IILandroid/content/DialogInterface$OnCancelListener;)Landroid/app/Dialog;
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 1
     const-string v1, "d"
 
     invoke-static {p0, p1, v1}, Lhjm;->a(Landroid/content/Context;ILjava/lang/String;)Landroid/content/Intent;
 
     move-result-object v1
 
-    .line 2
     new-instance v2, Lhlk;
 
     invoke-direct {v2, v1, p0, p2}, Lhlk;-><init>(Landroid/content/Intent;Landroid/app/Activity;I)V
 
-    .line 4
     if-nez p1, :cond_0
 
-    .line 5
     :goto_0
     return-object v0
 
-    .line 4
     :cond_0
     new-instance v1, Landroid/util/TypedValue;
 
@@ -145,8 +139,6 @@
 .method public static a(Landroid/content/Context;Lhtj;)Lhti;
     .locals 2
 
-    .prologue
-    .line 13
     new-instance v1, Landroid/content/IntentFilter;
 
     const-string v0, "android.intent.action.PACKAGE_ADDED"
@@ -163,18 +155,14 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 14
     iput-object p0, v0, Lhti;->a:Landroid/content/Context;
 
-    .line 15
     const-string v1, "com.google.android.gms"
 
-    .line 16
     invoke-static {p0, v1}, Lhjo;->a(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 17
     if-nez v1, :cond_0
 
     invoke-virtual {p1}, Lhtj;->a()V
@@ -195,15 +183,12 @@
         value = 0x14
     .end annotation
 
-    .prologue
     const/4 v6, 0x1
 
-    .line 18
     const/16 v0, 0x12
 
     if-ne p2, v0, :cond_1
 
-    .line 19
     new-instance v0, Lhjl;
 
     invoke-direct {v0, p0, p1}, Lhjl;-><init>(Lhjk;Landroid/content/Context;)V
@@ -212,7 +197,6 @@
 
     invoke-virtual {v0, v6, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 20
     :cond_0
     :goto_0
     return-void
@@ -428,10 +412,8 @@
 .method public final b(Landroid/app/Activity;IILandroid/content/DialogInterface$OnCancelListener;)Z
     .locals 6
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 6
     invoke-static {p1, p2, p3, p4}, Lhjk;->a(Landroid/app/Activity;IILandroid/content/DialogInterface$OnCancelListener;)Landroid/app/Dialog;
 
     move-result-object v0
@@ -440,15 +422,12 @@
 
     const/4 v0, 0x0
 
-    .line 12
     :goto_0
     return v0
 
-    .line 6
     :cond_0
     const-string v1, "GooglePlayServicesErrorDialog"
 
-    .line 7
     instance-of v2, p1, Landroid/support/v4/app/FragmentActivity;
 
     if-eqz v2, :cond_2
@@ -459,7 +438,6 @@
 
     move-result-object v2
 
-    .line 8
     new-instance v3, Lhjq;
 
     invoke-direct {v3}, Lhjq;-><init>()V
@@ -482,23 +460,19 @@
 
     iput-object p4, v3, Lhjq;->a:Landroid/content/DialogInterface$OnCancelListener;
 
-    .line 9
     :cond_1
     invoke-virtual {v3, v2, v1}, Landroid/support/v4/app/DialogFragment;->show(Landroid/support/v4/app/FragmentManager;Ljava/lang/String;)V
 
-    .line 12
     :goto_1
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 9
     :cond_2
     invoke-virtual {p1}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v2
 
-    .line 10
     new-instance v3, Lhjj;
 
     invoke-direct {v3}, Lhjj;-><init>()V
@@ -521,7 +495,6 @@
 
     iput-object p4, v3, Lhjj;->b:Landroid/content/DialogInterface$OnCancelListener;
 
-    .line 11
     :cond_3
     invoke-virtual {v3, v2, v1}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 

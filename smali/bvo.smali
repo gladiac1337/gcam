@@ -18,8 +18,6 @@
 .method constructor <init>(Lbvn;Ljava/lang/String;Ljxb;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbvo;->c:Lbvn;
 
     iput-object p2, p0, Lbvo;->a:Ljava/lang/String;
@@ -36,18 +34,14 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljuk;
     .locals 4
 
-    .prologue
-    .line 2
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 4
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -58,27 +52,20 @@
 
     move-result-object v0
 
-    .line 21
     :goto_0
     return-object v0
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lbvo;->c:Lbvn;
 
-    .line 6
     iget-object v0, v0, Lbvn;->b:Lico;
 
-    .line 7
     if-eqz v0, :cond_1
 
-    .line 8
     iget-object v0, p0, Lbvo;->c:Lbvn;
 
-    .line 9
     iget-object v0, v0, Lbvn;->b:Lico;
 
-    .line 10
     iget-object v1, p0, Lbvo;->a:Ljava/lang/String;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -93,7 +80,6 @@
 
     invoke-interface {v0, v1}, Lico;->a(Ljava/lang/String;)V
 
-    .line 11
     iget-object v0, p0, Lbvo;->b:Ljxb;
 
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
@@ -102,13 +88,10 @@
 
     check-cast v0, Lhyr;
 
-    .line 12
     iget-object v1, p0, Lbvo;->c:Lbvn;
 
-    .line 13
     iget-object v1, v1, Lbvn;->b:Lico;
 
-    .line 14
     iget-object v2, p0, Lbvo;->a:Ljava/lang/String;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -123,23 +106,18 @@
 
     invoke-interface {v1, v2}, Lico;->b(Ljava/lang/String;)V
 
-    .line 15
     invoke-interface {v0}, Lhyr;->a()Ljuk;
 
     move-result-object v0
 
-    .line 16
     iget-object v1, p0, Lbvo;->c:Lbvn;
 
-    .line 17
     iget-object v1, v1, Lbvn;->b:Lico;
 
-    .line 18
     invoke-interface {v1}, Lico;->a()V
 
     goto :goto_0
 
-    .line 20
     :cond_1
     iget-object v0, p0, Lbvo;->b:Ljxb;
 

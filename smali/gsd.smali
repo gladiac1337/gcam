@@ -16,8 +16,6 @@
 .method constructor <init>(Lgsc;Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgsd;->b:Lgsc;
 
     iput-object p2, p0, Lgsd;->a:Ljava/lang/Object;
@@ -32,14 +30,10 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgsd;->b:Lgsc;
 
-    .line 3
     iget-object v0, v0, Lgsc;->a:Licc;
 
-    .line 4
     iget-object v1, p0, Lgsd;->a:Ljava/lang/Object;
 
     invoke-static {v1}, Litx;->d(Ljava/lang/Object;)Ljava/lang/Object;
@@ -48,6 +42,5 @@
 
     invoke-interface {v0, v1}, Licc;->a(Ljava/lang/Object;)V
 
-    .line 5
     return-void
 .end method

@@ -14,14 +14,10 @@
 .method constructor <init>(Liaj;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Liab;->a:Liaj;
 
-    .line 3
     return-void
 .end method
 
@@ -30,8 +26,6 @@
 .method public final a(Licc;Ljava/util/concurrent/Executor;)Libw;
     .locals 3
 
-    .prologue
-    .line 4
     iget-object v0, p0, Liab;->a:Liaj;
 
     new-instance v1, Liac;
@@ -52,8 +46,6 @@
 .method public final b()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Liab;->a:Liaj;
 
     invoke-interface {v0}, Liaj;->b()Ljava/lang/Object;
@@ -66,8 +58,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 6
     const-string v0, "filtered"
 
     invoke-static {v0}, Litx;->c(Ljava/lang/String;)Ljhf;
@@ -76,15 +66,12 @@
 
     iget-object v1, p0, Liab;->a:Liaj;
 
-    .line 8
     invoke-virtual {v0}, Ljhf;->a()Ljhg;
 
     move-result-object v2
 
-    .line 9
     iput-object v1, v2, Ljhg;->b:Ljava/lang/Object;
 
-    .line 11
     invoke-virtual {v0}, Ljhf;->toString()Ljava/lang/String;
 
     move-result-object v0

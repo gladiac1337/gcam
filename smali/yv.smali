@@ -14,8 +14,6 @@
 .method constructor <init>(Lyu;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lyv;->a:Lyu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final a(ZLabe;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lyv;->a:Lyu;
 
     iget-object v0, v0, Lyu;->b:Landroid/os/Handler;
@@ -40,6 +36,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 3
     return-void
 .end method

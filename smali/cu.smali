@@ -15,18 +15,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcu;->a:Ljava/util/Map;
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -41,13 +37,10 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 4
     instance-of v0, p1, Lcu;
 
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v1, p0, Lcu;->b:Landroid/view/View;
 
     move-object v0, p1
@@ -58,7 +51,6 @@
 
     if-ne v1, v0, :cond_0
 
-    .line 6
     iget-object v0, p0, Lcu;->a:Ljava/util/Map;
 
     check-cast p1, Lcu;
@@ -71,10 +63,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 7
     const/4 v0, 0x1
 
-    .line 8
     :goto_0
     return v0
 
@@ -87,8 +77,6 @@
 .method public final hashCode()I
     .locals 2
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lcu;->b:Landroid/view/View;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -111,8 +99,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 10
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "TransitionValues@"
@@ -141,7 +127,6 @@
 
     move-result-object v0
 
-    .line 11
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -172,7 +157,6 @@
 
     move-result-object v0
 
-    .line 12
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -191,7 +175,6 @@
 
     move-result-object v0
 
-    .line 13
     iget-object v1, p0, Lcu;->a:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -217,7 +200,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 14
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -264,10 +246,8 @@
 
     move-object v1, v0
 
-    .line 15
     goto :goto_0
 
-    .line 16
     :cond_0
     return-object v1
 .end method

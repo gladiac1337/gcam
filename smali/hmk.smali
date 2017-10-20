@@ -10,14 +10,12 @@
 .method protected constructor <init>([B)V
     .locals 13
 
-    .prologue
     const/16 v12, 0x19
 
     const/4 v2, 0x1
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Lhly;-><init>()V
 
     array-length v0, p1
@@ -30,7 +28,6 @@
 
     array-length v4, p1
 
-    .line 2
     if-eqz p1, :cond_0
 
     array-length v0, p1
@@ -46,7 +43,6 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 3
     :goto_0
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -140,7 +136,6 @@
 
     return-void
 
-    .line 2
     :cond_3
     add-int/lit8 v0, v4, 0x10
 
@@ -300,18 +295,14 @@
 .method public final a()Lhmq;
     .locals 2
 
-    .prologue
-    .line 4
     invoke-virtual {p0}, Lhmk;->c()[B
 
     move-result-object v0
 
-    .line 5
     new-instance v1, Lhmt;
 
     invoke-direct {v1, v0}, Lhmt;-><init>(Ljava/lang/Object;)V
 
-    .line 6
     return-object v1
 .end method
 

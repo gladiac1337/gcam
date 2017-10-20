@@ -98,8 +98,6 @@
 .method public constructor <init>(ILjava/lang/String;Landroid/accounts/Account;Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap;ZZLjava/util/List;Landroid/os/Bundle;Landroid/graphics/Bitmap;[BIILjava/lang/String;Landroid/net/Uri;Ljava/util/List;ILcom/google/android/gms/feedback/ThemeSettings;Ljava/util/List;ZLcom/google/android/gms/feedback/ErrorReport;Lcom/google/android/gms/googlehelp/internal/common/TogglingData;ILandroid/app/PendingIntent;IZZ)V
     .locals 4
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/zza;-><init>()V
 
     new-instance v2, Lcom/google/android/gms/feedback/ErrorReport;
@@ -184,7 +182,6 @@
 
     invoke-direct/range {p20 .. p20}, Lcom/google/android/gms/feedback/ThemeSettings;-><init>()V
 
-    .line 2
     move/from16 v0, p19
 
     move-object/from16 v1, p20
@@ -193,7 +190,6 @@
 
     move-object v2, p0
 
-    .line 3
     :goto_0
     move-object/from16 v0, p20
 
@@ -344,16 +340,12 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 4
-    .line 6
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lhiv;->m(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 7
     const/4 v1, 0x1
 
     iget v2, p0, Lcom/google/android/gms/googlehelp/GoogleHelp;->g:I
@@ -392,7 +384,6 @@
 
     iget-object v1, p0, Lcom/google/android/gms/googlehelp/GoogleHelp;->o:Ljava/util/List;
 
-    .line 8
     if-eqz v1, :cond_0
 
     const/4 v2, 0x7
@@ -405,7 +396,6 @@
 
     invoke-static {p1, v2}, Lhiv;->n(Landroid/os/Parcel;I)V
 
-    .line 9
     :cond_0
     const/16 v1, 0xa
 
@@ -539,9 +529,7 @@
 
     invoke-static {p1, v1, v2}, Lhiv;->a(Landroid/os/Parcel;IZ)V
 
-    .line 10
     invoke-static {p1, v0}, Lhiv;->n(Landroid/os/Parcel;I)V
 
-    .line 11
     return-void
 .end method

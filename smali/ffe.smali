@@ -70,8 +70,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 109
     const-string v0, "FocusOverlayMgr"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -80,17 +78,14 @@
 
     sput-object v0, Lffe;->a:Ljava/lang/String;
 
-    .line 110
     const/16 v0, 0xfa0
 
     sput v0, Lffe;->b:I
 
-    .line 111
     const v0, 0x3e4ccccd    # 0.2f
 
     sput v0, Lffe;->c:F
 
-    .line 112
     const v0, 0x3e99999a    # 0.3f
 
     sput v0, Lffe;->d:F
@@ -101,65 +96,50 @@
 .method public constructor <init>(Lbtw;Ljava/util/List;Labw;Lffh;ZLandroid/os/Looper;Lass;Lidb;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput v1, p0, Lffe;->e:I
 
-    .line 3
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, v1, v1, v1, v1}, Landroid/graphics/Rect;-><init>(IIII)V
 
     iput-object v0, p0, Lffe;->r:Landroid/graphics/Rect;
 
-    .line 4
     iput-object p1, p0, Lffe;->z:Lbtw;
 
-    .line 5
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     iput-object v0, p0, Lffe;->x:Ljava/util/List;
 
-    .line 6
     iput-object p4, p0, Lffe;->o:Lffh;
 
-    .line 7
     iput-object p7, p0, Lffe;->q:Lass;
 
-    .line 8
     iput-object p8, p0, Lffe;->B:Lidb;
 
-    .line 9
     new-instance v0, Lffi;
 
     invoke-direct {v0, p0, p6}, Lffi;-><init>(Lffe;Landroid/os/Looper;)V
 
     iput-object v0, p0, Lffe;->n:Landroid/os/Handler;
 
-    .line 10
     invoke-interface {p1}, Lbtw;->q()Lgsf;
 
     move-result-object v0
 
     iput-object v0, p0, Lffe;->A:Lgsf;
 
-    .line 11
     invoke-virtual {p0, p3}, Lffe;->a(Labw;)V
 
-    .line 13
     iput-boolean p5, p0, Lffe;->v:Z
 
-    .line 14
     invoke-virtual {p0}, Lffe;->a()V
 
-    .line 15
     return-void
 .end method
 
@@ -168,27 +148,21 @@
 .method public final a(Labz;)Labz;
     .locals 5
 
-    .prologue
-    .line 64
     iget-object v0, p0, Lffe;->y:Labw;
 
     if-nez v0, :cond_0
 
-    .line 65
     sget-object v0, Lffe;->a:Ljava/lang/String;
 
     const-string v1, "no capabilities, returning default AUTO focus mode"
 
     invoke-static {v0, v1}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 66
     sget-object v0, Labz;->a:Labz;
 
-    .line 90
     :goto_0
     return-object v0
 
-    .line 67
     :cond_0
     iget-boolean v0, p0, Lffe;->g:Z
 
@@ -198,19 +172,16 @@
 
     if-eqz v0, :cond_3
 
-    .line 68
     sget-object v0, Lffe;->a:Ljava/lang/String;
 
     const-string v1, "in tap to focus, returning AUTO focus mode"
 
     invoke-static {v0, v1}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 69
     sget-object v0, Labz;->a:Labz;
 
     iput-object v0, p0, Lffe;->w:Labz;
 
-    .line 84
     :cond_1
     :goto_1
     iget-object v0, p0, Lffe;->y:Labw;
@@ -223,7 +194,6 @@
 
     if-nez v0, :cond_2
 
-    .line 85
     iget-object v0, p0, Lffe;->y:Labw;
 
     sget-object v1, Labz;->a:Labz;
@@ -234,32 +204,27 @@
 
     if-eqz v0, :cond_6
 
-    .line 86
     sget-object v0, Lffe;->a:Ljava/lang/String;
 
     const-string v1, "no supported focus mode, falling back to AUTO"
 
     invoke-static {v0, v1}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 87
     sget-object v0, Labz;->a:Labz;
 
     iput-object v0, p0, Lffe;->w:Labz;
 
-    .line 90
     :cond_2
     :goto_2
     iget-object v0, p0, Lffe;->w:Labz;
 
     goto :goto_0
 
-    .line 70
     :cond_3
     iget-object v0, p0, Lffe;->A:Lgsf;
 
     iget-object v1, p0, Lffe;->z:Lbtw;
 
-    .line 71
     invoke-interface {v1}, Lbtw;->f()Ljava/lang/String;
 
     move-result-object v1
@@ -270,7 +235,6 @@
 
     move-result-object v1
 
-    .line 72
     sget-object v2, Lffe;->a:Ljava/lang/String;
 
     const-string v3, "stored focus setting for camera: "
@@ -292,20 +256,16 @@
     :goto_3
     invoke-static {v2, v0}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 73
     iget-object v0, p0, Lffe;->y:Labw;
 
-    .line 74
     iget-object v0, v0, Labw;->w:Lacb;
 
-    .line 75
     invoke-static {v1}, Lacb;->b(Ljava/lang/String;)Labz;
 
     move-result-object v0
 
     iput-object v0, p0, Lffe;->w:Labz;
 
-    .line 76
     sget-object v0, Lffe;->a:Ljava/lang/String;
 
     iget-object v1, p0, Lffe;->w:Labz;
@@ -344,12 +304,10 @@
 
     invoke-static {v0, v1}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 77
     iget-object v0, p0, Lffe;->w:Labz;
 
     if-nez v0, :cond_1
 
-    .line 78
     iget-object v0, p0, Lffe;->x:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -369,7 +327,6 @@
 
     check-cast v0, Labz;
 
-    .line 79
     iget-object v2, p0, Lffe;->y:Labw;
 
     invoke-virtual {v2, v0}, Labw;->a(Labz;)Z
@@ -378,10 +335,8 @@
 
     if-eqz v2, :cond_4
 
-    .line 80
     iput-object v0, p0, Lffe;->w:Labz;
 
-    .line 81
     sget-object v1, Lffe;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -420,7 +375,6 @@
 
     goto/16 :goto_1
 
-    .line 72
     :cond_5
     new-instance v0, Ljava/lang/String;
 
@@ -428,7 +382,6 @@
 
     goto/16 :goto_3
 
-    .line 88
     :cond_6
     sget-object v0, Lffe;->a:Ljava/lang/String;
 
@@ -466,7 +419,6 @@
 
     invoke-static {v0, v1}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 89
     iput-object p1, p0, Lffe;->w:Labz;
 
     goto/16 :goto_2
@@ -475,8 +427,6 @@
 .method public final a(III)Landroid/graphics/Rect;
     .locals 5
 
-    .prologue
-    .line 101
     div-int/lit8 v0, p3, 0x2
 
     sub-int v0, p1, v0
@@ -495,7 +445,6 @@
 
     move-result v0
 
-    .line 102
     div-int/lit8 v1, p3, 0x2
 
     sub-int v1, p2, v1
@@ -514,7 +463,6 @@
 
     move-result v1
 
-    .line 103
     new-instance v2, Landroid/graphics/RectF;
 
     int-to-float v3, v0
@@ -531,20 +479,16 @@
 
     invoke-direct {v2, v3, v4, v0, v1}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 104
     iget-object v0, p0, Lffe;->u:Lgyn;
 
-    .line 105
     new-instance v1, Landroid/graphics/RectF;
 
     invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
 
-    .line 106
     iget-object v0, v0, Lgyn;->a:Landroid/graphics/Matrix;
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;Landroid/graphics/RectF;)Z
 
-    .line 108
     invoke-static {v1}, Lgmh;->a(Landroid/graphics/RectF;)Landroid/graphics/Rect;
 
     move-result-object v0
@@ -555,8 +499,6 @@
 .method public final a()V
     .locals 8
 
-    .prologue
-    .line 31
     iget-object v0, p0, Lffe;->r:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
@@ -573,7 +515,6 @@
 
     if-lez v0, :cond_0
 
-    .line 32
     new-instance v0, Lgyn;
 
     iget-boolean v1, p0, Lffe;->v:Z
@@ -582,7 +523,6 @@
 
     iget-object v3, p0, Lffe;->r:Landroid/graphics/Rect;
 
-    .line 34
     new-instance v4, Landroid/graphics/RectF;
 
     iget v5, v3, Landroid/graphics/Rect;->left:I
@@ -603,16 +543,13 @@
 
     invoke-direct {v4, v5, v6, v7, v3}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 35
     invoke-direct {v0, v1, v2, v4}, Lgyn;-><init>(ZILandroid/graphics/RectF;)V
 
     iput-object v0, p0, Lffe;->u:Lgyn;
 
-    .line 37
     :goto_0
     return-void
 
-    .line 36
     :cond_0
     sget-object v0, Lffe;->a:Ljava/lang/String;
 
@@ -626,43 +563,33 @@
 .method public final a(I)V
     .locals 2
 
-    .prologue
-    .line 50
     iput p1, p0, Lffe;->e:I
 
-    .line 51
     iget-object v0, p0, Lffe;->o:Lffh;
 
     invoke-interface {v0}, Lffh;->m()V
 
-    .line 52
     iget-object v0, p0, Lffe;->n:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 53
     return-void
 .end method
 
 .method public final a(Labw;)V
     .locals 2
 
-    .prologue
-    .line 16
     if-nez p1, :cond_1
 
-    .line 24
     :cond_0
     :goto_0
     return-void
 
-    .line 18
     :cond_1
     iput-object p1, p0, Lffe;->y:Labw;
 
-    .line 19
     iget-object v0, p0, Lffe;->y:Labw;
 
     sget-object v1, Labx;->c:Labx;
@@ -673,7 +600,6 @@
 
     iput-boolean v0, p0, Lffe;->g:Z
 
-    .line 20
     iget-object v0, p0, Lffe;->y:Labw;
 
     sget-object v1, Labx;->d:Labx;
@@ -684,12 +610,10 @@
 
     iput-boolean v0, p0, Lffe;->h:Z
 
-    .line 21
     iget-object v0, p0, Lffe;->y:Labw;
 
     sget-object v1, Labx;->e:Labx;
 
-    .line 22
     invoke-virtual {v0, v1}, Labw;->a(Labx;)Z
 
     move-result v0
@@ -700,7 +624,6 @@
 
     sget-object v1, Labx;->f:Labx;
 
-    .line 23
     invoke-virtual {v0, v1}, Labw;->a(Labx;)Z
 
     goto :goto_0
@@ -709,13 +632,10 @@
 .method public final a(Landroid/graphics/RectF;)V
     .locals 2
 
-    .prologue
-    .line 25
     invoke-static {p1}, Lgmh;->a(Landroid/graphics/RectF;)Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 26
     iget-object v1, p0, Lffe;->r:Landroid/graphics/Rect;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
@@ -724,20 +644,16 @@
 
     if-nez v1, :cond_0
 
-    .line 27
     iget-object v1, p0, Lffe;->r:Landroid/graphics/Rect;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 28
     invoke-virtual {p0}, Lffe;->a()V
 
-    .line 29
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lffe;->f:Z
 
-    .line 30
     :cond_0
     return-void
 .end method
@@ -745,40 +661,32 @@
 .method public final a(Z)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x4
 
     const/4 v2, 0x3
 
-    .line 38
     iget v0, p0, Lffe;->e:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_2
 
-    .line 39
     if-eqz p1, :cond_1
 
-    .line 40
     iput v2, p0, Lffe;->e:I
 
-    .line 42
     :goto_0
     invoke-virtual {p0}, Lffe;->c()V
 
-    .line 49
     :cond_0
     :goto_1
     return-void
 
-    .line 41
     :cond_1
     iput v3, p0, Lffe;->e:I
 
     goto :goto_0
 
-    .line 43
     :cond_2
     iget v0, p0, Lffe;->e:I
 
@@ -786,19 +694,15 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 44
     if-eqz p1, :cond_3
 
-    .line 45
     iput v2, p0, Lffe;->e:I
 
-    .line 47
     :goto_2
     iget-object v0, p0, Lffe;->k:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 48
     iget-object v0, p0, Lffe;->n:Landroid/os/Handler;
 
     const/4 v1, 0x0
@@ -811,7 +715,6 @@
 
     goto :goto_1
 
-    .line 46
     :cond_3
     iput v3, p0, Lffe;->e:I
 
@@ -821,43 +724,34 @@
 .method public final b()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 54
     sget-object v0, Lffe;->a:Ljava/lang/String;
 
     const-string v1, "Cancel autofocus."
 
     invoke-static {v0, v1}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 55
     invoke-virtual {p0}, Lffe;->d()V
 
-    .line 56
     iget-object v0, p0, Lffe;->o:Lffh;
 
     invoke-interface {v0}, Lffh;->n()V
 
-    .line 57
     iput v2, p0, Lffe;->e:I
 
-    .line 58
     iget-object v0, p0, Lffe;->n:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 59
     return-void
 .end method
 
 .method public final c()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 60
     iget-object v0, p0, Lffe;->o:Lffh;
 
     invoke-interface {v0}, Lffh;->o()Z
@@ -866,15 +760,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 61
     iput v1, p0, Lffe;->e:I
 
-    .line 62
     iget-object v0, p0, Lffe;->n:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 63
     :cond_0
     return-void
 .end method
@@ -882,44 +773,35 @@
 .method public final d()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x0
 
-    .line 91
     iget-boolean v0, p0, Lffe;->f:Z
 
     if-nez v0, :cond_1
 
-    .line 100
     :cond_0
     :goto_0
     return-void
 
-    .line 93
     :cond_1
     iput-object v8, p0, Lffe;->k:Ljava/util/List;
 
-    .line 94
     iput-object v8, p0, Lffe;->l:Ljava/util/List;
 
-    .line 95
     iget-object v0, p0, Lffe;->o:Lffh;
 
     invoke-interface {v0}, Lffh;->p()V
 
-    .line 96
     iget-object v0, p0, Lffe;->s:Lgyw;
 
     if-eqz v0, :cond_0
 
-    .line 97
     iget-object v0, p0, Lffe;->B:Lidb;
 
     iget-object v1, p0, Lffe;->s:Lgyw;
 
     const v2, 0x3a83126f    # 0.001f
 
-    .line 98
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -940,7 +822,6 @@
 
     invoke-interface {v0, v1, v2, v3}, Lidb;->a(Lgyw;Ljava/lang/Float;Z)V
 
-    .line 99
     iput-object v8, p0, Lffe;->s:Lgyw;
 
     goto :goto_0

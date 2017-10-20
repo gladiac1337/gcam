@@ -14,8 +14,6 @@
 .method constructor <init>(Lcrr;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcrt;->a:Lcrr;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,44 +26,31 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 8
     check-cast p1, Ldhh;
 
-    .line 9
     iget-object v0, p0, Lcrt;->a:Lcrr;
 
-    .line 10
     iget-object v0, v0, Lcrr;->e:Ljuw;
 
-    .line 11
     invoke-virtual {v0, p1}, Ljsl;->a(Ljava/lang/Object;)Z
 
-    .line 12
     return-void
 .end method
 
 .method public final a(Ljava/lang/Throwable;)V
     .locals 2
 
-    .prologue
-    .line 2
     sget-object v0, Lcrr;->a:Ljava/lang/String;
 
-    .line 3
     const-string v1, "Failed to start a OneCamera during initialization: "
 
     invoke-static {v0, v1, p1}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 4
     iget-object v0, p0, Lcrt;->a:Lcrr;
 
-    .line 5
     iget-object v0, v0, Lcrr;->e:Ljuw;
 
-    .line 6
     invoke-virtual {v0, p1}, Ljsl;->a(Ljava/lang/Throwable;)Z
 
-    .line 7
     return-void
 .end method

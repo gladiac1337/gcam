@@ -14,14 +14,10 @@
 .method public constructor <init>(Ljava/util/Date;)V
     .locals 6
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljava/util/Date;
 
     invoke-virtual {p1}, Ljava/util/Date;->getTime()J
@@ -36,15 +32,12 @@
 
     iput-object v0, p0, Lcfj;->a:Ljava/util/Date;
 
-    .line 4
     return-void
 .end method
 
 .method private final a(Ljava/util/Date;)Z
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lcfj;->a:Ljava/util/Date;
 
     invoke-virtual {v0, p1}, Ljava/util/Date;->compareTo(Ljava/util/Date;)I
@@ -69,50 +62,39 @@
 .method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 4
 
-    .prologue
-    .line 6
     check-cast p1, Lfvb;
 
     check-cast p2, Lfvb;
 
-    .line 7
     invoke-interface {p1}, Lfvb;->f()Lfvf;
 
     move-result-object v2
 
-    .line 8
     invoke-interface {p2}, Lfvb;->f()Lfvf;
 
     move-result-object v3
 
-    .line 10
     iget-object v0, v2, Lfvf;->e:Ljava/util/Date;
 
-    .line 11
     invoke-direct {p0, v0}, Lcfj;->a(Ljava/util/Date;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 13
     iget-object v0, v2, Lfvf;->f:Ljava/util/Date;
 
-    .line 19
     :goto_0
     iget-object v1, v3, Lfvf;->e:Ljava/util/Date;
 
-    .line 20
     invoke-direct {p0, v1}, Lcfj;->a(Ljava/util/Date;)Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 22
     iget-object v1, v3, Lfvf;->f:Ljava/util/Date;
 
-    .line 28
     :goto_1
     invoke-virtual {v0, v1}, Ljava/util/Date;->compareTo(Ljava/util/Date;)I
 
@@ -120,48 +102,37 @@
 
     neg-int v0, v0
 
-    .line 30
     if-nez v0, :cond_0
 
-    .line 32
     iget-object v0, v2, Lfvf;->f:Ljava/util/Date;
 
-    .line 34
     iget-object v1, v3, Lfvf;->f:Ljava/util/Date;
 
-    .line 35
     invoke-virtual {v0, v1}, Ljava/util/Date;->compareTo(Ljava/util/Date;)I
 
     move-result v0
 
     neg-int v0, v0
 
-    .line 37
     :cond_0
     if-nez v0, :cond_1
 
-    .line 39
     iget-object v0, v2, Lfvf;->c:Ljava/lang/String;
 
-    .line 41
     iget-object v1, v3, Lfvf;->c:Ljava/lang/String;
 
-    .line 42
     invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 44
     :cond_1
     return v0
 
-    .line 16
     :cond_2
     iget-object v0, v2, Lfvf;->e:Ljava/util/Date;
 
     goto :goto_0
 
-    .line 25
     :cond_3
     iget-object v1, v3, Lfvf;->e:Ljava/util/Date;
 

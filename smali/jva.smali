@@ -14,14 +14,10 @@
 .method constructor <init>(Ljuz;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljva;->a:Ljuz;
 
-    .line 3
     return-void
 .end method
 
@@ -30,45 +26,35 @@
 .method public final run()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
-    .line 4
     iget-object v0, p0, Ljva;->a:Ljuz;
 
-    .line 5
     if-nez v0, :cond_1
 
-    .line 17
     :cond_0
     :goto_0
     return-void
 
-    .line 8
     :cond_1
     iget-object v1, v0, Ljuz;->e:Ljuk;
 
-    .line 10
     if-eqz v1, :cond_0
 
-    .line 12
     const/4 v2, 0x0
 
     iput-object v2, p0, Ljva;->a:Ljuz;
 
-    .line 13
     invoke-interface {v1}, Ljuk;->isDone()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 14
     invoke-virtual {v0, v1}, Ljuz;->a(Ljuk;)Z
 
     goto :goto_0
 
-    .line 15
     :cond_2
     :try_start_0
     new-instance v2, Ljava/util/concurrent/TimeoutException;
@@ -111,12 +97,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 16
     invoke-interface {v1, v6}, Ljuk;->cancel(Z)Z
 
     goto :goto_0
 
-    .line 18
     :catchall_0
     move-exception v0
 

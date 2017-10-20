@@ -35,13 +35,9 @@
 .method public final a(Linr;)Limx;
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     new-instance v0, Limx;
 
     invoke-direct {v0, p1}, Limx;-><init>(Linr;)V
 
-    .line 3
     return-object v0
 .end method

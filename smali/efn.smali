@@ -18,37 +18,28 @@
 .method public constructor <init>(Lefq;Ljava/util/Collection;)V
     .locals 1
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {v0}, Lixp;->a(Z)V
 
-    .line 3
     iput v0, p0, Lefn;->a:I
 
-    .line 4
     iput-object p1, p0, Lefn;->c:Lefq;
 
-    .line 5
     invoke-static {p2}, Ljkt;->a(Ljava/util/Collection;)Ljkt;
 
     move-result-object v0
 
     iput-object v0, p0, Lefn;->b:Ljkt;
 
-    .line 6
     return-void
 .end method
 
 .method private final a(Lihr;Lihr;)Z
     .locals 3
 
-    .prologue
-    .line 42
     iget-object v0, p0, Lefn;->b:Ljkt;
 
     invoke-virtual {v0}, Ljkt;->a()Ljnv;
@@ -68,27 +59,22 @@
 
     check-cast v0, Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 43
     invoke-interface {p1, v0}, Lihr;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 44
     invoke-interface {p2, v0}, Lihr;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 45
     invoke-static {v2, v0}, Ljhh;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 46
     const/4 v0, 0x0
 
-    .line 48
     :goto_0
     return v0
 
@@ -103,31 +89,26 @@
 .method public final a(Ljava/util/List;)Ljava/util/List;
     .locals 8
 
-    .prologue
     const/4 v5, -0x1
 
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    .line 7
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 8
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
-    .line 41
     :cond_0
     :goto_0
     return-object v0
 
-    .line 9
     :cond_1
     iget-object v0, p0, Lefn;->c:Lefq;
 
@@ -135,7 +116,6 @@
 
     move-result-object v6
 
-    .line 10
     invoke-interface {v6}, Ljava/util/List;->size()I
 
     move-result v0
@@ -151,7 +131,6 @@
     :goto_1
     invoke-static {v0}, Lixp;->b(Z)V
 
-    .line 11
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -162,7 +141,6 @@
 
     move v4, v3
 
-    .line 12
     :goto_2
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -170,7 +148,6 @@
 
     if-ge v4, v0, :cond_5
 
-    .line 13
     invoke-interface {v6, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -183,7 +160,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 14
     if-lez v4, :cond_3
 
     invoke-interface {p1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -206,7 +182,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 15
     add-int/lit8 v0, v4, -0x1
 
     invoke-interface {v7, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -227,7 +202,6 @@
 
     invoke-interface {v7, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 18
     :goto_3
     add-int/lit8 v0, v4, 0x1
 
@@ -238,10 +212,8 @@
     :cond_2
     move v0, v3
 
-    .line 10
     goto :goto_1
 
-    .line 16
     :cond_3
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -251,7 +223,6 @@
 
     goto :goto_3
 
-    .line 17
     :cond_4
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -261,7 +232,6 @@
 
     goto :goto_3
 
-    .line 20
     :cond_5
     invoke-interface {v7}, Ljava/util/List;->size()I
 
@@ -272,7 +242,6 @@
     :goto_4
     if-ltz v1, :cond_a
 
-    .line 21
     invoke-interface {v7, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -287,11 +256,9 @@
 
     if-lt v0, v4, :cond_6
 
-    .line 25
     :goto_5
     if-ne v1, v5, :cond_8
 
-    .line 26
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -302,7 +269,6 @@
 
     move v0, v3
 
-    .line 27
     :goto_6
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -310,19 +276,16 @@
 
     if-ge v0, v2, :cond_7
 
-    .line 28
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 29
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_6
 
-    .line 24
     :cond_6
     add-int/lit8 v1, v1, -0x1
 
@@ -331,10 +294,8 @@
     :cond_7
     move-object v0, v1
 
-    .line 30
     goto/16 :goto_0
 
-    .line 31
     :cond_8
     invoke-interface {v7, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -346,46 +307,38 @@
 
     move-result v3
 
-    .line 32
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
     new-array v4, v0, [Z
 
-    .line 33
     array-length v0, v4
 
     if-nez v0, :cond_9
 
-    .line 34
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
-    .line 37
     :goto_7
     sub-int v3, v1, v3
 
     add-int/lit8 v3, v3, 0x1
 
-    .line 38
     :goto_8
     if-lt v1, v3, :cond_0
 
-    .line 39
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v4
 
     invoke-interface {v0, v1, v4}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 40
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_8
 
-    .line 35
     :cond_9
     new-instance v0, Ljrl;
 

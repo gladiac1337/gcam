@@ -16,8 +16,6 @@
 .method constructor <init>(Lbfr;Ljuw;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbfs;->b:Lbfr;
 
     iput-object p2, p0, Lbfs;->a:Ljuw;
@@ -32,18 +30,13 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 2
     :try_start_0
     iget-object v0, p0, Lbfs;->b:Lbfr;
 
-    .line 3
     iget-object v0, v0, Lbfr;->b:Lbez;
 
-    .line 4
     invoke-interface {v0}, Lbez;->g()V
 
-    .line 5
     iget-object v0, p0, Lbfs;->a:Ljuw;
 
     sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
@@ -52,18 +45,14 @@
     :try_end_0
     .catch Lbeu; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 11
     :goto_0
     return-void
 
-    .line 7
     :catch_0
     move-exception v0
 
-    .line 8
     sget-object v1, Lbfr;->a:Ljava/lang/String;
 
-    .line 9
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -98,7 +87,6 @@
 
     invoke-static {v1, v0}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     iget-object v0, p0, Lbfs;->a:Ljuw;
 
     sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;

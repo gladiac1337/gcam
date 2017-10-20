@@ -23,7 +23,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -32,7 +31,6 @@
 
     const/4 v2, 0x0
 
-    .line 5
     new-instance v0, Lgmk;
 
     const-string v1, "GRID_NONE"
@@ -41,7 +39,6 @@
 
     sput-object v0, Lgmk;->a:Lgmk;
 
-    .line 6
     new-instance v0, Lgmk;
 
     const-string v1, "GRID_3x3"
@@ -50,7 +47,6 @@
 
     sput-object v0, Lgmk;->b:Lgmk;
 
-    .line 7
     new-instance v0, Lgmk;
 
     const-string v1, "GRID_4X4"
@@ -59,7 +55,6 @@
 
     sput-object v0, Lgmk;->c:Lgmk;
 
-    .line 8
     new-instance v0, Lgmk;
 
     const-string v1, "GRID_GOLDEN_RATIO"
@@ -68,7 +63,6 @@
 
     sput-object v0, Lgmk;->d:Lgmk;
 
-    .line 9
     const/4 v0, 0x4
 
     new-array v0, v0, [Lgmk;
@@ -97,22 +91,16 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput p3, p0, Lgmk;->e:I
 
-    .line 4
     return-void
 .end method
 
 .method public static values()[Lgmk;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lgmk;->f:[Lgmk;
 
     invoke-virtual {v0}, [Lgmk;->clone()Ljava/lang/Object;

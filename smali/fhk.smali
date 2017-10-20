@@ -25,15 +25,11 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lfhk;->a:Lcom/google/android/apps/camera/legacy/app/ui/toyboxmenu/ToyboxMenuButton;
 
-    .line 2
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/legacy/app/ui/toyboxmenu/ToyboxMenuButton;->setVisibility(I)V
 
-    .line 3
     return-void
 .end method

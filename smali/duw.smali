@@ -18,8 +18,6 @@
 .method constructor <init>(Ldus;Lgzx;Lcom/google/googlex/gcam/InterleavedImageU8;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lduw;->c:Ldus;
 
     iput-object p2, p0, Lduw;->a:Lgzx;
@@ -36,13 +34,10 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 7
 
-    .prologue
-    .line 6
     move-object v1, p1
 
     check-cast v1, Lcom/google/googlex/gcam/InterleavedImageU8;
 
-    .line 7
     iget-object v0, p0, Lduw;->c:Ldus;
 
     const/4 v2, 0x0
@@ -57,25 +52,20 @@
 
     invoke-static/range {v0 .. v6}, Ldus;->a(Ldus;Lcom/google/googlex/gcam/InterleavedImageU8;IZLdur;Ljava/lang/String;Lgzx;)V
 
-    .line 8
     return-void
 .end method
 
 .method public final a(Ljava/lang/Throwable;)V
     .locals 7
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 2
     sget-object v0, Lduo;->a:Ljava/lang/String;
 
-    .line 3
     const-string v1, "Error upsampling original image."
 
     invoke-static {v0, v1}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lduw;->c:Ldus;
 
     iget-object v1, p0, Lduw;->b:Lcom/google/googlex/gcam/InterleavedImageU8;
@@ -90,6 +80,5 @@
 
     invoke-static/range {v0 .. v6}, Ldus;->a(Ldus;Lcom/google/googlex/gcam/InterleavedImageU8;IZLdur;Ljava/lang/String;Lgzx;)V
 
-    .line 5
     return-void
 .end method

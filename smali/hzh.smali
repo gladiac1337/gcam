@@ -13,8 +13,6 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 5
     const-wide/32 v0, 0x3f940aa
 
     iput-wide v0, p0, Lhzh;->b:J
@@ -29,8 +27,6 @@
 .method public final declared-synchronized a()V
     .locals 2
 
-    .prologue
-    .line 1
     monitor-enter p0
 
     :try_start_0
@@ -42,12 +38,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2
     monitor-exit p0
 
     return-void
 
-    .line 1
     :catchall_0
     move-exception v0
 
@@ -59,8 +53,6 @@
 .method public final declared-synchronized b()J
     .locals 6
 
-    .prologue
-    .line 3
     monitor-enter p0
 
     :try_start_0
@@ -72,7 +64,6 @@
 
     sub-long/2addr v0, v2
 
-    .line 4
     const-wide/16 v2, 0x0
 
     iget-wide v4, p0, Lhzh;->b:J
@@ -89,7 +80,6 @@
 
     return-wide v0
 
-    .line 3
     :catchall_0
     move-exception v0
 

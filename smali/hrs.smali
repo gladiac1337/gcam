@@ -46,13 +46,10 @@
 .method public final handleMessage(Landroid/os/Message;)V
     .locals 4
 
-    .prologue
-    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 3
     const-string v0, "BasePendingResult"
 
     iget v1, p1, Landroid/os/Message;->what:I
@@ -86,7 +83,6 @@
     :goto_0
     return-void
 
-    .line 1
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -100,7 +96,6 @@
 
     check-cast v0, Lhkh;
 
-    .line 2
     :try_start_0
     invoke-interface {v1, v0}, Lhki;->a(Lhkh;)V
     :try_end_0
@@ -115,7 +110,6 @@
 
     throw v1
 
-    .line 3
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -127,7 +121,6 @@
 
     goto :goto_0
 
-    .line 1
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

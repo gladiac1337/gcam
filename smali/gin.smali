@@ -35,13 +35,10 @@
 .method public final a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 1
     check-cast p1, Ljava/util/List;
 
-    .line 3
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -61,7 +58,6 @@
 
     check-cast v0, Ljava/lang/Boolean;
 
-    .line 4
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -77,21 +73,17 @@
 
     move v1, v0
 
-    .line 5
     goto :goto_0
 
-    .line 4
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 6
     :cond_1
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    .line 7
     return-object v0
 .end method

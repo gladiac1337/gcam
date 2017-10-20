@@ -20,14 +20,10 @@
 .method public constructor <init>(Landroid/hardware/camera2/CameraConstrainedHighSpeedCaptureSession;)V
     .locals 0
 
-    .prologue
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     iput-object p1, p0, Lihl;->a:Landroid/hardware/camera2/CameraConstrainedHighSpeedCaptureSession;
 
-    .line 14
     return-void
 .end method
 
@@ -36,12 +32,9 @@
 .method public final a(Lihq;Lihj;Landroid/os/Handler;)I
     .locals 3
 
-    .prologue
-    .line 22
     :try_start_0
     iget-object v1, p0, Lihl;->a:Landroid/hardware/camera2/CameraConstrainedHighSpeedCaptureSession;
 
-    .line 23
     invoke-static {p1}, Licn;->a(Lihg;)Ljava/lang/Object;
 
     move-result-object v0
@@ -50,10 +43,8 @@
 
     new-instance v2, Lieo;
 
-    .line 24
     invoke-direct {v2, p2}, Lieo;-><init>(Lihj;)V
 
-    .line 26
     invoke-virtual {v1, v0, v2, p3}, Landroid/hardware/camera2/CameraConstrainedHighSpeedCaptureSession;->capture(Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;Landroid/os/Handler;)I
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
@@ -62,11 +53,9 @@
 
     return v0
 
-    .line 27
     :catch_0
     move-exception v0
 
-    .line 28
     new-instance v1, Lihh;
 
     invoke-direct {v1, v0}, Lihh;-><init>(Ljava/lang/Throwable;)V
@@ -77,22 +66,17 @@
 .method public final a(Ljava/util/List;Lihj;Landroid/os/Handler;)I
     .locals 3
 
-    .prologue
-    .line 29
     :try_start_0
     iget-object v0, p0, Lihl;->a:Landroid/hardware/camera2/CameraConstrainedHighSpeedCaptureSession;
 
-    .line 30
     invoke-static {p1}, Licn;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v1
 
     new-instance v2, Lieo;
 
-    .line 31
     invoke-direct {v2, p2}, Lieo;-><init>(Lihj;)V
 
-    .line 33
     invoke-virtual {v0, v1, v2, p3}, Landroid/hardware/camera2/CameraConstrainedHighSpeedCaptureSession;->captureBurst(Ljava/util/List;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;Landroid/os/Handler;)I
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
@@ -101,11 +85,9 @@
 
     return v0
 
-    .line 34
     :catch_0
     move-exception v0
 
-    .line 35
     new-instance v1, Lihh;
 
     invoke-direct {v1, v0}, Lihh;-><init>(Ljava/lang/Throwable;)V
@@ -116,12 +98,9 @@
 .method public final a(Lihq;)Ljava/util/List;
     .locals 5
 
-    .prologue
-    .line 1
     :try_start_0
     iget-object v1, p0, Lihl;->a:Landroid/hardware/camera2/CameraConstrainedHighSpeedCaptureSession;
 
-    .line 2
     invoke-static {p1}, Licn;->a(Lihg;)Ljava/lang/Object;
 
     move-result-object v0
@@ -132,7 +111,6 @@
 
     move-result-object v2
 
-    .line 4
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -141,7 +119,6 @@
 
     invoke-direct {v3, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 5
     const/4 v0, 0x0
 
     move v1, v0
@@ -153,7 +130,6 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 6
     new-instance v4, Lieq;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -168,25 +144,21 @@
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 10
     :catch_0
     move-exception v0
 
-    .line 11
     new-instance v1, Lihh;
 
     invoke-direct {v1, v0}, Lihh;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 9
     :cond_0
     return-object v3
 .end method
@@ -194,8 +166,6 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 18
     :try_start_0
     iget-object v0, p0, Lihl;->a:Landroid/hardware/camera2/CameraConstrainedHighSpeedCaptureSession;
 
@@ -203,14 +173,11 @@
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 19
     return-void
 
-    .line 20
     :catch_0
     move-exception v0
 
-    .line 21
     new-instance v1, Lihh;
 
     invoke-direct {v1, v0}, Lihh;-><init>(Ljava/lang/Throwable;)V
@@ -221,41 +188,31 @@
 .method public final a(Ljava/util/List;)V
     .locals 2
 
-    .prologue
-    .line 48
     iget-object v0, p0, Lihl;->a:Landroid/hardware/camera2/CameraConstrainedHighSpeedCaptureSession;
 
-    .line 49
     invoke-static {p1}, Licn;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 50
     invoke-static {v0, v1}, Lhig;->a(Landroid/hardware/camera2/CameraCaptureSession;Ljava/util/List;)V
 
-    .line 51
     return-void
 .end method
 
 .method public final b(Ljava/util/List;Lihj;Landroid/os/Handler;)I
     .locals 3
 
-    .prologue
-    .line 36
     :try_start_0
     iget-object v0, p0, Lihl;->a:Landroid/hardware/camera2/CameraConstrainedHighSpeedCaptureSession;
 
-    .line 37
     invoke-static {p1}, Licn;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v1
 
     new-instance v2, Lieo;
 
-    .line 38
     invoke-direct {v2, p2}, Lieo;-><init>(Lihj;)V
 
-    .line 40
     invoke-virtual {v0, v1, v2, p3}, Landroid/hardware/camera2/CameraConstrainedHighSpeedCaptureSession;->setRepeatingBurst(Ljava/util/List;Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;Landroid/os/Handler;)I
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
@@ -264,11 +221,9 @@
 
     return v0
 
-    .line 41
     :catch_0
     move-exception v0
 
-    .line 42
     new-instance v1, Lihh;
 
     invoke-direct {v1, v0}, Lihh;-><init>(Ljava/lang/Throwable;)V
@@ -279,13 +234,10 @@
 .method public final b()Lihn;
     .locals 3
 
-    .prologue
-    .line 15
     new-instance v0, Liep;
 
     iget-object v1, p0, Lihl;->a:Landroid/hardware/camera2/CameraConstrainedHighSpeedCaptureSession;
 
-    .line 16
     invoke-virtual {v1}, Landroid/hardware/camera2/CameraConstrainedHighSpeedCaptureSession;->getDevice()Landroid/hardware/camera2/CameraDevice;
 
     move-result-object v1
@@ -296,15 +248,12 @@
 
     invoke-direct {v0, v1}, Liep;-><init>(Landroid/hardware/camera2/CameraDevice;)V
 
-    .line 17
     return-object v0
 .end method
 
 .method public final c()V
     .locals 2
 
-    .prologue
-    .line 43
     :try_start_0
     iget-object v0, p0, Lihl;->a:Landroid/hardware/camera2/CameraConstrainedHighSpeedCaptureSession;
 
@@ -312,14 +261,11 @@
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 44
     return-void
 
-    .line 45
     :catch_0
     move-exception v0
 
-    .line 46
     new-instance v1, Lihh;
 
     invoke-direct {v1, v0}, Lihh;-><init>(Ljava/lang/Throwable;)V
@@ -330,21 +276,16 @@
 .method public final close()V
     .locals 1
 
-    .prologue
-    .line 52
     iget-object v0, p0, Lihl;->a:Landroid/hardware/camera2/CameraConstrainedHighSpeedCaptureSession;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/CameraConstrainedHighSpeedCaptureSession;->close()V
 
-    .line 53
     return-void
 .end method
 
 .method public final d()Landroid/view/Surface;
     .locals 1
 
-    .prologue
-    .line 47
     iget-object v0, p0, Lihl;->a:Landroid/hardware/camera2/CameraConstrainedHighSpeedCaptureSession;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/CameraConstrainedHighSpeedCaptureSession;->getInputSurface()Landroid/view/Surface;

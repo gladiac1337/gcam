@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 59
     const-string v0, "PlaceholderMgr"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -29,7 +27,6 @@
 
     sput-object v0, Leny;->c:Ljava/lang/String;
 
-    .line 60
     new-instance v0, Laht;
 
     invoke-direct {v0}, Laht;-><init>()V
@@ -42,32 +39,24 @@
 .method public constructor <init>(Landroid/content/Context;Lgvq;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Leny;->a:Landroid/content/Context;
 
-    .line 3
     iput-object p2, p0, Leny;->b:Lgvq;
 
-    .line 4
     return-void
 .end method
 
 .method private final a(Landroid/graphics/Bitmap;)Laml;
     .locals 3
 
-    .prologue
-    .line 56
     new-instance v0, Laml;
 
     new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
 
     iget-object v2, p0, Leny;->a:Landroid/content/Context;
 
-    .line 57
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -78,7 +67,6 @@
 
     invoke-direct {v0, v1, v2}, Laml;-><init>(Landroid/graphics/drawable/BitmapDrawable;Lahs;)V
 
-    .line 58
     return-object v0
 .end method
 
@@ -90,19 +78,16 @@
         value = 0x15
     .end annotation
 
-    .prologue
     const/4 v4, 0x0
 
     const/4 v3, 0x0
 
-    .line 28
     iget-object v0, p0, Leny;->a:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 29
     const/4 v1, 0x3
 
     new-array v2, v1, [Ljava/lang/String;
@@ -129,12 +114,10 @@
 
     move-object v5, v3
 
-    .line 30
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v2
 
-    .line 32
     if-eqz v2, :cond_0
 
     :try_start_0
@@ -147,18 +130,15 @@
 
     if-nez v0, :cond_2
 
-    .line 33
     :cond_0
     if-eqz v2, :cond_1
 
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    .line 53
     :cond_1
     :goto_0
     return-object v3
 
-    .line 35
     :cond_2
     :try_start_1
     const-string v0, "datetaken"
@@ -167,49 +147,40 @@
 
     move-result v0
 
-    .line 36
     const-string v1, "_display_name"
 
     invoke-interface {v2, v1}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 37
     invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 38
     invoke-interface {v2, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v4
 
-    .line 39
     invoke-interface {v2, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 40
     if-nez v0, :cond_3
 
-    .line 41
     sget-object v0, Leny;->c:Ljava/lang/String;
 
     const-string v1, "Name is not available will use file path instead"
 
     invoke-static {v0, v1}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 42
     const-string v0, "_data"
 
     invoke-interface {v2, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 43
     invoke-interface {v2, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 44
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -218,7 +189,6 @@
 
     move-result-object v0
 
-    .line 45
     :cond_3
     invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
@@ -226,17 +196,14 @@
 
     sget-object v6, Lgvp;->c:Lgvp;
 
-    .line 46
     iget-object v6, v6, Lgvp;->j:Ljava/lang/String;
 
-    .line 47
     invoke-virtual {v1, v6}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_7
 
-    .line 48
     const/4 v1, 0x0
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -245,10 +212,8 @@
 
     sget-object v7, Lgvp;->c:Lgvp;
 
-    .line 49
     iget-object v7, v7, Lgvp;->j:Ljava/lang/String;
 
-    .line 50
     invoke-virtual {v7}, Ljava/lang/String;->length()I
 
     move-result v7
@@ -261,7 +226,6 @@
 
     move-object v1, v0
 
-    .line 51
     :goto_1
     new-instance v0, Lenz;
 
@@ -270,7 +234,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 52
     if-eqz v2, :cond_4
 
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
@@ -278,10 +241,8 @@
     :cond_4
     move-object v3, v0
 
-    .line 53
     goto :goto_0
 
-    .line 54
     :catch_0
     move-exception v0
 
@@ -290,7 +251,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 55
     :catchall_0
     move-exception v1
 
@@ -338,13 +298,10 @@
 .method public final a(Ljava/lang/String;Lany;J)Lenz;
     .locals 3
 
-    .prologue
-    .line 7
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 8
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -354,7 +311,6 @@
 
     throw v0
 
-    .line 9
     :cond_1
     iget-object v0, p0, Leny;->b:Lgvq;
 
@@ -362,13 +318,10 @@
 
     move-result-object v1
 
-    .line 10
     if-nez v1, :cond_2
 
-    .line 11
     const/4 v0, 0x0
 
-    .line 12
     :goto_0
     return-object v0
 
@@ -383,15 +336,12 @@
 .method public final a(Ljava/lang/String;Libx;J)Lenz;
     .locals 3
 
-    .prologue
-    .line 5
     iget-object v0, p0, Leny;->b:Lgvq;
 
     invoke-interface {v0, p2, p3, p4}, Lgvq;->a(Libx;J)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 6
     new-instance v1, Lenz;
 
     invoke-direct {v1, p1, v0, p3, p4}, Lenz;-><init>(Ljava/lang/String;Landroid/net/Uri;J)V
@@ -402,13 +352,10 @@
 .method public final a(Ljava/lang/String;[BJ)Lenz;
     .locals 3
 
-    .prologue
-    .line 13
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 14
     const/4 v1, 0x0
 
     array-length v2, p2
@@ -417,7 +364,6 @@
 
     move-result-object v0
 
-    .line 16
     invoke-direct {p0, v0}, Leny;->a(Landroid/graphics/Bitmap;)Laml;
 
     move-result-object v0
@@ -426,15 +372,12 @@
 
     move-result-object v0
 
-    .line 17
     return-object v0
 .end method
 
 .method public final a(Lenz;)Ljhi;
     .locals 2
 
-    .prologue
-    .line 23
     iget-object v0, p0, Leny;->b:Lgvq;
 
     iget-object v1, p1, Lenz;->b:Landroid/net/Uri;
@@ -449,55 +392,43 @@
 .method public final a(Lenz;Landroid/graphics/Bitmap;)V
     .locals 1
 
-    .prologue
-    .line 21
     invoke-direct {p0, p2}, Leny;->a(Landroid/graphics/Bitmap;)Laml;
 
     move-result-object v0
 
     invoke-virtual {p0, p1, v0}, Leny;->a(Lenz;Lany;)V
 
-    .line 22
     return-void
 .end method
 
 .method public final a(Lenz;Lany;)V
     .locals 2
 
-    .prologue
-    .line 18
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 19
     iget-object v0, p0, Leny;->b:Lgvq;
 
     iget-object v1, p1, Lenz;->b:Landroid/net/Uri;
 
     invoke-interface {v0, v1, p2}, Lgvq;->a(Landroid/net/Uri;Lany;)V
 
-    .line 20
     return-void
 .end method
 
 .method public final b(Lenz;)V
     .locals 2
 
-    .prologue
-    .line 24
     if-eqz p1, :cond_0
 
-    .line 25
     iget-object v0, p0, Leny;->b:Lgvq;
 
     iget-object v1, p1, Lenz;->b:Landroid/net/Uri;
 
     invoke-interface {v0, v1}, Lgvq;->a(Landroid/net/Uri;)V
 
-    .line 27
     :goto_0
     return-void
 
-    .line 26
     :cond_0
     sget-object v0, Leny;->c:Ljava/lang/String;
 

@@ -25,18 +25,14 @@
 .method public final a(J)V
     .locals 5
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lcsk;->a:Lcsj;
 
-    .line 3
     const-wide/32 v2, 0x7270e00
 
     cmp-long v1, p1, v2
 
     if-gtz v1, :cond_0
 
-    .line 4
     sget-object v1, Lcsj;->c:Ljava/lang/String;
 
     const/16 v2, 0x46
@@ -61,7 +57,6 @@
 
     invoke-static {v1, v2}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     iget-object v1, v0, Lcsj;->f:Lhzi;
 
     new-instance v2, Lcsn;
@@ -70,7 +65,6 @@
 
     invoke-virtual {v1, v2}, Lhzi;->execute(Ljava/lang/Runnable;)V
 
-    .line 6
     :cond_0
     return-void
 .end method

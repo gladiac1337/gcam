@@ -16,8 +16,6 @@
 .method constructor <init>(Lfoi;[B)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfor;->b:Lfoi;
 
     iput-object p2, p0, Lfor;->a:[B
@@ -32,15 +30,11 @@
 .method public final run()V
     .locals 6
 
-    .prologue
-    .line 2
     :try_start_0
     iget-object v0, p0, Lfor;->b:Lfoi;
 
-    .line 3
     iget-object v0, v0, Lfoi;->H:Ljava/util/List;
 
-    .line 4
     const/4 v1, 0x0
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
@@ -49,17 +43,14 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 5
     new-instance v1, Ljava/io/FileOutputStream;
 
     invoke-direct {v1, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
 
-    .line 6
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -86,14 +77,12 @@
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8
     invoke-static {}, Lfof;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 9
     iget-object v0, p0, Lfor;->a:[B
 
     const/4 v3, 0x0
@@ -106,64 +95,48 @@
 
     move-result-object v0
 
-    .line 10
     sget-object v3, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
     const/16 v4, 0x64
 
     invoke-virtual {v0, v3, v4, v1}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 11
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 14
     :goto_0
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
 
-    .line 15
     iget-object v0, p0, Lfor;->b:Lfoi;
 
-    .line 16
     iget v0, v0, Lfoi;->o:I
 
-    .line 17
     iget-object v1, p0, Lfor;->b:Lfoi;
 
-    .line 18
     iget-object v1, v1, Lfoi;->F:Ljava/util/List;
 
-    .line 19
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
 
     if-ge v0, v1, :cond_0
 
-    .line 20
     iget-object v0, p0, Lfor;->b:Lfoi;
 
-    .line 21
     iget-object v0, v0, Lfoi;->F:Ljava/util/List;
 
-    .line 22
     iget-object v1, p0, Lfor;->b:Lfoi;
 
-    .line 23
     iget v1, v1, Lfoi;->o:I
 
-    .line 24
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
-    .line 25
     :cond_0
     iget-object v0, p0, Lfor;->b:Lfoi;
 
-    .line 26
     iget v0, v0, Lfoi;->o:I
 
-    .line 27
     iget-object v1, p0, Lfor;->a:[B
 
     array-length v1, v1
@@ -198,19 +171,14 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 28
     iget-object v0, p0, Lfor;->b:Lfoi;
 
-    .line 29
     iget-object v0, v0, Lfoi;->n:Ljava/util/Vector;
 
-    .line 30
     iget-object v1, p0, Lfor;->b:Lfoi;
 
-    .line 31
     iget v1, v1, Lfoi;->o:I
 
-    .line 32
     invoke-virtual {v0, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -219,13 +187,10 @@
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    .line 33
     iget-object v0, p0, Lfor;->b:Lfoi;
 
-    .line 34
     iget-object v0, v0, Lfoi;->G:Ljava/util/List;
 
-    .line 35
     const/4 v1, 0x0
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
@@ -236,18 +201,14 @@
 
     invoke-virtual {v0}, [F->clone()Ljava/lang/Object;
 
-    .line 36
     iget-object v0, p0, Lfor;->b:Lfoi;
 
-    .line 37
     iget-object v0, v0, Lfoi;->D:Lfoh;
 
-    .line 38
     invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 39
     const-string v3, "alignNextImage called for "
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -266,7 +227,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 40
     :goto_1
     :try_start_1
     iget-object v0, v0, Lfoh;->a:Ljava/util/concurrent/ArrayBlockingQueue;
@@ -278,39 +238,30 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_1 .. :try_end_1} :catch_3
 
-    .line 45
     :try_start_2
     iget-object v0, p0, Lfor;->b:Lfoi;
 
-    .line 46
     iget v1, v0, Lfoi;->o:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, v0, Lfoi;->o:I
 
-    .line 47
     iget-object v0, p0, Lfor;->b:Lfoi;
 
-    .line 48
     iget-object v0, v0, Lfoi;->I:Lfow;
 
-    .line 50
     invoke-static {v2}, Lfoi;->a(Ljava/io/File;)D
 
     move-result-wide v2
 
-    .line 52
     iput-wide v2, v0, Lfow;->b:D
 
-    .line 53
     invoke-virtual {v0}, Lfow;->a()V
 
-    .line 63
     :goto_2
     return-void
 
-    .line 13
     :cond_1
     iget-object v0, p0, Lfor;->a:[B
 
@@ -322,18 +273,15 @@
 
     goto/16 :goto_0
 
-    .line 55
     :catch_0
     move-exception v0
 
-    .line 56
     sget-object v1, Ljvg;->a:Ljvh;
 
     invoke-virtual {v1, v0}, Ljvh;->b(Ljava/lang/Throwable;)V
 
     goto :goto_2
 
-    .line 39
     :cond_2
     :try_start_3
     new-instance v4, Ljava/lang/String;
@@ -346,18 +294,15 @@
 
     goto :goto_1
 
-    .line 58
     :catch_1
     move-exception v0
 
-    .line 59
     sget-object v1, Ljvg;->a:Ljvh;
 
     invoke-virtual {v1, v0}, Ljvh;->b(Ljava/lang/Throwable;)V
 
     goto :goto_2
 
-    .line 43
     :catch_2
     move-exception v0
 
@@ -368,7 +313,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
-    .line 44
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Unexpected interruption"
@@ -381,11 +325,9 @@
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 61
     :catch_3
     move-exception v0
 
-    .line 62
     sget-object v1, Ljvg;->a:Ljvh;
 
     invoke-virtual {v1, v0}, Ljvh;->b(Ljava/lang/Throwable;)V

@@ -37,7 +37,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -48,7 +47,6 @@
 
     const/4 v3, 0x0
 
-    .line 3
     new-instance v0, Lfvd;
 
     const-string v1, "HAS_DETAILED_CAPTURE_INFO"
@@ -57,7 +55,6 @@
 
     sput-object v0, Lfvd;->a:Lfvd;
 
-    .line 4
     new-instance v0, Lfvd;
 
     const-string v1, "CAN_SHARE"
@@ -66,7 +63,6 @@
 
     sput-object v0, Lfvd;->b:Lfvd;
 
-    .line 5
     new-instance v0, Lfvd;
 
     const-string v1, "CAN_EDIT"
@@ -75,7 +71,6 @@
 
     sput-object v0, Lfvd;->c:Lfvd;
 
-    .line 6
     new-instance v0, Lfvd;
 
     const-string v1, "CAN_DELETE"
@@ -84,7 +79,6 @@
 
     sput-object v0, Lfvd;->d:Lfvd;
 
-    .line 7
     new-instance v0, Lfvd;
 
     const-string v1, "CAN_PLAY"
@@ -93,7 +87,6 @@
 
     sput-object v0, Lfvd;->e:Lfvd;
 
-    .line 8
     new-instance v0, Lfvd;
 
     const-string v1, "CAN_OPEN_VIEWER"
@@ -104,7 +97,6 @@
 
     sput-object v0, Lfvd;->m:Lfvd;
 
-    .line 9
     new-instance v0, Lfvd;
 
     const-string v1, "CAN_SWIPE_AWAY"
@@ -115,7 +107,6 @@
 
     sput-object v0, Lfvd;->f:Lfvd;
 
-    .line 10
     new-instance v0, Lfvd;
 
     const-string v1, "CAN_ZOOM_IN_PLACE"
@@ -126,7 +117,6 @@
 
     sput-object v0, Lfvd;->g:Lfvd;
 
-    .line 11
     new-instance v0, Lfvd;
 
     const-string v1, "IS_RENDERING"
@@ -137,7 +127,6 @@
 
     sput-object v0, Lfvd;->h:Lfvd;
 
-    .line 12
     new-instance v0, Lfvd;
 
     const-string v1, "IS_IMAGE"
@@ -148,7 +137,6 @@
 
     sput-object v0, Lfvd;->i:Lfvd;
 
-    .line 13
     new-instance v0, Lfvd;
 
     const-string v1, "IS_VIDEO"
@@ -159,7 +147,6 @@
 
     sput-object v0, Lfvd;->j:Lfvd;
 
-    .line 14
     new-instance v0, Lfvd;
 
     const-string v1, "IS_BURST"
@@ -170,7 +157,6 @@
 
     sput-object v0, Lfvd;->k:Lfvd;
 
-    .line 15
     new-instance v0, Lfvd;
 
     const-string v1, "IS_ANIMATION"
@@ -181,7 +167,6 @@
 
     sput-object v0, Lfvd;->l:Lfvd;
 
-    .line 16
     const/16 v0, 0xd
 
     new-array v0, v0, [Lfvd;
@@ -262,8 +247,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -272,8 +255,6 @@
 .method public static values()[Lfvd;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lfvd;->n:[Lfvd;
 
     invoke-virtual {v0}, [Lfvd;->clone()Ljava/lang/Object;

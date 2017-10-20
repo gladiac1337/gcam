@@ -20,14 +20,10 @@
 .method constructor <init>(Lcom/google/android/apps/camera/legacy/app/stats/ViewfinderJankSession;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lein;->a:Lcom/google/android/apps/camera/legacy/app/stats/ViewfinderJankSession;
 
-    .line 3
     return-void
 .end method
 
@@ -36,16 +32,12 @@
 .method public final a(Lihr;DD)V
     .locals 4
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lein;->a:Lcom/google/android/apps/camera/legacy/app/stats/ViewfinderJankSession;
 
-    .line 5
     iget-object v1, v0, Lcom/google/android/apps/camera/legacy/app/stats/ViewfinderJankSession;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 6
     :try_start_0
     iget-object v2, v0, Lcom/google/android/apps/camera/legacy/app/stats/ViewfinderJankSession;->b:Ljava/util/List;
 
@@ -57,20 +49,16 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 7
     invoke-static {p1, p2, p3, p4, p5}, Lcom/google/android/apps/camera/legacy/app/stats/ViewfinderJankSession;->a(Lihr;DD)Ljqa;
 
     move-result-object v2
 
-    .line 8
     iget-object v3, v0, Lcom/google/android/apps/camera/legacy/app/stats/ViewfinderJankSession;->b:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 9
     invoke-virtual {v0, v2}, Lcom/google/android/apps/camera/legacy/app/stats/ViewfinderJankSession;->a(Ljqa;)V
 
-    .line 10
     :cond_0
     monitor-exit v1
 

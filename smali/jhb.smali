@@ -11,11 +11,8 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -24,44 +21,34 @@
 
     iput-object v0, p0, Ljhb;->a:Ljava/lang/String;
 
-    .line 4
     return-void
 .end method
 
 .method constructor <init>(Ljhb;)V
     .locals 1
 
-    .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
     iget-object v0, p1, Ljhb;->a:Ljava/lang/String;
 
     iput-object v0, p0, Ljhb;->a:Ljava/lang/String;
 
-    .line 7
     return-void
 .end method
 
 .method private final a(Ljava/lang/StringBuilder;Ljava/util/Iterator;)Ljava/lang/StringBuilder;
     .locals 2
 
-    .prologue
-    .line 15
     :try_start_0
     invoke-virtual {p0, p1, p2}, Ljhb;->a(Ljava/lang/Appendable;Ljava/util/Iterator;)Ljava/lang/Appendable;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 19
     return-object p1
 
-    .line 17
     :catch_0
     move-exception v0
 
-    .line 18
     new-instance v1, Ljava/lang/AssertionError;
 
     invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
@@ -72,8 +59,6 @@
 .method public static a(Ljava/lang/String;)Ljhb;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Ljhb;
 
     invoke-direct {v0, p0}, Ljhb;-><init>(Ljava/lang/String;)V
@@ -86,18 +71,14 @@
 .method public a(Ljava/lang/Appendable;Ljava/util/Iterator;)Ljava/lang/Appendable;
     .locals 1
 
-    .prologue
-    .line 8
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 10
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -108,7 +89,6 @@
 
     invoke-interface {p1, v0}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
 
-    .line 11
     :goto_0
     invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -116,12 +96,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 12
     iget-object v0, p0, Ljhb;->a:Ljava/lang/String;
 
     invoke-interface {p1, v0}, Ljava/lang/Appendable;->append(Ljava/lang/CharSequence;)Ljava/lang/Appendable;
 
-    .line 13
     invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -134,7 +112,6 @@
 
     goto :goto_0
 
-    .line 14
     :cond_0
     return-object p1
 .end method
@@ -142,11 +119,8 @@
 .method a(Ljava/lang/Object;)Ljava/lang/CharSequence;
     .locals 1
 
-    .prologue
-    .line 29
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 30
     instance-of v0, p1, Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_0
@@ -167,13 +141,10 @@
 .method public final a(Ljava/lang/Iterable;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 20
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    .line 21
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -186,15 +157,12 @@
 
     move-result-object v0
 
-    .line 22
     return-object v0
 .end method
 
 .method public a()Ljhb;
     .locals 1
 
-    .prologue
-    .line 25
     new-instance v0, Ljhd;
 
     invoke-direct {v0, p0, p0}, Ljhd;-><init>(Ljhb;Ljhb;)V
@@ -205,11 +173,8 @@
 .method public b(Ljava/lang/String;)Ljhb;
     .locals 1
 
-    .prologue
-    .line 23
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 24
     new-instance v0, Ljhc;
 
     invoke-direct {v0, p0, p0, p1}, Ljhc;-><init>(Ljhb;Ljhb;Ljava/lang/String;)V
@@ -220,13 +185,9 @@
 .method public c(Ljava/lang/String;)Ljhe;
     .locals 1
 
-    .prologue
-    .line 26
     new-instance v0, Ljhe;
 
-    .line 27
     invoke-direct {v0, p0, p1}, Ljhe;-><init>(Ljhb;Ljava/lang/String;)V
 
-    .line 28
     return-object v0
 .end method

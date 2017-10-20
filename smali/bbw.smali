@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 14
     const-string v0, "AaaReqCalbak"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -37,25 +35,18 @@
 .method public constructor <init>(Lgeb;Lgem;Ljava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lgpr;-><init>()V
 
-    .line 2
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lbbw;->e:Z
 
-    .line 3
     iput-object p1, p0, Lbbw;->b:Lgeb;
 
-    .line 4
     iput-object p2, p0, Lbbw;->c:Lgem;
 
-    .line 5
     iput-object p3, p0, Lbbw;->d:Ljava/lang/Object;
 
-    .line 6
     return-void
 .end method
 
@@ -64,23 +55,18 @@
 .method public final a(Lihq;Lihr;)V
     .locals 6
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lbbw;->c:Lgem;
 
     invoke-virtual {v0, p2}, Lgem;->a(Lihr;)V
 
-    .line 8
     iget-boolean v0, p0, Lbbw;->e:Z
 
     if-eqz v0, :cond_0
 
-    .line 9
     iget-object v0, p0, Lbbw;->b:Lgeb;
 
     invoke-virtual {v0, p2}, Lgeb;->a(Lihr;)V
 
-    .line 10
     :cond_0
     iget-object v0, p0, Lbbw;->d:Ljava/lang/Object;
 
@@ -94,7 +80,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 11
     sget-object v0, Lbbw;->a:Ljava/lang/String;
 
     invoke-interface {p2}, Lihr;->d()J
@@ -153,12 +138,10 @@
 
     invoke-static {v0, v1}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lbbw;->e:Z
 
-    .line 13
     :cond_1
     return-void
 .end method

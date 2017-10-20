@@ -13,8 +13,6 @@
 .method constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lhpm;->a:Landroid/os/IBinder;
@@ -27,12 +25,10 @@
 .method public final a(Lcom/google/android/gms/feedback/ErrorReport;)Z
     .locals 7
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
@@ -110,8 +106,6 @@
 .method public final asBinder()Landroid/os/IBinder;
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lhpm;->a:Landroid/os/IBinder;
 
     return-object v0
@@ -120,12 +114,10 @@
 .method public final b(Lcom/google/android/gms/feedback/ErrorReport;)Z
     .locals 7
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 2
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2

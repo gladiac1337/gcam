@@ -23,7 +23,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x3
 
     const/4 v5, 0x2
@@ -32,7 +31,6 @@
 
     const/4 v3, 0x0
 
-    .line 6
     new-instance v0, Lgpx;
 
     const-string v1, "AAC"
@@ -43,7 +41,6 @@
 
     sput-object v0, Lgpx;->a:Lgpx;
 
-    .line 7
     new-instance v0, Lgpx;
 
     const-string v1, "AMR_NB"
@@ -54,7 +51,6 @@
 
     sput-object v0, Lgpx;->b:Lgpx;
 
-    .line 8
     new-instance v0, Lgpx;
 
     const-string v1, "AMR_WB"
@@ -65,7 +61,6 @@
 
     sput-object v0, Lgpx;->c:Lgpx;
 
-    .line 9
     new-instance v0, Lgpx;
 
     const-string v1, "VORBIS"
@@ -76,7 +71,6 @@
 
     sput-object v0, Lgpx;->d:Lgpx;
 
-    .line 10
     const/4 v0, 0x4
 
     new-array v0, v0, [Lgpx;
@@ -105,22 +99,16 @@
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput-object p3, p0, Lgpx;->e:Ljava/lang/String;
 
-    .line 4
     return-void
 .end method
 
 .method public static values()[Lgpx;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lgpx;->f:[Lgpx;
 
     invoke-virtual {v0}, [Lgpx;->clone()Ljava/lang/Object;
@@ -137,8 +125,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lgpx;->e:Ljava/lang/String;
 
     return-object v0

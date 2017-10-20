@@ -14,8 +14,6 @@
 .method constructor <init>(Ljeb;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljec;->a:Ljeb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ljec;->a:Ljeb;
 
     iget-object v0, v0, Ljeb;->a:Ljed;

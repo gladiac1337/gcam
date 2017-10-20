@@ -22,17 +22,12 @@
 .method public constructor <init>(Lfzz;Lfwu;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lfws;->a:Lfzz;
 
-    .line 3
     iput-object p2, p0, Lfws;->b:Lfwu;
 
-    .line 4
     return-void
 .end method
 
@@ -41,8 +36,6 @@
 .method public final a()V
     .locals 4
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lfws;->a:Lfzz;
 
     invoke-interface {v0}, Lfzz;->b()Ljava/lang/Object;
@@ -53,20 +46,16 @@
 
     const/4 v2, 0x0
 
-    .line 6
     if-nez v0, :cond_1
 
-    .line 7
     if-eqz v0, :cond_0
 
     invoke-interface {v0}, Liia;->close()V
 
-    .line 14
     :cond_0
     :goto_0
     return-void
 
-    .line 9
     :cond_1
     :try_start_0
     invoke-interface {v0}, Liia;->e()J
@@ -76,12 +65,10 @@
 
     move-result-wide v2
 
-    .line 10
     if-eqz v0, :cond_2
 
     invoke-interface {v0}, Liia;->close()V
 
-    .line 13
     :cond_2
     iget-object v0, p0, Lfws;->b:Lfwu;
 
@@ -89,7 +76,6 @@
 
     goto :goto_0
 
-    .line 11
     :catch_0
     move-exception v2
 
@@ -98,7 +84,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 12
     :catchall_0
     move-exception v1
 

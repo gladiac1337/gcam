@@ -26,10 +26,8 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x3
 
-    .line 27
     const-string v0, "GyroQueue"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -38,26 +36,22 @@
 
     sput-object v0, Lcom/google/android/apps/camera/jni/gyro/GyroQueue;->a:Ljava/lang/String;
 
-    .line 28
     invoke-static {}, Lcom/google/android/apps/camera/jni/gyro/GyroQueue;->a()[F
 
     move-result-object v0
 
     sput-object v0, Lcom/google/android/apps/camera/jni/gyro/GyroQueue;->b:[F
 
-    .line 29
     const-string v0, "gyrostabilization-jni"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 30
     new-array v0, v1, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/google/android/apps/camera/jni/gyro/GyroQueue;->e:[I
 
-    .line 31
     new-array v0, v1, [I
 
     fill-array-data v0, :array_1
@@ -66,7 +60,6 @@
 
     return-void
 
-    .line 30
     nop
 
     :array_0
@@ -76,7 +69,6 @@
         0x2
     .end array-data
 
-    .line 31
     :array_1
     .array-data 4
         0x1
@@ -88,11 +80,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget-object v0, Lcom/google/android/apps/camera/jni/gyro/GyroQueue;->e:[I
 
     sget-object v1, Lcom/google/android/apps/camera/jni/gyro/GyroQueue;->f:[I
@@ -103,20 +92,16 @@
 
     iput-wide v0, p0, Lcom/google/android/apps/camera/jni/gyro/GyroQueue;->c:J
 
-    .line 3
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/android/apps/camera/jni/gyro/GyroQueue;->d:Z
 
-    .line 4
     return-void
 .end method
 
 .method private static final a()[F
     .locals 1
 
-    .prologue
-    .line 26
     const/16 v0, 0x9
 
     new-array v0, v0, [F
@@ -159,8 +144,6 @@
 .method public final declared-synchronized a(FFFJ)Z
     .locals 8
 
-    .prologue
-    .line 10
     monitor-enter p0
 
     :try_start_0
@@ -170,10 +153,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 11
     const/4 v0, 0x0
 
-    .line 12
     :goto_0
     monitor-exit p0
 
@@ -199,7 +180,6 @@
 
     goto :goto_0
 
-    .line 10
     :catchall_0
     move-exception v0
 
@@ -211,8 +191,6 @@
 .method public final declared-synchronized a(JFFFJ[F)Z
     .locals 13
 
-    .prologue
-    .line 13
     monitor-enter p0
 
     :try_start_0
@@ -230,23 +208,19 @@
 
     invoke-static {v2, v3, v0, v4, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 14
     iget-boolean v2, p0, Lcom/google/android/apps/camera/jni/gyro/GyroQueue;->d:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v2, :cond_0
 
-    .line 15
     const/4 v2, 0x0
 
-    .line 19
     :goto_0
     monitor-exit p0
 
     return v2
 
-    .line 16
     :cond_0
     :try_start_1
     iget-wide v2, p0, Lcom/google/android/apps/camera/jni/gyro/GyroQueue;->c:J
@@ -269,7 +243,6 @@
 
     if-nez v2, :cond_1
 
-    .line 17
     sget-object v2, Lcom/google/android/apps/camera/jni/gyro/GyroQueue;->a:Ljava/lang/String;
 
     const/16 v3, 0x4c
@@ -296,18 +269,15 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 18
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 19
     :cond_1
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 13
     :catchall_0
     move-exception v2
 
@@ -319,8 +289,6 @@
 .method public final declared-synchronized a(JFFFJFFFJ)[F
     .locals 17
 
-    .prologue
-    .line 20
     monitor-enter p0
 
     :try_start_0
@@ -328,7 +296,6 @@
 
     move-result-object v16
 
-    .line 21
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lcom/google/android/apps/camera/jni/gyro/GyroQueue;->d:Z
@@ -337,14 +304,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 25
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-object v16
 
-    .line 23
     :cond_1
     :try_start_1
     move-object/from16 v0, p0
@@ -375,7 +340,6 @@
 
     if-nez v2, :cond_0
 
-    .line 24
     sget-object v2, Lcom/google/android/apps/camera/jni/gyro/GyroQueue;->a:Ljava/lang/String;
 
     const/16 v3, 0x66
@@ -418,7 +382,6 @@
 
     goto :goto_0
 
-    .line 20
     :catchall_0
     move-exception v2
 
@@ -430,8 +393,6 @@
 .method public declared-synchronized close()V
     .locals 2
 
-    .prologue
-    .line 5
     monitor-enter p0
 
     :try_start_0
@@ -441,20 +402,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 9
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 7
     :cond_0
     :try_start_1
     iget-wide v0, p0, Lcom/google/android/apps/camera/jni/gyro/GyroQueue;->c:J
 
     invoke-static {v0, v1}, Lcom/google/android/apps/camera/jni/gyro/GyroQueue;->releaseHandle(J)V
 
-    .line 8
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/android/apps/camera/jni/gyro/GyroQueue;->d:Z
@@ -463,7 +421,6 @@
 
     goto :goto_0
 
-    .line 5
     :catchall_0
     move-exception v0
 

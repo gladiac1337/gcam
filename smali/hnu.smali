@@ -21,8 +21,6 @@
 .method public constructor <init>(B)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lhnu;-><init>()V
 
     return-void
@@ -33,8 +31,6 @@
 .method public final a()V
     .locals 1
 
-    .prologue
-    .line 3
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -45,8 +41,6 @@
 .method public a(Lcom/google/android/gms/googlehelp/GoogleHelp;)V
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -63,8 +57,6 @@
 .method public final b()V
     .locals 1
 
-    .prologue
-    .line 4
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -75,8 +67,6 @@
 .method public final c()V
     .locals 1
 
-    .prologue
-    .line 5
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -87,8 +77,6 @@
 .method public final d()V
     .locals 1
 
-    .prologue
-    .line 6
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -99,8 +87,6 @@
 .method public final e()V
     .locals 1
 
-    .prologue
-    .line 7
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -111,8 +97,6 @@
 .method public f()V
     .locals 1
 
-    .prologue
-    .line 8
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -123,8 +107,6 @@
 .method public g()V
     .locals 1
 
-    .prologue
-    .line 9
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

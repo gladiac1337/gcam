@@ -7,8 +7,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 21
     const-string v0, "Face2LegacyFaceConv"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -19,7 +17,6 @@
 .method public static a(Landroid/graphics/RectF;IIILibu;ZFF)Landroid/graphics/Matrix;
     .locals 8
 
-    .prologue
     const/high16 v7, 0x40000000    # 2.0f
 
     const/4 v6, 0x0
@@ -28,12 +25,10 @@
 
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 1
     new-instance v4, Landroid/graphics/Matrix;
 
     invoke-direct {v4}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 2
     invoke-virtual {p0}, Landroid/graphics/RectF;->centerX()F
 
     move-result v0
@@ -48,7 +43,6 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 3
     invoke-virtual {p0}, Landroid/graphics/RectF;->width()F
 
     move-result v0
@@ -61,7 +55,6 @@
 
     div-float/2addr v0, v1
 
-    .line 4
     int-to-float v1, p1
 
     mul-float/2addr v1, v3
@@ -70,12 +63,10 @@
 
     div-float v5, v1, v5
 
-    .line 5
     cmpl-float v0, v0, v5
 
     if-lez v0, :cond_1
 
-    .line 6
     invoke-virtual {p0}, Landroid/graphics/RectF;->height()F
 
     move-result v0
@@ -84,14 +75,12 @@
 
     float-to-int v1, v0
 
-    .line 7
     invoke-virtual {p0}, Landroid/graphics/RectF;->height()F
 
     move-result v0
 
     float-to-int v0, v0
 
-    .line 10
     :goto_0
     invoke-virtual {p4}, Libu;->a()I
 
@@ -103,7 +92,6 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/Matrix;->postRotate(F)Z
 
-    .line 11
     sget-object v5, Libu;->a:Libu;
 
     if-eq p4, v5, :cond_0
@@ -112,14 +100,12 @@
 
     if-ne p4, v5, :cond_3
 
-    .line 12
     :cond_0
     if-eqz p5, :cond_2
 
     :goto_1
     invoke-virtual {v4, v2, v3}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    .line 14
     :goto_2
     new-instance v2, Landroid/graphics/RectF;
 
@@ -129,37 +115,30 @@
 
     invoke-direct {v2, v6, v6, v1, v0}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 15
     invoke-virtual {v4, v2}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 16
     invoke-virtual {v2}, Landroid/graphics/RectF;->width()F
 
     move-result v0
 
     div-float v0, p6, v0
 
-    .line 17
     invoke-virtual {v2}, Landroid/graphics/RectF;->height()F
 
     move-result v1
 
     div-float v1, p7, v1
 
-    .line 18
     invoke-virtual {v4, v0, v1}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    .line 19
     div-float v0, p6, v7
 
     div-float v1, p7, v7
 
     invoke-virtual {v4, v0, v1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 20
     return-object v4
 
-    .line 8
     :cond_1
     invoke-virtual {p0}, Landroid/graphics/RectF;->width()F
 
@@ -167,7 +146,6 @@
 
     float-to-int v1, v0
 
-    .line 9
     invoke-virtual {p0}, Landroid/graphics/RectF;->width()F
 
     move-result v0
@@ -181,10 +159,8 @@
     :cond_2
     move v2, v3
 
-    .line 12
     goto :goto_1
 
-    .line 13
     :cond_3
     if-eqz p5, :cond_4
 

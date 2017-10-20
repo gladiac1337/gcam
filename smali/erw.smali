@@ -11,21 +11,16 @@
 .method constructor <init>(Lija;)V
     .locals 1
 
-    .prologue
-    .line 2
     const-string v0, "CameraChange"
 
     invoke-direct {p0, p1, v0}, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;-><init>(Lija;Ljava/lang/String;)V
 
-    .line 3
     return-void
 .end method
 
 .method public static a()Ljxb;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Lerx;
 
     invoke-direct {v0}, Lerx;-><init>()V

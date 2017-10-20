@@ -25,14 +25,12 @@
 .method public constructor <init>()V
     .locals 11
 
-    .prologue
     const-wide/16 v4, 0x0
 
     const/4 v1, 0x0
 
     const/4 v8, 0x0
 
-    .line 11
     move-object v0, p0
 
     move v2, v1
@@ -47,42 +45,30 @@
 
     invoke-direct/range {v0 .. v10}, Lbpp;-><init>(IIIJJFFF)V
 
-    .line 12
     return-void
 .end method
 
 .method public constructor <init>(IIIJJFFF)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lbpp;->a:I
 
-    .line 3
     iput p2, p0, Lbpp;->b:I
 
-    .line 4
     iput p3, p0, Lbpp;->c:I
 
-    .line 5
     iput-wide p4, p0, Lbpp;->d:J
 
-    .line 6
     iput-wide p6, p0, Lbpp;->e:J
 
-    .line 7
     iput p8, p0, Lbpp;->f:F
 
-    .line 8
     iput p9, p0, Lbpp;->g:F
 
-    .line 9
     iput p10, p0, Lbpp;->h:F
 
-    .line 10
     return-void
 .end method
 
@@ -91,57 +77,44 @@
 .method public final a(Lbpp;)V
     .locals 2
 
-    .prologue
-    .line 13
     iget v0, p1, Lbpp;->a:I
 
     iput v0, p0, Lbpp;->a:I
 
-    .line 14
     iget v0, p1, Lbpp;->b:I
 
     iput v0, p0, Lbpp;->b:I
 
-    .line 15
     iget v0, p1, Lbpp;->c:I
 
     iput v0, p0, Lbpp;->c:I
 
-    .line 16
     iget-wide v0, p1, Lbpp;->d:J
 
     iput-wide v0, p0, Lbpp;->d:J
 
-    .line 17
     iget-wide v0, p1, Lbpp;->e:J
 
     iput-wide v0, p0, Lbpp;->e:J
 
-    .line 18
     iget v0, p1, Lbpp;->f:F
 
     iput v0, p0, Lbpp;->f:F
 
-    .line 19
     iget v0, p1, Lbpp;->g:F
 
     iput v0, p0, Lbpp;->g:F
 
-    .line 20
     iget v0, p1, Lbpp;->h:F
 
     iput v0, p0, Lbpp;->h:F
 
-    .line 21
     return-void
 .end method
 
 .method public final synthetic clone()Ljava/lang/Object;
     .locals 11
 
-    .prologue
-    .line 28
-    .line 29
     new-instance v0, Lbpp;
 
     iget v1, p0, Lbpp;->a:I
@@ -162,40 +135,32 @@
 
     invoke-direct/range {v0 .. v10}, Lbpp;-><init>(IIIJJFFF)V
 
-    .line 30
     return-object v0
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
     .locals 6
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 22
     if-nez p1, :cond_1
 
-    .line 27
     :cond_0
     :goto_0
     return v0
 
-    .line 24
     :cond_1
     if-ne p1, p0, :cond_2
 
     move v0, v1
 
-    .line 25
     goto :goto_0
 
-    .line 26
     :cond_2
     check-cast p1, Lbpp;
 
-    .line 27
     iget v2, p0, Lbpp;->a:I
 
     iget v3, p1, Lbpp;->a:I

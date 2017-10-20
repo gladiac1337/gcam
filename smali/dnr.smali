@@ -15,8 +15,6 @@
 .method public constructor <init>(Ljava/util/Set;Ljava/util/Set;Licj;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldnr;->a:Ljava/util/Set;
 
     iput-object p2, p0, Ldnr;->b:Ljava/util/Set;
@@ -33,11 +31,8 @@
 .method public final a(Lihr;)V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ldnr;->a:Ljava/util/Set;
 
-    .line 3
     invoke-interface {p1}, Lihr;->c()Lihq;
 
     move-result-object v1
@@ -48,18 +43,14 @@
 
     move-result-object v1
 
-    .line 4
     invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 5
     invoke-static {v0}, Lixp;->a(Z)V
 
-    .line 6
     iget-object v0, p0, Ldnr;->b:Ljava/util/Set;
 
-    .line 7
     invoke-interface {p1}, Lihr;->c()Lihq;
 
     move-result-object v1
@@ -74,10 +65,8 @@
 
     move-result v0
 
-    .line 8
     invoke-static {v0}, Lixp;->a(Z)V
 
-    .line 9
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->NOISE_REDUCTION_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p1, v0}, Lihr;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -86,7 +75,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 10
     iget-object v1, p0, Ldnr;->a:Ljava/util/Set;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -95,7 +83,6 @@
 
     if-nez v1, :cond_0
 
-    .line 11
     iget-object v1, p0, Ldnr;->c:Licj;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -136,7 +123,6 @@
 
     invoke-interface {v1, v0, v2}, Licj;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 12
     :cond_0
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->EDGE_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -146,7 +132,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 13
     iget-object v1, p0, Ldnr;->b:Ljava/util/Set;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -155,7 +140,6 @@
 
     if-nez v1, :cond_1
 
-    .line 14
     iget-object v1, p0, Ldnr;->c:Licj;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -196,7 +180,6 @@
 
     invoke-interface {v1, v0, v2}, Licj;->b(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 15
     :cond_1
     return-void
 .end method

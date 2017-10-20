@@ -18,20 +18,14 @@
 .method public constructor <init>(Ljava/nio/ByteBuffer;II)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcpu;->a:Ljava/nio/ByteBuffer;
 
-    .line 3
     iput p2, p0, Lcpu;->b:I
 
-    .line 4
     iput p3, p0, Lcpu;->c:I
 
-    .line 5
     return-void
 .end method
 
@@ -40,8 +34,6 @@
 .method public final a()I
     .locals 1
 
-    .prologue
-    .line 6
     iget v0, p0, Lcpu;->b:I
 
     return v0
@@ -50,8 +42,6 @@
 .method public final b()I
     .locals 1
 
-    .prologue
-    .line 7
     iget v0, p0, Lcpu;->c:I
 
     return v0
@@ -60,8 +50,6 @@
 .method public final c()Ljava/nio/ByteBuffer;
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lcpu;->a:Ljava/nio/ByteBuffer;
 
     return-object v0

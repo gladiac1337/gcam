@@ -14,8 +14,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,8 +22,6 @@
 .method synthetic constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder$1;)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/decoder/ImageDecoder$DefaultTimestampProvider;-><init>()V
 
     return-void
@@ -36,8 +32,6 @@
 .method public getTimestampForFrame(I)J
     .locals 4
 
-    .prologue
-    .line 2
     const-wide v0, 0x2540be400L
 
     int-to-long v2, p1

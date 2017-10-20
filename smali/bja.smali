@@ -14,8 +14,6 @@
 .method public constructor <init>(Lbkn;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lbja;->a:Lbkn;
@@ -28,8 +26,6 @@
 .method public final a(Lgot;)Lgot;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbja;->a:Lbkn;
 
     invoke-static {v0, p1}, Lbjg;->a(Lbkn;Lgot;)Lgot;

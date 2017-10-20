@@ -18,8 +18,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 6
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -38,14 +36,10 @@
 .method public constructor <init>(Landroid/content/ContentResolver;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lafm;->a:Landroid/content/ContentResolver;
 
-    .line 3
     return-void
 .end method
 
@@ -54,13 +48,10 @@
 .method public final a(Landroid/net/Uri;)Landroid/database/Cursor;
     .locals 7
 
-    .prologue
-    .line 4
     invoke-virtual {p1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 5
     iget-object v0, p0, Lafm;->a:Landroid/content/ContentResolver;
 
     sget-object v1, Landroid/provider/MediaStore$Images$Thumbnails;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;

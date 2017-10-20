@@ -18,8 +18,6 @@
 .method constructor <init>(Lyq;Laau;Landroid/os/Handler;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lyu;->c:Lyq;
 
     iput-object p2, p0, Lyu;->a:Laau;
@@ -36,30 +34,23 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     const/4 v0, 0x0
 
-    .line 3
     iget-object v1, p0, Lyu;->a:Laau;
 
     if-eqz v1, :cond_0
 
-    .line 4
     new-instance v0, Lyv;
 
     invoke-direct {v0, p0}, Lyv;-><init>(Lyu;)V
 
-    .line 5
     :cond_0
     iget-object v1, p0, Lyu;->c:Lyq;
 
     iget-object v1, v1, Lyq;->c:Lyn;
 
-    .line 6
     iget-object v1, v1, Lyn;->b:Lzb;
 
-    .line 7
     const/16 v2, 0x12f
 
     invoke-virtual {v1, v2, v0}, Lzb;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -68,6 +59,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 8
     return-void
 .end method

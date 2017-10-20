@@ -23,11 +23,8 @@
 .method private constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$State;->mCurrent:I
@@ -38,8 +35,6 @@
 .method synthetic constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$1;)V
     .locals 0
 
-    .prologue
-    .line 14
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$State;-><init>()V
 
     return-void
@@ -50,8 +45,6 @@
 .method public declared-synchronized addState(I)Z
     .locals 1
 
-    .prologue
-    .line 6
     monitor-enter p0
 
     :try_start_0
@@ -61,7 +54,6 @@
 
     if-eq v0, p1, :cond_0
 
-    .line 7
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$State;->mCurrent:I
 
     or-int/2addr v0, p1
@@ -70,10 +62,8 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8
     const/4 v0, 0x1
 
-    .line 9
     :goto_0
     monitor-exit p0
 
@@ -84,7 +74,6 @@
 
     goto :goto_0
 
-    .line 6
     :catchall_0
     move-exception v0
 
@@ -96,8 +85,6 @@
 .method public declared-synchronized check(I)Z
     .locals 1
 
-    .prologue
-    .line 5
     monitor-enter p0
 
     :try_start_0
@@ -132,8 +119,6 @@
 .method public declared-synchronized current()I
     .locals 1
 
-    .prologue
-    .line 13
     monitor-enter p0
 
     :try_start_0
@@ -156,8 +141,6 @@
 .method public declared-synchronized removeState(I)Z
     .locals 3
 
-    .prologue
-    .line 10
     monitor-enter p0
 
     :try_start_0
@@ -169,7 +152,6 @@
 
     const/4 v0, 0x1
 
-    .line 11
     :goto_0
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$State;->mCurrent:I
 
@@ -181,12 +163,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 12
     monitor-exit p0
 
     return v0
 
-    .line 10
     :cond_0
     const/4 v0, 0x0
 
@@ -203,8 +183,6 @@
 .method public declared-synchronized setState(I)V
     .locals 1
 
-    .prologue
-    .line 3
     monitor-enter p0
 
     :try_start_0
@@ -212,12 +190,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     monitor-exit p0
 
     return-void
 
-    .line 3
     :catchall_0
     move-exception v0
 

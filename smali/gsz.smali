@@ -22,8 +22,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;ZIII)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgsz;->e:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     iput-boolean p2, p0, Lgsz;->a:Z
@@ -44,8 +42,6 @@
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 5
 
-    .prologue
-    .line 2
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -56,12 +52,10 @@
 
     move-result v0
 
-    .line 3
     iget-boolean v1, p0, Lgsz;->a:Z
 
     if-eqz v1, :cond_0
 
-    .line 4
     iget-object v1, p0, Lgsz;->e:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     iget-object v2, p0, Lgsz;->e:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
@@ -80,7 +74,6 @@
 
     invoke-static {v1, v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$702(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;I)I
 
-    .line 5
     iget-object v0, p0, Lgsz;->e:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$800(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Landroid/graphics/Paint;
@@ -89,12 +82,10 @@
 
     iget-object v0, p0, Lgsz;->e:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
-    .line 6
     invoke-static {v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$2200(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Landroid/animation/ArgbEvaluator;
 
     move-result-object v0
 
-    .line 7
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
     move-result v2
@@ -111,7 +102,6 @@
 
     move-result-object v4
 
-    .line 8
     invoke-virtual {v0, v2, v3, v4}, Landroid/animation/ArgbEvaluator;->evaluate(FLjava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -122,19 +112,15 @@
 
     move-result v0
 
-    .line 9
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 12
     :goto_0
     iget-object v0, p0, Lgsz;->e:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->invalidate()V
 
-    .line 13
     return-void
 
-    .line 10
     :cond_0
     iget-object v1, p0, Lgsz;->e:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
@@ -154,7 +140,6 @@
 
     invoke-static {v1, v2}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$702(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;I)I
 
-    .line 11
     iget-object v1, p0, Lgsz;->e:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-static {v1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$1100(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Landroid/graphics/Paint;

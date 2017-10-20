@@ -13,16 +13,12 @@
 .method public constructor <init>(Ljava/util/Set;Ljava/util/Set;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljmr;->a:Ljava/util/Set;
 
     iput-object p2, p0, Ljmr;->b:Ljava/util/Set;
 
-    .line 2
     invoke-direct {p0}, Ljmu;-><init>()V
 
-    .line 3
     return-void
 .end method
 
@@ -31,8 +27,6 @@
 .method public final a()Ljnv;
     .locals 1
 
-    .prologue
-    .line 4
     new-instance v0, Ljms;
 
     invoke-direct {v0, p0}, Ljms;-><init>(Ljmr;)V
@@ -43,8 +37,6 @@
 .method public final contains(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 12
     iget-object v0, p0, Ljmr;->a:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -75,8 +67,6 @@
 .method public final isEmpty()Z
     .locals 2
 
-    .prologue
-    .line 11
     iget-object v0, p0, Ljmr;->b:Ljava/util/Set;
 
     iget-object v1, p0, Ljmr;->a:Ljava/util/Set;
@@ -91,8 +81,6 @@
 .method public final synthetic iterator()Ljava/util/Iterator;
     .locals 1
 
-    .prologue
-    .line 13
     invoke-virtual {p0}, Ljmr;->a()Ljnv;
 
     move-result-object v0
@@ -103,11 +91,8 @@
 .method public final size()I
     .locals 4
 
-    .prologue
-    .line 5
     const/4 v0, 0x0
 
-    .line 6
     iget-object v1, p0, Ljmr;->a:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -126,7 +111,6 @@
 
     move-result-object v2
 
-    .line 7
     iget-object v3, p0, Ljmr;->b:Ljava/util/Set;
 
     invoke-interface {v3, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -135,12 +119,10 @@
 
     if-nez v2, :cond_0
 
-    .line 8
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 10
     :cond_1
     return v0
 .end method

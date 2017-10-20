@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 2
     const-class v0, Ljvp;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -21,7 +19,6 @@
 
     invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
 
-    .line 3
     const-string v0, "jvn"
 
     sput-object v0, Ljvq;->a:Ljava/lang/String;
@@ -32,8 +29,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,8 +37,6 @@
 .method public constructor <init>(B)V
     .locals 0
 
-    .prologue
-    .line 4
     invoke-direct {p0}, Ljvq;-><init>()V
 
     return-void

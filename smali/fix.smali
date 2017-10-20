@@ -25,13 +25,10 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lfix;->a:Lfiw;
 
     check-cast p1, Ljava/lang/Integer;
 
-    .line 2
     iget-object v0, v0, Lfiw;->c:Ljhi;
 
     invoke-virtual {v0}, Ljhi;->b()Ljava/lang/Object;
@@ -40,7 +37,6 @@
 
     check-cast v0, Lfwy;
 
-    .line 3
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
@@ -53,9 +49,7 @@
 
     move-result-object v1
 
-    .line 4
     invoke-interface {v0, v1}, Lfwy;->a(Lfwz;)V
 
-    .line 5
     return-void
 .end method

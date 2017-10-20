@@ -14,8 +14,6 @@
 .method constructor <init>(Ljava/io/File;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lccw;->a:Ljava/io/File;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,20 +24,16 @@
 .method private final a()Ljhi;
     .locals 8
 
-    .prologue
-    .line 2
     invoke-static {}, Ljdy;->a()Ljef;
 
     move-result-object v0
 
-    .line 3
     iget-object v1, p0, Lccw;->a:Ljava/io/File;
 
     invoke-interface {v0, v1}, Ljef;->e(Ljava/io/File;)[Ljava/io/File;
 
     move-result-object v1
 
-    .line 4
     array-length v2, v1
 
     const/4 v0, 0x0
@@ -49,7 +43,6 @@
 
     aget-object v3, v1, v0
 
-    .line 6
     :try_start_0
     invoke-static {v3}, Lccv;->a(Ljava/io/File;)Lcom/google/android/libraries/camera/exif/ExifInterface;
     :try_end_0
@@ -57,31 +50,24 @@
 
     move-result-object v3
 
-    .line 13
     invoke-static {v3}, Lccv;->a(Lcom/google/android/libraries/camera/exif/ExifInterface;)Landroid/location/Location;
 
     move-result-object v3
 
-    .line 14
     if-eqz v3, :cond_0
 
-    .line 15
     invoke-static {v3}, Ljhi;->b(Ljava/lang/Object;)Ljhi;
 
     move-result-object v0
 
-    .line 18
     :goto_1
     return-object v0
 
-    .line 9
     :catch_0
     move-exception v4
 
-    .line 10
     sget-object v5, Lccv;->a:Ljava/lang/String;
 
-    .line 11
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
@@ -120,13 +106,11 @@
 
     invoke-static {v5, v3, v4}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 16
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 17
     :cond_1
     sget-object v0, Ljgx;->a:Ljgx;
 
@@ -138,8 +122,6 @@
 .method public final synthetic call()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 19
     invoke-direct {p0}, Lccw;->a()Ljhi;
 
     move-result-object v0

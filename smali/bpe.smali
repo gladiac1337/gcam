@@ -7,11 +7,8 @@
 .method public constructor <init>(Landroid/view/View;Landroid/graphics/Paint;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Lbou;-><init>(Landroid/view/View;Landroid/graphics/Paint;)V
 
-    .line 2
     return-void
 .end method
 
@@ -20,13 +17,10 @@
 .method public final a(Landroid/graphics/Canvas;Landroid/graphics/RectF;)V
     .locals 6
 
-    .prologue
-    .line 3
     iget-boolean v0, p0, Lbpe;->b:Z
 
     if-nez v0, :cond_0
 
-    .line 4
     iget v0, p2, Landroid/graphics/RectF;->left:F
 
     iget v1, p0, Lbpe;->a:I
@@ -53,7 +47,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 5
     :cond_0
     return-void
 .end method

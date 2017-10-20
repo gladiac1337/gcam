@@ -25,8 +25,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 91
     const-class v0, Lgao;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -37,34 +35,24 @@
 .method public constructor <init>(Landroid/util/SizeF;Libx;Libx;JLcom/google/android/apps/camera/jni/gyro/GyroQueue;Lbrr;)V
     .locals 4
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lgao;->f:Landroid/util/SizeF;
 
-    .line 4
     iput-object p2, p0, Lgao;->c:Libx;
 
-    .line 5
     iput-object p3, p0, Lgao;->g:Libx;
 
-    .line 6
     iput-wide p4, p0, Lgao;->d:J
 
-    .line 7
     const/16 v0, 0xc
 
     iput v0, p0, Lgao;->b:I
 
-    .line 8
     iput-object p6, p0, Lgao;->a:Lcom/google/android/apps/camera/jni/gyro/GyroQueue;
 
-    .line 9
     iput-object p7, p0, Lgao;->e:Lbrr;
 
-    .line 10
     invoke-virtual {p1}, Landroid/util/SizeF;->getWidth()F
 
     move-result v0
@@ -75,21 +63,16 @@
 
     div-float/2addr v0, v1
 
-    .line 12
     iget v1, p2, Libx;->a:I
 
-    .line 13
     int-to-float v1, v1
 
-    .line 14
     iget v2, p2, Libx;->b:I
 
-    .line 15
     int-to-float v2, v2
 
     div-float/2addr v1, v2
 
-    .line 16
     div-float v2, v1, v0
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -106,15 +89,12 @@
 
     iput v0, p0, Lgao;->h:F
 
-    .line 17
     return-void
 .end method
 
 .method public static a(JJJ)J
     .locals 4
 
-    .prologue
-    .line 80
     add-long v0, p2, p4
 
     const-wide/16 v2, 0x2
@@ -131,10 +111,8 @@
 .method public final a(FF[F)F
     .locals 4
 
-    .prologue
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 75
     const/high16 v0, 0x3f000000    # 0.5f
 
     const/4 v1, 0x0
@@ -149,7 +127,6 @@
 
     mul-float/2addr v0, v1
 
-    .line 76
     div-float v1, v3, p1
 
     const/high16 v2, 0x447a0000    # 1000.0f
@@ -160,13 +137,10 @@
 
     div-float v1, v3, v1
 
-    .line 77
     iget-object v2, p0, Lgao;->c:Libx;
 
-    .line 78
     iget v2, v2, Libx;->a:I
 
-    .line 79
     int-to-float v2, v2
 
     mul-float/2addr v1, v2
@@ -187,17 +161,14 @@
 .method public final a(JJ[F)J
     .locals 5
 
-    .prologue
     const/high16 v3, 0x3f000000    # 0.5f
 
-    .line 56
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
 
     if-lez v0, :cond_0
 
-    .line 57
     iget v0, p0, Lgao;->h:F
 
     long-to-float v1, p3
@@ -224,7 +195,6 @@
 
     add-long p1, v0, v2
 
-    .line 58
     :cond_0
     return-wide p1
 .end method
@@ -232,8 +202,6 @@
 .method public final a(J[F)J
     .locals 5
 
-    .prologue
-    .line 59
     long-to-float v0, p1
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -262,60 +230,48 @@
 .method public final a(Lfzs;Ljava/util/List;)V
     .locals 34
 
-    .prologue
-    .line 18
-    .line 19
     move-object/from16 v0, p1
 
     iget-wide v14, v0, Lfzs;->b:J
 
-    .line 22
     move-object/from16 v0, p1
 
     iget v2, v0, Lfzs;->e:F
 
-    .line 25
     move-object/from16 v0, p1
 
     iget v3, v0, Lfzs;->f:F
 
-    .line 28
     move-object/from16 v0, p1
 
     iget-object v4, v0, Lfzs;->h:Landroid/graphics/Rect;
 
-    .line 29
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v4}, Lgao;->a(Landroid/graphics/Rect;)[F
 
     move-result-object v8
 
-    .line 31
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v2, v3, v8}, Lgao;->a(FF[F)F
 
     move-result v19
 
-    .line 33
     move-object/from16 v0, p1
 
     iget-wide v4, v0, Lfzs;->a:J
 
-    .line 36
     move-object/from16 v0, p1
 
     iget-wide v6, v0, Lfzs;->c:J
 
-    .line 39
     move-object/from16 v0, p1
 
     iget-wide v10, v0, Lfzs;->g:J
 
     move-object/from16 v3, p0
 
-    .line 41
     invoke-virtual/range {v3 .. v8}, Lgao;->a(JJ[F)J
 
     move-result-wide v28
@@ -324,22 +280,18 @@
 
     move-wide v4, v10
 
-    .line 42
     invoke-virtual/range {v3 .. v8}, Lgao;->a(JJ[F)J
 
     move-result-wide v30
 
-    .line 43
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v6, v7, v8}, Lgao;->a(J[F)J
 
     move-result-wide v32
 
-    .line 44
     const/4 v3, 0x0
 
-    .line 45
     const/4 v2, 0x0
 
     move/from16 v25, v2
@@ -355,7 +307,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 46
     move/from16 v0, v25
 
     int-to-long v2, v0
@@ -382,12 +333,10 @@
 
     move-wide v6, v14
 
-    .line 47
     invoke-static/range {v2 .. v7}, Lgao;->a(JJJ)J
 
     move-result-wide v2
 
-    .line 48
     move/from16 v0, v25
 
     int-to-long v4, v0
@@ -428,14 +377,12 @@
 
     move-result-object v4
 
-    .line 49
     const/16 v5, 0x9
 
     new-array v0, v5, [F
 
     move-object/from16 v24, v0
 
-    .line 50
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lgao;->a:Lcom/google/android/apps/camera/jni/gyro/GyroQueue;
@@ -468,7 +415,6 @@
 
     move-object/from16 v3, v26
 
-    .line 52
     :goto_1
     invoke-static {v3}, Lgbl;->a([F)Lgbl;
 
@@ -478,7 +424,6 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 54
     add-int/lit8 v2, v25, 0x1
 
     move/from16 v25, v2
@@ -487,7 +432,6 @@
 
     goto :goto_0
 
-    .line 55
     :cond_0
     return-void
 
@@ -500,50 +444,40 @@
 .method public final a(JJJLibx;[FZ)[F
     .locals 7
 
-    .prologue
-    .line 60
     const/4 v0, 0x2
 
     new-array v0, v0, [F
 
     fill-array-data v0, :array_0
 
-    .line 61
     const-wide/16 v2, 0x0
 
     cmp-long v1, p1, v2
 
     if-ltz v1, :cond_0
 
-    .line 63
     invoke-static/range {p1 .. p6}, Lgao;->a(JJJ)J
 
     move-result-wide v0
 
-    .line 64
     if-eqz p9, :cond_1
 
-    .line 65
     iget-object v2, p0, Lgao;->e:Lbrr;
 
     invoke-interface {v2, v0, v1, p5, p6}, Lbrr;->a(JJ)[F
 
     move-result-object v0
 
-    .line 67
     :cond_0
     :goto_0
     const/4 v1, 0x2
 
     new-array v1, v1, [F
 
-    .line 68
     const/4 v2, 0x0
 
-    .line 69
     iget v3, p7, Libx;->a:I
 
-    .line 70
     add-int/lit8 v3, v3, -0x1
 
     int-to-float v3, v3
@@ -566,13 +500,10 @@
 
     aput v3, v1, v2
 
-    .line 71
     const/4 v2, 0x1
 
-    .line 72
     iget v3, p7, Libx;->b:I
 
-    .line 73
     add-int/lit8 v3, v3, -0x1
 
     int-to-float v3, v3
@@ -595,10 +526,8 @@
 
     aput v0, v1, v2
 
-    .line 74
     return-object v1
 
-    .line 66
     :cond_1
     iget-object v2, p0, Lgao;->e:Lbrr;
 
@@ -608,7 +537,6 @@
 
     goto :goto_0
 
-    .line 60
     nop
 
     :array_0
@@ -621,26 +549,20 @@
 .method public final a(Landroid/graphics/Rect;)[F
     .locals 5
 
-    .prologue
-    .line 81
     const/4 v0, 0x2
 
     new-array v0, v0, [F
 
     fill-array-data v0, :array_0
 
-    .line 82
     if-eqz p1, :cond_0
 
-    .line 83
     const/4 v1, 0x0
 
     iget-object v2, p0, Lgao;->g:Libx;
 
-    .line 84
     iget v2, v2, Libx;->a:I
 
-    .line 85
     int-to-float v2, v2
 
     iget v3, p1, Landroid/graphics/Rect;->right:I
@@ -655,15 +577,12 @@
 
     aput v2, v0, v1
 
-    .line 86
     const/4 v1, 0x1
 
     iget-object v2, p0, Lgao;->g:Libx;
 
-    .line 87
     iget v2, v2, Libx;->b:I
 
-    .line 88
     int-to-float v2, v2
 
     iget v3, p1, Landroid/graphics/Rect;->bottom:I
@@ -678,11 +597,9 @@
 
     aput v2, v0, v1
 
-    .line 89
     :cond_0
     return-object v0
 
-    .line 81
     nop
 
     :array_0
@@ -695,8 +612,6 @@
 .method public toString()Ljava/lang/String;
     .locals 7
 
-    .prologue
-    .line 90
     iget-object v0, p0, Lgao;->c:Libx;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

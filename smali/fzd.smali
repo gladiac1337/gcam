@@ -30,46 +30,32 @@
 .method private constructor <init>(Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lfzd;->a:Ljxb;
 
-    .line 3
     iput-object p2, p0, Lfzd;->b:Ljxb;
 
-    .line 4
     iput-object p3, p0, Lfzd;->c:Ljxb;
 
-    .line 5
     iput-object p4, p0, Lfzd;->d:Ljxb;
 
-    .line 6
     iput-object p5, p0, Lfzd;->e:Ljxb;
 
-    .line 7
     iput-object p6, p0, Lfzd;->f:Ljxb;
 
-    .line 8
     iput-object p7, p0, Lfzd;->g:Ljxb;
 
-    .line 9
     iput-object p8, p0, Lfzd;->h:Ljxb;
 
-    .line 10
     iput-object p9, p0, Lfzd;->i:Ljxb;
 
-    .line 11
     return-void
 .end method
 
 .method public static a(Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;)Ljxb;
     .locals 10
 
-    .prologue
-    .line 12
     new-instance v0, Lfzd;
 
     move-object v1, p0
@@ -100,9 +86,6 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 9
 
-    .prologue
-    .line 13
-    .line 14
     iget-object v0, p0, Lfzd;->a:Ljxb;
 
     iget-object v1, p0, Lfzd;->b:Ljxb;
@@ -117,7 +100,6 @@
 
     iget-object v6, p0, Lfzd;->g:Ljxb;
 
-    .line 15
     invoke-interface {v6}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -126,7 +108,6 @@
 
     iget-object v7, p0, Lfzd;->h:Ljxb;
 
-    .line 16
     invoke-interface {v7}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v7
@@ -135,27 +116,23 @@
 
     iget-object v8, p0, Lfzd;->i:Ljxb;
 
-    .line 17
     invoke-interface {v8}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Lico;
 
-    .line 18
     invoke-static/range {v0 .. v8}, Lfsl;->a(Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Ljxb;Lbio;Lfwx;Lico;)Ljava/util/Set;
 
     move-result-object v0
 
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 19
     invoke-static {v0, v1}, Ljvr;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Set;
 
-    .line 20
     return-object v0
 .end method

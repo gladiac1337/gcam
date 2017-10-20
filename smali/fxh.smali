@@ -33,27 +33,22 @@
 .method public final run()V
     .locals 12
 
-    .prologue
     const-wide/16 v10, 0x0
 
-    .line 1
     iget-object v4, p0, Lfxh;->a:Lfxg;
 
     iget-object v0, p0, Lfxh;->b:Ljuk;
 
     iget-object v5, p0, Lfxh;->c:Lioa;
 
-    .line 2
     invoke-static {v0}, Ljtv;->b(Ljava/util/concurrent/Future;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/List;
 
-    .line 3
     const-wide/16 v2, -0x1
 
-    .line 4
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -72,10 +67,8 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    .line 5
     if-eqz v0, :cond_0
 
-    .line 6
     cmp-long v1, v2, v10
 
     if-ltz v1, :cond_1
@@ -88,7 +81,6 @@
 
     if-gez v1, :cond_4
 
-    .line 7
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
@@ -97,16 +89,13 @@
     :goto_1
     move-wide v2, v0
 
-    .line 8
     goto :goto_0
 
-    .line 9
     :cond_2
     invoke-static {v2, v3, v10, v11}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v0
 
-    .line 11
     iget-object v2, v4, Lfxg;->b:Ljuw;
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -115,14 +104,12 @@
 
     invoke-virtual {v2, v3}, Ljsl;->a(Ljava/lang/Object;)Z
 
-    .line 12
     iget-wide v2, v4, Lfxg;->a:J
 
     cmp-long v2, v2, v0
 
     if-gez v2, :cond_3
 
-    .line 13
     const-string v2, "AddMetaTrackMuxer"
 
     const-string v3, "A shutter timestamp (%d) with value less than the starting timestamp (%d) was selected. Overwriting timestamp with starting timestamp."
@@ -135,7 +122,6 @@
 
     iget-wide v8, v4, Lfxg;->a:J
 
-    .line 14
     invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v8
@@ -150,14 +136,12 @@
 
     aput-object v8, v6, v7
 
-    .line 15
     invoke-static {v3, v6}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 16
     :cond_3
     iget-wide v2, v4, Lfxg;->a:J
 
@@ -165,35 +149,28 @@
 
     move-result-wide v2
 
-    .line 17
     invoke-static {v0, v1, v2, v3}, Lfxg;->a(JJ)[B
 
     move-result-object v0
 
-    .line 18
     new-instance v1, Landroid/media/MediaCodec$BufferInfo;
 
     invoke-direct {v1}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
 
-    .line 19
     array-length v4, v0
 
     iput v4, v1, Landroid/media/MediaCodec$BufferInfo;->size:I
 
-    .line 20
     iput-wide v2, v1, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
-    .line 21
     invoke-static {v0}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     invoke-interface {v5, v0, v1}, Lioa;->a(Ljava/nio/ByteBuffer;Landroid/media/MediaCodec$BufferInfo;)V
 
-    .line 22
     invoke-interface {v5}, Lioa;->close()V
 
-    .line 23
     return-void
 
     :cond_4

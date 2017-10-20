@@ -27,8 +27,6 @@
 .method public constructor <init>(Lhkw;I)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lhma;-><init>()V
 
     iput-object p1, p0, Lhma;->a:Lhkw;
@@ -43,8 +41,6 @@
 .method public final a()V
     .locals 3
 
-    .prologue
-    .line 2
     const-string v0, "GmsClient"
 
     const-string v1, "received deprecated onAccountValidationComplete callback, ignoring"
@@ -61,8 +57,6 @@
 .method public final a(ILandroid/os/IBinder;Landroid/os/Bundle;)V
     .locals 2
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lhma;->a:Lhkw;
 
     const-string v1, "onPostInitComplete can be called only once per call to getRemoteService"
@@ -75,12 +69,10 @@
 
     invoke-virtual {v0, p1, p2, p3, v1}, Lhkw;->a(ILandroid/os/IBinder;Landroid/os/Bundle;I)V
 
-    .line 4
     const/4 v0, 0x0
 
     iput-object v0, p0, Lhma;->a:Lhkw;
 
-    .line 5
     return-void
 .end method
 

@@ -29,13 +29,10 @@
 .method public final a()Ljava/lang/Object;
     .locals 8
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lfyi;->a:Landroid/media/MediaCodec$BufferInfo;
 
     iget-object v1, p0, Lfyi;->b:Landroid/media/MediaFormat;
 
-    .line 2
     const-string v2, "muxer writing <%d> %s"
 
     const/4 v3, 0x2
@@ -46,7 +43,6 @@
 
     iget-wide v6, v0, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
-    .line 3
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -63,11 +59,9 @@
 
     aput-object v1, v3, v0
 
-    .line 4
     invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5
     return-object v0
 .end method

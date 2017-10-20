@@ -11,8 +11,6 @@
 .method constructor <init>(Lezh;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lezi;->a:Lezh;
 
     invoke-direct {p0}, Lezg;-><init>()V
@@ -25,54 +23,40 @@
 .method public final a()V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 2
     sget-object v0, Lezh;->a:Ljava/lang/String;
 
-    .line 3
     const-string v1, "enter Lens Blur state"
 
     invoke-static {v0, v1}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lezi;->a:Lezh;
 
-    .line 5
     iget-object v0, v0, Lezh;->f:Lcom/google/android/apps/camera/gridlines/view/GridLinesUi;
 
-    .line 6
     invoke-virtual {v0, v3}, Lcom/google/android/apps/camera/gridlines/view/GridLinesUi;->setVisibility(I)V
 
-    .line 7
     iget-object v0, p0, Lezi;->a:Lezh;
 
-    .line 8
     iget-object v0, v0, Lezh;->h:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
-    .line 9
     invoke-virtual {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarController;->switchToLensBlur()V
 
-    .line 10
     iget-object v0, p0, Lezi;->a:Lezh;
 
-    .line 11
     iget-object v0, v0, Lezh;->i:Lgtv;
 
-    .line 13
     iget-object v1, v0, Lgtv;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     sget-object v2, Lgtt;->a:Lgtt;
 
     invoke-virtual {v1, v2}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->setMode(Lgtt;)V
 
-    .line 14
     iget-object v0, v0, Lgtv;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-virtual {v0, v3}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->setVisibility(I)V
 
-    .line 15
     iget-object v0, p0, Lezi;->a:Lezh;
 
     invoke-static {v0}, Lezh;->a(Lezh;)Liaj;
@@ -83,30 +67,23 @@
 
     invoke-interface {v0, v1}, Liaj;->a(Ljava/lang/Object;)V
 
-    .line 16
     return-void
 .end method
 
 .method public final b()V
     .locals 2
 
-    .prologue
-    .line 17
     sget-object v0, Lezh;->a:Ljava/lang/String;
 
-    .line 18
     const-string v1, "exit Lens Blur state"
 
     invoke-static {v0, v1}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 19
     return-void
 .end method
 
 .method public u()V
     .locals 0
 
-    .prologue
-    .line 20
     return-void
 .end method

@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 51
     const-string v0, "FSViewNodeUpdater"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -23,7 +21,6 @@
 
     sput-object v0, Lckl;->a:Ljava/lang/String;
 
-    .line 52
     const/4 v0, -0x1
 
     sput v0, Lckl;->b:I
@@ -34,10 +31,8 @@
 .method public static a(Ljava/util/List;Lcgg;)Lckm;
     .locals 8
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -53,7 +48,6 @@
 
     invoke-static {v0, v2}, Lixp;->a(ZLjava/lang/Object;)V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -62,19 +56,16 @@
 
     div-int/lit8 v4, v0, 0x2
 
-    .line 3
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v5
 
-    .line 4
     invoke-interface {p0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcgg;
 
-    .line 6
     invoke-interface {v0}, Lcgg;->d()Z
 
     move-result v2
@@ -83,26 +74,21 @@
 
     move-object v3, v0
 
-    .line 18
     :goto_1
     if-nez v3, :cond_8
 
-    .line 19
     sget-object v0, Lckl;->a:Ljava/lang/String;
 
     const-string v1, "There are no remaining valid nodes. Returning empty response."
 
     invoke-static {v0, v1}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 20
     sget-object v0, Lcgg;->c:Lcgg;
 
-    .line 21
     invoke-static {v5, v0}, Ljava/util/Collections;->nCopies(ILjava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 22
     const/4 v0, -0x1
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -113,12 +99,10 @@
 
     move-result-object v2
 
-    .line 23
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 24
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -137,12 +121,10 @@
 
     check-cast v0, Lcgg;
 
-    .line 25
     sget-object v5, Lcgg;->c:Lcgg;
 
     if-eq v0, v5, :cond_0
 
-    .line 26
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
@@ -150,10 +132,8 @@
     :cond_1
     move v0, v1
 
-    .line 1
     goto :goto_0
 
-    .line 8
     :cond_2
     :goto_3
     invoke-interface {v0}, Lcgg;->d()Z
@@ -170,14 +150,12 @@
 
     if-eq v2, v3, :cond_3
 
-    .line 9
     invoke-interface {v0}, Lcgg;->a()Lcgg;
 
     move-result-object v0
 
     goto :goto_3
 
-    .line 10
     :cond_3
     invoke-interface {v0}, Lcgg;->d()Z
 
@@ -187,10 +165,8 @@
 
     move-object v3, v0
 
-    .line 11
     goto :goto_1
 
-    .line 12
     :cond_4
     :goto_4
     invoke-interface {v0}, Lcgg;->d()Z
@@ -207,14 +183,12 @@
 
     if-eq v2, v3, :cond_5
 
-    .line 13
     invoke-interface {v0}, Lcgg;->b()Lcgg;
 
     move-result-object v0
 
     goto :goto_4
 
-    .line 14
     :cond_5
     invoke-interface {v0}, Lcgg;->d()Z
 
@@ -224,10 +198,8 @@
 
     move-object v3, v0
 
-    .line 15
     goto :goto_1
 
-    .line 16
     :cond_6
     const/4 v0, 0x0
 
@@ -235,35 +207,29 @@
 
     goto :goto_1
 
-    .line 28
     :cond_7
     new-instance v0, Lckm;
 
     invoke-direct {v0, v1, v2}, Lckm;-><init>(Ljava/util/List;Ljava/util/List;)V
 
-    .line 50
     :goto_5
     return-object v0
 
-    .line 29
     :cond_8
     invoke-interface {v3}, Lcgg;->b()Lcgg;
 
     move-result-object v0
 
-    .line 30
     invoke-interface {v3}, Lcgg;->a()Lcgg;
 
     move-result-object v2
 
-    .line 31
     if-eqz p1, :cond_a
 
     sget-object v6, Lcgg;->c:Lcgg;
 
     if-eq v0, v6, :cond_a
 
-    .line 32
     invoke-interface {v0}, Lcgg;->c()Lfvb;
 
     move-result-object v6
@@ -274,18 +240,15 @@
 
     if-ne v6, v7, :cond_a
 
-    .line 37
     :goto_6
     invoke-interface {v0, v4}, Lcgg;->a(I)Ljava/util/List;
 
     move-result-object v2
 
-    .line 38
     new-instance v3, Ljava/util/ArrayList;
 
     sget v0, Lckl;->b:I
 
-    .line 39
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -296,18 +259,15 @@
 
     invoke-direct {v3, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 40
     :goto_7
     if-ge v1, v5, :cond_b
 
-    .line 41
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcgg;
 
-    .line 42
     sget-object v4, Lcgg;->c:Lcgg;
 
     if-eq v0, v4, :cond_9
@@ -318,7 +278,6 @@
 
     if-eqz v4, :cond_9
 
-    .line 43
     invoke-interface {p0, v0}, Ljava/util/List;->indexOf(Ljava/lang/Object;)I
 
     move-result v0
@@ -329,13 +288,11 @@
 
     invoke-interface {v3, v1, v0}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 44
     :cond_9
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_7
 
-    .line 34
     :cond_a
     if-eqz p1, :cond_e
 
@@ -343,7 +300,6 @@
 
     if-eq v2, v0, :cond_e
 
-    .line 35
     invoke-interface {v2}, Lcgg;->c()Lfvb;
 
     move-result-object v0
@@ -356,16 +312,13 @@
 
     move-object v0, v2
 
-    .line 36
     goto :goto_6
 
-    .line 45
     :cond_b
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 46
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -384,7 +337,6 @@
 
     check-cast v0, Lcgg;
 
-    .line 47
     sget-object v5, Lcgg;->c:Lcgg;
 
     if-eq v0, v5, :cond_c
@@ -395,12 +347,10 @@
 
     if-eqz v5, :cond_c
 
-    .line 48
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_8
 
-    .line 50
     :cond_d
     new-instance v0, Lckm;
 

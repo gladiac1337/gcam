@@ -21,25 +21,18 @@
 .method private constructor <init>(FLjava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
     iput-object p2, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->accessibilityString:Ljava/lang/String;
 
-    .line 7
     iput p1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->viewSize:F
 
-    .line 8
     return-void
 .end method
 
 .method static createAnimatedRevealRequest(FLjava/lang/String;)Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
     .locals 1
 
-    .prologue
-    .line 4
     new-instance v0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     invoke-direct {v0, p0, p1}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;-><init>(FLjava/lang/String;)V
@@ -50,30 +43,24 @@
 .method static createNonAnimatedRevealRequest(FLjava/lang/String;)Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
     .locals 2
 
-    .prologue
-    .line 1
     new-instance v0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
 
     invoke-direct {v0, p0, p1}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;-><init>(FLjava/lang/String;)V
 
-    .line 2
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->animationDisabled:Z
 
-    .line 3
     return-object v0
 .end method
 
 .method private precomputeThumbnailPaint(Landroid/graphics/Bitmap;I)V
     .locals 7
 
-    .prologue
     const/high16 v6, 0x40000000    # 2.0f
 
     const/4 v5, 0x0
 
-    .line 12
     invoke-static {}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->access$1600()Ljava/lang/String;
 
     move-result-object v0
@@ -112,20 +99,16 @@
 
     invoke-static {v0, v1}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 13
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->thumbnailPaint:Landroid/graphics/Paint;
 
     if-nez v0, :cond_0
 
-    .line 14
     if-nez p1, :cond_1
 
-    .line 30
     :cond_0
     :goto_0
     return-void
 
-    .line 16
     :cond_1
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -137,7 +120,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 18
     new-instance v0, Landroid/graphics/BitmapShader;
 
     sget-object v1, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
@@ -146,7 +128,6 @@
 
     invoke-direct {v0, p1, v1, v2}, Landroid/graphics/BitmapShader;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V
 
-    .line 19
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
@@ -159,7 +140,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 20
     new-instance v1, Landroid/graphics/RectF;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -176,7 +156,6 @@
 
     invoke-direct {v1, v5, v5, v2, v3}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 21
     new-instance v2, Landroid/graphics/RectF;
 
     iget v3, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->viewSize:F
@@ -185,17 +164,14 @@
 
     invoke-direct {v2, v5, v5, v3, v4}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 22
     new-instance v3, Landroid/graphics/Matrix;
 
     invoke-direct {v3}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 23
     sget-object v4, Landroid/graphics/Matrix$ScaleToFit;->FILL:Landroid/graphics/Matrix$ScaleToFit;
 
     invoke-virtual {v3, v1, v2, v4}, Landroid/graphics/Matrix;->setRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Matrix$ScaleToFit;)Z
 
-    .line 24
     int-to-float v2, p2
 
     invoke-virtual {v1}, Landroid/graphics/RectF;->width()F
@@ -212,10 +188,8 @@
 
     invoke-virtual {v3, v2, v4, v1}, Landroid/graphics/Matrix;->preRotate(FFF)Z
 
-    .line 25
     invoke-virtual {v0, v3}, Landroid/graphics/BitmapShader;->setLocalMatrix(Landroid/graphics/Matrix;)V
 
-    .line 26
     :cond_2
     new-instance v1, Landroid/graphics/Paint;
 
@@ -223,19 +197,16 @@
 
     iput-object v1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->thumbnailPaint:Landroid/graphics/Paint;
 
-    .line 27
     iget-object v1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->thumbnailPaint:Landroid/graphics/Paint;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 28
     iget-object v1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->thumbnailPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 29
     invoke-static {}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->access$1600()Ljava/lang/String;
 
     move-result-object v0
@@ -252,34 +223,26 @@
 .method public finishRippleAnimation()V
     .locals 1
 
-    .prologue
-    .line 34
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->rippleAnimationFinished:Z
 
-    .line 35
     return-void
 .end method
 
 .method public finishThumbnailAnimation()V
     .locals 1
 
-    .prologue
-    .line 32
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->thumbnailAnimationFinished:Z
 
-    .line 33
     return-void
 .end method
 
 .method public getAccessibilityString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->accessibilityString:Ljava/lang/String;
 
     return-object v0
@@ -288,8 +251,6 @@
 .method public getThumbnailPaint()Landroid/graphics/Paint;
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->thumbnailPaint:Landroid/graphics/Paint;
 
     return-object v0
@@ -298,8 +259,6 @@
 .method public isAnimationDisabled()Z
     .locals 1
 
-    .prologue
-    .line 11
     iget-boolean v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->animationDisabled:Z
 
     return v0
@@ -308,8 +267,6 @@
 .method public isFinished()Z
     .locals 1
 
-    .prologue
-    .line 31
     iget-boolean v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->thumbnailAnimationFinished:Z
 
     if-eqz v0, :cond_0
@@ -332,9 +289,6 @@
 .method public setThumbnailBitmap(Landroid/graphics/Bitmap;I)V
     .locals 2
 
-    .prologue
-    .line 36
-    .line 37
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -345,20 +299,16 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 39
     invoke-static {p1}, Lgyl;->b(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 40
     invoke-static {v0}, Lgyl;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    .line 41
     :cond_0
     invoke-direct {p0, p1, p2}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->precomputeThumbnailPaint(Landroid/graphics/Bitmap;I)V
 
-    .line 42
     return-void
 .end method

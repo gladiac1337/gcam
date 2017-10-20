@@ -14,14 +14,10 @@
 .method constructor <init>(Ljid;Ljava/util/SortedMap;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljin;->c:Ljid;
 
-    .line 2
     invoke-direct {p0, p1, p2}, Ljih;-><init>(Ljid;Ljava/util/Map;)V
 
-    .line 3
     return-void
 .end method
 
@@ -30,12 +26,8 @@
 .method a()Ljava/util/SortedMap;
     .locals 1
 
-    .prologue
-    .line 4
-    .line 5
     iget-object v0, p0, Ljlo;->b:Ljava/util/Map;
 
-    .line 6
     check-cast v0, Ljava/util/SortedMap;
 
     return-object v0
@@ -44,8 +36,6 @@
 .method public comparator()Ljava/util/Comparator;
     .locals 1
 
-    .prologue
-    .line 7
     invoke-virtual {p0}, Ljin;->a()Ljava/util/SortedMap;
 
     move-result-object v0
@@ -60,8 +50,6 @@
 .method public first()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 8
     invoke-virtual {p0}, Ljin;->a()Ljava/util/SortedMap;
 
     move-result-object v0
@@ -76,8 +64,6 @@
 .method public headSet(Ljava/lang/Object;)Ljava/util/SortedSet;
     .locals 3
 
-    .prologue
-    .line 9
     new-instance v0, Ljin;
 
     iget-object v1, p0, Ljin;->c:Ljid;
@@ -98,8 +84,6 @@
 .method public last()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 10
     invoke-virtual {p0}, Ljin;->a()Ljava/util/SortedMap;
 
     move-result-object v0
@@ -114,8 +98,6 @@
 .method public subSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedSet;
     .locals 3
 
-    .prologue
-    .line 11
     new-instance v0, Ljin;
 
     iget-object v1, p0, Ljin;->c:Ljid;
@@ -136,8 +118,6 @@
 .method public tailSet(Ljava/lang/Object;)Ljava/util/SortedSet;
     .locals 3
 
-    .prologue
-    .line 12
     new-instance v0, Ljin;
 
     iget-object v1, p0, Ljin;->c:Ljid;

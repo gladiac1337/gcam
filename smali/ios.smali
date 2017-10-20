@@ -11,17 +11,12 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/buffers/FeatureTable;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Lios;->a:Lcom/google/android/libraries/smartburst/buffers/FeatureTable;
 
-    .line 4
     return-void
 .end method
 
@@ -30,15 +25,12 @@
 .method public final a(Ljfh;)Ljfy;
     .locals 10
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 5
     new-instance v3, Ljfz;
 
     invoke-direct {v3}, Ljfz;-><init>()V
 
-    .line 6
     iget-object v0, p0, Lios;->a:Lcom/google/android/libraries/smartburst/buffers/FeatureTable;
 
     invoke-interface {v0}, Lcom/google/android/libraries/smartburst/buffers/FeatureTable;->getFeatureTypes()Ljava/util/EnumSet;
@@ -51,7 +43,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 7
     iget-object v0, p0, Lios;->a:Lcom/google/android/libraries/smartburst/buffers/FeatureTable;
 
     invoke-interface {v0, p1}, Lcom/google/android/libraries/smartburst/buffers/FeatureTable;->getColumnValues(Ljfh;)[Lcom/google/android/libraries/smartburst/utils/Feature;
@@ -67,7 +58,6 @@
 
     aget-object v0, v4, v2
 
-    .line 8
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/utils/Feature;->getValues()[F
 
     move-result-object v6
@@ -81,17 +71,14 @@
 
     aget v8, v6, v0
 
-    .line 9
     float-to-double v8, v8
 
     invoke-virtual {v3, v8, v9}, Ljfz;->a(D)Ljfz;
 
-    .line 10
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 11
     :cond_0
     add-int/lit8 v0, v2, 0x1
 
@@ -99,7 +86,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_1
     invoke-virtual {v3}, Ljfz;->a()Ljfy;
 
@@ -111,8 +97,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 13
     const-string v0, "FeatureTableStats["
 
     iget-object v1, p0, Lios;->a:Lcom/google/android/libraries/smartburst/buffers/FeatureTable;

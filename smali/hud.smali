@@ -24,11 +24,8 @@
 .method protected final synthetic a(Lhjv;)V
     .locals 5
 
-    .prologue
-    .line 1
     check-cast p1, Lhun;
 
-    .line 2
     iget-object v0, p0, Lhud;->a:Lhtv;
 
     const-class v1, Lhtv;
@@ -37,7 +34,6 @@
 
     move-result-object v1
 
-    .line 3
     const-string v2, "Listener must not be null"
 
     invoke-static {v0, v2}, Lhiv;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -54,23 +50,18 @@
 
     invoke-direct {v2, v0, v1}, Lhtp;-><init>(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 4
     new-instance v3, Lhug;
 
     invoke-direct {v3, p0}, Lhug;-><init>(Lhro;)V
 
-    .line 5
     iget-object v1, p1, Lhun;->h:Lhuj;
 
-    .line 6
     iget-object v0, v1, Lhuj;->a:Lhuq;
 
-    .line 7
     iget-object v0, v0, Lhuq;->a:Lhua;
 
     invoke-static {v0}, Lhua;->a(Lhua;)V
 
-    .line 8
     const-string v0, "Invalid null listener key"
 
     invoke-static {v2, v0}, Lhiv;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -94,7 +85,6 @@
 
     iget-object v1, v1, Lhuj;->a:Lhuq;
 
-    .line 9
     iget-object v1, v1, Lhuq;->a:Lhua;
 
     invoke-virtual {v1}, Lhua;->n()Landroid/os/IInterface;
@@ -103,7 +93,6 @@
 
     check-cast v1, Lhui;
 
-    .line 10
     invoke-static {v0, v3}, Lcom/google/android/gms/location/internal/zzq;->a(Lhuu;Lhuf;)Lcom/google/android/gms/location/internal/zzq;
 
     move-result-object v0

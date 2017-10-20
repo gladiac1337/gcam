@@ -10,8 +10,6 @@
 .method protected constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljjs;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public final a(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 2
     invoke-virtual {p0}, Ljju;->m()Ljls;
 
     move-result-object v0
@@ -38,8 +34,6 @@
 .method public a(Ljava/lang/Object;I)I
     .locals 1
 
-    .prologue
-    .line 3
     invoke-virtual {p0}, Ljju;->m()Ljls;
 
     move-result-object v0
@@ -54,8 +48,6 @@
 .method public a()Ljava/util/Set;
     .locals 1
 
-    .prologue
-    .line 5
     invoke-virtual {p0}, Ljju;->m()Ljls;
 
     move-result-object v0
@@ -70,8 +62,6 @@
 .method public a(Ljava/lang/Object;II)Z
     .locals 1
 
-    .prologue
-    .line 10
     invoke-virtual {p0}, Ljju;->m()Ljls;
 
     move-result-object v0
@@ -86,8 +76,6 @@
 .method public b(Ljava/lang/Object;I)I
     .locals 1
 
-    .prologue
-    .line 4
     invoke-virtual {p0}, Ljju;->m()Ljls;
 
     move-result-object v0
@@ -102,8 +90,6 @@
 .method protected synthetic b()Ljava/util/Collection;
     .locals 1
 
-    .prologue
-    .line 11
     invoke-virtual {p0}, Ljju;->m()Ljls;
 
     move-result-object v0
@@ -114,8 +100,6 @@
 .method public c(Ljava/lang/Object;I)I
     .locals 1
 
-    .prologue
-    .line 9
     invoke-virtual {p0}, Ljju;->m()Ljls;
 
     move-result-object v0
@@ -130,8 +114,6 @@
 .method protected synthetic c()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 12
     invoke-virtual {p0}, Ljju;->m()Ljls;
 
     move-result-object v0
@@ -142,8 +124,6 @@
 .method public e()Ljava/util/Set;
     .locals 1
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Ljju;->m()Ljls;
 
     move-result-object v0
@@ -158,8 +138,6 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 7
     if-eq p1, p0, :cond_0
 
     invoke-virtual {p0}, Ljju;->m()Ljls;
@@ -187,8 +165,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 8
     invoke-virtual {p0}, Ljju;->m()Ljls;
 
     move-result-object v0

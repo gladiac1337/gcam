@@ -151,10 +151,8 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 1
     iget-object v0, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->c:Landroid/os/ParcelFileDescriptor;
 
     if-nez v0, :cond_0
@@ -230,14 +228,12 @@
     :cond_0
     or-int/lit8 v0, p2, 0x1
 
-    .line 3
     const/16 v1, 0x4f45
 
     invoke-static {p1, v1}, Lhiv;->m(Landroid/os/Parcel;I)I
 
     move-result v1
 
-    .line 4
     const/4 v2, 0x1
 
     iget v3, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->b:I
@@ -256,15 +252,12 @@
 
     invoke-static {p1, v0, v2}, Lhiv;->c(Landroid/os/Parcel;II)V
 
-    .line 5
     invoke-static {p1, v1}, Lhiv;->n(Landroid/os/Parcel;I)V
 
-    .line 6
     iput-object v4, p0, Lcom/google/android/gms/common/data/BitmapTeleporter;->c:Landroid/os/ParcelFileDescriptor;
 
     return-void
 
-    .line 1
     :catch_0
     move-exception v0
 

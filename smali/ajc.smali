@@ -20,20 +20,14 @@
 .method constructor <init>(Ljava/lang/String;Laje;Z)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lajc;->c:Ljava/lang/String;
 
-    .line 3
     iput-object p2, p0, Lajc;->a:Laje;
 
-    .line 4
     iput-boolean p3, p0, Lajc;->b:Z
 
-    .line 5
     return-void
 .end method
 
@@ -42,8 +36,6 @@
 .method public final declared-synchronized newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 5
 
-    .prologue
-    .line 6
     monitor-enter p0
 
     :try_start_0
@@ -93,7 +85,6 @@
 
     invoke-direct {v0, p0, p1, v1}, Lajd;-><init>(Lajc;Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    .line 7
     iget v1, p0, Lajc;->d:I
 
     add-int/lit8 v1, v1, 0x1
@@ -102,12 +93,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8
     monitor-exit p0
 
     return-object v0
 
-    .line 6
     :catchall_0
     move-exception v0
 

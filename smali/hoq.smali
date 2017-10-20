@@ -19,9 +19,6 @@
 .method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 34
 
-    .prologue
-    .line 4
-    .line 5
     invoke-static/range {p1 .. p1}, Lhiv;->a(Landroid/os/Parcel;)I
 
     move-result v32
@@ -93,20 +90,16 @@
 
     if-ge v2, v0, :cond_1
 
-    .line 6
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 8
     const v33, 0xffff
 
     and-int v33, v33, v2
 
-    .line 9
     packed-switch v33, :pswitch_data_0
 
-    .line 11
     :pswitch_0
     move-object/from16 v0, p1
 
@@ -114,7 +107,6 @@
 
     goto :goto_0
 
-    .line 9
     :pswitch_1
     move-object/from16 v0, p1
 
@@ -175,7 +167,6 @@
 
     goto :goto_0
 
-    .line 10
     :pswitch_7
     move-object/from16 v0, p1
 
@@ -206,7 +197,6 @@
 
     goto :goto_0
 
-    .line 11
     :pswitch_8
     move-object/from16 v0, p1
 
@@ -509,10 +499,8 @@
 
     invoke-direct/range {v2 .. v31}, Lcom/google/android/gms/googlehelp/GoogleHelp;-><init>(ILjava/lang/String;Landroid/accounts/Account;Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;Landroid/graphics/Bitmap;ZZLjava/util/List;Landroid/os/Bundle;Landroid/graphics/Bitmap;[BIILjava/lang/String;Landroid/net/Uri;Ljava/util/List;ILcom/google/android/gms/feedback/ThemeSettings;Ljava/util/List;ZLcom/google/android/gms/feedback/ErrorReport;Lcom/google/android/gms/googlehelp/internal/common/TogglingData;ILandroid/app/PendingIntent;IZZ)V
 
-    .line 12
     return-object v2
 
-    .line 9
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -559,11 +547,7 @@
 .method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     new-array v0, p1, [Lcom/google/android/gms/googlehelp/GoogleHelp;
 
-    .line 3
     return-object v0
 .end method

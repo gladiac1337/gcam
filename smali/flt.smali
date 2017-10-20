@@ -25,23 +25,18 @@
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 5
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lflt;->a:Lflp;
 
-    .line 2
     new-instance v2, Landroid/content/Intent;
 
     const-string v0, "android.settings.APPLICATION_DETAILS_SETTINGS"
 
     invoke-direct {v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 3
     const-string v0, "android.intent.category.DEFAULT"
 
     invoke-virtual {v2, v0}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 4
     const-string v3, "package:"
 
     iget-object v0, v1, Lflp;->a:Landroid/app/Activity;
@@ -71,22 +66,18 @@
 
     invoke-virtual {v2, v0}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 5
     iget-object v0, v1, Lflp;->d:Lhae;
 
     invoke-virtual {v0, v2}, Lhae;->a(Landroid/content/Intent;)V
 
-    .line 6
     iget-object v0, v1, Lflp;->b:Lhab;
 
     const-string v1, "Closing until required permissions are granted."
 
     invoke-virtual {v0, v1}, Lhab;->a(Ljava/lang/String;)V
 
-    .line 7
     return-void
 
-    .line 4
     :cond_0
     new-instance v0, Ljava/lang/String;
 

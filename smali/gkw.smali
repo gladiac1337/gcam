@@ -37,7 +37,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -48,7 +47,6 @@
 
     const/4 v3, 0x0
 
-    .line 3
     new-instance v0, Lgkw;
 
     const-string v1, "TIMER"
@@ -57,7 +55,6 @@
 
     sput-object v0, Lgkw;->a:Lgkw;
 
-    .line 4
     new-instance v0, Lgkw;
 
     const-string v1, "HDR"
@@ -66,7 +63,6 @@
 
     sput-object v0, Lgkw;->b:Lgkw;
 
-    .line 5
     new-instance v0, Lgkw;
 
     const-string v1, "PHOTO_FLASH"
@@ -75,7 +71,6 @@
 
     sput-object v0, Lgkw;->c:Lgkw;
 
-    .line 6
     new-instance v0, Lgkw;
 
     const-string v1, "VIDEO_FLASH"
@@ -84,7 +79,6 @@
 
     sput-object v0, Lgkw;->d:Lgkw;
 
-    .line 7
     new-instance v0, Lgkw;
 
     const-string v1, "MICROVIDEO"
@@ -93,7 +87,6 @@
 
     sput-object v0, Lgkw;->e:Lgkw;
 
-    .line 8
     new-instance v0, Lgkw;
 
     const-string v1, "WHITE_BALANCE"
@@ -104,7 +97,6 @@
 
     sput-object v0, Lgkw;->f:Lgkw;
 
-    .line 9
     new-instance v0, Lgkw;
 
     const-string v1, "FPS"
@@ -115,7 +107,6 @@
 
     sput-object v0, Lgkw;->g:Lgkw;
 
-    .line 10
     new-instance v0, Lgkw;
 
     const-string v1, "GRID_LINE"
@@ -126,7 +117,6 @@
 
     sput-object v0, Lgkw;->h:Lgkw;
 
-    .line 11
     new-instance v0, Lgkw;
 
     const-string v1, "VESPER"
@@ -137,7 +127,6 @@
 
     sput-object v0, Lgkw;->i:Lgkw;
 
-    .line 12
     new-instance v0, Lgkw;
 
     const-string v1, "PANORAMA_HORIZONTAL"
@@ -148,7 +137,6 @@
 
     sput-object v0, Lgkw;->j:Lgkw;
 
-    .line 13
     new-instance v0, Lgkw;
 
     const-string v1, "PANORAMA_VERTICAL"
@@ -159,7 +147,6 @@
 
     sput-object v0, Lgkw;->k:Lgkw;
 
-    .line 14
     new-instance v0, Lgkw;
 
     const-string v1, "PANORAMA_WIDE"
@@ -170,7 +157,6 @@
 
     sput-object v0, Lgkw;->l:Lgkw;
 
-    .line 15
     new-instance v0, Lgkw;
 
     const-string v1, "PANORAMA_FISHEYE"
@@ -181,7 +167,6 @@
 
     sput-object v0, Lgkw;->m:Lgkw;
 
-    .line 16
     const/16 v0, 0xd
 
     new-array v0, v0, [Lgkw;
@@ -262,8 +247,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -272,8 +255,6 @@
 .method public static values()[Lgkw;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lgkw;->n:[Lgkw;
 
     invoke-virtual {v0}, [Lgkw;->clone()Ljava/lang/Object;

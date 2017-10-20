@@ -14,8 +14,6 @@
 .method public constructor <init>(Ljava/io/Writer;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljeo;->a:Ljava/io/Writer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,17 +26,13 @@
 .method public final synthetic a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 2
     check-cast p1, Lipc;
 
-    .line 3
     new-instance v0, Liqu;
 
     iget-object v1, p0, Ljeo;->a:Ljava/io/Writer;
 
     invoke-direct {v0, p1, p2, v1}, Liqu;-><init>(Lipc;Ljava/lang/String;Ljava/io/Writer;)V
 
-    .line 4
     return-object v0
 .end method

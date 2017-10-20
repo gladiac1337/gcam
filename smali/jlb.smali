@@ -13,8 +13,6 @@
 .method public constructor <init>(Ljava/lang/Iterable;Ljgy;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljlb;->a:Ljava/lang/Iterable;
 
     iput-object p2, p0, Ljlb;->b:Ljgy;
@@ -29,8 +27,6 @@
 .method public final iterator()Ljava/util/Iterator;
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ljlb;->a:Ljava/lang/Iterable;
 
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;

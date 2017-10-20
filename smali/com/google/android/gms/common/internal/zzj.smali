@@ -60,8 +60,6 @@
 .method public constructor <init>(IIILjava/lang/String;Landroid/os/IBinder;[Lcom/google/android/gms/common/api/Scope;Landroid/os/Bundle;Landroid/accounts/Account;[Lcom/google/android/gms/common/zzc;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/zza;-><init>()V
 
     iput p1, p0, Lcom/google/android/gms/common/internal/zzj;->g:I
@@ -87,7 +85,6 @@
 
     if-ge p1, v0, :cond_2
 
-    .line 2
     const/4 v0, 0x0
 
     if-eqz p5, :cond_0
@@ -100,7 +97,6 @@
 
     move-result-object v0
 
-    .line 3
     :cond_0
     iput-object v0, p0, Lcom/google/android/gms/common/internal/zzj;->e:Landroid/accounts/Account;
 
@@ -113,13 +109,11 @@
 
     return-void
 
-    .line 1
     :cond_1
     iput-object p4, p0, Lcom/google/android/gms/common/internal/zzj;->a:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 3
     :cond_2
     iput-object p5, p0, Lcom/google/android/gms/common/internal/zzj;->b:Landroid/os/IBinder;
 
@@ -133,16 +127,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 4
-    .line 6
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lhiv;->m(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 7
     const/4 v1, 0x1
 
     iget v2, p0, Lcom/google/android/gms/common/internal/zzj;->g:I
@@ -197,9 +187,7 @@
 
     invoke-static {p1, v1, v2, p2}, Lhiv;->a(Landroid/os/Parcel;I[Landroid/os/Parcelable;I)V
 
-    .line 8
     invoke-static {p1, v0}, Lhiv;->n(Landroid/os/Parcel;I)V
 
-    .line 9
     return-void
 .end method

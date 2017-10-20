@@ -20,23 +20,16 @@
 .method public constructor <init>(Ljxb;Ljxb;Ljxb;Ljxb;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lebo;->a:Ljxb;
 
-    .line 3
     iput-object p2, p0, Lebo;->b:Ljxb;
 
-    .line 4
     iput-object p3, p0, Lebo;->c:Ljxb;
 
-    .line 5
     iput-object p4, p0, Lebo;->d:Ljxb;
 
-    .line 6
     return-void
 .end method
 
@@ -45,14 +38,10 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 20
 
-    .prologue
-    .line 7
-    .line 8
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lebo;->a:Ljxb;
 
-    .line 9
     invoke-interface {v2}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -65,7 +54,6 @@
 
     iget-object v2, v0, Lebo;->b:Ljxb;
 
-    .line 10
     invoke-interface {v2}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -76,7 +64,6 @@
 
     iget-object v3, v0, Lebo;->c:Ljxb;
 
-    .line 11
     invoke-interface {v3}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -89,7 +76,6 @@
 
     iget-object v3, v0, Lebo;->d:Ljxb;
 
-    .line 12
     invoke-interface {v3}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -98,35 +84,28 @@
 
     check-cast v13, Ledj;
 
-    .line 14
     new-instance v17, Ledo;
 
-    .line 15
     invoke-virtual {v2}, Ledg;->a()Leah;
 
     move-result-object v18
 
-    .line 16
     invoke-static {}, Lfsl;->d()Lggm;
 
     move-result-object v2
 
-    .line 17
     iget-object v3, v13, Ledj;->e:Ljuk;
 
     new-instance v4, Ledk;
 
     invoke-direct {v4, v2}, Ledk;-><init>(Lggm;)V
 
-    .line 18
     sget-object v2, Ljuq;->a:Ljuq;
 
-    .line 19
     invoke-static {v3, v4, v2}, Ljtv;->a(Ljuk;Ljgy;Ljava/util/concurrent/Executor;)Ljuk;
 
     move-result-object v9
 
-    .line 20
     new-instance v19, Ledp;
 
     new-instance v2, Lecn;
@@ -163,7 +142,6 @@
 
     invoke-direct {v0, v2, v3, v4}, Ledp;-><init>(Leah;IZ)V
 
-    .line 21
     const-wide/32 v2, 0x5f5e100
 
     move-object/from16 v0, v16
@@ -184,10 +162,8 @@
 
     invoke-direct {v0, v2}, Ledo;-><init>(Leah;)V
 
-    .line 22
     const-string v2, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 23
     move-object/from16 v0, v17
 
     invoke-static {v0, v2}, Ljvr;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
@@ -196,6 +172,5 @@
 
     check-cast v2, Ledo;
 
-    .line 24
     return-object v2
 .end method

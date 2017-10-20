@@ -25,13 +25,9 @@
 .method public final run()V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Ldbz;->a:Ldbx;
 
-    .line 2
     invoke-virtual {v0}, Ldbx;->f()V
 
-    .line 3
     return-void
 .end method

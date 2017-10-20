@@ -13,8 +13,6 @@
 .method public constructor <init>(Ldul;Ldvc;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lekd;->b:Ldul;
 
     iput-object p2, p0, Lekd;->a:Ldvc;

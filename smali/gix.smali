@@ -13,17 +13,12 @@
 .method constructor <init>(Ljava/lang/Float;Landroid/util/Pair;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lgjd;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgix;->a:Ljava/lang/Float;
 
-    .line 3
     iput-object p2, p0, Lgix;->b:Landroid/util/Pair;
 
-    .line 4
     return-void
 .end method
 
@@ -32,8 +27,6 @@
 .method public final a()Ljava/lang/Float;
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lgix;->a:Ljava/lang/Float;
 
     return-object v0
@@ -42,8 +35,6 @@
 .method public final b()Landroid/util/Pair;
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lgix;->b:Landroid/util/Pair;
 
     return-object v0
@@ -52,29 +43,23 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 8
     if-ne p1, p0, :cond_1
 
-    .line 15
     :cond_0
     :goto_0
     return v0
 
-    .line 10
     :cond_1
     instance-of v2, p1, Lgjd;
 
     if-eqz v2, :cond_5
 
-    .line 11
     check-cast p1, Lgjd;
 
-    .line 12
     iget-object v2, p0, Lgix;->a:Ljava/lang/Float;
 
     if-nez v2, :cond_3
@@ -90,7 +75,6 @@
 
     if-nez v2, :cond_4
 
-    .line 13
     invoke-virtual {p1}, Lgjd;->b()Landroid/util/Pair;
 
     move-result-object v2
@@ -100,10 +84,8 @@
     :cond_2
     move v0, v1
 
-    .line 14
     goto :goto_0
 
-    .line 12
     :cond_3
     iget-object v2, p0, Lgix;->a:Ljava/lang/Float;
 
@@ -119,7 +101,6 @@
 
     goto :goto_1
 
-    .line 13
     :cond_4
     iget-object v2, p0, Lgix;->b:Landroid/util/Pair;
 
@@ -138,19 +119,16 @@
     :cond_5
     move v0, v1
 
-    .line 15
     goto :goto_0
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    .prologue
     const v2, 0xf4243
 
     const/4 v1, 0x0
 
-    .line 16
     iget-object v0, p0, Lgix;->a:Ljava/lang/Float;
 
     if-nez v0, :cond_0
@@ -160,10 +138,8 @@
     :goto_0
     xor-int/2addr v0, v2
 
-    .line 17
     mul-int/2addr v0, v2
 
-    .line 18
     iget-object v2, p0, Lgix;->b:Landroid/util/Pair;
 
     if-nez v2, :cond_1
@@ -171,10 +147,8 @@
     :goto_1
     xor-int/2addr v0, v1
 
-    .line 19
     return v0
 
-    .line 16
     :cond_0
     iget-object v0, p0, Lgix;->a:Ljava/lang/Float;
 
@@ -184,7 +158,6 @@
 
     goto :goto_0
 
-    .line 18
     :cond_1
     iget-object v1, p0, Lgix;->b:Landroid/util/Pair;
 
@@ -198,8 +171,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lgix;->a:Ljava/lang/Float;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

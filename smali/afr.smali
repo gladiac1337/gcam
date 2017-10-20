@@ -16,17 +16,12 @@
 .method public constructor <init>(Laek;Laek;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lafr;->b:Laek;
 
-    .line 3
     iput-object p2, p0, Lafr;->c:Laek;
 
-    .line 4
     return-void
 .end method
 
@@ -35,36 +30,28 @@
 .method public final a(Ljava/security/MessageDigest;)V
     .locals 1
 
-    .prologue
-    .line 13
     iget-object v0, p0, Lafr;->b:Laek;
 
     invoke-interface {v0, p1}, Laek;->a(Ljava/security/MessageDigest;)V
 
-    .line 14
     iget-object v0, p0, Lafr;->c:Laek;
 
     invoke-interface {v0, p1}, Laek;->a(Ljava/security/MessageDigest;)V
 
-    .line 15
     return-void
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 5
     instance-of v1, p1, Lafr;
 
     if-eqz v1, :cond_0
 
-    .line 6
     check-cast p1, Lafr;
 
-    .line 7
     iget-object v1, p0, Lafr;->b:Laek;
 
     iget-object v2, p1, Lafr;->b:Laek;
@@ -87,7 +74,6 @@
 
     const/4 v0, 0x1
 
-    .line 8
     :cond_0
     return v0
 .end method
@@ -95,15 +81,12 @@
 .method public final hashCode()I
     .locals 2
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lafr;->b:Laek;
 
     invoke-interface {v0}, Laek;->hashCode()I
 
     move-result v0
 
-    .line 10
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v1, p0, Lafr;->c:Laek;
@@ -114,15 +97,12 @@
 
     add-int/2addr v0, v1
 
-    .line 11
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 12
     iget-object v0, p0, Lafr;->b:Laek;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

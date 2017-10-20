@@ -14,8 +14,6 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     const/16 v0, 0x8
 
     iput v0, p0, Livu;->a:I
@@ -30,28 +28,22 @@
 .method public final synthetic a(Lisz;)Ljava/lang/Object;
     .locals 5
 
-    .prologue
-    .line 2
-    .line 3
     new-instance v1, Ljbd;
 
     const-class v0, Ljch;
 
-    .line 4
     const-string v2, "default"
 
     invoke-virtual {p1, v0, v2}, Lisz;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 5
     check-cast v0, Ljch;
 
     iget v2, p0, Livu;->a:I
 
     invoke-direct {v1, v0, v2}, Ljbd;-><init>(Ljch;I)V
 
-    .line 6
     const-class v0, Ljac;
 
     const-string v2, "panning_content_value"
@@ -62,7 +54,6 @@
 
     check-cast v0, Ljac;
 
-    .line 7
     const/4 v2, 0x2
 
     new-array v2, v2, [Ljat;
@@ -85,6 +76,5 @@
 
     move-result-object v0
 
-    .line 8
     return-object v0
 .end method

@@ -30,7 +30,6 @@
 .method public constructor <init>(Ljcc;)V
     .locals 5
 
-    .prologue
     const/high16 v4, 0x3f800000    # 1.0f
 
     const/4 v1, 0x1
@@ -39,41 +38,32 @@
 
     const/4 v3, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/ConcurrentSkipListMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentSkipListMap;-><init>()V
 
     iput-object v0, p0, Ljca;->a:Ljava/util/Map;
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Ljca;->b:Ljava/util/List;
 
-    .line 4
     iput v3, p0, Ljca;->f:F
 
-    .line 5
     iput v3, p0, Ljca;->g:F
 
-    .line 6
     const v0, 0x3c23d70a    # 0.01f
 
     iput v0, p0, Ljca;->h:F
 
-    .line 7
     iput v4, p0, Ljca;->i:F
 
-    .line 8
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     iget v0, p1, Ljcc;->e:F
 
     cmpg-float v0, v0, v4
@@ -85,7 +75,6 @@
     :goto_0
     invoke-static {v0}, Lixp;->a(Z)V
 
-    .line 10
     iget v0, p1, Ljcc;->h:F
 
     cmpl-float v0, v0, v3
@@ -97,7 +86,6 @@
     :goto_1
     invoke-static {v0}, Lixp;->a(Z)V
 
-    .line 11
     iget v0, p1, Ljcc;->g:F
 
     cmpl-float v0, v0, v3
@@ -107,36 +95,29 @@
     :goto_2
     invoke-static {v1}, Lixp;->a(Z)V
 
-    .line 12
     iput-object p1, p0, Ljca;->c:Ljcc;
 
-    .line 13
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 9
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 10
     goto :goto_1
 
     :cond_2
     move v1, v2
 
-    .line 11
     goto :goto_2
 .end method
 
 .method private final a(D)D
     .locals 5
 
-    .prologue
-    .line 156
     iget-object v0, p0, Ljca;->c:Ljcc;
 
     iget-object v0, v0, Ljcc;->l:Ljcd;
@@ -147,7 +128,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 159
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     iget-object v1, p0, Ljca;->c:Ljcc;
@@ -190,11 +170,9 @@
 
     throw v0
 
-    .line 157
     :pswitch_0
     mul-double v0, p1, p1
 
-    .line 158
     :goto_0
     return-wide v0
 
@@ -205,7 +183,6 @@
 
     goto :goto_0
 
-    .line 156
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -217,8 +194,6 @@
 .method private final a(Ljava/util/List;)D
     .locals 18
 
-    .prologue
-    .line 135
     if-eqz p1, :cond_0
 
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
@@ -229,16 +204,13 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 136
     :cond_0
     const-wide/16 v2, 0x0
 
-    .line 155
     :cond_1
     :goto_0
     return-wide v2
 
-    .line 137
     :cond_2
     move-object/from16 v0, p0
 
@@ -246,7 +218,6 @@
 
     if-nez v2, :cond_3
 
-    .line 138
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v3, "mLastFrame is null when frames is not empty"
@@ -255,7 +226,6 @@
 
     throw v2
 
-    .line 139
     :cond_3
     move-object/from16 v0, p0
 
@@ -263,27 +233,22 @@
 
     iget-wide v4, v2, Ljcb;->i:D
 
-    .line 140
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
 
     move-result v6
 
-    .line 141
     add-int/lit8 v3, v6, -0x1
 
-    .line 142
     add-int/lit8 v2, v6, 0x1
 
     int-to-double v8, v2
 
     div-double v8, v4, v8
 
-    .line 143
     int-to-double v10, v3
 
     div-double v10, v4, v10
 
-    .line 144
     const/4 v2, 0x0
 
     move-object/from16 v0, p1
@@ -296,7 +261,6 @@
 
     iget-wide v12, v2, Ljcb;->i:D
 
-    .line 145
     move-object/from16 v0, p1
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -309,7 +273,6 @@
 
     sub-double/2addr v4, v14
 
-    .line 146
     move-object/from16 v0, p1
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -340,17 +303,14 @@
 
     div-double v2, v14, v2
 
-    .line 147
     invoke-static {v2, v3, v8, v9}, Ljava/lang/Math;->max(DD)D
 
     move-result-wide v2
 
-    .line 148
     invoke-static {v2, v3, v10, v11}, Ljava/lang/Math;->min(DD)D
 
     move-result-wide v8
 
-    .line 149
     move-object/from16 v0, p0
 
     invoke-direct {v0, v12, v13}, Ljca;->a(D)D
@@ -365,7 +325,6 @@
 
     add-double/2addr v4, v2
 
-    .line 150
     const/4 v2, 0x1
 
     move v3, v2
@@ -373,7 +332,6 @@
     :goto_1
     if-ge v3, v6, :cond_4
 
-    .line 151
     move-object/from16 v0, p1
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -398,7 +356,6 @@
 
     sub-double/2addr v10, v12
 
-    .line 152
     sub-double/2addr v10, v8
 
     move-object/from16 v0, p0
@@ -409,14 +366,12 @@
 
     add-double/2addr v4, v10
 
-    .line 153
     add-int/lit8 v2, v3, 0x1
 
     move v3, v2
 
     goto :goto_1
 
-    .line 154
     :cond_4
     add-int/lit8 v2, v6, 0x1
 
@@ -424,7 +379,6 @@
 
     div-double v2, v4, v2
 
-    .line 155
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ljca;->c:Ljcc;
@@ -445,8 +399,6 @@
 .method private final a(Ljava/util/List;DDD)D
     .locals 14
 
-    .prologue
-    .line 160
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
@@ -458,7 +410,6 @@
     :goto_0
     invoke-static {v0}, Lixp;->a(Z)V
 
-    .line 161
     const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
     add-double v2, p2, p4
@@ -467,21 +418,16 @@
 
     sub-double v8, v0, v2
 
-    .line 162
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v10
 
-    .line 163
     const-wide/16 v4, 0x0
 
-    .line 164
     const-wide/16 v2, 0x0
 
-    .line 165
     const-wide/16 v0, 0x0
 
-    .line 166
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v11
@@ -505,21 +451,18 @@
 
     check-cast v0, Ljcb;
 
-    .line 167
     iget v1, v0, Ljcb;->b:F
 
     float-to-double v12, v1
 
     add-double/2addr v6, v12
 
-    .line 168
     iget v1, v0, Ljcb;->c:F
 
     float-to-double v12, v1
 
     add-double/2addr v4, v12
 
-    .line 169
     iget v0, v0, Ljcb;->h:F
 
     float-to-double v0, v0
@@ -528,41 +471,33 @@
 
     move-wide v2, v0
 
-    .line 170
     goto :goto_1
 
-    .line 160
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 171
     :cond_1
     if-lez v10, :cond_2
 
-    .line 172
     int-to-double v0, v10
 
     div-double/2addr v6, v0
 
-    .line 173
     int-to-double v0, v10
 
     div-double/2addr v4, v0
 
-    .line 174
     int-to-double v0, v10
 
     div-double/2addr v2, v0
 
-    .line 175
     :cond_2
     iget-object v0, p0, Ljca;->e:Ljcb;
 
     if-nez v0, :cond_3
 
-    .line 176
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "mLastFrame is null when frames is not empty"
@@ -571,7 +506,6 @@
 
     throw v0
 
-    .line 177
     :cond_3
     iget-object v0, p0, Ljca;->c:Ljcc;
 
@@ -581,7 +515,6 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 178
     iget-object v0, p0, Ljca;->e:Ljcb;
 
     iget-wide v0, v0, Ljcb;->i:D
@@ -592,7 +525,6 @@
 
     mul-double/2addr v0, v10
 
-    .line 180
     :goto_2
     const-wide v10, 0x3eb0c6f7a0000000L    # 9.999999974752427E-7
 
@@ -600,7 +532,6 @@
 
     move-result-wide v0
 
-    .line 181
     invoke-direct {p0, p1}, Ljca;->a(Ljava/util/List;)D
 
     move-result-wide v10
@@ -611,7 +542,6 @@
 
     div-double v0, v10, v0
 
-    .line 182
     mul-double v6, v6, p2
 
     mul-double v4, v4, p4
@@ -628,7 +558,6 @@
 
     return-wide v0
 
-    .line 179
     :cond_4
     iget-object v0, p0, Ljca;->e:Ljcb;
 
@@ -640,13 +569,10 @@
 .method private static a(Ljcb;Ljava/util/List;)Ljava/util/List;
     .locals 3
 
-    .prologue
-    .line 198
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 199
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -665,15 +591,12 @@
 
     check-cast v0, Ljcb;
 
-    .line 200
     if-eq v0, p0, :cond_0
 
-    .line 201
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 203
     :cond_1
     return-object v1
 .end method
@@ -681,8 +604,6 @@
 .method private final e()Ljcb;
     .locals 2
 
-    .prologue
-    .line 125
     iget-object v0, p0, Ljca;->a:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -704,7 +625,6 @@
 
     goto :goto_0
 
-    .line 127
     :cond_0
     const/4 v0, 0x0
 
@@ -714,8 +634,6 @@
 .method private final f()Ljcb;
     .locals 7
 
-    .prologue
-    .line 128
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Ljca;->a:Ljava/util/Map;
@@ -726,10 +644,8 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 129
     const/4 v2, 0x0
 
-    .line 130
     check-cast v0, Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -751,7 +667,6 @@
 
     check-cast v1, Ljcb;
 
-    .line 131
     if-eqz v2, :cond_0
 
     iget v5, v1, Ljcb;->b:F
@@ -766,10 +681,8 @@
     :goto_1
     move-object v2, v1
 
-    .line 133
     goto :goto_0
 
-    .line 134
     :cond_1
     return-object v2
 
@@ -782,8 +695,6 @@
 .method private final g()Ljcb;
     .locals 18
 
-    .prologue
-    .line 183
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ljca;->a:Ljava/util/Map;
@@ -794,14 +705,11 @@
 
     if-eqz v2, :cond_0
 
-    .line 184
     const/4 v2, 0x0
 
-    .line 197
     :goto_0
     return-object v2
 
-    .line 185
     :cond_0
     new-instance v11, Ljava/util/ArrayList;
 
@@ -815,7 +723,6 @@
 
     invoke-direct {v11, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 186
     invoke-interface {v11}, Ljava/util/List;->size()I
 
     move-result v2
@@ -824,7 +731,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 187
     const/4 v2, 0x0
 
     invoke-interface {v11, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -835,11 +741,9 @@
 
     goto :goto_0
 
-    .line 188
     :cond_1
     const-wide/high16 v14, -0x10000000000000L    # Double.NEGATIVE_INFINITY
 
-    .line 189
     const/4 v2, 0x0
 
     invoke-interface {v11, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -850,7 +754,6 @@
 
     move-object v10, v11
 
-    .line 190
     check-cast v10, Ljava/util/ArrayList;
 
     invoke-virtual {v10}, Ljava/util/ArrayList;->size()I
@@ -876,12 +779,10 @@
 
     check-cast v12, Ljcb;
 
-    .line 191
     invoke-static {v12, v11}, Ljca;->a(Ljcb;Ljava/util/List;)Ljava/util/List;
 
     move-result-object v3
 
-    .line 192
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ljca;->c:Ljcc;
@@ -912,7 +813,6 @@
 
     move-result-wide v2
 
-    .line 193
     cmpl-double v4, v2, v14
 
     if-ltz v4, :cond_3
@@ -924,13 +824,11 @@
 
     move/from16 v3, v16
 
-    .line 196
     goto :goto_1
 
     :cond_2
     move-object v2, v13
 
-    .line 197
     goto :goto_0
 
     :cond_3
@@ -946,8 +844,6 @@
 .method public final a()J
     .locals 3
 
-    .prologue
-    .line 14
     iget-object v0, p0, Ljca;->a:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
@@ -956,7 +852,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 15
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Can\'t drop frame from empty list."
@@ -965,7 +860,6 @@
 
     throw v0
 
-    .line 16
     :cond_0
     iget-object v0, p0, Ljca;->a:Ljava/util/Map;
 
@@ -977,7 +871,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 17
     iget-object v0, p0, Ljca;->a:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -998,31 +891,25 @@
 
     move-result-wide v0
 
-    .line 28
     :goto_0
     return-wide v0
 
-    .line 18
     :cond_1
     invoke-direct {p0}, Ljca;->e()Ljcb;
 
     move-result-object v0
 
-    .line 19
     if-eqz v0, :cond_2
 
-    .line 20
     iget-wide v0, v0, Ljcb;->a:J
 
     goto :goto_0
 
-    .line 22
     :cond_2
     invoke-direct {p0}, Ljca;->f()Ljcb;
 
     move-result-object v0
 
-    .line 23
     if-eqz v0, :cond_3
 
     iget v1, v0, Ljcb;->b:F
@@ -1033,28 +920,23 @@
 
     if-gez v1, :cond_3
 
-    .line 25
     :goto_1
     if-eqz v0, :cond_4
 
-    .line 26
     iget-wide v0, v0, Ljcb;->a:J
 
     goto :goto_0
 
-    .line 23
     :cond_3
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 27
     :cond_4
     invoke-direct {p0}, Ljca;->g()Ljcb;
 
     move-result-object v0
 
-    .line 28
     iget-wide v0, v0, Ljcb;->a:J
 
     goto :goto_0
@@ -1063,29 +945,24 @@
 .method public final a(J)V
     .locals 3
 
-    .prologue
-    .line 106
     iget-object v0, p0, Ljca;->c:Ljcc;
 
     iget-object v0, v0, Ljcc;->a:Ljac;
 
     invoke-interface {v0, p1, p2}, Ljac;->c(J)V
 
-    .line 107
     iget-object v0, p0, Ljca;->c:Ljcc;
 
     iget-object v0, v0, Ljcc;->c:Ljac;
 
     invoke-interface {v0, p1, p2}, Ljac;->c(J)V
 
-    .line 108
     iget-object v0, p0, Ljca;->c:Ljcc;
 
     iget-object v0, v0, Ljcc;->b:Ljac;
 
     invoke-interface {v0, p1, p2}, Ljac;->c(J)V
 
-    .line 109
     iget-object v0, p0, Ljca;->a:Ljava/util/Map;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1094,70 +971,56 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 110
     return-void
 .end method
 
 .method public final b()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v1, 0x0
 
-    .line 111
     iget-object v0, p0, Ljca;->c:Ljcc;
 
     iget-object v0, v0, Ljcc;->a:Ljac;
 
     invoke-interface {v0}, Ljac;->a()V
 
-    .line 112
     iget-object v0, p0, Ljca;->c:Ljcc;
 
     iget-object v0, v0, Ljcc;->b:Ljac;
 
     invoke-interface {v0}, Ljac;->a()V
 
-    .line 113
     iget-object v0, p0, Ljca;->c:Ljcc;
 
     iget-object v0, v0, Ljcc;->c:Ljac;
 
     invoke-interface {v0}, Ljac;->a()V
 
-    .line 114
     iget-object v0, p0, Ljca;->a:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 115
     iget-object v0, p0, Ljca;->b:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 116
     iput-object v2, p0, Ljca;->d:Ljcb;
 
-    .line 117
     iput-object v2, p0, Ljca;->e:Ljcb;
 
-    .line 118
     iput v1, p0, Ljca;->f:F
 
-    .line 119
     iput v1, p0, Ljca;->g:F
 
-    .line 120
     return-void
 .end method
 
 .method public final b(J)V
     .locals 23
 
-    .prologue
-    .line 29
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ljca;->e:Ljcb;
@@ -1174,18 +1037,15 @@
 
     if-gtz v2, :cond_0
 
-    .line 30
     const-string v2, "AUCFrameDropper"
 
     const-string v3, "Invalid timestamp: new frame timestamp is smaller than older timestamp."
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     :goto_0
     return-void
 
-    .line 32
     :cond_0
     move-object/from16 v0, p0
 
@@ -1197,7 +1057,6 @@
 
     invoke-interface {v2, v0, v1}, Ljac;->b(J)V
 
-    .line 33
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ljca;->c:Ljcc;
@@ -1208,7 +1067,6 @@
 
     invoke-interface {v2, v0, v1}, Ljac;->b(J)V
 
-    .line 34
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ljca;->c:Ljcc;
@@ -1219,14 +1077,12 @@
 
     invoke-interface {v2, v0, v1}, Ljac;->b(J)V
 
-    .line 35
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ljca;->c:Ljcc;
 
     iget-object v2, v2, Ljcc;->a:Ljac;
 
-    .line 36
     move-wide/from16 v0, p1
 
     invoke-interface {v2, v0, v1}, Ljac;->a(J)Ljfm;
@@ -1239,12 +1095,10 @@
 
     const/4 v3, 0x0
 
-    .line 37
     invoke-static {v2, v3}, Ljava/lang/Math;->max(FF)F
 
     move-result v6
 
-    .line 38
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ljca;->c:Ljcc;
@@ -1265,7 +1119,6 @@
 
     add-float v7, v2, v3
 
-    .line 39
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ljca;->c:Ljcc;
@@ -1282,14 +1135,12 @@
 
     move-result v8
 
-    .line 40
     new-instance v3, Ljcb;
 
     move-wide/from16 v4, p1
 
     invoke-direct/range {v3 .. v8}, Ljcb;-><init>(JFFF)V
 
-    .line 41
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ljca;->a:Ljava/util/Map;
@@ -1302,14 +1153,12 @@
 
     invoke-interface {v2, v4, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 42
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ljca;->b:Ljava/util/List;
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 44
     const v2, 0x3dcccccd    # 0.1f
 
     const v4, 0x3f7d70a4    # 0.99f
@@ -1320,7 +1169,6 @@
 
     invoke-static {v2, v4, v5, v6}, Lcom/google/android/libraries/smartburst/utils/MathUtils;->calcSigmoidParams(FFFF)Ljfu;
 
-    .line 45
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ljca;->b:Ljava/util/List;
@@ -1342,14 +1190,12 @@
 
     check-cast v2, Ljcb;
 
-    .line 47
     iget v5, v2, Ljcb;->d:F
 
     iput v5, v2, Ljcb;->f:F
 
     goto :goto_1
 
-    .line 50
     :cond_1
     const/4 v2, 0x2
 
@@ -1357,7 +1203,6 @@
 
     fill-array-data v14, :array_0
 
-    .line 51
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ljca;->b:Ljava/util/List;
@@ -1366,7 +1211,6 @@
 
     move-result v15
 
-    .line 52
     const/4 v2, 0x0
 
     const/4 v4, 0x0
@@ -1383,7 +1227,6 @@
 
     float-to-double v12, v2
 
-    .line 53
     add-int/lit8 v2, v15, -0x1
 
     move v11, v2
@@ -1391,7 +1234,6 @@
     :goto_2
     if-ltz v11, :cond_5
 
-    .line 54
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ljca;->b:Ljava/util/List;
@@ -1402,7 +1244,6 @@
 
     check-cast v2, Ljcb;
 
-    .line 55
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ljca;->e:Ljcb;
@@ -1411,7 +1252,6 @@
 
     const/4 v4, 0x0
 
-    .line 57
     :goto_3
     move-object/from16 v0, p0
 
@@ -1423,14 +1263,12 @@
 
     if-gtz v4, :cond_5
 
-    .line 59
     iget v4, v2, Ljcb;->f:F
 
     float-to-double v4, v4
 
     mul-double v6, v4, v12
 
-    .line 60
     const/4 v4, 0x0
 
     move v10, v4
@@ -1444,7 +1282,6 @@
 
     aget v16, v14, v10
 
-    .line 61
     add-int v4, v11, v16
 
     move v5, v4
@@ -1454,7 +1291,6 @@
 
     if-ge v5, v15, :cond_3
 
-    .line 62
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ljca;->b:Ljava/util/List;
@@ -1465,7 +1301,6 @@
 
     check-cast v4, Ljcb;
 
-    .line 63
     iget-wide v0, v2, Ljcb;->a:J
 
     move-wide/from16 v18, v0
@@ -1490,7 +1325,6 @@
 
     div-float v17, v17, v18
 
-    .line 64
     move-object/from16 v0, p0
 
     iget-object v0, v0, Ljca;->c:Ljcc;
@@ -1507,7 +1341,6 @@
 
     if-gtz v18, :cond_3
 
-    .line 65
     const/16 v18, 0x0
 
     move-object/from16 v0, p0
@@ -1532,7 +1365,6 @@
 
     move-wide/from16 v18, v0
 
-    .line 66
     iget v4, v4, Ljcb;->f:F
 
     float-to-double v0, v4
@@ -1543,17 +1375,14 @@
 
     add-double v6, v6, v20
 
-    .line 67
     add-double v8, v8, v18
 
-    .line 68
     add-int v4, v5, v16
 
     move v5, v4
 
     goto :goto_5
 
-    .line 56
     :cond_2
     move-object/from16 v0, p0
 
@@ -1573,7 +1402,6 @@
 
     goto/16 :goto_3
 
-    .line 69
     :cond_3
     add-int/lit8 v4, v10, 0x1
 
@@ -1581,7 +1409,6 @@
 
     goto :goto_4
 
-    .line 70
     :cond_4
     div-double v4, v6, v8
 
@@ -1589,18 +1416,15 @@
 
     iput v4, v2, Ljcb;->g:F
 
-    .line 71
     add-int/lit8 v2, v11, -0x1
 
     move v11, v2
 
     goto/16 :goto_2
 
-    .line 73
     :cond_5
     const v2, 0x358637bd    # 1.0E-6f
 
-    .line 74
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ljca;->b:Ljava/util/List;
@@ -1624,7 +1448,6 @@
 
     check-cast v2, Ljcb;
 
-    .line 75
     iget v2, v2, Ljcb;->g:F
 
     invoke-static {v2, v4}, Ljava/lang/Math;->max(FF)F
@@ -1633,16 +1456,13 @@
 
     move v4, v2
 
-    .line 76
     goto :goto_6
 
-    .line 77
     :cond_6
     move-object/from16 v0, p0
 
     iput v4, v0, Ljca;->g:F
 
-    .line 78
     move-object/from16 v0, p0
 
     iget v2, v0, Ljca;->g:F
@@ -1659,7 +1479,6 @@
 
     iput v2, v0, Ljca;->f:F
 
-    .line 79
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ljca;->c:Ljcc;
@@ -1676,7 +1495,6 @@
 
     iput v2, v0, Ljca;->h:F
 
-    .line 80
     move-object/from16 v0, p0
 
     iget v2, v0, Ljca;->g:F
@@ -1687,7 +1505,6 @@
 
     if-lez v2, :cond_7
 
-    .line 81
     move-object/from16 v0, p0
 
     iget v2, v0, Ljca;->g:F
@@ -1706,7 +1523,6 @@
 
     float-to-double v6, v2
 
-    .line 82
     invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v4
@@ -1717,7 +1533,6 @@
 
     iput v2, v0, Ljca;->i:F
 
-    .line 86
     :goto_7
     move-object/from16 v0, p0
 
@@ -1740,10 +1555,8 @@
 
     check-cast v2, Ljcb;
 
-    .line 87
     iget v5, v2, Ljcb;->g:F
 
-    .line 88
     move-object/from16 v0, p0
 
     iget v6, v0, Ljca;->f:F
@@ -1758,7 +1571,6 @@
 
     move-result v5
 
-    .line 89
     float-to-double v6, v5
 
     move-object/from16 v0, p0
@@ -1781,12 +1593,10 @@
 
     mul-float/2addr v5, v6
 
-    .line 90
     iput v5, v2, Ljcb;->h:F
 
     goto :goto_8
 
-    .line 83
     :cond_7
     const/high16 v2, 0x3f800000    # 1.0f
 
@@ -1794,7 +1604,6 @@
 
     iput v2, v0, Ljca;->i:F
 
-    .line 84
     const-string v2, "AUCFrameDropper"
 
     const-string v4, "The max motion saliency must be a positive number!"
@@ -1803,11 +1612,9 @@
 
     goto :goto_7
 
-    .line 93
     :cond_8
     const/4 v2, 0x0
 
-    .line 94
     move-object/from16 v0, p0
 
     iget-object v4, v0, Ljca;->b:Ljava/util/List;
@@ -1831,15 +1638,12 @@
 
     check-cast v2, Ljcb;
 
-    .line 95
     const-wide/16 v6, 0x0
 
     iput-wide v6, v2, Ljcb;->i:D
 
-    .line 96
     if-eqz v4, :cond_9
 
-    .line 97
     iget-wide v6, v2, Ljcb;->a:J
 
     iget-wide v8, v4, Ljcb;->a:J
@@ -1852,7 +1656,6 @@
 
     div-double/2addr v6, v8
 
-    .line 98
     iget v8, v4, Ljcb;->h:F
 
     iget v9, v2, Ljcb;->h:F
@@ -1867,7 +1670,6 @@
 
     div-double/2addr v6, v8
 
-    .line 99
     iget-wide v8, v4, Ljcb;->i:D
 
     add-double/2addr v6, v8
@@ -1877,10 +1679,8 @@
     :cond_9
     move-object v4, v2
 
-    .line 101
     goto :goto_9
 
-    .line 102
     :cond_a
     move-object/from16 v0, p0
 
@@ -1888,12 +1688,10 @@
 
     if-nez v2, :cond_b
 
-    .line 103
     move-object/from16 v0, p0
 
     iput-object v3, v0, Ljca;->d:Ljcb;
 
-    .line 104
     :cond_b
     move-object/from16 v0, p0
 
@@ -1901,7 +1699,6 @@
 
     goto/16 :goto_0
 
-    .line 50
     :array_0
     .array-data 4
         -0x1
@@ -1912,8 +1709,6 @@
 .method public final c()Ljava/util/Set;
     .locals 2
 
-    .prologue
-    .line 121
     new-instance v0, Ljava/util/HashSet;
 
     iget-object v1, p0, Ljca;->a:Ljava/util/Map;
@@ -1930,19 +1725,14 @@
 .method public final d()Ljhi;
     .locals 1
 
-    .prologue
-    .line 122
     sget-object v0, Ljgx;->a:Ljgx;
 
-    .line 123
     return-object v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 7
 
-    .prologue
-    .line 124
     const-string v0, "AUCFrameDropper[motion="
 
     iget-object v1, p0, Ljca;->c:Ljcc;

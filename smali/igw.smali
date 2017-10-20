@@ -11,8 +11,6 @@
 .method constructor <init>(ILandroid/view/Surface;)V
     .locals 2
 
-    .prologue
-    .line 1
     new-instance v0, Life;
 
     new-instance v1, Landroid/hardware/camera2/params/OutputConfiguration;
@@ -23,10 +21,8 @@
 
     invoke-direct {p0, v0}, Liht;-><init>(Lihu;)V
 
-    .line 2
     iput-object p2, p0, Ligw;->a:Landroid/view/Surface;
 
-    .line 3
     return-void
 .end method
 
@@ -35,8 +31,6 @@
 .method public final a()Landroid/view/Surface;
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Ligw;->a:Landroid/view/Surface;
 
     return-object v0
@@ -45,8 +39,6 @@
 .method public final a(Landroid/view/Surface;)V
     .locals 2
 
-    .prologue
-    .line 5
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "addSurface is not supported."

@@ -16,54 +16,41 @@
 .method public constructor <init>(Lanf;Lahn;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lann;->a:Lanf;
 
-    .line 3
     iput-object p2, p0, Lann;->b:Lahn;
 
-    .line 4
     return-void
 .end method
 
 .method private final a(Ljava/io/InputStream;IILaeo;)Lahg;
     .locals 8
 
-    .prologue
-    .line 5
     instance-of v0, p1, Lanl;
 
     if-eqz v0, :cond_1
 
-    .line 6
     check-cast p1, Lanl;
 
-    .line 7
     const/4 v0, 0x0
 
     move v6, v0
 
-    .line 11
     :goto_0
     invoke-static {p1}, Larl;->a(Ljava/io/InputStream;)Larl;
 
     move-result-object v7
 
-    .line 12
     new-instance v1, Laro;
 
     invoke-direct {v1, v7}, Laro;-><init>(Ljava/io/InputStream;)V
 
-    .line 13
     new-instance v5, Lano;
 
     invoke-direct {v5, p1, v7}, Lano;-><init>(Lanl;Larl;)V
 
-    .line 14
     :try_start_0
     iget-object v0, p0, Lann;->a:Lanf;
 
@@ -79,20 +66,15 @@
 
     move-result-object v0
 
-    .line 15
     invoke-virtual {v7}, Larl;->a()V
 
-    .line 16
     if-eqz v6, :cond_0
 
-    .line 17
     invoke-virtual {p1}, Lanl;->b()V
 
-    .line 18
     :cond_0
     return-object v0
 
-    .line 8
     :cond_1
     new-instance v1, Lanl;
 
@@ -100,7 +82,6 @@
 
     invoke-direct {v1, p1, v0}, Lanl;-><init>(Ljava/io/InputStream;Lahn;)V
 
-    .line 9
     const/4 v0, 0x1
 
     move v6, v0
@@ -109,16 +90,13 @@
 
     goto :goto_0
 
-    .line 19
     :catchall_0
     move-exception v0
 
     invoke-virtual {v7}, Larl;->a()V
 
-    .line 20
     if-eqz v6, :cond_2
 
-    .line 21
     invoke-virtual {p1}, Lanl;->b()V
 
     :cond_2
@@ -130,8 +108,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;IILaeo;)Lahg;
     .locals 1
 
-    .prologue
-    .line 22
     check-cast p1, Ljava/io/InputStream;
 
     invoke-direct {p0, p1, p2, p3, p4}, Lann;->a(Ljava/io/InputStream;IILaeo;)Lahg;
@@ -144,12 +120,9 @@
 .method public final synthetic a(Ljava/lang/Object;Laeo;)Z
     .locals 1
 
-    .prologue
-    .line 23
     invoke-static {}, Lanf;->a()Z
 
     move-result v0
 
-    .line 24
     return v0
 .end method

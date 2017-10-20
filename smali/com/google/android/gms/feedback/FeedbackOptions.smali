@@ -108,137 +108,94 @@
 .method public static synthetic a(Lcom/google/android/gms/feedback/FeedbackOptions;)Lcom/google/android/gms/feedback/FeedbackOptions;
     .locals 0
 
-    .prologue
-    .line 7
-    .line 8
     return-object p0
 .end method
 
 .method public static synthetic a(Lcom/google/android/gms/feedback/FeedbackOptions;Landroid/app/ApplicationErrorReport$CrashInfo;)Lcom/google/android/gms/feedback/FeedbackOptions;
     .locals 1
 
-    .prologue
-    .line 33
-    .line 34
     iget-object v0, p0, Lcom/google/android/gms/feedback/FeedbackOptions;->d:Landroid/app/ApplicationErrorReport;
 
     iput-object p1, v0, Landroid/app/ApplicationErrorReport;->crashInfo:Landroid/app/ApplicationErrorReport$CrashInfo;
 
-    .line 35
     return-object p0
 .end method
 
 .method public static synthetic a(Lcom/google/android/gms/feedback/FeedbackOptions;Landroid/os/Bundle;)Lcom/google/android/gms/feedback/FeedbackOptions;
     .locals 0
 
-    .prologue
-    .line 15
-    .line 16
     iput-object p1, p0, Lcom/google/android/gms/feedback/FeedbackOptions;->b:Landroid/os/Bundle;
 
-    .line 17
     return-object p0
 .end method
 
 .method public static synthetic a(Lcom/google/android/gms/feedback/FeedbackOptions;Ljava/lang/String;)Lcom/google/android/gms/feedback/FeedbackOptions;
     .locals 0
 
-    .prologue
-    .line 12
-    .line 13
     iput-object p1, p0, Lcom/google/android/gms/feedback/FeedbackOptions;->c:Ljava/lang/String;
 
-    .line 14
     return-object p0
 .end method
 
 .method public static synthetic a(Lcom/google/android/gms/feedback/FeedbackOptions;Ljava/util/List;)Lcom/google/android/gms/feedback/FeedbackOptions;
     .locals 0
 
-    .prologue
-    .line 21
-    .line 22
     iput-object p1, p0, Lcom/google/android/gms/feedback/FeedbackOptions;->h:Ljava/util/List;
 
-    .line 23
     return-object p0
 .end method
 
 .method public static synthetic a(Lcom/google/android/gms/feedback/FeedbackOptions;Z)Lcom/google/android/gms/feedback/FeedbackOptions;
     .locals 0
 
-    .prologue
-    .line 24
-    .line 25
     iput-boolean p1, p0, Lcom/google/android/gms/feedback/FeedbackOptions;->i:Z
 
-    .line 26
     return-object p0
 .end method
 
 .method public static synthetic b(Lcom/google/android/gms/feedback/FeedbackOptions;)Lcom/google/android/gms/feedback/FeedbackOptions;
     .locals 1
 
-    .prologue
-    .line 9
-    .line 10
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/gms/feedback/FeedbackOptions;->a:Ljava/lang/String;
 
-    .line 11
     return-object p0
 .end method
 
 .method public static synthetic b(Lcom/google/android/gms/feedback/FeedbackOptions;Ljava/lang/String;)Lcom/google/android/gms/feedback/FeedbackOptions;
     .locals 0
 
-    .prologue
-    .line 18
-    .line 19
     iput-object p1, p0, Lcom/google/android/gms/feedback/FeedbackOptions;->e:Ljava/lang/String;
 
-    .line 20
     return-object p0
 .end method
 
 .method public static synthetic c(Lcom/google/android/gms/feedback/FeedbackOptions;)Lcom/google/android/gms/feedback/FeedbackOptions;
     .locals 1
 
-    .prologue
-    .line 27
-    .line 28
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/gms/feedback/FeedbackOptions;->j:Lcom/google/android/gms/feedback/ThemeSettings;
 
-    .line 29
     return-object p0
 .end method
 
 .method public static synthetic c(Lcom/google/android/gms/feedback/FeedbackOptions;Ljava/lang/String;)Lcom/google/android/gms/feedback/FeedbackOptions;
     .locals 0
 
-    .prologue
-    .line 36
-    .line 37
     iput-object p1, p0, Lcom/google/android/gms/feedback/FeedbackOptions;->g:Ljava/lang/String;
 
-    .line 38
     return-object p0
 .end method
 
 .method public static synthetic d(Lcom/google/android/gms/feedback/FeedbackOptions;)Lcom/google/android/gms/feedback/FeedbackOptions;
     .locals 1
 
-    .prologue
-    .line 30
-    .line 31
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/gms/feedback/FeedbackOptions;->k:Lcom/google/android/gms/feedback/LogOptions;
 
-    .line 32
     return-object p0
 .end method
 
@@ -247,16 +204,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 1
-    .line 3
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lhiv;->m(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 4
     const/4 v1, 0x2
 
     iget-object v2, p0, Lcom/google/android/gms/feedback/FeedbackOptions;->a:Ljava/lang/String;
@@ -323,9 +276,7 @@
 
     invoke-static {p1, v1, v2, p2}, Lhiv;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    .line 5
     invoke-static {p1, v0}, Lhiv;->n(Landroid/os/Parcel;I)V
 
-    .line 6
     return-void
 .end method

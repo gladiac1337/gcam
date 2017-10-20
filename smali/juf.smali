@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 14
     const-class v0, Ljuf;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -31,8 +29,6 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Ljue;-><init>(B)V
@@ -45,32 +41,25 @@
 .method public final a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
     .locals 9
 
-    .prologue
-    .line 2
     const-string v0, "Runnable was null."
 
     invoke-static {p1, v0}, Lixp;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     const-string v0, "Executor was null."
 
     invoke-static {p2, v0}, Lixp;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     :try_start_0
     invoke-interface {p2, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8
     :goto_0
     return-void
 
-    .line 6
     :catch_0
     move-exception v5
 
-    .line 7
     sget-object v0, Ljuf;->a:Ljava/util/logging/Logger;
 
     sget-object v1, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
@@ -143,8 +132,6 @@
 .method public cancel(Z)Z
     .locals 1
 
-    .prologue
-    .line 9
     const/4 v0, 0x0
 
     return v0
@@ -156,11 +143,8 @@
 .method public get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 10
     invoke-static {p3}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 11
     invoke-virtual {p0}, Ljuf;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -171,8 +155,6 @@
 .method public isCancelled()Z
     .locals 1
 
-    .prologue
-    .line 12
     const/4 v0, 0x0
 
     return v0
@@ -181,8 +163,6 @@
 .method public isDone()Z
     .locals 1
 
-    .prologue
-    .line 13
     const/4 v0, 0x1
 
     return v0

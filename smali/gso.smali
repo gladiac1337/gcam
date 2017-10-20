@@ -11,8 +11,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgso;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -25,8 +23,6 @@
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgso;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$1800(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Z
@@ -47,7 +43,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     :cond_0
     iget-object v0, p0, Lgso;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
@@ -55,7 +50,6 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->resetShutterButton(Lgtt;)V
 
-    .line 4
     :cond_1
     iget-object v0, p0, Lgso;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
@@ -63,6 +57,5 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->setClickEnabled(Z)V
 
-    .line 5
     return-void
 .end method

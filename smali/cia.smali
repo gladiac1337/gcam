@@ -18,8 +18,6 @@
 .method public constructor <init>(Lchu;Licj;Licg;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcia;->a:Lchu;
 
     iput-object p2, p0, Lcia;->b:Licj;
@@ -36,21 +34,16 @@
 .method public final a()V
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lcia;->a:Lchu;
 
     invoke-interface {v0}, Lchu;->a()V
 
-    .line 5
     return-void
 .end method
 
 .method public final a(Lchv;)V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcia;->a:Lchu;
 
     new-instance v1, Lcib;
@@ -63,19 +56,15 @@
 
     invoke-interface {v0, v1}, Lchu;->a(Lchv;)V
 
-    .line 3
     return-void
 .end method
 
 .method public final b()V
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lcia;->a:Lchu;
 
     invoke-interface {v0}, Lchu;->b()V
 
-    .line 7
     return-void
 .end method

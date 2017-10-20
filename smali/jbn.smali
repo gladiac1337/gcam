@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public final a(Ljava/util/List;)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 2
     invoke-static {p1}, Litx;->b(Ljava/lang/Iterable;)Ljava/util/ArrayList;
 
     move-result-object v0
@@ -34,8 +30,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 3
     const-string v0, "IdentityResegmenter"
 
     return-object v0

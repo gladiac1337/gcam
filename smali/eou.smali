@@ -32,8 +32,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 32
     const-string v0, "StckdCptrSession"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -48,18 +46,14 @@
 .method public constructor <init>(Landroid/net/Uri;Lgvu;Lgvl;Landroid/content/ContentResolver;Ljhi;Leow;Lgvr;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Leov;
 
     invoke-direct {v0}, Leov;-><init>()V
 
     iput-object v0, p0, Leou;->e:Lavk;
 
-    .line 3
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -68,7 +62,6 @@
 
     iput-object v0, p0, Leou;->b:Landroid/net/Uri;
 
-    .line 4
     invoke-static {p2}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -77,7 +70,6 @@
 
     iput-object v0, p0, Leou;->f:Lgvu;
 
-    .line 5
     invoke-static {p3}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -86,7 +78,6 @@
 
     iput-object v0, p0, Leou;->g:Lgvl;
 
-    .line 6
     invoke-static {p4}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -95,10 +86,8 @@
 
     iput-object v0, p0, Leou;->h:Landroid/content/ContentResolver;
 
-    .line 7
     iput-object p5, p0, Leou;->c:Ljhi;
 
-    .line 8
     invoke-static {p6}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -107,7 +96,6 @@
 
     iput-object v0, p0, Leou;->d:Leow;
 
-    .line 9
     invoke-static {p7}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -116,7 +104,6 @@
 
     iput-object v0, p0, Leou;->i:Lgvr;
 
-    .line 10
     return-void
 .end method
 
@@ -125,8 +112,6 @@
 .method public final a(Ljava/io/InputStream;Lgrs;)Ljuk;
     .locals 2
 
-    .prologue
-    .line 29
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Not implemented yet"
@@ -139,29 +124,22 @@
 .method public final a(Lgoq;)V
     .locals 0
 
-    .prologue
-    .line 27
     return-void
 .end method
 
 .method public final a(Lgyg;ZLjava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 30
     iget-object v0, p0, Leou;->d:Leow;
 
     invoke-virtual {v0}, Leow;->c()V
 
-    .line 31
     return-void
 .end method
 
 .method public final declared-synchronized a(Ljava/io/File;Ljava/lang/String;IIJ)V
     .locals 13
 
-    .prologue
-    .line 11
     monitor-enter p0
 
     :try_start_0
@@ -173,7 +151,6 @@
 
     move-result-object v12
 
-    .line 12
     sget-object v0, Leou;->a:Ljava/lang/String;
 
     invoke-static {v12}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -212,25 +189,21 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 13
     :try_start_1
     iget-object v0, p0, Leou;->g:Lgvl;
 
     invoke-interface {v0, p1, v12}, Lgvl;->a(Ljava/io/File;Ljava/io/File;)V
 
-    .line 14
     invoke-virtual {v12}, Ljava/io/File;->length()J
 
     move-result-wide v0
 
-    .line 15
     const-wide/16 v2, 0x0
 
     cmp-long v0, v0, v2
 
     if-lez v0, :cond_0
 
-    .line 16
     iget-object v1, p0, Leou;->i:Lgvr;
 
     iget-object v2, p0, Leou;->h:Landroid/content/ContentResolver;
@@ -239,7 +212,6 @@
 
     const/4 v7, 0x0
 
-    .line 17
     invoke-virtual {v12}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v8
@@ -254,24 +226,20 @@
 
     move/from16 v10, p4
 
-    .line 18
     invoke-virtual/range {v1 .. v11}, Lgvr;->a(Landroid/content/ContentResolver;Ljava/lang/String;JLjhi;ILjava/lang/String;IILgvp;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 26
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 20
     :catch_0
     move-exception v0
 
-    .line 21
     :try_start_2
     sget-object v1, Leou;->a:Ljava/lang/String;
 
@@ -283,7 +251,6 @@
 
     const/4 v4, 0x0
 
-    .line 22
     invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v5
@@ -292,26 +259,22 @@
 
     const/4 v4, 0x1
 
-    .line 23
     invoke-virtual {v12}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v5
 
     aput-object v5, v3, v4
 
-    .line 24
     invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 25
     invoke-static {v1, v2, v0}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_0
 
-    .line 11
     :catchall_0
     move-exception v0
 
@@ -323,8 +286,6 @@
 .method public final n()Lavk;
     .locals 1
 
-    .prologue
-    .line 28
     iget-object v0, p0, Leou;->e:Lavk;
 
     return-object v0

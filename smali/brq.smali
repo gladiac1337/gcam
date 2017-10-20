@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public final a()Z
     .locals 1
 
-    .prologue
-    .line 5
     const/4 v0, 0x0
 
     return v0
@@ -32,8 +28,6 @@
 .method public final a(JFF)Z
     .locals 1
 
-    .prologue
-    .line 2
     const/4 v0, 0x1
 
     return v0
@@ -42,8 +36,6 @@
 .method public final a(J)[F
     .locals 1
 
-    .prologue
-    .line 3
     const/4 v0, 0x2
 
     new-array v0, v0, [F
@@ -64,8 +56,6 @@
 .method public final a(JJ)[F
     .locals 1
 
-    .prologue
-    .line 4
     const/4 v0, 0x2
 
     new-array v0, v0, [F
@@ -86,8 +76,6 @@
 .method public final b()I
     .locals 1
 
-    .prologue
-    .line 6
     const/4 v0, -0x1
 
     return v0

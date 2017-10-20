@@ -36,8 +36,6 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/HashSet;
@@ -68,10 +66,8 @@
 
     iput v0, p0, Lhkb;->k:I
 
-    .line 2
     sget-object v0, Lhjk;->a:Lhjk;
 
-    .line 3
     iput-object v0, p0, Lhkb;->m:Lhjk;
 
     sget-object v0, Lhpx;->a:Lhju;
@@ -146,8 +142,6 @@
 .method public final a(Lhjr;)Lhkb;
     .locals 2
 
-    .prologue
-    .line 4
     const-string v0, "Api must not be null"
 
     invoke-static {p1, v0}, Lhiv;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -158,12 +152,10 @@
 
     invoke-interface {v0, p1, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
-    .line 6
     iget-object v1, p0, Lhkb;->e:Ljava/util/Set;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
@@ -223,8 +215,6 @@
 .method public final b()Lhka;
     .locals 19
 
-    .prologue
-    .line 7
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lhkb;->j:Ljava/util/Map;
@@ -242,15 +232,12 @@
 
     invoke-static {v1, v2}, Lhiv;->b(ZLjava/lang/Object;)V
 
-    .line 8
     invoke-virtual/range {p0 .. p0}, Lhkb;->a()Lhlh;
 
     move-result-object v4
 
-    .line 9
     iget-object v9, v4, Lhlh;->d:Ljava/util/Map;
 
-    .line 10
     new-instance v12, Lgm;
 
     invoke-direct {v12}, Lgm;-><init>()V
@@ -335,12 +322,10 @@
 
     move-object v7, v6
 
-    .line 11
     invoke-virtual/range {v1 .. v7}, Lhju;->a(Landroid/content/Context;Landroid/os/Looper;Lhlh;Ljava/lang/Object;Lhkc;Lhkd;)Lhjy;
 
     move-result-object v1
 
-    .line 12
     invoke-virtual {v8}, Lhjr;->b()Lhjw;
 
     move-result-object v2
@@ -349,19 +334,16 @@
 
     goto :goto_1
 
-    .line 7
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 10
     :cond_1
     const/4 v1, 0x0
 
     goto :goto_2
 
-    .line 12
     :cond_2
     invoke-interface {v15}, Ljava/util/Map;->values()Ljava/util/Collection;
 
@@ -411,17 +393,13 @@
 
     invoke-direct/range {v5 .. v18}, Lhst;-><init>(Landroid/content/Context;Ljava/util/concurrent/locks/Lock;Landroid/os/Looper;Lhlh;Lhjk;Lhju;Ljava/util/Map;Ljava/util/List;Ljava/util/List;Ljava/util/Map;IILjava/util/ArrayList;)V
 
-    .line 14
     sget-object v2, Lhka;->a:Ljava/util/Set;
 
-    .line 15
     monitor-enter v2
 
-    .line 16
     :try_start_0
     sget-object v1, Lhka;->a:Ljava/util/Set;
 
-    .line 17
     invoke-interface {v1, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     monitor-exit v2
@@ -434,14 +412,12 @@
 
     if-ltz v1, :cond_3
 
-    .line 18
     new-instance v1, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v1}, Ljava/lang/NoSuchMethodError;-><init>()V
 
     throw v1
 
-    .line 17
     :catchall_0
     move-exception v1
 
@@ -452,7 +428,6 @@
 
     throw v1
 
-    .line 19
     :cond_3
     return-object v5
 .end method

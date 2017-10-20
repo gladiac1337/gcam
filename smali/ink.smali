@@ -26,56 +26,44 @@
 .method public constructor <init>(Ljava/util/concurrent/Executor;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Link;->a:Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Ljuw;
 
     invoke-direct {v0}, Ljuw;-><init>()V
 
-    .line 5
     iput-object v0, p0, Link;->c:Ljuw;
 
-    .line 6
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Link;->d:Ljava/util/Set;
 
-    .line 7
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Link;->e:Ljava/util/List;
 
-    .line 8
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Link;->f:J
 
-    .line 10
     new-instance v0, Ljuw;
 
     invoke-direct {v0}, Ljuw;-><init>()V
 
-    .line 11
     iput-object v0, p0, Link;->g:Ljuw;
 
-    .line 12
     iput-object p1, p0, Link;->b:Ljava/util/concurrent/Executor;
 
-    .line 13
     return-void
 .end method
 
@@ -84,30 +72,23 @@
 .method public final a(Liny;)Lioa;
     .locals 3
 
-    .prologue
-    .line 14
     iget-object v1, p0, Link;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 15
     :try_start_0
     new-instance v0, Linp;
 
-    .line 16
     invoke-direct {v0, p0, p1}, Linp;-><init>(Link;Liny;)V
 
-    .line 18
     iget-object v2, p0, Link;->e:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 19
     monitor-exit v1
 
     return-object v0
 
-    .line 20
     :catchall_0
     move-exception v0
 
@@ -121,19 +102,15 @@
 .method public final a()V
     .locals 4
 
-    .prologue
-    .line 21
     iget-object v1, p0, Link;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 22
     :try_start_0
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 23
     iget-object v0, p0, Link;->e:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -153,15 +130,12 @@
 
     check-cast v0, Linp;
 
-    .line 25
     iget-object v0, v0, Linp;->d:Ljuw;
 
-    .line 26
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 29
     :catchall_0
     move-exception v0
 
@@ -171,7 +145,6 @@
 
     throw v0
 
-    .line 28
     :cond_0
     :try_start_1
     iget-object v0, p0, Link;->g:Ljuw;
@@ -182,32 +155,26 @@
 
     invoke-virtual {v0, v2}, Ljuw;->a(Ljuk;)Z
 
-    .line 29
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 30
     iget-object v0, p0, Link;->c:Ljuw;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljsl;->a(Ljava/lang/Object;)Z
 
-    .line 31
     return-void
 .end method
 
 .method public final a(J)V
     .locals 7
 
-    .prologue
-    .line 56
     iget-object v1, p0, Link;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 57
     :try_start_0
     iget-object v0, p0, Link;->c:Ljuw;
 
@@ -217,7 +184,6 @@
 
     if-nez v0, :cond_0
 
-    .line 58
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v2, "Please call this method only after start()."
@@ -226,7 +192,6 @@
 
     throw v0
 
-    .line 70
     :catchall_0
     move-exception v0
 
@@ -236,7 +201,6 @@
 
     throw v0
 
-    .line 59
     :cond_0
     :try_start_1
     iget-wide v2, p0, Link;->f:J
@@ -247,7 +211,6 @@
 
     iput-wide v2, p0, Link;->f:J
 
-    .line 60
     iget-object v0, p0, Link;->e:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -267,15 +230,12 @@
 
     check-cast v0, Linp;
 
-    .line 61
     iget-object v0, v0, Linp;->b:Ljava/util/Set;
 
-    .line 62
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .line 63
     :goto_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
@@ -283,29 +243,24 @@
 
     if-eqz v0, :cond_1
 
-    .line 64
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lins;
 
-    .line 65
     iget-object v0, v0, Lins;->b:Landroid/media/MediaCodec$BufferInfo;
 
-    .line 66
     iget-wide v4, v0, Landroid/media/MediaCodec$BufferInfo;->presentationTimeUs:J
 
     cmp-long v0, v4, p1
 
     if-gez v0, :cond_1
 
-    .line 67
     invoke-interface {v3}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 70
     :cond_2
     monitor-exit v1
     :try_end_1
@@ -317,15 +272,12 @@
 .method public final a(Linr;JJ)V
     .locals 12
 
-    .prologue
-    .line 33
     iget-wide v2, p0, Link;->f:J
 
     cmp-long v2, p2, v2
 
     if-gez v2, :cond_0
 
-    .line 34
     new-instance v2, Ljava/lang/RuntimeException;
 
     iget-wide v4, p0, Link;->f:J
@@ -364,7 +316,6 @@
 
     throw v2
 
-    .line 35
     :cond_0
     iget-object v2, p0, Link;->c:Ljuw;
 
@@ -374,7 +325,6 @@
 
     if-nez v2, :cond_1
 
-    .line 36
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v3, "CookieCutterMuxer should be started before adding cuts"
@@ -383,13 +333,11 @@
 
     throw v2
 
-    .line 37
     :cond_1
     iget-object v10, p0, Link;->a:Ljava/lang/Object;
 
     monitor-enter v10
 
-    .line 38
     :try_start_0
     iget-object v8, p0, Link;->d:Ljava/util/Set;
 
@@ -405,12 +353,10 @@
 
     invoke-interface {v8, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 39
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 40
     iget-object v2, p0, Link;->e:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -434,13 +380,10 @@
 
     move-object v8, v0
 
-    .line 41
     new-instance v2, Lioe;
 
-    .line 42
     iget-object v3, v8, Linp;->a:Liny;
 
-    .line 43
     invoke-interface {p1, v3}, Linr;->a(Liny;)Lioa;
 
     move-result-object v3
@@ -451,13 +394,10 @@
 
     invoke-direct/range {v2 .. v7}, Lioe;-><init>(Ljava/lang/Object;JJ)V
 
-    .line 45
     iget-object v3, v8, Linp;->c:Ljava/util/Set;
 
-    .line 46
     invoke-interface {v3, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 47
     new-instance v3, Linm;
 
     invoke-direct {v3, p0, v8, v2}, Linm;-><init>(Link;Linp;Lioe;)V
@@ -466,7 +406,6 @@
 
     goto :goto_0
 
-    .line 53
     :catchall_0
     move-exception v2
 
@@ -476,12 +415,10 @@
 
     throw v2
 
-    .line 49
     :cond_2
     :try_start_1
     invoke-interface {p1}, Linr;->a()V
 
-    .line 50
     move-object v0, v9
 
     check-cast v0, Ljava/util/ArrayList;
@@ -507,12 +444,10 @@
 
     check-cast v3, Ljava/lang/Runnable;
 
-    .line 51
     invoke-interface {v3}, Ljava/lang/Runnable;->run()V
 
     goto :goto_1
 
-    .line 53
     :cond_3
     monitor-exit v10
     :try_end_1
@@ -524,8 +459,6 @@
 .method final a(Lioe;Lins;)V
     .locals 2
 
-    .prologue
-    .line 54
     iget-object v0, p0, Link;->b:Ljava/util/concurrent/Executor;
 
     new-instance v1, Linn;
@@ -534,15 +467,12 @@
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 55
     return-void
 .end method
 
 .method public final b()Ljuk;
     .locals 3
 
-    .prologue
-    .line 32
     iget-object v0, p0, Link;->g:Ljuw;
 
     new-instance v1, Linl;
@@ -561,18 +491,14 @@
 .method final synthetic c()Ljuk;
     .locals 4
 
-    .prologue
-    .line 71
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 72
     iget-object v2, p0, Link;->a:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 73
     :try_start_0
     iget-object v0, p0, Link;->d:Ljava/util/Set;
 
@@ -593,10 +519,8 @@
 
     check-cast v0, Lioe;
 
-    .line 75
     iget-object v0, v0, Lioe;->a:Ljava/lang/Object;
 
-    .line 76
     check-cast v0, Linr;
 
     invoke-interface {v0}, Linr;->b()Ljuk;
@@ -607,7 +531,6 @@
 
     goto :goto_0
 
-    .line 78
     :catchall_0
     move-exception v0
 
@@ -623,17 +546,14 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 80
     invoke-static {v1}, Ljtv;->a(Ljava/lang/Iterable;)Ljuk;
 
     move-result-object v0
 
     sget-object v1, Lino;->a:Ljgy;
 
-    .line 81
     sget-object v2, Ljuq;->a:Ljuq;
 
-    .line 82
     invoke-static {v0, v1, v2}, Ljtv;->a(Ljuk;Ljgy;Ljava/util/concurrent/Executor;)Ljuk;
 
     move-result-object v0

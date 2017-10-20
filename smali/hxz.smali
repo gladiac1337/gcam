@@ -245,19 +245,15 @@
 .method private final c(Ljava/lang/String;)Landroid/content/pm/PackageInfo;
     .locals 4
 
-    .prologue
-    .line 1
     :try_start_0
     iget-object v0, p0, Lhxz;->b:Landroid/content/Context;
 
-    .line 2
     sget-object v1, Lhpk;->a:Lhpk;
 
     invoke-virtual {v1, v0}, Lhpk;->a(Landroid/content/Context;)Lhpj;
 
     move-result-object v0
 
-    .line 3
     const/16 v1, 0x40
 
     invoke-virtual {v0, p1, v1}, Lhpj;->b(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;

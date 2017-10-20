@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,11 +20,8 @@
 .method public final a(JLandroid/graphics/Bitmap;)Ljdh;
     .locals 1
 
-    .prologue
-    .line 2
     invoke-static {p3}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     new-instance v0, Ljdh;
 
     invoke-direct {v0}, Ljdh;-><init>()V
@@ -37,8 +32,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 4
     const-string v0, "EmptyMetadataExtractor"
 
     return-object v0

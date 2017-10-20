@@ -16,15 +16,12 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 12
     new-instance v0, Ljot;
 
     invoke-direct {v0}, Ljot;-><init>()V
 
     sput-object v0, Ljot;->a:Ljot;
 
-    .line 13
     invoke-static {}, Ljot;->a()Ljava/lang/reflect/Method;
 
     move-result-object v0
@@ -37,8 +34,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,8 +42,6 @@
 .method private static a()Ljava/lang/reflect/Method;
     .locals 5
 
-    .prologue
-    .line 2
     :try_start_0
     const-class v0, Ljava/lang/Throwable;
 
@@ -70,7 +63,6 @@
 
     move-result-object v0
 
-    .line 4
     :goto_0
     return-object v0
 
@@ -87,15 +79,11 @@
 .method public final a(Ljava/io/Closeable;Ljava/lang/Throwable;Ljava/lang/Throwable;)V
     .locals 3
 
-    .prologue
-    .line 5
     if-ne p2, p3, :cond_0
 
-    .line 11
     :goto_0
     return-void
 
-    .line 7
     :cond_0
     :try_start_0
     sget-object v0, Ljot;->b:Ljava/lang/reflect/Method;
@@ -114,7 +102,6 @@
 
     goto :goto_0
 
-    .line 10
     :catch_0
     move-exception v0
 

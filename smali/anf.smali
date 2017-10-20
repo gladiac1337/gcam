@@ -37,10 +37,8 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 249
     const-string v0, "com.bumptech.glide.load.resource.bitmap.Downsampler.DecodeFormat"
 
     sget-object v1, Laee;->c:Laee;
@@ -51,22 +49,18 @@
 
     sput-object v0, Lanf;->a:Lael;
 
-    .line 250
     const-string v0, "com.bumptech.glide.load.resource.bitmap.Downsampler.DownsampleStrategy"
 
     sget-object v1, Lamy;->c:Lamy;
 
-    .line 251
     invoke-static {v0, v1}, Lael;->a(Ljava/lang/String;Ljava/lang/Object;)Lael;
 
     move-result-object v0
 
     sput-object v0, Lanf;->b:Lael;
 
-    .line 252
     const-string v0, "com.bumptech.glide.load.resource.bitmap.Downsampler.FixBitmapSize"
 
-    .line 253
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
@@ -77,19 +71,16 @@
 
     sput-object v0, Lanf;->e:Lael;
 
-    .line 254
     const-string v0, "com.bumtpech.glide.load.resource.bitmap.Downsampler.AllowHardwareDecode"
 
     const/4 v1, 0x0
 
-    .line 255
     invoke-static {v0, v1}, Lael;->a(Ljava/lang/String;Ljava/lang/Object;)Lael;
 
     move-result-object v0
 
     sput-object v0, Lanf;->c:Lael;
 
-    .line 256
     new-instance v0, Ljava/util/HashSet;
 
     const/4 v1, 0x2
@@ -106,47 +97,40 @@
 
     aput-object v3, v1, v2
 
-    .line 257
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 258
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v0
 
     sput-object v0, Lanf;->f:Ljava/util/Set;
 
-    .line 259
     new-instance v0, Lang;
 
     invoke-direct {v0}, Lang;-><init>()V
 
     sput-object v0, Lanf;->d:Lanh;
 
-    .line 260
     sget-object v0, Laej;->b:Laej;
 
     sget-object v1, Laej;->c:Laej;
 
     sget-object v2, Laej;->d:Laej;
 
-    .line 261
     invoke-static {v0, v1, v2}, Ljava/util/EnumSet;->of(Ljava/lang/Enum;Ljava/lang/Enum;Ljava/lang/Enum;)Ljava/util/EnumSet;
 
     move-result-object v0
 
-    .line 262
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
     move-result-object v0
 
     sput-object v0, Lanf;->g:Ljava/util/Set;
 
-    .line 263
     invoke-static {v4}, Larq;->a(I)Ljava/util/Queue;
 
     move-result-object v0
@@ -159,57 +143,46 @@
 .method public constructor <init>(Ljava/util/List;Landroid/util/DisplayMetrics;Lahs;Lahn;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {}, Lanj;->a()Lanj;
 
     move-result-object v0
 
     iput-object v0, p0, Lanf;->m:Lanj;
 
-    .line 3
     iput-object p1, p0, Lanf;->l:Ljava/util/List;
 
-    .line 5
     const-string v0, "Argument must not be null"
 
     invoke-static {p2, v0}, Laoy;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 6
     check-cast v0, Landroid/util/DisplayMetrics;
 
     iput-object v0, p0, Lanf;->j:Landroid/util/DisplayMetrics;
 
-    .line 8
     const-string v0, "Argument must not be null"
 
     invoke-static {p3, v0}, Laoy;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 9
     check-cast v0, Lahs;
 
     iput-object v0, p0, Lanf;->i:Lahs;
 
-    .line 11
     const-string v0, "Argument must not be null"
 
     invoke-static {p4, v0}, Laoy;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 12
     check-cast v0, Lahn;
 
     iput-object v0, p0, Lanf;->k:Lahn;
 
-    .line 13
     return-void
 .end method
 
@@ -219,18 +192,13 @@
         value = 0x13
     .end annotation
 
-    .prologue
-    .line 219
     if-nez p0, :cond_0
 
-    .line 220
     const/4 v0, 0x0
 
-    .line 223
     :goto_0
     return-object v0
 
-    .line 221
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -238,7 +206,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 222
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getAllocationByteCount()I
 
     move-result v0
@@ -269,7 +236,6 @@
 
     move-result-object v0
 
-    .line 223
     :goto_1
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -351,7 +317,6 @@
 
     goto :goto_0
 
-    .line 222
     :cond_1
     const-string v0, ""
 
@@ -361,8 +326,6 @@
 .method public static a()Z
     .locals 1
 
-    .prologue
-    .line 14
     const/4 v0, 0x1
 
     return v0
@@ -371,8 +334,6 @@
 .method private static a(Landroid/graphics/BitmapFactory$Options;)Z
     .locals 2
 
-    .prologue
-    .line 218
     iget v0, p0, Landroid/graphics/BitmapFactory$Options;->inTargetDensity:I
 
     if-lez v0, :cond_0
@@ -401,21 +362,16 @@
 .method private static a(Ljava/io/InputStream;Landroid/graphics/BitmapFactory$Options;Lanh;Lahs;)[I
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 177
     iput-boolean v3, p1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 178
     invoke-static {p0, p1, p2, p3}, Lanf;->b(Ljava/io/InputStream;Landroid/graphics/BitmapFactory$Options;Lanh;Lahs;)Landroid/graphics/Bitmap;
 
-    .line 179
     iput-boolean v2, p1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 180
     const/4 v0, 0x2
 
     new-array v0, v0, [I
@@ -434,34 +390,25 @@
 .method private static b(Ljava/io/InputStream;Landroid/graphics/BitmapFactory$Options;Lanh;Lahs;)Landroid/graphics/Bitmap;
     .locals 8
 
-    .prologue
-    .line 181
     iget-boolean v0, p1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
     if-eqz v0, :cond_1
 
-    .line 182
     const/high16 v0, 0x500000
 
     invoke-virtual {p0, v0}, Ljava/io/InputStream;->mark(I)V
 
-    .line 184
     :goto_0
     iget v0, p1, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    .line 185
     iget v1, p1, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    .line 186
     iget-object v2, p1, Landroid/graphics/BitmapFactory$Options;->outMimeType:Ljava/lang/String;
 
-    .line 187
     sget-object v3, Lanp;->a:Ljava/util/concurrent/locks/Lock;
 
-    .line 188
     invoke-interface {v3}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    .line 189
     const/4 v3, 0x0
 
     :try_start_0
@@ -472,47 +419,37 @@
 
     move-result-object v0
 
-    .line 190
     sget-object v1, Lanp;->a:Ljava/util/concurrent/locks/Lock;
 
-    .line 191
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 215
     iget-boolean v1, p1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
     if-eqz v1, :cond_0
 
-    .line 216
     invoke-virtual {p0}, Ljava/io/InputStream;->reset()V
 
-    .line 217
     :cond_0
     :goto_1
     return-object v0
 
-    .line 183
     :cond_1
     invoke-interface {p2}, Lanh;->a()V
 
     goto :goto_0
 
-    .line 193
     :catch_0
     move-exception v3
 
-    .line 195
     :try_start_1
     new-instance v4, Ljava/io/IOException;
 
-    .line 196
     iget-object v5, p1, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
 
     invoke-static {v5}, Lanf;->a(Landroid/graphics/Bitmap;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 197
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v6
@@ -583,7 +520,6 @@
 
     invoke-direct {v4, v0, v3}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 199
     const-string v0, "Downsampler"
 
     const/4 v1, 0x3
@@ -594,14 +530,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 200
     const-string v0, "Downsampler"
 
     const-string v1, "Failed to decode with inBitmap, trying again without Bitmap re-use"
 
     invoke-static {v0, v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 201
     :cond_2
     iget-object v0, p1, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
     :try_end_1
@@ -609,21 +543,17 @@
 
     if-eqz v0, :cond_3
 
-    .line 202
     :try_start_2
     invoke-virtual {p0}, Ljava/io/InputStream;->reset()V
 
-    .line 203
     iget-object v0, p1, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
 
     invoke-interface {p3, v0}, Lahs;->a(Landroid/graphics/Bitmap;)V
 
-    .line 204
     const/4 v0, 0x0
 
     iput-object v0, p1, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
 
-    .line 205
     invoke-static {p0, p1, p2, p3}, Lanf;->b(Ljava/io/InputStream;Landroid/graphics/BitmapFactory$Options;Lanh;Lahs;)Landroid/graphics/Bitmap;
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
@@ -631,15 +561,12 @@
 
     move-result-object v0
 
-    .line 206
     sget-object v1, Lanp;->a:Ljava/util/concurrent/locks/Lock;
 
-    .line 207
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     goto :goto_1
 
-    .line 210
     :catch_1
     move-exception v0
 
@@ -648,19 +575,15 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 212
     :catchall_0
     move-exception v0
 
-    .line 213
     sget-object v1, Lanp;->a:Ljava/util/concurrent/locks/Lock;
 
-    .line 214
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw v0
 
-    .line 211
     :cond_3
     :try_start_4
     throw v4
@@ -671,22 +594,17 @@
 .method private static b(Landroid/graphics/BitmapFactory$Options;)V
     .locals 2
 
-    .prologue
-    .line 231
     invoke-static {p0}, Lanf;->c(Landroid/graphics/BitmapFactory$Options;)V
 
-    .line 232
     sget-object v1, Lanf;->h:Ljava/util/Queue;
 
     monitor-enter v1
 
-    .line 233
     :try_start_0
     sget-object v0, Lanf;->h:Ljava/util/Queue;
 
     invoke-interface {v0, p0}, Ljava/util/Queue;->offer(Ljava/lang/Object;)Z
 
-    .line 234
     monitor-exit v1
 
     return-void
@@ -704,8 +622,6 @@
 .method public static b()Z
     .locals 1
 
-    .prologue
-    .line 15
     const/4 v0, 0x1
 
     return v0
@@ -714,8 +630,6 @@
 .method private static declared-synchronized c()Landroid/graphics/BitmapFactory$Options;
     .locals 3
 
-    .prologue
-    .line 224
     const-class v1, Lanf;
 
     monitor-enter v1
@@ -727,7 +641,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 225
     :try_start_1
     sget-object v0, Lanf;->h:Ljava/util/Queue;
 
@@ -737,32 +650,26 @@
 
     check-cast v0, Landroid/graphics/BitmapFactory$Options;
 
-    .line 226
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 227
     if-nez v0, :cond_0
 
-    .line 228
     :try_start_2
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 229
     invoke-static {v0}, Lanf;->c(Landroid/graphics/BitmapFactory$Options;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 230
     :cond_0
     monitor-exit v1
 
     return-object v0
 
-    .line 226
     :catchall_0
     move-exception v0
 
@@ -776,7 +683,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 224
     :catchall_1
     move-exception v0
 
@@ -788,53 +694,38 @@
 .method private static c(Landroid/graphics/BitmapFactory$Options;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v1, 0x0
 
     const/4 v0, 0x0
 
-    .line 235
     iput-object v1, p0, Landroid/graphics/BitmapFactory$Options;->inTempStorage:[B
 
-    .line 236
     iput-boolean v0, p0, Landroid/graphics/BitmapFactory$Options;->inDither:Z
 
-    .line 237
     iput-boolean v0, p0, Landroid/graphics/BitmapFactory$Options;->inScaled:Z
 
-    .line 238
     iput v2, p0, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 239
     iput-object v1, p0, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 240
     iput-boolean v0, p0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 241
     iput v0, p0, Landroid/graphics/BitmapFactory$Options;->inDensity:I
 
-    .line 242
     iput v0, p0, Landroid/graphics/BitmapFactory$Options;->inTargetDensity:I
 
-    .line 243
     iput v0, p0, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    .line 244
     iput v0, p0, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    .line 245
     iput-object v1, p0, Landroid/graphics/BitmapFactory$Options;->outMimeType:Ljava/lang/String;
 
-    .line 246
     iput-object v1, p0, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
 
-    .line 247
     iput-boolean v2, p0, Landroid/graphics/BitmapFactory$Options;->inMutable:Z
 
-    .line 248
     return-void
 .end method
 
@@ -843,8 +734,6 @@
 .method public final a(Ljava/io/InputStream;IILaeo;Lanh;)Lahg;
     .locals 28
 
-    .prologue
-    .line 16
     invoke-virtual/range {p1 .. p1}, Ljava/io/InputStream;->markSupported()Z
 
     move-result v2
@@ -853,7 +742,6 @@
 
     invoke-static {v2, v3}, Laoy;->a(ZLjava/lang/String;)V
 
-    .line 17
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lanf;->k:Lahn;
@@ -868,15 +756,12 @@
 
     check-cast v2, [B
 
-    .line 18
     invoke-static {}, Lanf;->c()Landroid/graphics/BitmapFactory$Options;
 
     move-result-object v14
 
-    .line 19
     iput-object v2, v14, Landroid/graphics/BitmapFactory$Options;->inTempStorage:[B
 
-    .line 20
     sget-object v3, Lanf;->a:Lael;
 
     move-object/from16 v0, p4
@@ -887,7 +772,6 @@
 
     check-cast v3, Laee;
 
-    .line 21
     sget-object v4, Lanf;->b:Lael;
 
     move-object/from16 v0, p4
@@ -898,7 +782,6 @@
 
     check-cast v4, Lamy;
 
-    .line 22
     sget-object v5, Lanf;->e:Lael;
 
     move-object/from16 v0, p4
@@ -913,10 +796,8 @@
 
     move-result v15
 
-    .line 23
     sget-object v5, Lanf;->c:Lael;
 
-    .line 24
     move-object/from16 v0, p4
 
     invoke-virtual {v0, v5}, Laeo;->a(Lael;)Ljava/lang/Object;
@@ -943,25 +824,21 @@
 
     const/4 v5, 0x1
 
-    .line 25
     :goto_0
     sget-object v6, Laee;->b:Laee;
 
     if-ne v3, v6, :cond_2a
 
-    .line 26
     const/4 v5, 0x0
 
     move v13, v5
 
-    .line 28
     :goto_1
     :try_start_0
     invoke-static {}, Larm;->a()J
 
     move-result-wide v16
 
-    .line 29
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lanf;->i:Lahs;
@@ -974,22 +851,18 @@
 
     move-result-object v5
 
-    .line 30
     const/4 v6, 0x0
 
     aget v12, v5, v6
 
-    .line 31
     const/4 v6, 0x1
 
     aget v11, v5, v6
 
-    .line 32
     iget-object v0, v14, Landroid/graphics/BitmapFactory$Options;->outMimeType:Ljava/lang/String;
 
     move-object/from16 v18, v0
 
-    .line 33
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lanf;->l:Ljava/util/List;
@@ -1004,17 +877,14 @@
 
     move-result v19
 
-    .line 34
     invoke-static/range {v19 .. v19}, Lanp;->a(I)I
 
     move-result v7
 
-    .line 35
     invoke-static/range {v19 .. v19}, Lanp;->b(I)Z
 
     move-result v20
 
-    .line 36
     const/high16 v5, -0x80000000
 
     move/from16 v0, p2
@@ -1023,7 +893,6 @@
 
     move v6, v12
 
-    .line 37
     :goto_2
     const/high16 v5, -0x80000000
 
@@ -1033,7 +902,6 @@
 
     move v5, v11
 
-    .line 38
     :goto_3
     move-object/from16 v0, p0
 
@@ -1049,24 +917,20 @@
 
     move-result-object v21
 
-    .line 39
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lanf;->i:Lahs;
 
-    .line 40
     if-lez v12, :cond_0
 
     if-gtz v11, :cond_e
 
-    .line 106
     :cond_0
     :goto_4
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lanf;->m:Lanj;
 
-    .line 107
     if-eqz v13, :cond_1
 
     sget v7, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -1081,16 +945,13 @@
 
     if-eqz v20, :cond_1f
 
-    .line 108
     :cond_1
     const/4 v4, 0x0
 
-    .line 115
     :cond_2
     :goto_5
     if-nez v4, :cond_4
 
-    .line 116
     sget-object v4, Laee;->a:Laee;
 
     if-eq v3, v4, :cond_3
@@ -1105,13 +966,11 @@
 
     if-ne v4, v7, :cond_21
 
-    .line 117
     :cond_3
     sget-object v3, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     iput-object v3, v14, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 131
     :cond_4
     :goto_6
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -1124,7 +983,6 @@
 
     move v4, v3
 
-    .line 132
     :goto_7
     iget v3, v14, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
@@ -1134,7 +992,6 @@
 
     if-eqz v4, :cond_8
 
-    .line 133
     :cond_5
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1142,14 +999,11 @@
 
     if-lt v3, v7, :cond_26
 
-    .line 134
     const/4 v3, 0x1
 
-    .line 136
     :goto_8
     if-eqz v3, :cond_8
 
-    .line 137
     if-eqz v15, :cond_27
 
     if-eqz v4, :cond_27
@@ -1158,33 +1012,28 @@
 
     move v4, v6
 
-    .line 149
     :cond_6
     :goto_9
     if-lez v4, :cond_8
 
     if-lez v3, :cond_8
 
-    .line 150
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lanf;->i:Lahs;
 
-    .line 151
     sget v6, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v7, 0x1a
 
     if-lt v6, v7, :cond_7
 
-    .line 152
     iget-object v6, v14, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
     sget-object v7, Landroid/graphics/Bitmap$Config;->HARDWARE:Landroid/graphics/Bitmap$Config;
 
     if-eq v6, v7, :cond_8
 
-    .line 153
     :cond_7
     iget-object v6, v14, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
@@ -1194,7 +1043,6 @@
 
     iput-object v3, v14, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
 
-    .line 154
     :cond_8
     move-object/from16 v0, p0
 
@@ -1208,7 +1056,6 @@
 
     move-result-object v4
 
-    .line 155
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lanf;->i:Lahs;
@@ -1217,7 +1064,6 @@
 
     invoke-interface {v0, v3, v4}, Lanh;->a(Lahs;Landroid/graphics/Bitmap;)V
 
-    .line 156
     const-string v3, "Downsampler"
 
     const/4 v5, 0x2
@@ -1228,28 +1074,24 @@
 
     if-eqz v3, :cond_9
 
-    .line 158
     const-string v3, "Downsampler"
 
     invoke-static {v4}, Lanf;->a(Landroid/graphics/Bitmap;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 159
     iget-object v6, v14, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
 
     invoke-static {v6}, Lanf;->a(Landroid/graphics/Bitmap;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 160
     iget v7, v14, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
     iget v8, v14, Landroid/graphics/BitmapFactory$Options;->inDensity:I
 
     iget v9, v14, Landroid/graphics/BitmapFactory$Options;->inTargetDensity:I
 
-    .line 161
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v10
@@ -1258,7 +1100,6 @@
 
     move-result-object v10
 
-    .line 162
     invoke-static/range {v16 .. v17}, Larm;->a(J)D
 
     move-result-wide v16
@@ -1439,17 +1280,13 @@
 
     move-result-object v5
 
-    .line 163
     invoke-static {v3, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 164
     :cond_9
     const/4 v3, 0x0
 
-    .line 165
     if-eqz v4, :cond_a
 
-    .line 166
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lanf;->j:Landroid/util/DisplayMetrics;
@@ -1458,7 +1295,6 @@
 
     invoke-virtual {v4, v3}, Landroid/graphics/Bitmap;->setDensity(I)V
 
-    .line 167
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lanf;->i:Lahs;
@@ -1469,21 +1305,18 @@
 
     move-result-object v3
 
-    .line 168
     invoke-virtual {v4, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v5
 
     if-nez v5, :cond_a
 
-    .line 169
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lanf;->i:Lahs;
 
     invoke-interface {v5, v4}, Lahs;->a(Landroid/graphics/Bitmap;)V
 
-    .line 171
     :cond_a
     move-object/from16 v0, p0
 
@@ -1495,10 +1328,8 @@
 
     move-result-object v3
 
-    .line 172
     invoke-static {v14}, Lanf;->b(Landroid/graphics/BitmapFactory$Options;)V
 
-    .line 173
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lanf;->k:Lahn;
@@ -1507,10 +1338,8 @@
 
     invoke-virtual {v4, v2, v5}, Lahn;->a(Ljava/lang/Object;Ljava/lang/Class;)V
 
-    .line 174
     return-object v3
 
-    .line 24
     :cond_b
     const/4 v5, 0x0
 
@@ -1519,16 +1348,13 @@
     :cond_c
     move/from16 v6, p2
 
-    .line 36
     goto/16 :goto_2
 
     :cond_d
     move/from16 v5, p3
 
-    .line 37
     goto/16 :goto_3
 
-    .line 42
     :cond_e
     const/16 v9, 0x5a
 
@@ -1538,7 +1364,6 @@
 
     if-ne v7, v9, :cond_10
 
-    .line 43
     :cond_f
     :try_start_1
     invoke-virtual {v4, v11, v12, v6, v5}, Lamy;->a(IIII)F
@@ -1547,7 +1372,6 @@
 
     move v10, v7
 
-    .line 46
     :goto_a
     const/4 v7, 0x0
 
@@ -1555,7 +1379,6 @@
 
     if-gtz v7, :cond_11
 
-    .line 47
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -1652,13 +1475,11 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 175
     :catchall_0
     move-exception v3
 
     invoke-static {v14}, Lanf;->b(Landroid/graphics/BitmapFactory$Options;)V
 
-    .line 176
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lanf;->k:Lahn;
@@ -1669,7 +1490,6 @@
 
     throw v3
 
-    .line 45
     :cond_10
     :try_start_2
     invoke-virtual {v4, v12, v11, v6, v5}, Lamy;->a(IIII)F
@@ -1680,16 +1500,13 @@
 
     goto :goto_a
 
-    .line 48
     :cond_11
     invoke-virtual {v4}, Lamy;->a()I
 
     move-result v9
 
-    .line 49
     if-nez v9, :cond_12
 
-    .line 50
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     const-string v4, "Cannot round with null rounding"
@@ -1698,7 +1515,6 @@
 
     throw v3
 
-    .line 51
     :cond_12
     int-to-float v7, v12
 
@@ -1708,7 +1524,6 @@
 
     move-wide/from16 v22, v0
 
-    .line 52
     const-wide/high16 v24, 0x3fe0000000000000L    # 0.5
 
     add-double v22, v22, v24
@@ -1717,7 +1532,6 @@
 
     double-to-int v7, v0
 
-    .line 54
     int-to-float v0, v11
 
     move/from16 v22, v0
@@ -1730,7 +1544,6 @@
 
     move-wide/from16 v22, v0
 
-    .line 55
     const-wide/high16 v24, 0x3fe0000000000000L    # 0.5
 
     add-double v22, v22, v24
@@ -1741,27 +1554,22 @@
 
     move/from16 v22, v0
 
-    .line 57
     div-int v7, v12, v7
 
-    .line 58
     div-int v22, v11, v22
 
-    .line 59
     sget v23, Leh;->g:I
 
     move/from16 v0, v23
 
     if-ne v9, v0, :cond_14
 
-    .line 60
     move/from16 v0, v22
 
     invoke-static {v7, v0}, Ljava/lang/Math;->max(II)I
 
     move-result v7
 
-    .line 62
     :goto_b
     sget v22, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1779,30 +1587,25 @@
 
     move-object/from16 v23, v0
 
-    .line 63
     invoke-interface/range {v22 .. v23}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result v22
 
     if-eqz v22, :cond_15
 
-    .line 64
     const/4 v7, 0x1
 
     move v9, v7
 
-    .line 68
     :goto_c
     iput v9, v14, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 69
     sget-object v7, Laej;->b:Laej;
 
     move-object/from16 v0, v21
 
     if-ne v0, v7, :cond_16
 
-    .line 70
     int-to-float v7, v12
 
     int-to-float v8, v9
@@ -1821,7 +1624,6 @@
 
     double-to-int v8, v0
 
-    .line 71
     int-to-float v7, v11
 
     int-to-float v0, v9
@@ -1842,7 +1644,6 @@
 
     double-to-int v7, v0
 
-    .line 88
     :goto_d
     invoke-virtual {v4, v8, v7, v6, v5}, Lamy;->a(IIII)F
 
@@ -1852,7 +1653,6 @@
 
     move-wide/from16 v22, v0
 
-    .line 89
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v24, 0x13
@@ -1861,12 +1661,10 @@
 
     if-lt v4, v0, :cond_13
 
-    .line 91
     const-wide v24, 0x41cdcd6500000000L    # 1.0E9
 
     mul-double v24, v24, v22
 
-    .line 92
     const-wide/high16 v26, 0x3fe0000000000000L    # 0.5
 
     add-double v24, v24, v26
@@ -1875,7 +1673,6 @@
 
     double-to-int v4, v0
 
-    .line 94
     int-to-float v0, v4
 
     move/from16 v24, v0
@@ -1884,7 +1681,6 @@
 
     div-float v24, v24, v25
 
-    .line 95
     move/from16 v0, v24
 
     float-to-double v0, v0
@@ -1893,14 +1689,12 @@
 
     div-double v24, v22, v24
 
-    .line 96
     int-to-double v0, v4
 
     move-wide/from16 v26, v0
 
     mul-double v24, v24, v26
 
-    .line 97
     const-wide/high16 v26, 0x3fe0000000000000L    # 0.5
 
     add-double v24, v24, v26
@@ -1909,15 +1703,12 @@
 
     double-to-int v4, v0
 
-    .line 98
     iput v4, v14, Landroid/graphics/BitmapFactory$Options;->inTargetDensity:I
 
-    .line 99
     const v4, 0x3b9aca00
 
     iput v4, v14, Landroid/graphics/BitmapFactory$Options;->inDensity:I
 
-    .line 100
     :cond_13
     invoke-static {v14}, Lanf;->a(Landroid/graphics/BitmapFactory$Options;)Z
 
@@ -1925,12 +1716,10 @@
 
     if-eqz v4, :cond_1e
 
-    .line 101
     const/4 v4, 0x1
 
     iput-boolean v4, v14, Landroid/graphics/BitmapFactory$Options;->inScaled:Z
 
-    .line 103
     :goto_e
     const-string v4, "Downsampler"
 
@@ -1944,7 +1733,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 104
     const-string v4, "Downsampler"
 
     iget v0, v14, Landroid/graphics/BitmapFactory$Options;->inTargetDensity:I
@@ -2105,7 +1893,6 @@
 
     goto/16 :goto_4
 
-    .line 61
     :cond_14
     move/from16 v0, v22
 
@@ -2115,7 +1902,6 @@
 
     goto/16 :goto_b
 
-    .line 65
     :cond_15
     const/16 v22, 0x1
 
@@ -2129,7 +1915,6 @@
 
     move-result v7
 
-    .line 66
     sget v22, Leh;->g:I
 
     move/from16 v0, v22
@@ -2146,14 +1931,12 @@
 
     if-gez v9, :cond_29
 
-    .line 67
     shl-int/lit8 v7, v7, 0x1
 
     move v9, v7
 
     goto/16 :goto_c
 
-    .line 72
     :cond_16
     sget-object v7, Laej;->d:Laej;
 
@@ -2167,7 +1950,6 @@
 
     if-ne v0, v7, :cond_18
 
-    .line 73
     :cond_17
     int-to-float v7, v12
 
@@ -2187,7 +1969,6 @@
 
     double-to-int v8, v0
 
-    .line 74
     int-to-float v7, v11
 
     int-to-float v0, v9
@@ -2210,7 +1991,6 @@
 
     goto/16 :goto_d
 
-    .line 75
     :cond_18
     sget-object v7, Laej;->f:Laej;
 
@@ -2224,7 +2004,6 @@
 
     if-ne v0, v7, :cond_1b
 
-    .line 76
     :cond_19
     sget v7, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -2232,7 +2011,6 @@
 
     if-lt v7, v8, :cond_1a
 
-    .line 77
     int-to-float v7, v12
 
     int-to-float v8, v9
@@ -2243,7 +2021,6 @@
 
     move-result v8
 
-    .line 78
     int-to-float v7, v11
 
     int-to-float v0, v9
@@ -2258,7 +2035,6 @@
 
     goto/16 :goto_d
 
-    .line 79
     :cond_1a
     int-to-float v7, v12
 
@@ -2278,7 +2054,6 @@
 
     double-to-int v8, v0
 
-    .line 80
     int-to-float v7, v11
 
     int-to-float v0, v9
@@ -2301,7 +2076,6 @@
 
     goto/16 :goto_d
 
-    .line 81
     :cond_1b
     rem-int v7, v12, v9
 
@@ -2311,7 +2085,6 @@
 
     if-eqz v7, :cond_1d
 
-    .line 82
     :cond_1c
     move-object/from16 v0, p1
 
@@ -2321,28 +2094,23 @@
 
     move-result-object v7
 
-    .line 83
     const/4 v8, 0x0
 
     aget v8, v7, v8
 
-    .line 84
     const/16 v22, 0x1
 
     aget v7, v7, v22
 
     goto/16 :goto_d
 
-    .line 86
     :cond_1d
     div-int v8, v12, v9
 
-    .line 87
     div-int v7, v11, v9
 
     goto/16 :goto_d
 
-    .line 102
     :cond_1e
     const/4 v4, 0x0
 
@@ -2352,7 +2120,6 @@
 
     goto/16 :goto_e
 
-    .line 109
     :cond_1f
     const/16 v7, 0x80
 
@@ -2362,7 +2129,6 @@
 
     if-lt v5, v7, :cond_20
 
-    .line 110
     invoke-virtual {v4}, Lanj;->b()Z
 
     move-result v4
@@ -2371,16 +2137,13 @@
 
     const/4 v4, 0x1
 
-    .line 111
     :goto_f
     if-eqz v4, :cond_2
 
-    .line 112
     sget-object v7, Landroid/graphics/Bitmap$Config;->HARDWARE:Landroid/graphics/Bitmap$Config;
 
     iput-object v7, v14, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 113
     const/4 v7, 0x0
 
     iput-boolean v7, v14, Landroid/graphics/BitmapFactory$Options;->inMutable:Z
@@ -2389,17 +2152,14 @@
 
     goto/16 :goto_5
 
-    .line 110
     :cond_20
     const/4 v4, 0x0
 
     goto :goto_f
 
-    .line 119
     :cond_21
     const/4 v7, 0x0
 
-    .line 120
     :try_start_3
     move-object/from16 v0, p0
 
@@ -2415,13 +2175,11 @@
 
     move-result-object v4
 
-    .line 121
     iget-boolean v3, v4, Laej;->h:Z
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 128
     :goto_10
     if-eqz v3, :cond_24
 
@@ -2431,7 +2189,6 @@
     :goto_11
     iput-object v3, v14, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 129
     iget-object v3, v14, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
     sget-object v4, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
@@ -2450,7 +2207,6 @@
 
     if-ne v3, v4, :cond_4
 
-    .line 130
     :cond_22
     const/4 v3, 0x1
 
@@ -2458,11 +2214,9 @@
 
     goto/16 :goto_6
 
-    .line 124
     :catch_0
     move-exception v4
 
-    .line 125
     const-string v8, "Downsampler"
 
     const/4 v9, 0x3
@@ -2473,7 +2227,6 @@
 
     if-eqz v8, :cond_23
 
-    .line 126
     const-string v8, "Downsampler"
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -2515,13 +2268,11 @@
 
     goto :goto_10
 
-    .line 128
     :cond_24
     sget-object v3, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
     goto :goto_11
 
-    .line 131
     :cond_25
     const/4 v3, 0x0
 
@@ -2529,7 +2280,6 @@
 
     goto/16 :goto_7
 
-    .line 135
     :cond_26
     sget-object v3, Lanf;->g:Ljava/util/Set;
 
@@ -2541,7 +2291,6 @@
 
     goto/16 :goto_8
 
-    .line 140
     :cond_27
     invoke-static {v14}, Lanf;->a(Landroid/graphics/BitmapFactory$Options;)Z
 
@@ -2549,7 +2298,6 @@
 
     if-eqz v3, :cond_28
 
-    .line 141
     iget v3, v14, Landroid/graphics/BitmapFactory$Options;->inTargetDensity:I
 
     int-to-float v3, v3
@@ -2562,11 +2310,9 @@
 
     move v5, v3
 
-    .line 142
     :goto_12
     iget v6, v14, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 143
     int-to-float v3, v12
 
     int-to-float v4, v6
@@ -2581,7 +2327,6 @@
 
     double-to-int v3, v8
 
-    .line 144
     int-to-float v4, v11
 
     int-to-float v7, v6
@@ -2596,7 +2341,6 @@
 
     double-to-int v7, v8
 
-    .line 145
     int-to-float v3, v3
 
     mul-float/2addr v3, v5
@@ -2605,7 +2349,6 @@
 
     move-result v4
 
-    .line 146
     int-to-float v3, v7
 
     mul-float/2addr v3, v5
@@ -2614,7 +2357,6 @@
 
     move-result v3
 
-    .line 147
     const-string v7, "Downsampler"
 
     const/4 v8, 0x2
@@ -2625,7 +2367,6 @@
 
     if-eqz v7, :cond_6
 
-    .line 148
     const-string v7, "Downsampler"
 
     iget v8, v14, Landroid/graphics/BitmapFactory$Options;->inTargetDensity:I
@@ -2728,7 +2469,6 @@
 
     goto/16 :goto_9
 
-    .line 141
     :cond_28
     const/high16 v3, 0x3f800000    # 1.0f
 

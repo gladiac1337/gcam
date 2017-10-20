@@ -25,11 +25,8 @@
 .method public final synthetic a(Lhkh;)V
     .locals 1
 
-    .prologue
-    .line 1
     check-cast p1, Lcom/google/android/gms/common/api/Status;
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/Status;->b()Z
 
     move-result v0
@@ -49,6 +46,5 @@
 
     invoke-virtual {v0}, Lhka;->d()V
 
-    .line 3
     return-void
 .end method

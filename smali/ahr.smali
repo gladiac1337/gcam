@@ -11,11 +11,8 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/16 v0, 0x14
 
     invoke-static {v0}, Larq;->a(I)Ljava/util/Queue;
@@ -35,8 +32,6 @@
 .method public final a(Laid;)V
     .locals 2
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lahr;->a:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->size()I
@@ -47,12 +42,10 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 8
     iget-object v0, p0, Lahr;->a:Ljava/util/Queue;
 
     invoke-interface {v0, p1}, Ljava/util/Queue;->offer(Ljava/lang/Object;)Z
 
-    .line 9
     :cond_0
     return-void
 .end method
@@ -60,8 +53,6 @@
 .method protected final b()Laid;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lahr;->a:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->poll()Ljava/lang/Object;
@@ -70,15 +61,12 @@
 
     check-cast v0, Laid;
 
-    .line 4
     if-nez v0, :cond_0
 
-    .line 5
     invoke-virtual {p0}, Lahr;->a()Laid;
 
     move-result-object v0
 
-    .line 6
     :cond_0
     return-object v0
 .end method

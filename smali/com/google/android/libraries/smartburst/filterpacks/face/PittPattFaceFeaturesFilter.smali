@@ -17,11 +17,8 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/Filter;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
 
-    .line 2
     return-void
 .end method
 
@@ -30,17 +27,14 @@
 .method public getSignature()Lcom/google/android/libraries/smartburst/filterfw/Signature;
     .locals 6
 
-    .prologue
     const/4 v5, 0x1
 
-    .line 3
     sget-object v0, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->single(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v0
 
-    .line 4
     new-instance v1, Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     invoke-direct {v1}, Lcom/google/android/libraries/smartburst/filterfw/Signature;-><init>()V
@@ -51,51 +45,42 @@
 
     const-class v4, Lcom/google/android/vision/face/Face;
 
-    .line 5
     invoke-static {v4}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->array(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v4
 
-    .line 6
     invoke-virtual {v1, v2, v3, v4}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addInputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v1
 
     const-string v2, "smilingAggregateScore"
 
-    .line 7
     invoke-virtual {v1, v2, v5, v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addOutputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v1
 
     const-string v2, "leftEyeOpenAggregateScore"
 
-    .line 8
     invoke-virtual {v1, v2, v5, v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addOutputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v1
 
     const-string v2, "rightEyeOpenAggregateScore"
 
-    .line 9
     invoke-virtual {v1, v2, v5, v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addOutputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 10
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->disallowOtherPorts()Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 11
     return-object v0
 .end method
 
 .method protected onProcess()V
     .locals 24
 
-    .prologue
-    .line 12
     const-string v2, "faces"
 
     move-object/from16 v0, p0
@@ -108,17 +93,14 @@
 
     move-result-object v2
 
-    .line 13
     invoke-virtual {v2}, Lcom/google/android/libraries/smartburst/filterfw/Frame;->asFrameValues()Lcom/google/android/libraries/smartburst/filterfw/FrameValues;
 
     move-result-object v6
 
-    .line 14
     invoke-virtual {v6}, Lcom/google/android/libraries/smartburst/filterfw/FrameValues;->getCount()I
 
     move-result v9
 
-    .line 15
     const-string v2, "smilingAggregateScore"
 
     move-object/from16 v0, p0
@@ -127,7 +109,6 @@
 
     move-result-object v12
 
-    .line 16
     const-string v2, "leftEyeOpenAggregateScore"
 
     move-object/from16 v0, p0
@@ -136,7 +117,6 @@
 
     move-result-object v13
 
-    .line 17
     const-string v2, "rightEyeOpenAggregateScore"
 
     move-object/from16 v0, p0
@@ -145,13 +125,10 @@
 
     move-result-object v14
 
-    .line 18
     new-array v15, v9, [Lcom/google/android/vision/face/Face;
 
-    .line 19
     const-wide/16 v4, 0x0
 
-    .line 20
     const/4 v2, 0x0
 
     move v3, v2
@@ -161,7 +138,6 @@
     :goto_0
     if-ge v3, v9, :cond_0
 
-    .line 21
     invoke-virtual {v6, v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameValues;->getFrameValueAtIndex(I)Lcom/google/android/libraries/smartburst/filterfw/FrameValue;
 
     move-result-object v2
@@ -174,7 +150,6 @@
 
     aput-object v2, v15, v3
 
-    .line 22
     aget-object v2, v15, v3
 
     invoke-virtual {v2}, Lcom/google/android/vision/face/Face;->getHeight()F
@@ -193,7 +168,6 @@
 
     add-double/2addr v4, v10
 
-    .line 23
     add-int/lit8 v2, v3, 0x1
 
     move v3, v2
@@ -202,30 +176,24 @@
 
     goto :goto_0
 
-    .line 24
     :cond_0
     const-wide/16 v6, 0x0
 
-    .line 25
     const-wide/16 v4, 0x0
 
-    .line 26
     const-wide/16 v2, 0x0
 
-    .line 27
     const-wide v16, 0x3e7ad7f29abcaf48L    # 1.0E-7
 
     cmpl-double v8, v10, v16
 
     if-lez v8, :cond_4
 
-    .line 28
     const/4 v8, 0x0
 
     :goto_1
     if-ge v8, v9, :cond_4
 
-    .line 29
     aget-object v16, v15, v8
 
     invoke-virtual/range {v16 .. v16}, Lcom/google/android/vision/face/Face;->getHeight()F
@@ -248,35 +216,30 @@
 
     div-double v16, v16, v10
 
-    .line 30
     aget-object v18, v15, v8
 
     invoke-virtual/range {v18 .. v18}, Lcom/google/android/vision/face/Face;->getIsSmilingScore()F
 
     move-result v18
 
-    .line 31
     aget-object v19, v15, v8
 
     invoke-virtual/range {v19 .. v19}, Lcom/google/android/vision/face/Face;->getIsLeftEyeOpenScore()F
 
     move-result v19
 
-    .line 32
     aget-object v20, v15, v8
 
     invoke-virtual/range {v20 .. v20}, Lcom/google/android/vision/face/Face;->getIsRightEyeOpenScore()F
 
     move-result v20
 
-    .line 33
     const/16 v21, 0x0
 
     cmpl-float v21, v18, v21
 
     if-lez v21, :cond_1
 
-    .line 34
     move/from16 v0, v18
 
     float-to-double v0, v0
@@ -287,7 +250,6 @@
 
     add-double v6, v6, v22
 
-    .line 35
     :cond_1
     const/16 v18, 0x0
 
@@ -295,7 +257,6 @@
 
     if-lez v18, :cond_2
 
-    .line 36
     move/from16 v0, v19
 
     float-to-double v0, v0
@@ -306,7 +267,6 @@
 
     add-double v4, v4, v18
 
-    .line 37
     :cond_2
     const/16 v18, 0x0
 
@@ -314,7 +274,6 @@
 
     if-lez v18, :cond_3
 
-    .line 38
     move/from16 v0, v20
 
     float-to-double v0, v0
@@ -325,17 +284,14 @@
 
     add-double v2, v2, v16
 
-    .line 39
     :cond_3
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_1
 
-    .line 40
     :cond_4
     if-eqz v12, :cond_5
 
-    .line 41
     const/4 v8, 0x0
 
     invoke-virtual {v12, v8}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->fetchAvailableFrame([I)Lcom/google/android/libraries/smartburst/filterfw/Frame;
@@ -346,7 +302,6 @@
 
     move-result-object v8
 
-    .line 42
     double-to-float v6, v6
 
     invoke-static {v6}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -355,14 +310,11 @@
 
     invoke-virtual {v8, v6}, Lcom/google/android/libraries/smartburst/filterfw/FrameValue;->setValue(Ljava/lang/Object;)V
 
-    .line 43
     invoke-virtual {v12, v8}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->pushFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;)V
 
-    .line 44
     :cond_5
     if-eqz v13, :cond_6
 
-    .line 45
     const/4 v6, 0x0
 
     invoke-virtual {v13, v6}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->fetchAvailableFrame([I)Lcom/google/android/libraries/smartburst/filterfw/Frame;
@@ -373,7 +325,6 @@
 
     move-result-object v6
 
-    .line 46
     double-to-float v4, v4
 
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -382,14 +333,11 @@
 
     invoke-virtual {v6, v4}, Lcom/google/android/libraries/smartburst/filterfw/FrameValue;->setValue(Ljava/lang/Object;)V
 
-    .line 47
     invoke-virtual {v13, v6}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->pushFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;)V
 
-    .line 48
     :cond_6
     if-eqz v14, :cond_7
 
-    .line 49
     const/4 v4, 0x0
 
     invoke-virtual {v14, v4}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->fetchAvailableFrame([I)Lcom/google/android/libraries/smartburst/filterfw/Frame;
@@ -400,7 +348,6 @@
 
     move-result-object v4
 
-    .line 50
     double-to-float v2, v2
 
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
@@ -409,10 +356,8 @@
 
     invoke-virtual {v4, v2}, Lcom/google/android/libraries/smartburst/filterfw/FrameValue;->setValue(Ljava/lang/Object;)V
 
-    .line 51
     invoke-virtual {v14, v4}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->pushFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;)V
 
-    .line 52
     :cond_7
     return-void
 .end method

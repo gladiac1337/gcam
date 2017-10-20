@@ -16,8 +16,6 @@
 .method constructor <init>(Lfge;Z)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lffy;->b:Lfge;
 
     iput-boolean p2, p0, Lffy;->a:Z
@@ -32,8 +30,6 @@
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 3
 
-    .prologue
-    .line 2
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -44,17 +40,13 @@
 
     move-result v0
 
-    .line 3
     iget-object v1, p0, Lffy;->b:Lfge;
 
-    .line 4
     iget-object v1, v1, Lfge;->c:Lcom/google/android/apps/camera/legacy/app/ui/viewfinder/ViewfinderCover;
 
-    .line 5
     iget-boolean v2, p0, Lffy;->a:Z
 
     invoke-virtual {v1, v0, v2}, Lcom/google/android/apps/camera/legacy/app/ui/viewfinder/ViewfinderCover;->a(IZ)V
 
-    .line 6
     return-void
 .end method

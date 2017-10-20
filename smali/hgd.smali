@@ -25,15 +25,11 @@
 .method public final run()V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhgd;->a:Lcom/google/android/apps/refocus/ViewerActivity;
 
-    .line 2
     iget-object v0, v0, Lcom/google/android/apps/refocus/ViewerActivity;->r:Lgpd;
 
     invoke-interface {v0}, Lgpd;->b()V
 
-    .line 3
     return-void
 .end method

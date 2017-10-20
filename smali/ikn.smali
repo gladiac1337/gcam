@@ -16,8 +16,6 @@
 .method constructor <init>(Likl;Likw;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Likn;->b:Likl;
 
     iput-object p2, p0, Likn;->a:Likw;
@@ -32,8 +30,6 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 2
     :try_start_0
     iget-object v0, p0, Likn;->b:Likl;
 
@@ -57,30 +53,24 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 9
     :goto_0
     return-void
 
-    .line 4
     :catch_0
     move-exception v0
 
-    .line 5
     iget-object v1, p0, Likn;->a:Likw;
 
     if-eq v0, v1, :cond_0
 
-    .line 6
     invoke-static {v0}, Likw;->a(Ljava/lang/Throwable;)Likw;
 
     move-result-object v0
 
-    .line 7
     iget-object v1, p0, Likn;->a:Likw;
 
     invoke-static {v0, v1}, Ljvg;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
-    .line 8
     :cond_0
     iget-object v1, p0, Likn;->b:Likl;
 
@@ -92,8 +82,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Likn;->b:Likl;
 
     iget-object v0, v0, Likl;->c:Likk;

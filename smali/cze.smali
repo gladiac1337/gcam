@@ -45,73 +45,52 @@
 .method constructor <init>(Lbrz;Lbvk;Lgvu;Lguf;Leut;Lbhm;Lgos;Lgop;Lffs;Lfdq;Lfdw;Lest;Lhzi;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lgtv;Lidb;Lboc;Lbne;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lcqi;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcze;->a:Lbrz;
 
-    .line 3
     iput-object p2, p0, Lcze;->b:Lbvk;
 
-    .line 4
     iput-object p3, p0, Lcze;->c:Lgvu;
 
-    .line 5
     iput-object p4, p0, Lcze;->d:Lguf;
 
-    .line 6
     iput-object p5, p0, Lcze;->e:Leut;
 
-    .line 7
     iput-object p6, p0, Lcze;->f:Lbhm;
 
-    .line 8
     iput-object p7, p0, Lcze;->g:Lgos;
 
-    .line 9
     iput-object p8, p0, Lcze;->h:Lgop;
 
-    .line 10
     iput-object p9, p0, Lcze;->i:Lffs;
 
-    .line 11
     iput-object p10, p0, Lcze;->j:Lfdq;
 
-    .line 12
     iput-object p11, p0, Lcze;->k:Lfdw;
 
-    .line 13
     iput-object p12, p0, Lcze;->l:Lest;
 
-    .line 14
     iput-object p13, p0, Lcze;->m:Lhzi;
 
-    .line 15
     iput-object p14, p0, Lcze;->n:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
-    .line 16
     move-object/from16 v0, p15
 
     iput-object v0, p0, Lcze;->o:Lgtv;
 
-    .line 17
     move-object/from16 v0, p16
 
     iput-object v0, p0, Lcze;->p:Lidb;
 
-    .line 18
     move-object/from16 v0, p17
 
     iput-object v0, p0, Lcze;->q:Lboc;
 
-    .line 19
     move-object/from16 v0, p18
 
     iput-object v0, p0, Lcze;->r:Lbne;
 
-    .line 20
     return-void
 .end method
 
@@ -120,8 +99,6 @@
 .method protected final a(Lbtw;)Lcql;
     .locals 24
 
-    .prologue
-    .line 21
     new-instance v1, Lfme;
 
     move-object/from16 v0, p0

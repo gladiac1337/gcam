@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,15 +15,12 @@
 .method static a(Landroid/graphics/Rect;Landroid/util/Size;Lgza;)Landroid/graphics/Rect;
     .locals 6
 
-    .prologue
-    .line 3
     invoke-virtual {p2}, Lgza;->ordinal()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 17
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -64,11 +59,9 @@
 
     throw v0
 
-    .line 5
     :pswitch_0
     new-instance v0, Landroid/graphics/Rect;
 
-    .line 6
     invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
     move-result v1
@@ -85,7 +78,6 @@
 
     sub-int/2addr v2, v3
 
-    .line 7
     invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
     move-result v3
@@ -106,18 +98,15 @@
 
     move-object p0, v0
 
-    .line 16
     :goto_0
     :pswitch_1
     return-object p0
 
-    .line 9
     :pswitch_2
     new-instance v0, Landroid/graphics/Rect;
 
     iget v1, p0, Landroid/graphics/Rect;->top:I
 
-    .line 10
     invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
 
     move-result v2
@@ -128,7 +117,6 @@
 
     iget v3, p0, Landroid/graphics/Rect;->bottom:I
 
-    .line 11
     invoke-virtual {p1}, Landroid/util/Size;->getHeight()I
 
     move-result v4
@@ -141,14 +129,11 @@
 
     move-object p0, v0
 
-    .line 12
     goto :goto_0
 
-    .line 13
     :pswitch_3
     new-instance v0, Landroid/graphics/Rect;
 
-    .line 14
     invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
     move-result v1
@@ -159,7 +144,6 @@
 
     iget v2, p0, Landroid/graphics/Rect;->left:I
 
-    .line 15
     invoke-virtual {p1}, Landroid/util/Size;->getWidth()I
 
     move-result v3
@@ -174,10 +158,8 @@
 
     move-object p0, v0
 
-    .line 16
     goto :goto_0
 
-    .line 3
     nop
 
     :pswitch_data_0
@@ -192,8 +174,6 @@
 .method static i()Lgwz;
     .locals 2
 
-    .prologue
-    .line 2
     new-instance v0, Lgwz;
 
     const/4 v1, 0x0

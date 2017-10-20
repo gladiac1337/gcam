@@ -20,16 +20,12 @@
 .method public constructor <init>(Lgkg;Lick;Leda;Lcnt;)V
     .locals 10
 
-    .prologue
     const/4 v9, 0x1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lecr;->a:Lgkg;
 
-    .line 3
     const-string v0, "GoudaCptrCmd"
 
     invoke-interface {p2, v0}, Lick;->a(Ljava/lang/String;)Licj;
@@ -38,25 +34,20 @@
 
     iput-object v0, p0, Lecr;->c:Licj;
 
-    .line 4
     invoke-static {}, Lcnt;->a()I
 
-    .line 5
     invoke-virtual {p4}, Lcnt;->b()I
 
     move-result v0
 
-    .line 7
     iget-object v1, p3, Leda;->c:Lecv;
 
     iget-object v2, p3, Leda;->d:Leah;
 
-    .line 8
     invoke-virtual {v1, v0, v2}, Lecv;->a(ILeah;)Leah;
 
     move-result-object v2
 
-    .line 9
     new-instance v7, Leck;
 
     iget-object v8, p3, Leda;->a:Lick;
@@ -77,10 +68,8 @@
 
     invoke-direct {v7, v8, v0}, Leck;-><init>(Lick;Liaj;)V
 
-    .line 10
     iput-object v7, p0, Lecr;->b:Leah;
 
-    .line 12
     invoke-interface {p1}, Lgkg;->c()Liaj;
 
     move-result-object v0
@@ -93,7 +82,6 @@
 
     move-result-object v0
 
-    .line 13
     const/4 v1, 0x2
 
     new-array v1, v1, [Liaj;
@@ -102,7 +90,6 @@
 
     iget-object v3, p0, Lecr;->b:Leah;
 
-    .line 14
     invoke-interface {v3}, Leah;->a()Liaj;
 
     move-result-object v3
@@ -117,7 +104,6 @@
 
     iput-object v0, p0, Lecr;->d:Liaj;
 
-    .line 15
     return-void
 .end method
 
@@ -126,8 +112,6 @@
 .method public final a()Liaj;
     .locals 1
 
-    .prologue
-    .line 25
     iget-object v0, p0, Lecr;->d:Liaj;
 
     return-object v0
@@ -136,15 +120,12 @@
 .method public final a(Leai;Leap;)V
     .locals 5
 
-    .prologue
-    .line 16
     iget-object v0, p0, Lecr;->a:Lgkg;
 
     invoke-interface {v0}, Lgkg;->d()Lgkd;
 
     move-result-object v0
 
-    .line 17
     iget-object v1, p0, Lecr;->c:Licj;
 
     iget-object v2, p0, Lecr;->a:Lgkg;
@@ -191,27 +172,21 @@
 
     invoke-interface {v1, v2}, Licj;->b(Ljava/lang/String;)V
 
-    .line 18
     if-eqz v0, :cond_0
 
-    .line 20
     iget-object v1, p2, Leap;->a:Ldhi;
 
-    .line 21
     iget-object v1, v1, Ldhi;->g:Lhzg;
 
     invoke-virtual {v1, v0}, Lhzg;->a(Libw;)Libw;
 
-    .line 22
     iget-object v0, p0, Lecr;->b:Leah;
 
     invoke-interface {v0, p1, p2}, Leah;->a(Leai;Leap;)V
 
-    .line 24
     :goto_0
     return-void
 
-    .line 23
     :cond_0
     iget-object v0, p0, Lecr;->c:Licj;
 
@@ -225,8 +200,6 @@
 .method public final b()Liaj;
     .locals 1
 
-    .prologue
-    .line 26
     iget-object v0, p0, Lecr;->b:Leah;
 
     invoke-interface {v0}, Leah;->b()Liaj;

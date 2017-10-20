@@ -15,36 +15,26 @@
 .method public constructor <init>(Ldjo;Ldjo;Ldjo;)V
     .locals 0
 
-    .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8
     iput-object p2, p0, Ldjn;->b:Ldjo;
 
-    .line 9
     iput-object p1, p0, Ldjn;->a:Ldjo;
 
-    .line 10
     iput-object p3, p0, Ldjn;->c:Ldjo;
 
-    .line 11
     return-void
 .end method
 
 .method public static a()Ldjn;
     .locals 2
 
-    .prologue
-    .line 1
     sget-object v0, Ldjo;->a:Ldjo;
 
-    .line 2
     new-instance v1, Ldjn;
 
     invoke-direct {v1, v0, v0, v0}, Ldjn;-><init>(Ldjo;Ldjo;Ldjo;)V
 
-    .line 3
     return-object v1
 .end method
 
@@ -53,8 +43,6 @@
 .method public final a(Ldjo;)Ldjn;
     .locals 3
 
-    .prologue
-    .line 4
     new-instance v0, Ldjn;
 
     iget-object v1, p0, Ldjn;->b:Ldjo;
@@ -69,8 +57,6 @@
 .method public final b(Ldjo;)Ldjn;
     .locals 3
 
-    .prologue
-    .line 5
     new-instance v0, Ldjn;
 
     iget-object v1, p0, Ldjn;->a:Ldjo;
@@ -85,8 +71,6 @@
 .method public final c(Ldjo;)Ldjn;
     .locals 3
 
-    .prologue
-    .line 6
     new-instance v0, Ldjn;
 
     iget-object v1, p0, Ldjn;->a:Ldjo;
@@ -101,8 +85,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 12
     iget-object v0, p0, Ldjn;->a:Ldjo;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

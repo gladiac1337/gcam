@@ -33,8 +33,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 18
     const-string v0, "SingleKeyCache"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -49,39 +47,28 @@
 .method public constructor <init>(Ljuk;Ljava/lang/String;Ljava/util/concurrent/Executor;Letf;Ldyl;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Leth;->h:Ljava/lang/Object;
 
-    .line 3
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     invoke-static {p2}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     iput-object p1, p0, Leth;->b:Ljuk;
 
-    .line 6
     iput-object p2, p0, Leth;->c:Ljava/lang/String;
 
-    .line 7
     iput-object p3, p0, Leth;->d:Ljava/util/concurrent/Executor;
 
-    .line 8
     iput-object p4, p0, Leth;->e:Letf;
 
-    .line 9
     iput-object p5, p0, Leth;->f:Ldyl;
 
-    .line 10
     return-void
 .end method
 
@@ -90,19 +77,15 @@
 .method public final a()Ljuk;
     .locals 3
 
-    .prologue
-    .line 11
     iget-object v1, p0, Leth;->h:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 12
     :try_start_0
     iget-object v0, p0, Leth;->g:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    .line 13
     iget-object v0, p0, Leth;->g:Ljava/lang/Object;
 
     invoke-static {v0}, Ljtv;->b(Ljava/lang/Object;)Ljuk;
@@ -111,17 +94,14 @@
 
     monitor-exit v1
 
-    .line 15
     :goto_0
     return-object v0
 
-    .line 14
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 15
     iget-object v0, p0, Leth;->b:Ljuk;
 
     new-instance v1, Leti;
@@ -136,7 +116,6 @@
 
     goto :goto_0
 
-    .line 14
     :catchall_0
     move-exception v0
 
@@ -151,8 +130,6 @@
 .method public final a(Ljava/lang/Object;)Ljuk;
     .locals 4
 
-    .prologue
-    .line 16
     sget-object v0, Leth;->a:Ljava/lang/String;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -189,7 +166,6 @@
 
     invoke-static {v0, v1}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 17
     iget-object v0, p0, Leth;->b:Ljuk;
 
     new-instance v1, Letk;

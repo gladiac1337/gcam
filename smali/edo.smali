@@ -17,11 +17,8 @@
 .method public constructor <init>(Leah;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lhzv;
 
     sget-object v1, Leak;->a:Leak;
@@ -30,23 +27,18 @@
 
     iput-object v0, p0, Ledo;->b:Lhzv;
 
-    .line 3
     iput-object p1, p0, Ledo;->a:Leah;
 
-    .line 4
     return-void
 .end method
 
 .method private final a(Leak;)V
     .locals 1
 
-    .prologue
-    .line 13
     iget-object v0, p0, Ledo;->b:Lhzv;
 
     invoke-virtual {v0, p1}, Lhzv;->a(Ljava/lang/Object;)V
 
-    .line 14
     return-void
 .end method
 
@@ -55,8 +47,6 @@
 .method public final a()Liaj;
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Ledo;->a:Leah;
 
     invoke-interface {v0}, Leah;->a()Liaj;
@@ -69,29 +59,23 @@
 .method public final a(Leai;Leap;)V
     .locals 2
 
-    .prologue
-    .line 5
     :try_start_0
     sget-object v0, Leak;->b:Leak;
 
     invoke-direct {p0, v0}, Ledo;->a(Leak;)V
 
-    .line 6
     iget-object v0, p0, Ledo;->a:Leah;
 
     invoke-interface {v0, p1, p2}, Leah;->a(Leai;Leap;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7
     sget-object v0, Leak;->a:Leak;
 
     invoke-direct {p0, v0}, Ledo;->a(Leak;)V
 
-    .line 8
     return-void
 
-    .line 9
     :catchall_0
     move-exception v0
 
@@ -105,8 +89,6 @@
 .method public final b()Liaj;
     .locals 1
 
-    .prologue
-    .line 11
     iget-object v0, p0, Ledo;->a:Leah;
 
     invoke-interface {v0}, Leah;->b()Liaj;
@@ -119,8 +101,6 @@
 .method public final c()Liaj;
     .locals 1
 
-    .prologue
-    .line 12
     iget-object v0, p0, Ledo;->b:Lhzv;
 
     return-object v0

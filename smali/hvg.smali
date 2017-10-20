@@ -14,8 +14,6 @@
 .method public constructor <init>(Ljava/util/concurrent/Executor;Lhvc;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/lang/Object;

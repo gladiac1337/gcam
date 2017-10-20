@@ -19,11 +19,8 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 2
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/RefocusProgressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -36,7 +33,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->b:Landroid/graphics/drawable/Drawable;
 
-    .line 3
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/RefocusProgressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -49,7 +45,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->c:Landroid/graphics/drawable/Drawable;
 
-    .line 4
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/RefocusProgressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -62,7 +57,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->d:Landroid/graphics/drawable/Drawable;
 
-    .line 6
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/RefocusProgressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -75,18 +69,14 @@
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->e:Landroid/graphics/drawable/Drawable;
 
-    .line 7
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    .prologue
-    .line 8
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 9
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/RefocusProgressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -99,7 +89,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->b:Landroid/graphics/drawable/Drawable;
 
-    .line 10
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/RefocusProgressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -112,7 +101,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->c:Landroid/graphics/drawable/Drawable;
 
-    .line 11
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/RefocusProgressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -125,7 +113,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->d:Landroid/graphics/drawable/Drawable;
 
-    .line 13
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/RefocusProgressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -138,18 +125,14 @@
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->e:Landroid/graphics/drawable/Drawable;
 
-    .line 14
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
     .locals 2
 
-    .prologue
-    .line 15
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 16
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/RefocusProgressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -162,7 +145,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->b:Landroid/graphics/drawable/Drawable;
 
-    .line 17
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/RefocusProgressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -175,7 +157,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->c:Landroid/graphics/drawable/Drawable;
 
-    .line 18
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/RefocusProgressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -188,7 +169,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->d:Landroid/graphics/drawable/Drawable;
 
-    .line 20
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/RefocusProgressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -201,7 +181,6 @@
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->e:Landroid/graphics/drawable/Drawable;
 
-    .line 21
     return-void
 .end method
 
@@ -210,13 +189,10 @@
 .method public final a(F)V
     .locals 14
 
-    .prologue
-    .line 22
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/RefocusProgressView;->getHeight()I
 
     move-result v0
 
-    .line 23
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/RefocusProgressView;->getWidth()I
 
     move-result v1
@@ -235,63 +211,54 @@
 
     double-to-int v1, v2
 
-    .line 24
     iget-object v2, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->b:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getMinimumHeight()I
 
     move-result v2
 
-    .line 25
     iget-object v3, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->b:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getMinimumWidth()I
 
     move-result v3
 
-    .line 26
     iget-object v4, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->c:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getMinimumWidth()I
 
     move-result v4
 
-    .line 27
     iget-object v5, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->d:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v5}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v5
 
-    .line 28
     iget-object v6, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->d:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v6}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v6
 
-    .line 29
     iget-object v7, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->e:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v7}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v7
 
-    .line 30
     iget-object v8, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->e:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v8}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v8
 
-    .line 31
     add-int/lit8 v0, v0, -0x8
 
     sub-int/2addr v0, v2
 
     sub-int/2addr v0, v5
 
-    .line 32
     int-to-float v9, v0
 
     mul-float/2addr v9, p1
@@ -304,29 +271,22 @@
 
     double-to-int v9, v10
 
-    .line 33
     add-int/2addr v0, v2
 
     sub-int/2addr v0, v9
 
-    .line 34
     add-int/lit8 v2, v0, 0x4
 
-    .line 35
     add-int/lit8 v10, v2, 0x4
 
     add-int/2addr v10, v5
 
-    .line 36
     div-int v11, v5, v8
 
-    .line 37
     mul-int/2addr v7, v11
 
-    .line 38
     mul-int/2addr v8, v11
 
-    .line 39
     iget-object v11, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->b:Landroid/graphics/drawable/Drawable;
 
     div-int/lit8 v12, v3, 0x2
@@ -341,7 +301,6 @@
 
     invoke-virtual {v11, v12, v13, v3, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 40
     iget-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->d:Landroid/graphics/drawable/Drawable;
 
     div-int/lit8 v3, v6, 0x2
@@ -356,7 +315,6 @@
 
     invoke-virtual {v0, v3, v2, v6, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 41
     iget-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->e:Landroid/graphics/drawable/Drawable;
 
     div-int/lit8 v3, v7, 0x2
@@ -371,7 +329,6 @@
 
     invoke-virtual {v0, v3, v2, v5, v6}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 42
     iget-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->c:Landroid/graphics/drawable/Drawable;
 
     div-int/lit8 v2, v4, 0x2
@@ -386,45 +343,35 @@
 
     invoke-virtual {v0, v2, v10, v1, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 43
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/RefocusProgressView;->invalidate()V
 
-    .line 44
     return-void
 .end method
 
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 1
 
-    .prologue
-    .line 45
     invoke-super {p0, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
-    .line 46
     iget-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->b:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 47
     iget-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->c:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 48
     iget-boolean v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->a:Z
 
     if-eqz v0, :cond_0
 
-    .line 49
     iget-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->e:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 51
     :goto_0
     return-void
 
-    .line 50
     :cond_0
     iget-object v0, p0, Lcom/google/android/apps/refocus/RefocusProgressView;->d:Landroid/graphics/drawable/Drawable;
 

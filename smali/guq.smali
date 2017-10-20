@@ -17,8 +17,6 @@
 .method constructor <init>(Lgun;Ljuw;I)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lguq;->d:Lgun;
 
     iput-object p2, p0, Lguq;->a:Ljuw;
@@ -39,8 +37,6 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lguq;->a:Ljuw;
 
     iget-object v1, p0, Lguq;->d:Lgun;
@@ -61,6 +57,5 @@
 
     invoke-virtual {v0, v1}, Ljsl;->a(Ljava/lang/Object;)Z
 
-    .line 3
     return-void
 .end method

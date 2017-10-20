@@ -13,8 +13,6 @@
 .method constructor <init>(Liaj;Ljgy;Liaj;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p2, p0, Liau;->b:Ljgy;
 
     iput-object p3, p0, Liau;->c:Liaj;
@@ -29,8 +27,6 @@
 .method protected final b(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Liau;->b:Ljgy;
 
     invoke-interface {v0, p1}, Ljgy;->a(Ljava/lang/Object;)Ljava/lang/Object;
@@ -43,8 +39,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 3
     const-string v0, "TransformedObs"
 
     invoke-static {v0}, Litx;->c(Ljava/lang/String;)Ljhf;
@@ -55,26 +49,21 @@
 
     iget-object v2, p0, Liau;->c:Liaj;
 
-    .line 5
     invoke-virtual {v0, v1, v2}, Ljhf;->a(Ljava/lang/String;Ljava/lang/Object;)Ljhf;
 
     move-result-object v0
 
-    .line 6
     const-string v1, "func"
 
     iget-object v2, p0, Liau;->b:Ljgy;
 
-    .line 8
     invoke-virtual {v0, v1, v2}, Ljhf;->a(Ljava/lang/String;Ljava/lang/Object;)Ljhf;
 
     move-result-object v0
 
-    .line 9
     invoke-virtual {v0}, Ljhf;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 10
     return-object v0
 .end method

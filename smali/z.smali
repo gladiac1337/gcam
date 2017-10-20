@@ -11,8 +11,6 @@
 .method constructor <init>(Lv;)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lz;->a:Lv;
 
     const/4 v0, 0x0
@@ -27,8 +25,6 @@
 .method protected final a()F
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lz;->a:Lv;
 
     iget v0, v0, Lv;->h:F

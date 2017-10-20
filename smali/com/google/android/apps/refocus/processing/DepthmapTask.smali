@@ -68,8 +68,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 314
     const-string v0, "DepthmapTask"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -78,128 +76,94 @@
 
     sput-object v0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->TAG:Ljava/lang/String;
 
-    .line 315
     const/4 v0, 0x2
 
-    .line 316
     invoke-static {v0}, Landroid/media/CameraProfile;->getJpegEncodingQualityParameter(I)I
 
     move-result v0
 
     sput v0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->JPEG_QUALITY:I
 
-    .line 317
     return-void
 .end method
 
 .method public constructor <init>(Lfuj;Lhgs;IIZLjava/lang/String;Landroid/location/Location;Leot;Lfuh;Lbhm;Lidb;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->memoryManager:Lfuj;
 
-    .line 3
     iput-object p2, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->dataset:Lhgs;
 
-    .line 4
     iput p3, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->orientation:I
 
-    .line 5
     iput p4, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->focalLength35mm:I
 
-    .line 6
     iput-boolean p5, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->frontFacingCamera:Z
 
-    .line 7
     iput-object p6, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->author:Ljava/lang/String;
 
-    .line 8
     iput-object p7, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->location:Landroid/location/Location;
 
-    .line 9
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->startTimeMillis:J
 
-    .line 10
     iput-object p8, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->session$9HHMUR9FCTNMUPRCCKNM2RJ4E9NMIP1FC5O70SPFCDGMQPBIC4NMOPB7C5HNIBR1E1O2USR5EDPMIRRE5T1M2S3KELP6AKR5EDPMIRRE7C______0:Leot;
 
-    .line 11
     iput-object v2, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->frames:Ljava/util/ArrayList;
 
-    .line 12
     iput-object v2, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->reference:Lcom/google/android/apps/refocus/image/ColorImage;
 
-    .line 13
     iput-object p9, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->maxNativeMemory:Lfuh;
 
-    .line 14
     iput-object p10, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->gservicesHelper:Lbhm;
 
-    .line 15
     iput-object p11, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->usageStatistics$9HHMUR9FCTNMUPRCCKNM2RJ4E9NMIP1FC5O70SPFCDGMQPBIC4NMORR7CTKMSPPFALPM2PR5ADQ62T39EDQ6IORJ7C______0:Lidb;
 
-    .line 16
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->finishedCallback:Ljava/util/List;
 
-    .line 17
     return-void
 .end method
 
 .method public constructor <init>(Lfuj;Lhgs;Ljava/util/ArrayList;Lcom/google/android/apps/refocus/image/ColorImage;IIZLjava/lang/String;Landroid/location/Location;Lgrp;Lfuh;Lbhm;Lidb;)V
     .locals 6
 
-    .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     iput-object p1, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->memoryManager:Lfuj;
 
-    .line 20
     iput-object p2, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->dataset:Lhgs;
 
-    .line 21
     iput-object p3, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->frames:Ljava/util/ArrayList;
 
-    .line 22
     iput-object p4, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->reference:Lcom/google/android/apps/refocus/image/ColorImage;
 
-    .line 23
     iput p5, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->orientation:I
 
-    .line 24
     iput p6, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->focalLength35mm:I
 
-    .line 25
     iput-boolean p7, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->frontFacingCamera:Z
 
-    .line 26
     iput-object p8, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->author:Ljava/lang/String;
 
-    .line 27
     iput-object p9, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->location:Landroid/location/Location;
 
-    .line 28
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->startTimeMillis:J
 
-    .line 30
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->getName()Ljava/lang/String;
 
     move-result-object v2
@@ -214,7 +178,6 @@
 
     move-result-object v3
 
-    .line 31
     move-object/from16 v0, p10
 
     invoke-interface {v0, v2, v4, v5, v3}, Lgrp;->a(Ljava/lang/String;JLjhi;)Leot;
@@ -223,37 +186,30 @@
 
     iput-object v2, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->session$9HHMUR9FCTNMUPRCCKNM2RJ4E9NMIP1FC5O70SPFCDGMQPBIC4NMOPB7C5HNIBR1E1O2USR5EDPMIRRE5T1M2S3KELP6AKR5EDPMIRRE7C______0:Leot;
 
-    .line 32
     move-object/from16 v0, p11
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->maxNativeMemory:Lfuh;
 
-    .line 33
     move-object/from16 v0, p12
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->gservicesHelper:Lbhm;
 
-    .line 34
     move-object/from16 v0, p13
 
     iput-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->usageStatistics$9HHMUR9FCTNMUPRCCKNM2RJ4E9NMIP1FC5O70SPFCDGMQPBIC4NMORR7CTKMSPPFALPM2PR5ADQ62T39EDQ6IORJ7C______0:Lidb;
 
-    .line 35
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v2, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->finishedCallback:Ljava/util/List;
 
-    .line 36
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/google/android/apps/refocus/processing/DepthmapTask;)Lcom/google/android/apps/refocus/image/ColorImage;
     .locals 1
 
-    .prologue
-    .line 312
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->reference:Lcom/google/android/apps/refocus/image/ColorImage;
 
     return-object v0
@@ -262,8 +218,6 @@
 .method static synthetic access$100(Lcom/google/android/apps/refocus/processing/DepthmapTask;)Lhgs;
     .locals 1
 
-    .prologue
-    .line 313
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->dataset:Lhgs;
 
     return-object v0
@@ -272,31 +226,24 @@
 .method private computeRGBZ(Landroid/content/Context;Lcom/google/android/apps/refocus/processing/ProgressCallback;Z)Lcom/google/android/apps/refocus/image/RGBZ;
     .locals 9
 
-    .prologue
-    .line 156
     invoke-direct {p0}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->isValid()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 157
     const/4 v0, 0x0
 
-    .line 197
     :goto_0
     return-object v0
 
-    .line 158
     :cond_0
     invoke-direct {p0}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->getNumFrames()I
 
     move-result v6
 
-    .line 159
     if-gtz v6, :cond_1
 
-    .line 160
     new-instance v0, Lcom/google/android/apps/refocus/image/RGBZ;
 
     const/4 v1, 0x1
@@ -317,7 +264,6 @@
 
     goto :goto_0
 
-    .line 161
     :cond_1
     const/4 v0, 0x1
 
@@ -325,28 +271,23 @@
 
     move-result-object v0
 
-    .line 162
     const/4 v1, 0x0
 
     invoke-direct {p0, v1}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->getFrame(I)Lcom/google/android/apps/refocus/image/ColorImage;
 
     move-result-object v7
 
-    .line 163
     if-nez v0, :cond_2
 
-    .line 164
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 165
     :cond_2
     invoke-virtual {p0, v0, v7}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->enforceAspectRatio(Landroid/graphics/Bitmap;Lcom/google/android/apps/refocus/image/ColorImage;)Landroid/graphics/Bitmap;
 
     move-result-object v8
 
-    .line 166
     invoke-virtual {v8}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -357,7 +298,6 @@
 
     mul-int/2addr v0, v1
 
-    .line 167
     invoke-virtual {v8}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
@@ -370,17 +310,14 @@
 
     if-eq v0, v1, :cond_3
 
-    .line 168
     sget-object v0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->TAG:Ljava/lang/String;
 
     const-string v1, "Reference / frame aspect ratio mismatch"
 
     invoke-static {v0, v1}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 169
     sget-object v0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->TAG:Ljava/lang/String;
 
-    .line 170
     invoke-virtual {v8}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
@@ -419,10 +356,8 @@
 
     move-result-object v1
 
-    .line 171
     invoke-static {v0, v1}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 172
     sget-object v0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->TAG:Ljava/lang/String;
 
     invoke-virtual {v7}, Lcom/google/android/apps/refocus/image/ColorImage;->getWidth()I
@@ -465,7 +400,6 @@
 
     invoke-static {v0, v1}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 173
     :cond_3
     const/4 v0, 0x0
 
@@ -473,24 +407,20 @@
 
     invoke-interface {p2, v0, v1}, Lcom/google/android/apps/refocus/processing/ProgressCallback;->setRange(FF)V
 
-    .line 174
     invoke-virtual {v7}, Lcom/google/android/apps/refocus/image/ColorImage;->getWidth()I
 
     move-result v0
 
-    .line 175
     invoke-virtual {v7}, Lcom/google/android/apps/refocus/image/ColorImage;->getHeight()I
 
     move-result v1
 
-    .line 176
     const/4 v2, 0x1
 
     invoke-direct {p0, p3, v2}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->getDepthProcessingMaxSize(ZZ)I
 
     move-result v2
 
-    .line 178
     invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v3
@@ -507,28 +437,24 @@
 
     const-wide/high16 v4, 0x4000000000000000L    # 2.0
 
-    .line 179
     invoke-static {v4, v5}, Ljava/lang/Math;->log(D)D
 
     move-result-wide v4
 
     div-double/2addr v2, v4
 
-    .line 180
     invoke-static {v2, v3}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide v2
 
     const-wide/16 v4, 0x0
 
-    .line 181
     invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->max(DD)D
 
     move-result-wide v2
 
     double-to-int v2, v2
 
-    .line 182
     iget v3, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->focalLength35mm:I
 
     const/4 v4, 0x1
@@ -537,18 +463,15 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/android/apps/refocus/processing/ProcessingNative;->Init(IIIIZLcom/google/android/apps/refocus/processing/ProgressCallback;)V
 
-    .line 183
     const/4 v0, 0x0
 
     invoke-static {v7, v0}, Lcom/google/android/apps/refocus/processing/ProcessingNative;->AddFrame(Lcom/google/android/apps/refocus/image/ColorImage;F)V
 
-    .line 184
     const/4 v0, 0x1
 
     :goto_1
     if-ge v0, v6, :cond_4
 
-    .line 185
     invoke-direct {p0, v0}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->getFrame(I)Lcom/google/android/apps/refocus/image/ColorImage;
 
     move-result-object v1
@@ -561,16 +484,13 @@
 
     invoke-static {v1, v2}, Lcom/google/android/apps/refocus/processing/ProcessingNative;->AddFrame(Lcom/google/android/apps/refocus/image/ColorImage;F)V
 
-    .line 186
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 187
     :cond_4
     const/4 v0, 0x0
 
-    .line 188
     const/4 v1, 0x1
 
     :try_start_0
@@ -580,16 +500,13 @@
 
     move-result-object v0
 
-    .line 192
     :goto_2
     if-nez v0, :cond_5
 
-    .line 193
     new-instance v0, Lcom/google/android/apps/refocus/image/RGBZ;
 
     invoke-direct {v0, v8}, Lcom/google/android/apps/refocus/image/RGBZ;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 194
     :cond_5
     iget v1, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->orientation:I
 
@@ -597,7 +514,6 @@
 
     move-result-object v0
 
-    .line 195
     iget-object v1, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->session$9HHMUR9FCTNMUPRCCKNM2RJ4E9NMIP1FC5O70SPFCDGMQPBIC4NMOPB7C5HNIBR1E1O2USR5EDPMIRRE5T1M2S3KELP6AKR5EDPMIRRE7C______0:Leot;
 
     const v2, 0x7f1102b4
@@ -612,18 +528,15 @@
 
     invoke-interface {v1, v2}, Leot;->a(Lgyg;)V
 
-    .line 196
     iget-object v1, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->gservicesHelper:Lbhm;
 
     invoke-static {p1, v1, v0, p2}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->renderRGBZ(Landroid/content/Context;Lbhm;Lcom/google/android/apps/refocus/image/RGBZ;Lcom/google/android/apps/refocus/processing/ProgressCallback;)V
 
     goto/16 :goto_0
 
-    .line 190
     :catch_0
     move-exception v1
 
-    .line 191
     sget-object v2, Lcom/google/android/apps/refocus/processing/DepthmapTask;->TAG:Ljava/lang/String;
 
     const-string v3, "ComputeDepthmap segment faulted"
@@ -636,17 +549,14 @@
 .method private failAndFinish(Landroid/content/Context;)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 124
     sget-object v0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->TAG:Ljava/lang/String;
 
     const-string v1, "Processing was successful: false"
 
     invoke-static {v0, v1}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 125
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->session$9HHMUR9FCTNMUPRCCKNM2RJ4E9NMIP1FC5O70SPFCDGMQPBIC4NMOPB7C5HNIBR1E1O2USR5EDPMIRRE5T1M2S3KELP6AKR5EDPMIRRE7C______0:Leot;
 
     const v1, 0x7f1100ae
@@ -661,26 +571,20 @@
 
     invoke-interface {v0, v1, v3, v2}, Lgon;->a(Lgyg;ZLjava/lang/String;)V
 
-    .line 126
     return-void
 .end method
 
 .method private getDepthProcessingMaxSize(ZZ)I
     .locals 1
 
-    .prologue
     const/16 v0, 0x280
 
-    .line 198
     if-eqz p2, :cond_1
 
-    .line 199
     if-eqz p1, :cond_0
 
-    .line 200
     const/16 v0, 0x500
 
-    .line 203
     :cond_0
     :goto_0
     return v0
@@ -696,13 +600,10 @@
 .method private getFrame(I)Lcom/google/android/apps/refocus/image/ColorImage;
     .locals 1
 
-    .prologue
-    .line 216
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->frames:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    .line 217
     :try_start_0
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->frames:Ljava/util/ArrayList;
 
@@ -716,11 +617,9 @@
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 220
     :goto_0
     return-object v0
 
-    .line 219
     :catch_0
     move-exception v0
 
@@ -728,7 +627,6 @@
 
     goto :goto_0
 
-    .line 220
     :cond_0
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->dataset:Lhgs;
 
@@ -750,18 +648,14 @@
 .method private getImageMaxSize(ZZ)I
     .locals 1
 
-    .prologue
     const/16 v0, 0x800
 
-    .line 204
     if-eqz p2, :cond_1
 
-    .line 205
     if-eqz p1, :cond_0
 
     const/16 v0, 0x1000
 
-    .line 206
     :cond_0
     :goto_0
     return v0
@@ -777,28 +671,22 @@
 .method private getNumFrames()I
     .locals 3
 
-    .prologue
-    .line 210
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->frames:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_1
 
-    .line 211
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->frames:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 215
     :cond_0
     return v0
 
-    .line 212
     :cond_1
     const/4 v0, 0x0
 
-    .line 213
     :goto_0
     new-instance v1, Ljava/io/File;
 
@@ -816,7 +704,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 214
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -825,38 +712,30 @@
 .method private getReferenceBitmap(ZZ)Landroid/graphics/Bitmap;
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 221
-    .line 222
     iget-object v1, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->reference:Lcom/google/android/apps/refocus/image/ColorImage;
 
     if-eqz v1, :cond_0
 
-    .line 223
     iget-object v1, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->reference:Lcom/google/android/apps/refocus/image/ColorImage;
 
     invoke-static {v1}, Lcom/google/android/apps/refocus/image/ColorImageIO;->toBitmap(Lcom/google/android/apps/refocus/image/ColorImage;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 226
     :goto_0
     if-nez v2, :cond_1
 
-    .line 227
     sget-object v1, Lcom/google/android/apps/refocus/processing/DepthmapTask;->TAG:Ljava/lang/String;
 
     const-string v2, "No valid reference Bitmap found"
 
     invoke-static {v1, v2}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 251
     :goto_1
     return-object v0
 
-    .line 224
     :cond_0
     new-instance v1, Ljava/io/File;
 
@@ -874,7 +753,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 225
     iget-object v1, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->dataset:Lhgs;
 
     invoke-virtual {v1}, Lhgs;->a()Ljava/lang/String;
@@ -887,30 +765,25 @@
 
     goto :goto_0
 
-    .line 229
     :cond_1
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
-    .line 230
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v3
 
-    .line 231
     invoke-direct {p0, p1, p2}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->getImageMaxSize(ZZ)I
 
     move-result v1
 
-    .line 232
     invoke-static {v0, v3}, Ljava/lang/Math;->max(II)I
 
     move-result v4
 
     if-gt v4, v1, :cond_3
 
-    .line 233
     rem-int/lit8 v1, v0, 0x8
 
     if-nez v1, :cond_2
@@ -921,23 +794,17 @@
 
     move-object v0, v2
 
-    .line 234
     goto :goto_1
 
-    .line 235
     :cond_2
     rem-int/lit8 v1, v0, 0x8
 
-    .line 236
     rem-int/lit8 v4, v3, 0x8
 
-    .line 237
     sub-int/2addr v0, v1
 
-    .line 238
     sub-int/2addr v3, v4
 
-    .line 239
     div-int/lit8 v1, v1, 0x2
 
     div-int/lit8 v4, v4, 0x2
@@ -946,44 +813,36 @@
 
     move-result-object v0
 
-    .line 240
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
     goto :goto_1
 
-    .line 242
     :cond_3
     if-le v0, v3, :cond_4
 
-    .line 243
     mul-int/2addr v3, v1
 
     div-int v0, v3, v0
 
-    .line 247
     :goto_2
     rem-int/lit8 v3, v1, 0x8
 
     sub-int/2addr v1, v3
 
-    .line 248
     rem-int/lit8 v3, v0, 0x8
 
     sub-int/2addr v0, v3
 
-    .line 249
     const/4 v3, 0x1
 
     invoke-static {v2, v1, v0, v3}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 250
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
     goto :goto_1
 
-    .line 245
     :cond_4
     mul-int/2addr v0, v1
 
@@ -995,7 +854,6 @@
 
     move v0, v5
 
-    .line 246
     goto :goto_2
 
     :cond_5
@@ -1007,14 +865,10 @@
 .method private isHighResSupported(Lfuj;)Z
     .locals 4
 
-    .prologue
-    .line 265
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->maxNativeMemory:Lfuh;
 
-    .line 266
     iget-wide v0, v0, Lfuh;->a:J
 
-    .line 267
     const-wide/32 v2, 0xaf00000
 
     cmp-long v0, v0, v2
@@ -1035,12 +889,10 @@
 .method private isValid()Z
     .locals 4
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 207
     iget-object v2, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->frames:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
@@ -1056,7 +908,6 @@
 
     iget-object v2, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->dataset:Lhgs;
 
-    .line 208
     iget-object v3, v2, Lhgs;->a:Ljava/lang/String;
 
     if-eqz v3, :cond_3
@@ -1081,7 +932,6 @@
 
     move v2, v1
 
-    .line 209
     :goto_0
     if-eqz v2, :cond_2
 
@@ -1094,20 +944,16 @@
     :cond_3
     move v2, v0
 
-    .line 208
     goto :goto_0
 .end method
 
 .method private processInternal$51662RJ4E9NMIP1FCDNMST35DPQ2UGRFDPQ6AU3K7D666RRD5TJMURR7DHIIUOBECHP6UQB45TGN0S3J5THM2RB5E9GIURB5DLNN4U9F9LIMQRRIF56M2RJ1CTIN4EQCCDNMQBR7DTNMER355TGMSP3IDTKM8BR1E1O76BR3C5MMASJ15TM6APR1CDSIUOBGE0NN6PBJEDKMURHF8DGN0T3LE9IL6PBJEDKMURHR55B0____0(Landroid/content/Context;Lfuj;Leot;)V
     .locals 2
 
-    .prologue
-    .line 105
     new-instance v0, Lcom/google/android/apps/refocus/processing/ProgressCallbackImpl;
 
     invoke-direct {v0, p3}, Lcom/google/android/apps/refocus/processing/ProgressCallbackImpl;-><init>(Leot;)V
 
-    .line 106
     invoke-direct {p0, p2}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->isHighResSupported(Lfuj;)Z
 
     move-result v1
@@ -1116,20 +962,15 @@
 
     move-result-object v0
 
-    .line 107
     if-nez v0, :cond_0
 
-    .line 108
     invoke-direct {p0, p1}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->failAndFinish(Landroid/content/Context;)V
 
-    .line 110
     :goto_0
     invoke-direct {p0}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->removeTemporaryFiles()V
 
-    .line 111
     return-void
 
-    .line 109
     :cond_0
     invoke-direct {p0, v0}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->saveAndFinish(Lcom/google/android/apps/refocus/image/RGBZ;)V
 
@@ -1139,13 +980,10 @@
 .method private readReferenceExifTags(Lcom/google/android/libraries/camera/exif/ExifInterface;)V
     .locals 2
 
-    .prologue
-    .line 252
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->reference:Lcom/google/android/apps/refocus/image/ColorImage;
 
     if-eqz v0, :cond_1
 
-    .line 253
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->reference:Lcom/google/android/apps/refocus/image/ColorImage;
 
     invoke-virtual {v0}, Lcom/google/android/apps/refocus/image/ColorImage;->getFormat()I
@@ -1156,7 +994,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 254
     :try_start_0
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->reference:Lcom/google/android/apps/refocus/image/ColorImage;
 
@@ -1168,12 +1005,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 264
     :cond_0
     :goto_0
     return-void
 
-    .line 257
     :catch_0
     move-exception v0
 
@@ -1185,7 +1020,6 @@
 
     goto :goto_0
 
-    .line 259
     :cond_1
     new-instance v0, Ljava/io/File;
 
@@ -1203,7 +1037,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 260
     :try_start_1
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->dataset:Lhgs;
 
@@ -1217,7 +1050,6 @@
 
     goto :goto_0
 
-    .line 263
     :catch_1
     move-exception v0
 
@@ -1233,13 +1065,10 @@
 .method private removeTemporaryFiles()V
     .locals 7
 
-    .prologue
-    .line 112
     invoke-direct {p0}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->getNumFrames()I
 
     move-result v2
 
-    .line 113
     const/4 v0, 0x0
 
     move v1, v0
@@ -1247,7 +1076,6 @@
     :goto_0
     if-ge v1, v2, :cond_2
 
-    .line 114
     new-instance v3, Ljava/io/File;
 
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->dataset:Lhgs;
@@ -1258,14 +1086,12 @@
 
     invoke-direct {v3, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 115
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 116
     sget-object v4, Lcom/google/android/apps/refocus/processing/DepthmapTask;->TAG:Ljava/lang/String;
 
     const-string v5, "delete "
@@ -1293,10 +1119,8 @@
     :goto_1
     invoke-static {v4, v0}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 117
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 118
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -1304,7 +1128,6 @@
 
     goto :goto_0
 
-    .line 116
     :cond_1
     new-instance v0, Ljava/lang/String;
 
@@ -1312,7 +1135,6 @@
 
     goto :goto_1
 
-    .line 119
     :cond_2
     new-instance v1, Ljava/io/File;
 
@@ -1324,14 +1146,12 @@
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 120
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 121
     sget-object v2, Lcom/google/android/apps/refocus/processing/DepthmapTask;->TAG:Ljava/lang/String;
 
     const-string v3, "delete "
@@ -1359,14 +1179,11 @@
     :goto_2
     invoke-static {v2, v0}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 122
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 123
     :cond_3
     return-void
 
-    .line 121
     :cond_4
     new-instance v0, Ljava/lang/String;
 
@@ -1378,52 +1195,42 @@
 .method private static renderRGBZ(Landroid/content/Context;Lbhm;Lcom/google/android/apps/refocus/image/RGBZ;Lcom/google/android/apps/refocus/processing/ProgressCallback;)V
     .locals 6
 
-    .prologue
-    .line 268
     invoke-virtual {p2}, Lcom/google/android/apps/refocus/image/RGBZ;->hasDepthmap()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 283
     :goto_0
     return-void
 
-    .line 270
     :cond_0
     new-instance v0, Lcom/google/android/apps/refocus/processing/DepthOfFieldOptions;
 
     invoke-direct {v0, p2}, Lcom/google/android/apps/refocus/processing/DepthOfFieldOptions;-><init>(Lcom/google/android/apps/refocus/image/RGBZ;)V
 
-    .line 271
     new-instance v1, Lcom/google/android/apps/refocus/processing/FaceDetector;
 
     invoke-direct {v1, p0, p1}, Lcom/google/android/apps/refocus/processing/FaceDetector;-><init>(Landroid/content/Context;Lbhm;)V
 
-    .line 272
     iget-object v2, v0, Lcom/google/android/apps/refocus/processing/DepthOfFieldOptions;->rgbz:Lcom/google/android/apps/refocus/image/RGBZ;
 
     invoke-static {v1, v2}, Lcom/google/android/apps/refocus/processing/FocusSettings;->createDefault(Lcom/google/android/apps/refocus/processing/FaceDetector;Lcom/google/android/apps/refocus/image/RGBZ;)Lcom/google/android/apps/refocus/processing/FocusSettings;
 
     move-result-object v1
 
-    .line 273
     iget v2, v1, Lcom/google/android/apps/refocus/processing/FocusSettings;->focalDistance:F
 
     iput v2, v0, Lcom/google/android/apps/refocus/processing/DepthOfFieldOptions;->focalDepth:F
 
-    .line 274
     iget v2, v1, Lcom/google/android/apps/refocus/processing/FocusSettings;->depthOfField:F
 
     iput v2, v0, Lcom/google/android/apps/refocus/processing/DepthOfFieldOptions;->depthOfField:F
 
-    .line 275
     iget v2, v1, Lcom/google/android/apps/refocus/processing/FocusSettings;->blurAtInfinity:F
 
     iget-object v3, v0, Lcom/google/android/apps/refocus/processing/DepthOfFieldOptions;->rgbz:Lcom/google/android/apps/refocus/image/RGBZ;
 
-    .line 276
     invoke-virtual {v3}, Lcom/google/android/apps/refocus/image/RGBZ;->getWidth()I
 
     move-result v3
@@ -1444,22 +1251,18 @@
 
     iput v2, v0, Lcom/google/android/apps/refocus/processing/DepthOfFieldOptions;->blurInfinity:F
 
-    .line 277
     new-instance v2, Lcom/google/android/apps/refocus/processing/TiledRenderer$Options;
 
     invoke-direct {v2}, Lcom/google/android/apps/refocus/processing/TiledRenderer$Options;-><init>()V
 
-    .line 278
     const/high16 v3, 0x3f000000    # 0.5f
 
     iput v3, v2, Lcom/google/android/apps/refocus/processing/TiledRenderer$Options;->startProgress:F
 
-    .line 279
     const/high16 v3, 0x3f800000    # 1.0f
 
     iput v3, v2, Lcom/google/android/apps/refocus/processing/TiledRenderer$Options;->endProgress:F
 
-    .line 280
     new-instance v3, Lcom/google/android/apps/refocus/processing/TiledRenderer;
 
     new-instance v4, Lcom/google/android/apps/refocus/processing/Renderer;
@@ -1470,14 +1273,12 @@
 
     invoke-direct {v3, v2, v4}, Lcom/google/android/apps/refocus/processing/TiledRenderer;-><init>(Lcom/google/android/apps/refocus/processing/TiledRenderer$Options;Lcom/google/android/apps/refocus/processing/Renderer;)V
 
-    .line 281
     invoke-virtual {v3, v0, p3}, Lcom/google/android/apps/refocus/processing/TiledRenderer;->render(Lcom/google/android/apps/refocus/processing/DepthOfFieldOptions;Lcom/google/android/apps/refocus/processing/ProgressCallback;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     invoke-virtual {p2, v0}, Lcom/google/android/apps/refocus/image/RGBZ;->setPreview(Landroid/graphics/Bitmap;)V
 
-    .line 282
     invoke-virtual {p2, v1}, Lcom/google/android/apps/refocus/image/RGBZ;->setFocusSettings(Lcom/google/android/apps/refocus/processing/FocusSettings;)V
 
     goto :goto_0
@@ -1486,15 +1287,12 @@
 .method private saveAndFinish(Lcom/google/android/apps/refocus/image/RGBZ;)V
     .locals 10
 
-    .prologue
-    .line 145
     sget v0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->JPEG_QUALITY:I
 
     invoke-virtual {p1, v0}, Lcom/google/android/apps/refocus/image/RGBZ;->createRgbzFile(I)Lcom/google/android/apps/refocus/image/RGBZ$Data;
 
     move-result-object v6
 
-    .line 146
     invoke-virtual {p1}, Lcom/google/android/apps/refocus/image/RGBZ;->getWidth()I
 
     move-result v0
@@ -1507,7 +1305,6 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->setExifTags(IILcom/google/android/libraries/camera/exif/ExifInterface;)V
 
-    .line 147
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -1516,15 +1313,12 @@
 
     sub-long v8, v0, v2
 
-    .line 148
     invoke-virtual {p1}, Lcom/google/android/apps/refocus/image/RGBZ;->hasDepthmap()Z
 
     move-result v5
 
-    .line 149
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->usageStatistics$9HHMUR9FCTNMUPRCCKNM2RJ4E9NMIP1FC5O70SPFCDGMQPBIC4NMORR7CTKMSPPFALPM2PR5ADQ62T39EDQ6IORJ7C______0:Lidb;
 
-    .line 150
     invoke-virtual {p0}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->getName()Ljava/lang/String;
 
     move-result-object v1
@@ -1549,15 +1343,12 @@
 
     mul-float/2addr v4, v7
 
-    .line 151
     invoke-interface/range {v0 .. v5}, Lidb;->a(Ljava/lang/String;Lcom/google/android/libraries/camera/exif/ExifInterface;ZFZ)V
 
-    .line 152
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->session$9HHMUR9FCTNMUPRCCKNM2RJ4E9NMIP1FC5O70SPFCDGMQPBIC4NMOPB7C5HNIBR1E1O2USR5EDPMIRRE5T1M2S3KELP6AKR5EDPMIRRE7C______0:Leot;
 
     iget-object v1, v6, Lcom/google/android/apps/refocus/image/RGBZ$Data;->fileData:[B
 
-    .line 153
     invoke-virtual {p1}, Lcom/google/android/apps/refocus/image/RGBZ;->getWidth()I
 
     move-result v2
@@ -1570,34 +1361,26 @@
 
     iget-object v5, v6, Lcom/google/android/apps/refocus/image/RGBZ$Data;->exif:Lcom/google/android/libraries/camera/exif/ExifInterface;
 
-    .line 154
     invoke-static/range {v0 .. v5}, Ldyl;->a(Lgon;[BIIILcom/google/android/libraries/camera/exif/ExifInterface;)Ljuk;
 
-    .line 155
     return-void
 .end method
 
 .method private setExifTags(IILcom/google/android/libraries/camera/exif/ExifInterface;)V
     .locals 2
 
-    .prologue
-    .line 127
     invoke-direct {p0, p3}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->readReferenceExifTags(Lcom/google/android/libraries/camera/exif/ExifInterface;)V
 
-    .line 129
     iget-object v0, p3, Lcom/google/android/libraries/camera/exif/ExifInterface;->P:Lidw;
 
-    .line 130
     const/4 v1, 0x0
 
     iput-object v1, v0, Lidw;->b:[B
 
-    .line 131
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->location:Landroid/location/Location;
 
     if-eqz v0, :cond_0
 
-    .line 132
     new-instance v0, Liej;
 
     invoke-direct {v0, p3}, Liej;-><init>(Lcom/google/android/libraries/camera/exif/ExifInterface;)V
@@ -1606,13 +1389,11 @@
 
     invoke-virtual {v0, v1}, Liej;->a(Landroid/location/Location;)V
 
-    .line 133
     :cond_0
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->author:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 134
     sget v0, Lcom/google/android/libraries/camera/exif/ExifInterface;->w:I
 
     iget-object v1, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->author:Ljava/lang/String;
@@ -1623,7 +1404,6 @@
 
     invoke-virtual {p3, v0}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(Lieh;)Lieh;
 
-    .line 135
     :cond_1
     sget v0, Lcom/google/android/libraries/camera/exif/ExifInterface;->a:I
 
@@ -1637,7 +1417,6 @@
 
     invoke-virtual {p3, v0}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(Lieh;)Lieh;
 
-    .line 136
     sget v0, Lcom/google/android/libraries/camera/exif/ExifInterface;->x:I
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1650,7 +1429,6 @@
 
     invoke-virtual {p3, v0}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(Lieh;)Lieh;
 
-    .line 137
     sget v0, Lcom/google/android/libraries/camera/exif/ExifInterface;->b:I
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1663,7 +1441,6 @@
 
     invoke-virtual {p3, v0}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(Lieh;)Lieh;
 
-    .line 138
     sget v0, Lcom/google/android/libraries/camera/exif/ExifInterface;->y:I
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1676,7 +1453,6 @@
 
     invoke-virtual {p3, v0}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(Lieh;)Lieh;
 
-    .line 139
     sget v0, Lcom/google/android/libraries/camera/exif/ExifInterface;->B:I
 
     iget v1, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->focalLength35mm:I
@@ -1691,15 +1467,12 @@
 
     invoke-virtual {p3, v0}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(Lieh;)Lieh;
 
-    .line 140
     sget v0, Lcom/google/android/libraries/camera/exif/ExifInterface;->g:I
 
     sget-object v1, Liea;->a:Liea;
 
-    .line 141
     iget-short v1, v1, Liea;->b:S
 
-    .line 142
     invoke-static {v1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
 
     move-result-object v1
@@ -1708,10 +1481,8 @@
 
     move-result-object v0
 
-    .line 143
     invoke-virtual {p3, v0}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(Lieh;)Lieh;
 
-    .line 144
     return-void
 .end method
 
@@ -1720,24 +1491,18 @@
 .method public addFinishedCallback(Libj;)V
     .locals 1
 
-    .prologue
-    .line 303
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 304
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->finishedCallback:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 305
     return-void
 .end method
 
 .method enforceAspectRatio(Landroid/graphics/Bitmap;Lcom/google/android/apps/refocus/image/ColorImage;)Landroid/graphics/Bitmap;
     .locals 9
 
-    .prologue
-    .line 284
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
@@ -1760,22 +1525,18 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 301
     :goto_0
     return-object p1
 
-    .line 286
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
 
-    .line 287
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v0
 
-    .line 288
     invoke-virtual {p2}, Lcom/google/android/apps/refocus/image/ColorImage;->getWidth()I
 
     move-result v2
@@ -1790,7 +1551,6 @@
 
     if-le v1, v2, :cond_1
 
-    .line 289
     invoke-virtual {p2}, Lcom/google/android/apps/refocus/image/ColorImage;->getWidth()I
 
     move-result v1
@@ -1803,18 +1563,15 @@
 
     div-int/2addr v1, v2
 
-    .line 291
     :goto_1
     rem-int/lit8 v2, v1, 0x8
 
     sub-int/2addr v1, v2
 
-    .line 292
     rem-int/lit8 v2, v0, 0x8
 
     sub-int/2addr v0, v2
 
-    .line 293
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
@@ -1823,7 +1580,6 @@
 
     div-int/lit8 v2, v2, 0x2
 
-    .line 294
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v3
@@ -1832,15 +1588,12 @@
 
     div-int/lit8 v3, v3, 0x2
 
-    .line 295
     sget-object v4, Lcom/google/android/apps/refocus/processing/DepthmapTask;->TAG:Ljava/lang/String;
 
-    .line 296
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v5
 
-    .line 297
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v6
@@ -1895,23 +1648,18 @@
 
     move-result-object v5
 
-    .line 298
     invoke-static {v4, v5}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 299
     invoke-static {p1, v2, v3, v1, v0}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIII)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 300
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
     move-object p1, v0
 
-    .line 301
     goto :goto_0
 
-    .line 290
     :cond_1
     invoke-virtual {p2}, Lcom/google/android/apps/refocus/image/ColorImage;->getHeight()I
 
@@ -1931,8 +1679,6 @@
 .method public getLocation()Landroid/location/Location;
     .locals 1
 
-    .prologue
-    .line 309
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->location:Landroid/location/Location;
 
     return-object v0
@@ -1941,22 +1687,16 @@
 .method public getName()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 37
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->dataset:Lhgs;
 
-    .line 38
     iget-object v0, v0, Lhgs;->b:Ljava/lang/String;
 
-    .line 39
     return-object v0
 .end method
 
 .method public getSession()Lgon;
     .locals 1
 
-    .prologue
-    .line 302
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->session$9HHMUR9FCTNMUPRCCKNM2RJ4E9NMIP1FC5O70SPFCDGMQPBIC4NMOPB7C5HNIBR1E1O2USR5EDPMIRRE5T1M2S3KELP6AKR5EDPMIRRE7C______0:Leot;
 
     return-object v0
@@ -1965,10 +1705,8 @@
 .method public process(Landroid/content/Context;)V
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 40
     :try_start_0
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->memoryManager:Lfuj;
 
@@ -1979,7 +1717,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 41
     sget-object v0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->TAG:Ljava/lang/String;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -2016,14 +1753,12 @@
 
     invoke-static {v0, v2}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 42
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->finishedCallback:Ljava/util/List;
 
     invoke-static {v0}, Ljkk;->a(Ljava/util/Collection;)Ljkk;
 
     move-result-object v0
 
-    .line 43
     check-cast v0, Ljkk;
 
     invoke-virtual {v0}, Ljkk;->size()I
@@ -2043,16 +1778,13 @@
 
     check-cast v1, Libj;
 
-    .line 44
     invoke-interface {v1, p0}, Libj;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 47
     :catch_0
     move-exception v0
 
-    .line 48
     :try_start_1
     sget-object v2, Lcom/google/android/apps/refocus/processing/DepthmapTask;->TAG:Ljava/lang/String;
 
@@ -2081,7 +1813,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 49
     sget-object v0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->TAG:Ljava/lang/String;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -2118,14 +1849,12 @@
 
     invoke-static {v0, v2}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 50
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->finishedCallback:Ljava/util/List;
 
     invoke-static {v0}, Ljkk;->a(Ljava/util/Collection;)Ljkk;
 
     move-result-object v0
 
-    .line 51
     check-cast v0, Ljkk;
 
     invoke-virtual {v0}, Ljkk;->size()I
@@ -2145,12 +1874,10 @@
 
     check-cast v1, Libj;
 
-    .line 52
     invoke-interface {v1, p0}, Libj;->a(Ljava/lang/Object;)V
 
     goto :goto_2
 
-    .line 48
     :cond_0
     :try_start_2
     new-instance v0, Ljava/lang/String;
@@ -2161,7 +1888,6 @@
 
     goto :goto_1
 
-    .line 55
     :catchall_0
     move-exception v0
 
@@ -2203,14 +1929,12 @@
 
     invoke-static {v0, v3}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 56
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->finishedCallback:Ljava/util/List;
 
     invoke-static {v0}, Ljkk;->a(Ljava/util/Collection;)Ljkk;
 
     move-result-object v0
 
-    .line 57
     check-cast v0, Ljkk;
 
     invoke-virtual {v0}, Ljkk;->size()I
@@ -2230,16 +1954,13 @@
 
     check-cast v1, Libj;
 
-    .line 58
     invoke-interface {v1, p0}, Libj;->a(Ljava/lang/Object;)V
 
     goto :goto_3
 
-    .line 60
     :cond_1
     throw v2
 
-    .line 54
     :cond_2
     return-void
 .end method
@@ -2247,34 +1968,26 @@
 .method public removeFinishedCallback(Libj;)V
     .locals 1
 
-    .prologue
-    .line 306
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 307
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->finishedCallback:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 308
     return-void
 .end method
 
 .method public resume()V
     .locals 0
 
-    .prologue
-    .line 311
     return-void
 .end method
 
 .method public save()Lcom/google/android/apps/refocus/processing/DepthmapTask;
     .locals 12
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 61
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
@@ -2283,32 +1996,26 @@
 
     move-result v0
 
-    .line 62
     const-string v1, "DepthmapEx"
 
-    .line 64
     invoke-static {v1, v2}, Laoy;->c(Ljava/lang/String;I)Ljava/util/concurrent/ThreadFactory;
 
     move-result-object v1
 
-    .line 65
     invoke-static {v0, v1}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
 
     move-result-object v3
 
-    .line 67
     new-instance v4, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v0, 0x1
 
     invoke-direct {v4, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    .line 68
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->reference:Lcom/google/android/apps/refocus/image/ColorImage;
 
     if-eqz v0, :cond_0
 
-    .line 69
     new-instance v0, Lcom/google/android/apps/refocus/processing/DepthmapTask$1;
 
     invoke-direct {v0, p0, v4}, Lcom/google/android/apps/refocus/processing/DepthmapTask$1;-><init>(Lcom/google/android/apps/refocus/processing/DepthmapTask;Ljava/util/concurrent/atomic/AtomicBoolean;)V
@@ -2318,7 +2025,6 @@
     :cond_0
     move v1, v2
 
-    .line 70
     :goto_0
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->frames:Ljava/util/ArrayList;
 
@@ -2328,7 +2034,6 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 71
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->frames:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2339,32 +2044,27 @@
 
     iget-object v0, v0, Lhgu;->a:Lcom/google/android/apps/refocus/image/ColorImage;
 
-    .line 72
     iget-object v5, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->dataset:Lhgs;
 
     invoke-virtual {v5, v1}, Lhgs;->a(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 73
     new-instance v6, Lcom/google/android/apps/refocus/processing/DepthmapTask$2;
 
     invoke-direct {v6, p0, v4, v0, v5}, Lcom/google/android/apps/refocus/processing/DepthmapTask$2;-><init>(Lcom/google/android/apps/refocus/processing/DepthmapTask;Ljava/util/concurrent/atomic/AtomicBoolean;Lcom/google/android/apps/refocus/image/ColorImage;Ljava/lang/String;)V
 
     invoke-interface {v3, v6}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
-    .line 74
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 75
     :cond_1
     invoke-interface {v3}, Ljava/util/concurrent/ExecutorService;->shutdown()V
 
-    .line 76
     const-wide/16 v0, 0x14
 
     :try_start_0
@@ -2374,7 +2074,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 81
     :goto_1
     invoke-virtual {v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
@@ -2382,18 +2081,14 @@
 
     if-nez v0, :cond_2
 
-    .line 82
     const/4 v0, 0x0
 
-    .line 83
     :goto_2
     return-object v0
 
-    .line 78
     :catch_0
     move-exception v0
 
-    .line 79
     sget-object v1, Lcom/google/android/apps/refocus/processing/DepthmapTask;->TAG:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->getMessage()Ljava/lang/String;
@@ -2402,12 +2097,10 @@
 
     invoke-static {v1, v0}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
     invoke-virtual {v4, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
     goto :goto_1
 
-    .line 83
     :cond_2
     new-instance v0, Lcom/google/android/apps/refocus/processing/DepthmapTask;
 
@@ -2441,21 +2134,17 @@
 .method public savePhotoWithoutDepth()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 84
     invoke-direct {p0}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->isValid()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 87
     :goto_0
     return-void
 
-    .line 86
     :cond_0
     new-instance v0, Lcom/google/android/apps/refocus/image/RGBZ;
 
@@ -2479,21 +2168,17 @@
 .method public startSession(Landroid/content/Context;Z)V
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 88
     invoke-direct {p0}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->isValid()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 104
     :goto_0
     return-void
 
-    .line 90
     :cond_0
     invoke-direct {p0, v0, v0}, Lcom/google/android/apps/refocus/processing/DepthmapTask;->getReferenceBitmap(ZZ)Landroid/graphics/Bitmap;
 
@@ -2505,10 +2190,8 @@
 
     move-result-object v1
 
-    .line 91
     if-nez v1, :cond_2
 
-    .line 92
     sget-object v1, Lcom/google/android/apps/refocus/processing/DepthmapTask;->TAG:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->reference:Lcom/google/android/apps/refocus/image/ColorImage;
@@ -2542,16 +2225,13 @@
 
     goto :goto_0
 
-    .line 94
     :cond_2
     if-eqz p2, :cond_3
 
-    .line 95
     iget-object v2, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->session$9HHMUR9FCTNMUPRCCKNM2RJ4E9NMIP1FC5O70SPFCDGMQPBIC4NMOPB7C5HNIBR1E1O2USR5EDPMIRRE5T1M2S3KELP6AKR5EDPMIRRE7C______0:Leot;
 
     sget v3, Lcom/google/android/apps/refocus/processing/DepthmapTask;->JPEG_QUALITY:I
 
-    .line 96
     invoke-static {v1, v3}, Lcom/google/android/apps/refocus/image/BitmapIO;->toByteArray(Landroid/graphics/Bitmap;I)[B
 
     move-result-object v1
@@ -2560,19 +2240,16 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 97
     invoke-static {v3, v0}, Lesn;->a(I[Ljava/lang/Object;)Lgyg;
 
     move-result-object v0
 
     sget-object v3, Lgrr;->h:Lgrr;
 
-    .line 98
     invoke-interface {v2, v1, v0, v3}, Leot;->a([BLgyg;Lgrr;)V
 
     goto :goto_0
 
-    .line 99
     :cond_3
     sget-object v2, Lcom/google/android/apps/refocus/processing/DepthmapTask;->TAG:Ljava/lang/String;
 
@@ -2580,12 +2257,10 @@
 
     invoke-static {v2, v3}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 100
     iget-object v2, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask;->session$9HHMUR9FCTNMUPRCCKNM2RJ4E9NMIP1FC5O70SPFCDGMQPBIC4NMOPB7C5HNIBR1E1O2USR5EDPMIRRE5T1M2S3KELP6AKR5EDPMIRRE7C______0:Leot;
 
     sget v3, Lcom/google/android/apps/refocus/processing/DepthmapTask;->JPEG_QUALITY:I
 
-    .line 101
     invoke-static {v1, v3}, Lcom/google/android/apps/refocus/image/BitmapIO;->toByteArray(Landroid/graphics/Bitmap;I)[B
 
     move-result-object v1
@@ -2594,14 +2269,12 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    .line 102
     invoke-static {v3, v0}, Lesn;->a(I[Ljava/lang/Object;)Lgyg;
 
     move-result-object v0
 
     sget-object v3, Lgrr;->b:Lgrr;
 
-    .line 103
     invoke-interface {v2, v1, v0, v3}, Leot;->a([BLgyg;Lgrr;)V
 
     goto :goto_0
@@ -2610,7 +2283,5 @@
 .method public suspend()V
     .locals 0
 
-    .prologue
-    .line 310
     return-void
 .end method

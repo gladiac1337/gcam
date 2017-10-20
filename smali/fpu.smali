@@ -16,8 +16,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfpu;->b:Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;
 
     iput p2, p0, Lfpu;->a:I
@@ -32,8 +30,6 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lfpu;->b:Lcom/google/android/apps/camera/legacy/lightcycle/ui/PhotoSphereMessageOverlay;
 
     const v1, 0x7f0e0198
@@ -44,16 +40,13 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 3
     iget v1, p0, Lfpu;->a:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 4
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 5
     return-void
 .end method

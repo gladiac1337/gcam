@@ -25,15 +25,11 @@
 .method public final call()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lijk;->a:Ljava/io/File;
 
-    .line 2
     new-instance v1, Ljava/io/FileInputStream;
 
     invoke-direct {v1, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 3
     return-object v1
 .end method

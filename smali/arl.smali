@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 48
     const/4 v0, 0x0
 
     invoke-static {v0}, Larq;->a(I)Ljava/util/Queue;
@@ -33,24 +31,18 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 9
     invoke-direct {p0}, Ljava/io/InputStream;-><init>()V
 
-    .line 10
     return-void
 .end method
 
 .method public static a(Ljava/io/InputStream;)Larl;
     .locals 2
 
-    .prologue
-    .line 1
     sget-object v1, Larl;->b:Ljava/util/Queue;
 
     monitor-enter v1
 
-    .line 2
     :try_start_0
     sget-object v0, Larl;->b:Ljava/util/Queue;
 
@@ -60,27 +52,21 @@
 
     check-cast v0, Larl;
 
-    .line 3
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     if-nez v0, :cond_0
 
-    .line 5
     new-instance v0, Larl;
 
     invoke-direct {v0}, Larl;-><init>()V
 
-    .line 7
     :cond_0
     iput-object p0, v0, Larl;->c:Ljava/io/InputStream;
 
-    .line 8
     return-object v0
 
-    .line 3
     :catchall_0
     move-exception v0
 
@@ -97,27 +83,21 @@
 .method public final a()V
     .locals 2
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 43
     iput-object v0, p0, Larl;->a:Ljava/io/IOException;
 
-    .line 44
     iput-object v0, p0, Larl;->c:Ljava/io/InputStream;
 
-    .line 45
     sget-object v1, Larl;->b:Ljava/util/Queue;
 
     monitor-enter v1
 
-    .line 46
     :try_start_0
     sget-object v0, Larl;->b:Ljava/util/Queue;
 
     invoke-interface {v0, p0}, Ljava/util/Queue;->offer(Ljava/lang/Object;)Z
 
-    .line 47
     monitor-exit v1
 
     return-void
@@ -135,8 +115,6 @@
 .method public final available()I
     .locals 1
 
-    .prologue
-    .line 11
     iget-object v0, p0, Larl;->c:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->available()I
@@ -149,34 +127,26 @@
 .method public final close()V
     .locals 1
 
-    .prologue
-    .line 12
     iget-object v0, p0, Larl;->c:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
-    .line 13
     return-void
 .end method
 
 .method public final mark(I)V
     .locals 1
 
-    .prologue
-    .line 14
     iget-object v0, p0, Larl;->c:Ljava/io/InputStream;
 
     invoke-virtual {v0, p1}, Ljava/io/InputStream;->mark(I)V
 
-    .line 15
     return-void
 .end method
 
 .method public final markSupported()Z
     .locals 1
 
-    .prologue
-    .line 16
     iget-object v0, p0, Larl;->c:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->markSupported()Z
@@ -189,8 +159,6 @@
 .method public final read()I
     .locals 1
 
-    .prologue
-    .line 37
     :try_start_0
     iget-object v0, p0, Larl;->c:Ljava/io/InputStream;
 
@@ -200,18 +168,14 @@
 
     move-result v0
 
-    .line 42
     :goto_0
     return v0
 
-    .line 39
     :catch_0
     move-exception v0
 
-    .line 40
     iput-object v0, p0, Larl;->a:Ljava/io/IOException;
 
-    .line 41
     const/4 v0, -0x1
 
     goto :goto_0
@@ -220,8 +184,6 @@
 .method public final read([B)I
     .locals 1
 
-    .prologue
-    .line 17
     :try_start_0
     iget-object v0, p0, Larl;->c:Ljava/io/InputStream;
 
@@ -231,18 +193,14 @@
 
     move-result v0
 
-    .line 22
     :goto_0
     return v0
 
-    .line 19
     :catch_0
     move-exception v0
 
-    .line 20
     iput-object v0, p0, Larl;->a:Ljava/io/IOException;
 
-    .line 21
     const/4 v0, -0x1
 
     goto :goto_0
@@ -251,8 +209,6 @@
 .method public final read([BII)I
     .locals 1
 
-    .prologue
-    .line 23
     :try_start_0
     iget-object v0, p0, Larl;->c:Ljava/io/InputStream;
 
@@ -262,18 +218,14 @@
 
     move-result v0
 
-    .line 28
     :goto_0
     return v0
 
-    .line 25
     :catch_0
     move-exception v0
 
-    .line 26
     iput-object v0, p0, Larl;->a:Ljava/io/IOException;
 
-    .line 27
     const/4 v0, -0x1
 
     goto :goto_0
@@ -282,8 +234,6 @@
 .method public final declared-synchronized reset()V
     .locals 1
 
-    .prologue
-    .line 29
     monitor-enter p0
 
     :try_start_0
@@ -293,12 +243,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 30
     monitor-exit p0
 
     return-void
 
-    .line 29
     :catchall_0
     move-exception v0
 
@@ -310,8 +258,6 @@
 .method public final skip(J)J
     .locals 3
 
-    .prologue
-    .line 31
     :try_start_0
     iget-object v0, p0, Larl;->c:Ljava/io/InputStream;
 
@@ -321,18 +267,14 @@
 
     move-result-wide v0
 
-    .line 36
     :goto_0
     return-wide v0
 
-    .line 33
     :catch_0
     move-exception v0
 
-    .line 34
     iput-object v0, p0, Larl;->a:Ljava/io/IOException;
 
-    .line 35
     const-wide/16 v0, 0x0
 
     goto :goto_0

@@ -10,8 +10,6 @@
 .method protected constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljjw;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method protected synthetic a()Ljava/util/Set;
     .locals 1
 
-    .prologue
-    .line 8
     invoke-virtual {p0}, Ljjx;->d()Ljava/util/SortedSet;
 
     move-result-object v0
@@ -34,8 +30,6 @@
 .method protected synthetic b()Ljava/util/Collection;
     .locals 1
 
-    .prologue
-    .line 9
     invoke-virtual {p0}, Ljjx;->d()Ljava/util/SortedSet;
 
     move-result-object v0
@@ -46,8 +40,6 @@
 .method protected synthetic c()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 10
     invoke-virtual {p0}, Ljjx;->d()Ljava/util/SortedSet;
 
     move-result-object v0
@@ -58,8 +50,6 @@
 .method public comparator()Ljava/util/Comparator;
     .locals 1
 
-    .prologue
-    .line 2
     invoke-virtual {p0}, Ljjx;->d()Ljava/util/SortedSet;
 
     move-result-object v0
@@ -77,8 +67,6 @@
 .method public first()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 3
     invoke-virtual {p0}, Ljjx;->d()Ljava/util/SortedSet;
 
     move-result-object v0
@@ -93,8 +81,6 @@
 .method public headSet(Ljava/lang/Object;)Ljava/util/SortedSet;
     .locals 1
 
-    .prologue
-    .line 4
     invoke-virtual {p0}, Ljjx;->d()Ljava/util/SortedSet;
 
     move-result-object v0
@@ -109,8 +95,6 @@
 .method public last()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 5
     invoke-virtual {p0}, Ljjx;->d()Ljava/util/SortedSet;
 
     move-result-object v0
@@ -125,8 +109,6 @@
 .method public subSet(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedSet;
     .locals 1
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Ljjx;->d()Ljava/util/SortedSet;
 
     move-result-object v0
@@ -141,8 +123,6 @@
 .method public tailSet(Ljava/lang/Object;)Ljava/util/SortedSet;
     .locals 1
 
-    .prologue
-    .line 7
     invoke-virtual {p0}, Ljjx;->d()Ljava/util/SortedSet;
 
     move-result-object v0

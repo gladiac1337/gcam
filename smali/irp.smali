@@ -15,18 +15,14 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     iput-object v0, p0, Lirp;->b:Ljava/io/ByteArrayOutputStream;
 
-    .line 3
     new-instance v0, Ljava/io/DataOutputStream;
 
     iget-object v1, p0, Lirp;->b:Ljava/io/ByteArrayOutputStream;
@@ -35,7 +31,6 @@
 
     iput-object v0, p0, Lirp;->a:Ljava/io/DataOutputStream;
 
-    .line 4
     iget-object v0, p0, Lirp;->a:Ljava/io/DataOutputStream;
 
     invoke-virtual {v0}, Ljava/io/DataOutputStream;->size()I
@@ -44,7 +39,6 @@
 
     iput v0, p0, Lirp;->c:I
 
-    .line 5
     return-void
 .end method
 
@@ -53,12 +47,9 @@
 .method public final a(I)V
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lirp;->a:Ljava/io/DataOutputStream;
 
     invoke-virtual {v0, p1}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    .line 7
     return-void
 .end method

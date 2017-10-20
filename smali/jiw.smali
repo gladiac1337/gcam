@@ -16,8 +16,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,8 +26,6 @@
 .method public a(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 5
     invoke-virtual {p0, p1}, Ljiw;->b(Ljava/lang/Object;)Ljava/util/Collection;
 
     move-result-object v0
@@ -44,8 +40,6 @@
 .method public b(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 3
     invoke-virtual {p0}, Ljiw;->i()Ljava/util/Map;
 
     move-result-object v0
@@ -56,7 +50,6 @@
 
     check-cast v0, Ljava/util/Collection;
 
-    .line 4
     if-eqz v0, :cond_0
 
     invoke-interface {v0, p2}, Ljava/util/Collection;->remove(Ljava/lang/Object;)Z
@@ -79,8 +72,6 @@
 .method e()Ljava/util/Set;
     .locals 2
 
-    .prologue
-    .line 8
     new-instance v0, Ljlo;
 
     invoke-virtual {p0}, Ljiw;->i()Ljava/util/Map;
@@ -95,28 +86,20 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 11
-    .line 12
     if-ne p1, p0, :cond_0
 
-    .line 13
     const/4 v0, 0x1
 
-    .line 18
     :goto_0
     return v0
 
-    .line 14
     :cond_0
     instance-of v0, p1, Ljlr;
 
     if-eqz v0, :cond_1
 
-    .line 15
     check-cast p1, Ljlr;
 
-    .line 16
     invoke-interface {p0}, Ljlr;->i()Ljava/util/Map;
 
     move-result-object v0
@@ -131,11 +114,9 @@
 
     goto :goto_0
 
-    .line 17
     :cond_1
     const/4 v0, 0x0
 
-    .line 18
     goto :goto_0
 .end method
 
@@ -145,8 +126,6 @@
 .method public g()Z
     .locals 1
 
-    .prologue
-    .line 2
     invoke-virtual {p0}, Ljiw;->c()I
 
     move-result v0
@@ -167,11 +146,8 @@
 .method public h()Ljava/util/Set;
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Ljiw;->a:Ljava/util/Set;
 
-    .line 7
     if-nez v0, :cond_0
 
     invoke-virtual {p0}, Ljiw;->e()Ljava/util/Set;
@@ -187,8 +163,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 19
     invoke-virtual {p0}, Ljiw;->i()Ljava/util/Map;
 
     move-result-object v0
@@ -203,11 +177,8 @@
 .method public i()Ljava/util/Map;
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Ljiw;->b:Ljava/util/Map;
 
-    .line 10
     if-nez v0, :cond_0
 
     invoke-virtual {p0}, Ljiw;->f()Ljava/util/Map;
@@ -223,8 +194,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 20
     invoke-virtual {p0}, Ljiw;->i()Ljava/util/Map;
 
     move-result-object v0

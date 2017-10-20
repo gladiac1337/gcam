@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,28 +20,22 @@
 .method public final synthetic a(Lisz;)Ljava/lang/Object;
     .locals 10
 
-    .prologue
     const/4 v9, 0x2
 
     const/4 v7, 0x1
 
     const/4 v8, 0x0
 
-    .line 2
-    .line 3
     const-class v0, Ljdt;
 
-    .line 4
     const-string v1, "default"
 
     invoke-virtual {p1, v0, v1}, Lisz;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 5
     check-cast v0, Ljdt;
 
-    .line 6
     const-class v1, Ljac;
 
     const-string v2, "post_proc_quality_metric"
@@ -54,7 +46,6 @@
 
     check-cast v1, Ljac;
 
-    .line 7
     const/16 v2, 0xa
 
     new-array v3, v2, [Ljar;
@@ -63,7 +54,6 @@
 
     const-string v4, "image_sharpness_filter"
 
-    .line 8
     invoke-virtual {p1, v2, v4}, Lisz;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
@@ -76,7 +66,6 @@
 
     const-string v4, "face_quality_filter"
 
-    .line 9
     invoke-virtual {p1, v2, v4}, Lisz;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
@@ -89,7 +78,6 @@
 
     const-string v4, "segmenter"
 
-    .line 10
     invoke-virtual {p1, v2, v4}, Lisz;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
@@ -104,7 +92,6 @@
 
     const-string v5, "segment_classifier"
 
-    .line 11
     invoke-virtual {p1, v2, v5}, Lisz;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
@@ -151,7 +138,6 @@
 
     const-string v5, "panning_collage_frameset_selector"
 
-    .line 12
     invoke-virtual {p1, v2, v5}, Lisz;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
@@ -190,11 +176,9 @@
 
     aput-object v1, v3, v0
 
-    .line 13
     invoke-static {v3}, Ljam;->a([Ljar;)Ljam;
 
     move-result-object v0
 
-    .line 14
     return-object v0
 .end method

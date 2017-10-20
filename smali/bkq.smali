@@ -25,11 +25,8 @@
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lbkq;->a:Lbkp;
 
-    .line 2
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -40,18 +37,14 @@
 
     move-result v0
 
-    .line 3
     iget-object v2, v1, Lbkp;->c:Lgzv;
 
-    .line 4
     iget v2, v2, Lgzv;->a:F
 
-    .line 5
     mul-float/2addr v0, v2
 
     iput v0, v1, Lbkp;->d:F
 
-    .line 6
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
     move-result v0
@@ -64,6 +57,5 @@
 
     iput v0, v1, Lbkp;->e:I
 
-    .line 7
     return-void
 .end method

@@ -29,18 +29,14 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lfzf;->a:Lico;
 
     iget-object v0, p0, Lfzf;->b:Ljxb;
 
-    .line 2
     const-string v2, "MICRO_GyroModule#stopGyroCapture"
 
     invoke-interface {v1, v2}, Lico;->a(Ljava/lang/String;)V
 
-    .line 3
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -49,9 +45,7 @@
 
     invoke-virtual {v0}, Lgar;->c()V
 
-    .line 4
     invoke-interface {v1}, Lico;->a()V
 
-    .line 5
     return-void
 .end method

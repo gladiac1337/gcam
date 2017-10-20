@@ -16,8 +16,6 @@
 .method constructor <init>(Ldwt;Ljava/util/List;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldwu;->b:Ldwt;
 
     iput-object p2, p0, Ldwu;->a:Ljava/util/List;
@@ -32,20 +30,16 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 9
 
-    .prologue
     const/4 v8, 0x2
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 2
     check-cast p1, Ljava/lang/Integer;
 
-    .line 3
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -56,22 +50,17 @@
 
     move-result v3
 
-    .line 5
     const-string v4, "index"
 
-    .line 6
     if-ltz v0, :cond_0
 
     if-lt v0, v3, :cond_3
 
-    .line 7
     :cond_0
     new-instance v5, Ljava/lang/IndexOutOfBoundsException;
 
-    .line 8
     if-gez v0, :cond_1
 
-    .line 9
     const-string v3, "%s (%s) must not be negative"
 
     new-array v6, v8, [Ljava/lang/Object;
@@ -88,17 +77,14 @@
 
     move-result-object v0
 
-    .line 13
     :goto_0
     invoke-direct {v5, v0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
     throw v5
 
-    .line 10
     :cond_1
     if-gez v3, :cond_2
 
-    .line 11
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const/16 v1, 0x1a
@@ -125,7 +111,6 @@
 
     throw v0
 
-    .line 12
     :cond_2
     const-string v6, "%s (%s) must be less than size (%s)"
 
@@ -153,14 +138,11 @@
 
     goto :goto_0
 
-    .line 14
     :cond_3
     iget-object v0, p0, Ldwu;->b:Ldwt;
 
-    .line 15
     iget-object v3, v0, Ldwt;->a:Ldyx;
 
-    .line 16
     iget-object v0, p0, Ldwu;->a:Ljava/util/List;
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
@@ -177,21 +159,17 @@
 
     move-result-wide v4
 
-    .line 17
     iget-object v6, v3, Ldyx;->d:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 18
     :try_start_0
     invoke-virtual {v3, v4, v5}, Ldyx;->a(J)Ldyw;
 
     move-result-object v3
 
-    .line 20
     iget-object v0, v3, Ldyw;->g:Ljhi;
 
-    .line 21
     invoke-virtual {v0}, Ljhi;->a()Z
 
     move-result v0
@@ -203,10 +181,8 @@
     :goto_1
     const-string v1, "Base frame already selected!"
 
-    .line 22
     invoke-static {v0, v1}, Lixp;->b(ZLjava/lang/Object;)V
 
-    .line 23
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -215,22 +191,17 @@
 
     move-result-object v0
 
-    .line 24
     iput-object v0, v3, Ldyw;->g:Ljhi;
 
-    .line 25
     monitor-exit v6
 
-    .line 27
     return-object p1
 
     :cond_4
     move v0, v2
 
-    .line 21
     goto :goto_1
 
-    .line 25
     :catchall_0
     move-exception v0
 

@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 1
     new-instance v0, Libx;
 
     const/16 v1, 0x400
@@ -25,7 +23,6 @@
 
     sput-object v0, Lfzp;->a:Libx;
 
-    .line 2
     new-instance v0, Libx;
 
     const/16 v1, 0x500

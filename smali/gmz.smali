@@ -16,8 +16,6 @@
 .method constructor <init>(Lgmy;Libu;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgmz;->b:Lgmy;
 
     iput-object p2, p0, Lgmz;->a:Libu;
@@ -32,8 +30,6 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgmz;->b:Lgmy;
 
     iget-object v0, v0, Lgmy;->a:Licc;
@@ -42,6 +38,5 @@
 
     invoke-interface {v0, v1}, Licc;->a(Ljava/lang/Object;)V
 
-    .line 3
     return-void
 .end method

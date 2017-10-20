@@ -36,8 +36,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 56
     const-string v0, "OnDemandLoader"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -52,20 +50,16 @@
 .method public constructor <init>(Ljxb;Lflf;Lbio;Lico;)V
     .locals 4
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Lcgl;->g:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 3
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v2, 0x0
@@ -74,14 +68,12 @@
 
     iput-object v0, p0, Lcgl;->h:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcgl;->k:Ljava/util/ArrayList;
 
-    .line 5
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -90,7 +82,6 @@
 
     iput-object v0, p0, Lcgl;->c:Ljxb;
 
-    .line 6
     invoke-interface {p2}, Lflf;->e()Lhyq;
 
     move-result-object v0
@@ -101,14 +92,12 @@
 
     iput-object v0, p0, Lcgl;->e:Lhzg;
 
-    .line 7
     new-instance v0, Lhzc;
 
     iget-object v2, p0, Lcgl;->e:Lhzg;
 
     const-string v3, "OnDemandLoader"
 
-    .line 8
     invoke-static {v2, v3}, Lhzd;->a(Lhzg;Ljava/lang/String;)Landroid/os/Handler;
 
     move-result-object v2
@@ -117,7 +106,6 @@
 
     iput-object v0, p0, Lcgl;->i:Lhzc;
 
-    .line 9
     invoke-static {p4}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -126,7 +114,6 @@
 
     iput-object v0, p0, Lcgl;->f:Lico;
 
-    .line 10
     invoke-virtual {p3}, Lbio;->a()Z
 
     move-result v0
@@ -135,14 +122,11 @@
 
     move v0, v1
 
-    .line 11
     :goto_0
     iput v0, p0, Lcgl;->b:I
 
-    .line 12
     return-void
 
-    .line 11
     :cond_0
     const/16 v0, 0x14
 
@@ -154,20 +138,16 @@
 .method final a()V
     .locals 8
 
-    .prologue
-    .line 15
     iget-object v0, p0, Lcgl;->f:Lico;
 
     const-string v1, "OnDemandLoader.setLastItems"
 
     invoke-interface {v0, v1}, Lico;->a(Ljava/lang/String;)V
 
-    .line 16
     iget-object v0, p0, Lcgl;->k:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 17
     iget-object v0, p0, Lcgl;->h:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -178,39 +158,30 @@
 
     iget-object v0, p0, Lcgl;->j:Lcgd;
 
-    .line 18
     iget-object v0, v0, Lcgd;->d:Lcga;
 
-    .line 19
     iget v0, v0, Lcga;->c:I
 
-    .line 20
     if-lez v0, :cond_1
 
-    .line 21
     iget-object v0, p0, Lcgl;->j:Lcgd;
 
     iget-object v1, p0, Lcgl;->j:Lcgd;
 
-    .line 22
     iget-object v1, v1, Lcgd;->d:Lcga;
 
-    .line 23
     iget v1, v1, Lcga;->c:I
 
-    .line 24
     add-int/lit8 v1, v1, -0x1
 
     invoke-virtual {v0, v1}, Lcgd;->a(I)Lcgg;
 
     move-result-object v1
 
-    .line 25
     iget-object v0, p0, Lcgl;->k:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 26
     const/4 v0, 0x1
 
     :goto_0
@@ -218,33 +189,27 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 27
     invoke-interface {v1}, Lcgg;->b()Lcgg;
 
     move-result-object v1
 
-    .line 28
     sget-object v2, Lcgg;->c:Lcgg;
 
     if-eq v1, v2, :cond_0
 
-    .line 29
     iget-object v2, p0, Lcgl;->k:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 30
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 31
     :cond_0
     sget-object v1, Lcgl;->a:Ljava/lang/String;
 
     iget-object v0, p0, Lcgl;->k:Ljava/util/ArrayList;
 
-    .line 32
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -253,7 +218,6 @@
 
     const/4 v3, 0x0
 
-    .line 33
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -268,15 +232,12 @@
 
     move-result-object v0
 
-    .line 34
     iget-wide v4, v0, Lfvf;->b:J
 
-    .line 35
     iget-object v0, p0, Lcgl;->k:Ljava/util/ArrayList;
 
     iget-object v3, p0, Lcgl;->k:Ljava/util/ArrayList;
 
-    .line 36
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v3
@@ -289,20 +250,16 @@
 
     check-cast v0, Lcgg;
 
-    .line 37
     invoke-interface {v0}, Lcgg;->c()Lfvb;
 
     move-result-object v0
 
-    .line 38
     invoke-interface {v0}, Lfvb;->f()Lfvf;
 
     move-result-object v0
 
-    .line 39
     iget-wide v6, v0, Lfvf;->b:J
 
-    .line 40
     const/16 v0, 0x5e
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -343,24 +300,19 @@
 
     move-result-object v0
 
-    .line 41
     invoke-static {v1, v0}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 42
     :cond_1
     iget-object v0, p0, Lcgl;->f:Lico;
 
     invoke-interface {v0}, Lico;->a()V
 
-    .line 43
     return-void
 .end method
 
 .method public final a(Lcgg;)V
     .locals 5
 
-    .prologue
-    .line 44
     iget-object v0, p0, Lcgl;->g:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -377,7 +329,6 @@
 
     if-nez v0, :cond_0
 
-    .line 45
     iget-object v0, p0, Lcgl;->k:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -398,7 +349,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 46
     iget-object v0, p0, Lcgl;->j:Lcgd;
 
     invoke-interface {p1}, Lcgg;->c()Lfvb;
@@ -409,26 +359,20 @@
 
     move-result-object v1
 
-    .line 47
     iget-object v1, v1, Lfvf;->h:Landroid/net/Uri;
 
-    .line 48
     invoke-virtual {v0, v1}, Lcgd;->b(Landroid/net/Uri;)I
 
     move-result v0
 
-    .line 49
     sget-object v1, Lcgl;->a:Ljava/lang/String;
 
     iget-object v2, p0, Lcgl;->j:Lcgd;
 
-    .line 50
     iget-object v2, v2, Lcgd;->d:Lcga;
 
-    .line 51
     iget v2, v2, Lcga;->c:I
 
-    .line 52
     const/16 v3, 0x4f
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -459,15 +403,12 @@
 
     move-result-object v0
 
-    .line 53
     invoke-static {v1, v0}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 54
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcgl;->a(Ljuw;)V
 
-    .line 55
     :cond_0
     return-void
 .end method
@@ -475,8 +416,6 @@
 .method final a(Ljuw;)V
     .locals 2
 
-    .prologue
-    .line 13
     iget-object v0, p0, Lcgl;->i:Lhzc;
 
     new-instance v1, Lcgn;
@@ -485,6 +424,5 @@
 
     invoke-virtual {v0, v1}, Lhzc;->execute(Ljava/lang/Runnable;)V
 
-    .line 14
     return-void
 .end method

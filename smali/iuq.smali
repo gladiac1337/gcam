@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,13 +20,10 @@
 .method public final synthetic a(Lisz;)Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 2
     new-instance v0, Ljcz;
 
     invoke-direct {v0}, Ljcz;-><init>()V
 
-    .line 3
     sget-object v1, Ljfh;->f:Ljfh;
 
     new-instance v2, Ljdc;
@@ -39,7 +34,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Ljcz;->a(Ljfh;Ljcv;F)V
 
-    .line 4
     sget-object v1, Ljfh;->g:Ljfh;
 
     new-instance v2, Ljdc;
@@ -50,11 +44,9 @@
 
     invoke-virtual {v0, v1, v2, v3}, Ljcz;->a(Ljfh;Ljcv;F)V
 
-    .line 5
     invoke-virtual {v0}, Ljcz;->a()Ljcy;
 
     move-result-object v0
 
-    .line 6
     return-object v0
 .end method

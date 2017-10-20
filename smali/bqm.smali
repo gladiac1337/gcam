@@ -11,33 +11,25 @@
 .method constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbqm;->a:Landroid/content/Context;
 
-    .line 3
     return-void
 .end method
 
 .method public static a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 7
     :try_start_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    .line 8
     invoke-virtual {p0, p1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    .line 11
     :goto_0
     return-object v0
 
@@ -54,8 +46,6 @@
 .method public final a()Landroid/app/ActivityManager;
     .locals 2
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lbqm;->a:Landroid/content/Context;
 
     const-string v1, "activity"
@@ -72,8 +62,6 @@
 .method public final b()Landroid/hardware/SensorManager;
     .locals 2
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lbqm;->a:Landroid/content/Context;
 
     const-string v1, "sensor"
@@ -92,8 +80,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lbqm;->a:Landroid/content/Context;
 
     const-string v1, "window"

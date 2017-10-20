@@ -37,8 +37,6 @@
 .method private constructor <init>(Landroid/content/Context;Lhst;Ljava/util/concurrent/locks/Lock;Landroid/os/Looper;Lhjm;Ljava/util/Map;Ljava/util/Map;Lhlh;Lhju;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/Map;Ljava/util/Map;)V
     .locals 12
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/WeakHashMap;
@@ -87,7 +85,6 @@
 
     new-instance v11, Lhrx;
 
-    .line 2
     invoke-direct {v11, p0}, Lhrx;-><init>(Lhrw;)V
 
     move-object v1, p1
@@ -104,7 +101,6 @@
 
     move-object/from16 v10, p11
 
-    .line 3
     invoke-direct/range {v0 .. v11}, Lhsx;-><init>(Landroid/content/Context;Lhst;Ljava/util/concurrent/locks/Lock;Landroid/os/Looper;Lhjm;Ljava/util/Map;Lhlh;Ljava/util/Map;Lhju;Ljava/util/ArrayList;Lhtl;)V
 
     iput-object v0, p0, Lhrw;->a:Lhsx;
@@ -115,7 +111,6 @@
 
     new-instance v11, Lhry;
 
-    .line 4
     invoke-direct {v11, p0}, Lhry;-><init>(Lhrw;)V
 
     move-object v1, p1
@@ -136,7 +131,6 @@
 
     move-object/from16 v10, p10
 
-    .line 5
     invoke-direct/range {v0 .. v11}, Lhsx;-><init>(Landroid/content/Context;Lhst;Ljava/util/concurrent/locks/Lock;Landroid/os/Looper;Lhjm;Ljava/util/Map;Lhlh;Ljava/util/Map;Lhju;Ljava/util/ArrayList;Lhtl;)V
 
     iput-object v0, p0, Lhrw;->b:Lhsx;
@@ -505,9 +499,6 @@
 .method static synthetic a(Lhrw;)V
     .locals 3
 
-    .prologue
-    .line 24
-    .line 25
     iget-object v0, p0, Lhrw;->d:Lcom/google/android/gms/common/ConnectionResult;
 
     invoke-static {v0}, Lhrw;->b(Lcom/google/android/gms/common/ConnectionResult;)Z
@@ -530,7 +521,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 26
     :cond_0
     iget v0, p0, Lhrw;->m:I
 
@@ -551,12 +541,10 @@
 
     iput v0, p0, Lhrw;->m:I
 
-    .line 28
     :cond_1
     :goto_1
     return-void
 
-    .line 26
     :pswitch_0
     iget-object v0, p0, Lhrw;->i:Lhst;
 
@@ -569,7 +557,6 @@
 
     goto :goto_0
 
-    .line 27
     :cond_2
     iget-object v0, p0, Lhrw;->e:Lcom/google/android/gms/common/ConnectionResult;
 
@@ -647,7 +634,6 @@
 
     goto :goto_1
 
-    .line 26
     nop
 
     :pswitch_data_0
@@ -660,11 +646,8 @@
 .method static synthetic a(Lhrw;IZ)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 29
-    .line 30
     iget-object v0, p0, Lhrw;->i:Lhst;
 
     invoke-virtual {v0, p1, p2}, Lhst;->a(IZ)V
@@ -673,7 +656,6 @@
 
     iput-object v1, p0, Lhrw;->d:Lcom/google/android/gms/common/ConnectionResult;
 
-    .line 31
     return-void
 .end method
 
@@ -702,12 +684,8 @@
 .method private final c(Lhrn;)Z
     .locals 3
 
-    .prologue
-    .line 21
-    .line 22
     iget-object v0, p1, Lhrn;->e:Lhjw;
 
-    .line 23
     iget-object v1, p0, Lhrw;->j:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -766,18 +744,14 @@
 .method private final f()Z
     .locals 2
 
-    .prologue
-    .line 18
     iget-object v0, p0, Lhrw;->e:Lcom/google/android/gms/common/ConnectionResult;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lhrw;->e:Lcom/google/android/gms/common/ConnectionResult;
 
-    .line 19
     iget v0, v0, Lcom/google/android/gms/common/ConnectionResult;->b:I
 
-    .line 20
     const/4 v1, 0x4
 
     if-ne v0, v1, :cond_0
@@ -798,10 +772,8 @@
 .method public final a(Lhrn;)Lhrn;
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 6
     invoke-direct {p0, p1}, Lhrw;->c(Lhrn;)Z
 
     move-result v0
@@ -818,7 +790,6 @@
 
     const/4 v1, 0x4
 
-    .line 8
     invoke-direct {v0, v1, v2, v2}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;Landroid/app/PendingIntent;)V
 
     invoke-virtual {p1, v0}, Lhrn;->b(Lcom/google/android/gms/common/api/Status;)V
@@ -848,10 +819,8 @@
 .method public final a()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 12
     const/4 v0, 0x2
 
     iput v0, p0, Lhrw;->m:I
@@ -860,7 +829,6 @@
 
     iput-boolean v0, p0, Lhrw;->f:Z
 
-    .line 13
     iput-object v1, p0, Lhrw;->e:Lcom/google/android/gms/common/ConnectionResult;
 
     iput-object v1, p0, Lhrw;->d:Lcom/google/android/gms/common/ConnectionResult;
@@ -873,7 +841,6 @@
 
     invoke-virtual {v0}, Lhsx;->a()V
 
-    .line 14
     return-void
 .end method
 
@@ -952,10 +919,8 @@
 .method public final b(Lhrn;)Lhrn;
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 9
     invoke-direct {p0, p1}, Lhrw;->c(Lhrn;)Z
 
     move-result v0
@@ -972,7 +937,6 @@
 
     const/4 v1, 0x4
 
-    .line 11
     invoke-direct {v0, v1, v2, v2}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;Landroid/app/PendingIntent;)V
 
     invoke-virtual {p1, v0}, Lhrn;->b(Lcom/google/android/gms/common/api/Status;)V
@@ -1028,10 +992,8 @@
 .method public final d()Z
     .locals 2
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 15
     iget-object v1, p0, Lhrw;->g:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -1045,14 +1007,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 16
     iget-object v1, p0, Lhrw;->b:Lhsx;
 
     invoke-virtual {v1}, Lhsx;->d()Z
 
     move-result v1
 
-    .line 17
     if-nez v1, :cond_0
 
     invoke-direct {p0}, Lhrw;->f()Z

@@ -11,8 +11,6 @@
 .method constructor <init>(Lcpa;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcpg;->a:Lcpa;
 
     invoke-direct {p0}, Lcom/google/googlex/gcam/SimpleCallback;-><init>()V
@@ -25,15 +23,12 @@
 .method public final Run()V
     .locals 6
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcpg;->a:Lcpa;
 
     iget-object v1, v0, Lcpa;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Lcpg;->a:Lcpa;
 
@@ -45,10 +40,8 @@
 
     if-nez v0, :cond_0
 
-    .line 4
     sget-object v0, Lcpa;->a:Ljava/lang/String;
 
-    .line 5
     const-string v2, "HDR+ is idle, but we have %d shots in flight"
 
     const/4 v3, 0x1
@@ -61,7 +54,6 @@
 
     iget-object v5, v5, Lcpa;->d:Ljava/util/HashMap;
 
-    .line 6
     invoke-virtual {v5}, Ljava/util/HashMap;->size()I
 
     move-result v5
@@ -72,17 +64,14 @@
 
     aput-object v5, v3, v4
 
-    .line 8
     const/4 v4, 0x0
 
     invoke-static {v4, v2, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 9
     invoke-static {v0, v2}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     :cond_0
     monitor-exit v1
 

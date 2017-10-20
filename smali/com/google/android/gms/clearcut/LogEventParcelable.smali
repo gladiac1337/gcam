@@ -229,8 +229,6 @@
 .method public hashCode()I
     .locals 3
 
-    .prologue
-    .line 1
     const/16 v0, 0xa
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -299,12 +297,10 @@
 
     aput-object v2, v0, v1
 
-    .line 2
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 3
     return v0
 .end method
 
@@ -477,16 +473,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 6
 
-    .prologue
-    .line 4
-    .line 6
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lhiv;->m(Landroid/os/Parcel;I)I
 
     move-result v1
 
-    .line 7
     const/4 v0, 0x2
 
     iget-object v2, p0, Lcom/google/android/gms/clearcut/LogEventParcelable;->a:Lcom/google/android/gms/clearcut/internal/PlayLoggerContext;
@@ -519,7 +511,6 @@
 
     iget-object v2, p0, Lcom/google/android/gms/clearcut/LogEventParcelable;->i:[[B
 
-    .line 8
     if-eqz v2, :cond_1
 
     const/4 v0, 0x7
@@ -548,7 +539,6 @@
     :cond_0
     invoke-static {p1, v3}, Lhiv;->n(Landroid/os/Parcel;I)V
 
-    .line 9
     :cond_1
     const/16 v0, 0x8
 
@@ -556,9 +546,7 @@
 
     invoke-static {p1, v0, v2}, Lhiv;->a(Landroid/os/Parcel;IZ)V
 
-    .line 10
     invoke-static {p1, v1}, Lhiv;->n(Landroid/os/Parcel;I)V
 
-    .line 11
     return-void
 .end method

@@ -13,40 +13,30 @@
 .method public constructor <init>(Low;)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lox;->b:Low;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 2
     const/4 v0, -0x1
 
     iput v0, p0, Lox;->a:I
 
-    .line 3
     invoke-direct {p0}, Lox;->a()V
 
-    .line 4
     return-void
 .end method
 
 .method private final a()V
     .locals 5
 
-    .prologue
-    .line 20
     iget-object v0, p0, Lox;->b:Low;
 
     iget-object v0, v0, Low;->b:Loz;
 
-    .line 21
     iget-object v2, v0, Loz;->i:Lpd;
 
-    .line 23
     if-eqz v2, :cond_1
 
-    .line 24
     iget-object v0, p0, Lox;->b:Low;
 
     iget-object v0, v0, Low;->b:Loz;
@@ -55,12 +45,10 @@
 
     move-result-object v3
 
-    .line 25
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v4
 
-    .line 26
     const/4 v0, 0x0
 
     move v1, v0
@@ -68,24 +56,19 @@
     :goto_0
     if-ge v1, v4, :cond_1
 
-    .line 27
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lpd;
 
-    .line 28
     if-ne v0, v2, :cond_0
 
-    .line 29
     iput v1, p0, Lox;->a:I
 
-    .line 33
     :goto_1
     return-void
 
-    .line 31
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -93,7 +76,6 @@
 
     goto :goto_0
 
-    .line 32
     :cond_1
     const/4 v0, -0x1
 
@@ -107,8 +89,6 @@
 .method public final a(I)Lpd;
     .locals 2
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lox;->b:Low;
 
     iget-object v0, v0, Low;->b:Loz;
@@ -117,7 +97,6 @@
 
     move-result-object v0
 
-    .line 11
     iget v1, p0, Lox;->a:I
 
     if-ltz v1, :cond_0
@@ -126,10 +105,8 @@
 
     if-lt p1, v1, :cond_0
 
-    .line 12
     add-int/lit8 p1, p1, 0x1
 
-    .line 13
     :cond_0
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -143,8 +120,6 @@
 .method public final getCount()I
     .locals 2
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lox;->b:Low;
 
     iget-object v0, v0, Low;->b:Loz;
@@ -153,17 +128,14 @@
 
     move-result-object v0
 
-    .line 6
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 7
     iget v1, p0, Lox;->a:I
 
     if-gez v1, :cond_0
 
-    .line 9
     :goto_0
     return v0
 
@@ -176,8 +148,6 @@
 .method public final synthetic getItem(I)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 37
     invoke-virtual {p0, p1}, Lox;->a(I)Lpd;
 
     move-result-object v0
@@ -188,8 +158,6 @@
 .method public final getItemId(I)J
     .locals 2
 
-    .prologue
-    .line 14
     int-to-long v0, p1
 
     return-wide v0
@@ -198,11 +166,8 @@
 .method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 3
 
-    .prologue
-    .line 15
     if-nez p2, :cond_0
 
-    .line 16
     iget-object v0, p0, Lox;->b:Low;
 
     iget-object v0, v0, Low;->a:Landroid/view/LayoutInflater;
@@ -220,17 +185,14 @@
     :goto_0
     move-object v0, v1
 
-    .line 17
     check-cast v0, Lpr;
 
-    .line 18
     invoke-virtual {p0, p1}, Lox;->a(I)Lpd;
 
     move-result-object v2
 
     invoke-interface {v0, v2}, Lpr;->a(Lpd;)V
 
-    .line 19
     return-object v1
 
     :cond_0
@@ -242,13 +204,9 @@
 .method public final notifyDataSetChanged()V
     .locals 0
 
-    .prologue
-    .line 34
     invoke-direct {p0}, Lox;->a()V
 
-    .line 35
     invoke-super {p0}, Landroid/widget/BaseAdapter;->notifyDataSetChanged()V
 
-    .line 36
     return-void
 .end method

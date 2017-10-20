@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 9
     new-instance v0, Lart;
 
     invoke-direct {v0}, Lart;-><init>()V
@@ -25,8 +23,6 @@
 .method public static a()Lha;
     .locals 3
 
-    .prologue
-    .line 3
     new-instance v0, Lhc;
 
     const/16 v1, 0x14
@@ -45,15 +41,12 @@
 
     move-result-object v0
 
-    .line 4
     return-object v0
 .end method
 
 .method public static a(ILarw;)Lha;
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Lhc;
 
     invoke-direct {v0, p0}, Lhc;-><init>(I)V
@@ -68,8 +61,6 @@
 .method public static a(Larw;)Lha;
     .locals 2
 
-    .prologue
-    .line 1
     new-instance v0, Lhb;
 
     const/16 v1, 0x96
@@ -86,12 +77,8 @@
 .method private static a(Lha;Larw;)Lha;
     .locals 1
 
-    .prologue
-    .line 5
-    .line 6
     sget-object v0, Lars;->a:Larz;
 
-    .line 7
     invoke-static {p0, p1, v0}, Lars;->a(Lha;Larw;Larz;)Lha;
 
     move-result-object v0
@@ -102,8 +89,6 @@
 .method private static a(Lha;Larw;Larz;)Lha;
     .locals 1
 
-    .prologue
-    .line 8
     new-instance v0, Larx;
 
     invoke-direct {v0, p0, p1, p2}, Larx;-><init>(Lha;Larw;Larz;)V

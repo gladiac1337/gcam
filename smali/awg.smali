@@ -18,8 +18,6 @@
 .method public constructor <init>(Lawc;Laxq;Ljgy;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lawg;->a:Lawc;
 
     iput-object p2, p0, Lawg;->b:Laxq;
@@ -36,8 +34,6 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lawg;->a:Lawc;
 
     invoke-interface {v0}, Lawc;->c()Ljava/lang/Throwable;
@@ -46,7 +42,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lawg;->b:Laxq;
 
     iget-object v1, p0, Lawg;->a:Lawc;
@@ -57,11 +52,9 @@
 
     invoke-virtual {v0, v1}, Laxq;->a(Ljava/lang/Throwable;)Z
 
-    .line 10
     :goto_0
     return-void
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lawg;->a:Lawc;
 
@@ -69,17 +62,14 @@
 
     move-result-object v0
 
-    .line 5
     if-nez v0, :cond_1
 
-    .line 6
     iget-object v0, p0, Lawg;->b:Laxq;
 
     invoke-virtual {v0}, Laxq;->close()V
 
     goto :goto_0
 
-    .line 7
     :cond_1
     iget-object v1, p0, Lawg;->c:Ljgy;
 
@@ -89,10 +79,8 @@
 
     check-cast v0, Libw;
 
-    .line 8
     invoke-static {v0}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     iget-object v1, p0, Lawg;->b:Laxq;
 
     invoke-virtual {v1, v0}, Laxq;->a(Libw;)Z

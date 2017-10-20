@@ -29,19 +29,14 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 5
 
-    .prologue
-    .line 1
     iget-object v0, p0, Libb;->a:Liba;
 
     iget-object v1, p0, Libb;->b:Licc;
 
-    .line 2
     iget-object v0, v0, Liba;->a:Liaz;
 
-    .line 4
     if-nez p1, :cond_0
 
-    .line 5
     new-instance v1, Ljava/lang/NullPointerException;
 
     iget-object v0, v0, Liaz;->a:Liaj;
@@ -88,23 +83,19 @@
 
     throw v1
 
-    .line 6
     :cond_0
     invoke-virtual {v0, p1}, Liaz;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 7
     if-nez v2, :cond_1
 
-    .line 8
     new-instance v1, Ljava/lang/NullPointerException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 9
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -165,10 +156,8 @@
 
     throw v1
 
-    .line 11
     :cond_1
     invoke-interface {v1, v2}, Licc;->a(Ljava/lang/Object;)V
 
-    .line 12
     return-void
 .end method

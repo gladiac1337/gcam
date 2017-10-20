@@ -13,11 +13,8 @@
 .method constructor <init>(Lgvs;)V
     .locals 1
 
-    .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -26,7 +23,6 @@
 
     iput-object v0, p0, Lgvu;->a:Lgvs;
 
-    .line 13
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -37,20 +33,16 @@
 
     iput-object v0, p0, Lgvu;->b:Ljava/util/Set;
 
-    .line 14
     return-void
 .end method
 
 .method private final b(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 18
     iget-object v2, p0, Lgvu;->b:Ljava/util/Set;
 
     monitor-enter v2
 
-    .line 19
     :try_start_0
     iget-object v0, p0, Lgvu;->b:Ljava/util/Set;
 
@@ -60,14 +52,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 20
     const/4 v0, 0x0
 
-    .line 21
     :goto_0
     add-int/lit8 v1, v0, 0x1
 
-    .line 22
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -100,7 +89,6 @@
 
     move-result-object v0
 
-    .line 23
     iget-object v3, p0, Lgvu;->b:Ljava/util/Set;
 
     invoke-interface {v3, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -109,32 +97,26 @@
 
     if-nez v3, :cond_1
 
-    .line 24
     iget-object v1, p0, Lgvu;->b:Ljava/util/Set;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 25
     monitor-exit v2
 
     move-object p1, v0
 
-    .line 27
     :goto_1
     return-object p1
 
-    .line 26
     :cond_0
     iget-object v0, p0, Lgvu;->b:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 27
     monitor-exit v2
 
     goto :goto_1
 
-    .line 28
     :catchall_0
     move-exception v0
 
@@ -155,15 +137,12 @@
 .method public final a(Ljava/lang/String;)Ljava/io/File;
     .locals 5
 
-    .prologue
-    .line 6
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/io/File;
 
     iget-object v2, p0, Lgvu;->a:Lgvs;
 
-    .line 7
     invoke-interface {v2}, Lgvs;->a()Ljava/io/File;
 
     move-result-object v2
@@ -174,10 +153,8 @@
 
     sget-object v2, Lgvp;->c:Lgvp;
 
-    .line 8
     iget-object v2, v2, Lgvp;->j:Ljava/lang/String;
 
-    .line 9
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
@@ -222,15 +199,12 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 10
     return-object v0
 .end method
 
 .method public final a(Ljava/lang/String;Lgvp;)Ljava/io/File;
     .locals 5
 
-    .prologue
-    .line 3
     new-instance v1, Ljava/io/File;
 
     iget-object v0, p0, Lgvu;->a:Lgvs;
@@ -243,10 +217,8 @@
 
     move-result-object v3
 
-    .line 4
     iget-object v0, p2, Lgvp;->j:Ljava/lang/String;
 
-    .line 5
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -277,8 +249,6 @@
 .method public final a(J)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 1
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "\'IMG\'_yyyyMMdd_HHmmss"
@@ -297,18 +267,14 @@
 .method public final a(JLjava/text/DateFormat;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 15
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0, p1, p2}, Ljava/util/Date;-><init>(J)V
 
-    .line 16
     invoke-virtual {p3, v0}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 17
     invoke-direct {p0, v0}, Lgvu;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -319,8 +285,6 @@
 .method public final b(J)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 2
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "\'VID\'_yyyyMMdd_HHmmss"

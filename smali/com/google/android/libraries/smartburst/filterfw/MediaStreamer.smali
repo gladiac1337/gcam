@@ -36,42 +36,34 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/net/Uri;)V
     .locals 5
 
-    .prologue
     const/4 v3, 0x0
 
     const/4 v2, 0x1
 
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     iput v2, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mMediaWidth:I
 
-    .line 5
     iput v2, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mMediaHeight:I
 
-    .line 6
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v0, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mIsClosed:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 7
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer$3;
 
     invoke-direct {v0, p0}, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer$3;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;)V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mSurfaceTextureManager:Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor$SurfaceTextureManager;
 
-    .line 8
     invoke-static {p1, p2}, Landroid/media/MediaPlayer;->create(Landroid/content/Context;Landroid/net/Uri;)Landroid/media/MediaPlayer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
-    .line 9
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     new-instance v1, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer$1;
@@ -80,7 +72,6 @@
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnCompletionListener(Landroid/media/MediaPlayer$OnCompletionListener;)V
 
-    .line 10
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     new-instance v1, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer$2;
@@ -89,26 +80,22 @@
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setOnVideoSizeChangedListener(Landroid/media/MediaPlayer$OnVideoSizeChangedListener;)V
 
-    .line 11
     invoke-static {p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/util/MediaUtils;->getMediaRotation(Landroid/content/Context;Landroid/net/Uri;)I
 
     move-result v0
 
-    .line 12
     invoke-static {v0, v3, v2}, Lcom/google/android/libraries/smartburst/filterfw/SurfaceTexTransform;->create(IZZ)Lcom/google/android/libraries/smartburst/filterfw/SurfaceTexTransform;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mTransform:Lcom/google/android/libraries/smartburst/filterfw/SurfaceTexTransform;
 
-    .line 13
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/ConsumerFrameForwarder;
 
     invoke-direct {v0, p0}, Lcom/google/android/libraries/smartburst/filterfw/ConsumerFrameForwarder;-><init>(Lcom/google/android/libraries/smartburst/filterfw/VideoFrameProvider;)V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mConsumers:Lcom/google/android/libraries/smartburst/filterfw/ConsumerFrameForwarder;
 
-    .line 14
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "MediaStreamer"
@@ -117,12 +104,10 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mPlayerThread:Landroid/os/HandlerThread;
 
-    .line 15
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mPlayerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 16
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mConsumers:Lcom/google/android/libraries/smartburst/filterfw/ConsumerFrameForwarder;
@@ -133,7 +118,6 @@
 
     iget-object v4, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mPlayerThread:Landroid/os/HandlerThread;
 
-    .line 17
     invoke-virtual {v4}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object v4
@@ -144,35 +128,28 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mFrameDistributor:Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor;
 
-    .line 18
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mFrameDistributor:Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor;->setup()V
 
-    .line 19
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Ljava/io/File;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-static {p2}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v0
 
     invoke-direct {p0, p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;-><init>(Landroid/content/Context;Landroid/net/Uri;)V
 
-    .line 2
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;)V
     .locals 0
 
-    .prologue
-    .line 42
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->onStop()V
 
     return-void
@@ -181,8 +158,6 @@
 .method static synthetic access$102(Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;I)I
     .locals 0
 
-    .prologue
-    .line 43
     iput p1, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mMediaWidth:I
 
     return p1
@@ -191,8 +166,6 @@
 .method static synthetic access$202(Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;I)I
     .locals 0
 
-    .prologue
-    .line 44
     iput p1, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mMediaHeight:I
 
     return p1
@@ -201,8 +174,6 @@
 .method static synthetic access$300(Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;)Landroid/media/MediaPlayer;
     .locals 1
 
-    .prologue
-    .line 45
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     return-object v0
@@ -211,13 +182,10 @@
 .method private onStop()V
     .locals 1
 
-    .prologue
-    .line 40
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mConsumers:Lcom/google/android/libraries/smartburst/filterfw/ConsumerFrameForwarder;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/ConsumerFrameForwarder;->sendStopNotification()V
 
-    .line 41
     return-void
 .end method
 
@@ -226,21 +194,16 @@
 .method public addVideoFrameConsumer(Lcom/google/android/libraries/smartburst/filterfw/VideoFrameConsumer;)V
     .locals 1
 
-    .prologue
-    .line 28
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mConsumers:Lcom/google/android/libraries/smartburst/filterfw/ConsumerFrameForwarder;
 
     invoke-virtual {v0, p1}, Lcom/google/android/libraries/smartburst/filterfw/ConsumerFrameForwarder;->addConsumer(Lcom/google/android/libraries/smartburst/filterfw/VideoFrameConsumer;)V
 
-    .line 29
     return-void
 .end method
 
 .method public close()V
     .locals 3
 
-    .prologue
-    .line 32
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mIsClosed:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -253,10 +216,8 @@
 
     if-nez v0, :cond_0
 
-    .line 33
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->release()V
 
-    .line 34
     :cond_0
     return-void
 .end method
@@ -264,8 +225,6 @@
 .method public getDurationNs()J
     .locals 4
 
-    .prologue
-    .line 25
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->getDuration()I
@@ -284,8 +243,6 @@
 .method public grabVideoFrame(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;Lcom/google/android/libraries/smartburst/filterfw/FrameValue;Lcom/google/android/libraries/smartburst/filterfw/geometry/Scaler;)Z
     .locals 6
 
-    .prologue
-    .line 27
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mFrameDistributor:Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor;
 
     iget v2, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mMediaWidth:I
@@ -308,79 +265,61 @@
 .method public release()V
     .locals 1
 
-    .prologue
-    .line 35
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 36
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    .line 37
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mFrameDistributor:Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/SurfaceFrameDistributor;->release()V
 
-    .line 38
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mPlayerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->quitSafely()Z
 
-    .line 39
     return-void
 .end method
 
 .method public removeVideoFrameConsumer(Lcom/google/android/libraries/smartburst/filterfw/VideoFrameConsumer;)V
     .locals 1
 
-    .prologue
-    .line 30
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mConsumers:Lcom/google/android/libraries/smartburst/filterfw/ConsumerFrameForwarder;
 
     invoke-virtual {v0, p1}, Lcom/google/android/libraries/smartburst/filterfw/ConsumerFrameForwarder;->removeConsumer(Lcom/google/android/libraries/smartburst/filterfw/VideoFrameConsumer;)V
 
-    .line 31
     return-void
 .end method
 
 .method public skipVideoFrame()V
     .locals 0
 
-    .prologue
-    .line 26
     return-void
 .end method
 
 .method public start()V
     .locals 1
 
-    .prologue
-    .line 20
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mConsumers:Lcom/google/android/libraries/smartburst/filterfw/ConsumerFrameForwarder;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/ConsumerFrameForwarder;->sendStartNotification()V
 
-    .line 21
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
 
-    .line 22
     return-void
 .end method
 
 .method public stop()V
     .locals 1
 
-    .prologue
-    .line 23
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/MediaStreamer;->mMediaPlayer:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 24
     return-void
 .end method

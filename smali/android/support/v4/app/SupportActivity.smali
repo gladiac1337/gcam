@@ -11,18 +11,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 2
     new-instance v0, Lhd;
 
     invoke-direct {v0}, Lhd;-><init>()V
 
     iput-object v0, p0, Landroid/support/v4/app/SupportActivity;->mExtraDataMap:Lhd;
 
-    .line 3
     return-void
 .end method
 
@@ -31,8 +27,6 @@
 .method public getExtraData(Ljava/lang/Class;)Landroid/support/v4/app/SupportActivity$ExtraData;
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Landroid/support/v4/app/SupportActivity;->mExtraDataMap:Lhd;
 
     invoke-virtual {v0, p1}, Lhd;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -47,8 +41,6 @@
 .method public putExtraData(Landroid/support/v4/app/SupportActivity$ExtraData;)V
     .locals 2
 
-    .prologue
-    .line 4
     iget-object v0, p0, Landroid/support/v4/app/SupportActivity;->mExtraDataMap:Lhd;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -57,6 +49,5 @@
 
     invoke-virtual {v0, v1, p1}, Lhd;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     return-void
 .end method

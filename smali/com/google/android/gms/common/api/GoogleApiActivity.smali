@@ -27,12 +27,10 @@
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 6
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v5, 0x0
 
-    .line 6
     invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onActivityResult(IILandroid/content/Intent;)V
 
     if-ne p1, v2, :cond_1
@@ -49,27 +47,22 @@
 
     iput v5, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->a:I
 
-    .line 7
     invoke-virtual {p0, p2}, Lcom/google/android/gms/common/api/GoogleApiActivity;->setResult(I)V
 
-    .line 8
     if-eqz v0, :cond_0
 
     invoke-static {p0}, Lhtb;->a(Landroid/content/Context;)Lhtb;
 
     move-result-object v0
 
-    .line 9
     packed-switch p2, :pswitch_data_0
 
-    .line 14
     :cond_0
     :goto_0
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->finish()V
 
     return-void
 
-    .line 9
     :pswitch_0
     new-instance v1, Lcom/google/android/gms/common/ConnectionResult;
 
@@ -91,7 +84,6 @@
 
     move-result v2
 
-    .line 10
     invoke-virtual {v0, v1, v2}, Lhtb;->a(Lcom/google/android/gms/common/ConnectionResult;I)Z
 
     move-result v3
@@ -112,13 +104,11 @@
 
     goto :goto_0
 
-    .line 11
     :pswitch_1
     invoke-virtual {v0}, Lhtb;->a()V
 
     goto :goto_0
 
-    .line 12
     :cond_1
     const/4 v0, 0x2
 
@@ -126,12 +116,10 @@
 
     iput v5, p0, Lcom/google/android/gms/common/api/GoogleApiActivity;->a:I
 
-    .line 13
     invoke-virtual {p0, p2}, Lcom/google/android/gms/common/api/GoogleApiActivity;->setResult(I)V
 
     goto :goto_0
 
-    .line 9
     :pswitch_data_0
     .packed-switch -0x1
         :pswitch_1
@@ -156,10 +144,8 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 7
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 1
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     if-eqz p1, :cond_0
@@ -177,7 +163,6 @@
 
     if-eq v0, v3, :cond_1
 
-    .line 2
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -196,12 +181,10 @@
 
     invoke-virtual {p0}, Lcom/google/android/gms/common/api/GoogleApiActivity;->finish()V
 
-    .line 5
     :cond_1
     :goto_0
     return-void
 
-    .line 2
     :cond_2
     const-string v0, "pending_intent"
 
@@ -276,11 +259,9 @@
 
     goto :goto_0
 
-    .line 3
     :cond_4
     sget-object v0, Lhjk;->a:Lhjk;
 
-    .line 4
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result v1

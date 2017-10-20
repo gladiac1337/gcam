@@ -16,17 +16,12 @@
 .method public constructor <init>(Lgbo;Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgbf;->a:Lgbo;
 
-    .line 3
     iput-object p2, p0, Lgbf;->b:Landroid/content/Context;
 
-    .line 4
     return-void
 .end method
 
@@ -35,8 +30,6 @@
 .method public final a()J
     .locals 2
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lgbf;->a:Lgbo;
 
     invoke-virtual {v0}, Lgbo;->a()J
@@ -49,8 +42,6 @@
 .method public final a(Lgbn;)V
     .locals 2
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lgbf;->a:Lgbo;
 
     new-instance v1, Lgbg;
@@ -59,6 +50,5 @@
 
     invoke-virtual {v0, v1}, Lgbo;->a(Lgbn;)V
 
-    .line 7
     return-void
 .end method

@@ -162,14 +162,10 @@
 .method protected final synthetic a(Landroid/os/IBinder;)Landroid/os/IInterface;
     .locals 1
 
-    .prologue
-    .line 10
-    .line 11
     invoke-static {p1}, Lhxc;->a(Landroid/os/IBinder;)Lhxb;
 
     move-result-object v0
 
-    .line 12
     return-object v0
 .end method
 
@@ -262,21 +258,17 @@
 .method public final a(Lhlc;)V
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 1
     invoke-virtual {p0}, Lhxv;->g()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 2
     :try_start_0
     iget-object v1, p0, Lhkw;->c:Landroid/content/Context;
 
-    .line 3
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
@@ -344,16 +336,12 @@
 
     const/4 v1, 0x6
 
-    .line 4
     iget-object v2, p0, Lhkw;->c:Landroid/content/Context;
 
-    .line 5
     const/4 v3, 0x0
 
-    .line 6
     iget-object v4, p0, Lhkw;->c:Landroid/content/Context;
 
-    .line 8
     new-instance v0, Landroid/content/Intent;
 
     const-string v5, "com.google.android.wearable.app.cn.UPDATE_ANDROID_WEAR"
@@ -378,7 +366,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 9
     :goto_0
     const/4 v4, 0x0
 
@@ -391,7 +378,6 @@
     :goto_1
     return-void
 
-    .line 8
     :cond_1
     const-string v0, "market://details"
 
@@ -425,7 +411,6 @@
 
     goto :goto_0
 
-    .line 9
     :catch_0
     move-exception v0
 

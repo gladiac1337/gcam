@@ -32,8 +32,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 64
     const-string v0, "MediaStoreManager"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -48,35 +46,24 @@
 .method constructor <init>(Landroid/net/Uri;Landroid/content/ContentResolver;Lgvu;Lftv;Lftz;Ljxb;Lico;Ljum;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lftk;->a:Landroid/net/Uri;
 
-    .line 3
     iput-object p2, p0, Lftk;->b:Landroid/content/ContentResolver;
 
-    .line 4
     iput-object p3, p0, Lftk;->f:Lgvu;
 
-    .line 5
     iput-object p4, p0, Lftk;->c:Lftv;
 
-    .line 6
     iput-object p5, p0, Lftk;->g:Lftz;
 
-    .line 7
     iput-object p6, p0, Lftk;->h:Ljxb;
 
-    .line 8
     iput-object p7, p0, Lftk;->i:Lico;
 
-    .line 9
     iput-object p8, p0, Lftk;->d:Ljum;
 
-    .line 10
     return-void
 .end method
 
@@ -85,15 +72,12 @@
 .method public final a(Landroid/net/Uri;JLjava/lang/String;Lgrr;Ljuk;)Lftu;
     .locals 6
 
-    .prologue
-    .line 27
     iget-object v0, p0, Lftk;->i:Lico;
 
     const-string v1, "updateProcessingImage"
 
     invoke-interface {v0, v1}, Lico;->a(Ljava/lang/String;)V
 
-    .line 28
     const-string v0, "content"
 
     invoke-virtual {p1}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
@@ -106,7 +90,6 @@
 
     invoke-static {v0}, Lixp;->a(Z)V
 
-    .line 29
     iget-object v0, p0, Lftk;->c:Lftv;
 
     move-object v1, p1
@@ -121,68 +104,54 @@
 
     move-result-object v0
 
-    .line 31
     sget-object v1, Ljuq;->a:Ljuq;
 
-    .line 32
     invoke-static {p6, v0, v1}, Ljtv;->a(Ljuk;Ljtu;Ljava/util/concurrent/Executor;)V
 
-    .line 33
     iget-object v1, p0, Lftk;->i:Lico;
 
     invoke-interface {v1}, Lico;->a()V
 
-    .line 34
     return-object v0
 .end method
 
 .method public final a(JLjava/lang/String;Lgrr;Ljuk;Lgvp;)Ljuk;
     .locals 9
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lftk;->i:Lico;
 
     const-string v1, "insertProcessingImage"
 
     invoke-interface {v0, v1}, Lico;->a(Ljava/lang/String;)V
 
-    .line 12
     iget-object v0, p0, Lftk;->f:Lgvu;
 
     invoke-virtual {v0, p3, p6}, Lgvu;->a(Ljava/lang/String;Lgvp;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 13
     iget-object v0, p0, Lftk;->h:Ljxb;
 
-    .line 14
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lfts;
 
-    .line 15
     invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 16
     iput-object v2, v0, Lfts;->a:Ljava/lang/String;
 
-    .line 19
     invoke-virtual {v0, p1, p2}, Lfts;->a(J)Lfts;
 
     move-result-object v0
 
-    .line 20
     invoke-virtual {v0}, Lfts;->a()Lfte;
 
     move-result-object v0
 
-    .line 21
     sget-object v2, Lftk;->e:Ljava/lang/String;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -229,7 +198,6 @@
 
     invoke-static {v2, v1}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 22
     iget-object v1, p0, Lftk;->d:Ljum;
 
     new-instance v2, Lftl;
@@ -240,7 +208,6 @@
 
     move-result-object v7
 
-    .line 23
     new-instance v0, Lftm;
 
     move-object v1, p0
@@ -257,33 +224,26 @@
 
     iget-object v1, p0, Lftk;->d:Ljum;
 
-    .line 24
     invoke-static {v7, v0, v1}, Ljtv;->a(Ljuk;Ljgy;Ljava/util/concurrent/Executor;)Ljuk;
 
     move-result-object v0
 
-    .line 25
     iget-object v1, p0, Lftk;->i:Lico;
 
     invoke-interface {v1}, Lico;->a()V
 
-    .line 26
     return-object v0
 .end method
 
 .method public final synthetic b(JLjava/lang/String;Lgrr;Ljuk;Lgvp;)Lftr;
     .locals 13
 
-    .prologue
-    .line 35
-    .line 36
     iget-object v2, p0, Lftk;->i:Lico;
 
     const-string v3, "insertProcessingVideo"
 
     invoke-interface {v2, v3}, Lico;->a(Ljava/lang/String;)V
 
-    .line 37
     iget-object v2, p0, Lftk;->f:Lgvu;
 
     move-object/from16 v0, p3
@@ -294,56 +254,44 @@
 
     move-result-object v3
 
-    .line 38
     iget-object v2, p0, Lftk;->h:Ljxb;
 
-    .line 39
     invoke-interface {v2}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lfts;
 
-    .line 40
     invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 41
     iput-object v3, v2, Lfts;->a:Ljava/lang/String;
 
-    .line 44
     invoke-virtual {v2, p1, p2}, Lfts;->a(J)Lfts;
 
     move-result-object v2
 
-    .line 45
     invoke-virtual {v2}, Lfts;->a()Lfte;
 
     move-result-object v2
 
-    .line 46
     iget-object v3, p0, Lftk;->b:Landroid/content/ContentResolver;
 
     iget-object v4, p0, Lftk;->a:Landroid/net/Uri;
 
-    .line 47
     iget-object v2, v2, Lfte;->a:Landroid/content/ContentValues;
 
-    .line 48
     invoke-virtual {v3, v4, v2}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
     move-result-object v7
 
-    .line 49
     iget-object v6, p0, Lftk;->g:Lftz;
 
-    .line 51
     new-instance v3, Lfty;
 
     iget-object v2, v6, Lftz;->a:Ljxb;
 
-    .line 52
     invoke-interface {v2}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -360,7 +308,6 @@
 
     iget-object v2, v6, Lftz;->b:Ljxb;
 
-    .line 53
     invoke-interface {v2}, Ljxb;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -379,7 +326,6 @@
 
     const/4 v2, 0x4
 
-    .line 54
     invoke-static {v7, v2}, Lftz;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v7
@@ -388,7 +334,6 @@
 
     const/4 v2, 0x6
 
-    .line 55
     move-object/from16 v0, p3
 
     invoke-static {v0, v2}, Lftz;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -399,7 +344,6 @@
 
     const/4 v2, 0x7
 
-    .line 56
     move-object/from16 v0, p4
 
     invoke-static {v0, v2}, Lftz;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -412,19 +356,15 @@
 
     invoke-direct/range {v3 .. v11}, Lfty;-><init>(Landroid/content/ContentResolver;Landroid/net/Uri;Ljxb;Landroid/net/Uri;JLjava/lang/String;Lgrr;)V
 
-    .line 59
     sget-object v2, Ljuq;->a:Ljuq;
 
-    .line 60
     move-object/from16 v0, p5
 
     invoke-static {v0, v3, v2}, Ljtv;->a(Ljuk;Ljtu;Ljava/util/concurrent/Executor;)V
 
-    .line 61
     iget-object v2, p0, Lftk;->i:Lico;
 
     invoke-interface {v2}, Lico;->a()V
 
-    .line 63
     return-object v3
 .end method

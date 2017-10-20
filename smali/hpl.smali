@@ -36,18 +36,13 @@
 .method protected final synthetic a(Landroid/os/IBinder;)Landroid/os/IInterface;
     .locals 2
 
-    .prologue
-    .line 56
-    .line 58
     if-nez p1, :cond_0
 
     const/4 v0, 0x0
 
-    .line 59
     :goto_0
     return-object v0
 
-    .line 58
     :cond_0
     const-string v0, "com.google.android.gms.feedback.internal.IFeedbackService"
 
@@ -76,15 +71,12 @@
 .method public final a(Lcom/google/android/gms/feedback/FeedbackOptions;)Lcom/google/android/gms/feedback/ErrorReport;
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhpl;->g:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
 
     move-result-object v2
 
-    .line 2
     new-instance v1, Lcom/google/android/gms/feedback/ErrorReport;
 
     invoke-direct {v1}, Lcom/google/android/gms/feedback/ErrorReport;-><init>()V
@@ -93,68 +85,52 @@
 
     move-object v0, v1
 
-    .line 55
     :goto_0
     return-object v0
 
-    .line 3
     :cond_0
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->b:Landroid/os/Bundle;
 
-    .line 4
     if-eqz v0, :cond_1
 
-    .line 5
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->b:Landroid/os/Bundle;
 
-    .line 6
     invoke-virtual {v0}, Landroid/os/Bundle;->size()I
 
     move-result v0
 
     if-lez v0, :cond_1
 
-    .line 7
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->b:Landroid/os/Bundle;
 
-    .line 8
     iput-object v0, v1, Lcom/google/android/gms/feedback/ErrorReport;->d:Landroid/os/Bundle;
 
-    .line 9
     :cond_1
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->a:Ljava/lang/String;
 
-    .line 10
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 11
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->a:Ljava/lang/String;
 
-    .line 12
     iput-object v0, v1, Lcom/google/android/gms/feedback/ErrorReport;->c:Ljava/lang/String;
 
-    .line 13
     :cond_2
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->c:Ljava/lang/String;
 
-    .line 14
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 15
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->c:Ljava/lang/String;
 
-    .line 16
     iput-object v0, v1, Lcom/google/android/gms/feedback/ErrorReport;->b:Ljava/lang/String;
 
-    .line 17
     :cond_3
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->d:Landroid/app/ApplicationErrorReport;
 
@@ -162,7 +138,6 @@
 
     const/4 v0, 0x0
 
-    .line 18
     :goto_1
     if-eqz v0, :cond_4
 
@@ -194,41 +169,31 @@
 
     iput-object v0, v1, Lcom/google/android/gms/feedback/ErrorReport;->f:Ljava/lang/String;
 
-    .line 19
     :cond_4
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->j:Lcom/google/android/gms/feedback/ThemeSettings;
 
-    .line 20
     if-eqz v0, :cond_5
 
-    .line 21
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->j:Lcom/google/android/gms/feedback/ThemeSettings;
 
-    .line 22
     iput-object v0, v1, Lcom/google/android/gms/feedback/ErrorReport;->q:Lcom/google/android/gms/feedback/ThemeSettings;
 
-    .line 23
     :cond_5
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->e:Ljava/lang/String;
 
-    .line 24
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_6
 
-    .line 25
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->e:Ljava/lang/String;
 
-    .line 26
     iput-object v0, v1, Lcom/google/android/gms/feedback/ErrorReport;->l:Ljava/lang/String;
 
-    .line 27
     :cond_6
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->g:Ljava/lang/String;
 
-    .line 28
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -237,30 +202,23 @@
 
     iget-object v0, v1, Lcom/google/android/gms/feedback/ErrorReport;->a:Landroid/app/ApplicationErrorReport;
 
-    .line 29
     iget-object v3, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->g:Ljava/lang/String;
 
-    .line 30
     iput-object v3, v0, Landroid/app/ApplicationErrorReport;->packageName:Ljava/lang/String;
 
-    .line 31
     :cond_7
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->f:Lcom/google/android/gms/common/data/BitmapTeleporter;
 
-    .line 32
     if-eqz v0, :cond_a
 
     if-eqz v2, :cond_a
 
-    .line 33
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->f:Lcom/google/android/gms/common/data/BitmapTeleporter;
 
-    .line 34
     iput-object v0, v1, Lcom/google/android/gms/feedback/ErrorReport;->m:Lcom/google/android/gms/common/data/BitmapTeleporter;
 
     iget-object v0, v1, Lcom/google/android/gms/feedback/ErrorReport;->m:Lcom/google/android/gms/common/data/BitmapTeleporter;
 
-    .line 35
     if-nez v2, :cond_9
 
     new-instance v0, Ljava/lang/NullPointerException;
@@ -271,7 +229,6 @@
 
     throw v0
 
-    .line 17
     :cond_8
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->d:Landroid/app/ApplicationErrorReport;
 
@@ -279,21 +236,16 @@
 
     goto :goto_1
 
-    .line 35
     :cond_9
     iput-object v2, v0, Lcom/google/android/gms/common/data/BitmapTeleporter;->a:Ljava/io/File;
 
-    .line 37
     :cond_a
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->h:Ljava/util/List;
 
-    .line 38
     if-eqz v0, :cond_d
 
-    .line 39
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->h:Ljava/util/List;
 
-    .line 40
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -302,10 +254,8 @@
 
     if-eqz v2, :cond_d
 
-    .line 41
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->h:Ljava/util/List;
 
-    .line 42
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -323,7 +273,6 @@
 
     check-cast v0, Lcom/google/android/gms/feedback/FileTeleporter;
 
-    .line 43
     if-nez v2, :cond_b
 
     new-instance v0, Ljava/lang/NullPointerException;
@@ -339,14 +288,11 @@
 
     goto :goto_2
 
-    .line 45
     :cond_c
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->h:Ljava/util/List;
 
-    .line 47
     iget-object v2, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->h:Ljava/util/List;
 
-    .line 48
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v2
@@ -361,29 +307,22 @@
 
     iput-object v0, v1, Lcom/google/android/gms/feedback/ErrorReport;->n:[Lcom/google/android/gms/feedback/FileTeleporter;
 
-    .line 49
     :cond_d
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->k:Lcom/google/android/gms/feedback/LogOptions;
 
-    .line 50
     if-eqz v0, :cond_e
 
-    .line 51
     iget-object v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->k:Lcom/google/android/gms/feedback/LogOptions;
 
-    .line 52
     iput-object v0, v1, Lcom/google/android/gms/feedback/ErrorReport;->r:Lcom/google/android/gms/feedback/LogOptions;
 
-    .line 53
     :cond_e
     iget-boolean v0, p1, Lcom/google/android/gms/feedback/FeedbackOptions;->i:Z
 
-    .line 54
     iput-boolean v0, v1, Lcom/google/android/gms/feedback/ErrorReport;->o:Z
 
     move-object v0, v1
 
-    .line 55
     goto/16 :goto_0
 .end method
 

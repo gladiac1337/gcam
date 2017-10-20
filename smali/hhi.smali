@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 5
     const/16 v0, 0x9
 
     new-array v0, v0, [F
@@ -40,8 +38,6 @@
 .method public static a([F[F)V
     .locals 2
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     :goto_0
@@ -49,17 +45,14 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 2
     aget v1, p0, v0
 
     aput v1, p1, v0
 
-    .line 3
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 4
     :cond_0
     return-void
 .end method

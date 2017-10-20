@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,9 +20,6 @@
 .method public final synthetic a(Lisz;)Ljava/lang/Object;
     .locals 6
 
-    .prologue
-    .line 2
-    .line 3
     const-class v0, Ljac;
 
     const-string v1, "post_proc_quality_metric"
@@ -35,7 +30,6 @@
 
     check-cast v0, Ljac;
 
-    .line 4
     const-class v1, Ljac;
 
     const-string v2, "video_presentation_time"
@@ -46,7 +40,6 @@
 
     check-cast v1, Ljac;
 
-    .line 5
     const/4 v2, 0x3
 
     new-array v3, v2, [Ljar;
@@ -57,7 +50,6 @@
 
     const-string v5, "continuous_action"
 
-    .line 6
     invoke-virtual {p1, v2, v5}, Lisz;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
@@ -82,11 +74,9 @@
 
     aput-object v2, v3, v1
 
-    .line 7
     invoke-static {v3}, Ljam;->a([Ljar;)Ljam;
 
     move-result-object v0
 
-    .line 8
     return-object v0
 .end method

@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 6
     new-instance v0, Ljwv;
 
     const/4 v1, 0x0
@@ -29,22 +27,16 @@
 .method private constructor <init>(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Ljwv;->a:Ljava/lang/Object;
 
-    .line 4
     return-void
 .end method
 
 .method public static a(Ljava/lang/Object;)Ljxb;
     .locals 2
 
-    .prologue
-    .line 1
     new-instance v0, Ljwv;
 
     const-string v1, "instance cannot be null"
@@ -63,8 +55,6 @@
 .method public final a()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Ljwv;->a:Ljava/lang/Object;
 
     return-object v0

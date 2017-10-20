@@ -11,8 +11,6 @@
 .method constructor <init>(Lhek;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhet;->a:Lhek;
 
     invoke-direct {p0}, Lhej;-><init>()V
@@ -25,20 +23,14 @@
 .method public final a()V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lhet;->a:Lhek;
 
-    .line 3
     iget-boolean v0, v0, Lhek;->o:Z
 
-    .line 4
     if-nez v0, :cond_0
 
-    .line 5
     iget-object v1, p0, Lhet;->a:Lhek;
 
-    .line 7
     iget-object v0, v1, Lhek;->k:Liaj;
 
     invoke-interface {v0}, Liaj;->b()Ljava/lang/Object;
@@ -57,7 +49,6 @@
 
     if-nez v0, :cond_1
 
-    .line 8
     iget-object v0, v1, Lhek;->j:Landroid/widget/LinearLayout;
 
     iget-object v1, v1, Lhek;->v:Ljava/lang/Runnable;
@@ -66,12 +57,10 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/widget/LinearLayout;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 10
     :cond_0
     :goto_0
     return-void
 
-    .line 9
     :cond_1
     iget-object v0, v1, Lhek;->j:Landroid/widget/LinearLayout;
 
@@ -85,8 +74,6 @@
 .method public a(Z)V
     .locals 6
 
-    .prologue
-    .line 16
     iget-object v0, p0, Lhet;->a:Lhek;
 
     invoke-static {v0}, Lhek;->a(Lhek;)Liaj;
@@ -103,19 +90,14 @@
 
     move-result v0
 
-    .line 17
     iget-object v1, p0, Lhet;->a:Lhek;
 
-    .line 18
     iget v1, v1, Lhek;->t:F
 
-    .line 19
     iget-object v2, p0, Lhet;->a:Lhek;
 
-    .line 20
     iget v2, v2, Lhek;->u:F
 
-    .line 21
     div-float/2addr v1, v2
 
     float-to-double v2, v1
@@ -128,36 +110,28 @@
 
     double-to-float v1, v2
 
-    .line 22
     if-eqz p1, :cond_0
 
-    .line 23
     mul-float/2addr v0, v1
 
-    .line 25
     :goto_0
     iget-object v1, p0, Lhet;->a:Lhek;
 
-    .line 27
     iget v2, v1, Lhek;->t:F
 
     cmpl-float v2, v0, v2
 
     if-lez v2, :cond_1
 
-    .line 28
     iget v0, v1, Lhek;->t:F
 
     move v1, v0
 
-    .line 33
     :goto_1
     iget-object v0, p0, Lhet;->a:Lhek;
 
-    .line 34
     iget-object v2, v0, Lhek;->m:Landroid/animation/ValueAnimator;
 
-    .line 35
     const/4 v0, 0x2
 
     new-array v3, v0, [F
@@ -188,25 +162,19 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/ValueAnimator;->setFloatValues([F)V
 
-    .line 36
     iget-object v0, p0, Lhet;->a:Lhek;
 
-    .line 37
     iget-object v0, v0, Lhek;->m:Landroid/animation/ValueAnimator;
 
-    .line 38
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 39
     return-void
 
-    .line 24
     :cond_0
     div-float/2addr v0, v1
 
     goto :goto_0
 
-    .line 29
     :cond_1
     iget v2, v1, Lhek;->u:F
 
@@ -214,7 +182,6 @@
 
     if-gez v2, :cond_2
 
-    .line 30
     iget v0, v1, Lhek;->u:F
 
     move v1, v0
@@ -230,81 +197,59 @@
 .method public ad()V
     .locals 0
 
-    .prologue
-    .line 43
     return-void
 .end method
 
 .method public ah()V
     .locals 1
 
-    .prologue
-    .line 48
     iget-object v0, p0, Lhet;->a:Lhek;
 
-    .line 49
     iget-object v0, v0, Lhek;->s:Landroid/animation/ValueAnimator;
 
-    .line 50
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 51
     return-void
 .end method
 
 .method public ak()V
     .locals 0
 
-    .prologue
-    .line 15
     return-void
 .end method
 
 .method public final b()V
     .locals 2
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lhet;->a:Lhek;
 
-    .line 13
     iget-object v1, v0, Lhek;->j:Landroid/widget/LinearLayout;
 
     iget-object v0, v0, Lhek;->v:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 14
     return-void
 .end method
 
 .method public b(Z)V
     .locals 1
 
-    .prologue
-    .line 40
     iget-object v0, p0, Lhet;->a:Lhek;
 
-    .line 41
     iput-boolean p1, v0, Lhek;->r:Z
 
-    .line 42
     return-void
 .end method
 
 .method public e()V
     .locals 1
 
-    .prologue
-    .line 44
     iget-object v0, p0, Lhet;->a:Lhek;
 
-    .line 45
     iget-object v0, v0, Lhek;->n:Landroid/animation/ObjectAnimator;
 
-    .line 46
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->reverse()V
 
-    .line 47
     return-void
 .end method

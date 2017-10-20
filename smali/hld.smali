@@ -29,8 +29,6 @@
 .method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 4
 
-    .prologue
-    .line 1
     if-nez p2, :cond_0
 
     iget-object v0, p0, Lhld;->b:Lhkw;
@@ -41,11 +39,9 @@
 
     invoke-virtual {v0, v1, v2}, Lhkw;->a(II)V
 
-    .line 3
     :goto_0
     return-void
 
-    .line 1
     :cond_0
     iget-object v0, p0, Lhld;->b:Lhkw;
 
@@ -58,12 +54,10 @@
     :try_start_0
     iget-object v2, p0, Lhld;->b:Lhkw;
 
-    .line 2
     if-nez p2, :cond_1
 
     const/4 v0, 0x0
 
-    .line 3
     :goto_1
     invoke-static {v2, v0}, Lhkw;->a(Lhkw;Lhmb;)Lhmb;
 
@@ -81,7 +75,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_1
     :try_start_1
     const-string v0, "com.google.android.gms.common.internal.IGmsServiceBroker"
@@ -107,7 +100,6 @@
 
     goto :goto_1
 
-    .line 3
     :catchall_0
     move-exception v0
 

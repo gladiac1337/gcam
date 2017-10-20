@@ -21,34 +21,24 @@
 .method public constructor <init>(Lgmo;IZ)V
     .locals 0
 
-    .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7
     iput p2, p0, Lfkj;->a:I
 
-    .line 8
     iput-boolean p3, p0, Lfkj;->b:Z
 
-    .line 9
     iput-object p1, p0, Lfkj;->c:Lgmo;
 
-    .line 10
     return-void
 .end method
 
 .method public constructor <init>(Lgmo;Lgdm;)V
     .locals 3
 
-    .prologue
-    .line 1
-    .line 2
     invoke-interface {p2}, Lgdm;->d()I
 
     move-result v1
 
-    .line 3
     invoke-interface {p2}, Lgdm;->b()Lift;
 
     move-result-object v0
@@ -59,14 +49,11 @@
 
     const/4 v0, 0x1
 
-    .line 4
     :goto_0
     invoke-direct {p0, p1, v1, v0}, Lfkj;-><init>(Lgmo;IZ)V
 
-    .line 5
     return-void
 
-    .line 3
     :cond_0
     const/4 v0, 0x0
 
@@ -76,16 +63,12 @@
 .method public static a(IIZ)I
     .locals 1
 
-    .prologue
-    .line 27
     if-eqz p2, :cond_0
 
-    .line 28
     rsub-int v0, p1, 0x168
 
     rem-int/lit16 p1, v0, 0x168
 
-    .line 29
     :cond_0
     add-int v0, p0, p1
 
@@ -97,20 +80,16 @@
 .method public static a(ILgdm;)I
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 19
     const/4 v0, -0x1
 
     if-ne p0, v0, :cond_1
 
-    .line 26
     :cond_0
     :goto_0
     return v2
 
-    .line 21
     :cond_1
     sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
@@ -120,7 +99,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 22
     sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_ORIENTATION:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     invoke-interface {p1, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
@@ -129,12 +107,10 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 23
     if-eqz v0, :cond_0
 
     if-eqz v1, :cond_0
 
-    .line 25
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
@@ -143,7 +119,6 @@
 
     const/4 v0, 0x1
 
-    .line 26
     :goto_1
     invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
@@ -158,7 +133,6 @@
     :cond_2
     move v0, v2
 
-    .line 25
     goto :goto_1
 .end method
 
@@ -167,27 +141,20 @@
 .method public final a()Libu;
     .locals 3
 
-    .prologue
-    .line 11
     iget v0, p0, Lfkj;->a:I
 
     iget-object v1, p0, Lfkj;->c:Lgmo;
 
-    .line 13
     iget-object v1, v1, Lgmo;->e:Libu;
 
-    .line 14
     iget v1, v1, Libu;->e:I
 
-    .line 15
     iget-boolean v2, p0, Lfkj;->b:Z
 
-    .line 16
     invoke-static {v0, v1, v2}, Lfkj;->a(IIZ)I
 
     move-result v0
 
-    .line 17
     invoke-static {v0}, Libu;->a(I)Libu;
 
     move-result-object v0
@@ -198,8 +165,6 @@
 .method public final b()Liaj;
     .locals 2
 
-    .prologue
-    .line 18
     new-instance v0, Lgmv;
 
     iget-object v1, p0, Lfkj;->c:Lgmo;

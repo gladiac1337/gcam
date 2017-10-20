@@ -15,20 +15,14 @@
 .method public constructor <init>(Ljava/lang/Class;Ljava/lang/Class;Lakx;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lalf;->c:Ljava/lang/Class;
 
-    .line 3
     iput-object p2, p0, Lalf;->a:Ljava/lang/Class;
 
-    .line 4
     iput-object p3, p0, Lalf;->b:Lakx;
 
-    .line 5
     return-void
 .end method
 
@@ -37,8 +31,6 @@
 .method public final a(Ljava/lang/Class;)Z
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lalf;->c:Ljava/lang/Class;
 
     invoke-virtual {v0, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z

@@ -22,28 +22,20 @@
 .method public final synthetic a(Lcom/google/android/gms/common/api/Status;)Lhkh;
     .locals 1
 
-    .prologue
-    .line 38
-    .line 39
     new-instance v0, Lhvp;
 
     invoke-direct {v0, p1}, Lhvp;-><init>(Lcom/google/android/gms/common/api/Status;)V
 
-    .line 40
     return-object v0
 .end method
 
 .method protected final synthetic a(Lhjv;)V
     .locals 13
 
-    .prologue
-    .line 1
     check-cast p1, Lhxv;
 
-    .line 2
     iget-object v2, p0, Lhwf;->a:Lcom/google/android/gms/wearable/PutDataRequest;
 
-    .line 3
     invoke-virtual {v2}, Lcom/google/android/gms/wearable/PutDataRequest;->a()Ljava/util/Map;
 
     move-result-object v0
@@ -75,36 +67,26 @@
 
     check-cast v0, Lcom/google/android/gms/wearable/Asset;
 
-    .line 4
     iget-object v3, v0, Lcom/google/android/gms/wearable/Asset;->a:[B
 
-    .line 5
     if-nez v3, :cond_0
 
-    .line 6
     iget-object v3, v0, Lcom/google/android/gms/wearable/Asset;->b:Ljava/lang/String;
 
-    .line 7
     if-nez v3, :cond_0
 
-    .line 8
     iget-object v3, v0, Lcom/google/android/gms/wearable/Asset;->c:Landroid/os/ParcelFileDescriptor;
 
-    .line 9
     if-nez v3, :cond_0
 
-    .line 10
     iget-object v3, v0, Lcom/google/android/gms/wearable/Asset;->d:Landroid/net/Uri;
 
-    .line 11
     if-nez v3, :cond_0
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
-    .line 12
     iget-object v2, v2, Lcom/google/android/gms/wearable/PutDataRequest;->a:Landroid/net/Uri;
 
-    .line 13
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -165,22 +147,17 @@
 
     throw v1
 
-    .line 14
     :cond_1
     iget-object v0, v2, Lcom/google/android/gms/wearable/PutDataRequest;->a:Landroid/net/Uri;
 
-    .line 15
     invoke-static {v0}, Lcom/google/android/gms/wearable/PutDataRequest;->a(Landroid/net/Uri;)Lcom/google/android/gms/wearable/PutDataRequest;
 
     move-result-object v3
 
-    .line 16
     iget-object v0, v2, Lcom/google/android/gms/wearable/PutDataRequest;->b:[B
 
-    .line 17
     iput-object v0, v3, Lcom/google/android/gms/wearable/PutDataRequest;->b:[B
 
-    .line 19
     iget-wide v0, v2, Lcom/google/android/gms/wearable/PutDataRequest;->c:J
 
     const-wide/16 v4, 0x0
@@ -191,16 +168,13 @@
 
     const/4 v0, 0x1
 
-    .line 20
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 21
     const-wide/16 v0, 0x0
 
     iput-wide v0, v3, Lcom/google/android/gms/wearable/PutDataRequest;->c:J
 
-    .line 22
     :cond_2
     new-instance v4, Ljava/util/ArrayList;
 
@@ -237,10 +211,8 @@
 
     check-cast v1, Lcom/google/android/gms/wearable/Asset;
 
-    .line 23
     iget-object v6, v1, Lcom/google/android/gms/wearable/Asset;->a:[B
 
-    .line 24
     if-eqz v6, :cond_5
 
     :try_start_0
@@ -373,10 +345,8 @@
 
     aget-object v0, v6, v0
 
-    .line 25
     iget-object v1, v1, Lcom/google/android/gms/wearable/Asset;->a:[B
 
-    .line 27
     new-instance v6, Ljava/util/concurrent/FutureTask;
 
     new-instance v7, Lhxw;
@@ -385,7 +355,6 @@
 
     invoke-direct {v6, v7}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
 
-    .line 28
     invoke-interface {v4, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     iget-object v0, p1, Lhxv;->g:Ljava/util/concurrent/ExecutorService;
@@ -394,13 +363,11 @@
 
     goto/16 :goto_1
 
-    .line 19
     :cond_4
     const/4 v0, 0x0
 
     goto/16 :goto_0
 
-    .line 24
     :catch_0
     move-exception v0
 
@@ -442,26 +409,20 @@
 
     throw v1
 
-    .line 29
     :cond_5
     iget-object v6, v1, Lcom/google/android/gms/wearable/Asset;->d:Landroid/net/Uri;
 
-    .line 30
     if-eqz v6, :cond_6
 
-    .line 31
     :try_start_1
     iget-object v6, p1, Lhkw;->c:Landroid/content/Context;
 
-    .line 32
     invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v6
 
-    .line 33
     iget-object v7, v1, Lcom/google/android/gms/wearable/Asset;->d:Landroid/net/Uri;
 
-    .line 34
     const-string v8, "r"
 
     invoke-virtual {v6, v7, v8}, Landroid/content/ContentResolver;->openFileDescriptor(Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
@@ -503,10 +464,8 @@
 
     const-string v0, "WearableClient"
 
-    .line 35
     iget-object v1, v1, Lcom/google/android/gms/wearable/Asset;->d:Landroid/net/Uri;
 
-    .line 36
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -541,11 +500,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 37
     :goto_2
     return-void
 
-    .line 36
     :cond_6
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 

@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/google/android/apps/camera/bottombar/BottomBarController;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     invoke-direct {p0}, Lcom/google/android/apps/camera/bottombar/BottomBarListener;-><init>()V
@@ -25,8 +23,6 @@
 .method public onCameraSwitch(I)V
     .locals 3
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarController;->access$300(Lcom/google/android/apps/camera/bottombar/BottomBarController;)Ljava/lang/Object;
@@ -35,7 +31,6 @@
 
     monitor-enter v1
 
-    .line 8
     :try_start_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
@@ -60,12 +55,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/bottombar/BottomBarListener;
 
-    .line 9
     invoke-virtual {v0, p1}, Lcom/google/android/apps/camera/bottombar/BottomBarListener;->onCameraSwitch(I)V
 
     goto :goto_0
 
-    .line 11
     :catchall_0
     move-exception v0
 
@@ -87,8 +80,6 @@
 .method public onCancelButtonPressed()V
     .locals 3
 
-    .prologue
-    .line 27
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarController;->access$300(Lcom/google/android/apps/camera/bottombar/BottomBarController;)Ljava/lang/Object;
@@ -97,7 +88,6 @@
 
     monitor-enter v1
 
-    .line 28
     :try_start_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
@@ -122,12 +112,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/bottombar/BottomBarListener;
 
-    .line 29
     invoke-virtual {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarListener;->onCancelButtonPressed()V
 
     goto :goto_0
 
-    .line 31
     :catchall_0
     move-exception v0
 
@@ -149,8 +137,6 @@
 .method public onFpsSwitch(I)V
     .locals 3
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarController;->access$300(Lcom/google/android/apps/camera/bottombar/BottomBarController;)Ljava/lang/Object;
@@ -159,7 +145,6 @@
 
     monitor-enter v1
 
-    .line 18
     :try_start_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
@@ -184,12 +169,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/bottombar/BottomBarListener;
 
-    .line 19
     invoke-virtual {v0, p1}, Lcom/google/android/apps/camera/bottombar/BottomBarListener;->onFpsSwitch(I)V
 
     goto :goto_0
 
-    .line 21
     :catchall_0
     move-exception v0
 
@@ -211,8 +194,6 @@
 .method public onPauseButtonClicked()V
     .locals 3
 
-    .prologue
-    .line 37
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarController;->access$300(Lcom/google/android/apps/camera/bottombar/BottomBarController;)Ljava/lang/Object;
@@ -221,7 +202,6 @@
 
     monitor-enter v1
 
-    .line 38
     :try_start_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
@@ -246,12 +226,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/bottombar/BottomBarListener;
 
-    .line 39
     invoke-virtual {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarListener;->onPauseButtonClicked()V
 
     goto :goto_0
 
-    .line 41
     :catchall_0
     move-exception v0
 
@@ -273,8 +251,6 @@
 .method public onPhotoSwitchButtonClicked()V
     .locals 3
 
-    .prologue
-    .line 47
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarController;->access$300(Lcom/google/android/apps/camera/bottombar/BottomBarController;)Ljava/lang/Object;
@@ -283,7 +259,6 @@
 
     monitor-enter v1
 
-    .line 48
     :try_start_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
@@ -308,12 +283,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/bottombar/BottomBarListener;
 
-    .line 49
     invoke-virtual {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarListener;->onPhotoSwitchButtonClicked()V
 
     goto :goto_0
 
-    .line 51
     :catchall_0
     move-exception v0
 
@@ -335,8 +308,6 @@
 .method public onResumeButtonClicked()V
     .locals 3
 
-    .prologue
-    .line 42
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarController;->access$300(Lcom/google/android/apps/camera/bottombar/BottomBarController;)Ljava/lang/Object;
@@ -345,7 +316,6 @@
 
     monitor-enter v1
 
-    .line 43
     :try_start_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
@@ -370,12 +340,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/bottombar/BottomBarListener;
 
-    .line 44
     invoke-virtual {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarListener;->onResumeButtonClicked()V
 
     goto :goto_0
 
-    .line 46
     :catchall_0
     move-exception v0
 
@@ -397,8 +365,6 @@
 .method public onRetakeButtonPressed()V
     .locals 3
 
-    .prologue
-    .line 22
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarController;->access$300(Lcom/google/android/apps/camera/bottombar/BottomBarController;)Ljava/lang/Object;
@@ -407,7 +373,6 @@
 
     monitor-enter v1
 
-    .line 23
     :try_start_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
@@ -432,12 +397,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/bottombar/BottomBarListener;
 
-    .line 24
     invoke-virtual {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarListener;->onRetakeButtonPressed()V
 
     goto :goto_0
 
-    .line 26
     :catchall_0
     move-exception v0
 
@@ -459,8 +422,6 @@
 .method public onReviewPlayButtonPressed()V
     .locals 3
 
-    .prologue
-    .line 32
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarController;->access$300(Lcom/google/android/apps/camera/bottombar/BottomBarController;)Ljava/lang/Object;
@@ -469,7 +430,6 @@
 
     monitor-enter v1
 
-    .line 33
     :try_start_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
@@ -494,12 +454,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/bottombar/BottomBarListener;
 
-    .line 34
     invoke-virtual {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarListener;->onReviewPlayButtonPressed()V
 
     goto :goto_0
 
-    .line 36
     :catchall_0
     move-exception v0
 
@@ -521,8 +479,6 @@
 .method public onSnapshotButtonClicked()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarController;->access$300(Lcom/google/android/apps/camera/bottombar/BottomBarController;)Ljava/lang/Object;
@@ -531,7 +487,6 @@
 
     monitor-enter v1
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
@@ -556,12 +511,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/bottombar/BottomBarListener;
 
-    .line 4
     invoke-virtual {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarListener;->onSnapshotButtonClicked()V
 
     goto :goto_0
 
-    .line 6
     :catchall_0
     move-exception v0
 
@@ -583,8 +536,6 @@
 .method public onThumbnailButtonClicked()V
     .locals 3
 
-    .prologue
-    .line 12
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarController;->access$300(Lcom/google/android/apps/camera/bottombar/BottomBarController;)Ljava/lang/Object;
@@ -593,7 +544,6 @@
 
     monitor-enter v1
 
-    .line 13
     :try_start_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
@@ -618,12 +568,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/bottombar/BottomBarListener;
 
-    .line 14
     invoke-virtual {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarListener;->onThumbnailButtonClicked()V
 
     goto :goto_0
 
-    .line 16
     :catchall_0
     move-exception v0
 
@@ -645,8 +593,6 @@
 .method public onVideoSwitchButtonClicked()V
     .locals 3
 
-    .prologue
-    .line 52
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarController;->access$300(Lcom/google/android/apps/camera/bottombar/BottomBarController;)Ljava/lang/Object;
@@ -655,7 +601,6 @@
 
     monitor-enter v1
 
-    .line 53
     :try_start_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$4;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
@@ -680,12 +625,10 @@
 
     check-cast v0, Lcom/google/android/apps/camera/bottombar/BottomBarListener;
 
-    .line 54
     invoke-virtual {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarListener;->onVideoSwitchButtonClicked()V
 
     goto :goto_0
 
-    .line 56
     :catchall_0
     move-exception v0
 

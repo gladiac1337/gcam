@@ -16,8 +16,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;Z)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgtd;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     iput-boolean p2, p0, Lgtd;->a:Z
@@ -32,27 +30,22 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgtd;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     iget-boolean v1, p0, Lgtd;->a:Z
 
     invoke-static {v0, v1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$3301(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;Z)V
 
-    .line 3
     iget-object v0, p0, Lgtd;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     iget-boolean v1, p0, Lgtd;->a:Z
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->setClickEnabled(Z)V
 
-    .line 4
     iget-boolean v0, p0, Lgtd;->a:Z
 
     if-eqz v0, :cond_1
 
-    .line 5
     iget-object v0, p0, Lgtd;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     iget-object v1, p0, Lgtd;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
@@ -61,19 +54,16 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 6
     iget-object v0, p0, Lgtd;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$3400(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;Z)V
 
-    .line 10
     :cond_0
     :goto_0
     return-void
 
-    .line 7
     :cond_1
     iget-object v0, p0, Lgtd;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
@@ -85,7 +75,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 8
     iget-object v0, p0, Lgtd;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$600(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Z
@@ -106,7 +95,6 @@
 
     if-nez v0, :cond_0
 
-    .line 9
     iget-object v0, p0, Lgtd;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     iget-object v1, p0, Lgtd;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;

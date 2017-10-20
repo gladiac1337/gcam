@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 7
     const-string v0, "LensBlurStatechart"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -37,8 +35,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lgva;-><init>([[F)V
@@ -51,19 +47,13 @@
 .method public a(Lcom/google/android/apps/camera/bottombar/BottomBarController;Lgtv;Levh;Ljhi;)V
     .locals 0
 
-    .prologue
-    .line 2
     iput-object p1, p0, Lfdm;->e:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
-    .line 3
     iput-object p2, p0, Lfdm;->f:Lgtv;
 
-    .line 4
     iput-object p3, p0, Lfdm;->g:Levh;
 
-    .line 5
     iput-object p4, p0, Lfdm;->h:Ljhi;
 
-    .line 6
     return-void
 .end method

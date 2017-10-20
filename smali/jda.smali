@@ -16,21 +16,16 @@
 .method public constructor <init>(Ljcw;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Ljda;->a:Ljava/util/Map;
 
-    .line 3
     iput-object p1, p0, Ljda;->b:Ljcw;
 
-    .line 4
     return-void
 .end method
 
@@ -39,15 +34,12 @@
 .method public final a(Lirh;Lirh;)F
     .locals 6
 
-    .prologue
-    .line 5
     iget-object v0, p0, Ljda;->b:Ljcw;
 
     invoke-interface {v0, p1, p2}, Ljcw;->a(Lirh;Lirh;)F
 
     move-result v0
 
-    .line 6
     iget-object v1, p0, Ljda;->a:Ljava/util/Map;
 
     new-instance v2, Landroid/util/Pair;
@@ -76,6 +68,5 @@
 
     invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     return v0
 .end method

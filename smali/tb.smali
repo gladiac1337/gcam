@@ -31,29 +31,22 @@
 .method public constructor <init>(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x2
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Ltb;->i:[I
 
-    .line 3
     iput-object p1, p0, Ltb;->a:Landroid/view/View;
 
-    .line 4
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setLongClickable(Z)V
 
-    .line 5
     invoke-virtual {p1, p0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    .line 6
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -70,14 +63,12 @@
 
     iput v0, p0, Ltb;->c:F
 
-    .line 7
     invoke-static {}, Landroid/view/ViewConfiguration;->getTapTimeout()I
 
     move-result v0
 
     iput v0, p0, Ltb;->d:I
 
-    .line 8
     iget v0, p0, Ltb;->d:I
 
     invoke-static {}, Landroid/view/ViewConfiguration;->getLongPressTimeout()I
@@ -90,7 +81,6 @@
 
     iput v0, p0, Ltb;->e:I
 
-    .line 9
     return-void
 .end method
 
@@ -102,13 +92,10 @@
 .method public b()Z
     .locals 2
 
-    .prologue
-    .line 77
     invoke-virtual {p0}, Ltb;->a()Lpt;
 
     move-result-object v0
 
-    .line 78
     if-eqz v0, :cond_0
 
     invoke-interface {v0}, Lpt;->d()Z
@@ -117,10 +104,8 @@
 
     if-nez v1, :cond_0
 
-    .line 79
     invoke-interface {v0}, Lpt;->b()V
 
-    .line 80
     :cond_0
     const/4 v0, 0x1
 
@@ -130,13 +115,10 @@
 .method protected c()Z
     .locals 2
 
-    .prologue
-    .line 81
     invoke-virtual {p0}, Ltb;->a()Lpt;
 
     move-result-object v0
 
-    .line 82
     if-eqz v0, :cond_0
 
     invoke-interface {v0}, Lpt;->d()Z
@@ -145,10 +127,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 83
     invoke-interface {v0}, Lpt;->c()V
 
-    .line 84
     :cond_0
     const/4 v0, 0x1
 
@@ -158,33 +138,27 @@
 .method final d()V
     .locals 2
 
-    .prologue
-    .line 85
     iget-object v0, p0, Ltb;->g:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 86
     iget-object v0, p0, Ltb;->a:Landroid/view/View;
 
     iget-object v1, p0, Ltb;->g:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 87
     :cond_0
     iget-object v0, p0, Ltb;->f:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_1
 
-    .line 88
     iget-object v0, p0, Ltb;->a:Landroid/view/View;
 
     iget-object v1, p0, Ltb;->f:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 89
     :cond_1
     return-void
 .end method
@@ -192,7 +166,6 @@
 .method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 11
 
-    .prologue
     const/4 v4, 0x3
 
     const/4 v5, 0x0
@@ -201,21 +174,16 @@
 
     const/4 v7, 0x0
 
-    .line 10
     iget-boolean v10, p0, Ltb;->b:Z
 
-    .line 11
     if-eqz v10, :cond_a
 
-    .line 13
     iget-object v1, p0, Ltb;->a:Landroid/view/View;
 
-    .line 14
     invoke-virtual {p0}, Ltb;->a()Lpt;
 
     move-result-object v0
 
-    .line 15
     if-eqz v0, :cond_0
 
     invoke-interface {v0}, Lpt;->d()Z
@@ -227,7 +195,6 @@
     :cond_0
     move v0, v7
 
-    .line 34
     :goto_0
     if-nez v0, :cond_1
 
@@ -240,11 +207,9 @@
     :cond_1
     move v0, v8
 
-    .line 69
     :goto_1
     iput-boolean v0, p0, Ltb;->b:Z
 
-    .line 70
     if-nez v0, :cond_2
 
     if-eqz v10, :cond_3
@@ -255,7 +220,6 @@
     :cond_3
     return v7
 
-    .line 17
     :cond_4
     invoke-interface {v0}, Lpt;->e()Landroid/widget/ListView;
 
@@ -263,7 +227,6 @@
 
     check-cast v0, Lst;
 
-    .line 18
     if-eqz v0, :cond_5
 
     invoke-virtual {v0}, Lst;->isShown()Z
@@ -275,22 +238,17 @@
     :cond_5
     move v0, v7
 
-    .line 19
     goto :goto_0
 
-    .line 20
     :cond_6
     invoke-static {p2}, Landroid/view/MotionEvent;->obtainNoHistory(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object v2
 
-    .line 22
     iget-object v3, p0, Ltb;->i:[I
 
-    .line 23
     invoke-virtual {v1, v3}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 24
     aget v1, v3, v7
 
     int-to-float v1, v1
@@ -301,13 +259,10 @@
 
     invoke-virtual {v2, v1, v3}, Landroid/view/MotionEvent;->offsetLocation(FF)V
 
-    .line 26
     iget-object v1, p0, Ltb;->i:[I
 
-    .line 27
     invoke-virtual {v0, v1}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 28
     aget v3, v1, v7
 
     neg-int v3, v3
@@ -322,29 +277,24 @@
 
     invoke-virtual {v2, v3, v1}, Landroid/view/MotionEvent;->offsetLocation(FF)V
 
-    .line 29
     iget v1, p0, Ltb;->h:I
 
     invoke-virtual {v0, v2, v1}, Lst;->a(Landroid/view/MotionEvent;I)Z
 
     move-result v1
 
-    .line 30
     invoke-virtual {v2}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 31
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
-    .line 32
     if-eq v0, v8, :cond_7
 
     if-eq v0, v4, :cond_7
 
     move v0, v8
 
-    .line 33
     :goto_2
     if-eqz v1, :cond_8
 
@@ -357,45 +307,37 @@
     :cond_7
     move v0, v7
 
-    .line 32
     goto :goto_2
 
     :cond_8
     move v0, v7
 
-    .line 33
     goto :goto_0
 
     :cond_9
     move v0, v7
 
-    .line 34
     goto :goto_1
 
-    .line 36
     :cond_a
     iget-object v1, p0, Ltb;->a:Landroid/view/View;
 
-    .line 37
     invoke-virtual {v1}, Landroid/view/View;->isEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_b
 
-    .line 38
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
-    .line 39
     packed-switch v0, :pswitch_data_0
 
     :cond_b
     :goto_3
     move v0, v7
 
-    .line 63
     :goto_4
     if-eqz v0, :cond_10
 
@@ -407,11 +349,9 @@
 
     move v9, v8
 
-    .line 64
     :goto_5
     if-eqz v9, :cond_c
 
-    .line 65
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
@@ -420,17 +360,14 @@
 
     move v6, v5
 
-    .line 66
     invoke-static/range {v0 .. v7}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
 
     move-result-object v0
 
-    .line 67
     iget-object v1, p0, Ltb;->a:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 68
     invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
 
     :cond_c
@@ -438,7 +375,6 @@
 
     goto/16 :goto_1
 
-    .line 40
     :pswitch_0
     invoke-virtual {p2, v7}, Landroid/view/MotionEvent;->getPointerId(I)I
 
@@ -446,19 +382,16 @@
 
     iput v0, p0, Ltb;->h:I
 
-    .line 41
     iget-object v0, p0, Ltb;->f:Ljava/lang/Runnable;
 
     if-nez v0, :cond_d
 
-    .line 42
     new-instance v0, Ltc;
 
     invoke-direct {v0, p0}, Ltc;-><init>(Ltb;)V
 
     iput-object v0, p0, Ltb;->f:Ljava/lang/Runnable;
 
-    .line 43
     :cond_d
     iget-object v0, p0, Ltb;->f:Ljava/lang/Runnable;
 
@@ -468,19 +401,16 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 44
     iget-object v0, p0, Ltb;->g:Ljava/lang/Runnable;
 
     if-nez v0, :cond_e
 
-    .line 45
     new-instance v0, Ltd;
 
     invoke-direct {v0, p0}, Ltd;-><init>(Ltb;)V
 
     iput-object v0, p0, Ltb;->g:Ljava/lang/Runnable;
 
-    .line 46
     :cond_e
     iget-object v0, p0, Ltb;->g:Ljava/lang/Runnable;
 
@@ -492,7 +422,6 @@
 
     goto :goto_3
 
-    .line 48
     :pswitch_1
     iget v0, p0, Ltb;->h:I
 
@@ -500,23 +429,18 @@
 
     move-result v0
 
-    .line 49
     if-ltz v0, :cond_b
 
-    .line 50
     invoke-virtual {p2, v0}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v2
 
-    .line 51
     invoke-virtual {p2, v0}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result v0
 
-    .line 52
     iget v3, p0, Ltb;->c:F
 
-    .line 53
     neg-float v6, v3
 
     cmpl-float v6, v2, v6
@@ -529,7 +453,6 @@
 
     if-ltz v6, :cond_f
 
-    .line 54
     invoke-virtual {v1}, Landroid/view/View;->getRight()I
 
     move-result v6
@@ -548,7 +471,6 @@
 
     if-gez v2, :cond_f
 
-    .line 55
     invoke-virtual {v1}, Landroid/view/View;->getBottom()I
 
     move-result v2
@@ -569,14 +491,11 @@
 
     move v0, v8
 
-    .line 56
     :goto_6
     if-nez v0, :cond_b
 
-    .line 57
     invoke-virtual {p0}, Ltb;->d()V
 
-    .line 58
     invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -585,16 +504,13 @@
 
     move v0, v8
 
-    .line 59
     goto/16 :goto_4
 
     :cond_f
     move v0, v7
 
-    .line 55
     goto :goto_6
 
-    .line 61
     :pswitch_2
     invoke-virtual {p0}, Ltb;->d()V
 
@@ -603,10 +519,8 @@
     :cond_10
     move v9, v7
 
-    .line 63
     goto/16 :goto_5
 
-    .line 39
     nop
 
     :pswitch_data_0
@@ -621,38 +535,30 @@
 .method public onViewAttachedToWindow(Landroid/view/View;)V
     .locals 0
 
-    .prologue
-    .line 71
     return-void
 .end method
 
 .method public onViewDetachedFromWindow(Landroid/view/View;)V
     .locals 2
 
-    .prologue
-    .line 72
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Ltb;->b:Z
 
-    .line 73
     const/4 v0, -0x1
 
     iput v0, p0, Ltb;->h:I
 
-    .line 74
     iget-object v0, p0, Ltb;->f:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 75
     iget-object v0, p0, Ltb;->a:Landroid/view/View;
 
     iget-object v1, p0, Ltb;->f:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 76
     :cond_0
     return-void
 .end method

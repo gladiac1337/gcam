@@ -56,8 +56,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 149
     const/4 v0, 0x0
 
     sput v0, Lfhp;->r:I
@@ -68,13 +66,10 @@
 .method constructor <init>(Lick;Landroid/widget/FrameLayout;Landroid/view/SurfaceView;Leut;Lgnb;Lcom/google/android/apps/camera/legacy/app/stats/Instrumentation;Lcom/google/android/apps/camera/legacy/app/ui/MainActivityLayout;)V
     .locals 3
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     invoke-static {}, Lgzo;->a()Lgzo;
 
     move-result-object v0
@@ -87,32 +82,23 @@
 
     move v0, v1
 
-    .line 4
     :goto_0
     iput-boolean v0, p0, Lfhp;->t:Z
 
-    .line 5
     iput-boolean v1, p0, Lfhp;->q:Z
 
-    .line 6
     iput-object p2, p0, Lfhp;->b:Landroid/widget/FrameLayout;
 
-    .line 7
     iput-object p3, p0, Lfhp;->d:Landroid/view/SurfaceView;
 
-    .line 8
     iput-object p4, p0, Lfhp;->s:Leut;
 
-    .line 9
     iput-object p5, p0, Lfhp;->f:Lgnb;
 
-    .line 10
     iput-object p6, p0, Lfhp;->g:Lcom/google/android/apps/camera/legacy/app/stats/Instrumentation;
 
-    .line 11
     iput-object p7, p0, Lfhp;->c:Landroid/widget/FrameLayout;
 
-    .line 12
     iget-object v0, p0, Lfhp;->d:Landroid/view/SurfaceView;
 
     invoke-virtual {v0}, Landroid/view/SurfaceView;->getHolder()Landroid/view/SurfaceHolder;
@@ -121,7 +107,6 @@
 
     iput-object v0, p0, Lfhp;->e:Landroid/view/SurfaceHolder;
 
-    .line 13
     sget v0, Lfhp;->r:I
 
     add-int/lit8 v1, v0, 0x1
@@ -154,30 +139,24 @@
 
     iput-object v0, p0, Lfhp;->a:Licj;
 
-    .line 14
     new-instance v0, Lfhr;
 
-    .line 15
     invoke-direct {v0, p0}, Lfhr;-><init>(Lfhp;)V
 
-    .line 16
     iput-object v0, p0, Lfhp;->h:Landroid/view/SurfaceHolder$Callback2;
 
-    .line 17
     iget-object v0, p0, Lfhp;->e:Landroid/view/SurfaceHolder;
 
     iget-object v1, p0, Lfhp;->h:Landroid/view/SurfaceHolder$Callback2;
 
     invoke-interface {v0, v1}, Landroid/view/SurfaceHolder;->addCallback(Landroid/view/SurfaceHolder$Callback;)V
 
-    .line 18
     new-instance v0, Lfhq;
 
     invoke-direct {v0, p0}, Lfhq;-><init>(Lfhp;)V
 
     iput-object v0, p0, Lfhp;->p:Landroid/view/View$OnLayoutChangeListener;
 
-    .line 19
     iget-object v0, p0, Lfhp;->f:Lgnb;
 
     invoke-interface {v0}, Lgnb;->h()Lgmu;
@@ -186,17 +165,14 @@
 
     iput-object v0, p0, Lfhp;->o:Lgmu;
 
-    .line 20
     iget-object v0, p0, Lfhp;->c:Landroid/widget/FrameLayout;
 
     iget-object v1, p0, Lfhp;->p:Landroid/view/View$OnLayoutChangeListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    .line 21
     return-void
 
-    .line 3
     :cond_0
     const/4 v0, 0x0
 
@@ -206,8 +182,6 @@
 .method private static a(F)I
     .locals 1
 
-    .prologue
-    .line 148
     const/4 v0, 0x0
 
     cmpl-float v0, p0, v0
@@ -228,17 +202,14 @@
 .method private final a(Landroid/widget/FrameLayout;III)V
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 139
     invoke-static {}, Lhzi;->b()Z
 
     move-result v0
 
     invoke-static {v0}, Lixp;->b(Z)V
 
-    .line 140
     iget-object v0, p0, Lfhp;->a:Licj;
 
     const/16 v1, 0x42
@@ -279,27 +250,20 @@
 
     invoke-interface {v0, v1}, Licj;->e(Ljava/lang/String;)V
 
-    .line 141
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
     invoke-direct {v0, p2, p3, p4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
 
-    .line 142
     invoke-virtual {v0, v3}, Landroid/widget/FrameLayout$LayoutParams;->setLayoutDirection(I)V
 
-    .line 143
     invoke-virtual {v0, v3, v3, v3, v3}, Landroid/widget/FrameLayout$LayoutParams;->setMargins(IIII)V
 
-    .line 144
     invoke-virtual {p1, v0}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 145
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->invalidate()V
 
-    .line 146
     invoke-virtual {p1}, Landroid/widget/FrameLayout;->requestLayout()V
 
-    .line 147
     return-void
 .end method
 
@@ -308,17 +272,14 @@
 .method final a(Libx;Lfhu;)V
     .locals 11
 
-    .prologue
     const/4 v10, -0x1
 
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 39
     invoke-static {}, Lhzi;->a()V
 
-    .line 40
     iget-object v0, p0, Lfhp;->k:Lfhu;
 
     invoke-static {p2, v0}, Ljhh;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -329,7 +290,6 @@
 
     move v0, v1
 
-    .line 41
     :goto_0
     iget-object v3, p0, Lfhp;->n:Libx;
 
@@ -341,7 +301,6 @@
 
     move v3, v1
 
-    .line 42
     :goto_1
     iget-object v4, p0, Lfhp;->o:Lgmu;
 
@@ -355,7 +314,6 @@
 
     move v4, v1
 
-    .line 43
     :goto_2
     if-nez p2, :cond_0
 
@@ -364,44 +322,36 @@
     :cond_0
     iput-object p2, p0, Lfhp;->k:Lfhu;
 
-    .line 44
     iput-object p1, p0, Lfhp;->n:Libx;
 
-    .line 45
     iget-object v5, p0, Lfhp;->k:Lfhu;
 
     if-nez v5, :cond_4
 
-    .line 46
     iget-object v0, p0, Lfhp;->a:Licj;
 
     const-string v1, "Viewfinder config is null, ignoring reconfigureSurface."
 
     invoke-interface {v0, v1}, Licj;->d(Ljava/lang/String;)V
 
-    .line 138
     :goto_3
     return-void
 
     :cond_1
     move v0, v2
 
-    .line 40
     goto :goto_0
 
     :cond_2
     move v3, v2
 
-    .line 41
     goto :goto_1
 
     :cond_3
     move v4, v2
 
-    .line 42
     goto :goto_2
 
-    .line 48
     :cond_4
     iget-object v5, p0, Lfhp;->n:Libx;
 
@@ -415,7 +365,6 @@
 
     if-gtz v5, :cond_5
 
-    .line 49
     iget-object v0, p0, Lfhp;->a:Licj;
 
     iget-object v1, p0, Lfhp;->n:Libx;
@@ -456,13 +405,11 @@
 
     goto :goto_3
 
-    .line 52
     :cond_5
     new-instance v5, Libx;
 
     iget-object v6, p0, Lfhp;->e:Landroid/view/SurfaceHolder;
 
-    .line 53
     invoke-interface {v6}, Landroid/view/SurfaceHolder;->getSurfaceFrame()Landroid/graphics/Rect;
 
     move-result-object v6
@@ -483,7 +430,6 @@
 
     invoke-direct {v5, v6, v7}, Libx;-><init>(II)V
 
-    .line 54
     iget-object v6, p0, Lfhp;->k:Lfhu;
 
     iget-object v6, v6, Lfhu;->a:Libx;
@@ -492,7 +438,6 @@
 
     move-result v5
 
-    .line 55
     if-nez v3, :cond_6
 
     if-nez v0, :cond_6
@@ -501,7 +446,6 @@
 
     if-nez v4, :cond_6
 
-    .line 56
     iget-object v0, p0, Lfhp;->a:Licj;
 
     const-string v1, "Ignoring reconfigure because layout, viewfinder config and surface frame size are the same."
@@ -510,7 +454,6 @@
 
     goto :goto_3
 
-    .line 58
     :cond_6
     iget-object v0, p0, Lfhp;->a:Licj;
 
@@ -550,7 +493,6 @@
 
     invoke-interface {v0, v3}, Licj;->b(Ljava/lang/String;)V
 
-    .line 59
     iget-object v0, p0, Lfhp;->a:Licj;
 
     iget-object v3, p0, Lfhp;->n:Libx;
@@ -589,31 +531,24 @@
 
     invoke-interface {v0, v3}, Licj;->b(Ljava/lang/String;)V
 
-    .line 60
     iget-object v0, p0, Lfhp;->a:Licj;
 
     const-string v3, "Setting configuration for the SurfaceHolder and containing FrameLayout."
 
     invoke-interface {v0, v3}, Licj;->d(Ljava/lang/String;)V
 
-    .line 61
     iget-object v0, p0, Lfhp;->s:Leut;
 
     iget-object v3, p0, Lfhp;->n:Libx;
 
-    .line 62
     iget v3, v3, Libx;->a:I
 
-    .line 63
     iget-object v4, p0, Lfhp;->n:Libx;
 
-    .line 64
     iget v4, v4, Libx;->b:I
 
-    .line 65
     invoke-virtual {v0, v3, v4}, Leut;->a(II)V
 
-    .line 66
     iget-object v0, p0, Lfhp;->a:Licj;
 
     iget-object v3, p0, Lfhp;->k:Lfhu;
@@ -654,7 +589,6 @@
 
     invoke-interface {v0, v3}, Licj;->b(Ljava/lang/String;)V
 
-    .line 67
     iget-object v0, p0, Lfhp;->a:Licj;
 
     iget-object v3, p0, Lfhp;->k:Lfhu;
@@ -699,35 +633,28 @@
 
     invoke-interface {v0, v3}, Licj;->b(Ljava/lang/String;)V
 
-    .line 68
     iget-object v0, p0, Lfhp;->s:Leut;
 
     iget-object v3, p0, Lfhp;->k:Lfhu;
 
     iget-object v3, v3, Lfhu;->a:Libx;
 
-    .line 69
     iget v3, v3, Libx;->a:I
 
-    .line 70
     iget-object v4, p0, Lfhp;->k:Lfhu;
 
     iget-object v4, v4, Lfhu;->a:Libx;
 
-    .line 71
     iget v4, v4, Libx;->b:I
 
-    .line 73
     invoke-virtual {v0, v3, v4, v2}, Leut;->a(IIZ)V
 
-    .line 74
     iget-object v0, p0, Lfhp;->s:Leut;
 
     invoke-virtual {v0}, Leut;->b()Landroid/graphics/RectF;
 
     move-result-object v4
 
-    .line 75
     new-instance v0, Libx;
 
     invoke-virtual {v4}, Landroid/graphics/RectF;->width()F
@@ -744,7 +671,6 @@
 
     invoke-direct {v0, v3, v5}, Libx;-><init>(II)V
 
-    .line 76
     iget-object v3, p0, Lfhp;->a:Licj;
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -781,7 +707,6 @@
 
     invoke-interface {v3, v5}, Licj;->b(Ljava/lang/String;)V
 
-    .line 77
     iget-object v3, p0, Lfhp;->a:Licj;
 
     invoke-static {v0}, Libh;->a(Libx;)Libh;
@@ -822,7 +747,6 @@
 
     invoke-interface {v3, v0}, Licj;->b(Ljava/lang/String;)V
 
-    .line 78
     iget-object v0, p0, Lfhp;->a:Licj;
 
     iget-object v3, p0, Lfhp;->k:Lfhu;
@@ -863,7 +787,6 @@
 
     invoke-interface {v0, v3}, Licj;->b(Ljava/lang/String;)V
 
-    .line 79
     iget-object v0, p0, Lfhp;->s:Leut;
 
     invoke-virtual {v0}, Leut;->d()Z
@@ -872,20 +795,16 @@
 
     if-eqz v0, :cond_c
 
-    .line 81
     iget v3, p1, Libx;->a:I
 
-    .line 84
     iget v0, p1, Libx;->b:I
 
-    .line 86
     iget-object v5, p0, Lfhp;->f:Lgnb;
 
     invoke-interface {v5}, Lgnb;->h()Lgmu;
 
     move-result-object v5
 
-    .line 87
     sget-object v6, Lgmu;->a:Lgmu;
 
     if-eq v5, v6, :cond_7
@@ -894,15 +813,12 @@
 
     if-ne v5, v6, :cond_a
 
-    .line 88
     :cond_7
     :goto_4
     if-eqz v1, :cond_b
 
-    .line 90
     iget v0, p1, Libx;->a:I
 
-    .line 91
     int-to-float v0, v0
 
     iget-object v1, p0, Lfhp;->k:Lfhu;
@@ -919,7 +835,6 @@
 
     move v1, v3
 
-    .line 95
     :goto_5
     iget-object v3, p0, Lfhp;->a:Licj;
 
@@ -961,14 +876,12 @@
 
     invoke-interface {v3, v5}, Licj;->b(Ljava/lang/String;)V
 
-    .line 96
     iget-object v3, p0, Lfhp;->b:Landroid/widget/FrameLayout;
 
     const/16 v5, 0x11
 
     invoke-direct {p0, v3, v1, v0, v5}, Lfhp;->a(Landroid/widget/FrameLayout;III)V
 
-    .line 99
     :goto_6
     iget v0, v4, Landroid/graphics/RectF;->left:F
 
@@ -976,20 +889,16 @@
 
     move-result v0
 
-    .line 100
     iget v1, v4, Landroid/graphics/RectF;->top:F
 
     invoke-static {v1}, Lfhp;->a(F)I
 
     move-result v1
 
-    .line 101
     iget-object v3, p0, Lfhp;->n:Libx;
 
-    .line 102
     iget v3, v3, Libx;->a:I
 
-    .line 103
     iget v5, v4, Landroid/graphics/RectF;->right:F
 
     invoke-static {v5}, Lfhp;->a(F)I
@@ -998,13 +907,10 @@
 
     sub-int/2addr v3, v5
 
-    .line 104
     iget-object v5, p0, Lfhp;->n:Libx;
 
-    .line 105
     iget v5, v5, Libx;->b:I
 
-    .line 106
     iget v4, v4, Landroid/graphics/RectF;->bottom:F
 
     invoke-static {v4}, Lfhp;->a(F)I
@@ -1013,7 +919,6 @@
 
     sub-int v4, v5, v4
 
-    .line 107
     iget-object v5, p0, Lfhp;->a:Licj;
 
     const/16 v6, 0x65
@@ -1074,12 +979,10 @@
 
     invoke-interface {v5, v6}, Licj;->b(Ljava/lang/String;)V
 
-    .line 108
     iget-object v5, p0, Lfhp;->b:Landroid/widget/FrameLayout;
 
     invoke-virtual {v5, v0, v1, v3, v4}, Landroid/widget/FrameLayout;->setPadding(IIII)V
 
-    .line 109
     iget-boolean v0, p0, Lfhp;->q:Z
 
     if-nez v0, :cond_8
@@ -1088,7 +991,6 @@
 
     if-nez v0, :cond_d
 
-    .line 110
     :cond_8
     iget-object v0, p0, Lfhp;->e:Landroid/view/SurfaceHolder;
 
@@ -1096,31 +998,24 @@
 
     iget-object v1, v1, Lfhu;->a:Libx;
 
-    .line 111
     iget v1, v1, Libx;->a:I
 
-    .line 112
     iget-object v3, p0, Lfhp;->k:Lfhu;
 
     iget-object v3, v3, Lfhu;->a:Libx;
 
-    .line 113
     iget v3, v3, Libx;->b:I
 
-    .line 114
     invoke-interface {v0, v1, v3}, Landroid/view/SurfaceHolder;->setFixedSize(II)V
 
-    .line 115
     iput-boolean v2, p0, Lfhp;->q:Z
 
-    .line 136
     :cond_9
     :goto_7
     iget-object v0, p0, Lfhp;->b:Landroid/widget/FrameLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 137
     iget-object v0, p0, Lfhp;->d:Landroid/view/SurfaceView;
 
     invoke-virtual {v0, v2}, Landroid/view/SurfaceView;->setVisibility(I)V
@@ -1130,14 +1025,11 @@
     :cond_a
     move v1, v2
 
-    .line 87
     goto/16 :goto_4
 
-    .line 93
     :cond_b
     iget v1, p1, Libx;->b:I
 
-    .line 94
     int-to-float v1, v1
 
     iget-object v3, p0, Lfhp;->k:Lfhu;
@@ -1154,7 +1046,6 @@
 
     goto/16 :goto_5
 
-    .line 98
     :cond_c
     iget-object v0, p0, Lfhp;->b:Landroid/widget/FrameLayout;
 
@@ -1164,25 +1055,21 @@
 
     goto/16 :goto_6
 
-    .line 116
     :cond_d
     iget-boolean v0, p0, Lfhp;->t:Z
 
     if-eqz v0, :cond_9
 
-    .line 117
     iget-object v0, p0, Lfhp;->a:Licj;
 
     const-string v1, "Setting SurfaceView size from layout"
 
     invoke-interface {v0, v1}, Licj;->b(Ljava/lang/String;)V
 
-    .line 118
     iget-object v0, p0, Lfhp;->e:Landroid/view/SurfaceHolder;
 
     invoke-interface {v0}, Landroid/view/SurfaceHolder;->setSizeFromLayout()V
 
-    .line 119
     iget-object v0, p0, Lfhp;->d:Landroid/view/SurfaceView;
 
     invoke-virtual {v0}, Landroid/view/SurfaceView;->getWidth()I
@@ -1193,15 +1080,12 @@
 
     iget-object v1, v1, Lfhu;->a:Libx;
 
-    .line 120
     iget v1, v1, Libx;->a:I
 
-    .line 121
     if-ne v0, v1, :cond_9
 
     iget-object v0, p0, Lfhp;->d:Landroid/view/SurfaceView;
 
-    .line 122
     invoke-virtual {v0}, Landroid/view/SurfaceView;->getHeight()I
 
     move-result v0
@@ -1210,29 +1094,23 @@
 
     iget-object v1, v1, Lfhu;->a:Libx;
 
-    .line 123
     iget v1, v1, Libx;->b:I
 
-    .line 124
     if-ne v0, v1, :cond_9
 
-    .line 125
     iget-object v0, p0, Lfhp;->a:Licj;
 
     const-string v1, "Forcing window update"
 
     invoke-interface {v0, v1}, Licj;->b(Ljava/lang/String;)V
 
-    .line 127
     :try_start_0
     iget-object v0, p0, Lfhp;->u:Ljava/lang/reflect/Method;
 
     if-nez v0, :cond_e
 
-    .line 128
     iget-object v0, p0, Lfhp;->d:Landroid/view/SurfaceView;
 
-    .line 129
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -1255,21 +1133,18 @@
 
     aput-object v5, v3, v4
 
-    .line 130
     invoke-virtual {v0, v1, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
     iput-object v0, p0, Lfhp;->u:Ljava/lang/reflect/Method;
 
-    .line 131
     iget-object v0, p0, Lfhp;->u:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 132
     :cond_e
     iget-object v0, p0, Lfhp;->u:Ljava/lang/reflect/Method;
 
@@ -1307,7 +1182,6 @@
 
     goto/16 :goto_7
 
-    .line 135
     :catch_0
     move-exception v0
 
@@ -1334,8 +1208,6 @@
 .method final a()Z
     .locals 6
 
-    .prologue
-    .line 27
     iget-object v0, p0, Lfhp;->k:Lfhu;
 
     if-eqz v0, :cond_0
@@ -1350,23 +1222,19 @@
 
     iget-object v0, p0, Lfhp;->l:Landroid/view/Surface;
 
-    .line 28
     invoke-virtual {v0}, Landroid/view/Surface;->isValid()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 29
     :cond_0
     const/4 v0, 0x0
 
-    .line 38
     :cond_1
     :goto_0
     return v0
 
-    .line 30
     :cond_2
     iget-object v0, p0, Lfhp;->m:Libx;
 
@@ -1378,7 +1246,6 @@
 
     move-result-object v1
 
-    .line 31
     iget-object v0, p0, Lfhp;->k:Lfhu;
 
     iget-object v0, v0, Lfhu;->b:Libh;
@@ -1387,18 +1254,14 @@
 
     move-result-object v2
 
-    .line 32
     invoke-static {v1, v2}, Ljhh;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 33
     if-nez v0, :cond_1
 
-    .line 34
     iget-object v3, p0, Lfhp;->a:Licj;
 
-    .line 35
     invoke-virtual {v1}, Libh;->b()Libh;
 
     move-result-object v1
@@ -1407,7 +1270,6 @@
 
     move-result-object v1
 
-    .line 36
     invoke-virtual {v2}, Libh;->b()Libh;
 
     move-result-object v2
@@ -1464,7 +1326,6 @@
 
     move-result-object v1
 
-    .line 37
     invoke-interface {v3, v1}, Licj;->e(Ljava/lang/String;)V
 
     goto :goto_0
@@ -1473,26 +1334,20 @@
 .method public final close()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 22
     iget-object v0, p0, Lfhp;->l:Landroid/view/Surface;
 
     if-eqz v0, :cond_0
 
-    .line 23
     iget-object v0, p0, Lfhp;->l:Landroid/view/Surface;
 
     invoke-virtual {v0}, Landroid/view/Surface;->release()V
 
-    .line 24
     iput-object v1, p0, Lfhp;->l:Landroid/view/Surface;
 
-    .line 25
     iput-object v1, p0, Lfhp;->m:Libx;
 
-    .line 26
     :cond_0
     return-void
 .end method

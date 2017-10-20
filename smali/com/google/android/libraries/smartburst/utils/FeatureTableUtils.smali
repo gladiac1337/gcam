@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,17 +15,12 @@
 .method public static getAllValidFeatureValue(Lcom/google/android/libraries/smartburst/buffers/FeatureTable;Ljfh;)Lcom/google/android/libraries/smartburst/utils/FloatArray;
     .locals 4
 
-    .prologue
-    .line 2
-    .line 3
     iget v0, p1, Ljfh;->A:I
 
-    .line 4
     const/4 v1, 0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 5
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Can not apply on features with more than 1 value!"
@@ -36,13 +29,11 @@
 
     throw v0
 
-    .line 6
     :cond_0
     new-instance v1, Lcom/google/android/libraries/smartburst/utils/FloatArray;
 
     invoke-direct {v1}, Lcom/google/android/libraries/smartburst/utils/FloatArray;-><init>()V
 
-    .line 7
     invoke-interface {p0}, Lcom/google/android/libraries/smartburst/buffers/FeatureTable;->getEarliestTimestamp()J
 
     move-result-wide v2
@@ -51,7 +42,6 @@
 
     move-result-object v2
 
-    .line 8
     :goto_0
     invoke-virtual {v2}, Liri;->a()Z
 
@@ -59,14 +49,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 9
     invoke-virtual {v2}, Liri;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lirh;
 
-    .line 10
     invoke-virtual {v0, p1}, Lirh;->a(Ljfh;)Lcom/google/android/libraries/smartburst/utils/Feature;
 
     move-result-object v0
@@ -79,7 +67,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_1
     return-object v1
 .end method
@@ -87,13 +74,10 @@
 .method public static getAllValidTimestamps(Lcom/google/android/libraries/smartburst/buffers/FeatureTable;)[J
     .locals 6
 
-    .prologue
-    .line 13
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 15
     invoke-interface {p0}, Lcom/google/android/libraries/smartburst/buffers/FeatureTable;->getEarliestTimestamp()J
 
     move-result-wide v2
@@ -102,7 +86,6 @@
 
     move-result-object v2
 
-    .line 16
     :goto_0
     invoke-virtual {v2}, Liri;->a()Z
 
@@ -110,14 +93,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 17
     invoke-virtual {v2}, Liri;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lirh;
 
-    .line 18
     invoke-virtual {v0}, Lirh;->b()J
 
     move-result-wide v4
@@ -130,7 +111,6 @@
 
     goto :goto_0
 
-    .line 20
     :cond_0
     invoke-static {v1}, Ljvr;->b(Ljava/util/Collection;)[J
 
@@ -142,17 +122,12 @@
 .method public static getFeatureInRange(Lcom/google/android/libraries/smartburst/buffers/FeatureTable;Ljfh;JJ)Lcom/google/android/libraries/smartburst/utils/FloatArray;
     .locals 6
 
-    .prologue
-    .line 21
-    .line 22
     iget v0, p1, Ljfh;->A:I
 
-    .line 23
     const/4 v1, 0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 24
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Can not apply on features with more than 1 value!"
@@ -161,18 +136,15 @@
 
     throw v0
 
-    .line 25
     :cond_0
     new-instance v1, Lcom/google/android/libraries/smartburst/utils/FloatArray;
 
     invoke-direct {v1}, Lcom/google/android/libraries/smartburst/utils/FloatArray;-><init>()V
 
-    .line 26
     invoke-interface {p0, p2, p3}, Lcom/google/android/libraries/smartburst/buffers/FeatureTable;->getRowIterator(J)Liri;
 
     move-result-object v2
 
-    .line 27
     :goto_0
     invoke-virtual {v2}, Liri;->a()Z
 
@@ -180,14 +152,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 28
     invoke-virtual {v2}, Liri;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lirh;
 
-    .line 29
     invoke-virtual {v0}, Lirh;->b()J
 
     move-result-wide v4
@@ -196,7 +166,6 @@
 
     if-gtz v3, :cond_1
 
-    .line 30
     invoke-virtual {v0, p1}, Lirh;->a(Ljfh;)Lcom/google/android/libraries/smartburst/utils/Feature;
 
     move-result-object v0
@@ -209,7 +178,6 @@
 
     goto :goto_0
 
-    .line 32
     :cond_1
     return-object v1
 .end method
@@ -217,18 +185,14 @@
 .method public static getTimestampsInRange(Lcom/google/android/libraries/smartburst/buffers/FeatureTable;JJ)Ljava/util/List;
     .locals 7
 
-    .prologue
-    .line 33
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 35
     invoke-interface {p0, p1, p2}, Lcom/google/android/libraries/smartburst/buffers/FeatureTable;->getRowIterator(J)Liri;
 
     move-result-object v2
 
-    .line 36
     :goto_0
     invoke-virtual {v2}, Liri;->a()Z
 
@@ -236,14 +200,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 37
     invoke-virtual {v2}, Liri;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lirh;
 
-    .line 38
     invoke-virtual {v0}, Lirh;->b()J
 
     move-result-wide v4
@@ -252,7 +214,6 @@
 
     if-gtz v3, :cond_0
 
-    .line 39
     invoke-virtual {v0}, Lirh;->b()J
 
     move-result-wide v4
@@ -265,7 +226,6 @@
 
     goto :goto_0
 
-    .line 41
     :cond_0
     return-object v1
 .end method

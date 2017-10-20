@@ -69,17 +69,12 @@
 .method public constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 6
 
-    .prologue
-    .line 1
-    .line 2
     new-instance v3, Lhix;
 
     invoke-direct {v3, p1}, Lhix;-><init>(Landroid/content/Context;)V
 
-    .line 3
     sget-object v4, Lhmg;->a:Lhmg;
 
-    .line 4
     new-instance v5, Lhje;
 
     invoke-direct {v5, p1}, Lhje;-><init>(Landroid/content/Context;)V
@@ -237,8 +232,6 @@
 .method public static synthetic d()[I
     .locals 1
 
-    .prologue
-    .line 5
     const/4 v0, 0x0
 
     return-object v0
@@ -255,8 +248,6 @@
 .method public static synthetic e()[Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 6
     const/4 v0, 0x0
 
     return-object v0
@@ -273,8 +264,6 @@
 .method public static synthetic f()[[B
     .locals 1
 
-    .prologue
-    .line 7
     const/4 v0, 0x0
 
     return-object v0

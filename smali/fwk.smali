@@ -33,24 +33,19 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lfwk;->a:Lfwh;
 
     iget-object v1, p0, Lfwk;->b:Landroid/view/View;
 
     iget-object v2, p0, Lfwk;->c:Landroid/view/View$OnLayoutChangeListener;
 
-    .line 2
     iget-object v0, v0, Lfwh;->a:Lgsi;
 
     const-string v3, "micro_tutorial_dismiss"
 
     invoke-virtual {v0, v3}, Lgsi;->b(Ljava/lang/String;)I
 
-    .line 3
     invoke-virtual {v1, v2}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    .line 4
     return-void
 .end method

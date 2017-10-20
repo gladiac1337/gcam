@@ -25,8 +25,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 32
     const-class v0, Lcbz;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -41,37 +39,28 @@
 .method public constructor <init>(Lccb;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcbz;->b:Lccb;
 
-    .line 3
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcbz;->f:Z
 
-    .line 4
     return-void
 .end method
 
 .method public static a(Landroid/content/res/Configuration;)I
     .locals 2
 
-    .prologue
-    .line 29
     iget v0, p0, Landroid/content/res/Configuration;->orientation:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 30
     const/4 v0, 0x4
 
-    .line 31
     :goto_0
     return v0
 
@@ -86,23 +75,18 @@
 .method public final a(I)Lccd;
     .locals 2
 
-    .prologue
-    .line 11
     iget-boolean v0, p0, Lcbz;->f:Z
 
     if-nez v0, :cond_0
 
-    .line 12
     sget-object v0, Lcbz;->a:Ljava/lang/String;
 
     const-string v1, "viewHolderForPosition does nothing (BurstEditor has not been created)."
 
     invoke-static {v0, v1}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 13
     const/4 v0, 0x0
 
-    .line 14
     :goto_0
     return-object v0
 
@@ -121,28 +105,22 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 5
     iget-boolean v0, p0, Lcbz;->f:Z
 
     if-nez v0, :cond_0
 
-    .line 6
     sget-object v0, Lcbz;->a:Ljava/lang/String;
 
     const-string v1, "NotifyDatasetChanged does nothing (BurstEditor has not been created)."
 
     invoke-static {v0, v1}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     :goto_0
     return-void
 
-    .line 8
     :cond_0
     iget-object v0, p0, Lcbz;->d:Lcch;
 
-    .line 9
     iget-object v0, v0, Luo;->a:Lup;
 
     invoke-virtual {v0}, Lup;->b()V
@@ -153,26 +131,21 @@
 .method public final b(I)V
     .locals 4
 
-    .prologue
-    .line 15
     iget-object v0, p0, Lcbz;->g:Luu;
 
     if-eqz v0, :cond_0
 
-    .line 16
     iget-object v0, p0, Lcbz;->c:Landroid/support/v7/widget/RecyclerView;
 
     iget-object v1, p0, Lcbz;->g:Luu;
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/RecyclerView;->a(Luu;)V
 
-    .line 17
     :cond_0
     new-instance v0, Lccj;
 
     iget-object v1, p0, Lcbz;->e:Landroid/content/Context;
 
-    .line 18
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -191,24 +164,20 @@
 
     iput-object v0, p0, Lcbz;->g:Luu;
 
-    .line 19
     iget-object v0, p0, Lcbz;->c:Landroid/support/v7/widget/RecyclerView;
 
     iget-object v1, p0, Lcbz;->g:Luu;
 
-    .line 21
     iget-object v2, v0, Landroid/support/v7/widget/RecyclerView;->k:Luv;
 
     if-eqz v2, :cond_1
 
-    .line 22
     iget-object v2, v0, Landroid/support/v7/widget/RecyclerView;->k:Luv;
 
     const-string v3, "Cannot add item decoration during a scroll  or layout"
 
     invoke-virtual {v2, v3}, Luv;->a(Ljava/lang/String;)V
 
-    .line 23
     :cond_1
     iget-object v2, v0, Landroid/support/v7/widget/RecyclerView;->m:Ljava/util/ArrayList;
 
@@ -218,23 +187,18 @@
 
     if-eqz v2, :cond_2
 
-    .line 24
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/support/v7/widget/RecyclerView;->setWillNotDraw(Z)V
 
-    .line 25
     :cond_2
     iget-object v2, v0, Landroid/support/v7/widget/RecyclerView;->m:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 26
     invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView;->m()V
 
-    .line 27
     invoke-virtual {v0}, Landroid/support/v7/widget/RecyclerView;->requestLayout()V
 
-    .line 28
     return-void
 .end method

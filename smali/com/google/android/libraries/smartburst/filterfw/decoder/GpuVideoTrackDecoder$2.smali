@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/decoder/GpuVideoTrackDecoder;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/GpuVideoTrackDecoder$2;->this$0:Lcom/google/android/libraries/smartburst/filterfw/decoder/GpuVideoTrackDecoder;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -32,15 +30,12 @@
 .method public createSurfaceTexture()Landroid/graphics/SurfaceTexture;
     .locals 3
 
-    .prologue
-    .line 2
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/TextureSource;->newExternalTexture()Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/GpuVideoTrackDecoder$2;->mTextureSource:Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
 
-    .line 3
     new-instance v0, Landroid/graphics/SurfaceTexture;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/GpuVideoTrackDecoder$2;->mTextureSource:Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
@@ -53,7 +48,6 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/GpuVideoTrackDecoder$2;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
-    .line 4
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/GpuVideoTrackDecoder$2;->this$0:Lcom/google/android/libraries/smartburst/filterfw/decoder/GpuVideoTrackDecoder;
 
     new-instance v1, Landroid/view/Surface;
@@ -64,12 +58,10 @@
 
     invoke-static {v0, v1}, Lcom/google/android/libraries/smartburst/filterfw/decoder/GpuVideoTrackDecoder;->access$002(Lcom/google/android/libraries/smartburst/filterfw/decoder/GpuVideoTrackDecoder;Landroid/view/Surface;)Landroid/view/Surface;
 
-    .line 5
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/GpuVideoTrackDecoder$2;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->detachFromGLContext()V
 
-    .line 6
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/GpuVideoTrackDecoder$2;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     return-object v0
@@ -78,17 +70,13 @@
 .method public releaseSurfaceTexture(Landroid/graphics/SurfaceTexture;)V
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/GpuVideoTrackDecoder$2;->mSurfaceTexture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->release()V
 
-    .line 8
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/decoder/GpuVideoTrackDecoder$2;->mTextureSource:Lcom/google/android/libraries/smartburst/filterfw/TextureSource;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/TextureSource;->release()V
 
-    .line 9
     return-void
 .end method

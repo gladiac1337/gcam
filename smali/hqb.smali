@@ -28,19 +28,14 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Lhqc;
 
     invoke-direct {v0}, Lhqc;-><init>()V
 
-    .line 2
     new-instance v0, Lhqb;
 
-    .line 3
     invoke-direct {v0}, Lhqb;-><init>()V
 
-    .line 4
     sput-object v0, Lhqb;->a:Lhqb;
 
     return-void

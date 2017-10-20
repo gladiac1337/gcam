@@ -11,8 +11,6 @@
 .method constructor <init>(Lhek;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lheo;->a:Lhek;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -25,12 +23,9 @@
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lheo;->a:Lhek;
 
     invoke-virtual {v0}, Lhek;->ag()V
 
-    .line 3
     return-void
 .end method

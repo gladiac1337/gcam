@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,13 +20,10 @@
 .method public final a(Ljava/util/List;)Ljava/util/List;
     .locals 9
 
-    .prologue
-    .line 2
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
@@ -48,12 +43,10 @@
 
     check-cast v4, Ljao;
 
-    .line 5
     invoke-virtual {p0, v4}, Ljas;->a(Ljao;)Ljava/util/Set;
 
     move-result-object v6
 
-    .line 6
     new-instance v0, Ljao;
 
     iget-object v1, v4, Ljao;->a:Ljava/util/List;
@@ -64,12 +57,10 @@
 
     invoke-direct/range {v0 .. v6}, Ljao;-><init>(Ljava/util/Collection;JJLjava/util/Set;)V
 
-    .line 7
     invoke-interface {v7, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 9
     :cond_0
     return-object v7
 .end method
@@ -80,8 +71,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 10
     const-string v0, "SegmentClassifier"
 
     return-object v0

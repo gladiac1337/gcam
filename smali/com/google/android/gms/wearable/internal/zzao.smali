@@ -90,8 +90,6 @@
 .method public toString()Ljava/lang/String;
     .locals 6
 
-    .prologue
-    .line 13
     const-string v0, "DataItem"
 
     const/4 v1, 0x3
@@ -100,7 +98,6 @@
 
     move-result v1
 
-    .line 14
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v0, "DataItemParcelable["
@@ -236,11 +233,9 @@
 
     move-result-object v0
 
-    .line 15
     :goto_1
     return-object v0
 
-    .line 14
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/wearable/internal/zzao;->c:[B
 
@@ -357,27 +352,20 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 7
 
-    .prologue
-    .line 1
-    .line 3
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lhiv;->m(Landroid/os/Parcel;I)I
 
     move-result v2
 
-    .line 4
     const/4 v0, 0x2
 
-    .line 5
     iget-object v1, p0, Lcom/google/android/gms/wearable/internal/zzao;->a:Landroid/net/Uri;
 
-    .line 6
     invoke-static {p1, v0, v1, p2}, Lhiv;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
     const/4 v3, 0x4
 
-    .line 7
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
@@ -433,21 +421,16 @@
 
     goto :goto_0
 
-    .line 8
     :cond_0
     invoke-static {p1, v3, v4}, Lhiv;->a(Landroid/os/Parcel;ILandroid/os/Bundle;)V
 
     const/4 v0, 0x5
 
-    .line 9
     iget-object v1, p0, Lcom/google/android/gms/wearable/internal/zzao;->c:[B
 
-    .line 10
     invoke-static {p1, v0, v1}, Lhiv;->a(Landroid/os/Parcel;I[B)V
 
-    .line 11
     invoke-static {p1, v2}, Lhiv;->n(Landroid/os/Parcel;I)V
 
-    .line 12
     return-void
 .end method

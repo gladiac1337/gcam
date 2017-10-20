@@ -11,16 +11,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljas;-><init>()V
 
-    .line 3
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4
     iput-object v0, p0, Ljay;->a:Ljava/util/List;
 
     return-void
@@ -31,13 +27,10 @@
 .method public final a(Ljao;)Ljava/util/Set;
     .locals 3
 
-    .prologue
-    .line 7
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    .line 9
     iget-object v0, p0, Ljay;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -57,7 +50,6 @@
 
     check-cast v0, Ljas;
 
-    .line 10
     invoke-virtual {v0, p1}, Ljas;->a(Ljao;)Ljava/util/Set;
 
     move-result-object v0
@@ -66,7 +58,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_0
     invoke-static {v1}, Litx;->c(Ljava/lang/Iterable;)Ljkt;
 
@@ -78,26 +69,20 @@
 .method public final a(Ljas;)Ljay;
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Ljay;->a:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 6
     return-object p0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 13
     const-string v0, "[CompositeSegmentClassifier: { "
 
     const-string v1, ", "
 
-    .line 14
     invoke-static {v1}, Ljhb;->a(Ljava/lang/String;)Ljhb;
 
     move-result-object v1
@@ -154,6 +139,5 @@
 
     move-result-object v0
 
-    .line 15
     return-object v0
 .end method

@@ -35,8 +35,6 @@
 .method public constructor <init>(Lhir;[B)V
     .locals 1
 
-    .prologue
-    .line 25
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lhsa;-><init>(Lhir;[BB)V
@@ -47,8 +45,6 @@
 .method private constructor <init>(Lhir;[BB)V
     .locals 4
 
-    .prologue
-    .line 26
     iput-object p1, p0, Lhsa;->l:Lhir;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -147,7 +143,6 @@
 
     iget-wide v2, v1, Lhrc;->a:J
 
-    .line 27
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
 
     move-result-object v1
@@ -160,7 +155,6 @@
 
     int-to-long v2, v1
 
-    .line 28
     iput-wide v2, v0, Lhrc;->d:J
 
     if-eqz p2, :cond_0
@@ -216,10 +210,8 @@
 .method public final a(Lhrn;)Lhrn;
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-virtual {p0}, Lhsa;->d()Z
 
     move-result v0
@@ -228,27 +220,22 @@
 
     invoke-interface {v1, p1}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
 
-    .line 5
     :goto_0
     return-object p1
 
-    .line 1
     :cond_0
     iget-object v0, v1, Lhst;->h:Lhpe;
 
     invoke-virtual {v0, p1}, Lhpe;->a(Lhrq;)V
 
-    .line 2
     iget-object v0, p1, Lhrn;->e:Lhjw;
 
-    .line 3
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lhrz;
 
-    .line 4
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1, p1}, Lhkk;->a(ILhrn;)Lhrn;
@@ -261,10 +248,8 @@
 .method public final a()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 11
     invoke-interface {v4}, Ljava/util/concurrent/locks/Lock;->lock()V
 
     :try_start_0
@@ -276,11 +261,9 @@
 
     invoke-interface {v4}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 24
     :goto_0
     return-void
 
-    .line 11
     :cond_0
     const/4 v0, 0x1
 
@@ -305,7 +288,6 @@
 
     move-result-object v0
 
-    .line 12
     new-instance v1, Lhrk;
 
     invoke-direct {v1, v0}, Lhrk;-><init>(Ljava/lang/Iterable;)V
@@ -331,10 +313,8 @@
 
     iget-object v3, v3, Lhtb;->g:Ljava/util/Map;
 
-    .line 13
     iget-object v0, v0, Lhkk;->b:Lhrj;
 
-    .line 14
     invoke-interface {v3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -366,13 +346,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 15
     iget-object v0, v1, Lhrk;->b:Lhve;
 
-    .line 16
     iget-object v0, v0, Lhve;->a:Lhvi;
 
-    .line 22
     :goto_1
     new-instance v1, Lhpg;
 
@@ -382,10 +359,8 @@
 
     new-instance v2, Lhsb;
 
-    .line 23
     invoke-direct {v2, p0}, Lhsb;-><init>(Lhsa;)V
 
-    .line 24
     invoke-virtual {v0, v1, v2}, Lhvd;->a(Ljava/util/concurrent/Executor;Lhvc;)Lhvd;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -394,24 +369,20 @@
 
     goto :goto_0
 
-    .line 18
     :cond_3
     :try_start_2
     iget-object v0, v1, Lhrk;->b:Lhve;
 
     invoke-virtual {v0}, Lhve;->a()V
 
-    .line 20
     iget-object v0, v1, Lhrk;->b:Lhve;
 
-    .line 21
     iget-object v0, v0, Lhve;->a:Lhvi;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_1
 
-    .line 24
     :catchall_0
     move-exception v0
 
@@ -500,14 +471,10 @@
 .method public final b(Lhrn;)Lhrn;
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 6
-    .line 7
     iget-object v0, p1, Lhrn;->e:Lhjw;
 
-    .line 8
     iget-object v1, v2, Lhst;->h:Lhpe;
 
     invoke-virtual {v1, p1}, Lhpe;->a(Lhrq;)V
@@ -518,14 +485,12 @@
 
     check-cast v0, Lhrz;
 
-    .line 9
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1, p1}, Lhkk;->a(ILhrn;)Lhrn;
 
     move-result-object v0
 
-    .line 10
     return-object v0
 .end method
 

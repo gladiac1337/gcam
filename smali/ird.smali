@@ -18,8 +18,6 @@
 .method constructor <init>(Ljava/io/InputStream;Ljava/io/OutputStream;Ljde;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lird;->a:Ljava/io/InputStream;
 
     iput-object p2, p0, Lird;->b:Ljava/io/OutputStream;
@@ -36,28 +34,21 @@
 .method public final synthetic call()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 2
-    .line 3
     iget-object v0, p0, Lird;->a:Ljava/io/InputStream;
 
     iget-object v1, p0, Lird;->b:Ljava/io/OutputStream;
 
     invoke-static {v0, v1}, Lcom/google/common/io/ByteStreams;->copy(Ljava/io/InputStream;Ljava/io/OutputStream;)J
 
-    .line 4
     iget-object v0, p0, Lird;->a:Ljava/io/InputStream;
 
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
-    .line 5
     iget-object v0, p0, Lird;->b:Ljava/io/OutputStream;
 
     invoke-virtual {v0}, Ljava/io/OutputStream;->close()V
 
-    .line 6
     iget-object v0, p0, Lird;->c:Ljde;
 
-    .line 7
     return-object v0
 .end method

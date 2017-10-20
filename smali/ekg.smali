@@ -18,8 +18,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 16
     const-string v0, "LSDefaultMetricJni"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -34,14 +32,10 @@
 .method public constructor <init>(Lico;Lija;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lekg;->b:Lico;
 
-    .line 3
     return-void
 .end method
 
@@ -50,30 +44,24 @@
 .method public final a(Lgot;)Lekf;
     .locals 12
 
-    .prologue
-    .line 4
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v0
 
-    .line 6
     iget-object v2, p0, Lekg;->b:Lico;
 
     const-string v3, "LuckyShotScore"
 
     invoke-interface {v2, v3}, Lico;->a(Ljava/lang/String;)V
 
-    .line 7
     invoke-static {p1}, Leki;->a(Lgot;)D
 
     move-result-wide v2
 
-    .line 8
     iget-object v4, p0, Lekg;->b:Lico;
 
     invoke-interface {v4}, Lico;->a()V
 
-    .line 9
     sget-object v4, Lekg;->a:Ljava/lang/String;
 
     const/16 v5, 0x2e
@@ -98,27 +86,23 @@
 
     invoke-static {v4, v5}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     const-wide/16 v4, 0x0
 
     cmpg-double v4, v2, v4
 
     if-gtz v4, :cond_0
 
-    .line 11
     sget-object v4, Lekg;->a:Ljava/lang/String;
 
     const-string v5, "invalid metric value from LS metric calculation."
 
     invoke-static {v4, v5}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v4
 
-    .line 14
     sget-object v6, Lekg;->a:Ljava/lang/String;
 
     sub-long v8, v4, v0
@@ -149,7 +133,6 @@
 
     invoke-static {v6, v7}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 15
     new-instance v6, Lekf;
 
     new-instance v7, Lfsr;

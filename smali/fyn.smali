@@ -25,17 +25,13 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lfyn;->a:Landroid/media/MediaCodec$BufferInfo;
 
     check-cast p1, Lfyk;
 
-    .line 2
     iget-object v1, p1, Lfyk;->e:Ljuw;
 
     invoke-virtual {v1, v0}, Ljsl;->a(Ljava/lang/Object;)Z
 
-    .line 3
     return-void
 .end method

@@ -17,8 +17,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ldi;-><init>()V
 
     return-void
@@ -29,15 +27,12 @@
 .method public final a(Landroid/view/View;Landroid/graphics/Matrix;)V
     .locals 6
 
-    .prologue
     const/4 v5, 0x1
 
-    .line 2
     sget-boolean v0, Ldj;->b:Z
 
     if-nez v0, :cond_0
 
-    .line 3
     :try_start_0
     const-class v0, Landroid/view/View;
 
@@ -57,7 +52,6 @@
 
     move-result-object v0
 
-    .line 4
     sput-object v0, Ldj;->a:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
@@ -66,17 +60,14 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8
     :goto_0
     sput-boolean v5, Ldj;->b:Z
 
-    .line 9
     :cond_0
     sget-object v0, Ldj;->a:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_1
 
-    .line 10
     :try_start_1
     sget-object v0, Ldj;->a:Ljava/lang/reflect/Method;
 
@@ -93,16 +84,13 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 16
     :cond_1
     :goto_1
     return-void
 
-    .line 6
     :catch_0
     move-exception v0
 
-    .line 7
     const-string v1, "ViewUtilsApi21"
 
     const-string v2, "Failed to retrieve transformMatrixToGlobal method"
@@ -111,11 +99,9 @@
 
     goto :goto_0
 
-    .line 14
     :catch_1
     move-exception v0
 
-    .line 15
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-virtual {v0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
@@ -126,7 +112,6 @@
 
     throw v1
 
-    .line 13
     :catch_2
     move-exception v0
 
@@ -136,15 +121,12 @@
 .method public final b(Landroid/view/View;Landroid/graphics/Matrix;)V
     .locals 6
 
-    .prologue
     const/4 v5, 0x1
 
-    .line 17
     sget-boolean v0, Ldj;->d:Z
 
     if-nez v0, :cond_0
 
-    .line 18
     :try_start_0
     const-class v0, Landroid/view/View;
 
@@ -164,7 +146,6 @@
 
     move-result-object v0
 
-    .line 19
     sput-object v0, Ldj;->c:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
@@ -173,17 +154,14 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 23
     :goto_0
     sput-boolean v5, Ldj;->d:Z
 
-    .line 24
     :cond_0
     sget-object v0, Ldj;->c:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_1
 
-    .line 25
     :try_start_1
     sget-object v0, Ldj;->c:Ljava/lang/reflect/Method;
 
@@ -200,16 +178,13 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 31
     :cond_1
     :goto_1
     return-void
 
-    .line 21
     :catch_0
     move-exception v0
 
-    .line 22
     const-string v1, "ViewUtilsApi21"
 
     const-string v2, "Failed to retrieve transformMatrixToLocal method"
@@ -218,11 +193,9 @@
 
     goto :goto_0
 
-    .line 29
     :catch_1
     move-exception v0
 
-    .line 30
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-virtual {v0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
@@ -233,7 +206,6 @@
 
     throw v1
 
-    .line 28
     :catch_2
     move-exception v0
 

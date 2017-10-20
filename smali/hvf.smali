@@ -29,31 +29,23 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhvf;->b:Lhvg;
 
-    .line 2
     iget-object v1, v0, Lhvg;->b:Ljava/lang/Object;
 
-    .line 3
     monitor-enter v1
 
     :try_start_0
     iget-object v0, p0, Lhvf;->b:Lhvg;
 
-    .line 4
     iget-object v0, v0, Lhvg;->c:Lhvc;
 
-    .line 5
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lhvf;->b:Lhvg;
 
-    .line 6
     iget-object v0, v0, Lhvg;->c:Lhvc;
 
-    .line 7
     iget-object v2, p0, Lhvf;->a:Lhvd;
 
     invoke-interface {v0, v2}, Lhvc;->a(Lhvd;)V

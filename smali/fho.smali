@@ -13,23 +13,16 @@
 .method public constructor <init>(Lgdm;Lfia;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     invoke-static {p2}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     iput-object p1, p0, Lfho;->a:Lgdm;
 
-    .line 5
     iput-object p2, p0, Lfho;->b:Lfia;
 
-    .line 6
     return-void
 .end method
 
@@ -38,26 +31,21 @@
 .method public final a(Libh;Lbbv;Libe;)Libx;
     .locals 10
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 7
     invoke-virtual {p2}, Lbbv;->c()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 8
     invoke-virtual {p3}, Libe;->b()Libx;
 
     move-result-object v0
 
-    .line 17
     :goto_0
     return-object v0
 
-    .line 10
     :cond_0
     iget-object v0, p0, Lfho;->a:Lgdm;
 
@@ -65,12 +53,10 @@
 
     move-result-object v2
 
-    .line 11
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 12
     iget-object v0, p0, Lfho;->a:Lgdm;
 
     invoke-interface {v0}, Lgdm;->c()Ljava/util/List;
@@ -95,7 +81,6 @@
 
     check-cast v0, Libx;
 
-    .line 13
     invoke-virtual {v0}, Libx;->b()J
 
     move-result-wide v6
@@ -108,12 +93,10 @@
 
     if-gtz v5, :cond_1
 
-    .line 14
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 16
     :cond_2
     invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
 
@@ -126,7 +109,6 @@
     :goto_2
     invoke-static {v0}, Lixp;->a(Z)V
 
-    .line 17
     iget-object v0, p0, Lfho;->b:Lfia;
 
     invoke-virtual {v0, v3, p1, v2, v1}, Lfia;->a(Ljava/util/List;Libh;Lift;Z)Libx;
@@ -135,7 +117,6 @@
 
     goto :goto_0
 
-    .line 16
     :cond_3
     const/4 v0, 0x0
 

@@ -30,8 +30,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 22
     const-string v0, "HdrPFrameReleaser"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -40,14 +38,12 @@
 
     sput-object v0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->b:Ljava/lang/String;
 
-    .line 23
     invoke-static {}, Lcom/google/googlex/gcam/GcamModule;->getKInvalidImageId()J
 
     move-result-wide v0
 
     sput-wide v0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->a:J
 
-    .line 24
     const-wide/16 v0, 0x0
 
     sput-wide v0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->e:J
@@ -58,28 +54,22 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0}, Lcom/google/googlex/gcam/ImageReleaseCallback;-><init>()V
 
-    .line 3
     invoke-static {}, Ldif;->a()Ldif;
 
     move-result-object v1
 
-    .line 4
     const-string v2, "persist.gcam.sm.log"
 
     invoke-virtual {v1, v2, v0}, Ldif;->a(Ljava/lang/String;Z)Z
 
     move-result v1
 
-    .line 5
     if-nez v1, :cond_0
 
-    .line 6
     invoke-static {}, Ldif;->a()Ldif;
 
     move-result-object v1
@@ -96,7 +86,6 @@
     :cond_1
     iput-boolean v0, p0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->c:Z
 
-    .line 7
     new-instance v0, Landroid/util/LongSparseArray;
 
     invoke-direct {v0}, Landroid/util/LongSparseArray;-><init>()V
@@ -109,8 +98,6 @@
 .method private static declared-synchronized a()J
     .locals 6
 
-    .prologue
-    .line 11
     const-class v1, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;
 
     monitor-enter v1
@@ -143,8 +130,6 @@
 .method public declared-synchronized Run(J)V
     .locals 3
 
-    .prologue
-    .line 12
     monitor-enter p0
 
     :try_start_0
@@ -152,7 +137,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 13
     sget-object v0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->b:Ljava/lang/String;
 
     const/16 v1, 0x2d
@@ -177,7 +161,6 @@
 
     invoke-static {v0, v1}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 14
     :cond_0
     sget-wide v0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->a:J
 
@@ -185,7 +168,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 15
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->d:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
@@ -194,24 +176,19 @@
 
     check-cast v0, Liia;
 
-    .line 16
     if-eqz v0, :cond_1
 
-    .line 17
     invoke-interface {v0}, Liia;->close()V
 
-    .line 18
     :cond_1
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->d:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/LongSparseArray;->remove(J)V
 
-    .line 19
     iget-boolean v0, p0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->c:Z
 
     if-eqz v0, :cond_2
 
-    .line 20
     sget-object v0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->b:Ljava/lang/String;
 
     const/16 v1, 0x23
@@ -238,13 +215,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 21
     :cond_2
     monitor-exit p0
 
     return-void
 
-    .line 12
     :catchall_0
     move-exception v0
 
@@ -256,8 +231,6 @@
 .method public final declared-synchronized a(Liia;)J
     .locals 3
 
-    .prologue
-    .line 8
     monitor-enter p0
 
     :try_start_0
@@ -265,19 +238,16 @@
 
     move-result-wide v0
 
-    .line 9
     iget-object v2, p0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->d:Landroid/util/LongSparseArray;
 
     invoke-virtual {v2, v0, v1, p1}, Landroid/util/LongSparseArray;->append(JLjava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10
     monitor-exit p0
 
     return-wide v0
 
-    .line 8
     :catchall_0
     move-exception v0
 

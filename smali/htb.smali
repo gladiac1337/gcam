@@ -175,8 +175,6 @@
 .method public static a(Landroid/content/Context;)Lhtb;
     .locals 5
 
-    .prologue
-    .line 1
     sget-object v1, Lhtb;->c:Ljava/lang/Object;
 
     monitor-enter v1
@@ -186,7 +184,6 @@
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v2, "GoogleApiHandler"
@@ -201,17 +198,14 @@
 
     move-result-object v0
 
-    .line 3
     new-instance v2, Lhtb;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v3
 
-    .line 4
     sget-object v4, Lhjk;->a:Lhjk;
 
-    .line 5
     invoke-direct {v2, v3, v0, v4}, Lhtb;-><init>(Landroid/content/Context;Landroid/os/Looper;Lhjk;)V
 
     sput-object v2, Lhtb;->l:Lhtb;
@@ -236,12 +230,8 @@
 .method private final a(Lhkk;)V
     .locals 3
 
-    .prologue
-    .line 6
-    .line 7
     iget-object v1, p1, Lhkk;->b:Lhrj;
 
-    .line 8
     iget-object v0, p0, Lhtb;->g:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -406,34 +396,27 @@
 .method public final a(Lcom/google/android/gms/common/ConnectionResult;I)Z
     .locals 8
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 66
     iget-object v3, p0, Lhtb;->m:Lhjk;
 
     iget-object v4, p0, Lhtb;->d:Landroid/content/Context;
 
-    .line 68
     invoke-virtual {p1}, Lcom/google/android/gms/common/ConnectionResult;->a()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 69
     iget-object v2, p1, Lcom/google/android/gms/common/ConnectionResult;->c:Landroid/app/PendingIntent;
 
-    .line 74
     :goto_0
     if-eqz v2, :cond_1
 
-    .line 75
     iget v5, p1, Lcom/google/android/gms/common/ConnectionResult;->b:I
 
-    .line 79
     new-instance v6, Landroid/content/Intent;
 
     const-class v7, Lcom/google/android/gms/common/api/GoogleApiActivity;
@@ -452,25 +435,20 @@
 
     invoke-virtual {v6, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 80
     const/high16 v2, 0x8000000
 
     invoke-static {v4, v1, v6, v2}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v1
 
-    .line 81
     invoke-virtual {v3, v4, v5, v1}, Lhjk;->a(Landroid/content/Context;ILandroid/app/PendingIntent;)V
 
-    .line 82
     :goto_1
     return v0
 
-    .line 71
     :cond_0
     iget v2, p1, Lcom/google/android/gms/common/ConnectionResult;->b:I
 
-    .line 73
     const/4 v5, 0x0
 
     invoke-static {v4, v2, v1, v5}, Lhjm;->a(Landroid/content/Context;IILjava/lang/String;)Landroid/app/PendingIntent;
@@ -482,14 +460,12 @@
     :cond_1
     move v0, v1
 
-    .line 82
     goto :goto_1
 .end method
 
 .method public final handleMessage(Landroid/os/Message;)Z
     .locals 9
 
-    .prologue
     const-wide/32 v2, 0x493e0
 
     const/16 v8, 0xc
@@ -500,12 +476,10 @@
 
     const/4 v4, 0x1
 
-    .line 9
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 65
     const-string v0, "GoogleApiManager"
 
     iget v2, p1, Landroid/os/Message;->what:I
@@ -537,7 +511,6 @@
     :goto_0
     return v0
 
-    .line 9
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -547,7 +520,6 @@
 
     move-result v0
 
-    .line 10
     if-eqz v0, :cond_0
 
     const-wide/16 v0, 0x2710
@@ -601,20 +573,17 @@
 
     goto :goto_1
 
-    .line 11
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lhrk;
 
-    .line 13
     iget-object v1, v0, Lhrk;->a:Lgm;
 
     invoke-virtual {v1}, Lgm;->keySet()Ljava/util/Set;
 
     move-result-object v1
 
-    .line 14
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -654,10 +623,8 @@
     :goto_4
     move v0, v4
 
-    .line 65
     goto :goto_0
 
-    .line 14
     :cond_2
     invoke-virtual {v2}, Lhtc;->i()Z
 
@@ -686,14 +653,11 @@
 
     goto :goto_3
 
-    .line 15
     :cond_4
     iget-object v1, v2, Lhtc;->h:Lhtb;
 
-    .line 16
     iget-object v1, v1, Lhtb;->h:Landroid/os/Handler;
 
-    .line 17
     invoke-static {v1}, Lhiv;->a(Landroid/os/Handler;)V
 
     iget-object v1, v2, Lhtc;->c:Ljava/util/Set;
@@ -702,7 +666,6 @@
 
     goto :goto_3
 
-    .line 20
     :pswitch_2
     iget-object v0, p0, Lhtb;->g:Ljava/util/Map;
 
@@ -733,21 +696,17 @@
 
     goto :goto_5
 
-    .line 21
     :pswitch_3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lhox;
 
-    .line 22
     iget-object v1, p0, Lhtb;->g:Ljava/util/Map;
 
     iget-object v2, v0, Lhox;->c:Lhkk;
 
-    .line 23
     iget-object v2, v2, Lhkk;->b:Lhrj;
 
-    .line 24
     invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -764,10 +723,8 @@
 
     iget-object v2, v0, Lhox;->c:Lhkk;
 
-    .line 25
     iget-object v2, v2, Lhkk;->b:Lhrj;
 
-    .line 26
     invoke-interface {v1, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -808,7 +765,6 @@
 
     goto/16 :goto_4
 
-    .line 27
     :pswitch_4
     iget v3, p1, Landroid/os/Message;->arg1:I
 
@@ -816,7 +772,6 @@
 
     check-cast v0, Lcom/google/android/gms/common/ConnectionResult;
 
-    .line 28
     const/4 v2, 0x0
 
     iget-object v1, p0, Lhtb;->g:Ljava/util/Map;
@@ -842,10 +797,8 @@
 
     check-cast v1, Lhtc;
 
-    .line 29
     iget v6, v1, Lhtc;->e:I
 
-    .line 30
     if-ne v6, v3, :cond_7
 
     :goto_6
@@ -855,10 +808,8 @@
 
     const/16 v3, 0x11
 
-    .line 31
     iget v5, v0, Lcom/google/android/gms/common/ConnectionResult;->b:I
 
-    .line 32
     invoke-static {v5}, Lhjm;->b(I)Ljava/lang/String;
 
     move-result-object v5
@@ -867,10 +818,8 @@
 
     move-result-object v5
 
-    .line 33
     iget-object v0, v0, Lcom/google/android/gms/common/ConnectionResult;->d:Ljava/lang/String;
 
-    .line 34
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -966,7 +915,6 @@
 
     goto/16 :goto_4
 
-    .line 36
     :pswitch_5
     iget-object v0, p0, Lhtb;->d:Landroid/content/Context;
 
@@ -986,7 +934,6 @@
 
     check-cast v0, Landroid/app/Application;
 
-    .line 37
     sget-object v1, Lhrl;->a:Lhrl;
 
     monitor-enter v1
@@ -1017,15 +964,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 38
     sget-object v0, Lhrl;->a:Lhrl;
 
-    .line 39
     new-instance v1, Lhrm;
 
     invoke-direct {v1, p0}, Lhrm;-><init>(Lhtb;)V
 
-    .line 40
     sget-object v5, Lhrl;->a:Lhrl;
 
     monitor-enter v5
@@ -1039,10 +983,8 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 41
     sget-object v0, Lhrl;->a:Lhrl;
 
-    .line 43
     iget-object v1, v0, Lhrl;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -1051,14 +993,12 @@
 
     if-nez v1, :cond_a
 
-    .line 44
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v5, 0x10
 
     if-lt v1, v5, :cond_b
 
-    .line 45
     new-instance v1, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
     invoke-direct {v1}, Landroid/app/ActivityManager$RunningAppProcessInfo;-><init>()V
@@ -1083,7 +1023,6 @@
 
     invoke-virtual {v1, v4}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 46
     :cond_a
     iget-object v0, v0, Lhrl;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -1091,7 +1030,6 @@
 
     move-result v0
 
-    .line 47
     :goto_7
     if-nez v0, :cond_1
 
@@ -1099,7 +1037,6 @@
 
     goto/16 :goto_4
 
-    .line 37
     :catchall_0
     move-exception v0
 
@@ -1110,7 +1047,6 @@
 
     throw v0
 
-    .line 40
     :catchall_1
     move-exception v0
 
@@ -1124,10 +1060,8 @@
     :cond_b
     move v0, v4
 
-    .line 45
     goto :goto_7
 
-    .line 48
     :pswitch_6
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -1158,13 +1092,10 @@
 
     check-cast v0, Lhtc;
 
-    .line 49
     iget-object v1, v0, Lhtc;->h:Lhtb;
 
-    .line 50
     iget-object v1, v1, Lhtb;->h:Landroid/os/Handler;
 
-    .line 51
     invoke-static {v1}, Lhiv;->a(Landroid/os/Handler;)V
 
     iget-boolean v1, v0, Lhtc;->g:Z
@@ -1175,7 +1106,6 @@
 
     goto/16 :goto_4
 
-    .line 52
     :pswitch_8
     invoke-direct {p0}, Lhtb;->c()V
 
@@ -1202,13 +1132,10 @@
 
     check-cast v0, Lhtc;
 
-    .line 53
     iget-object v1, v0, Lhtc;->h:Lhtb;
 
-    .line 54
     iget-object v1, v1, Lhtb;->h:Landroid/os/Handler;
 
-    .line 55
     invoke-static {v1}, Lhiv;->a(Landroid/os/Handler;)V
 
     iget-boolean v1, v0, Lhtc;->g:Z
@@ -1217,13 +1144,10 @@
 
     invoke-virtual {v0}, Lhtc;->f()V
 
-    .line 56
     iget-object v1, v0, Lhtc;->h:Lhtb;
 
-    .line 57
     iget-object v1, v1, Lhtb;->d:Landroid/content/Context;
 
-    .line 58
     invoke-static {v1}, Lhjm;->a(Landroid/content/Context;)I
 
     move-result v1
@@ -1256,7 +1180,6 @@
 
     goto :goto_8
 
-    .line 59
     :pswitch_a
     iget-object v0, p0, Lhtb;->g:Ljava/util/Map;
 
@@ -1278,13 +1201,10 @@
 
     check-cast v0, Lhtc;
 
-    .line 60
     iget-object v2, v0, Lhtc;->h:Lhtb;
 
-    .line 61
     iget-object v2, v2, Lhtb;->h:Landroid/os/Handler;
 
-    .line 62
     invoke-static {v2}, Lhiv;->a(Landroid/os/Handler;)V
 
     iget-object v2, v0, Lhtc;->a:Lhjy;
@@ -1305,7 +1225,6 @@
 
     iget-object v2, v0, Lhtc;->b:Lhsd;
 
-    .line 63
     iget-object v3, v2, Lhsd;->a:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->isEmpty()Z
@@ -1325,7 +1244,6 @@
     :cond_d
     move v1, v4
 
-    .line 64
     :cond_e
     if-eqz v1, :cond_f
 
@@ -1345,7 +1263,6 @@
 
     goto/16 :goto_6
 
-    .line 9
     nop
 
     :pswitch_data_0

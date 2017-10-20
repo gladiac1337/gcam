@@ -24,10 +24,8 @@
 .method public constructor <init>(Ljava/util/concurrent/ThreadFactory;Ljava/lang/String;Ljava/util/concurrent/atomic/AtomicLong;)V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 1
     iput-object p1, p0, Ljuy;->a:Ljava/util/concurrent/ThreadFactory;
 
     iput-object p2, p0, Ljuy;->b:Ljava/lang/String;
@@ -50,20 +48,16 @@
 .method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 6
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ljuy;->a:Ljava/util/concurrent/ThreadFactory;
 
     invoke-interface {v0, p1}, Ljava/util/concurrent/ThreadFactory;->newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
 
     move-result-object v0
 
-    .line 3
     iget-object v1, p0, Ljuy;->b:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 4
     iget-object v1, p0, Ljuy;->b:Ljava/lang/String;
 
     const/4 v2, 0x1
@@ -84,15 +78,12 @@
 
     aput-object v4, v2, v3
 
-    .line 5
     invoke-static {v1, v2}, Ljux;->a(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 6
     invoke-virtual {v0, v1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
-    .line 7
     :cond_0
     return-object v0
 .end method

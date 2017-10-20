@@ -11,14 +11,10 @@
 .method constructor <init>(Lihj;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lien;->a:Lihj;
 
-    .line 3
     return-void
 .end method
 
@@ -27,8 +23,6 @@
 .method public final onCaptureBufferLost(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
     .locals 2
 
-    .prologue
-    .line 20
     :try_start_0
     iget-object v0, p0, Lien;->a:Lihj;
 
@@ -40,11 +34,9 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 23
     :goto_0
     return-void
 
-    .line 22
     :catch_0
     move-exception v0
 
@@ -56,8 +48,6 @@
 .method public final onCaptureCompleted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;)V
     .locals 3
 
-    .prologue
-    .line 12
     :try_start_0
     iget-object v0, p0, Lien;->a:Lihj;
 
@@ -73,11 +63,9 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 15
     :goto_0
     return-void
 
-    .line 14
     :catch_0
     move-exception v0
 
@@ -89,8 +77,6 @@
 .method public final onCaptureFailed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureFailure;)V
     .locals 3
 
-    .prologue
-    .line 16
     :try_start_0
     iget-object v0, p0, Lien;->a:Lihj;
 
@@ -106,11 +92,9 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 19
     :goto_0
     return-void
 
-    .line 18
     :catch_0
     move-exception v0
 
@@ -122,8 +106,6 @@
 .method public final onCaptureProgressed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureResult;)V
     .locals 3
 
-    .prologue
-    .line 8
     :try_start_0
     iget-object v0, p0, Lien;->a:Lihj;
 
@@ -139,11 +121,9 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 11
     :goto_0
     return-void
 
-    .line 10
     :catch_0
     move-exception v0
 
@@ -155,8 +135,6 @@
 .method public final onCaptureSequenceAborted(Landroid/hardware/camera2/CameraCaptureSession;I)V
     .locals 1
 
-    .prologue
-    .line 28
     :try_start_0
     iget-object v0, p0, Lien;->a:Lihj;
 
@@ -164,11 +142,9 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 31
     :goto_0
     return-void
 
-    .line 30
     :catch_0
     move-exception v0
 
@@ -180,8 +156,6 @@
 .method public final onCaptureSequenceCompleted(Landroid/hardware/camera2/CameraCaptureSession;IJ)V
     .locals 1
 
-    .prologue
-    .line 24
     :try_start_0
     iget-object v0, p0, Lien;->a:Lihj;
 
@@ -189,11 +163,9 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 27
     :goto_0
     return-void
 
-    .line 26
     :catch_0
     move-exception v0
 
@@ -205,8 +177,6 @@
 .method public final onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
     .locals 7
 
-    .prologue
-    .line 4
     :try_start_0
     iget-object v0, p0, Lien;->a:Lihj;
 
@@ -222,11 +192,9 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7
     :goto_0
     return-void
 
-    .line 6
     :catch_0
     move-exception v0
 

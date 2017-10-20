@@ -16,17 +16,12 @@
 .method public constructor <init>(Ljxb;Ljxb;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgdp;->a:Ljxb;
 
-    .line 3
     iput-object p2, p0, Lgdp;->b:Ljxb;
 
-    .line 4
     return-void
 .end method
 
@@ -35,9 +30,6 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 5
-    .line 6
     new-instance v2, Lgdo;
 
     iget-object v0, p0, Lgdp;->a:Ljxb;
@@ -58,6 +50,5 @@
 
     invoke-direct {v2, v0, v1}, Lgdo;-><init>(Lifo;Lgzo;)V
 
-    .line 7
     return-object v2
 .end method

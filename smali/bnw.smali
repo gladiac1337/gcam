@@ -29,13 +29,10 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lbnw;->a:Lbnv;
 
     iget-object v2, p0, Lbnw;->b:Lboa;
 
-    .line 2
     iget-object v0, v1, Lbnv;->b:Ljuw;
 
     invoke-static {v0}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
@@ -50,7 +47,6 @@
 
     invoke-virtual {v0, v3}, Ljsl;->a(Ljava/lang/Object;)Z
 
-    .line 3
     iget-object v0, v1, Lbnv;->c:Ljuw;
 
     invoke-static {v0}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
@@ -65,6 +61,5 @@
 
     invoke-virtual {v0, v1}, Ljsl;->a(Ljava/lang/Object;)Z
 
-    .line 4
     return-void
 .end method

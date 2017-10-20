@@ -18,8 +18,6 @@
 .method constructor <init>(Lghn;Liia;Lgfv;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lghr;->c:Lghn;
 
     iput-object p2, p0, Lghr;->a:Liia;
@@ -36,19 +34,15 @@
 .method public final a(Ljava/lang/Object;)Ljuk;
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lghr;->c:Lghn;
 
     iget-object v1, p0, Lghr;->a:Liia;
 
     iget-object v2, p0, Lghr;->b:Lgfv;
 
-    .line 3
     invoke-virtual {v0, v1, v2}, Lghn;->a(Liia;Lgfv;)Ljuk;
 
     move-result-object v0
 
-    .line 4
     return-object v0
 .end method

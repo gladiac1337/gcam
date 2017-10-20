@@ -39,35 +39,26 @@
 .method public final a()Lhke;
     .locals 8
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhok;->a:Ljava/util/List;
 
-    .line 2
     new-instance v4, Lcom/google/android/gms/feedback/FeedbackOptions;
 
     const/4 v1, 0x0
 
     invoke-direct {v4, v1}, Lcom/google/android/gms/feedback/FeedbackOptions;-><init>(Landroid/app/ApplicationErrorReport;)V
 
-    .line 3
     iput-object v0, v4, Lcom/google/android/gms/feedback/FeedbackOptions;->h:Ljava/util/List;
 
-    .line 4
     sget-object v1, Lhor;->b:Lhop;
 
     iget-object v0, p0, Lhok;->d:Lhoj;
 
-    .line 5
     iget-object v2, v0, Lhoj;->a:Lhka;
 
-    .line 6
     iget-object v0, p0, Lhok;->d:Lhoj;
 
-    .line 7
     iget-object v3, v0, Lhoj;->b:Lcom/google/android/gms/googlehelp/GoogleHelp;
 
-    .line 8
     iget-object v5, p0, Lhok;->b:Landroid/os/Bundle;
 
     iget-wide v6, p0, Lhok;->c:J

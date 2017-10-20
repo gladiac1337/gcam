@@ -18,23 +18,16 @@
 .method public constructor <init>(Ljava/lang/String;IJ)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Lipb;->a:Ljava/lang/String;
 
-    .line 4
     iput p2, p0, Lipb;->b:I
 
-    .line 5
     iput-wide p3, p0, Lipb;->c:J
 
-    .line 6
     return-void
 .end method
 
@@ -46,8 +39,6 @@
 .method public final b()J
     .locals 2
 
-    .prologue
-    .line 7
     iget-wide v0, p0, Lipb;->c:J
 
     return-wide v0

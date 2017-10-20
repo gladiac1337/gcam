@@ -14,8 +14,6 @@
 .method constructor <init>(Ldus;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lduv;->a:Ldus;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,34 +26,26 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 9
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 10
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 11
     sget-object v0, Lduo;->a:Ljava/lang/String;
 
-    .line 12
     const-string v1, "Gouda effect applied successfully"
 
     invoke-static {v0, v1}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 15
     :goto_0
     return-void
 
-    .line 13
     :cond_0
     sget-object v0, Lduo;->a:Ljava/lang/String;
 
-    .line 14
     const-string v1, "Gouda effect not applied"
 
     invoke-static {v0, v1}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
@@ -66,29 +56,21 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 2
 
-    .prologue
-    .line 2
     sget-object v0, Lduo;->a:Ljava/lang/String;
 
-    .line 3
     const-string v1, "Gouda effect failed."
 
     invoke-static {v0, v1, p1}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 4
     iget-object v0, p0, Lduv;->a:Ldus;
 
-    .line 5
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Ldus;->k:Z
 
-    .line 6
     iget-object v0, p0, Lduv;->a:Ldus;
 
-    .line 7
     invoke-virtual {v0}, Ldus;->a()V
 
-    .line 8
     return-void
 .end method

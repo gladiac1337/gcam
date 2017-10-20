@@ -20,11 +20,8 @@
 .method public constructor <init>(JLjuk;Ljava/util/List;)V
     .locals 5
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-interface {p4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -42,7 +39,6 @@
 
     check-cast v0, Liia;
 
-    .line 3
     invoke-interface {v0}, Liia;->e()J
 
     move-result-wide v2
@@ -63,7 +59,6 @@
 
     goto :goto_1
 
-    .line 5
     :cond_1
     new-instance v0, Ljava/lang/Object;
 
@@ -71,20 +66,16 @@
 
     iput-object v0, p0, Ldre;->b:Ljava/lang/Object;
 
-    .line 6
     iput-wide p1, p0, Ldre;->c:J
 
-    .line 7
     iput-object p3, p0, Ldre;->a:Ljuk;
 
-    .line 8
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0, p4}, Ljava/util/LinkedList;-><init>(Ljava/util/Collection;)V
 
     iput-object v0, p0, Ldre;->d:Ljava/util/LinkedList;
 
-    .line 9
     return-void
 .end method
 
@@ -93,8 +84,6 @@
 .method public final declared-synchronized c()Ljava/util/LinkedList;
     .locals 2
 
-    .prologue
-    .line 13
     monitor-enter p0
 
     :try_start_0
@@ -104,7 +93,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 14
     :try_start_1
     iget-object v0, p0, Ldre;->d:Ljava/util/LinkedList;
 
@@ -116,7 +104,6 @@
 
     return-object v0
 
-    .line 15
     :catchall_0
     move-exception v0
 
@@ -130,7 +117,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 13
     :catchall_1
     move-exception v0
 
@@ -142,8 +128,6 @@
 .method public declared-synchronized close()V
     .locals 3
 
-    .prologue
-    .line 18
     monitor-enter p0
 
     :try_start_0
@@ -153,7 +137,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 19
     :try_start_1
     iget-object v0, p0, Ldre;->d:Ljava/util/LinkedList;
 
@@ -174,12 +157,10 @@
 
     check-cast v0, Liia;
 
-    .line 20
     invoke-interface {v0}, Liia;->close()V
 
     goto :goto_0
 
-    .line 23
     :catchall_0
     move-exception v0
 
@@ -192,7 +173,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 18
     :catchall_1
     move-exception v0
 
@@ -200,14 +180,12 @@
 
     throw v0
 
-    .line 22
     :cond_0
     :try_start_3
     iget-object v0, p0, Ldre;->d:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
-    .line 23
     monitor-exit v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -220,8 +198,6 @@
 .method public final declared-synchronized d()J
     .locals 2
 
-    .prologue
-    .line 16
     monitor-enter p0
 
     :try_start_0
@@ -244,8 +220,6 @@
 .method public final e()Ljuk;
     .locals 1
 
-    .prologue
-    .line 17
     iget-object v0, p0, Ldre;->a:Ljuk;
 
     return-object v0
@@ -254,8 +228,6 @@
 .method public final declared-synchronized f()I
     .locals 2
 
-    .prologue
-    .line 24
     monitor-enter p0
 
     :try_start_0
@@ -265,7 +237,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 25
     :try_start_1
     iget-object v0, p0, Ldre;->d:Ljava/util/LinkedList;
 
@@ -281,7 +252,6 @@
 
     return v0
 
-    .line 26
     :catchall_0
     move-exception v0
 
@@ -295,7 +265,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 24
     :catchall_1
     move-exception v0
 
@@ -307,8 +276,6 @@
 .method public final g()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 27
     iget-object v0, p0, Ldre;->b:Ljava/lang/Object;
 
     return-object v0
@@ -317,8 +284,6 @@
 .method public final declared-synchronized k_()Liia;
     .locals 2
 
-    .prologue
-    .line 10
     monitor-enter p0
 
     :try_start_0
@@ -328,7 +293,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 11
     :try_start_1
     iget-object v0, p0, Ldre;->d:Ljava/util/LinkedList;
 
@@ -346,7 +310,6 @@
 
     return-object v0
 
-    .line 12
     :catchall_0
     move-exception v0
 
@@ -360,7 +323,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 10
     :catchall_1
     move-exception v0
 

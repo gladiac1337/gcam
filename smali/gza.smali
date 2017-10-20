@@ -19,7 +19,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -28,7 +27,6 @@
 
     const/4 v2, 0x0
 
-    .line 12
     new-instance v0, Lgza;
 
     const-string v1, "PORTRAIT"
@@ -37,7 +35,6 @@
 
     sput-object v0, Lgza;->a:Lgza;
 
-    .line 13
     new-instance v0, Lgza;
 
     const-string v1, "LANDSCAPE"
@@ -46,7 +43,6 @@
 
     sput-object v0, Lgza;->b:Lgza;
 
-    .line 14
     new-instance v0, Lgza;
 
     const-string v1, "REVERSE_LANDSCAPE"
@@ -55,7 +51,6 @@
 
     sput-object v0, Lgza;->c:Lgza;
 
-    .line 15
     new-instance v0, Lgza;
 
     const-string v1, "REVERSE_PORTRAIT"
@@ -64,7 +59,6 @@
 
     sput-object v0, Lgza;->d:Lgza;
 
-    .line 16
     const/4 v0, 0x4
 
     new-array v0, v0, [Lgza;
@@ -93,8 +87,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -103,15 +95,12 @@
 .method public static a(Landroid/view/Display;Landroid/content/Context;II)Lgza;
     .locals 4
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 3
     invoke-virtual {p0}, Landroid/view/Display;->getRotation()I
 
     move-result v2
 
-    .line 4
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x18
@@ -128,39 +117,32 @@
 
     move v0, v1
 
-    .line 5
     :goto_0
     if-lt p2, p3, :cond_0
 
     if-eqz v0, :cond_2
 
-    .line 6
     :cond_0
     sget-object v0, Lgza;->a:Lgza;
 
-    .line 10
     :goto_1
     return-object v0
 
-    .line 4
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 7
     :cond_2
     if-eqz v2, :cond_3
 
     if-ne v2, v1, :cond_4
 
-    .line 8
     :cond_3
     sget-object v0, Lgza;->b:Lgza;
 
     goto :goto_1
 
-    .line 9
     :cond_4
     const/4 v0, 0x2
 
@@ -170,13 +152,11 @@
 
     if-ne v2, v0, :cond_6
 
-    .line 10
     :cond_5
     sget-object v0, Lgza;->c:Lgza;
 
     goto :goto_1
 
-    .line 11
     :cond_6
     new-instance v0, Ljava/lang/IllegalStateException;
 
@@ -190,8 +170,6 @@
 .method public static values()[Lgza;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lgza;->e:[Lgza;
 
     invoke-virtual {v0}, [Lgza;->clone()Ljava/lang/Object;

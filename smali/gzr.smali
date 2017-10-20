@@ -17,14 +17,10 @@
 .method public constructor <init>(Lhka;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgzr;->a:Lhka;
 
-    .line 3
     return-void
 .end method
 
@@ -33,36 +29,28 @@
 .method public final a()Ljuk;
     .locals 4
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lgzr;->a:Lhka;
 
     invoke-virtual {v0, p0}, Lhka;->a(Lhkd;)V
 
-    .line 5
     iget-object v0, p0, Lgzr;->a:Lhka;
 
     invoke-virtual {v0, p0}, Lhka;->a(Lhkc;)V
 
-    .line 7
     new-instance v0, Ljuw;
 
     invoke-direct {v0}, Ljuw;-><init>()V
 
-    .line 8
     iput-object v0, p0, Lgzr;->b:Ljuw;
 
-    .line 9
     iget-object v0, p0, Lgzr;->a:Lhka;
 
     invoke-virtual {v0}, Lhka;->b()V
 
-    .line 11
     new-instance v0, Lgzs;
 
     invoke-direct {v0, p0}, Lgzs;-><init>(Lgzr;)V
 
-    .line 12
     new-instance v1, Ljava/util/Timer;
 
     invoke-direct {v1}, Ljava/util/Timer;-><init>()V
@@ -71,7 +59,6 @@
 
     invoke-virtual {v1, v0, v2, v3}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
-    .line 13
     iget-object v0, p0, Lgzr;->b:Ljuw;
 
     invoke-static {v0}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
@@ -86,8 +73,6 @@
 .method public final a(I)V
     .locals 4
 
-    .prologue
-    .line 18
     iget-object v0, p0, Lgzr;->b:Ljuw;
 
     invoke-static {v0}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
@@ -122,15 +107,12 @@
 
     invoke-virtual {v0, v1}, Ljsl;->a(Ljava/lang/Throwable;)Z
 
-    .line 19
     return-void
 .end method
 
 .method public final a(Landroid/os/Bundle;)V
     .locals 2
 
-    .prologue
-    .line 14
     iget-object v0, p0, Lgzr;->b:Ljuw;
 
     invoke-static {v0}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
@@ -145,15 +127,12 @@
 
     invoke-virtual {v0, v1}, Ljsl;->a(Ljava/lang/Object;)Z
 
-    .line 15
     return-void
 .end method
 
 .method public final a(Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 5
 
-    .prologue
-    .line 16
     iget-object v0, p0, Lgzr;->b:Ljuw;
 
     invoke-static {v0}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
@@ -200,6 +179,5 @@
 
     invoke-virtual {v0, v1}, Ljsl;->a(Ljava/lang/Throwable;)Z
 
-    .line 17
     return-void
 .end method

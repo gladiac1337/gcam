@@ -42,20 +42,15 @@
 .method public final a()Landroid/location/Location;
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhuj;->a:Lhuq;
 
-    .line 2
     iget-object v0, v0, Lhuq;->a:Lhua;
 
     invoke-static {v0}, Lhua;->a(Lhua;)V
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Lhuj;->a:Lhuq;
 
-    .line 4
     iget-object v0, v0, Lhuq;->a:Lhua;
 
     invoke-virtual {v0}, Lhua;->n()Landroid/os/IInterface;
@@ -64,7 +59,6 @@
 
     check-cast v0, Lhui;
 
-    .line 5
     iget-object v1, p0, Lhuj;->d:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
@@ -92,8 +86,6 @@
 .method final a(Lhtn;)Lhuv;
     .locals 4
 
-    .prologue
-    .line 6
     iget-object v1, p0, Lhuj;->b:Ljava/util/Map;
 
     monitor-enter v1
@@ -101,10 +93,8 @@
     :try_start_0
     iget-object v0, p0, Lhuj;->b:Ljava/util/Map;
 
-    .line 7
     iget-object v2, p1, Lhtn;->b:Lhtp;
 
-    .line 8
     invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -120,10 +110,8 @@
     :cond_0
     iget-object v2, p0, Lhuj;->b:Ljava/util/Map;
 
-    .line 9
     iget-object v3, p1, Lhtn;->b:Lhtp;
 
-    .line 10
     invoke-interface {v2, v3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     monitor-exit v1

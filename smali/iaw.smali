@@ -29,15 +29,11 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Liaw;->a:Licc;
 
     iget-object v1, p0, Liaw;->b:Ljava/lang/Object;
 
-    .line 2
     invoke-interface {v0, v1}, Licc;->a(Ljava/lang/Object;)V
 
-    .line 3
     return-void
 .end method

@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 16
     const-class v0, Ljwg;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -31,17 +29,12 @@
 .method public constructor <init>(Landroid/content/pm/PackageManager;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Ljwg;->b:Landroid/content/pm/PackageManager;
 
-    .line 4
     return-void
 .end method
 
@@ -50,14 +43,12 @@
 .method public final a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
     const/4 v5, 0x1
 
     const/4 v4, 0x0
 
-    .line 5
     :try_start_0
     iget-object v1, p0, Ljwg;->b:Landroid/content/pm/PackageManager;
 
@@ -65,14 +56,12 @@
 
     move-result-object v1
 
-    .line 6
     const-string v2, "string"
 
     invoke-virtual {v1, p2, v2, p1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v2
 
-    .line 7
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -80,11 +69,9 @@
 
     move-result-object v0
 
-    .line 15
     :goto_0
     return-object v0
 
-    .line 9
     :catch_0
     move-exception v1
 
@@ -104,7 +91,6 @@
 
     goto :goto_0
 
-    .line 12
     :catch_1
     move-exception v1
 
@@ -120,12 +106,10 @@
 
     aput-object p1, v3, v5
 
-    .line 13
     invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 14
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0

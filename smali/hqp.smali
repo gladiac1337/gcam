@@ -354,19 +354,15 @@
 .method public static varargs a(Landroid/content/ContentResolver;[Ljava/lang/String;)V
     .locals 7
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 4
     array-length v1, p1
 
     if-nez v1, :cond_0
 
-    .line 6
     :goto_0
     return-void
 
-    .line 4
     :cond_0
     const-class v1, Lhqp;
 
@@ -375,7 +371,6 @@
     :try_start_0
     invoke-static {p0}, Lhqp;->a(Landroid/content/ContentResolver;)V
 
-    .line 5
     sget-object v2, Lhqp;->g:[Ljava/lang/String;
 
     array-length v2, v2
@@ -437,7 +432,6 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 6
     :goto_2
     sget-boolean v2, Lhqp;->f:Z
 
@@ -471,7 +465,6 @@
 
     throw v0
 
-    .line 5
     :cond_5
     :try_start_1
     invoke-virtual {v3}, Ljava/util/HashSet;->size()I
@@ -502,7 +495,6 @@
 
     goto :goto_2
 
-    .line 6
     :cond_6
     array-length v2, v0
 
@@ -549,16 +541,12 @@
 .method public static b(Landroid/content/ContentResolver;Ljava/lang/String;)J
     .locals 3
 
-    .prologue
     const-wide/16 v0, 0x0
 
-    .line 1
-    .line 2
     invoke-static {p0, p1}, Lhqp;->a(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 3
     if-eqz v2, :cond_0
 
     :try_start_0

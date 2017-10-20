@@ -16,8 +16,6 @@
 .method constructor <init>(Lbzl;Lgfx;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbzm;->b:Lbzl;
 
     iput-object p2, p0, Lbzm;->a:Lgfx;
@@ -32,8 +30,6 @@
 .method public final a()Lgfy;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbzm;->a:Lgfx;
 
     invoke-interface {v0}, Lgfx;->a()Lgfy;
@@ -46,13 +42,10 @@
 .method public final b()Lgfy;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lbzm;->b:Lbzl;
 
     invoke-virtual {v0}, Lbzl;->c()V
 
-    .line 4
     iget-object v0, p0, Lbzm;->a:Lgfx;
 
     invoke-interface {v0}, Lgfx;->b()Lgfy;

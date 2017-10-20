@@ -16,8 +16,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 5
     new-instance v0, Ljha;
 
     const-string v1, "INSTANCE"
@@ -26,7 +24,6 @@
 
     sput-object v0, Ljha;->a:Ljha;
 
-    .line 6
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljha;
@@ -45,8 +42,6 @@
 .method private constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 2
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
@@ -57,8 +52,6 @@
 .method public static values()[Ljha;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Ljha;->b:[Ljha;
 
     invoke-virtual {v0}, [Ljha;->clone()Ljava/lang/Object;
@@ -75,16 +68,12 @@
 .method public final a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    .prologue
-    .line 3
     return-object p1
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 4
     const-string v0, "Functions.identity()"
 
     return-object v0

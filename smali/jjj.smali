@@ -18,11 +18,8 @@
 .method constructor <init>(Ljava/util/Comparator;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljmc;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -31,7 +28,6 @@
 
     iput-object v0, p0, Ljjj;->a:Ljava/util/Comparator;
 
-    .line 3
     return-void
 .end method
 
@@ -40,8 +36,6 @@
 .method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Ljjj;->a:Ljava/util/Comparator;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
@@ -54,27 +48,20 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 5
     if-ne p1, p0, :cond_0
 
-    .line 6
     const/4 v0, 0x1
 
-    .line 10
     :goto_0
     return v0
 
-    .line 7
     :cond_0
     instance-of v0, p1, Ljjj;
 
     if-eqz v0, :cond_1
 
-    .line 8
     check-cast p1, Ljjj;
 
-    .line 9
     iget-object v0, p0, Ljjj;->a:Ljava/util/Comparator;
 
     iget-object v1, p1, Ljjj;->a:Ljava/util/Comparator;
@@ -85,7 +72,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_1
     const/4 v0, 0x0
 
@@ -95,8 +81,6 @@
 .method public final hashCode()I
     .locals 1
 
-    .prologue
-    .line 11
     iget-object v0, p0, Ljjj;->a:Ljava/util/Comparator;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -109,8 +93,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 12
     iget-object v0, p0, Ljjj;->a:Ljava/util/Comparator;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

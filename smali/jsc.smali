@@ -7,14 +7,10 @@
 .method constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     const/4 v0, 0x2
 
     invoke-direct {p0, p1, v0}, Ljrz;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     return-void
 .end method
 
@@ -23,8 +19,6 @@
 .method final a(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
     .locals 1
 
-    .prologue
-    .line 4
     sget-object v0, Ljsc;->a:Ljrz;
 
     invoke-virtual {v0, p1}, Ljrz;->a(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
@@ -37,8 +31,6 @@
 .method final b(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
     .locals 1
 
-    .prologue
-    .line 5
     sget-object v0, Ljsc;->a:Ljrz;
 
     invoke-virtual {v0, p1}, Ljrz;->b(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
@@ -51,8 +43,6 @@
 .method final c(Ljava/lang/reflect/Type;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 6
     :try_start_0
     const-class v0, Ljava/lang/reflect/Type;
 
@@ -66,7 +56,6 @@
 
     move-result-object v0
 
-    .line 7
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -83,7 +72,6 @@
 
     return-object v0
 
-    .line 9
     :catch_0
     move-exception v0
 
@@ -95,11 +83,9 @@
 
     throw v0
 
-    .line 10
     :catch_1
     move-exception v0
 
-    .line 11
     :goto_0
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -107,7 +93,6 @@
 
     throw v1
 
-    .line 10
     :catch_2
     move-exception v0
 

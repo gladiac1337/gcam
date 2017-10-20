@@ -19,34 +19,26 @@
 .method constructor <init>(Ldyn;Ldyn;Ldyz;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldyx;->a:Ldyn;
 
-    .line 3
     iput-object p2, p0, Ldyx;->b:Ldyn;
 
-    .line 4
     iput-object p3, p0, Ldyx;->c:Ldyz;
 
-    .line 5
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Ldyx;->d:Ljava/lang/Object;
 
-    .line 6
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Ldyx;->e:Ljava/util/Map;
 
-    .line 7
     return-void
 .end method
 
@@ -55,13 +47,10 @@
 .method public final a(J)Ldyw;
     .locals 3
 
-    .prologue
-    .line 8
     iget-object v1, p0, Ldyx;->d:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 9
     :try_start_0
     iget-object v0, p0, Ldyx;->e:Ljava/util/Map;
 
@@ -75,18 +64,14 @@
 
     if-nez v0, :cond_0
 
-    .line 10
     new-instance v0, Ldyw;
 
     const-string v2, ""
 
-    .line 11
     invoke-direct {v0, v2}, Ldyw;-><init>(Ljava/lang/String;)V
 
-    .line 12
     monitor-exit v1
 
-    .line 13
     :goto_0
     return-object v0
 
@@ -107,7 +92,6 @@
 
     goto :goto_0
 
-    .line 14
     :catchall_0
     move-exception v0
 

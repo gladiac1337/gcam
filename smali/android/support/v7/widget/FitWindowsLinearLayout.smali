@@ -14,22 +14,16 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 2
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 4
     return-void
 .end method
 
@@ -38,29 +32,22 @@
 .method public final a(Lta;)V
     .locals 0
 
-    .prologue
-    .line 5
     iput-object p1, p0, Landroid/support/v7/widget/FitWindowsLinearLayout;->a:Lta;
 
-    .line 6
     return-void
 .end method
 
 .method protected fitSystemWindows(Landroid/graphics/Rect;)Z
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Landroid/support/v7/widget/FitWindowsLinearLayout;->a:Lta;
 
     if-eqz v0, :cond_0
 
-    .line 8
     iget-object v0, p0, Landroid/support/v7/widget/FitWindowsLinearLayout;->a:Lta;
 
     invoke-virtual {v0, p1}, Lta;->a(Landroid/graphics/Rect;)V
 
-    .line 9
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->fitSystemWindows(Landroid/graphics/Rect;)Z
 

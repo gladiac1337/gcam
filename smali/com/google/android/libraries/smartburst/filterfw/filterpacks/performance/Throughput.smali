@@ -15,20 +15,14 @@
 .method public constructor <init>(IIJI)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/performance/Throughput;->mTotalFrames:I
 
-    .line 3
     iput p2, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/performance/Throughput;->mPeriodFrames:I
 
-    .line 4
     iput-wide p3, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/performance/Throughput;->mPeriodTime:J
 
-    .line 5
     return-void
 .end method
 
@@ -37,8 +31,6 @@
 .method public getFramesPerSecond()F
     .locals 4
 
-    .prologue
-    .line 9
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/performance/Throughput;->mPeriodFrames:I
 
     int-to-float v0, v0
@@ -59,8 +51,6 @@
 .method public getPeriodFrameCount()I
     .locals 1
 
-    .prologue
-    .line 7
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/performance/Throughput;->mPeriodFrames:I
 
     return v0
@@ -69,8 +59,6 @@
 .method public getPeriodTime()J
     .locals 2
 
-    .prologue
-    .line 8
     iget-wide v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/performance/Throughput;->mPeriodTime:J
 
     return-wide v0
@@ -79,8 +67,6 @@
 .method public getTotalFrameCount()I
     .locals 1
 
-    .prologue
-    .line 6
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/performance/Throughput;->mTotalFrames:I
 
     return v0
@@ -89,8 +75,6 @@
 .method public toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 10
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/performance/Throughput;->getFramesPerSecond()F
 
     move-result v0

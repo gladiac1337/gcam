@@ -15,32 +15,26 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Lagf;
 
     invoke-direct {v0}, Lagf;-><init>()V
 
-    .line 3
     new-instance v0, Lagg;
 
     invoke-direct {v0}, Lagg;-><init>()V
 
     sput-object v0, Lage;->a:Lage;
 
-    .line 4
     new-instance v0, Lagh;
 
     invoke-direct {v0}, Lagh;-><init>()V
 
     sput-object v0, Lage;->b:Lage;
 
-    .line 5
     new-instance v0, Lagi;
 
     invoke-direct {v0}, Lagi;-><init>()V
 
-    .line 6
     new-instance v0, Lagj;
 
     invoke-direct {v0}, Lagj;-><init>()V
@@ -53,8 +47,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

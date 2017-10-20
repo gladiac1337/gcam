@@ -13,14 +13,10 @@
 .method constructor <init>()V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/os/Handler;
 
-    .line 3
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
@@ -33,7 +29,6 @@
 
     iput-object v0, p0, Lahj;->b:Landroid/os/Handler;
 
-    .line 4
     return-void
 .end method
 
@@ -42,18 +37,14 @@
 .method public final a(Lahg;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 5
     invoke-static {}, Larq;->a()V
 
-    .line 6
     iget-boolean v0, p0, Lahj;->a:Z
 
     if-eqz v0, :cond_0
 
-    .line 7
     iget-object v0, p0, Lahj;->b:Landroid/os/Handler;
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -62,18 +53,14 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 11
     :goto_0
     return-void
 
-    .line 8
     :cond_0
     iput-boolean v1, p0, Lahj;->a:Z
 
-    .line 9
     invoke-interface {p1}, Lahg;->d()V
 
-    .line 10
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lahj;->a:Z

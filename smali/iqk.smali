@@ -16,8 +16,6 @@
 .method constructor <init>(Lixn;Liwv;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Liqk;->b:Lixn;
 
     iput-object p2, p0, Liqk;->a:Liwv;
@@ -32,11 +30,8 @@
 .method public final synthetic a(Ljava/lang/Object;Ljava/util/concurrent/Executor;)Liku;
     .locals 4
 
-    .prologue
-    .line 2
     check-cast p1, Liqo;
 
-    .line 3
     iget-object v0, p0, Liqk;->b:Lixn;
 
     iget-wide v2, p1, Liqo;->a:J
@@ -49,11 +44,9 @@
 
     invoke-direct {v1, p0}, Liql;-><init>(Liqk;)V
 
-    .line 4
     invoke-interface {v0, p2, v1}, Liku;->a(Ljava/util/concurrent/Executor;Lijv;)Liku;
 
     move-result-object v0
 
-    .line 5
     return-object v0
 .end method

@@ -25,11 +25,8 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lbyx;->a:Lbyn;
 
-    .line 2
     iget-object v1, v0, Lbyn;->c:Ljuw;
 
     invoke-virtual {v1}, Ljsl;->isDone()Z
@@ -38,7 +35,6 @@
 
     if-nez v1, :cond_0
 
-    .line 3
     iget-object v1, v0, Lbyn;->c:Ljuw;
 
     iget-object v0, v0, Lbyn;->b:Landroid/view/ViewStub;
@@ -51,7 +47,6 @@
 
     invoke-virtual {v1, v0}, Ljsl;->a(Ljava/lang/Object;)Z
 
-    .line 4
     :cond_0
     return-void
 .end method

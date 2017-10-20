@@ -22,27 +22,21 @@
 .method public final a(Lcom/google/android/gms/wearable/internal/zzch;)V
     .locals 4
 
-    .prologue
-    .line 1
     new-instance v1, Lhvp;
 
     iget v2, p1, Lcom/google/android/gms/wearable/internal/zzch;->a:I
 
-    .line 2
     new-instance v3, Lcom/google/android/gms/common/api/Status;
 
-    .line 3
     packed-switch v2, :pswitch_data_0
 
     invoke-static {v2}, Lhiv;->a(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4
     :goto_0
     invoke-direct {v3, v2, v0}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;)V
 
-    .line 5
     iget-object v0, p1, Lcom/google/android/gms/wearable/internal/zzch;->b:Lcom/google/android/gms/wearable/internal/zzao;
 
     invoke-direct {v1, v3}, Lhvp;-><init>(Lcom/google/android/gms/common/api/Status;)V
@@ -78,7 +72,6 @@
 
     goto :goto_1
 
-    .line 3
     :pswitch_0
     const-string v0, "TARGET_NODE_NOT_CONNECTED"
 
@@ -109,11 +102,9 @@
 
     goto :goto_0
 
-    .line 5
     :cond_0
     return-void
 
-    .line 3
     :pswitch_data_0
     .packed-switch 0xfa0
         :pswitch_0

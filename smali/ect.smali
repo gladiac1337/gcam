@@ -21,8 +21,6 @@
 .method public constructor <init>(Lick;Lico;Lhzg;Lgha;Ljhi;Leag;Leah;Lghe;Lefq;Ldnc;IIJLjava/util/Set;Lgdm;Lcoo;Liaj;Lavo;)V
     .locals 21
 
-    .prologue
-    .line 1
     const/4 v14, 0x3
 
     const/16 v19, 0x0
@@ -57,7 +55,6 @@
 
     invoke-direct/range {v3 .. v19}, Lefp;-><init>(Lick;Lico;Lhzg;Lgha;Ljhi;Leag;Leah;Lghe;Lefq;Ldnc;IIJLjava/util/Set;Ldvb;)V
 
-    .line 2
     const/4 v2, 0x3
 
     move/from16 v0, p12
@@ -69,42 +66,36 @@
     :goto_0
     invoke-static {v2}, Lixp;->a(Z)V
 
-    .line 3
     move-object/from16 v0, p15
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lect;->d:Ljava/util/Set;
 
-    .line 4
     move-object/from16 v0, p16
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lect;->e:Lgdm;
 
-    .line 5
     move-object/from16 v0, p17
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lect;->f:Lcoo;
 
-    .line 6
     move-object/from16 v0, p18
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lect;->g:Liaj;
 
-    .line 7
     move-object/from16 v0, p19
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lect;->h:Lavo;
 
-    .line 8
     const-string v2, "HdrZslImgCptrCmd"
 
     move-object/from16 v0, p1
@@ -117,10 +108,8 @@
 
     iput-object v2, v0, Lect;->c:Licj;
 
-    .line 9
     return-void
 
-    .line 2
     :cond_0
     const/4 v2, 0x0
 
@@ -132,8 +121,6 @@
 .method protected final a(Leai;Leap;Ljava/util/List;Ljava/util/List;)Z
     .locals 17
 
-    .prologue
-    .line 24
     const/4 v2, 0x0
 
     :try_start_0
@@ -155,7 +142,6 @@
 
     check-cast v2, Lihr;
 
-    .line 25
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lect;->c:Licj;
@@ -166,7 +152,6 @@
     :try_end_0
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 30
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lect;->e:Lgdm;
@@ -179,7 +164,6 @@
 
     move-result v4
 
-    .line 31
     :try_start_1
     move-object/from16 v0, p0
 
@@ -189,7 +173,6 @@
 
     invoke-interface {v3, v5}, Licj;->d(Ljava/lang/String;)V
 
-    .line 32
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lect;->f:Lcoo;
@@ -198,24 +181,20 @@
 
     iget-object v3, v0, Lect;->g:Liaj;
 
-    .line 33
     invoke-interface {v3}, Liaj;->b()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lgdr;
 
-    .line 34
     move-object/from16 v0, p2
 
     invoke-interface {v5, v4, v0, v3, v2}, Lcoo;->a(ILeap;Lgdr;Lihr;)Lcoz;
 
     move-result-object v3
 
-    .line 35
     if-nez v3, :cond_0
 
-    .line 36
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lect;->c:Licj;
@@ -227,14 +206,11 @@
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Lidu; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 37
     const/4 v2, 0x0
 
-    .line 129
     :goto_0
     return v2
 
-    .line 28
     :catch_0
     move-exception v2
 
@@ -246,12 +222,10 @@
 
     invoke-interface {v2, v3}, Licj;->c(Ljava/lang/String;)V
 
-    .line 29
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 38
     :cond_0
     :try_start_2
     move-object/from16 v0, p0
@@ -262,22 +236,17 @@
 
     invoke-interface {v2, v4}, Licj;->d(Ljava/lang/String;)V
 
-    .line 39
     invoke-static/range {p2 .. p2}, Lect;->a(Leap;)V
 
-    .line 40
     invoke-virtual/range {p1 .. p1}, Leai;->close()V
     :try_end_2
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Lidu; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 41
     const/4 v5, 0x0
 
-    .line 42
     const/4 v4, 0x0
 
-    .line 43
     :try_start_3
     move-object/from16 v0, p0
 
@@ -289,10 +258,8 @@
 
     invoke-interface {v2, v3, v6}, Lcoo;->a(Lcoz;Lcom/google/googlex/gcam/BurstSpec;)V
 
-    .line 44
     const/4 v2, 0x0
 
-    .line 45
     invoke-interface/range {p3 .. p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -319,7 +286,6 @@
 
     check-cast v2, Lggz;
 
-    .line 46
     invoke-interface {v2}, Lggz;->e()Ljuk;
 
     move-result-object v5
@@ -330,7 +296,6 @@
 
     check-cast v5, Lihr;
 
-    .line 47
     const/4 v6, 0x3
 
     new-array v6, v6, [I
@@ -341,14 +306,12 @@
 
     move-result-object v6
 
-    .line 48
     invoke-interface {v2}, Lggz;->d()J
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
     move-result-wide v12
 
-    .line 49
     if-eqz v6, :cond_3
 
     const/4 v2, 0x1
@@ -356,10 +319,8 @@
     :goto_2
     or-int v10, v8, v2
 
-    .line 50
     const/4 v8, 0x0
 
-    .line 51
     :try_start_5
     invoke-interface/range {p4 .. p4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -378,7 +339,6 @@
 
     check-cast v2, Lggz;
 
-    .line 52
     invoke-interface {v2}, Lggz;->d()J
 
     move-result-wide v14
@@ -389,19 +349,15 @@
 
     move-object v8, v2
 
-    .line 56
     :cond_2
     move-object/from16 v0, p4
 
     invoke-interface {v0, v8}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 57
     const/4 v2, 0x0
 
-    .line 58
     if-eqz v8, :cond_4
 
-    .line 59
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lect;->c:Licj;
@@ -428,7 +384,6 @@
 
     invoke-interface {v2, v9}, Licj;->d(Ljava/lang/String;)V
 
-    .line 60
     const/4 v2, 0x1
 
     new-array v2, v2, [I
@@ -445,10 +400,8 @@
 
     move-result-object v7
 
-    .line 61
     const/4 v9, 0x1
 
-    .line 63
     :goto_3
     :try_start_6
     move-object/from16 v0, p0
@@ -459,10 +412,8 @@
 
     invoke-interface/range {v2 .. v8}, Lcoo;->a(Lcoz;ILihr;Liia;Liia;[Landroid/hardware/camera2/params/Face;)V
 
-    .line 64
     if-eqz v6, :cond_5
 
-    .line 65
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lect;->c:Licj;
@@ -477,7 +428,6 @@
 
     add-int/lit8 v8, v4, 0x1
 
-    .line 66
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -498,10 +448,8 @@
 
     const/4 v7, 0x2
 
-    .line 67
     iget v8, v3, Lcoz;->c:I
 
-    .line 68
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -516,19 +464,16 @@
 
     aput-object v8, v6, v7
 
-    .line 70
     const/4 v7, 0x0
 
     invoke-static {v7, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 71
     invoke-interface {v2, v5}, Licj;->d(Ljava/lang/String;)V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 79
     :goto_4
     add-int/lit8 v4, v4, 0x1
 
@@ -536,16 +481,13 @@
 
     move v8, v10
 
-    .line 80
     goto/16 :goto_1
 
-    .line 49
     :cond_3
     const/4 v2, 0x0
 
     goto/16 :goto_2
 
-    .line 62
     :cond_4
     :try_start_7
     move-object/from16 v0, p0
@@ -582,7 +524,6 @@
 
     goto :goto_3
 
-    .line 72
     :cond_5
     :try_start_8
     move-object/from16 v0, p0
@@ -599,7 +540,6 @@
 
     add-int/lit8 v8, v4, 0x1
 
-    .line 73
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -620,10 +560,8 @@
 
     const/4 v7, 0x2
 
-    .line 74
     iget v8, v3, Lcoz;->c:I
 
-    .line 75
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v8
@@ -638,21 +576,18 @@
 
     aput-object v8, v6, v7
 
-    .line 77
     const/4 v7, 0x0
 
     invoke-static {v7, v5, v6}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 78
     invoke-interface {v2, v5}, Licj;->f(Ljava/lang/String;)V
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
     goto :goto_4
 
-    .line 105
     :catchall_0
     move-exception v2
 
@@ -676,34 +611,28 @@
 
     if-eqz v5, :cond_d
 
-    .line 106
     invoke-virtual {v3}, Lcoz;->c()Z
 
     move-result v5
 
     if-eqz v5, :cond_6
 
-    .line 109
     move-object/from16 v0, p2
 
     iget-object v5, v0, Leap;->b:Leot;
 
-    .line 110
     new-instance v6, Lecu;
 
     invoke-direct {v6, v3}, Lecu;-><init>(Lcoz;)V
 
     invoke-interface {v5, v6}, Leot;->a(Lgro;)V
 
-    .line 111
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lect;->c:Licj;
 
-    .line 112
     iget v6, v3, Lcoz;->c:I
 
-    .line 113
     const/16 v7, 0x2c
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -732,41 +661,33 @@
 
     invoke-interface {v5, v6}, Licj;->d(Ljava/lang/String;)V
 
-    .line 114
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lect;->h:Lavo;
 
-    .line 115
     move-object/from16 v0, p2
 
     iget-object v6, v0, Leap;->b:Leot;
 
-    .line 116
     invoke-interface {v6}, Lgon;->n()Lavk;
 
     move-result-object v6
 
     invoke-virtual {v5, v6}, Lavo;->a(Lavk;)V
 
-    .line 117
     :cond_6
     if-nez v2, :cond_7
 
-    .line 119
     iget-object v2, v3, Lcoz;->a:Lcpr;
 
-    .line 120
     iget-object v2, v2, Lcpr;->i:Ljuw;
 
-    .line 121
     new-instance v3, Lcom/google/googlex/gcam/InterleavedImageU16;
 
     invoke-direct {v3}, Lcom/google/googlex/gcam/InterleavedImageU16;-><init>()V
 
     invoke-virtual {v2, v3}, Ljsl;->a(Ljava/lang/Object;)Z
 
-    .line 125
     :cond_7
     :goto_6
     invoke-interface/range {p4 .. p4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -786,12 +707,10 @@
 
     check-cast v2, Lggz;
 
-    .line 126
     invoke-interface {v2}, Lggz;->close()V
 
     goto :goto_7
 
-    .line 129
     :catch_1
     move-exception v2
 
@@ -800,7 +719,6 @@
 
     goto/16 :goto_0
 
-    .line 81
     :cond_8
     if-eqz v8, :cond_b
 
@@ -814,34 +732,28 @@
 
     if-eqz v2, :cond_b
 
-    .line 82
     invoke-virtual {v3}, Lcoz;->c()Z
 
     move-result v2
 
     if-eqz v2, :cond_9
 
-    .line 85
     move-object/from16 v0, p2
 
     iget-object v2, v0, Leap;->b:Leot;
 
-    .line 86
     new-instance v4, Lecu;
 
     invoke-direct {v4, v3}, Lecu;-><init>(Lcoz;)V
 
     invoke-interface {v2, v4}, Leot;->a(Lgro;)V
 
-    .line 87
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lect;->c:Licj;
 
-    .line 88
     iget v4, v3, Lcoz;->c:I
 
-    .line 89
     const/16 v5, 0x2c
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -870,41 +782,33 @@
 
     invoke-interface {v2, v4}, Licj;->d(Ljava/lang/String;)V
 
-    .line 90
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lect;->h:Lavo;
 
-    .line 91
     move-object/from16 v0, p2
 
     iget-object v4, v0, Leap;->b:Leot;
 
-    .line 92
     invoke-interface {v4}, Lgon;->n()Lavk;
 
     move-result-object v4
 
     invoke-virtual {v2, v4}, Lavo;->a(Lavk;)V
 
-    .line 93
     :cond_9
     if-nez v7, :cond_a
 
-    .line 95
     iget-object v2, v3, Lcoz;->a:Lcpr;
 
-    .line 96
     iget-object v2, v2, Lcpr;->i:Ljuw;
 
-    .line 97
     new-instance v3, Lcom/google/googlex/gcam/InterleavedImageU16;
 
     invoke-direct {v3}, Lcom/google/googlex/gcam/InterleavedImageU16;-><init>()V
 
     invoke-virtual {v2, v3}, Ljsl;->a(Ljava/lang/Object;)Z
 
-    .line 101
     :cond_a
     :goto_9
     invoke-interface/range {p4 .. p4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -924,27 +828,22 @@
 
     check-cast v2, Lggz;
 
-    .line 102
     invoke-interface {v2}, Lggz;->close()V
 
     goto :goto_a
 
-    .line 129
     :catch_2
     move-exception v2
 
     goto :goto_8
 
-    .line 98
     :cond_b
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lect;->c:Licj;
 
-    .line 99
     iget v3, v3, Lcoz;->c:I
 
-    .line 100
     const/16 v4, 0x29
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -975,22 +874,18 @@
 
     goto :goto_9
 
-    .line 104
     :cond_c
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 122
     :cond_d
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lect;->c:Licj;
 
-    .line 123
     iget v3, v3, Lcoz;->c:I
 
-    .line 124
     const/16 v5, 0x29
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1021,14 +916,12 @@
 
     goto/16 :goto_6
 
-    .line 127
     :cond_e
     throw v4
     :try_end_9
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_9 .. :try_end_9} :catch_1
     .catch Lidu; {:try_start_9 .. :try_end_9} :catch_2
 
-    .line 105
     :catchall_1
     move-exception v2
 
@@ -1062,7 +955,6 @@
 
     goto/16 :goto_5
 
-    .line 47
     nop
 
     :array_0
@@ -1076,26 +968,22 @@
 .method public final b()Liaj;
     .locals 5
 
-    .prologue
     const/4 v4, 0x2
 
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 10
     iget-object v0, p0, Lect;->b:Lghd;
 
     if-eqz v0, :cond_0
 
-    .line 11
     const/4 v0, 0x3
 
     new-array v0, v0, [Lggm;
 
     iget-object v1, p0, Lect;->a:Lghd;
 
-    .line 12
     invoke-static {v1}, Lfsl;->a(Lgfw;)Lggm;
 
     move-result-object v1
@@ -1104,7 +992,6 @@
 
     iget-object v1, p0, Lect;->b:Lghd;
 
-    .line 13
     invoke-static {v1}, Lfsl;->a(Lgfw;)Lggm;
 
     move-result-object v1
@@ -1113,7 +1000,6 @@
 
     iget-object v1, p0, Lect;->d:Ljava/util/Set;
 
-    .line 14
     invoke-static {v1}, Litx;->b(Ljava/lang/Iterable;)Ljava/util/ArrayList;
 
     move-result-object v1
@@ -1124,7 +1010,6 @@
 
     aput-object v1, v0, v4
 
-    .line 15
     invoke-static {v0}, Lfsl;->a([Lggm;)Lggm;
 
     move-result-object v0
@@ -1133,17 +1018,14 @@
 
     move-result-object v0
 
-    .line 19
     :goto_0
     return-object v0
 
-    .line 16
     :cond_0
     new-array v0, v4, [Lggm;
 
     iget-object v1, p0, Lect;->a:Lghd;
 
-    .line 17
     invoke-static {v1}, Lfsl;->a(Lgfw;)Lggm;
 
     move-result-object v1
@@ -1152,7 +1034,6 @@
 
     iget-object v1, p0, Lect;->d:Ljava/util/Set;
 
-    .line 18
     invoke-static {v1}, Litx;->b(Ljava/lang/Iterable;)Ljava/util/ArrayList;
 
     move-result-object v1
@@ -1163,7 +1044,6 @@
 
     aput-object v1, v0, v3
 
-    .line 19
     invoke-static {v0}, Lfsl;->a([Lggm;)Lggm;
 
     move-result-object v0
@@ -1178,8 +1058,6 @@
 .method protected final c()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 20
     iget-object v0, p0, Lect;->a:Lghd;
 
     invoke-interface {v0}, Lghd;->b()Ljava/util/List;
@@ -1192,13 +1070,10 @@
 .method protected final d()Lawi;
     .locals 3
 
-    .prologue
-    .line 21
     iget-object v0, p0, Lect;->b:Lghd;
 
     if-eqz v0, :cond_0
 
-    .line 22
     new-instance v0, Lawi;
 
     new-instance v1, Ljava/util/ArrayList;
@@ -1213,7 +1088,6 @@
 
     invoke-direct {v0, v1}, Lawi;-><init>(Ljava/util/ArrayList;)V
 
-    .line 23
     :goto_0
     return-object v0
 
@@ -1228,8 +1102,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 130
     const-string v0, "HdrPlusZslCaptureCommand"
 
     return-object v0

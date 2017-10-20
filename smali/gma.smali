@@ -29,16 +29,12 @@
 .method public final a(Lgkx;)V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgma;->a:Lcom/google/android/apps/camera/optionsbar/OptionsBarView;
 
     iget-object v1, p0, Lgma;->b:Lgku;
 
-    .line 2
     invoke-virtual {v0}, Lcom/google/android/apps/camera/optionsbar/OptionsBarView;->a()V
 
-    .line 3
     iget-object v0, v0, Lcom/google/android/apps/camera/optionsbar/OptionsBarView;->a:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -47,13 +43,10 @@
 
     check-cast v0, Lgky;
 
-    .line 4
     if-eqz v0, :cond_0
 
-    .line 5
     invoke-interface {v0, p1}, Lgky;->a(Lgkx;)V
 
-    .line 6
     :cond_0
     return-void
 .end method

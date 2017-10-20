@@ -25,19 +25,13 @@
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lczw;->a:Lczs;
 
-    .line 2
     iget-object v0, v0, Lczs;->k:Lffs;
 
-    .line 3
     sget-object v1, Ljgx;->a:Ljgx;
 
-    .line 4
     invoke-virtual {v0, v1}, Lffs;->a(Ljhi;)V
 
-    .line 5
     return-void
 .end method

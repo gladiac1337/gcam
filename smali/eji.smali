@@ -16,8 +16,6 @@
 .method constructor <init>(Lejg;Liia;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leji;->b:Lejg;
 
     iput-object p2, p0, Leji;->a:Liia;
@@ -32,35 +30,26 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Leji;->a:Liia;
 
     invoke-interface {v0}, Liia;->close()V
 
-    .line 3
     iget-object v0, p0, Leji;->b:Lejg;
 
-    .line 4
     iget v1, v0, Lejg;->e:I
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, v0, Lejg;->e:I
 
-    .line 5
     iget-object v0, p0, Leji;->b:Lejg;
 
-    .line 6
     iget v0, v0, Lejg;->d:I
 
-    .line 7
     iget-object v1, p0, Leji;->b:Lejg;
 
-    .line 8
     iget v1, v1, Lejg;->e:I
 
-    .line 9
     const/16 v2, 0x58
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -91,11 +80,9 @@
 
     move-result-object v0
 
-    .line 11
     sget-object v1, Lejg;->a:Ljava/lang/String;
 
     invoke-static {v1, v0}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     return-void
 .end method

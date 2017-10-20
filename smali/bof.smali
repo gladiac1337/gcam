@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 76
     const-string v0, "SpecTypeMeta"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -35,52 +33,39 @@
 .method constructor <init>(Landroid/content/ContentResolver;Lgvs;Lico;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbof;->b:Landroid/content/ContentResolver;
 
-    .line 3
     iput-object p2, p0, Lbof;->c:Lgvs;
 
-    .line 4
     iput-object p3, p0, Lbof;->d:Lico;
 
-    .line 5
     return-void
 .end method
 
 .method private static a(Ljava/lang/String;)Lbnu;
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 42
     invoke-static {p0}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 43
     invoke-static {p0}, Lfuw;->b(Ljava/lang/String;)Lxb;
 
     move-result-object v0
 
-    .line 44
     invoke-static {v0}, Lfuw;->a(Lxb;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 45
     if-nez v0, :cond_0
 
     move-object v0, v1
 
-    .line 50
     :goto_0
     return-object v0
 
-    .line 47
     :cond_0
     :try_start_0
     invoke-static {v0}, Lbnu;->a(Ljava/lang/String;)Lbnu;
@@ -91,11 +76,9 @@
 
     goto :goto_0
 
-    .line 48
     :catch_0
     move-exception v2
 
-    .line 49
     sget-object v3, Lbof;->a:Ljava/lang/String;
 
     const-string v4, "fail to extract special type from metadata for"
@@ -119,10 +102,8 @@
 
     move-object v0, v1
 
-    .line 50
     goto :goto_0
 
-    .line 49
     :cond_1
     new-instance v0, Ljava/lang/String;
 
@@ -134,15 +115,12 @@
 .method private final a(Landroid/net/Uri;)Ljhi;
     .locals 7
 
-    .prologue
     const/4 v4, 0x0
 
     const/4 v3, 0x0
 
-    .line 51
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 52
     iget-object v0, p0, Lbof;->b:Landroid/content/ContentResolver;
 
     const/4 v1, 0x1
@@ -163,7 +141,6 @@
 
     move-result-object v0
 
-    .line 53
     if-eqz v0, :cond_0
 
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
@@ -172,15 +149,12 @@
 
     if-nez v1, :cond_1
 
-    .line 54
     :cond_0
     sget-object v0, Ljgx;->a:Ljgx;
 
-    .line 69
     :goto_0
     return-object v0
 
-    .line 57
     :cond_1
     const/4 v1, 0x0
 
@@ -191,23 +165,18 @@
 
     move-result-object v3
 
-    .line 61
     :goto_1
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 62
     if-nez v3, :cond_2
 
-    .line 63
     sget-object v0, Ljgx;->a:Ljgx;
 
     goto :goto_0
 
-    .line 59
     :catch_0
     move-exception v1
 
-    .line 60
     sget-object v2, Lbof;->a:Ljava/lang/String;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -246,27 +215,23 @@
 
     goto :goto_1
 
-    .line 65
     :cond_2
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 66
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 67
     invoke-static {v3}, Ljhi;->b(Ljava/lang/Object;)Ljhi;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 68
     :cond_3
     sget-object v0, Ljgx;->a:Ljgx;
 
@@ -276,11 +241,8 @@
 .method private final b(Ljava/lang/String;)Z
     .locals 3
 
-    .prologue
-    .line 70
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 71
     :try_start_0
     new-instance v0, Ljava/io/File;
 
@@ -298,7 +260,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 75
     iget-object v1, p0, Lbof;->c:Lgvs;
 
     invoke-interface {v1}, Lgvs;->c()Ljava/lang/String;
@@ -311,11 +272,9 @@
 
     return v0
 
-    .line 73
     :catch_0
     move-exception v0
 
-    .line 74
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Fails to obtain canonical path"
@@ -330,15 +289,12 @@
 .method public final a(J)Ljhi;
     .locals 5
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lbof;->d:Lico;
 
     const-string v1, "SpecialType"
 
     invoke-interface {v0, v1}, Lico;->a(Ljava/lang/String;)V
 
-    .line 7
     :try_start_0
     const-string v0, "external"
 
@@ -346,12 +302,10 @@
 
     move-result-object v0
 
-    .line 8
     invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v0
 
-    .line 9
     invoke-static {p1, p2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v1
@@ -360,24 +314,20 @@
 
     move-result-object v0
 
-    .line 10
     invoke-virtual {v0}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 11
     invoke-direct {p0, v0}, Lbof;->a(Landroid/net/Uri;)Ljhi;
 
     move-result-object v0
 
-    .line 12
     invoke-virtual {v0}, Ljhi;->a()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 13
     sget-object v0, Lbof;->a:Ljava/lang/String;
 
     const/16 v1, 0x24
@@ -402,21 +352,17 @@
 
     invoke-static {v0, v1}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 14
     sget-object v0, Ljgx;->a:Ljgx;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 16
     iget-object v1, p0, Lbof;->d:Lico;
 
     invoke-interface {v1}, Lico;->a()V
 
-    .line 40
     :goto_0
     return-object v0
 
-    .line 18
     :cond_0
     :try_start_1
     invoke-virtual {v0}, Ljhi;->b()Ljava/lang/Object;
@@ -425,15 +371,12 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 20
     invoke-static {v0}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 21
     invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 22
     const-string v2, "jpg"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -444,7 +387,6 @@
 
     const-string v2, "jpeg"
 
-    .line 23
     invoke-virtual {v1, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v2
@@ -453,7 +395,6 @@
 
     const-string v2, "rgbz"
 
-    .line 24
     invoke-virtual {v1, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -463,11 +404,9 @@
     :cond_1
     const/4 v1, 0x1
 
-    .line 25
     :goto_1
     if-nez v1, :cond_4
 
-    .line 26
     sget-object v1, Lbof;->a:Ljava/lang/String;
 
     const-string v2, "Ignoring metadata for which is not an image "
@@ -489,25 +428,21 @@
     :goto_2
     invoke-static {v1, v0}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 27
     sget-object v0, Ljgx;->a:Ljgx;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 29
     iget-object v1, p0, Lbof;->d:Lico;
 
     invoke-interface {v1}, Lico;->a()V
 
     goto :goto_0
 
-    .line 24
     :cond_2
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 26
     :cond_3
     :try_start_2
     new-instance v0, Ljava/lang/String;
@@ -518,7 +453,6 @@
 
     goto :goto_2
 
-    .line 41
     :catchall_0
     move-exception v0
 
@@ -528,7 +462,6 @@
 
     throw v0
 
-    .line 31
     :cond_4
     :try_start_3
     invoke-direct {p0, v0}, Lbof;->b(Ljava/lang/String;)Z
@@ -537,7 +470,6 @@
 
     if-nez v1, :cond_6
 
-    .line 32
     sget-object v1, Lbof;->a:Ljava/lang/String;
 
     const-string v2, "Ignoring metadata for image that is not in DCIM/Camera: "
@@ -559,19 +491,16 @@
     :goto_3
     invoke-static {v1, v0}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 33
     sget-object v0, Ljgx;->a:Ljgx;
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 35
     iget-object v1, p0, Lbof;->d:Lico;
 
     invoke-interface {v1}, Lico;->a()V
 
     goto :goto_0
 
-    .line 32
     :cond_5
     :try_start_4
     new-instance v0, Ljava/lang/String;
@@ -580,7 +509,6 @@
 
     goto :goto_3
 
-    .line 37
     :cond_6
     sget-object v1, Lbof;->a:Ljava/lang/String;
 
@@ -624,7 +552,6 @@
 
     invoke-static {v1, v2}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 38
     invoke-static {v0}, Lbof;->a(Ljava/lang/String;)Lbnu;
 
     move-result-object v0
@@ -635,7 +562,6 @@
 
     move-result-object v0
 
-    .line 39
     iget-object v1, p0, Lbof;->d:Lico;
 
     invoke-interface {v1}, Lico;->a()V

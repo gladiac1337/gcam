@@ -11,14 +11,10 @@
 .method constructor <init>(Landroid/hardware/camera2/CameraCharacteristics;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lace;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lyp;->a:Landroid/hardware/camera2/CameraCharacteristics;
 
-    .line 3
     return-void
 .end method
 
@@ -27,8 +23,6 @@
 .method public final a()Z
     .locals 2
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lyp;->a:Landroid/hardware/camera2/CameraCharacteristics;
 
     sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
@@ -55,8 +49,6 @@
 .method public final b()Z
     .locals 2
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lyp;->a:Landroid/hardware/camera2/CameraCharacteristics;
 
     sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
@@ -83,8 +75,6 @@
 .method public final c()I
     .locals 2
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lyp;->a:Landroid/hardware/camera2/CameraCharacteristics;
 
     sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_ORIENTATION:Landroid/hardware/camera2/CameraCharacteristics$Key;

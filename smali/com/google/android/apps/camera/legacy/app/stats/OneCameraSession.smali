@@ -24,21 +24,16 @@
 .method public constructor <init>(Lija;)V
     .locals 1
 
-    .prologue
-    .line 2
     const-string v0, "OneCameraSession"
 
     invoke-direct {p0, p1, v0}, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;-><init>(Lija;Ljava/lang/String;)V
 
-    .line 3
     return-void
 .end method
 
 .method public static a()Ljxb;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Lesf;
 
     invoke-direct {v0}, Lesf;-><init>()V
@@ -53,8 +48,6 @@
     .annotation build Lcom/google/android/apps/common/proguard/UsedByReflection;
     .end annotation
 
-    .prologue
-    .line 4
     iget-wide v0, p0, Lcom/google/android/apps/camera/legacy/app/stats/OneCameraSession;->b:J
 
     return-wide v0
@@ -65,8 +58,6 @@
     .annotation build Lcom/google/android/apps/common/proguard/UsedByReflection;
     .end annotation
 
-    .prologue
-    .line 5
     iget-wide v0, p0, Lcom/google/android/apps/camera/legacy/app/stats/OneCameraSession;->c:J
 
     return-wide v0
@@ -77,8 +68,6 @@
     .annotation build Lcom/google/android/apps/common/proguard/UsedByReflection;
     .end annotation
 
-    .prologue
-    .line 6
     iget-wide v0, p0, Lcom/google/android/apps/camera/legacy/app/stats/OneCameraSession;->d:J
 
     return-wide v0
@@ -89,8 +78,6 @@
     .annotation build Lcom/google/android/apps/common/proguard/UsedByReflection;
     .end annotation
 
-    .prologue
-    .line 7
     iget-wide v0, p0, Lcom/google/android/apps/camera/legacy/app/stats/OneCameraSession;->e:J
 
     return-wide v0

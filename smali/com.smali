@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 15
     const-string v0, "HdrPlusPrewarm"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -38,20 +36,14 @@
 .method public constructor <init>(Ljxb;Ldih;Lico;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom;->b:Ljxb;
 
-    .line 3
     iput-object p2, p0, Lcom;->c:Ldih;
 
-    .line 4
     iput-object p3, p0, Lcom;->d:Lico;
 
-    .line 5
     return-void
 .end method
 
@@ -60,9 +52,6 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 6
-    .line 7
     iget-object v0, p0, Lcom;->c:Ldih;
 
     sget-object v1, Lift;->a:Lift;
@@ -79,7 +68,6 @@
 
     sget-object v1, Lift;->b:Lift;
 
-    .line 8
     invoke-virtual {v0, v1}, Ldih;->a(Lift;)I
 
     move-result v0
@@ -91,38 +79,31 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 9
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 10
     iget-object v0, p0, Lcom;->d:Lico;
 
     const-string v1, "HdrPlus#initialize"
 
     invoke-interface {v0, v1}, Lico;->a(Ljava/lang/String;)V
 
-    .line 11
     iget-object v0, p0, Lcom;->b:Ljxb;
 
     invoke-interface {v0}, Ljxb;->a()Ljava/lang/Object;
 
-    .line 12
     iget-object v0, p0, Lcom;->d:Lico;
 
     invoke-interface {v0}, Lico;->a()V
 
-    .line 14
     :goto_1
     return-void
 
-    .line 8
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 13
     :cond_2
     sget-object v0, Lcom;->a:Ljava/lang/String;
 

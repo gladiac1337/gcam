@@ -13,8 +13,6 @@
 .method constructor <init>(Lgnx;Lhzv;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgod;->b:Lgnx;
 
     iput-object p2, p0, Lgod;->a:Lhzv;

@@ -11,17 +11,12 @@
 .method public constructor <init>(Ljci;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljat;-><init>()V
 
-    .line 2
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Ljbe;->a:Ljci;
 
-    .line 4
     return-void
 .end method
 
@@ -30,13 +25,10 @@
 .method public final a(Ljao;)Ljao;
     .locals 6
 
-    .prologue
-    .line 5
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 7
     invoke-virtual {p1}, Ljao;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -59,7 +51,6 @@
 
     move-result-wide v4
 
-    .line 8
     iget-object v0, p0, Ljbe;->a:Ljci;
 
     invoke-interface {v0, v4, v5}, Ljci;->a(J)Z
@@ -68,7 +59,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 9
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -77,14 +67,11 @@
 
     goto :goto_0
 
-    .line 11
     :cond_1
     new-instance v0, Ljao;
 
-    .line 12
     iget-object v2, p1, Ljao;->b:Ljava/util/Set;
 
-    .line 13
     invoke-direct {v0, v1, v2}, Ljao;-><init>(Ljava/util/Collection;Ljava/util/Set;)V
 
     return-object v0
@@ -93,8 +80,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 14
     const-string v0, "FrameFilterSegmentFilter[filter="
 
     iget-object v1, p0, Ljbe;->a:Ljci;

@@ -24,8 +24,6 @@
 .method public final a(Lcom/google/android/gms/googlehelp/GoogleHelp;)V
     .locals 9
 
-    .prologue
-    .line 1
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
     move-result-wide v4
@@ -47,22 +45,17 @@
 
     invoke-static {v0, p1, v4, v5}, Lhnw;->a(Lhnw;Lcom/google/android/gms/googlehelp/GoogleHelp;J)V
 
-    .line 2
     :cond_1
     iget-object v0, p1, Lcom/google/android/gms/googlehelp/GoogleHelp;->c:Lcom/google/android/gms/googlehelp/internal/common/TogglingData;
 
-    .line 3
     if-eqz v0, :cond_2
 
-    .line 4
     iget-object v6, p1, Lcom/google/android/gms/googlehelp/GoogleHelp;->c:Lcom/google/android/gms/googlehelp/internal/common/TogglingData;
 
-    .line 5
     iget-object v0, p0, Lhnx;->a:Lhnw;
 
     iget-object v0, v0, Lhnw;->d:Landroid/app/Activity;
 
-    .line 6
     invoke-virtual {v0}, Landroid/app/Activity;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v1
@@ -128,11 +121,9 @@
 
     move-result-object v0
 
-    .line 7
     :goto_1
     iput-object v0, v6, Lcom/google/android/gms/googlehelp/internal/common/TogglingData;->a:Ljava/lang/String;
 
-    .line 8
     :cond_2
     iget-object v0, p0, Lhnx;->a:Lhnw;
 
@@ -168,7 +159,6 @@
 
     return-void
 
-    .line 6
     :cond_3
     add-int/lit8 v1, v2, 0x1
 

@@ -16,17 +16,12 @@
 .method constructor <init>(Lgdo;Lico;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbtx;->a:Lgdo;
 
-    .line 3
     iput-object p2, p0, Lbtx;->b:Lico;
 
-    .line 4
     return-void
 .end method
 
@@ -35,15 +30,12 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lbtx;->b:Lico;
 
     const-string v1, "#cacheDeviceInfo"
 
     invoke-interface {v0, v1}, Lico;->a(Ljava/lang/String;)V
 
-    .line 6
     iget-object v0, p0, Lbtx;->a:Lgdo;
 
     invoke-virtual {v0}, Lgdo;->b()Ljava/util/List;
@@ -67,7 +59,6 @@
 
     check-cast v0, Lifr;
 
-    .line 7
     iget-object v2, p0, Lbtx;->a:Lgdo;
 
     invoke-virtual {v2, v0}, Lgdo;->a(Lifr;)Lgdm;
@@ -78,12 +69,10 @@
 
     goto :goto_0
 
-    .line 9
     :cond_0
     iget-object v0, p0, Lbtx;->b:Lico;
 
     invoke-interface {v0}, Lico;->a()V
 
-    .line 10
     return-void
 .end method

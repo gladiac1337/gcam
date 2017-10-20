@@ -18,8 +18,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;Landroid/animation/ArgbEvaluator;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgte;->c:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     iput-object p2, p0, Lgte;->a:Landroid/animation/ArgbEvaluator;
@@ -36,13 +34,10 @@
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 5
 
-    .prologue
-    .line 2
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
     move-result v0
 
-    .line 3
     iget-object v1, p0, Lgte;->c:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-static {v1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$800(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Landroid/graphics/Paint;
@@ -53,7 +48,6 @@
 
     iget v3, p0, Lgte;->b:I
 
-    .line 4
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
@@ -78,14 +72,11 @@
 
     move-result v0
 
-    .line 5
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 6
     iget-object v0, p0, Lgte;->c:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->invalidate()V
 
-    .line 7
     return-void
 .end method

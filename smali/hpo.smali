@@ -64,15 +64,12 @@
 .method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
     .locals 5
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v1, 0x1
 
-    .line 1
     sparse-switch p1, :sswitch_data_0
 
-    .line 3
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v1
@@ -80,7 +77,6 @@
     :goto_0
     return v1
 
-    .line 1
     :sswitch_0
     const-string v0, "com.google.android.gms.flags.IFlagProvider"
 
@@ -97,12 +93,10 @@
 
     move-result-object v2
 
-    .line 2
     if-nez v2, :cond_0
 
     const/4 v0, 0x0
 
-    .line 3
     :goto_1
     invoke-virtual {p0, v0}, Lhpo;->init(Lhmq;)V
 
@@ -110,7 +104,6 @@
 
     goto :goto_0
 
-    .line 2
     :cond_0
     const-string v0, "com.google.android.gms.dynamic.IObjectWrapper"
 
@@ -135,7 +128,6 @@
 
     goto :goto_1
 
-    .line 3
     :sswitch_2
     const-string v0, "com.google.android.gms.flags.IFlagProvider"
 
@@ -259,7 +251,6 @@
 
     goto/16 :goto_0
 
-    .line 1
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

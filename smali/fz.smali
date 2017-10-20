@@ -16,8 +16,6 @@
 .method constructor <init>(Lfy;Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfz;->b:Lfy;
 
     iput-object p2, p0, Lfz;->a:Ljava/lang/Object;
@@ -32,8 +30,6 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lfz;->b:Lfy;
 
     iget-object v0, v0, Lfy;->a:Lgb;
@@ -42,6 +38,5 @@
 
     invoke-interface {v0, v1}, Lgb;->a(Ljava/lang/Object;)V
 
-    .line 3
     return-void
 .end method

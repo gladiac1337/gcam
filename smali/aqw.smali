@@ -18,19 +18,14 @@
 .method public constructor <init>(I)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Laqw;->a:I
 
-    .line 3
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Laqw;->b:Z
 
-    .line 4
     return-void
 .end method
 
@@ -39,26 +34,20 @@
 .method public final a(Laed;)Larb;
     .locals 3
 
-    .prologue
-    .line 5
     sget-object v0, Laed;->e:Laed;
 
     if-ne p1, v0, :cond_0
 
-    .line 6
     sget-object v0, Laqz;->a:Laqz;
 
-    .line 11
     :goto_0
     return-object v0
 
-    .line 8
     :cond_0
     iget-object v0, p0, Laqw;->c:Laqy;
 
     if-nez v0, :cond_1
 
-    .line 9
     new-instance v0, Laqy;
 
     iget v1, p0, Laqw;->a:I
@@ -69,7 +58,6 @@
 
     iput-object v0, p0, Laqw;->c:Laqy;
 
-    .line 10
     :cond_1
     iget-object v0, p0, Laqw;->c:Laqy;
 

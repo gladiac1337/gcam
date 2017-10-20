@@ -18,46 +18,34 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$ConnectResourceSubGraphCommand;->mFilterName:Ljava/lang/String;
 
-    .line 3
     iput-object p2, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$ConnectResourceSubGraphCommand;->mResourceName:Ljava/lang/String;
 
-    .line 4
     iput-object p3, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$ConnectResourceSubGraphCommand;->mResourceType:Ljava/lang/String;
 
-    .line 5
     return-void
 .end method
 
 .method private resourceIdForName(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)I
     .locals 6
 
-    .prologue
-    .line 26
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/MffContext;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 27
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 28
     sget v2, Lcom/google/android/libraries/smartburst/filterfw/R$id;->used_for_subgraph_package_name_retrieval:I
 
-    .line 29
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getResourcePackageName(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 30
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -70,10 +58,8 @@
 
     move-result v0
 
-    .line 31
     if-nez v0, :cond_0
 
-    .line 32
     new-instance v0, Ljava/lang/RuntimeException;
 
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$ConnectResourceSubGraphCommand;->mResourceName:Ljava/lang/String;
@@ -158,7 +144,6 @@
 
     throw v0
 
-    .line 33
     :cond_0
     return v0
 .end method
@@ -166,10 +151,8 @@
 .method private static toCamelCase(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 34
     const-string v0, "_"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -178,13 +161,11 @@
 
     move v0, v1
 
-    .line 35
     :goto_0
     array-length v2, v3
 
     if-ge v0, v2, :cond_2
 
-    .line 36
     aget-object v2, v3, v0
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
@@ -193,7 +174,6 @@
 
     if-lez v2, :cond_0
 
-    .line 37
     aget-object v2, v3, v0
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->charAt(I)C
@@ -216,7 +196,6 @@
 
     const/4 v5, 0x1
 
-    .line 38
     invoke-virtual {v2, v5}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v2
@@ -238,13 +217,11 @@
     :goto_1
     aput-object v2, v3, v0
 
-    .line 39
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 38
     :cond_1
     new-instance v2, Ljava/lang/String;
 
@@ -252,7 +229,6 @@
 
     goto :goto_1
 
-    .line 40
     :cond_2
     const-string v0, ""
 
@@ -268,27 +244,22 @@
 .method public compileToJava(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Lcom/google/android/libraries/smartburst/filterfw/GraphReader$GraphFactorySource;)V
     .locals 5
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$ConnectResourceSubGraphCommand;->mResourceName:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$ConnectResourceSubGraphCommand;->toCamelCase(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 18
     invoke-virtual {p2, v0}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$GraphFactorySource;->newSubBuilder(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/GraphReader$GraphFactorySource;
 
     move-result-object v1
 
-    .line 19
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$ConnectResourceSubGraphCommand;->mResourceName:Ljava/lang/String;
 
     invoke-direct {p0, p1, v2}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$ConnectResourceSubGraphCommand;->resourceIdForName(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)I
 
     move-result v2
 
-    .line 20
     :try_start_0
     invoke-static {p1, v2}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader;->access$100(Lcom/google/android/libraries/smartburst/filterfw/MffContext;I)Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;
 
@@ -298,7 +269,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 24
     const-string v1, "((MetaFilter) %s).setGraph(new %s(graph).create(context));"
 
     const/4 v2, 0x2
@@ -321,14 +291,11 @@
 
     invoke-virtual {p2, v0}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$GraphFactorySource;->addPostBuildCommand(Ljava/lang/String;)V
 
-    .line 25
     return-void
 
-    .line 22
     :catch_0
     move-exception v0
 
-    .line 23
     new-instance v1, Ljava/lang/RuntimeException;
 
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$ConnectResourceSubGraphCommand;->mResourceName:Ljava/lang/String;
@@ -375,8 +342,6 @@
 .method public execute(Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;)V
     .locals 5
 
-    .prologue
-    .line 6
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->getContext()Lcom/google/android/libraries/smartburst/filterfw/MffContext;
 
     move-result-object v0
@@ -387,7 +352,6 @@
 
     move-result v0
 
-    .line 7
     :try_start_0
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->getContext()Lcom/google/android/libraries/smartburst/filterfw/MffContext;
 
@@ -403,7 +367,6 @@
 
     move-result-object v1
 
-    .line 11
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->getGraph()Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
 
     move-result-object v0
@@ -414,25 +377,19 @@
 
     move-result-object v0
 
-    .line 12
     instance-of v2, v0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MetaFilter;
 
     if-eqz v2, :cond_0
 
-    .line 13
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MetaFilter;
 
-    .line 14
     invoke-virtual {v0, v1}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/MetaFilter;->setGraph(Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;)V
 
-    .line 15
     return-void
 
-    .line 9
     :catch_0
     move-exception v0
 
-    .line 10
     new-instance v1, Ljava/lang/RuntimeException;
 
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$ConnectResourceSubGraphCommand;->mResourceName:Ljava/lang/String;
@@ -475,7 +432,6 @@
 
     throw v1
 
-    .line 16
     :cond_0
     new-instance v0, Ljava/lang/RuntimeException;
 

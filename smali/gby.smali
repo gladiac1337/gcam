@@ -22,17 +22,12 @@
 .method public constructor <init>(Lgbk;Lgbe;)V
     .locals 4
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p2, p0, Lgby;->b:Lgbe;
 
-    .line 3
     iput-object p1, p0, Lgby;->c:Lgbk;
 
-    .line 4
     iget v0, p2, Lgbe;->a:I
 
     int-to-double v0, v0
@@ -49,17 +44,14 @@
 
     iput-wide v0, p0, Lgby;->a:J
 
-    .line 5
     const v0, 0x7f7fffff    # Float.MAX_VALUE
 
     iput v0, p0, Lgby;->d:F
 
-    .line 6
     iget v0, p2, Lgbe;->d:F
 
     iput v0, p0, Lgby;->e:F
 
-    .line 7
     return-void
 .end method
 
@@ -68,8 +60,6 @@
 .method public final a()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 28
     const-string v0, "adaptive distance"
 
     return-object v0
@@ -78,36 +68,28 @@
 .method public final a(Lfzs;Lfzs;)Z
     .locals 8
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lgby;->c:Lgbk;
 
-    .line 9
     invoke-virtual {v0, p1, p2}, Lgbk;->a(Lfzs;Lfzs;)F
 
     move-result v1
 
-    .line 12
     iget-wide v2, p2, Lfzs;->a:J
 
-    .line 14
     iget-wide v4, p1, Lfzs;->a:J
 
-    .line 15
     sub-long/2addr v2, v4
 
     invoke-static {v2, v3}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide v2
 
-    .line 16
     iget-wide v4, p0, Lgby;->a:J
 
     cmp-long v0, v2, v4
 
     if-gtz v0, :cond_0
 
-    .line 17
     iget v0, p0, Lgby;->d:F
 
     float-to-double v4, v1
@@ -128,10 +110,8 @@
 
     iput v0, p0, Lgby;->d:F
 
-    .line 18
     iget v0, p0, Lgby;->d:F
 
-    .line 19
     iget-object v2, p0, Lgby;->b:Lgbe;
 
     iget v2, v2, Lgbe;->b:F
@@ -140,14 +120,11 @@
 
     if-lez v2, :cond_1
 
-    .line 20
     const/4 v0, 0x0
 
-    .line 26
     :goto_0
     iput v0, p0, Lgby;->e:F
 
-    .line 27
     :cond_0
     iget v0, p0, Lgby;->e:F
 
@@ -160,7 +137,6 @@
     :goto_1
     return v0
 
-    .line 21
     :cond_1
     iget-object v2, p0, Lgby;->b:Lgbe;
 
@@ -170,14 +146,12 @@
 
     if-gez v2, :cond_2
 
-    .line 22
     iget-object v0, p0, Lgby;->b:Lgbe;
 
     iget v0, v0, Lgbe;->c:F
 
     goto :goto_0
 
-    .line 23
     :cond_2
     iget-object v2, p0, Lgby;->b:Lgbe;
 
@@ -187,14 +161,12 @@
 
     if-lez v2, :cond_3
 
-    .line 24
     iget-object v0, p0, Lgby;->b:Lgbe;
 
     iget v0, v0, Lgbe;->d:F
 
     goto :goto_0
 
-    .line 25
     :cond_3
     iget-object v2, p0, Lgby;->b:Lgbe;
 
@@ -234,7 +206,6 @@
 
     goto :goto_0
 
-    .line 27
     :cond_4
     const/4 v0, 0x0
 

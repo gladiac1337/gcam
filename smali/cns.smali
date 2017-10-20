@@ -18,8 +18,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 21
     const-string v0, "GyroSampleWorker"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -34,19 +32,14 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     new-instance v0, Ljuw;
 
     invoke-direct {v0}, Ljuw;-><init>()V
 
-    .line 4
     iput-object v0, p0, Lcns;->a:Ljuw;
 
-    .line 5
     return-void
 .end method
 
@@ -55,8 +48,6 @@
 .method public final a()Lcom/google/googlex/gcam/GyroSampleVector;
     .locals 4
 
-    .prologue
-    .line 17
     :try_start_0
     iget-object v0, p0, Lcns;->a:Ljuw;
 
@@ -69,15 +60,12 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 20
     :goto_0
     return-object v0
 
-    .line 18
     :catch_0
     move-exception v0
 
-    .line 19
     :goto_1
     sget-object v1, Lcns;->b:Ljava/lang/String;
 
@@ -115,12 +103,10 @@
 
     invoke-static {v1, v0}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 20
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 18
     :catch_1
     move-exception v0
 
@@ -130,13 +116,10 @@
 .method public final a(Ljava/util/List;)V
     .locals 6
 
-    .prologue
-    .line 6
     new-instance v1, Lcom/google/googlex/gcam/GyroSampleVector;
 
     invoke-direct {v1}, Lcom/google/googlex/gcam/GyroSampleVector;-><init>()V
 
-    .line 7
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -154,42 +137,34 @@
 
     check-cast v0, Lbpp;
 
-    .line 8
     new-instance v3, Lcom/google/googlex/gcam/GyroSample;
 
     invoke-direct {v3}, Lcom/google/googlex/gcam/GyroSample;-><init>()V
 
-    .line 9
     iget-wide v4, v0, Lbpp;->e:J
 
     invoke-virtual {v3, v4, v5}, Lcom/google/googlex/gcam/GyroSample;->setTimestamp_ns(J)V
 
-    .line 10
     iget v4, v0, Lbpp;->f:F
 
     invoke-virtual {v3, v4}, Lcom/google/googlex/gcam/GyroSample;->setX(F)V
 
-    .line 11
     iget v4, v0, Lbpp;->g:F
 
     invoke-virtual {v3, v4}, Lcom/google/googlex/gcam/GyroSample;->setY(F)V
 
-    .line 12
     iget v0, v0, Lbpp;->h:F
 
     invoke-virtual {v3, v0}, Lcom/google/googlex/gcam/GyroSample;->setZ(F)V
 
-    .line 13
     invoke-virtual {v1, v3}, Lcom/google/googlex/gcam/GyroSampleVector;->add(Lcom/google/googlex/gcam/GyroSample;)V
 
     goto :goto_0
 
-    .line 15
     :cond_0
     iget-object v0, p0, Lcns;->a:Ljuw;
 
     invoke-virtual {v0, v1}, Ljsl;->a(Ljava/lang/Object;)Z
 
-    .line 16
     return-void
 .end method

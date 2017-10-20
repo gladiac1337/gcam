@@ -14,14 +14,10 @@
 .method public constructor <init>(Ldjl;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldjp;->a:Ldjl;
 
-    .line 3
     return-void
 .end method
 
@@ -30,16 +26,12 @@
 .method public final a(Lggj;Ldjn;Lggg;)Ldjm;
     .locals 8
 
-    .prologue
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
-    .line 4
-    .line 5
     iget-object v0, p3, Lggg;->b:Ljava/util/Set;
 
-    .line 6
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -57,10 +49,8 @@
 
     check-cast v0, Lggh;
 
-    .line 8
     iget-object v4, v0, Lggh;->a:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 9
     sget-object v5, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AF_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-virtual {v4, v5}, Landroid/hardware/camera2/CaptureRequest$Key;->equals(Ljava/lang/Object;)Z
@@ -69,15 +59,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 11
     iget-object v0, v0, Lggh;->b:Ljava/lang/Object;
 
-    .line 12
     check-cast v0, Ljava/lang/Integer;
 
     move-object v4, v0
 
-    .line 16
     :goto_0
     if-eqz v4, :cond_5
 
@@ -91,17 +78,14 @@
 
     if-eqz v0, :cond_5
 
-    .line 17
     sget-object v0, Ldjo;->a:Ldjo;
 
     invoke-virtual {p2, v0}, Ldjn;->b(Ldjo;)Ldjn;
 
     move-result-object v1
 
-    .line 19
     iget-object v0, p3, Lggg;->b:Ljava/util/Set;
 
-    .line 20
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -119,10 +103,8 @@
 
     check-cast v0, Lggh;
 
-    .line 22
     iget-object v6, v0, Lggh;->a:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 23
     sget-object v7, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_EXPOSURE_COMPENSATION:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-virtual {v6, v7}, Landroid/hardware/camera2/CaptureRequest$Key;->equals(Ljava/lang/Object;)Z
@@ -131,10 +113,8 @@
 
     if-eqz v6, :cond_1
 
-    .line 25
     iget-object v0, v0, Lggh;->b:Ljava/lang/Object;
 
-    .line 26
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -147,18 +127,15 @@
 
     move v0, v2
 
-    .line 29
     :goto_1
     if-eqz v0, :cond_6
 
-    .line 30
     sget-object v0, Ldjo;->a:Ldjo;
 
     invoke-virtual {v1, v0}, Ldjn;->a(Ldjo;)Ldjn;
 
     move-result-object v0
 
-    .line 31
     :goto_2
     iget-object v1, p0, Ldjp;->a:Ldjl;
 
@@ -166,16 +143,13 @@
 
     move-result-object v1
 
-    .line 32
     new-instance v0, Ldjq;
 
     invoke-direct {v0, v1, v4}, Ldjq;-><init>(Ldjm;Ljava/lang/Integer;)V
 
-    .line 33
     :goto_3
     return-object v0
 
-    .line 14
     :cond_2
     const/4 v0, 0x0
 
@@ -186,16 +160,13 @@
     :cond_3
     move v0, v3
 
-    .line 26
     goto :goto_1
 
     :cond_4
     move v0, v3
 
-    .line 28
     goto :goto_1
 
-    .line 33
     :cond_5
     iget-object v0, p0, Ldjp;->a:Ldjl;
 

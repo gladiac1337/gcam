@@ -19,37 +19,28 @@
 .method public constructor <init>(Lgwh;Ljava/util/concurrent/ScheduledExecutorService;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgvz;->a:Lgwh;
 
-    .line 3
     iput-object p2, p0, Lgvz;->b:Ljava/util/concurrent/ScheduledExecutorService;
 
-    .line 4
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lgvz;->d:Ljava/lang/Object;
 
-    .line 5
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lgvz;->c:J
 
-    .line 6
     return-void
 .end method
 
 .method private final a(Lgwc;)Ljava/lang/Runnable;
     .locals 1
 
-    .prologue
-    .line 21
     new-instance v0, Lgwa;
 
     invoke-direct {v0, p0, p1}, Lgwa;-><init>(Lgvz;Lgwc;)V
@@ -62,31 +53,25 @@
 .method public final a()V
     .locals 3
 
-    .prologue
-    .line 14
     iget-object v1, p0, Lgvz;->d:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 15
     :try_start_0
     iget-object v0, p0, Lgvz;->e:Ljava/util/concurrent/ScheduledFuture;
 
     if-eqz v0, :cond_0
 
-    .line 16
     iget-object v0, p0, Lgvz;->e:Ljava/util/concurrent/ScheduledFuture;
 
     const/4 v2, 0x1
 
     invoke-interface {v0, v2}, Ljava/util/concurrent/ScheduledFuture;->cancel(Z)Z
 
-    .line 17
     const/4 v0, 0x0
 
     iput-object v0, p0, Lgvz;->e:Ljava/util/concurrent/ScheduledFuture;
 
-    .line 18
     :cond_0
     monitor-exit v1
 
@@ -105,30 +90,24 @@
 .method public final a(JLgwc;)V
     .locals 9
 
-    .prologue
-    .line 7
     iget-object v7, p0, Lgvz;->d:Ljava/lang/Object;
 
     monitor-enter v7
 
-    .line 8
     :try_start_0
     iget-object v0, p0, Lgvz;->e:Ljava/util/concurrent/ScheduledFuture;
 
     if-eqz v0, :cond_0
 
-    .line 9
     iget-object v0, p0, Lgvz;->e:Ljava/util/concurrent/ScheduledFuture;
 
     const/4 v1, 0x1
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ScheduledFuture;->cancel(Z)Z
 
-    .line 10
     :cond_0
     iget-object v0, p0, Lgvz;->b:Ljava/util/concurrent/ScheduledExecutorService;
 
-    .line 11
     invoke-direct {p0, p3}, Lgvz;->a(Lgwc;)Ljava/lang/Runnable;
 
     move-result-object v1
@@ -139,14 +118,12 @@
 
     move-wide v4, p1
 
-    .line 12
     invoke-interface/range {v0 .. v6}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
     move-result-object v0
 
     iput-object v0, p0, Lgvz;->e:Ljava/util/concurrent/ScheduledFuture;
 
-    .line 13
     monitor-exit v7
 
     return-void
@@ -164,8 +141,6 @@
 .method public final b()V
     .locals 2
 
-    .prologue
-    .line 19
     iget-object v0, p0, Lgvz;->b:Ljava/util/concurrent/ScheduledExecutorService;
 
     const/4 v1, 0x0
@@ -176,6 +151,5 @@
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ScheduledExecutorService;->execute(Ljava/lang/Runnable;)V
 
-    .line 20
     return-void
 .end method

@@ -49,8 +49,6 @@
 .method public final a()Ljava/lang/Object;
     .locals 10
 
-    .prologue
-    .line 1
     iget-object v5, p0, Lfvu;->a:Lfvq;
 
     iget-object v0, p0, Lfvu;->b:Ljava/io/File;
@@ -65,47 +63,38 @@
 
     iget-object v4, p0, Lfvu;->g:Ljuw;
 
-    .line 2
     new-instance v9, Lfvx;
 
     invoke-direct {v9, v0, v6, v7}, Lfvx;-><init>(Ljava/io/File;J)V
 
-    .line 3
     iget-object v6, v5, Lfvq;->e:Lfxo;
 
     iget-object v6, v5, Lfvq;->b:Ljava/util/concurrent/Executor;
 
-    .line 6
     new-instance v7, Liod;
 
     const/4 v9, 0x0
 
     invoke-direct {v7, v6, v9}, Liod;-><init>(Ljava/util/concurrent/Executor;B)V
 
-    .line 8
     invoke-virtual {v7, v0}, Liod;->a(Ljava/io/File;)Liod;
 
     move-result-object v0
 
-    .line 9
     check-cast v0, Liod;
 
-    .line 10
     invoke-virtual {v0, v1}, Liod;->a(I)Liod;
 
     move-result-object v0
 
-    .line 11
     invoke-virtual {v0}, Liod;->a()Liod;
 
     move-result-object v0
 
-    .line 12
     invoke-virtual {v0}, Liod;->b()Linr;
 
     move-result-object v1
 
-    .line 15
     new-instance v6, Lfyg;
 
     new-instance v7, Lfyd;
@@ -120,6 +109,5 @@
 
     invoke-direct {v6, v7, v8}, Lfyg;-><init>(Linr;Lfyj;)V
 
-    .line 16
     return-object v6
 .end method

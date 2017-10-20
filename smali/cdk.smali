@@ -15,8 +15,6 @@
 .method constructor <init>(Lcdj;Ljava/io/File;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcdk;->c:Lcdj;
 
     iput-object p2, p0, Lcdk;->a:Ljava/io/File;
@@ -33,13 +31,10 @@
 .method public final synthetic a_(Ljava/lang/Object;)V
     .locals 7
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 2
     check-cast p1, Liwz;
 
-    .line 3
     iget-object v0, p0, Lcdk;->c:Lcdj;
 
     iget-object v0, v0, Lcdj;->i:Liwv;
@@ -48,11 +43,9 @@
 
     move-result-object v3
 
-    .line 4
     :try_start_0
     iget-object v0, p0, Lcdk;->a:Ljava/io/File;
 
-    .line 5
     invoke-static {v0}, Litx;->b(Ljava/io/File;)Ljava/io/OutputStream;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
@@ -60,7 +53,6 @@
 
     move-result-object v4
 
-    .line 7
     :try_start_1
     invoke-interface {v3}, Liwy;->e()Ljava/lang/Object;
 
@@ -77,23 +69,19 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
-    .line 8
     :try_start_2
     invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 10
     if-eqz v3, :cond_0
 
     invoke-interface {v3}, Liwy;->close()V
 
-    .line 13
     :cond_0
     return-void
 
-    .line 9
     :catch_0
     move-exception v0
 
@@ -102,7 +90,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 10
     :catchall_0
     move-exception v1
 
@@ -128,7 +115,6 @@
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 11
     :catch_1
     move-exception v0
 
@@ -137,7 +123,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 12
     :catchall_1
     move-exception v1
 
@@ -159,7 +144,6 @@
     :goto_3
     throw v0
 
-    .line 10
     :catch_2
     move-exception v4
 
@@ -168,13 +152,11 @@
 
     goto :goto_1
 
-    .line 12
     :catchall_2
     move-exception v0
 
     goto :goto_2
 
-    .line 10
     :cond_2
     invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
     :try_end_8
@@ -183,7 +165,6 @@
 
     goto :goto_1
 
-    .line 12
     :catch_3
     move-exception v1
 
@@ -196,7 +177,6 @@
 
     goto :goto_3
 
-    .line 10
     :catchall_3
     move-exception v0
 

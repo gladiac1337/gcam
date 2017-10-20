@@ -23,8 +23,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 20
     const-string v0, "VideoUI"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -39,24 +37,18 @@
 .method public constructor <init>(Lbtw;Landroid/view/View;)V
     .locals 4
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Lewg;-><init>()V
 
-    .line 4
     new-instance v0, Ldel;
 
     invoke-direct {v0}, Ldel;-><init>()V
 
     iput-object v0, p0, Ldek;->f:Landroid/view/GestureDetector$OnGestureListener;
 
-    .line 5
     iput-object p1, p0, Ldek;->d:Lbtw;
 
-    .line 6
     iput-object p2, p0, Ldek;->e:Landroid/view/View;
 
-    .line 7
     iget-object v0, p0, Ldek;->e:Landroid/view/View;
 
     const v1, 0x7f0e00ed
@@ -67,7 +59,6 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 8
     iget-object v1, p0, Ldek;->d:Lbtw;
 
     invoke-interface {v1}, Lbtw;->A()Landroid/view/LayoutInflater;
@@ -80,7 +71,6 @@
 
     invoke-virtual {v1, v2, v0, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 10
     iget-object v0, p0, Ldek;->e:Landroid/view/View;
 
     const v1, 0x7f0e00af
@@ -93,14 +83,12 @@
 
     iput-object v0, p0, Ldek;->a:Landroid/widget/ImageView;
 
-    .line 11
     new-instance v0, Leuc;
 
     invoke-direct {v0}, Leuc;-><init>()V
 
     iput-object v0, p0, Ldek;->b:Leuc;
 
-    .line 12
     return-void
 .end method
 
@@ -109,24 +97,18 @@
 .method public final A_()V
     .locals 0
 
-    .prologue
-    .line 1
     return-void
 .end method
 
 .method public final b()V
     .locals 0
 
-    .prologue
-    .line 2
     return-void
 .end method
 
 .method public final c()Landroid/view/GestureDetector$OnGestureListener;
     .locals 1
 
-    .prologue
-    .line 13
     iget-object v0, p0, Ldek;->f:Landroid/view/GestureDetector$OnGestureListener;
 
     return-object v0
@@ -135,8 +117,6 @@
 .method public final d()Landroid/view/View$OnTouchListener;
     .locals 1
 
-    .prologue
-    .line 14
     const/4 v0, 0x0
 
     return-object v0
@@ -145,23 +125,18 @@
 .method public final onSurfaceTextureAvailable(Landroid/graphics/SurfaceTexture;II)V
     .locals 0
 
-    .prologue
-    .line 15
     return-void
 .end method
 
 .method public final onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)Z
     .locals 2
 
-    .prologue
-    .line 16
     sget-object v0, Ldek;->c:Ljava/lang/String;
 
     const-string v1, "surfaceTexture is destroyed"
 
     invoke-static {v0, v1}, Lbhy;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 17
     const/4 v0, 0x1
 
     return v0
@@ -170,15 +145,11 @@
 .method public final onSurfaceTextureSizeChanged(Landroid/graphics/SurfaceTexture;II)V
     .locals 0
 
-    .prologue
-    .line 18
     return-void
 .end method
 
 .method public final onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
     .locals 0
 
-    .prologue
-    .line 19
     return-void
 .end method

@@ -18,8 +18,6 @@
 .method constructor <init>(Lbiu;Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbiv;->c:Lbiu;
 
     iput-object p2, p0, Lbiv;->a:Ljava/lang/String;
@@ -36,14 +34,10 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbiv;->c:Lbiu;
 
-    .line 3
     iget-object v0, v0, Lbiu;->a:Landroid/content/Context;
 
-    .line 4
     iget-object v1, p0, Lbiv;->a:Ljava/lang/String;
 
     iget v2, p0, Lbiv;->b:I
@@ -52,9 +46,7 @@
 
     move-result-object v0
 
-    .line 5
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 6
     return-void
 .end method

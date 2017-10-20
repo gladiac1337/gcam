@@ -26,13 +26,10 @@
 .method public final a()V
     .locals 6
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhsp;->b:Lhsh;
 
     iget-object v1, p0, Lhsp;->c:Lcom/google/android/gms/internal/zzbgq;
 
-    .line 3
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lhsh;->b(I)Z
@@ -41,23 +38,18 @@
 
     if-eqz v2, :cond_0
 
-    .line 4
     iget-object v2, v1, Lcom/google/android/gms/internal/zzbgq;->a:Lcom/google/android/gms/common/ConnectionResult;
 
-    .line 5
     invoke-virtual {v2}, Lcom/google/android/gms/common/ConnectionResult;->b()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 6
     iget-object v1, v1, Lcom/google/android/gms/internal/zzbgq;->b:Lcom/google/android/gms/common/internal/zzaf;
 
-    .line 8
     iget-object v2, v1, Lcom/google/android/gms/common/internal/zzaf;->b:Lcom/google/android/gms/common/ConnectionResult;
 
-    .line 9
     invoke-virtual {v2}, Lcom/google/android/gms/common/ConnectionResult;->b()Z
 
     move-result v3
@@ -106,37 +98,29 @@
 
     invoke-virtual {v0, v2}, Lhsh;->b(Lcom/google/android/gms/common/ConnectionResult;)V
 
-    .line 16
     :cond_0
     :goto_0
     return-void
 
-    .line 9
     :cond_1
     const/4 v2, 0x1
 
     iput-boolean v2, v0, Lhsh;->f:Z
 
-    .line 10
     iget-object v2, v1, Lcom/google/android/gms/common/internal/zzaf;->a:Landroid/os/IBinder;
 
     invoke-static {v2}, Lhlv;->a(Landroid/os/IBinder;)Lhlu;
 
     move-result-object v2
 
-    .line 11
     iput-object v2, v0, Lhsh;->g:Lhlu;
 
-    .line 12
     iget-boolean v2, v1, Lcom/google/android/gms/common/internal/zzaf;->c:Z
 
-    .line 13
     iput-boolean v2, v0, Lhsh;->h:Z
 
-    .line 14
     iget-boolean v1, v1, Lcom/google/android/gms/common/internal/zzaf;->d:Z
 
-    .line 15
     iput-boolean v1, v0, Lhsh;->i:Z
 
     invoke-virtual {v0}, Lhsh;->e()V

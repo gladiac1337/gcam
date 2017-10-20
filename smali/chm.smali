@@ -25,16 +25,12 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lchm;->a:Lcho;
 
-    .line 2
     iget-object v1, v0, Lcho;->k:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v1, v0, Lcho;->a:Leot;
 
     iget-object v0, v0, Lcho;->k:Landroid/graphics/Bitmap;
@@ -43,7 +39,6 @@
 
     invoke-interface {v1, v0, v2}, Leot;->a(Landroid/graphics/Bitmap;I)V
 
-    .line 4
     :cond_0
     return-void
 .end method

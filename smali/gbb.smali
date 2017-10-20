@@ -29,33 +29,26 @@
 .method public final run()V
     .locals 11
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 1
     iget-object v4, p0, Lgbb;->a:Lgba;
 
     iget-object v2, p0, Lgbb;->b:Lihr;
 
-    .line 2
     new-instance v5, Lfzs;
 
     iget-object v0, v4, Lgba;->c:Lgap;
 
-    .line 3
     invoke-virtual {v0}, Lgap;->a()Z
 
     move-result v0
 
     invoke-direct {v5, v2, v0}, Lfzs;-><init>(Lihr;Z)V
 
-    .line 5
     iget-wide v0, v5, Lfzs;->a:J
 
-    .line 6
     iput-wide v0, v4, Lgba;->d:J
 
-    .line 7
     iget-object v0, v4, Lgba;->c:Lgap;
 
     invoke-virtual {v0}, Lgap;->a()Z
@@ -64,17 +57,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 9
     sget-object v0, Lhii;->i:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 10
     invoke-interface {v2, v0}, Lihr;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [J
 
-    .line 11
     iget-object v1, v4, Lgba;->c:Lgap;
 
     invoke-virtual {v1}, Lgap;->b()I
@@ -83,7 +73,6 @@
 
     if-nez v1, :cond_2
 
-    .line 12
     sget-object v1, Lhii;->j:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {v2, v1}, Lihr;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -92,7 +81,6 @@
 
     check-cast v1, [I
 
-    .line 13
     sget-object v6, Lhii;->k:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {v2, v6}, Lihr;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -101,20 +89,17 @@
 
     check-cast v2, [I
 
-    .line 14
     if-eqz v0, :cond_0
 
     if-eqz v1, :cond_0
 
     if-eqz v2, :cond_0
 
-    .line 15
     :goto_0
     array-length v6, v0
 
     if-ge v3, v6, :cond_1
 
-    .line 16
     iget-object v6, v4, Lgba;->c:Lgap;
 
     aget-wide v8, v0, v3
@@ -129,12 +114,10 @@
 
     invoke-virtual {v6, v8, v9, v7, v10}, Lgap;->a(JFF)V
 
-    .line 17
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 18
     :cond_0
     sget-object v0, Lgba;->a:Ljava/lang/String;
 
@@ -142,15 +125,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
     :cond_1
     :goto_1
     iget-object v0, v4, Lgba;->b:Lfzu;
 
-    .line 31
     iget-wide v2, v5, Lfzs;->a:J
 
-    .line 33
     iget-object v1, v0, Lfzu;->a:Liin;
 
     invoke-static {v2, v3}, Lfzu;->a(J)J
@@ -159,13 +139,10 @@
 
     invoke-interface {v1, v2, v3, v5}, Liin;->a(JLjava/lang/Object;)V
 
-    .line 34
     invoke-virtual {v0, v5}, Lfzu;->a(Lfzs;)V
 
-    .line 35
     return-void
 
-    .line 19
     :cond_2
     iget-object v1, v4, Lgba;->c:Lgap;
 
@@ -177,7 +154,6 @@
 
     if-ne v1, v6, :cond_4
 
-    .line 20
     sget-object v1, Lhii;->l:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {v2, v1}, Lihr;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -186,7 +162,6 @@
 
     check-cast v1, [F
 
-    .line 21
     sget-object v6, Lhii;->m:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {v2, v6}, Lihr;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -195,20 +170,17 @@
 
     check-cast v2, [F
 
-    .line 22
     if-eqz v0, :cond_3
 
     if-eqz v1, :cond_3
 
     if-eqz v2, :cond_3
 
-    .line 23
     :goto_2
     array-length v6, v0
 
     if-ge v3, v6, :cond_1
 
-    .line 24
     iget-object v6, v4, Lgba;->c:Lgap;
 
     aget-wide v8, v0, v3
@@ -219,12 +191,10 @@
 
     invoke-virtual {v6, v8, v9, v7, v10}, Lgap;->a(JFF)V
 
-    .line 25
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_2
 
-    .line 26
     :cond_3
     sget-object v0, Lgba;->a:Ljava/lang/String;
 
@@ -234,7 +204,6 @@
 
     goto :goto_1
 
-    .line 28
     :cond_4
     sget-object v0, Lgba;->a:Ljava/lang/String;
 

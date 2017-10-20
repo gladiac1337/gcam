@@ -25,11 +25,8 @@
 .method public final a()Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lejw;->a:Lejt;
 
-    .line 2
     iget-object v0, v0, Lejt;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -62,6 +59,5 @@
 
     move-result-object v0
 
-    .line 3
     return-object v0
 .end method

@@ -20,19 +20,14 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 1
-    .line 3
     invoke-static {p1, p0}, Lhjo;->a(Landroid/content/Context;I)Z
 
     move-result v0
 
-    .line 4
     if-eqz v0, :cond_0
 
     const/16 p0, 0x12
 
-    .line 5
     :cond_0
     const/4 v0, 0x0
 
@@ -42,7 +37,6 @@
 
     move-result-object v0
 
-    .line 6
     return-object v0
 .end method
 
@@ -61,23 +55,17 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 7
-    .line 10
     invoke-static {p1, p0}, Lhjo;->a(Landroid/content/Context;I)Z
 
     move-result v0
 
-    .line 11
     if-eqz v0, :cond_0
 
     const/16 p0, 0x12
 
-    .line 12
     :cond_0
     sget-object v0, Lhjk;->a:Lhjk;
 
-    .line 13
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -86,6 +74,5 @@
 
     move-result v0
 
-    .line 14
     return v0
 .end method

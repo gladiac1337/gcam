@@ -25,13 +25,9 @@
 .method public final onImageReleased(Landroid/media/ImageWriter;)V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lifc;->a:Liih;
 
-    .line 2
     invoke-interface {v0}, Liih;->a()V
 
-    .line 3
     return-void
 .end method

@@ -19,9 +19,6 @@
 .method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 18
 
-    .prologue
-    .line 4
-    .line 5
     invoke-static/range {p1 .. p1}, Lhiv;->a(Landroid/os/Parcel;)I
 
     move-result v16
@@ -59,17 +56,14 @@
 
     if-ge v2, v0, :cond_0
 
-    .line 6
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 8
     const v17, 0xffff
 
     and-int v17, v17, v2
 
-    .line 9
     packed-switch v17, :pswitch_data_0
 
     move-object/from16 v0, p1
@@ -238,10 +232,8 @@
 
     invoke-direct/range {v2 .. v15}, Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;Ljava/lang/String;JLjava/lang/String;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     return-object v2
 
-    .line 9
     nop
 
     :pswitch_data_0
@@ -264,11 +256,7 @@
 .method public final synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     new-array v0, p1, [Lcom/google/android/gms/auth/api/signin/GoogleSignInAccount;
 
-    .line 3
     return-object v0
 .end method

@@ -33,29 +33,24 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Linz;->a:Ljuk;
 
     iget-object v1, p0, Linz;->b:Ljuk;
 
     iget-object v2, p0, Linz;->c:Ljuw;
 
-    .line 2
     invoke-static {v0}, Ljtv;->b(Ljava/util/concurrent/Future;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/media/MediaMuxer;
 
-    .line 3
     invoke-static {v1}, Ljtv;->b(Ljava/util/concurrent/Future;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/media/MediaFormat;
 
-    .line 4
     invoke-virtual {v0, v1}, Landroid/media/MediaMuxer;->addTrack(Landroid/media/MediaFormat;)I
 
     move-result v0
@@ -66,6 +61,5 @@
 
     invoke-virtual {v2, v0}, Ljsl;->a(Ljava/lang/Object;)Z
 
-    .line 5
     return-void
 .end method

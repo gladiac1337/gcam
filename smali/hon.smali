@@ -33,17 +33,13 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 1
     :try_start_0
     new-instance v0, Lhns;
 
     invoke-direct {v0}, Lhns;-><init>()V
 
-    .line 3
     invoke-virtual {v0}, Lhns;->a()J
 
-    .line 4
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V
@@ -52,7 +48,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5
     :catch_0
     move-exception v0
 
@@ -70,19 +65,16 @@
 
     move-result-object v0
 
-    .line 6
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 7
     invoke-static {v0}, Lhiv;->a(Ljava/util/List;)Landroid/os/Bundle;
 
     move-result-object v0
 
     iget-wide v2, p0, Lhon;->c:J
 
-    .line 8
     iget-object v1, p0, Lhon;->a:Lhka;
 
     new-instance v4, Lhoo;
@@ -91,6 +83,5 @@
 
     invoke-static {v1, v4}, Lhor;->a(Lhka;Lhov;)V
 
-    .line 9
     return-void
 .end method

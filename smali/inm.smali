@@ -33,24 +33,19 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 1
     iget-object v1, p0, Linm;->a:Link;
 
     iget-object v0, p0, Linm;->b:Linp;
 
     iget-object v2, p0, Linm;->c:Lioe;
 
-    .line 2
     iget-object v3, v1, Link;->a:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 4
     :try_start_0
     iget-object v0, v0, Linp;->b:Ljava/util/Set;
 
-    .line 5
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -68,12 +63,10 @@
 
     check-cast v0, Lins;
 
-    .line 6
     invoke-virtual {v1, v2, v0}, Link;->a(Lioe;Lins;)V
 
     goto :goto_0
 
-    .line 8
     :catchall_0
     move-exception v0
 

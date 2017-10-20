@@ -15,19 +15,14 @@
 .method public constructor <init>(Lcea;JLjuw;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcej;->c:Lcea;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 2
     iput-wide p2, p0, Lcej;->a:J
 
-    .line 3
     iput-object p4, p0, Lcej;->b:Ljuw;
 
-    .line 4
     return-void
 .end method
 
@@ -36,41 +31,30 @@
 .method protected final synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 8
 
-    .prologue
-    .line 54
-    .line 55
     iget-object v0, p0, Lcej;->c:Lcea;
 
-    .line 56
     iget-object v0, v0, Lcea;->l:Lico;
 
-    .line 57
     const-string v1, "LoadNewFilmstripItemsTask.doInBackground"
 
     invoke-interface {v0, v1}, Lico;->a(Ljava/lang/String;)V
 
-    .line 58
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 59
     iget-object v1, p0, Lcej;->c:Lcea;
 
-    .line 60
     iget-object v1, v1, Lcea;->n:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 61
     invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 62
     sget-object v1, Lcea;->a:Ljava/lang/String;
 
-    .line 63
     iget-wide v2, p0, Lcej;->a:J
 
     const/16 v4, 0x49
@@ -95,18 +79,14 @@
 
     invoke-static {v1, v2}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 64
     iget-object v1, p0, Lcej;->c:Lcea;
 
-    .line 65
     iget-object v7, v1, Lcea;->e:Lcfo;
 
-    .line 66
     sget-object v2, Lcfm;->a:Landroid/net/Uri;
 
     iget-wide v4, p0, Lcej;->a:J
 
-    .line 67
     iget-object v1, v7, Lcfo;->a:Landroid/content/ContentResolver;
 
     sget-object v3, Lcfm;->b:[Ljava/lang/String;
@@ -117,21 +97,16 @@
 
     move-result-object v1
 
-    .line 68
     invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 69
     iget-object v1, p0, Lcej;->c:Lcea;
 
-    .line 70
     iget-object v7, v1, Lcea;->f:Lcfz;
 
-    .line 71
     sget-object v2, Lcft;->a:Landroid/net/Uri;
 
     iget-wide v4, p0, Lcej;->a:J
 
-    .line 72
     iget-object v1, v7, Lcfz;->c:Landroid/content/ContentResolver;
 
     sget-object v3, Lcft;->b:[Ljava/lang/String;
@@ -142,10 +117,8 @@
 
     move-result-object v1
 
-    .line 73
     invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 74
     new-instance v1, Lcfj;
 
     new-instance v2, Ljava/util/Date;
@@ -156,92 +129,69 @@
 
     invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 75
     :cond_0
     iget-object v1, p0, Lcej;->c:Lcea;
 
-    .line 76
     iget-object v1, v1, Lcea;->l:Lico;
 
-    .line 77
     invoke-interface {v1}, Lico;->a()V
 
-    .line 79
     return-object v0
 .end method
 
 .method protected final synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 7
 
-    .prologue
-    .line 5
     check-cast p1, Ljava/util/List;
 
-    .line 6
     iget-object v0, p0, Lcej;->c:Lcea;
 
-    .line 7
     iget-object v0, v0, Lcea;->l:Lico;
 
-    .line 8
     const-string v1, "LoadNewFilmstripItemsTask.onPostExecute"
 
     invoke-interface {v0, v1}, Lico;->a(Ljava/lang/String;)V
 
-    .line 9
     iget-object v0, p0, Lcej;->c:Lcea;
 
-    .line 10
     iget-object v0, v0, Lcea;->d:Lflf;
 
-    .line 11
     invoke-interface {v0}, Lflf;->h()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 12
     sget-object v0, Lcea;->a:Ljava/lang/String;
 
-    .line 13
     const-string v1, "Activity is destroyed. Canceling load."
 
     invoke-static {v0, v1}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 50
     :cond_0
     :goto_0
     iget-object v0, p0, Lcej;->c:Lcea;
 
-    .line 51
     iget-object v0, v0, Lcea;->l:Lico;
 
-    .line 52
     invoke-interface {v0}, Lico;->a()V
 
-    .line 53
     return-void
 
-    .line 15
     :cond_1
     if-nez p1, :cond_2
 
-    .line 16
     sget-object v0, Lcea;->a:Ljava/lang/String;
 
-    .line 17
     const-string v1, "null data returned from new photos query"
 
     invoke-static {v0, v1}, Lbhy;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 19
     :cond_2
     sget-object v0, Lcea;->a:Ljava/lang/String;
 
-    .line 20
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -268,14 +218,12 @@
 
     invoke-static {v0, v1}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 21
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 22
     const/4 v0, 0x0
 
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -284,21 +232,16 @@
 
     check-cast v0, Lfvb;
 
-    .line 23
     invoke-static {v0}, Lcfa;->a(Lfvb;)J
 
     move-result-wide v0
 
-    .line 24
     sget-object v2, Lcea;->a:Ljava/lang/String;
 
-    .line 25
     iget-object v3, p0, Lcej;->c:Lcea;
 
-    .line 26
     iget-wide v4, v3, Lcea;->k:J
 
-    .line 27
     const/16 v3, 0x4b
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -329,26 +272,20 @@
 
     move-result-object v3
 
-    .line 28
     invoke-static {v2, v3}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 29
     iget-object v2, p0, Lcej;->c:Lcea;
 
     iget-object v3, p0, Lcej;->c:Lcea;
 
-    .line 30
     iget-wide v4, v3, Lcea;->k:J
 
-    .line 31
     invoke-static {v4, v5, v0, v1}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v0
 
-    .line 32
     iput-wide v0, v2, Lcea;->k:J
 
-    .line 33
     :cond_3
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -367,31 +304,24 @@
 
     check-cast v0, Lfvb;
 
-    .line 34
     invoke-interface {v0}, Lfvb;->f()Lfvf;
 
     move-result-object v2
 
-    .line 35
     iget-object v2, v2, Lfvf;->h:Landroid/net/Uri;
 
-    .line 37
     iget-object v3, p0, Lcej;->c:Lcea;
 
-    .line 38
     iget-object v3, v3, Lcea;->g:Lgvq;
 
-    .line 39
     invoke-interface {v3, v2}, Lgvq;->g(Landroid/net/Uri;)Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 40
     if-eqz v3, :cond_4
 
     iget-object v4, p0, Lcej;->c:Lcea;
 
-    .line 41
     invoke-virtual {v4, v2}, Lcea;->a(Landroid/net/Uri;)I
 
     move-result v4
@@ -400,11 +330,9 @@
 
     if-ne v4, v5, :cond_5
 
-    .line 42
     :cond_4
     sget-object v3, Lcea;->a:Ljava/lang/String;
 
-    .line 43
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -439,18 +367,15 @@
 
     invoke-static {v3, v2}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 44
     iget-object v2, p0, Lcej;->c:Lcea;
 
     invoke-virtual {v2, v0}, Lcea;->a(Lfvb;)Z
 
     goto :goto_1
 
-    .line 45
     :cond_5
     sget-object v0, Lcea;->a:Ljava/lang/String;
 
-    .line 46
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -487,13 +412,11 @@
 
     goto :goto_1
 
-    .line 48
     :cond_6
     iget-object v0, p0, Lcej;->b:Ljuw;
 
     if-eqz v0, :cond_0
 
-    .line 49
     iget-object v0, p0, Lcej;->b:Ljuw;
 
     const/4 v1, 0x0

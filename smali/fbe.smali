@@ -16,20 +16,16 @@
 .method public constructor <init>(Lfdj;Lexp;Lexu;)V
     .locals 5
 
-    .prologue
     const/4 v1, 0x0
 
     const/4 v4, 0x0
 
-    .line 1
     invoke-direct {p0, v1}, Lgva;-><init>([[C)V
 
-    .line 2
     new-instance v0, Lgva;
 
     invoke-direct {v0, v1}, Lgva;-><init>([[I)V
 
-    .line 3
     new-instance v1, Lgve;
 
     const/4 v2, 0x3
@@ -50,7 +46,6 @@
 
     iput-object v1, p0, Lfbe;->b:Lgve;
 
-    .line 4
     new-instance v0, Lgvc;
 
     iget-object v1, p0, Lfbe;->b:Lgve;
@@ -59,15 +54,12 @@
 
     iput-object v0, p0, Lfbe;->a:Lgvc;
 
-    .line 5
     iget-object v0, p0, Lfbe;->a:Lgvc;
 
-    .line 6
     sget v1, Leh;->bo:I
 
     iput v1, v0, Lgvc;->a:I
 
-    .line 7
     return-void
 .end method
 
@@ -76,61 +68,45 @@
 .method public final a()V
     .locals 1
 
-    .prologue
-    .line 8
     invoke-super {p0}, Lgva;->a()V
 
-    .line 9
     iget-object v0, p0, Lfbe;->a:Lgvc;
 
     invoke-virtual {v0}, Lgvc;->c()V
 
-    .line 10
     return-void
 .end method
 
 .method public final b()V
     .locals 1
 
-    .prologue
-    .line 11
     invoke-super {p0}, Lgva;->b()V
 
-    .line 12
     iget-object v0, p0, Lfbe;->a:Lgvc;
 
     invoke-virtual {v0}, Lgvc;->d()V
 
-    .line 13
     return-void
 .end method
 
 .method public final i()V
     .locals 0
 
-    .prologue
-    .line 14
-    .line 15
     invoke-interface {p0}, Lgvd;->j()V
 
-    .line 16
     return-void
 .end method
 
 .method public final j()V
     .locals 1
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lfbe;->a:Lgvc;
 
     invoke-virtual {v0}, Lgvc;->e()V
 
-    .line 18
     iget-object v0, p0, Lfbe;->b:Lgve;
 
     invoke-virtual {v0}, Lgve;->j()V
 
-    .line 19
     return-void
 .end method

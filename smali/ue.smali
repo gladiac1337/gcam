@@ -18,8 +18,6 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
-    .line 13
     :try_start_0
     const-class v0, Landroid/widget/PopupWindow;
 
@@ -43,11 +41,9 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 17
     :goto_0
     return-void
 
-    .line 16
     :catch_0
     move-exception v0
 
@@ -63,13 +59,10 @@
 .method public constructor <init>(Landroid/content/Context;II)V
     .locals 1
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0, p2, p3}, Ltt;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 2
     return-void
 .end method
 
@@ -78,34 +71,26 @@
 .method final a(Landroid/content/Context;Z)Lst;
     .locals 1
 
-    .prologue
-    .line 3
     new-instance v0, Luf;
 
     invoke-direct {v0, p1, p2}, Luf;-><init>(Landroid/content/Context;Z)V
 
-    .line 5
     iput-object p0, v0, Luf;->i:Lud;
 
-    .line 6
     return-object v0
 .end method
 
 .method public final a(Loz;Landroid/view/MenuItem;)V
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lue;->b:Lud;
 
     if-eqz v0, :cond_0
 
-    .line 11
     iget-object v0, p0, Lue;->b:Lud;
 
     invoke-interface {v0, p1, p2}, Lud;->a(Loz;Landroid/view/MenuItem;)V
 
-    .line 12
     :cond_0
     return-void
 .end method
@@ -113,18 +98,14 @@
 .method public final b(Loz;Landroid/view/MenuItem;)V
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lue;->b:Lud;
 
     if-eqz v0, :cond_0
 
-    .line 8
     iget-object v0, p0, Lue;->b:Lud;
 
     invoke-interface {v0, p1, p2}, Lud;->b(Loz;Landroid/view/MenuItem;)V
 
-    .line 9
     :cond_0
     return-void
 .end method

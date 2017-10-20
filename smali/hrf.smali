@@ -14,21 +14,16 @@
 .method static synthetic a(Landroid/os/RemoteException;)Lcom/google/android/gms/common/api/Status;
     .locals 3
 
-    .prologue
-    .line 1
-    .line 2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 3
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0xf
 
     if-lt v1, v2, :cond_0
 
-    .line 4
     instance-of v1, p0, Landroid/os/TransactionTooLargeException;
 
     if-eqz v1, :cond_0
@@ -54,7 +49,6 @@
 
     invoke-direct {v1, v2, v0}, Lcom/google/android/gms/common/api/Status;-><init>(ILjava/lang/String;)V
 
-    .line 5
     return-object v1
 .end method
 

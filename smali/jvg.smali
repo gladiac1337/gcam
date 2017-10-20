@@ -11,11 +11,8 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
-    .line 10
     const/4 v1, 0x0
 
-    .line 11
     :try_start_0
     invoke-static {}, Ljvg;->a()Ljava/lang/Integer;
     :try_end_0
@@ -23,7 +20,6 @@
 
     move-result-object v0
 
-    .line 12
     if-eqz v0, :cond_1
 
     :try_start_1
@@ -35,27 +31,22 @@
 
     if-lt v1, v2, :cond_1
 
-    .line 13
     new-instance v1, Ljvm;
 
     invoke-direct {v1}, Ljvm;-><init>()V
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 25
     :goto_0
     sput-object v1, Ljvg;->a:Ljvh;
 
-    .line 26
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    .line 27
     :cond_0
     return-void
 
-    .line 14
     :cond_1
     :try_start_2
     const-string v1, "com.google.devtools.build.android.desugar.runtime.twr_disable_mimic"
@@ -68,11 +59,9 @@
 
     const/4 v1, 0x1
 
-    .line 15
     :goto_1
     if-eqz v1, :cond_3
 
-    .line 16
     new-instance v1, Ljvk;
 
     invoke-direct {v1}, Ljvk;-><init>()V
@@ -81,17 +70,14 @@
 
     goto :goto_0
 
-    .line 19
     :catch_0
     move-exception v1
 
-    .line 20
     :goto_2
     sget-object v2, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     const-class v3, Ljvl;
 
-    .line 21
     invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -130,28 +116,23 @@
 
     move-result-object v3
 
-    .line 22
     invoke-virtual {v2, v3}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 23
     sget-object v2, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     invoke-virtual {v1, v2}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintStream;)V
 
-    .line 24
     new-instance v1, Ljvl;
 
     invoke-direct {v1}, Ljvl;-><init>()V
 
     goto :goto_0
 
-    .line 14
     :cond_2
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 17
     :cond_3
     :try_start_3
     new-instance v1, Ljvl;
@@ -162,7 +143,6 @@
 
     goto :goto_0
 
-    .line 19
     :catch_1
     move-exception v0
 
@@ -178,10 +158,8 @@
 .method private static a()Ljava/lang/Integer;
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 3
     :try_start_0
     const-string v0, "android.os.Build$VERSION"
 
@@ -189,14 +167,12 @@
 
     move-result-object v0
 
-    .line 4
     const-string v2, "SDK_INT"
 
     invoke-virtual {v0, v2}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
-    .line 5
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -207,41 +183,33 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 9
     :goto_0
     return-object v0
 
-    .line 6
     :catch_0
     move-exception v0
 
-    .line 7
     sget-object v2, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     const-string v3, "Failed to retrieve value from android.os.Build$VERSION.SDK_INT due to the following exception."
 
     invoke-virtual {v2, v3}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 8
     sget-object v2, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
     invoke-virtual {v0, v2}, Ljava/lang/Exception;->printStackTrace(Ljava/io/PrintStream;)V
 
     move-object v0, v1
 
-    .line 9
     goto :goto_0
 .end method
 
 .method public static a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Ljvg;->a:Ljvh;
 
     invoke-virtual {v0, p0, p1}, Ljvh;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
-    .line 2
     return-void
 .end method

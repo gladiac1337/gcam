@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,45 +20,36 @@
 .method public final synthetic a(Lisz;)Ljava/lang/Object;
     .locals 11
 
-    .prologue
     const/4 v10, 0x2
 
     const/4 v9, 0x1
 
     const/4 v8, 0x0
 
-    .line 2
-    .line 3
     const-class v0, Lcom/google/android/libraries/smartburst/buffers/FeatureTable;
 
-    .line 4
     const-string v1, "default"
 
     invoke-virtual {p1, v0, v1}, Lisz;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 5
     check-cast v0, Lcom/google/android/libraries/smartburst/buffers/FeatureTable;
 
-    .line 6
     new-instance v2, Ljbl;
 
     invoke-direct {v2, v0}, Ljbl;-><init>(Lcom/google/android/libraries/smartburst/buffers/FeatureTable;)V
 
-    .line 7
     const-class v1, Ljcx;
 
     const-string v3, "chroma_histogram_frame_distance_metric"
 
-    .line 8
     invoke-virtual {p1, v1, v3}, Lisz;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljcx;
 
-    .line 9
     new-instance v3, Ljbh;
 
     new-instance v4, Ljby;
@@ -73,7 +62,6 @@
 
     invoke-direct {v3, v1, v4}, Ljbh;-><init>(Ljcx;Ljbz;)V
 
-    .line 10
     new-instance v4, Ljbh;
 
     new-instance v5, Ljby;
@@ -86,7 +74,6 @@
 
     invoke-direct {v4, v1, v5}, Ljbh;-><init>(Ljcx;Ljbz;)V
 
-    .line 11
     new-instance v1, Ljdd;
 
     sget-object v5, Ljfh;->c:Ljfh;
@@ -97,7 +84,6 @@
 
     invoke-direct {v1, v5, v6}, Ljdd;-><init>(Ljfh;Ljcv;)V
 
-    .line 12
     new-instance v5, Ljbh;
 
     new-instance v6, Ljcx;
@@ -114,7 +100,6 @@
 
     invoke-direct {v5, v6, v0}, Ljbh;-><init>(Ljcx;Ljbz;)V
 
-    .line 13
     new-array v0, v10, [Ljat;
 
     new-instance v1, Ljbj;
@@ -135,12 +120,10 @@
 
     aput-object v4, v0, v9
 
-    .line 14
     invoke-static {v0}, Ljaz;->a([Ljat;)Ljaz;
 
     move-result-object v0
 
-    .line 15
     new-instance v1, Ljbp;
 
     new-instance v2, Ljbq;
@@ -149,6 +132,5 @@
 
     invoke-direct {v1, v2}, Ljbp;-><init>(Ljar;)V
 
-    .line 16
     return-object v1
 .end method

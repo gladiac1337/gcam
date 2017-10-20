@@ -20,54 +20,41 @@
 .method public constructor <init>(Ljch;Lcom/google/android/libraries/smartburst/buffers/FeatureTable;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/TreeSet;
 
     invoke-direct {v0}, Ljava/util/TreeSet;-><init>()V
 
     iput-object v0, p0, Ljcf;->c:Ljava/util/TreeSet;
 
-    .line 3
     const/4 v0, 0x0
 
     iput v0, p0, Ljcf;->d:I
 
-    .line 4
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     invoke-static {p2}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     const/4 v0, 0x1
 
     invoke-static {v0}, Lixp;->a(Z)V
 
-    .line 7
     iput-object p1, p0, Ljcf;->a:Ljch;
 
-    .line 8
     iput-object p2, p0, Ljcf;->b:Lcom/google/android/libraries/smartburst/buffers/FeatureTable;
 
-    .line 9
     return-void
 .end method
 
 .method private final declared-synchronized e()V
     .locals 5
 
-    .prologue
-    .line 31
     monitor-enter p0
 
     :try_start_0
     invoke-direct {p0}, Ljcf;->f()V
 
-    .line 32
     :goto_0
     iget-object v0, p0, Ljcf;->c:Ljava/util/TreeSet;
 
@@ -77,7 +64,6 @@
 
     if-lez v0, :cond_0
 
-    .line 33
     iget-object v0, p0, Ljcf;->c:Ljava/util/TreeSet;
 
     invoke-virtual {v0}, Ljava/util/TreeSet;->first()Ljava/lang/Object;
@@ -90,7 +76,6 @@
 
     move-result-wide v0
 
-    .line 34
     const-string v2, "FeatureWaitingFrameDropper"
 
     const/16 v3, 0x3e
@@ -115,14 +100,12 @@
 
     invoke-static {v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 35
     invoke-direct {p0}, Ljcf;->g()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    .line 31
     :catchall_0
     move-exception v0
 
@@ -130,7 +113,6 @@
 
     throw v0
 
-    .line 37
     :cond_0
     monitor-exit p0
 
@@ -140,8 +122,6 @@
 .method private final declared-synchronized f()V
     .locals 4
 
-    .prologue
-    .line 38
     monitor-enter p0
 
     :goto_0
@@ -156,7 +136,6 @@
 
     iget-object v0, p0, Ljcf;->c:Ljava/util/TreeSet;
 
-    .line 39
     invoke-virtual {v0}, Ljava/util/TreeSet;->first()Ljava/lang/Object;
 
     move-result-object v0
@@ -177,14 +156,12 @@
 
     if-gtz v0, :cond_0
 
-    .line 40
     invoke-direct {p0}, Ljcf;->g()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    .line 38
     :catchall_0
     move-exception v0
 
@@ -192,7 +169,6 @@
 
     throw v0
 
-    .line 41
     :cond_0
     monitor-exit p0
 
@@ -202,8 +178,6 @@
 .method private final declared-synchronized g()V
     .locals 4
 
-    .prologue
-    .line 42
     monitor-enter p0
 
     :try_start_0
@@ -223,7 +197,6 @@
 
     invoke-interface {v1, v2, v3}, Ljch;->b(J)V
 
-    .line 43
     iget v0, p0, Ljcf;->d:I
 
     add-int/lit8 v0, v0, 0x1
@@ -232,12 +205,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 44
     monitor-exit p0
 
     return-void
 
-    .line 42
     :catchall_0
     move-exception v0
 
@@ -251,14 +222,11 @@
 .method public final declared-synchronized a()J
     .locals 4
 
-    .prologue
-    .line 10
     monitor-enter p0
 
     :try_start_0
     invoke-direct {p0}, Ljcf;->e()V
 
-    .line 11
     iget v0, p0, Ljcf;->d:I
 
     if-nez v0, :cond_0
@@ -271,12 +239,10 @@
 
     if-nez v0, :cond_0
 
-    .line 12
     const-string v0, "FeatureWaitingFrameDropper"
 
     iget-object v1, p0, Ljcf;->c:Ljava/util/TreeSet;
 
-    .line 13
     invoke-virtual {v1}, Ljava/util/TreeSet;->first()Ljava/lang/Object;
 
     move-result-object v1
@@ -313,13 +279,10 @@
 
     move-result-object v1
 
-    .line 14
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     invoke-direct {p0}, Ljcf;->g()V
 
-    .line 16
     :cond_0
     iget-object v0, p0, Ljcf;->a:Ljch;
 
@@ -333,7 +296,6 @@
 
     return-wide v0
 
-    .line 10
     :catchall_0
     move-exception v0
 
@@ -345,8 +307,6 @@
 .method public final declared-synchronized a(J)V
     .locals 3
 
-    .prologue
-    .line 20
     monitor-enter p0
 
     :try_start_0
@@ -362,12 +322,10 @@
 
     if-nez v0, :cond_0
 
-    .line 21
     iget-object v0, p0, Ljcf;->a:Ljch;
 
     invoke-interface {v0, p1, p2}, Ljch;->a(J)V
 
-    .line 22
     iget v0, p0, Ljcf;->d:I
 
     add-int/lit8 v0, v0, -0x1
@@ -376,13 +334,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 23
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 20
     :catchall_0
     move-exception v0
 
@@ -394,8 +350,6 @@
 .method public final declared-synchronized b()V
     .locals 1
 
-    .prologue
-    .line 24
     monitor-enter p0
 
     :try_start_0
@@ -403,19 +357,16 @@
 
     invoke-virtual {v0}, Ljava/util/TreeSet;->clear()V
 
-    .line 25
     iget-object v0, p0, Ljcf;->a:Ljch;
 
     invoke-interface {v0}, Ljch;->b()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 26
     monitor-exit p0
 
     return-void
 
-    .line 24
     :catchall_0
     move-exception v0
 
@@ -427,8 +378,6 @@
 .method public final declared-synchronized b(J)V
     .locals 3
 
-    .prologue
-    .line 17
     monitor-enter p0
 
     :try_start_0
@@ -440,17 +389,14 @@
 
     invoke-virtual {v0, v1}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
 
-    .line 18
     invoke-direct {p0}, Ljcf;->e()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 19
     monitor-exit p0
 
     return-void
 
-    .line 17
     :catchall_0
     move-exception v0
 
@@ -462,8 +408,6 @@
 .method public final declared-synchronized c()Ljava/util/Set;
     .locals 2
 
-    .prologue
-    .line 27
     monitor-enter p0
 
     :try_start_0
@@ -477,19 +421,16 @@
 
     invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    .line 28
     iget-object v1, p0, Ljcf;->c:Ljava/util/TreeSet;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 29
     monitor-exit p0
 
     return-object v0
 
-    .line 27
     :catchall_0
     move-exception v0
 
@@ -501,8 +442,6 @@
 .method public final d()Ljhi;
     .locals 1
 
-    .prologue
-    .line 30
     iget-object v0, p0, Ljcf;->a:Ljch;
 
     invoke-interface {v0}, Ljch;->d()Ljhi;
@@ -515,8 +454,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 45
     const-string v0, "FeatureWaitingFrameDropper, mMaxPendingFrameCount="
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

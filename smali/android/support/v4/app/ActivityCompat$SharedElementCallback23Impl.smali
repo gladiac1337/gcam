@@ -7,11 +7,8 @@
 .method public constructor <init>(Landroid/support/v4/app/SharedElementCallback;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Landroid/support/v4/app/ActivityCompat$SharedElementCallback21Impl;-><init>(Landroid/support/v4/app/SharedElementCallback;)V
 
-    .line 2
     return-void
 .end method
 
@@ -20,8 +17,6 @@
 .method public onSharedElementsArrived(Ljava/util/List;Ljava/util/List;Landroid/app/SharedElementCallback$OnSharedElementsReadyListener;)V
     .locals 2
 
-    .prologue
-    .line 3
     iget-object v0, p0, Landroid/support/v4/app/ActivityCompat$SharedElementCallback23Impl;->mCallback:Landroid/support/v4/app/SharedElementCallback;
 
     new-instance v1, Landroid/support/v4/app/ActivityCompat$SharedElementCallback23Impl$1;
@@ -30,6 +25,5 @@
 
     invoke-virtual {v0, p1, p2, v1}, Landroid/support/v4/app/SharedElementCallback;->onSharedElementsArrived(Ljava/util/List;Ljava/util/List;Landroid/support/v4/app/SharedElementCallback$OnSharedElementsReadyListener;)V
 
-    .line 4
     return-void
 .end method

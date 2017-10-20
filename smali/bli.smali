@@ -13,18 +13,13 @@
 .method constructor <init>(Landroid/content/ContentResolver;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbli;->a:Landroid/content/ContentResolver;
 
-    .line 3
     const-string v0, "camera:"
 
     iput-object v0, p0, Lbli;->b:Ljava/lang/String;
 
-    .line 4
     return-void
 .end method

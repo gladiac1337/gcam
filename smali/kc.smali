@@ -29,31 +29,24 @@
 .method constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const-wide/high16 v0, -0x8000000000000000L
 
     iput-wide v0, p0, Lkc;->e:J
 
-    .line 3
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lkc;->h:J
 
-    .line 4
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lkc;->f:J
 
-    .line 5
     const/4 v0, 0x0
 
     iput v0, p0, Lkc;->g:I
 
-    .line 6
     return-void
 .end method
 
@@ -62,23 +55,19 @@
 .method final a(J)F
     .locals 7
 
-    .prologue
     const/high16 v6, 0x3f800000    # 1.0f
 
     const/4 v0, 0x0
 
-    .line 7
     iget-wide v2, p0, Lkc;->e:J
 
     cmp-long v1, p1, v2
 
     if-gez v1, :cond_0
 
-    .line 14
     :goto_0
     return v0
 
-    .line 9
     :cond_0
     iget-wide v2, p0, Lkc;->h:J
 
@@ -94,13 +83,11 @@
 
     if-gez v1, :cond_2
 
-    .line 10
     :cond_1
     iget-wide v2, p0, Lkc;->e:J
 
     sub-long v2, p1, v2
 
-    .line 11
     const/high16 v1, 0x3f000000    # 0.5f
 
     long-to-float v2, v2
@@ -119,13 +106,11 @@
 
     goto :goto_0
 
-    .line 12
     :cond_2
     iget-wide v2, p0, Lkc;->h:J
 
     sub-long v2, p1, v2
 
-    .line 13
     iget v1, p0, Lkc;->i:F
 
     sub-float v1, v6, v1
@@ -140,7 +125,6 @@
 
     div-float/2addr v2, v3
 
-    .line 14
     invoke-static {v2, v0, v6}, Lkb;->a(FFF)F
 
     move-result v0

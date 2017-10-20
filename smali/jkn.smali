@@ -11,22 +11,16 @@
 .method constructor <init>(Ljkk;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljkk;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljkn;->a:Ljkk;
 
-    .line 3
     return-void
 .end method
 
 .method private final b(I)I
     .locals 1
 
-    .prologue
-    .line 4
     invoke-virtual {p0}, Ljkn;->size()I
 
     move-result v0
@@ -43,32 +37,26 @@
 .method public final a(II)Ljkk;
     .locals 3
 
-    .prologue
-    .line 11
     invoke-virtual {p0}, Ljkn;->size()I
 
     move-result v0
 
     invoke-static {p1, p2, v0}, Lixp;->a(III)V
 
-    .line 12
     iget-object v0, p0, Ljkn;->a:Ljkk;
 
-    .line 13
     invoke-virtual {p0}, Ljkn;->size()I
 
     move-result v1
 
     sub-int/2addr v1, p2
 
-    .line 15
     invoke-virtual {p0}, Ljkn;->size()I
 
     move-result v2
 
     sub-int/2addr v2, p1
 
-    .line 16
     invoke-virtual {v0, v1, v2}, Ljkk;->a(II)Ljkk;
 
     move-result-object v0
@@ -83,8 +71,6 @@
 .method final c()Z
     .locals 1
 
-    .prologue
-    .line 20
     iget-object v0, p0, Ljkn;->a:Ljkk;
 
     invoke-virtual {v0}, Ljkk;->c()Z
@@ -97,8 +83,6 @@
 .method public final contains(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Ljkn;->a:Ljkk;
 
     invoke-virtual {v0, p1}, Ljkk;->contains(Ljava/lang/Object;)Z
@@ -111,8 +95,6 @@
 .method public final d()Ljkk;
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Ljkn;->a:Ljkk;
 
     return-object v0
@@ -121,15 +103,12 @@
 .method public final get(I)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 17
     invoke-virtual {p0}, Ljkn;->size()I
 
     move-result v0
 
     invoke-static {p1, v0}, Lixp;->a(II)I
 
-    .line 18
     iget-object v0, p0, Ljkn;->a:Ljkk;
 
     invoke-direct {p0, p1}, Ljkn;->b(I)I
@@ -146,15 +125,12 @@
 .method public final indexOf(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Ljkn;->a:Ljkk;
 
     invoke-virtual {v0, p1}, Ljkk;->lastIndexOf(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 8
     if-ltz v0, :cond_0
 
     invoke-direct {p0, v0}, Ljkn;->b(I)I
@@ -173,15 +149,12 @@
 .method public final lastIndexOf(Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Ljkn;->a:Ljkk;
 
     invoke-virtual {v0, p1}, Ljkk;->indexOf(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 10
     if-ltz v0, :cond_0
 
     invoke-direct {p0, v0}, Ljkn;->b(I)I
@@ -200,8 +173,6 @@
 .method public final size()I
     .locals 1
 
-    .prologue
-    .line 19
     iget-object v0, p0, Ljkn;->a:Ljkk;
 
     invoke-virtual {v0}, Ljkk;->size()I
@@ -214,8 +185,6 @@
 .method public final synthetic subList(II)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 21
     invoke-virtual {p0, p1, p2}, Ljkn;->a(II)Ljkk;
 
     move-result-object v0

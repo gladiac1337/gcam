@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 14
     const-string v0, "AutoFlashHdrPSelect"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -29,23 +27,16 @@
 .method public constructor <init>(Liaj;Leah;Leah;Leah;Leah;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Liaz;-><init>(Liaj;)V
 
-    .line 2
     iput-object p2, p0, Lecb;->b:Leah;
 
-    .line 3
     iput-object p3, p0, Lecb;->c:Leah;
 
-    .line 4
     iput-object p4, p0, Lecb;->d:Leah;
 
-    .line 5
     iput-object p5, p0, Lecb;->e:Leah;
 
-    .line 6
     return-void
 .end method
 
@@ -54,18 +45,14 @@
 .method protected final synthetic b(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 7
     check-cast p1, Lefx;
 
-    .line 8
     invoke-virtual {p1}, Lefx;->ordinal()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 13
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -104,33 +91,27 @@
 
     throw v0
 
-    .line 9
     :pswitch_0
     iget-object v0, p0, Lecb;->b:Leah;
 
-    .line 12
     :goto_0
     return-object v0
 
-    .line 10
     :pswitch_1
     iget-object v0, p0, Lecb;->c:Leah;
 
     goto :goto_0
 
-    .line 11
     :pswitch_2
     iget-object v0, p0, Lecb;->d:Leah;
 
     goto :goto_0
 
-    .line 12
     :pswitch_3
     iget-object v0, p0, Lecb;->e:Leah;
 
     goto :goto_0
 
-    .line 8
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

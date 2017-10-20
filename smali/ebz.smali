@@ -17,17 +17,12 @@
 .method public constructor <init>(Lick;Liaj;Leez;Lefd;)V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lebz;->a:Lick;
 
-    .line 3
     iput-object p2, p0, Lebz;->b:Liaj;
 
-    .line 4
     new-instance v0, Ledp;
 
     const/4 v1, 0x4
@@ -38,7 +33,6 @@
 
     iput-object v0, p0, Lebz;->c:Leah;
 
-    .line 5
     new-instance v0, Ledp;
 
     const/4 v1, 0x5
@@ -49,7 +43,6 @@
 
     iput-object v0, p0, Lebz;->d:Leah;
 
-    .line 6
     return-void
 .end method
 
@@ -58,8 +51,6 @@
 .method public final a(Leah;Leah;)Leah;
     .locals 8
 
-    .prologue
-    .line 7
     new-instance v6, Leck;
 
     iget-object v7, p0, Lebz;->a:Lick;

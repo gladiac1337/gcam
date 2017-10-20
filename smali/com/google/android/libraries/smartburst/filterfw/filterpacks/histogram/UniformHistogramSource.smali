@@ -11,16 +11,12 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/Filter;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
 
-    .line 2
     const/16 v0, 0x32
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/histogram/UniformHistogramSource;->mNumBins:I
 
-    .line 3
     return-void
 .end method
 
@@ -29,8 +25,6 @@
 .method public final getSignature()Lcom/google/android/libraries/smartburst/filterfw/Signature;
     .locals 4
 
-    .prologue
-    .line 4
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     invoke-direct {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;-><init>()V
@@ -41,7 +35,6 @@
 
     sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    .line 5
     invoke-static {v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->array(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v3
@@ -56,7 +49,6 @@
 
     sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    .line 6
     invoke-static {v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->array(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v3
@@ -65,20 +57,16 @@
 
     move-result-object v0
 
-    .line 7
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->disallowOtherPorts()Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 8
     return-object v0
 .end method
 
 .method public final onInputPortAttached(Lcom/google/android/libraries/smartburst/filterfw/InputPort;)V
     .locals 2
 
-    .prologue
-    .line 9
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -91,17 +79,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 10
     const-string v0, "mNumBins"
 
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->bindToFieldNamed(Ljava/lang/String;)V
 
-    .line 11
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->setAutoPullEnabled(Z)V
 
-    .line 12
     :cond_0
     return-void
 .end method
@@ -109,21 +94,16 @@
 .method protected final onPrepare()V
     .locals 0
 
-    .prologue
-    .line 13
     return-void
 .end method
 
 .method protected final onProcess()V
     .locals 3
 
-    .prologue
-    .line 14
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/histogram/UniformHistogramSource;->mNumBins:I
 
     new-array v1, v0, [I
 
-    .line 15
     const/4 v0, 0x0
 
     :goto_0
@@ -131,17 +111,14 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 16
     const/4 v2, 0x1
 
     aput v2, v1, v0
 
-    .line 17
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 18
     :cond_0
     const-string v0, "histogram"
 
@@ -149,7 +126,6 @@
 
     move-result-object v0
 
-    .line 19
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->fetchAvailableFrame([I)Lcom/google/android/libraries/smartburst/filterfw/Frame;
@@ -160,12 +136,9 @@
 
     move-result-object v2
 
-    .line 20
     invoke-virtual {v2, v1}, Lcom/google/android/libraries/smartburst/filterfw/FrameValues;->setValues(Ljava/lang/Object;)V
 
-    .line 21
     invoke-virtual {v0, v2}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->pushFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;)V
 
-    .line 22
     return-void
 .end method

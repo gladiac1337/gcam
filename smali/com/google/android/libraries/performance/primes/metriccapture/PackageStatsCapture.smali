@@ -11,7 +11,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x3
 
     const/4 v7, 0x2
@@ -20,7 +19,6 @@
 
     const/4 v5, 0x0
 
-    .line 52
     new-array v0, v8, [Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsInvocation;
 
     new-instance v1, Lioj;
@@ -93,8 +91,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -103,12 +99,10 @@
 .method private static a()Z
     .locals 7
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 2
     :try_start_0
     const-class v2, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsCallback;
 
@@ -130,7 +124,6 @@
 
     aput-object v6, v4, v5
 
-    .line 3
     invoke-virtual {v2, v3, v4}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
@@ -139,7 +132,6 @@
 
     move-result v2
 
-    .line 4
     invoke-static {v2}, Ljava/lang/reflect/Modifier;->isAbstract(I)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -149,21 +141,17 @@
 
     if-nez v2, :cond_0
 
-    .line 7
     :goto_0
     return v0
 
     :cond_0
     move v0, v1
 
-    .line 4
     goto :goto_0
 
-    .line 5
     :catch_0
     move-exception v0
 
-    .line 6
     :goto_1
     const-string v2, "PackageStatsCapture"
 
@@ -173,10 +161,8 @@
 
     move v0, v1
 
-    .line 7
     goto :goto_0
 
-    .line 5
     :catch_1
     move-exception v0
 
@@ -186,18 +172,15 @@
 .method public static getPackageStats(Landroid/content/Context;)Landroid/content/pm/PackageStats;
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 36
     :try_start_0
     sget-object v2, Litx;->a:Ljava/lang/Thread;
 
     if-nez v2, :cond_0
 
-    .line 37
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v2
@@ -208,7 +191,6 @@
 
     sput-object v2, Litx;->a:Ljava/lang/Thread;
 
-    .line 38
     :cond_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -220,11 +202,9 @@
 
     move v2, v1
 
-    .line 39
     :goto_0
     if-eqz v2, :cond_2
 
-    .line 40
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Must be called on a background thread"
@@ -235,7 +215,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 51
     :catchall_0
     move-exception v0
 
@@ -244,10 +223,8 @@
     :cond_1
     move v2, v0
 
-    .line 38
     goto :goto_0
 
-    .line 42
     :cond_2
     :try_start_1
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -256,12 +233,10 @@
 
     const-string v3, "android.permission.GET_PACKAGE_SIZE"
 
-    .line 43
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 44
     invoke-virtual {v2, v3, v4}, Landroid/content/pm/PackageManager;->checkPermission(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v2
@@ -270,7 +245,6 @@
 
     const-string v2, "android.permission.GET_PACKAGE_SIZE"
 
-    .line 45
     invoke-virtual {p0, v2}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
     move-result v2
@@ -280,11 +254,9 @@
     :cond_3
     move v0, v1
 
-    .line 46
     :cond_4
     if-eqz v0, :cond_5
 
-    .line 47
     const-wide/16 v0, 0x3a98
 
     sget-object v2, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture;->GETTER_INVOCATIONS:[Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsInvocation;
@@ -293,11 +265,9 @@
 
     move-result-object v0
 
-    .line 50
     :goto_1
     return-object v0
 
-    .line 49
     :cond_5
     const-string v0, "PackageStatsCapture"
 
@@ -307,7 +277,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 50
     const/4 v0, 0x0
 
     goto :goto_1
@@ -316,56 +285,45 @@
 .method static varargs getPackageStatsUsingInternalAPI(Landroid/content/Context;J[Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsInvocation;)Landroid/content/pm/PackageStats;
     .locals 9
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 8
     invoke-static {}, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture;->a()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 9
     const-string v1, "PackageStatsCapture"
 
     const-string v2, "Callback implementation stripped by proguard."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 35
     :goto_0
     return-object v0
 
-    .line 11
     :cond_0
     new-instance v2, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsCallback;
 
-    .line 12
     invoke-direct {v2}, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsCallback;-><init>()V
 
-    .line 15
     :try_start_0
     iget-object v1, v2, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsCallback;->a:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v1}, Ljava/util/concurrent/Semaphore;->acquire()V
 
-    .line 16
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
 
-    .line 17
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 18
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v5
 
-    .line 19
     array-length v6, p3
 
     const/4 v1, 0x0
@@ -375,21 +333,18 @@
 
     aget-object v7, p3, v1
 
-    .line 20
     invoke-virtual {v7, v3, v4, v5, v2}, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsInvocation;->invoke(Landroid/content/pm/PackageManager;Ljava/lang/String;ILandroid/content/pm/IPackageStatsObserver;)Z
 
     move-result v7
 
     if-eqz v7, :cond_2
 
-    .line 21
     const-string v1, "PackageStatsCapture"
 
     const-string v3, "Success invoking PackageStats capture."
 
     invoke-static {v1, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 24
     iget-object v1, v2, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsCallback;->a:Ljava/util/concurrent/Semaphore;
 
     sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
@@ -398,15 +353,12 @@
 
     move-result v1
 
-    .line 25
     if-eqz v1, :cond_1
 
-    .line 26
     iget-object v0, v2, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsCallback;->b:Landroid/content/pm/PackageStats;
 
     goto :goto_0
 
-    .line 27
     :cond_1
     const-string v1, "PackageStatsCapture"
 
@@ -418,7 +370,6 @@
 
     goto :goto_0
 
-    .line 34
     :catch_0
     move-exception v1
 
@@ -430,13 +381,11 @@
 
     goto :goto_0
 
-    .line 30
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 31
     :cond_3
     :try_start_1
     const-string v1, "PackageStatsCapture"

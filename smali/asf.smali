@@ -17,23 +17,16 @@
 .method public constructor <init>(Lhzi;Lass;Lgdi;Lbio;)V
     .locals 0
 
-    .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
     iput-object p1, p0, Lasf;->d:Lhzi;
 
-    .line 7
     iput-object p2, p0, Lasf;->a:Lass;
 
-    .line 8
     iput-object p3, p0, Lasf;->b:Lgdi;
 
-    .line 9
     iput-object p4, p0, Lasf;->c:Lbio;
 
-    .line 10
     return-void
 .end method
 
@@ -42,8 +35,6 @@
 .method public final a(Liaj;)Libw;
     .locals 2
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lasf;->d:Lhzi;
 
     new-instance v1, Lash;
@@ -52,7 +43,6 @@
 
     invoke-virtual {v0, v1}, Lhzi;->execute(Ljava/lang/Runnable;)V
 
-    .line 4
     new-instance v0, Lasi;
 
     invoke-direct {v0, p0}, Lasi;-><init>(Lasf;)V
@@ -69,8 +59,6 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lasf;->d:Lhzi;
 
     new-instance v1, Lasg;
@@ -79,6 +67,5 @@
 
     invoke-virtual {v0, v1}, Lhzi;->execute(Ljava/lang/Runnable;)V
 
-    .line 2
     return-void
 .end method

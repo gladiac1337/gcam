@@ -20,8 +20,6 @@
 .method public constructor <init>(Lhka;B)V
     .locals 0
 
-    .prologue
-    .line 15
     invoke-direct {p0, p1}, Lhpv;-><init>(Lhka;)V
 
     return-void
@@ -30,8 +28,6 @@
 .method public constructor <init>(Lhka;Landroid/net/Uri;)V
     .locals 1
 
-    .prologue
-    .line 19
     iput-object p2, p0, Lhpv;->a:Landroid/net/Uri;
 
     const/4 v0, 0x0
@@ -46,33 +42,26 @@
 .method protected synthetic a(Lcom/google/android/gms/common/api/Status;)Lhkh;
     .locals 2
 
-    .prologue
-    .line 16
-    .line 17
     new-instance v0, Lhvb;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p1, v1}, Lhvb;-><init>(Lcom/google/android/gms/common/api/Status;Landroid/content/Intent;)V
 
-    .line 18
     return-object v0
 .end method
 
 .method protected a(Landroid/content/Context;Lhps;)V
     .locals 7
 
-    .prologue
     const/4 v6, 0x1
 
-    .line 1
     new-instance v0, Lhpu;
 
     invoke-direct {v0, p0}, Lhpu;-><init>(Lhro;)V
 
     iget-object v1, p0, Lhpv;->a:Landroid/net/Uri;
 
-    .line 3
     const-string v2, "com.google.android.gms"
 
     invoke-virtual {p1, v2, v1, v6}, Landroid/content/Context;->grantUriPermission(Ljava/lang/String;Landroid/net/Uri;I)V
@@ -81,7 +70,6 @@
 
     invoke-direct {v2, p1, v1, v0}, Lhpt;-><init>(Landroid/content/Context;Landroid/net/Uri;Lhpq;)V
 
-    .line 4
     :try_start_0
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
     :try_end_0
@@ -161,37 +149,28 @@
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_0
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 5
     :catch_0
     move-exception v0
 
-    .line 6
     invoke-virtual {p1, v1, v6}, Landroid/content/Context;->revokeUriPermission(Landroid/net/Uri;I)V
 
-    .line 7
     throw v0
 
     :catch_1
     move-exception v0
 
-    .line 8
     invoke-virtual {p1, v1, v6}, Landroid/content/Context;->revokeUriPermission(Landroid/net/Uri;I)V
 
-    .line 9
     throw v0
 .end method
 
 .method protected final synthetic a(Lhjv;)V
     .locals 2
 
-    .prologue
-    .line 10
     check-cast p1, Lhpw;
 
-    .line 12
     iget-object v1, p1, Lhkw;->c:Landroid/content/Context;
 
-    .line 13
     invoke-virtual {p1}, Lhpw;->n()Landroid/os/IInterface;
 
     move-result-object v0
@@ -200,7 +179,6 @@
 
     invoke-virtual {p0, v1, v0}, Lhpv;->a(Landroid/content/Context;Lhps;)V
 
-    .line 14
     return-void
 .end method
 

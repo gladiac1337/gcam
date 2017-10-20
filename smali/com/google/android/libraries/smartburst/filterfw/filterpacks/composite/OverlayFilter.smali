@@ -61,12 +61,10 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/high16 v3, 0x3f800000    # 1.0f
 
     const/4 v2, 0x0
 
-    .line 144
     const/4 v0, 0x1
 
     new-array v0, v0, [Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
@@ -87,83 +85,66 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/Filter;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
 
-    .line 2
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mOpacity:F
 
-    .line 3
     iput-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mSourceQuads:[Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
-    .line 4
     iput-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mTargetQuads:[Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
-    .line 5
     iput-boolean v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mHasMask:Z
 
-    .line 6
     iput v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mOverlayMode:I
 
-    .line 7
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mOldOverlayMode:I
 
-    .line 8
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mInputFrameCount:I
 
-    .line 9
     return-void
 .end method
 
 .method private final createShader(Z)V
     .locals 4
 
-    .prologue
-    .line 94
     iget-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mHasMask:Z
 
     invoke-direct {p0, p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->genVertexShader(ZZ)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 95
     iget-boolean v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mHasMask:Z
 
     invoke-direct {p0, p1, v1}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->genFragmentShader(ZZ)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 96
     new-instance v2, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     invoke-direct {v2, v0, v1}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mOverlayShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
-    .line 97
     iget-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mHasMask:Z
 
     if-eqz v0, :cond_0
 
-    .line 98
     const/16 v0, 0x8
 
     new-array v0, v0, [F
 
     fill-array-data v0, :array_0
 
-    .line 99
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mOverlayShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     const-string v2, "a_texcoord_full"
@@ -172,7 +153,6 @@
 
     invoke-virtual {v1, v2, v0, v3}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->setAttributeValues(Ljava/lang/String;[FI)V
 
-    .line 100
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mOverlayShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
@@ -180,7 +160,6 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->setBlendEnabled(Z)V
 
-    .line 101
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mOverlayShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     const/16 v1, 0x302
@@ -189,10 +168,8 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->setBlendFunc(II)V
 
-    .line 102
     return-void
 
-    .line 98
     :array_0
     .array-data 4
         0x0
@@ -209,15 +186,12 @@
 .method private final genFragmentShader(ZZ)Ljava/lang/String;
     .locals 9
 
-    .prologue
-    .line 132
     if-eqz p1, :cond_0
 
     const-string v0, "tex_sampler_2"
 
     move-object v6, v0
 
-    .line 133
     :goto_0
     if-eqz p1, :cond_1
 
@@ -225,7 +199,6 @@
 
     move-object v5, v0
 
-    .line 134
     :goto_1
     if-eqz p2, :cond_2
 
@@ -265,7 +238,6 @@
 
     move-object v4, v0
 
-    .line 135
     :goto_2
     if-eqz p2, :cond_3
 
@@ -273,7 +245,6 @@
 
     move-object v3, v0
 
-    .line 136
     :goto_3
     if-eqz p1, :cond_4
 
@@ -281,7 +252,6 @@
 
     move-object v2, v0
 
-    .line 137
     :goto_4
     if-eqz p1, :cond_5
 
@@ -289,7 +259,6 @@
 
     move-object v1, v0
 
-    .line 139
     :goto_5
     if-eqz p2, :cond_6
 
@@ -327,7 +296,6 @@
 
     move-result-object v0
 
-    .line 141
     :goto_6
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->getOutputColor()Ljava/lang/String;
 
@@ -469,10 +437,8 @@
 
     move-result-object v0
 
-    .line 142
     return-object v0
 
-    .line 132
     :cond_0
     const-string v0, "tex_sampler_1"
 
@@ -480,7 +446,6 @@
 
     goto/16 :goto_0
 
-    .line 133
     :cond_1
     const-string v0, ""
 
@@ -488,7 +453,6 @@
 
     goto/16 :goto_1
 
-    .line 134
     :cond_2
     const-string v0, ""
 
@@ -496,7 +460,6 @@
 
     goto/16 :goto_2
 
-    .line 135
     :cond_3
     const-string v0, ""
 
@@ -504,7 +467,6 @@
 
     goto/16 :goto_3
 
-    .line 136
     :cond_4
     const-string v0, ""
 
@@ -512,7 +474,6 @@
 
     goto/16 :goto_4
 
-    .line 138
     :cond_5
     const-string v0, ""
 
@@ -520,7 +481,6 @@
 
     goto/16 :goto_5
 
-    .line 140
     :cond_6
     const-string v0, ""
 
@@ -530,15 +490,12 @@
 .method private final genVertexShader(ZZ)Ljava/lang/String;
     .locals 8
 
-    .prologue
-    .line 125
     if-eqz p2, :cond_0
 
     const-string v0, "attribute vec2 a_texcoord_full;\n"
 
     move-object v5, v0
 
-    .line 126
     :goto_0
     if-eqz p1, :cond_1
 
@@ -546,7 +503,6 @@
 
     move-object v4, v0
 
-    .line 127
     :goto_1
     if-eqz p2, :cond_2
 
@@ -554,7 +510,6 @@
 
     move-object v3, v0
 
-    .line 128
     :goto_2
     if-eqz p1, :cond_3
 
@@ -562,7 +517,6 @@
 
     move-object v2, v0
 
-    .line 129
     :goto_3
     if-eqz p2, :cond_4
 
@@ -570,7 +524,6 @@
 
     move-object v1, v0
 
-    .line 130
     :goto_4
     if-eqz p1, :cond_5
 
@@ -693,10 +646,8 @@
 
     move-result-object v0
 
-    .line 131
     return-object v0
 
-    .line 125
     :cond_0
     const-string v0, ""
 
@@ -704,7 +655,6 @@
 
     goto/16 :goto_0
 
-    .line 126
     :cond_1
     const-string v0, ""
 
@@ -712,7 +662,6 @@
 
     goto/16 :goto_1
 
-    .line 127
     :cond_2
     const-string v0, ""
 
@@ -720,7 +669,6 @@
 
     goto/16 :goto_2
 
-    .line 128
     :cond_3
     const-string v0, ""
 
@@ -728,7 +676,6 @@
 
     goto/16 :goto_3
 
-    .line 129
     :cond_4
     const-string v0, ""
 
@@ -736,7 +683,6 @@
 
     goto/16 :goto_4
 
-    .line 130
     :cond_5
     const-string v0, ""
 
@@ -746,103 +692,85 @@
 .method private final getOutputColor()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 103
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mOverlayMode:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 118
     const-string v0, "ovlColor.rgb"
 
     :goto_0
     return-object v0
 
-    .line 104
     :pswitch_0
     const-string v0, "srcColor.rgb * ovlColor.rgb"
 
     goto :goto_0
 
-    .line 105
     :pswitch_1
     const-string v0, "srcColor.rgb + ovlColor.rgb"
 
     goto :goto_0
 
-    .line 106
     :pswitch_2
     const-string v0, "srcColor.rgb / ovlColor.rgb"
 
     goto :goto_0
 
-    .line 107
     :pswitch_3
     const-string v0, "srcColor.rgb - ovlColor.rgb"
 
     goto :goto_0
 
-    .line 108
     :pswitch_4
     const-string v0, "abs(srcColor.rgb - ovlColor.rgb)"
 
     goto :goto_0
 
-    .line 109
     :pswitch_5
     const-string v0, "1.0 - ((1.0 - ovlColor.rgb) * (1.0 - srcColor.rgb))"
 
     goto :goto_0
 
-    .line 110
     :pswitch_6
     const-string v0, "srcColor.rgb / (1.0 - ovlColor.rgb)"
 
     goto :goto_0
 
-    .line 111
     :pswitch_7
     const-string v0, "1.0 - ((1.0 - srcColor.rgb) / ovlColor.rgb)"
 
     goto :goto_0
 
-    .line 112
     :pswitch_8
     const-string v0, "vec3(ovlColor.r > 0.5 ? 1.0 - ((1.0 - 2.0 * (ovlColor.r - 0.5)) * (1.0 - srcColor.r)) : (2.0 * ovlColor.r * srcColor.r),     ovlColor.g > 0.5 ? 1.0 - ((1.0 - 2.0 * (ovlColor.g - 0.5)) * (1.0 - srcColor.g)) : (2.0 * ovlColor.g * srcColor.g),     ovlColor.b > 0.5 ? 1.0 - ((1.0 - 2.0 * (ovlColor.b - 0.5)) * (1.0 - srcColor.b)) : (2.0 * ovlColor.b * srcColor.b))"
 
     goto :goto_0
 
-    .line 113
     :pswitch_9
     const-string v0, "srcColor.rgb * ((1.0 - srcColor.rgb) * ovlColor.rgb + (1.0 - ((1.0 - ovlColor.rgb) * (1.0 - srcColor.rgb))))"
 
     goto :goto_0
 
-    .line 114
     :pswitch_a
     const-string v0, "min(srcColor.rgb, ovlColor.rgb)"
 
     goto :goto_0
 
-    .line 115
     :pswitch_b
     const-string v0, "max(srcColor.rgb, ovlColor.rgb)"
 
     goto :goto_0
 
-    .line 116
     :pswitch_c
     const-string v0, "srcColor.rgb * (srcColor.rgb + (2.0 * ovlColor.rgb) * (1.0 - srcColor.rgb))"
 
     goto :goto_0
 
-    .line 117
     :pswitch_d
     const-string v0, "(srcColor.rgb - ovlColor.rgb) * (srcColor.rgb - ovlColor.rgb)"
 
     goto :goto_0
 
-    .line 103
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -865,8 +793,6 @@
 .method private static needSourceForMode(I)Z
     .locals 1
 
-    .prologue
-    .line 143
     if-eqz p0, :cond_0
 
     const/4 v0, 0x1
@@ -883,27 +809,20 @@
 .method private final passCountFor([Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;[Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;)I
     .locals 5
 
-    .prologue
-    .line 87
     if-nez p1, :cond_0
 
-    .line 88
     array-length v0, p2
 
-    .line 93
     :goto_0
     return v0
 
-    .line 89
     :cond_0
     if-nez p2, :cond_1
 
-    .line 90
     array-length v0, p1
 
     goto :goto_0
 
-    .line 91
     :cond_1
     array-length v0, p1
 
@@ -911,7 +830,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 92
     new-instance v0, Ljava/lang/RuntimeException;
 
     array-length v1, p1
@@ -958,7 +876,6 @@
 
     throw v0
 
-    .line 93
     :cond_2
     array-length v0, p1
 
@@ -968,36 +885,29 @@
 .method private final updateInputCount(Z)V
     .locals 1
 
-    .prologue
-    .line 119
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mInputFrameCount:I
 
-    .line 120
     if-eqz p1, :cond_0
 
-    .line 121
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mInputFrameCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mInputFrameCount:I
 
-    .line 122
     :cond_0
     iget-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mHasMask:Z
 
     if-eqz v0, :cond_1
 
-    .line 123
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mInputFrameCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mInputFrameCount:I
 
-    .line 124
     :cond_1
     return-void
 .end method
@@ -1007,47 +917,40 @@
 .method public final getSignature()Lcom/google/android/libraries/smartburst/filterfw/Signature;
     .locals 6
 
-    .prologue
     const/16 v2, 0x12d
 
     const/4 v5, 0x2
 
     const/4 v4, 0x1
 
-    .line 10
     invoke-static {v2, v5}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->image2D(II)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v0
 
-    .line 11
     const/16 v1, 0x10
 
     invoke-static {v2, v1}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->image2D(II)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v1
 
-    .line 12
     new-instance v2, Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     invoke-direct {v2}, Lcom/google/android/libraries/smartburst/filterfw/Signature;-><init>()V
 
     const-string v3, "source"
 
-    .line 13
     invoke-virtual {v2, v3, v5, v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addInputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v2
 
     const-string v3, "overlay"
 
-    .line 14
     invoke-virtual {v2, v3, v5, v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addInputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v2
 
     const-string v3, "mask"
 
-    .line 15
     invoke-virtual {v2, v3, v4, v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addInputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
@@ -1056,7 +959,6 @@
 
     sget-object v3, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
-    .line 16
     invoke-static {v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->single(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v3
@@ -1069,7 +971,6 @@
 
     sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    .line 17
     invoke-static {v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->single(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v3
@@ -1082,7 +983,6 @@
 
     const-class v3, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
-    .line 18
     invoke-static {v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->array(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v3
@@ -1095,7 +995,6 @@
 
     const-class v3, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
-    .line 19
     invoke-static {v3}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->array(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v3
@@ -1106,25 +1005,20 @@
 
     const-string v2, "composite"
 
-    .line 20
     invoke-virtual {v0, v2, v5, v1}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addOutputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 21
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->disallowOtherPorts()Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 22
     return-object v0
 .end method
 
 .method public final onInputPortAttached(Lcom/google/android/libraries/smartburst/filterfw/InputPort;)V
     .locals 2
 
-    .prologue
-    .line 23
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -1137,12 +1031,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 24
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mHasMask:Z
 
-    .line 25
     :cond_0
     return-void
 .end method
@@ -1150,10 +1042,8 @@
 .method public final onInputPortOpen(Lcom/google/android/libraries/smartburst/filterfw/InputPort;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 26
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -1166,20 +1056,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 27
     const-string v0, "mOpacity"
 
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->bindToFieldNamed(Ljava/lang/String;)V
 
-    .line 28
     invoke-virtual {p1, v2}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->setAutoPullEnabled(Z)V
 
-    .line 38
     :cond_0
     :goto_0
     return-void
 
-    .line 29
     :cond_1
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->getName()Ljava/lang/String;
 
@@ -1193,17 +1079,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 30
     const-string v0, "mSourceQuads"
 
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->bindToFieldNamed(Ljava/lang/String;)V
 
-    .line 31
     invoke-virtual {p1, v2}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->setAutoPullEnabled(Z)V
 
     goto :goto_0
 
-    .line 32
     :cond_2
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->getName()Ljava/lang/String;
 
@@ -1217,17 +1100,14 @@
 
     if-eqz v0, :cond_3
 
-    .line 33
     const-string v0, "mTargetQuads"
 
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->bindToFieldNamed(Ljava/lang/String;)V
 
-    .line 34
     invoke-virtual {p1, v2}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->setAutoPullEnabled(Z)V
 
     goto :goto_0
 
-    .line 35
     :cond_3
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->getName()Ljava/lang/String;
 
@@ -1241,12 +1121,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 36
     const-string v0, "mOverlayMode"
 
     invoke-virtual {p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->bindToFieldNamed(Ljava/lang/String;)V
 
-    .line 37
     invoke-virtual {p1, v2}, Lcom/google/android/libraries/smartburst/filterfw/InputPort;->setAutoPullEnabled(Z)V
 
     goto :goto_0
@@ -1255,55 +1133,44 @@
 .method protected final onPrepare()V
     .locals 1
 
-    .prologue
-    .line 39
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->createIdentity()Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mIdShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
-    .line 40
     return-void
 .end method
 
 .method protected final onProcess()V
     .locals 14
 
-    .prologue
-    .line 41
     const-string v0, "composite"
 
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->getConnectedOutputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/OutputPort;
 
     move-result-object v6
 
-    .line 42
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mOverlayMode:I
 
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->needSourceForMode(I)Z
 
     move-result v7
 
-    .line 43
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mOverlayMode:I
 
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mOldOverlayMode:I
 
     if-eq v0, v1, :cond_0
 
-    .line 44
     invoke-direct {p0, v7}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->createShader(Z)V
 
-    .line 45
     invoke-direct {p0, v7}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->updateInputCount(Z)V
 
-    .line 46
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mOverlayMode:I
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mOldOverlayMode:I
 
-    .line 47
     :cond_0
     const-string v0, "source"
 
@@ -1319,7 +1186,6 @@
 
     move-result-object v8
 
-    .line 48
     const-string v0, "overlay"
 
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->getConnectedInputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/InputPort;
@@ -1334,15 +1200,12 @@
 
     move-result-object v9
 
-    .line 49
     const/4 v0, 0x0
 
-    .line 50
     iget-boolean v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mHasMask:Z
 
     if-eqz v1, :cond_1
 
-    .line 51
     const-string v0, "mask"
 
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->getConnectedInputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/InputPort;
@@ -1357,13 +1220,11 @@
 
     move-result-object v0
 
-    .line 52
     :cond_1
     invoke-virtual {v8}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->getDimensions()[I
 
     move-result-object v1
 
-    .line 53
     invoke-virtual {v6, v1}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->fetchAvailableFrame([I)Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
     move-result-object v1
@@ -1372,12 +1233,10 @@
 
     move-result-object v10
 
-    .line 54
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mIdShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     invoke-virtual {v1, v8, v10}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->process(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)V
 
-    .line 55
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mOverlayShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     const-string v2, "opacity"
@@ -1386,7 +1245,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->setUniformValue(Ljava/lang/String;F)V
 
-    .line 56
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mSourceQuads:[Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
     if-eqz v1, :cond_2
@@ -1405,7 +1263,6 @@
 
     if-eq v1, v2, :cond_2
 
-    .line 57
     new-instance v0, Ljava/lang/RuntimeException;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mSourceQuads:[Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
@@ -1456,42 +1313,32 @@
 
     throw v0
 
-    .line 58
     :cond_2
     sget-object v2, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mDefaultQuads:[Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
-    .line 59
     sget-object v3, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mDefaultQuads:[Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
-    .line 60
     const/4 v1, 0x0
 
-    .line 61
     iget-object v4, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mSourceQuads:[Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
     if-eqz v4, :cond_3
 
-    .line 62
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mSourceQuads:[Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
-    .line 63
     const/4 v1, 0x1
 
-    .line 64
     :cond_3
     iget-object v4, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mTargetQuads:[Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
     if-eqz v4, :cond_b
 
-    .line 65
     iget-object v3, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mTargetQuads:[Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
-    .line 66
     const/4 v1, 0x1
 
     move-object v5, v3
 
-    .line 67
     :goto_0
     if-eqz v1, :cond_7
 
@@ -1503,14 +1350,12 @@
 
     move-result v1
 
-    .line 68
     :goto_1
     const/4 v4, 0x0
 
     :goto_2
     if-ge v4, v1, :cond_a
 
-    .line 69
     array-length v3, v2
 
     if-ge v4, v3, :cond_8
@@ -1520,7 +1365,6 @@
     :goto_3
     aget-object v11, v2, v3
 
-    .line 70
     array-length v3, v5
 
     if-ge v4, v3, :cond_9
@@ -1530,20 +1374,16 @@
     :goto_4
     aget-object v3, v5, v3
 
-    .line 71
     iget-object v12, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mOverlayShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     invoke-virtual {v12, v11}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->setSourceQuad(Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;)V
 
-    .line 72
     iget-object v11, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mOverlayShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     invoke-virtual {v11, v3}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->setTargetQuad(Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;)V
 
-    .line 73
     if-eqz v7, :cond_4
 
-    .line 74
     iget-object v11, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mOverlayShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     const-string v12, "a_texcoord_src"
@@ -1556,68 +1396,56 @@
 
     invoke-virtual {v11, v12, v3, v13}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->setAttributeValues(Ljava/lang/String;[FI)V
 
-    .line 76
     :cond_4
     iget v3, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mInputFrameCount:I
 
     new-array v11, v3, [Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;
 
-    .line 77
     const/4 v12, 0x0
 
     const/4 v3, 0x1
 
     aput-object v9, v11, v12
 
-    .line 78
     if-eqz v7, :cond_5
 
-    .line 79
     const/4 v12, 0x1
 
     const/4 v3, 0x2
 
     aput-object v8, v11, v12
 
-    .line 80
     :cond_5
     iget-boolean v12, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mHasMask:Z
 
     if-eqz v12, :cond_6
 
-    .line 81
     aput-object v0, v11, v3
 
-    .line 82
     :cond_6
     iget-object v3, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/composite/OverlayFilter;->mOverlayShader:Lcom/google/android/libraries/smartburst/filterfw/ImageShader;
 
     invoke-virtual {v3, v11, v10}, Lcom/google/android/libraries/smartburst/filterfw/ImageShader;->processMulti([Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)V
 
-    .line 83
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 67
     :cond_7
     const/4 v1, 0x1
 
     goto :goto_1
 
-    .line 69
     :cond_8
     const/4 v3, 0x0
 
     goto :goto_3
 
-    .line 70
     :cond_9
     const/4 v3, 0x0
 
     goto :goto_4
 
-    .line 84
     :cond_a
     invoke-virtual {v8}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->getTimestamp()J
 
@@ -1625,10 +1453,8 @@
 
     invoke-virtual {v10, v0, v1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->setTimestamp(J)V
 
-    .line 85
     invoke-virtual {v6, v10}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->pushFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;)V
 
-    .line 86
     return-void
 
     :cond_b

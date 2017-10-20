@@ -17,24 +17,18 @@
 .method public constructor <init>(Ljac;I)V
     .locals 1
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Liyx;-><init>(Ljac;IB)V
 
-    .line 2
     return-void
 .end method
 
 .method private constructor <init>(Ljac;IB)V
     .locals 2
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Ljat;-><init>()V
 
-    .line 4
     new-instance v1, Liyy;
 
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
@@ -47,20 +41,16 @@
 
     iput-object v1, p0, Liyx;->a:Liyy;
 
-    .line 5
     const v0, 0x3f4ccccd    # 0.8f
 
     iput v0, p0, Liyx;->b:F
 
-    .line 6
     iput p2, p0, Liyx;->c:I
 
-    .line 7
     const/4 v0, 0x1
 
     iput v0, p0, Liyx;->d:I
 
-    .line 8
     return-void
 .end method
 
@@ -69,77 +59,61 @@
 .method public final a(Ljao;)Ljao;
     .locals 11
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 12
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 13
     invoke-virtual {p1}, Ljao;->d()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 14
     const-string v0, "ContentValueSegmentFilter"
 
     const-string v1, "Empty image set passed in! Nothing to do."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     new-instance v0, Ljao;
 
-    .line 16
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 17
     invoke-direct {v0, v1}, Ljao;-><init>(Ljava/util/Collection;)V
 
-    .line 58
     :goto_0
     return-object v0
 
-    .line 19
     :cond_0
     iget-object v3, p0, Liyx;->a:Liyy;
 
-    .line 20
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 21
     iget-object v0, v3, Liyy;->a:Ljac;
 
     invoke-static {v0}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 22
     invoke-virtual {p1}, Ljao;->d()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
-    .line 23
     sget-object v0, Ljmg;->a:Ljkk;
 
     move-object v2, v0
 
-    .line 40
     :cond_1
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 41
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 42
     add-int/lit8 v0, v0, -0x1
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -150,14 +124,12 @@
 
     iget-wide v6, v0, Liyz;->a:J
 
-    .line 43
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
     invoke-interface {v5, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 44
     const-string v0, "ContentValueSegmentFilter"
 
     const/16 v3, 0x25
@@ -182,7 +154,6 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     invoke-virtual {p1}, Ljao;->a()I
 
     move-result v0
@@ -194,14 +165,12 @@
     :goto_1
     if-ltz v3, :cond_8
 
-    .line 46
     invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Liyz;
 
-    .line 47
     const-string v4, "ContentValueSegmentFilter"
 
     iget-wide v6, v0, Liyz;->a:J
@@ -228,7 +197,6 @@
 
     invoke-static {v4, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 48
     invoke-interface {v5}, Ljava/util/List;->size()I
 
     move-result v4
@@ -237,7 +205,6 @@
 
     if-lt v4, v6, :cond_2
 
-    .line 50
     const-string v4, "ContentValueSegmentFilter"
 
     iget-wide v6, v0, Liyz;->a:J
@@ -276,7 +243,6 @@
 
     invoke-static {v4, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     iget v4, v0, Liyz;->b:F
 
     iget v6, p0, Liyx;->b:F
@@ -287,7 +253,6 @@
 
     const/4 v4, 0x1
 
-    .line 52
     :goto_2
     if-eqz v4, :cond_3
 
@@ -299,7 +264,6 @@
 
     if-ge v4, v6, :cond_3
 
-    .line 53
     :cond_2
     iget-wide v6, v0, Liyz;->a:J
 
@@ -309,7 +273,6 @@
 
     invoke-interface {v5, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 54
     :cond_3
     add-int/lit8 v0, v3, -0x1
 
@@ -317,18 +280,15 @@
 
     goto :goto_1
 
-    .line 25
     :cond_4
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 26
     iget-object v0, v3, Liyy;->a:Ljac;
 
     invoke-interface {v0}, Ljac;->a()V
 
-    .line 27
     invoke-virtual {p1}, Ljao;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -350,7 +310,6 @@
 
     move-result-wide v6
 
-    .line 28
     const-string v0, "ContentValueSegmentFilter"
 
     const/16 v5, 0x22
@@ -375,7 +334,6 @@
 
     invoke-static {v0, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
     iget-object v0, v3, Liyy;->a:Ljac;
 
     invoke-interface {v0, v6, v7}, Ljac;->b(J)V
@@ -385,7 +343,6 @@
     :cond_5
     move v0, v1
 
-    .line 31
     :goto_4
     invoke-virtual {p1}, Ljao;->a()I
 
@@ -393,25 +350,20 @@
 
     if-ge v0, v4, :cond_1
 
-    .line 32
     invoke-virtual {v3, p1, v2}, Liyy;->a(Ljao;Ljava/util/List;)Liyz;
 
     move-result-object v4
 
-    .line 33
     if-eqz v4, :cond_6
 
-    .line 34
     invoke-interface {v2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 35
     iget-object v5, v3, Liyy;->a:Ljac;
 
     iget-wide v6, v4, Liyz;->a:J
 
     invoke-interface {v5, v6, v7}, Ljac;->c(J)V
 
-    .line 36
     const-string v5, "ContentValueSegmentFilter"
 
     iget-wide v6, v4, Liyz;->a:J
@@ -460,7 +412,6 @@
 
     invoke-static {v5, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 37
     :cond_6
     add-int/lit8 v0, v0, 0x1
 
@@ -469,10 +420,8 @@
     :cond_7
     move v4, v1
 
-    .line 51
     goto/16 :goto_2
 
-    .line 55
     :cond_8
     const-string v0, "ContentValueSegmentFilter"
 
@@ -502,13 +451,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 56
     new-instance v0, Ljao;
 
-    .line 57
     iget-object v1, p1, Ljao;->b:Ljava/util/Set;
 
-    .line 58
     invoke-direct {v0, v5, v1}, Ljao;-><init>(Ljava/util/Collection;Ljava/util/Set;)V
 
     goto/16 :goto_0
@@ -517,16 +463,12 @@
 .method public final toString()Ljava/lang/String;
     .locals 7
 
-    .prologue
-    .line 9
     const-string v0, "ContentValueSegmentFilter[scorer="
 
     iget-object v1, p0, Liyx;->a:Liyy;
 
-    .line 10
     iget-object v1, v1, Liyy;->a:Ljac;
 
-    .line 11
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1

@@ -11,30 +11,24 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
-    .line 2
     new-instance v0, Ljy;
 
     invoke-direct {v0}, Ljy;-><init>()V
 
-    .line 3
     new-instance v0, Ljx;
 
     invoke-direct {v0}, Ljx;-><init>()V
 
     sput-object v0, Lc;->a:Landroid/animation/TimeInterpolator;
 
-    .line 4
     new-instance v0, Ljz;
 
     invoke-direct {v0}, Ljz;-><init>()V
 
-    .line 5
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V

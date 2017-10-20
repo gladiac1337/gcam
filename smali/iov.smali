@@ -19,25 +19,18 @@
 .method public constructor <init>(Liop;Lcom/google/android/libraries/smartburst/buffers/FeatureTable;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget-object v0, Liow;->b:Liow;
 
     iput-object v0, p0, Liov;->c:Liow;
 
-    .line 3
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     invoke-static {p2}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     iput-object p1, p0, Liov;->b:Liop;
 
-    .line 7
     iget-object v0, p1, Liop;->a:Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;->getRunner()Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;
@@ -46,15 +39,12 @@
 
     invoke-virtual {v0, p0}, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;->setListener(Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$Listener;)V
 
-    .line 9
     iget-object v0, p1, Liop;->b:Ljava/util/List;
 
-    .line 10
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 11
     if-lez v0, :cond_0
 
     const/4 v0, 0x1
@@ -64,10 +54,8 @@
 
     invoke-static {v0, v1}, Lixp;->a(ZLjava/lang/Object;)V
 
-    .line 13
     iget-object v0, p1, Liop;->b:Ljava/util/List;
 
-    .line 14
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -85,18 +73,15 @@
 
     check-cast v0, Liou;
 
-    .line 15
     invoke-interface {v0, p2}, Liou;->setFeatureTable(Lcom/google/android/libraries/smartburst/buffers/FeatureTable;)V
 
     goto :goto_1
 
-    .line 11
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 17
     :cond_1
     return-void
 .end method
@@ -104,18 +89,14 @@
 .method private static a(Liow;Liow;)V
     .locals 5
 
-    .prologue
-    .line 18
     if-eq p0, p1, :cond_0
 
-    .line 19
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-virtual {p1}, Liow;->name()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 20
     invoke-virtual {p0}, Liow;->name()Ljava/lang/String;
 
     move-result-object v2
@@ -172,7 +153,6 @@
 
     throw v0
 
-    .line 21
     :cond_0
     return-void
 .end method
@@ -182,14 +162,10 @@
 .method public final a()I
     .locals 1
 
-    .prologue
-    .line 22
     iget-object v0, p0, Liov;->b:Liop;
 
-    .line 23
     iget-object v0, v0, Liop;->b:Ljava/util/List;
 
-    .line 24
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -200,49 +176,39 @@
 .method public final declared-synchronized a(Ljga;)V
     .locals 2
 
-    .prologue
-    .line 25
     monitor-enter p0
 
     :try_start_0
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 26
     iget-object v0, p0, Liov;->c:Liow;
 
     sget-object v1, Liow;->b:Liow;
 
     invoke-static {v0, v1}, Liov;->a(Liow;Liow;)V
 
-    .line 27
     sget-object v0, Liow;->a:Liow;
 
     iput-object v0, p0, Liov;->c:Liow;
 
-    .line 28
     iget-object v0, p0, Liov;->b:Liop;
 
-    .line 29
     iget-object v0, v0, Liop;->a:Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;->run()Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;
 
-    .line 30
     iput-object p1, p0, Liov;->a:Ljga;
 
-    .line 31
     iget-object v0, p0, Liov;->a:Ljga;
 
     invoke-interface {v0}, Ljga;->a()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 32
     monitor-exit p0
 
     return-void
 
-    .line 25
     :catchall_0
     move-exception v0
 
@@ -254,8 +220,6 @@
 .method public final declared-synchronized b()V
     .locals 2
 
-    .prologue
-    .line 33
     monitor-enter p0
 
     :try_start_0
@@ -265,10 +229,8 @@
 
     invoke-static {v0, v1}, Liov;->a(Liow;Liow;)V
 
-    .line 34
     iget-object v0, p0, Liov;->b:Liop;
 
-    .line 35
     iget-object v0, v0, Liop;->a:Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
 
     const-string v1, "camera"
@@ -279,22 +241,18 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/video/VideoProviderSource;
 
-    .line 36
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/video/VideoProviderSource;->forceClose()V
 
-    .line 37
     sget-object v0, Liow;->b:Liow;
 
     iput-object v0, p0, Liov;->c:Liow;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 38
     monitor-exit p0
 
     return-void
 
-    .line 33
     :catchall_0
     move-exception v0
 
@@ -306,11 +264,8 @@
 .method public final c()V
     .locals 2
 
-    .prologue
-    .line 39
     iget-object v0, p0, Liov;->b:Liop;
 
-    .line 40
     iget-object v1, v0, Liop;->a:Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
 
     invoke-virtual {v1}, Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;->getRunner()Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;
@@ -319,7 +274,6 @@
 
     invoke-virtual {v1}, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;->stop()V
 
-    .line 41
     iget-object v0, v0, Liop;->a:Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;->getRunner()Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;
@@ -328,25 +282,20 @@
 
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;->tearDown()V
 
-    .line 42
     return-void
 .end method
 
 .method public final onGraphRunnerError(Ljava/lang/Exception;Z)V
     .locals 1
 
-    .prologue
-    .line 46
     iget-object v0, p0, Liov;->a:Ljga;
 
     if-eqz v0, :cond_0
 
-    .line 47
     iget-object v0, p0, Liov;->a:Ljga;
 
     invoke-interface {v0, p1}, Ljga;->a(Ljava/lang/Exception;)V
 
-    .line 48
     :cond_0
     return-void
 .end method
@@ -354,18 +303,14 @@
 .method public final onGraphRunnerStopped(Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;)V
     .locals 1
 
-    .prologue
-    .line 43
     iget-object v0, p0, Liov;->a:Ljga;
 
     if-eqz v0, :cond_0
 
-    .line 44
     iget-object v0, p0, Liov;->a:Ljga;
 
     invoke-interface {v0}, Ljga;->b()V
 
-    .line 45
     :cond_0
     return-void
 .end method
@@ -373,8 +318,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 49
     const-string v0, "FilterFwFeatureExtractor"
 
     return-object v0

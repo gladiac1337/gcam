@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 4
     const/16 v0, 0xc9
 
     new-array v0, v0, [F
@@ -232,13 +230,10 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Ljz;->a:[F
 
     invoke-direct {p0, v0}, Lka;-><init>([F)V
 
-    .line 2
     return-void
 .end method
 
@@ -247,8 +242,6 @@
 .method public final bridge synthetic getInterpolation(F)F
     .locals 1
 
-    .prologue
-    .line 3
     invoke-super {p0, p1}, Lka;->getInterpolation(F)F
 
     move-result v0

@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 12
     const-string v0, "NoOpPrewarmService"
 
     invoke-static {v0}, Lbhy;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -35,8 +33,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Landroid/service/media/CameraPrewarmService;-><init>()V
 
     return-void
@@ -47,26 +43,20 @@
 .method public onCooldown(Z)V
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/prewarm/NoOpPrewarmService;->c:Laxr;
 
     invoke-virtual {v0}, Laxr;->a()V
 
-    .line 10
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/prewarm/NoOpPrewarmService;->b:Lidb;
 
     invoke-interface {v0}, Lidb;->h()V
 
-    .line 11
     return-void
 .end method
 
 .method public onCreate()V
     .locals 1
 
-    .prologue
-    .line 2
     invoke-virtual {p0}, Lcom/google/android/apps/camera/legacy/app/prewarm/NoOpPrewarmService;->getApplication()Landroid/app/Application;
 
     move-result-object v0
@@ -79,36 +69,29 @@
 
     invoke-interface {v0, p0}, Ldig;->a(Lcom/google/android/apps/camera/legacy/app/prewarm/NoOpPrewarmService;)V
 
-    .line 3
     invoke-super {p0}, Landroid/service/media/CameraPrewarmService;->onCreate()V
 
-    .line 4
     new-instance v0, Leiw;
 
     invoke-direct {v0, p0}, Leiw;-><init>(Lcom/google/android/apps/camera/legacy/app/prewarm/NoOpPrewarmService;)V
 
     iput-object v0, p0, Lcom/google/android/apps/camera/legacy/app/prewarm/NoOpPrewarmService;->d:Ljava/lang/Runnable;
 
-    .line 5
     return-void
 .end method
 
 .method public onPrewarm()V
     .locals 2
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/prewarm/NoOpPrewarmService;->c:Laxr;
 
     iget-object v1, p0, Lcom/google/android/apps/camera/legacy/app/prewarm/NoOpPrewarmService;->d:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Laxr;->a(Ljava/lang/Runnable;)V
 
-    .line 7
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/prewarm/NoOpPrewarmService;->b:Lidb;
 
     invoke-interface {v0}, Lidb;->g()V
 
-    .line 8
     return-void
 .end method

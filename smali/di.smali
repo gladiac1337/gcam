@@ -17,8 +17,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ldh;-><init>()V
 
     return-void
@@ -29,15 +27,12 @@
 .method public final a(Landroid/view/View;F)V
     .locals 6
 
-    .prologue
     const/4 v5, 0x1
 
-    .line 2
     sget-boolean v0, Ldi;->b:Z
 
     if-nez v0, :cond_0
 
-    .line 3
     :try_start_0
     const-class v0, Landroid/view/View;
 
@@ -57,7 +52,6 @@
 
     move-result-object v0
 
-    .line 4
     sput-object v0, Ldi;->a:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
@@ -66,17 +60,14 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8
     :goto_0
     sput-boolean v5, Ldi;->b:Z
 
-    .line 9
     :cond_0
     sget-object v0, Ldi;->a:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_1
 
-    .line 10
     :try_start_1
     sget-object v0, Ldi;->a:Ljava/lang/reflect/Method;
 
@@ -97,15 +88,12 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 17
     :goto_1
     return-void
 
-    .line 6
     :catch_0
     move-exception v0
 
-    .line 7
     const-string v1, "ViewUtilsApi19"
 
     const-string v2, "Failed to retrieve setTransitionAlpha method"
@@ -114,11 +102,9 @@
 
     goto :goto_0
 
-    .line 14
     :catch_1
     move-exception v0
 
-    .line 15
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-virtual {v0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
@@ -129,13 +115,11 @@
 
     throw v1
 
-    .line 16
     :cond_1
     invoke-virtual {p1, p2}, Landroid/view/View;->setAlpha(F)V
 
     goto :goto_1
 
-    .line 13
     :catch_2
     move-exception v0
 
@@ -145,15 +129,12 @@
 .method public final b(Landroid/view/View;)F
     .locals 4
 
-    .prologue
     const/4 v3, 0x1
 
-    .line 18
     sget-boolean v0, Ldi;->d:Z
 
     if-nez v0, :cond_0
 
-    .line 19
     :try_start_0
     const-class v0, Landroid/view/View;
 
@@ -167,7 +148,6 @@
 
     move-result-object v0
 
-    .line 20
     sput-object v0, Ldi;->c:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
@@ -176,17 +156,14 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 24
     :goto_0
     sput-boolean v3, Ldi;->d:Z
 
-    .line 25
     :cond_0
     sget-object v0, Ldi;->c:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_1
 
-    .line 26
     :try_start_1
     sget-object v0, Ldi;->c:Ljava/lang/reflect/Method;
 
@@ -207,15 +184,12 @@
 
     move-result v0
 
-    .line 31
     :goto_1
     return v0
 
-    .line 22
     :catch_0
     move-exception v0
 
-    .line 23
     const-string v1, "ViewUtilsApi19"
 
     const-string v2, "Failed to retrieve getTransitionAlpha method"
@@ -224,11 +198,9 @@
 
     goto :goto_0
 
-    .line 29
     :catch_1
     move-exception v0
 
-    .line 30
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-virtual {v0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
@@ -239,11 +211,9 @@
 
     throw v1
 
-    .line 28
     :catch_2
     move-exception v0
 
-    .line 31
     :cond_1
     invoke-super {p0, p1}, Ldl;->b(Landroid/view/View;)F
 
@@ -255,15 +225,11 @@
 .method public final c(Landroid/view/View;)V
     .locals 0
 
-    .prologue
-    .line 32
     return-void
 .end method
 
 .method public final d(Landroid/view/View;)V
     .locals 0
 
-    .prologue
-    .line 33
     return-void
 .end method

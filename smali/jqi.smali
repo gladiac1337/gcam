@@ -21,91 +21,71 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljvx;-><init>()V
 
-    .line 3
     iput v2, p0, Ljqi;->a:I
 
-    .line 4
     const-string v0, ""
 
     iput-object v0, p0, Ljqi;->f:Ljava/lang/String;
 
-    .line 5
     iput v2, p0, Ljqi;->b:I
 
-    .line 6
     const-string v0, ""
 
     iput-object v0, p0, Ljqi;->c:Ljava/lang/String;
 
-    .line 7
     iput v1, p0, Ljqi;->d:F
 
-    .line 8
     iput v1, p0, Ljqi;->e:F
 
-    .line 9
     const/4 v0, 0x0
 
     iput-object v0, p0, Ljqi;->unknownFieldData:Ljvz;
 
-    .line 10
     const/4 v0, -0x1
 
     iput v0, p0, Ljqi;->cachedSize:I
 
-    .line 11
     return-void
 .end method
 
 .method private final a(Ljvv;)Ljqi;
     .locals 6
 
-    .prologue
-    .line 60
     :cond_0
     :goto_0
     invoke-virtual {p1}, Ljvv;->a()I
 
     move-result v0
 
-    .line 61
     sparse-switch v0, :sswitch_data_0
 
-    .line 63
     invoke-super {p0, p1, v0}, Ljvx;->storeUnknownField(Ljvv;I)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 64
     :sswitch_0
     return-object p0
 
-    .line 65
     :sswitch_1
     invoke-virtual {p1}, Ljvv;->i()I
 
     move-result v1
 
-    .line 67
     :try_start_0
     invoke-virtual {p1}, Ljvv;->d()I
 
     move-result v2
 
-    .line 69
     packed-switch v2, :pswitch_data_0
 
-    .line 71
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     const/16 v4, 0x2f
@@ -134,18 +114,15 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 75
     :catch_0
     move-exception v2
 
     invoke-virtual {p1, v1}, Ljvv;->e(I)V
 
-    .line 76
     invoke-virtual {p0, p1, v0}, Ljqi;->storeUnknownField(Ljvv;I)Z
 
     goto :goto_0
 
-    .line 72
     :pswitch_0
     :try_start_1
     iput v2, p0, Ljqi;->a:I
@@ -154,7 +131,6 @@
 
     goto :goto_0
 
-    .line 78
     :sswitch_2
     invoke-virtual {p1}, Ljvv;->c()Ljava/lang/String;
 
@@ -164,19 +140,16 @@
 
     goto :goto_0
 
-    .line 80
     :sswitch_3
     invoke-virtual {p1}, Ljvv;->i()I
 
     move-result v1
 
-    .line 82
     :try_start_2
     invoke-virtual {p1}, Ljvv;->d()I
 
     move-result v2
 
-    .line 83
     invoke-static {v2}, Ljqn;->b(I)I
 
     move-result v2
@@ -187,18 +160,15 @@
 
     goto :goto_0
 
-    .line 86
     :catch_1
     move-exception v2
 
     invoke-virtual {p1, v1}, Ljvv;->e(I)V
 
-    .line 87
     invoke-virtual {p0, p1, v0}, Ljqi;->storeUnknownField(Ljvv;I)Z
 
     goto :goto_0
 
-    .line 89
     :sswitch_4
     invoke-virtual {p1}, Ljvv;->c()Ljava/lang/String;
 
@@ -208,7 +178,6 @@
 
     goto :goto_0
 
-    .line 92
     :sswitch_5
     invoke-virtual {p1}, Ljvv;->f()I
 
@@ -218,12 +187,10 @@
 
     move-result v0
 
-    .line 93
     iput v0, p0, Ljqi;->d:F
 
     goto :goto_0
 
-    .line 96
     :sswitch_6
     invoke-virtual {p1}, Ljvv;->f()I
 
@@ -233,12 +200,10 @@
 
     move-result v0
 
-    .line 97
     iput v0, p0, Ljqi;->e:F
 
     goto :goto_0
 
-    .line 61
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -250,7 +215,6 @@
         0x35 -> :sswitch_6
     .end sparse-switch
 
-    .line 69
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -269,32 +233,26 @@
 .method protected final computeSerializedSize()I
     .locals 4
 
-    .prologue
     const/4 v3, 0x0
 
-    .line 28
     invoke-super {p0}, Ljvx;->computeSerializedSize()I
 
     move-result v0
 
-    .line 29
     iget v1, p0, Ljqi;->a:I
 
     if-eqz v1, :cond_0
 
-    .line 30
     const/4 v1, 0x1
 
     iget v2, p0, Ljqi;->a:I
 
-    .line 31
     invoke-static {v1, v2}, Ljvw;->b(II)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 32
     :cond_0
     iget-object v1, p0, Ljqi;->f:Ljava/lang/String;
 
@@ -310,37 +268,31 @@
 
     if-nez v1, :cond_1
 
-    .line 33
     const/4 v1, 0x2
 
     iget-object v2, p0, Ljqi;->f:Ljava/lang/String;
 
-    .line 34
     invoke-static {v1, v2}, Ljvw;->b(ILjava/lang/String;)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 35
     :cond_1
     iget v1, p0, Ljqi;->b:I
 
     if-eqz v1, :cond_2
 
-    .line 36
     const/4 v1, 0x3
 
     iget v2, p0, Ljqi;->b:I
 
-    .line 37
     invoke-static {v1, v2}, Ljvw;->b(II)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 38
     :cond_2
     iget-object v1, p0, Ljqi;->c:Ljava/lang/String;
 
@@ -356,19 +308,16 @@
 
     if-nez v1, :cond_3
 
-    .line 39
     const/4 v1, 0x4
 
     iget-object v2, p0, Ljqi;->c:Ljava/lang/String;
 
-    .line 40
     invoke-static {v1, v2}, Ljvw;->b(ILjava/lang/String;)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 41
     :cond_3
     iget v1, p0, Ljqi;->d:F
 
@@ -376,28 +325,22 @@
 
     move-result v1
 
-    .line 42
     invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v2
 
     if-eq v1, v2, :cond_4
 
-    .line 46
     const/16 v1, 0x28
 
-    .line 47
     invoke-static {v1}, Ljvw;->d(I)I
 
     move-result v1
 
-    .line 48
     add-int/lit8 v1, v1, 0x4
 
-    .line 49
     add-int/2addr v0, v1
 
-    .line 50
     :cond_4
     iget v1, p0, Ljqi;->e:F
 
@@ -405,28 +348,22 @@
 
     move-result v1
 
-    .line 51
     invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v2
 
     if-eq v1, v2, :cond_5
 
-    .line 55
     const/16 v1, 0x30
 
-    .line 56
     invoke-static {v1}, Ljvw;->d(I)I
 
     move-result v1
 
-    .line 57
     add-int/lit8 v1, v1, 0x4
 
-    .line 58
     add-int/2addr v0, v1
 
-    .line 59
     :cond_5
     return v0
 .end method
@@ -434,8 +371,6 @@
 .method public final synthetic mergeFrom(Ljvv;)Ljwd;
     .locals 1
 
-    .prologue
-    .line 99
     invoke-direct {p0, p1}, Ljqi;->a(Ljvv;)Ljqi;
 
     move-result-object v0
@@ -446,22 +381,18 @@
 .method public final writeTo(Ljvw;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 12
     iget v0, p0, Ljqi;->a:I
 
     if-eqz v0, :cond_0
 
-    .line 13
     const/4 v0, 0x1
 
     iget v1, p0, Ljqi;->a:I
 
     invoke-virtual {p1, v0, v1}, Ljvw;->a(II)V
 
-    .line 14
     :cond_0
     iget-object v0, p0, Ljqi;->f:Ljava/lang/String;
 
@@ -477,27 +408,23 @@
 
     if-nez v0, :cond_1
 
-    .line 15
     const/4 v0, 0x2
 
     iget-object v1, p0, Ljqi;->f:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Ljvw;->a(ILjava/lang/String;)V
 
-    .line 16
     :cond_1
     iget v0, p0, Ljqi;->b:I
 
     if-eqz v0, :cond_2
 
-    .line 17
     const/4 v0, 0x3
 
     iget v1, p0, Ljqi;->b:I
 
     invoke-virtual {p1, v0, v1}, Ljvw;->a(II)V
 
-    .line 18
     :cond_2
     iget-object v0, p0, Ljqi;->c:Ljava/lang/String;
 
@@ -513,14 +440,12 @@
 
     if-nez v0, :cond_3
 
-    .line 19
     const/4 v0, 0x4
 
     iget-object v1, p0, Ljqi;->c:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Ljvw;->a(ILjava/lang/String;)V
 
-    .line 20
     :cond_3
     iget v0, p0, Ljqi;->d:F
 
@@ -528,21 +453,18 @@
 
     move-result v0
 
-    .line 21
     invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v1
 
     if-eq v0, v1, :cond_4
 
-    .line 22
     const/4 v0, 0x5
 
     iget v1, p0, Ljqi;->d:F
 
     invoke-virtual {p1, v0, v1}, Ljvw;->a(IF)V
 
-    .line 23
     :cond_4
     iget v0, p0, Ljqi;->e:F
 
@@ -550,24 +472,20 @@
 
     move-result v0
 
-    .line 24
     invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v1
 
     if-eq v0, v1, :cond_5
 
-    .line 25
     const/4 v0, 0x6
 
     iget v1, p0, Ljqi;->e:F
 
     invoke-virtual {p1, v0, v1}, Ljvw;->a(IF)V
 
-    .line 26
     :cond_5
     invoke-super {p0, p1}, Ljvx;->writeTo(Ljvw;)V
 
-    .line 27
     return-void
 .end method

@@ -26,14 +26,10 @@
 .method public constructor <init>(Landroid/hardware/SensorManager;)V
     .locals 13
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbpq;->d:Landroid/hardware/SensorManager;
 
-    .line 3
     const/4 v0, 0x4
 
     invoke-virtual {p1, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
@@ -42,7 +38,6 @@
 
     iput-object v0, p0, Lbpq;->g:Landroid/hardware/Sensor;
 
-    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0x190
@@ -51,7 +46,6 @@
 
     iput-object v0, p0, Lbpq;->a:Ljava/util/List;
 
-    .line 5
     const/4 v0, 0x0
 
     move v11, v0
@@ -61,7 +55,6 @@
 
     if-ge v11, v0, :cond_0
 
-    .line 6
     iget-object v12, p0, Lbpq;->a:Ljava/util/List;
 
     new-instance v0, Lbpp;
@@ -86,36 +79,29 @@
 
     invoke-interface {v12, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 7
     add-int/lit8 v0, v11, 0x1
 
     move v11, v0
 
     goto :goto_0
 
-    .line 8
     :cond_0
     const/4 v0, 0x0
 
     iput v0, p0, Lbpq;->c:I
 
-    .line 9
     new-instance v0, Lbpt;
 
-    .line 10
     invoke-direct {v0, p0}, Lbpt;-><init>(Lbpq;)V
 
-    .line 11
     iput-object v0, p0, Lbpq;->f:Landroid/hardware/SensorEventListener;
 
-    .line 12
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lbpq;->e:Ljava/util/Set;
 
-    .line 13
     new-instance v0, Lica;
 
     sget-object v1, Lbpr;->a:Licb;
@@ -126,15 +112,12 @@
 
     iput-object v0, p0, Lbpq;->b:Lica;
 
-    .line 14
     return-void
 .end method
 
 .method private final declared-synchronized b()V
     .locals 4
 
-    .prologue
-    .line 23
     monitor-enter p0
 
     :try_start_0
@@ -150,12 +133,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 24
     monitor-exit p0
 
     return-void
 
-    .line 23
     :catchall_0
     move-exception v0
 
@@ -167,8 +148,6 @@
 .method private final declared-synchronized c()V
     .locals 2
 
-    .prologue
-    .line 25
     monitor-enter p0
 
     :try_start_0
@@ -180,12 +159,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 26
     monitor-exit p0
 
     return-void
 
-    .line 25
     :catchall_0
     move-exception v0
 
@@ -199,8 +176,6 @@
 .method public final declared-synchronized a()Lbpn;
     .locals 2
 
-    .prologue
-    .line 15
     monitor-enter p0
 
     :try_start_0
@@ -212,28 +187,23 @@
 
     if-eqz v0, :cond_0
 
-    .line 16
     invoke-direct {p0}, Lbpq;->b()V
 
-    .line 17
     :cond_0
     new-instance v0, Lbps;
 
     invoke-direct {v0, p0}, Lbps;-><init>(Lbpq;)V
 
-    .line 18
     iget-object v1, p0, Lbpq;->e:Ljava/util/Set;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 19
     monitor-exit p0
 
     return-object v0
 
-    .line 15
     :catchall_0
     move-exception v0
 
@@ -245,8 +215,6 @@
 .method final declared-synchronized a(Lbpn;)V
     .locals 1
 
-    .prologue
-    .line 20
     monitor-enter p0
 
     :try_start_0
@@ -266,18 +234,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 21
     invoke-direct {p0}, Lbpq;->c()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 22
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 20
     :catchall_0
     move-exception v0
 

@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Landroid/database/Observable;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method public final a()Z
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lup;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -43,8 +39,6 @@
 .method public final b()V
     .locals 2
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lup;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -58,7 +52,6 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 4
     iget-object v0, p0, Lup;->mObservers:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -69,14 +62,12 @@
 
     invoke-virtual {v0}, Luq;->a()V
 
-    .line 5
     add-int/lit8 v0, v1, -0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 6
     :cond_0
     return-void
 .end method

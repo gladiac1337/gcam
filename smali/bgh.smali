@@ -23,7 +23,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x3
 
     const/4 v5, 0x1
@@ -32,7 +31,6 @@
 
     const/4 v3, 0x2
 
-    .line 5
     new-instance v0, Lbgh;
 
     const-string v1, "LC"
@@ -41,7 +39,6 @@
 
     sput-object v0, Lbgh;->a:Lbgh;
 
-    .line 6
     new-instance v0, Lbgh;
 
     const-string v1, "HE"
@@ -52,7 +49,6 @@
 
     sput-object v0, Lbgh;->c:Lbgh;
 
-    .line 7
     new-instance v0, Lbgh;
 
     const-string v1, "LD"
@@ -63,7 +59,6 @@
 
     sput-object v0, Lbgh;->d:Lbgh;
 
-    .line 8
     new-instance v0, Lbgh;
 
     const-string v1, "ELD"
@@ -74,7 +69,6 @@
 
     sput-object v0, Lbgh;->e:Lbgh;
 
-    .line 9
     const/4 v0, 0x4
 
     new-array v0, v0, [Lbgh;
@@ -103,22 +97,16 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput p3, p0, Lbgh;->b:I
 
-    .line 4
     return-void
 .end method
 
 .method public static values()[Lbgh;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lbgh;->f:[Lbgh;
 
     invoke-virtual {v0}, [Lbgh;->clone()Ljava/lang/Object;

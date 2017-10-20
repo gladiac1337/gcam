@@ -14,8 +14,6 @@
 .method constructor <init>(Leob;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leoi;->a:Leob;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,10 +26,8 @@
 .method public final run()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x0
 
-    .line 2
     iget-object v0, p0, Leoi;->a:Leob;
 
     invoke-static {v0}, Leob;->a(Leob;)Leqo;
@@ -44,14 +40,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Leoi;->a:Leob;
 
-    .line 4
     iget-object v0, v0, Leob;->e:Lgvl;
 
-    .line 5
     iget-object v1, p0, Leoi;->a:Leob;
 
     invoke-static {v1}, Leob;->a(Leob;)Leqo;
@@ -68,39 +61,31 @@
 
     move-result-object v1
 
-    .line 11
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 12
     const/4 v2, 0x1
 
     iput-boolean v2, v0, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 13
     array-length v2, v1
 
     invoke-static {v1, v7, v2, v0}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 14
     iget v2, v0, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    .line 15
     iget v3, v0, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    .line 16
     :try_start_1
     new-instance v0, Lcom/google/android/libraries/camera/exif/ExifInterface;
 
     invoke-direct {v0}, Lcom/google/android/libraries/camera/exif/ExifInterface;-><init>()V
 
-    .line 17
     invoke-virtual {v0, v1}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a([B)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 23
     :goto_0
     new-instance v4, Lgrs;
 
@@ -112,12 +97,10 @@
 
     invoke-direct {v4, v5, v2}, Lgrs;-><init>(Libx;Lgvp;)V
 
-    .line 24
     invoke-virtual {v4, v0}, Lgrs;->a(Lcom/google/android/libraries/camera/exif/ExifInterface;)Lgrs;
 
     move-result-object v0
 
-    .line 25
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -126,26 +109,21 @@
 
     move-result-object v0
 
-    .line 26
     iget-object v2, p0, Leoi;->a:Leob;
 
     new-instance v3, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v3, v1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 27
     invoke-virtual {v2, v3, v0}, Leob;->a(Ljava/io/InputStream;Lgrs;)Ljuk;
 
-    .line 28
     :cond_0
     :goto_1
     return-void
 
-    .line 19
     :catch_0
     move-exception v0
 
-    .line 20
     iget-object v4, p0, Leoi;->a:Leob;
 
     const-string v5, "Could not read exif: "
@@ -168,16 +146,13 @@
 
     move-result-object v0
 
-    .line 21
     :goto_2
     invoke-virtual {v4, v0}, Leob;->b(Ljava/lang/String;)V
 
-    .line 22
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 20
     :cond_1
     new-instance v0, Ljava/lang/String;
 
@@ -185,7 +160,6 @@
 
     goto :goto_2
 
-    .line 8
     :catch_1
     move-exception v0
 

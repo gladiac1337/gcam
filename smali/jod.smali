@@ -7,8 +7,6 @@
 .method static constructor <clinit>()V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     return-void
@@ -17,8 +15,6 @@
 .method public static a()Ljob;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Ljoe;->a:Ljob;
 
     return-object v0

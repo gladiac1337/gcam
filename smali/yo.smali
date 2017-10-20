@@ -18,19 +18,14 @@
 .method public constructor <init>(Landroid/hardware/camera2/CameraManager;[Ljava/lang/String;)V
     .locals 7
 
-    .prologue
     const/4 v3, -0x1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lyo;->a:Landroid/hardware/camera2/CameraManager;
 
-    .line 3
     iput-object p2, p0, Lyo;->b:[Ljava/lang/String;
 
-    .line 5
     const/4 v0, 0x0
 
     move v1, v0
@@ -42,7 +37,6 @@
 
     if-ge v1, v0, :cond_1
 
-    .line 6
     :try_start_0
     aget-object v0, p2, v1
 
@@ -64,7 +58,6 @@
 
     move-result v0
 
-    .line 7
     if-ne v2, v3, :cond_0
 
     const/4 v4, 0x1
@@ -73,7 +66,6 @@
 
     move v2, v1
 
-    .line 13
     :cond_0
     :goto_1
     add-int/lit8 v0, v1, 0x1
@@ -82,14 +74,11 @@
 
     goto :goto_0
 
-    .line 10
     :catch_0
     move-exception v0
 
-    .line 11
     sget-object v4, Lyn;->a:Lacv;
 
-    .line 12
     new-instance v5, Ljava/lang/StringBuilder;
 
     const-string v6, "Couldn\'t get characteristics of camera \'"
@@ -114,11 +103,9 @@
 
     goto :goto_1
 
-    .line 14
     :cond_1
     iput v2, p0, Lyo;->c:I
 
-    .line 15
     return-void
 .end method
 
@@ -127,8 +114,6 @@
 .method public final a()I
     .locals 1
 
-    .prologue
-    .line 21
     iget v0, p0, Lyo;->c:I
 
     return v0
@@ -137,13 +122,10 @@
 .method public final a(I)Lace;
     .locals 2
 
-    .prologue
-    .line 16
     iget-object v0, p0, Lyo;->b:[Ljava/lang/String;
 
     aget-object v0, v0, p1
 
-    .line 17
     :try_start_0
     iget-object v1, p0, Lyo;->a:Landroid/hardware/camera2/CameraManager;
 
@@ -151,14 +133,12 @@
 
     move-result-object v1
 
-    .line 18
     new-instance v0, Lyp;
 
     invoke-direct {v0, v1}, Lyp;-><init>(Landroid/hardware/camera2/CameraCharacteristics;)V
     :try_end_0
     .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 20
     :goto_0
     return-object v0
 

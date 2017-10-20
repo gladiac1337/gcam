@@ -19,21 +19,16 @@
 .method constructor <init>()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->mDimensions:[I
 
-    .line 3
     iput-boolean v1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->mIsDirty:Z
 
-    .line 4
     iput v1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->cachePriority:I
 
     return-void
@@ -47,8 +42,6 @@
 .method protected assertImageCompatible(Lcom/google/android/libraries/smartburst/filterfw/FrameType;)V
     .locals 2
 
-    .prologue
-    .line 20
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->getElementId()I
 
     move-result v0
@@ -57,7 +50,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 21
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Cannot allocate texture with non-RGBA data type!"
@@ -66,7 +58,6 @@
 
     throw v0
 
-    .line 22
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->mDimensions:[I
 
@@ -80,7 +71,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 23
     :cond_1
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -90,7 +80,6 @@
 
     throw v0
 
-    .line 24
     :cond_2
     return-void
 .end method
@@ -101,8 +90,6 @@
 .method public getDimensions()[I
     .locals 1
 
-    .prologue
-    .line 13
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->mDimensions:[I
 
     return-object v0
@@ -111,8 +98,6 @@
 .method public getElementId()I
     .locals 1
 
-    .prologue
-    .line 15
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->mElementID:I
 
     return v0
@@ -121,8 +106,6 @@
 .method public getElementSize()I
     .locals 1
 
-    .prologue
-    .line 14
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->mElementSize:I
 
     return v0
@@ -137,8 +120,6 @@
 .method public isDirty()Z
     .locals 1
 
-    .prologue
-    .line 19
     iget-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->mIsDirty:Z
 
     return v0
@@ -150,13 +131,10 @@
 .method public markDirty()V
     .locals 1
 
-    .prologue
-    .line 17
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->mIsDirty:Z
 
-    .line 18
     return-void
 .end method
 
@@ -169,8 +147,6 @@
 .method public resize([I)Z
     .locals 1
 
-    .prologue
-    .line 16
     const/4 v0, 0x0
 
     return v0
@@ -179,8 +155,6 @@
 .method public setData(Ljava/lang/Object;)V
     .locals 4
 
-    .prologue
-    .line 6
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -229,33 +203,24 @@
 .method public setDimensions([I)V
     .locals 0
 
-    .prologue
-    .line 7
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->mDimensions:[I
 
-    .line 8
     return-void
 .end method
 
 .method public setElementId(I)V
     .locals 0
 
-    .prologue
-    .line 11
     iput p1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->mElementID:I
 
-    .line 12
     return-void
 .end method
 
 .method public setElementSize(I)V
     .locals 0
 
-    .prologue
-    .line 9
     iput p1, p0, Lcom/google/android/libraries/smartburst/filterfw/BackingStore$Backing;->mElementSize:I
 
-    .line 10
     return-void
 .end method
 
@@ -268,8 +233,6 @@
 .method public unlock()V
     .locals 0
 
-    .prologue
-    .line 5
     return-void
 .end method
 
