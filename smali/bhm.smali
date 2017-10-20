@@ -94,7 +94,7 @@
 .method public final b()Z
     .locals 3
 
-    const/4 v2, 0x2
+    const/4 v2, 0x4
 
     invoke-virtual {p0}, Lbhm;->cgc()I
 
@@ -124,7 +124,7 @@
 .method public final c()Z
     .locals 3
 
-    const/4 v2, 0x2
+    const/4 v2, 0x4
 
     invoke-virtual {p0}, Lbhm;->cgc()I
 

@@ -151,17 +151,17 @@
     goto :goto_0
 
     :cond_2
-    const/16 v1, 0xf
+    const/16 v1, 0xa
 
     goto :goto_0
 
     :cond_3
-    const/16 v1, 0x19
+    const/16 v1, 0x11
 
     goto :goto_0
 
     :cond_4
-    const/16 v1, 0x20
+    const/16 v1, 0x17
 
     goto :goto_0
 .end method

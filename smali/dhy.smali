@@ -205,19 +205,23 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p1, Lbhm;->b:Lgzo;
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    iget-object v0, v0, Lgzo;->b:Ligz;
+    const-string v1, "hammerhead"
 
-    iget-boolean v0, v0, Ligz;->a:Z
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object v0, p1, Lbhm;->b:Lgzo;
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    iget-object v0, v0, Lgzo;->b:Ligz;
+    const-string v1, "shamu"
 
-    iget-boolean v0, v0, Ligz;->c:Z
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
 
     if-eqz v0, :cond_2
 

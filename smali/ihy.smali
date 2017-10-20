@@ -128,7 +128,11 @@
 .end method
 
 .method public final h()V
-    .locals 0
+    .locals 1
+
+    iget-object v0, p0, Lihy;->a:Liic;
+
+    invoke-interface {v0}, Liic;->h()V
 
     return-void
 .end method

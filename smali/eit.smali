@@ -144,6 +144,8 @@
 
     iget-boolean v3, v3, Ligz;->c:Z
 
+    const/4 v3, 0x0
+
     if-nez v3, :cond_1
 
     iget-object v2, v2, Lgzo;->b:Ligz;

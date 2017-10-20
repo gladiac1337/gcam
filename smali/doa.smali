@@ -72,6 +72,8 @@
 
     iget-boolean v2, v2, Ligz;->c:Z
 
+    const/4 v2, 0x0
+
     if-eqz v2, :cond_0
 
     new-instance v2, Ldnx;

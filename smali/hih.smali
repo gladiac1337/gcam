@@ -41,18 +41,8 @@
 
     sget-boolean v0, Lhih;->c:Z
 
-    if-eqz v0, :cond_1
-
-    sget-object v0, Lcom/google/android/camera/experimental2016/ExperimentalKeys;->EXPERIMENTAL_CONTROL_HYBRID_AE:Landroid/hardware/camera2/CaptureRequest$Key;
-
     :goto_0
-    sput-object v0, Lhih;->a:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    sget-boolean v0, Lhih;->c:Z
-
-    if-eqz v0, :cond_3
-
-    sget-object v1, Lcom/google/android/camera/experimental2016/ExperimentalKeys;->EXPERIMENTAL_CONTROL_AF_SCENE_CHANGE:Landroid/hardware/camera2/CaptureResult$Key;
+    sget-object v1, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_STATE:Landroid/hardware/camera2/CaptureResult$Key;
 
     :cond_0
     :goto_1
@@ -60,26 +50,24 @@
 
     return-void
 
-    :cond_1
     sget-boolean v0, Lhih;->d:Z
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
     sget-object v0, Lcom/google/android/camera/experimental2017/ExperimentalKeys;->EXPERIMENTAL_CONTROL_HYBRID_AE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     goto :goto_0
 
-    :cond_2
+    :cond_1
     move-object v0, v1
 
     goto :goto_0
 
-    :cond_3
     sget-boolean v0, Lhih;->d:Z
 
     if-eqz v0, :cond_0
 
-    sget-object v1, Lcom/google/android/camera/experimental2017/ExperimentalKeys;->EXPERIMENTAL_CONTROL_AF_SCENE_CHANGE:Landroid/hardware/camera2/CaptureResult$Key;
+    sget-object v1, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_STATE:Landroid/hardware/camera2/CaptureResult$Key;
 
     goto :goto_1
 .end method

@@ -213,6 +213,8 @@
 
     iget-boolean v0, v0, Ligz;->f:Z
 
+    const/4 v0, 0x1
+
     if-nez v0, :cond_0
 
     iget-object v0, p0, Lgdn;->e:Lgzo;
@@ -283,6 +285,8 @@
     iget-object v0, v0, Lgzo;->b:Ligz;
 
     iget-boolean v0, v0, Ligz;->f:Z
+
+    const/4 v0, 0x1
 
     if-nez v0, :cond_1
 

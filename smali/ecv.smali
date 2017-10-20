@@ -107,6 +107,8 @@
 
     iget-boolean v2, v2, Ligz;->f:Z
 
+    const/4 v2, 0x1
+
     if-nez v2, :cond_0
 
     move-object/from16 v0, p0

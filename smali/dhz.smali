@@ -190,13 +190,15 @@
 
     if-nez v1, :cond_8
 
-    iget-object v1, p0, Ldhz;->b:Lgzo;
+    iget-object v2, p0, Ldhz;->a:Lbhm;
 
-    iget-object v1, v1, Lgzo;->b:Ligz;
+    invoke-virtual {v2}, Lbhm;->cgc()I
 
-    iget-boolean v1, v1, Ligz;->c:Z
+    move-result v2
 
-    if-nez v1, :cond_9
+    const/4 v1, 0x1
+
+    if-eq v2, v1, :cond_9
 
     :cond_8
     iget-object v1, p0, Ldhz;->b:Lgzo;
