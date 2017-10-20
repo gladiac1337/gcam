@@ -1,0 +1,26 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: com.google.android.GoogleCamera_5.1.014.171916386-41331786_minAPI26(arm64-v8a)(nodpi).apk
+compressionType: false
+doNotCompress:
+- arsc
+- META-INF/services/com.google.protobuf.GeneratedExtensionRegistryLoader
+- apk
+- bin
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '26'
+  targetSdkVersion: '27'
+sharedLibrary: false
+unknownFiles:
+  build-data.properties: '0'
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.3.0
+versionInfo:
+  versionCode: '41331786'
+  versionName: 5.1.014.171916386

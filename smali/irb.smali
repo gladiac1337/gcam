@@ -1,0 +1,261 @@
+.class final Lirb;
+.super Ljava/lang/Object;
+.source "PG"
+
+# interfaces
+.implements Lijv;
+
+
+# instance fields
+.field private a:Liwv;
+
+.field private b:Ljdv;
+
+.field private c:Ljdw;
+
+
+# direct methods
+.method public constructor <init>(Liwv;Ljdv;Ljdw;)V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lirb;->a:Liwv;
+
+    .line 3
+    iput-object p2, p0, Lirb;->b:Ljdv;
+
+    .line 4
+    iput-object p3, p0, Lirb;->c:Ljdw;
+
+    .line 5
+    return-void
+.end method
+
+.method private final a(Liwz;)Ljdw;
+    .locals 7
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 6
+    invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 7
+    iget-object v0, p0, Lirb;->a:Liwv;
+
+    invoke-interface {p1, v0}, Liwz;->a(Liwv;)Liwy;
+
+    move-result-object v3
+
+    .line 8
+    :try_start_0
+    invoke-interface {v3}, Liwy;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Bitmap;
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
+
+    .line 9
+    :try_start_1
+    iget-object v1, p0, Lirb;->b:Ljdv;
+
+    iget-object v4, p0, Lirb;->c:Ljdw;
+
+    invoke-interface {v1, v4}, Ljdv;->a(Ljdu;)Ljava/io/OutputStream;
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
+    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+
+    move-result-object v4
+
+    .line 10
+    :try_start_2
+    sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
+
+    const/16 v5, 0x50
+
+    invoke-virtual {v0, v1, v5, v4}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+    :try_end_2
+    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_3
+
+    .line 11
+    if-eqz v4, :cond_0
+
+    :try_start_3
+    invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
+    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_2
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    .line 17
+    :cond_0
+    if-eqz v3, :cond_1
+
+    invoke-interface {v3}, Liwy;->close()V
+
+    .line 20
+    :cond_1
+    iget-object v0, p0, Lirb;->c:Ljdw;
+
+    return-object v0
+
+    .line 12
+    :catch_0
+    move-exception v0
+
+    :try_start_4
+    throw v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    .line 13
+    :catchall_0
+    move-exception v1
+
+    move-object v6, v1
+
+    move-object v1, v0
+
+    move-object v0, v6
+
+    :goto_0
+    if-eqz v4, :cond_2
+
+    if-eqz v1, :cond_4
+
+    :try_start_5
+    invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
+    :try_end_5
+    .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_3
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+
+    :cond_2
+    :goto_1
+    :try_start_6
+    throw v0
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_1
+    .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_2
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    .line 15
+    :catch_1
+    move-exception v0
+
+    .line 16
+    :try_start_7
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    const-string v4, "Could not compress bitmap"
+
+    invoke-direct {v1, v4, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+    :try_end_7
+    .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_2
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
+
+    .line 18
+    :catch_2
+    move-exception v0
+
+    :try_start_8
+    throw v0
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_1
+
+    .line 19
+    :catchall_1
+    move-exception v1
+
+    move-object v2, v0
+
+    move-object v0, v1
+
+    :goto_2
+    if-eqz v3, :cond_3
+
+    if-eqz v2, :cond_5
+
+    :try_start_9
+    invoke-interface {v3}, Liwy;->close()V
+    :try_end_9
+    .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_4
+
+    :cond_3
+    :goto_3
+    throw v0
+
+    .line 13
+    :catch_3
+    move-exception v4
+
+    :try_start_a
+    invoke-static {v1, v4}, Ljvg;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    .line 19
+    :catchall_2
+    move-exception v0
+
+    goto :goto_2
+
+    .line 13
+    :cond_4
+    invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
+    :try_end_a
+    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_1
+    .catch Ljava/lang/Throwable; {:try_start_a .. :try_end_a} :catch_2
+    .catchall {:try_start_a .. :try_end_a} :catchall_2
+
+    goto :goto_1
+
+    .line 19
+    :catch_4
+    move-exception v1
+
+    invoke-static {v2, v1}, Ljvg;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    goto :goto_3
+
+    :cond_5
+    invoke-interface {v3}, Liwy;->close()V
+
+    goto :goto_3
+
+    .line 13
+    :catchall_3
+    move-exception v0
+
+    move-object v1, v2
+
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method public final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 21
+    check-cast p1, Liwz;
+
+    invoke-direct {p0, p1}, Lirb;->a(Liwz;)Ljdw;
+
+    move-result-object v0
+
+    return-object v0
+.end method

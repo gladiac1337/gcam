@@ -1,0 +1,121 @@
+.class final Lium;
+.super Ljava/lang/Object;
+.source "PG"
+
+# interfaces
+.implements Litw;
+
+
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic a(Lisz;)Ljava/lang/Object;
+    .locals 9
+
+    .prologue
+    const/4 v8, 0x2
+
+    const/4 v7, 0x0
+
+    .line 2
+    .line 3
+    const-class v0, Ljdt;
+
+    .line 4
+    const-string v1, "default"
+
+    invoke-virtual {p1, v0, v1}, Lisz;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 5
+    check-cast v0, Ljdt;
+
+    .line 6
+    const-class v1, Ljcx;
+
+    const-string v2, "chroma_histogram_frame_distance_metric"
+
+    .line 7
+    invoke-virtual {p1, v1, v2}, Lisz;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljcx;
+
+    .line 8
+    const-class v2, Ljac;
+
+    const-string v3, "post_proc_quality_metric"
+
+    invoke-virtual {p1, v2, v3}, Lisz;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljac;
+
+    .line 9
+    const/4 v3, 0x4
+
+    new-array v4, v3, [Ljar;
+
+    const-class v3, Ljar;
+
+    const-string v5, "image_sharpness_filter"
+
+    .line 10
+    invoke-virtual {p1, v3, v5}, Lisz;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljar;
+
+    aput-object v3, v4, v7
+
+    const/4 v5, 0x1
+
+    const-class v3, Ljar;
+
+    const-string v6, "face_quality_filter"
+
+    .line 11
+    invoke-virtual {p1, v3, v6}, Lisz;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljar;
+
+    aput-object v3, v4, v5
+
+    new-instance v3, Ljbb;
+
+    invoke-direct {v3, v0, v2, v1, v7}, Ljbb;-><init>(Ljdt;Ljac;Ljcx;B)V
+
+    aput-object v3, v4, v8
+
+    const/4 v0, 0x3
+
+    new-instance v1, Ljbv;
+
+    invoke-direct {v1, v8}, Ljbv;-><init>(I)V
+
+    aput-object v1, v4, v0
+
+    .line 12
+    invoke-static {v4}, Ljam;->a([Ljar;)Ljam;
+
+    move-result-object v0
+
+    .line 13
+    return-object v0
+.end method

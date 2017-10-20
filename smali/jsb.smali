@@ -1,0 +1,63 @@
+.class final enum Ljsb;
+.super Ljrz;
+.source "PG"
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;)V
+    .locals 1
+
+    .prologue
+    .line 1
+    .line 2
+    const/4 v0, 0x1
+
+    invoke-direct {p0, p1, v0}, Ljrz;-><init>(Ljava/lang/String;I)V
+
+    .line 3
+    return-void
+.end method
+
+
+# virtual methods
+.method final a(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
+    .locals 1
+
+    .prologue
+    .line 4
+    instance-of v0, p1, Ljava/lang/Class;
+
+    if-eqz v0, :cond_0
+
+    .line 5
+    check-cast p1, Ljava/lang/Class;
+
+    invoke-static {p1}, Ljrt;->a(Ljava/lang/Class;)Ljava/lang/Class;
+
+    move-result-object v0
+
+    .line 6
+    :goto_0
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljry;
+
+    invoke-direct {v0, p1}, Ljry;-><init>(Ljava/lang/reflect/Type;)V
+
+    goto :goto_0
+.end method
+
+.method final b(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
+    .locals 1
+
+    .prologue
+    .line 7
+    invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/reflect/Type;
+
+    return-object v0
+.end method
