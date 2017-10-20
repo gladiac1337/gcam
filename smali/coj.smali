@@ -1960,652 +1960,6 @@
     .end sparse-switch
 .end method
 
-.method public static a(Lgdm;)Lcom/google/googlex/gcam/StaticMetadata;
-    .locals 12
-
-    const/4 v4, 0x2
-
-    const/4 v3, 0x4
-
-    const/4 v2, 0x1
-
-    const/4 v1, 0x0
-
-    new-instance v6, Lcom/google/googlex/gcam/StaticMetadata;
-
-    invoke-direct {v6}, Lcom/google/googlex/gcam/StaticMetadata;-><init>()V
-
-    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
-
-    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMake(Ljava/lang/String;)V
-
-    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
-
-    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setModel(Ljava/lang/String;)V
-
-    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice(Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/google/googlex/gcam/GcamModule;->GetVersion()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v5, "HDR+ "
-
-    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v7
-
-    if-eqz v7, :cond_0
-
-    invoke-virtual {v5, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSoftware(Ljava/lang/String;)V
-
-    sget-object v0, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
-
-    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice_os_version(Ljava/lang/String;)V
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    if-ne v0, v2, :cond_1
-
-    move v0, v1
-
-    :goto_1
-    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_id(I)V
-
-    invoke-interface {p0}, Lgdm;->y()Z
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setHas_flash(Z)V
-
-    invoke-interface {p0}, Lgdm;->j()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v5
-
-    if-gtz v5, :cond_2
-
-    new-instance v0, Ljava/lang/AssertionError;
-
-    const-string v1, "No focal lengths defined!"
-
-    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v0
-
-    :cond_0
-    new-instance v0, Ljava/lang/String;
-
-    invoke-direct {v0, v5}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_1
-    move v0, v2
-
-    goto :goto_1
-
-    :cond_2
-    new-instance v5, Lcom/google/googlex/gcam/FloatVector;
-
-    invoke-direct {v5}, Lcom/google/googlex/gcam/FloatVector;-><init>()V
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v7
-
-    :goto_2
-    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Float;
-
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
-
-    move-result v0
-
-    invoke-virtual {v5, v0}, Lcom/google/googlex/gcam/FloatVector;->add(F)V
-
-    goto :goto_2
-
-    :cond_3
-    invoke-virtual {v6, v5}, Lcom/google/googlex/gcam/StaticMetadata;->setAvailable_focal_lengths_mm(Lcom/google/googlex/gcam/FloatVector;)V
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_INFO_AVAILABLE_APERTURES:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [F
-
-    array-length v5, v0
-
-    if-gtz v5, :cond_4
-
-    new-instance v0, Ljava/lang/AssertionError;
-
-    const-string v1, "No aperture values defined!"
-
-    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
-
-    throw v0
-
-    :cond_4
-    new-instance v7, Lcom/google/googlex/gcam/FloatVector;
-
-    invoke-direct {v7}, Lcom/google/googlex/gcam/FloatVector;-><init>()V
-
-    array-length v8, v0
-
-    move v5, v1
-
-    :goto_3
-    if-ge v5, v8, :cond_5
-
-    aget v9, v0, v5
-
-    invoke-virtual {v7, v9}, Lcom/google/googlex/gcam/FloatVector;->add(F)V
-
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_3
-
-    :cond_5
-    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setAvailable_f_numbers(Lcom/google/googlex/gcam/FloatVector;)V
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_BLACK_LEVEL_PATTERN:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/hardware/camera2/params/BlackLevelPattern;
-
-    new-array v7, v3, [F
-
-    move v5, v1
-
-    :goto_4
-    if-ge v5, v3, :cond_6
-
-    rem-int/lit8 v8, v5, 0x2
-
-    div-int/lit8 v9, v5, 0x2
-
-    invoke-virtual {v0, v8, v9}, Landroid/hardware/camera2/params/BlackLevelPattern;->getOffsetForIndex(II)I
-
-    move-result v8
-
-    int-to-float v8, v8
-
-    aput v8, v7, v5
-
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_4
-
-    :cond_6
-    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setBlack_levels_bayer([F)V
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_WHITE_LEVEL:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setWhite_level(I)V
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_OPTICAL_BLACK_REGIONS:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Landroid/graphics/Rect;
-
-    if-eqz v0, :cond_8
-
-    new-instance v7, Lcom/google/googlex/gcam/PixelRectVector;
-
-    invoke-direct {v7}, Lcom/google/googlex/gcam/PixelRectVector;-><init>()V
-
-    array-length v8, v0
-
-    move v5, v1
-
-    :goto_5
-    if-ge v5, v8, :cond_7
-
-    aget-object v9, v0, v5
-
-    new-instance v10, Lcom/google/googlex/gcam/PixelRect;
-
-    invoke-direct {v10}, Lcom/google/googlex/gcam/PixelRect;-><init>()V
-
-    iget v11, v9, Landroid/graphics/Rect;->left:I
-
-    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setX0(I)V
-
-    iget v11, v9, Landroid/graphics/Rect;->right:I
-
-    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setX1(I)V
-
-    iget v11, v9, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setY0(I)V
-
-    iget v9, v9, Landroid/graphics/Rect;->bottom:I
-
-    invoke-virtual {v10, v9}, Lcom/google/googlex/gcam/PixelRect;->setY1(I)V
-
-    invoke-virtual {v7, v10}, Lcom/google/googlex/gcam/PixelRectVector;->add(Lcom/google/googlex/gcam/PixelRect;)V
-
-    add-int/lit8 v5, v5, 0x1
-
-    goto :goto_5
-
-    :cond_7
-    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setOptically_black_regions(Lcom/google/googlex/gcam/PixelRectVector;)V
-
-    :cond_8
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_COLOR_FILTER_ARRANGEMENT:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "staticInfo: unsupported BayerPattern"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_0
-    move v0, v2
-
-    :goto_6
-    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setBayer_pattern(I)V
-
-    new-array v3, v4, [I
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_SENSITIVITY_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/util/Range;
-
-    invoke-virtual {v0}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    aput v0, v3, v1
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_SENSITIVITY_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/util/Range;
-
-    invoke-virtual {v0}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    aput v0, v3, v2
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_MAX_ANALOG_SENSITIVITY:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    invoke-virtual {v6, v3}, Lcom/google/googlex/gcam/StaticMetadata;->setIso_range([I)V
-
-    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMax_analog_iso(I)V
-
-    new-instance v2, Lcom/google/googlex/gcam/ColorCalibrationVector;
-
-    invoke-direct {v2}, Lcom/google/googlex/gcam/ColorCalibrationVector;-><init>()V
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT1:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    if-eqz v0, :cond_9
-
-    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
-
-    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
-
-    move-result-object v3
-
-    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_CALIBRATION_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
-
-    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
-
-    move-result-object v1
-
-    new-instance v4, Lcom/google/googlex/gcam/ColorCalibration;
-
-    invoke-direct {v4}, Lcom/google/googlex/gcam/ColorCalibration;-><init>()V
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/ColorCalibration;->setIlluminant(I)V
-
-    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/ColorCalibration;->setXyz_to_model_rgb([F)V
-
-    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/ColorCalibration;->setModel_rgb_to_device_rgb([F)V
-
-    invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
-
-    :cond_9
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT2:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Byte;
-
-    if-eqz v0, :cond_a
-
-    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
-
-    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
-
-    move-result-object v3
-
-    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_CALIBRATION_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
-
-    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
-
-    move-result-object v1
-
-    new-instance v4, Lcom/google/googlex/gcam/ColorCalibration;
-
-    invoke-direct {v4}, Lcom/google/googlex/gcam/ColorCalibration;-><init>()V
-
-    invoke-virtual {v0}, Ljava/lang/Byte;->byteValue()B
-
-    move-result v0
-
-    invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/ColorCalibration;->setIlluminant(I)V
-
-    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/ColorCalibration;->setXyz_to_model_rgb([F)V
-
-    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/ColorCalibration;->setModel_rgb_to_device_rgb([F)V
-
-    invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
-
-    :cond_a
-    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setColor_calibration(Lcom/google/googlex/gcam/ColorCalibrationVector;)V
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PIXEL_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/util/Size;
-
-    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
-
-    move-result v1
-
-    invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_width(I)V
-
-    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
-
-    move-result v0
-
-    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_height(I)V
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_ACTIVE_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/graphics/Rect;
-
-    new-instance v1, Lcom/google/googlex/gcam/PixelRect;
-
-    invoke-direct {v1}, Lcom/google/googlex/gcam/PixelRect;-><init>()V
-
-    iget v2, v0, Landroid/graphics/Rect;->left:I
-
-    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setX0(I)V
-
-    iget v2, v0, Landroid/graphics/Rect;->right:I
-
-    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setX1(I)V
-
-    iget v2, v0, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setY0(I)V
-
-    iget v0, v0, Landroid/graphics/Rect;->bottom:I
-
-    invoke-virtual {v1, v0}, Lcom/google/googlex/gcam/PixelRect;->setY1(I)V
-
-    invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setActive_area(Lcom/google/googlex/gcam/PixelRect;)V
-
-    invoke-static {p0}, Lcnr;->a(Lgdm;)Ligf;
-
-    move-result-object v1
-
-    iget-object v0, v1, Ligf;->b:Libx;
-
-    iget v0, v0, Libx;->a:I
-
-    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_width(I)V
-
-    iget-object v0, v1, Ligf;->b:Libx;
-
-    iget v0, v0, Libx;->b:I
-
-    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_height(I)V
-
-    const/16 v0, 0x23
-
-    invoke-interface {p0, v0}, Lgdm;->a(I)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-static {v0}, Liby;->a(Ljava/util/List;)Libx;
-
-    move-result-object v0
-
-    iget v2, v0, Libx;->a:I
-
-    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_yuv_max_width(I)V
-
-    iget v0, v0, Libx;->b:I
-
-    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_yuv_max_height(I)V
-
-    iget v0, v1, Ligf;->a:I
-
-    invoke-static {v0}, Landroid/graphics/ImageFormat;->getBitsPerPixel(I)I
-
-    move-result v0
-
-    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setRaw_bits_per_pixel(I)V
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PHYSICAL_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/util/SizeF;
-
-    invoke-virtual {v0}, Landroid/util/SizeF;->getWidth()F
-
-    move-result v2
-
-    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_physical_width_mm(F)V
-
-    invoke-virtual {v0}, Landroid/util/SizeF;->getHeight()F
-
-    move-result v0
-
-    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_physical_height_mm(F)V
-
-    iget v0, v1, Ligf;->a:I
-
-    iget-object v1, v1, Ligf;->b:Libx;
-
-    invoke-interface {p0, v0, v1}, Lgdm;->a(ILibx;)J
-
-    move-result-wide v0
-
-    long-to-float v0, v0
-
-    const v1, 0x49742400    # 1000000.0f
-
-    div-float/2addr v0, v1
-
-    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_readout_time_ms(F)V
-
-    return-object v6
-
-    :pswitch_1
-    const/4 v0, 0x3
-
-    goto/16 :goto_6
-
-    :pswitch_2
-    move v0, v3
-
-    goto/16 :goto_6
-
-    :pswitch_3
-    move v0, v4
-
-    goto/16 :goto_6
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-    .end packed-switch
-.end method
-
 .method public static a(Lcom/google/googlex/gcam/AeShotParams;Landroid/graphics/Rect;[Landroid/hardware/camera2/params/MeteringRectangle;Libx;Lgdm;F)V
     .locals 10
 
@@ -4126,6 +3480,5212 @@
         0x1
         0x3
     .end array-data
+.end method
+
+.method public static aa(Lgdm;)Lcom/google/googlex/gcam/StaticMetadata;
+    .locals 12
+
+    const/4 v4, 0x2
+
+    const/4 v3, 0x4
+
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    new-instance v6, Lcom/google/googlex/gcam/StaticMetadata;
+
+    invoke-direct {v6}, Lcom/google/googlex/gcam/StaticMetadata;-><init>()V
+
+    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    const-string v0, "Google"
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMake(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setModel(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "marlin"
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice(Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/google/googlex/gcam/GcamModule;->GetVersion()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v5, "HDR+ "
+
+    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSoftware(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice_os_version(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    if-ne v0, v2, :cond_1
+
+    move v0, v1
+
+    :goto_1
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_id(I)V
+
+    invoke-interface {p0}, Lgdm;->y()Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setHas_flash(Z)V
+
+    invoke-interface {p0}, Lgdm;->j()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    if-gtz v5, :cond_2
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "No focal lengths defined!"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v5}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_2
+    new-instance v5, Lcom/google/googlex/gcam/FloatVector;
+
+    invoke-direct {v5}, Lcom/google/googlex/gcam/FloatVector;-><init>()V
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v7
+
+    :goto_2
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Float;
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v0
+
+    invoke-virtual {v5, v0}, Lcom/google/googlex/gcam/FloatVector;->add(F)V
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {v6, v5}, Lcom/google/googlex/gcam/StaticMetadata;->setAvailable_focal_lengths_mm(Lcom/google/googlex/gcam/FloatVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_INFO_AVAILABLE_APERTURES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [F
+
+    array-length v5, v0
+
+    if-gtz v5, :cond_4
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "No aperture values defined!"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_4
+    new-instance v7, Lcom/google/googlex/gcam/FloatVector;
+
+    invoke-direct {v7}, Lcom/google/googlex/gcam/FloatVector;-><init>()V
+
+    array-length v8, v0
+
+    move v5, v1
+
+    :goto_3
+    if-ge v5, v8, :cond_5
+
+    aget v9, v0, v5
+
+    invoke-virtual {v7, v9}, Lcom/google/googlex/gcam/FloatVector;->add(F)V
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_3
+
+    :cond_5
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setAvailable_f_numbers(Lcom/google/googlex/gcam/FloatVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_BLACK_LEVEL_PATTERN:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/params/BlackLevelPattern;
+
+    new-array v7, v3, [F
+
+    move v5, v1
+
+    :goto_4
+    if-ge v5, v3, :cond_6
+
+    rem-int/lit8 v8, v5, 0x2
+
+    div-int/lit8 v9, v5, 0x2
+
+    invoke-virtual {v0, v8, v9}, Landroid/hardware/camera2/params/BlackLevelPattern;->getOffsetForIndex(II)I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    aput v8, v7, v5
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_4
+
+    :cond_6
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setBlack_levels_bayer([F)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_WHITE_LEVEL:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setWhite_level(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_OPTICAL_BLACK_REGIONS:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Landroid/graphics/Rect;
+
+    if-eqz v0, :cond_8
+
+    new-instance v7, Lcom/google/googlex/gcam/PixelRectVector;
+
+    invoke-direct {v7}, Lcom/google/googlex/gcam/PixelRectVector;-><init>()V
+
+    array-length v8, v0
+
+    move v5, v1
+
+    :goto_5
+    if-ge v5, v8, :cond_7
+
+    aget-object v9, v0, v5
+
+    new-instance v10, Lcom/google/googlex/gcam/PixelRect;
+
+    invoke-direct {v10}, Lcom/google/googlex/gcam/PixelRect;-><init>()V
+
+    iget v11, v9, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setX0(I)V
+
+    iget v11, v9, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setX1(I)V
+
+    iget v11, v9, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setY0(I)V
+
+    iget v9, v9, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v10, v9}, Lcom/google/googlex/gcam/PixelRect;->setY1(I)V
+
+    invoke-virtual {v7, v10}, Lcom/google/googlex/gcam/PixelRectVector;->add(Lcom/google/googlex/gcam/PixelRect;)V
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_5
+
+    :cond_7
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setOptically_black_regions(Lcom/google/googlex/gcam/PixelRectVector;)V
+
+    :cond_8
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_COLOR_FILTER_ARRANGEMENT:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "staticInfo: unsupported BayerPattern"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    move v0, v2
+
+    :goto_6
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setBayer_pattern(I)V
+
+    new-array v3, v4, [I
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_SENSITIVITY_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Range;
+
+    invoke-virtual {v0}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    aput v0, v3, v1
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_SENSITIVITY_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Range;
+
+    invoke-virtual {v0}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    aput v0, v3, v2
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_MAX_ANALOG_SENSITIVITY:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v6, v3}, Lcom/google/googlex/gcam/StaticMetadata;->setIso_range([I)V
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMax_analog_iso(I)V
+
+    new-instance v2, Lcom/google/googlex/gcam/ColorCalibrationVector;
+
+    invoke-direct {v2}, Lcom/google/googlex/gcam/ColorCalibrationVector;-><init>()V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    if-eqz v0, :cond_9
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v3
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_CALIBRATION_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v1
+
+    new-instance v4, Lcom/google/googlex/gcam/ColorCalibration;
+
+    invoke-direct {v4}, Lcom/google/googlex/gcam/ColorCalibration;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/ColorCalibration;->setIlluminant(I)V
+
+    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/ColorCalibration;->setXyz_to_model_rgb([F)V
+
+    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/ColorCalibration;->setModel_rgb_to_device_rgb([F)V
+
+    invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
+
+    :cond_9
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Byte;
+
+    if-eqz v0, :cond_a
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v3
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_CALIBRATION_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v1
+
+    new-instance v4, Lcom/google/googlex/gcam/ColorCalibration;
+
+    invoke-direct {v4}, Lcom/google/googlex/gcam/ColorCalibration;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Byte;->byteValue()B
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/ColorCalibration;->setIlluminant(I)V
+
+    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/ColorCalibration;->setXyz_to_model_rgb([F)V
+
+    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/ColorCalibration;->setModel_rgb_to_device_rgb([F)V
+
+    invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
+
+    :cond_a
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setColor_calibration(Lcom/google/googlex/gcam/ColorCalibrationVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PIXEL_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Size;
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_width(I)V
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_height(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_ACTIVE_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Rect;
+
+    new-instance v1, Lcom/google/googlex/gcam/PixelRect;
+
+    invoke-direct {v1}, Lcom/google/googlex/gcam/PixelRect;-><init>()V
+
+    iget v2, v0, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setX0(I)V
+
+    iget v2, v0, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setX1(I)V
+
+    iget v2, v0, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setY0(I)V
+
+    iget v0, v0, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v1, v0}, Lcom/google/googlex/gcam/PixelRect;->setY1(I)V
+
+    invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setActive_area(Lcom/google/googlex/gcam/PixelRect;)V
+
+    invoke-static {p0}, Lcnr;->a(Lgdm;)Ligf;
+
+    move-result-object v1
+
+    iget-object v0, v1, Ligf;->b:Libx;
+
+    iget v0, v0, Libx;->a:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_width(I)V
+
+    iget-object v0, v1, Ligf;->b:Libx;
+
+    iget v0, v0, Libx;->b:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_height(I)V
+
+    const/16 v0, 0x23
+
+    invoke-interface {p0, v0}, Lgdm;->a(I)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Liby;->a(Ljava/util/List;)Libx;
+
+    move-result-object v0
+
+    iget v2, v0, Libx;->a:I
+
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_yuv_max_width(I)V
+
+    iget v0, v0, Libx;->b:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_yuv_max_height(I)V
+
+    iget v0, v1, Ligf;->a:I
+
+    invoke-static {v0}, Landroid/graphics/ImageFormat;->getBitsPerPixel(I)I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setRaw_bits_per_pixel(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PHYSICAL_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/SizeF;
+
+    invoke-virtual {v0}, Landroid/util/SizeF;->getWidth()F
+
+    move-result v2
+
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_physical_width_mm(F)V
+
+    invoke-virtual {v0}, Landroid/util/SizeF;->getHeight()F
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_physical_height_mm(F)V
+
+    iget v0, v1, Ligf;->a:I
+
+    iget-object v1, v1, Ligf;->b:Libx;
+
+    invoke-interface {p0, v0, v1}, Lgdm;->a(ILibx;)J
+
+    move-result-wide v0
+
+    long-to-float v0, v0
+
+    const v1, 0x49742400    # 1000000.0f
+
+    div-float/2addr v0, v1
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_readout_time_ms(F)V
+
+    return-object v6
+
+    const-string v0, "taimen"
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice(Ljava/lang/String;)V
+
+    :pswitch_1
+    const/4 v0, 0x3
+
+    goto/16 :goto_6
+
+    :pswitch_2
+    move v0, v3
+
+    goto/16 :goto_6
+
+    :pswitch_3
+    move v0, v4
+
+    goto/16 :goto_6
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
+.end method
+
+.method public static aaa(Lgdm;)Lcom/google/googlex/gcam/StaticMetadata;
+    .locals 12
+
+    const/4 v4, 0x2
+
+    const/4 v3, 0x4
+
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    new-instance v6, Lcom/google/googlex/gcam/StaticMetadata;
+
+    invoke-direct {v6}, Lcom/google/googlex/gcam/StaticMetadata;-><init>()V
+
+    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    const-string v0, "Google"
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMake(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setModel(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "marlin"
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice(Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/google/googlex/gcam/GcamModule;->GetVersion()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v5, "HDR+ "
+
+    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSoftware(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice_os_version(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    if-ne v0, v2, :cond_1
+
+    move v0, v1
+
+    :goto_1
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_id(I)V
+
+    invoke-interface {p0}, Lgdm;->y()Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setHas_flash(Z)V
+
+    invoke-interface {p0}, Lgdm;->j()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    if-gtz v5, :cond_2
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "No focal lengths defined!"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v5}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_2
+    new-instance v5, Lcom/google/googlex/gcam/FloatVector;
+
+    invoke-direct {v5}, Lcom/google/googlex/gcam/FloatVector;-><init>()V
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v7
+
+    :goto_2
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Float;
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v0
+
+    invoke-virtual {v5, v0}, Lcom/google/googlex/gcam/FloatVector;->add(F)V
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {v6, v5}, Lcom/google/googlex/gcam/StaticMetadata;->setAvailable_focal_lengths_mm(Lcom/google/googlex/gcam/FloatVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_INFO_AVAILABLE_APERTURES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [F
+
+    array-length v5, v0
+
+    if-gtz v5, :cond_4
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "No aperture values defined!"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_4
+    new-instance v7, Lcom/google/googlex/gcam/FloatVector;
+
+    invoke-direct {v7}, Lcom/google/googlex/gcam/FloatVector;-><init>()V
+
+    array-length v8, v0
+
+    move v5, v1
+
+    :goto_3
+    if-ge v5, v8, :cond_5
+
+    aget v9, v0, v5
+
+    invoke-virtual {v7, v9}, Lcom/google/googlex/gcam/FloatVector;->add(F)V
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_3
+
+    :cond_5
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setAvailable_f_numbers(Lcom/google/googlex/gcam/FloatVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_BLACK_LEVEL_PATTERN:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/params/BlackLevelPattern;
+
+    new-array v7, v3, [F
+
+    move v5, v1
+
+    :goto_4
+    if-ge v5, v3, :cond_6
+
+    rem-int/lit8 v8, v5, 0x2
+
+    div-int/lit8 v9, v5, 0x2
+
+    invoke-virtual {v0, v8, v9}, Landroid/hardware/camera2/params/BlackLevelPattern;->getOffsetForIndex(II)I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    aput v8, v7, v5
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_4
+
+    :cond_6
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setBlack_levels_bayer([F)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_WHITE_LEVEL:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setWhite_level(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_OPTICAL_BLACK_REGIONS:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Landroid/graphics/Rect;
+
+    if-eqz v0, :cond_8
+
+    new-instance v7, Lcom/google/googlex/gcam/PixelRectVector;
+
+    invoke-direct {v7}, Lcom/google/googlex/gcam/PixelRectVector;-><init>()V
+
+    array-length v8, v0
+
+    move v5, v1
+
+    :goto_5
+    if-ge v5, v8, :cond_7
+
+    aget-object v9, v0, v5
+
+    new-instance v10, Lcom/google/googlex/gcam/PixelRect;
+
+    invoke-direct {v10}, Lcom/google/googlex/gcam/PixelRect;-><init>()V
+
+    iget v11, v9, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setX0(I)V
+
+    iget v11, v9, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setX1(I)V
+
+    iget v11, v9, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setY0(I)V
+
+    iget v9, v9, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v10, v9}, Lcom/google/googlex/gcam/PixelRect;->setY1(I)V
+
+    invoke-virtual {v7, v10}, Lcom/google/googlex/gcam/PixelRectVector;->add(Lcom/google/googlex/gcam/PixelRect;)V
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_5
+
+    :cond_7
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setOptically_black_regions(Lcom/google/googlex/gcam/PixelRectVector;)V
+
+    :cond_8
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_COLOR_FILTER_ARRANGEMENT:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "staticInfo: unsupported BayerPattern"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    move v0, v2
+
+    :goto_6
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setBayer_pattern(I)V
+
+    new-array v3, v4, [I
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_SENSITIVITY_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Range;
+
+    invoke-virtual {v0}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    aput v0, v3, v1
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_SENSITIVITY_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Range;
+
+    invoke-virtual {v0}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    aput v0, v3, v2
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_MAX_ANALOG_SENSITIVITY:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v6, v3}, Lcom/google/googlex/gcam/StaticMetadata;->setIso_range([I)V
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMax_analog_iso(I)V
+
+    new-instance v2, Lcom/google/googlex/gcam/ColorCalibrationVector;
+
+    invoke-direct {v2}, Lcom/google/googlex/gcam/ColorCalibrationVector;-><init>()V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    if-eqz v0, :cond_9
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v3
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_CALIBRATION_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v1
+
+    new-instance v4, Lcom/google/googlex/gcam/ColorCalibration;
+
+    invoke-direct {v4}, Lcom/google/googlex/gcam/ColorCalibration;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/ColorCalibration;->setIlluminant(I)V
+
+    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/ColorCalibration;->setXyz_to_model_rgb([F)V
+
+    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/ColorCalibration;->setModel_rgb_to_device_rgb([F)V
+
+    invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
+
+    :cond_9
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Byte;
+
+    if-eqz v0, :cond_a
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v3
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_CALIBRATION_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v1
+
+    new-instance v4, Lcom/google/googlex/gcam/ColorCalibration;
+
+    invoke-direct {v4}, Lcom/google/googlex/gcam/ColorCalibration;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Byte;->byteValue()B
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/ColorCalibration;->setIlluminant(I)V
+
+    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/ColorCalibration;->setXyz_to_model_rgb([F)V
+
+    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/ColorCalibration;->setModel_rgb_to_device_rgb([F)V
+
+    invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
+
+    :cond_a
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setColor_calibration(Lcom/google/googlex/gcam/ColorCalibrationVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PIXEL_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Size;
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_width(I)V
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_height(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_ACTIVE_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Rect;
+
+    new-instance v1, Lcom/google/googlex/gcam/PixelRect;
+
+    invoke-direct {v1}, Lcom/google/googlex/gcam/PixelRect;-><init>()V
+
+    iget v2, v0, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setX0(I)V
+
+    iget v2, v0, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setX1(I)V
+
+    iget v2, v0, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setY0(I)V
+
+    iget v0, v0, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v1, v0}, Lcom/google/googlex/gcam/PixelRect;->setY1(I)V
+
+    invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setActive_area(Lcom/google/googlex/gcam/PixelRect;)V
+
+    invoke-static {p0}, Lcnr;->a(Lgdm;)Ligf;
+
+    move-result-object v1
+
+    iget-object v0, v1, Ligf;->b:Libx;
+
+    iget v0, v0, Libx;->a:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_width(I)V
+
+    iget-object v0, v1, Ligf;->b:Libx;
+
+    iget v0, v0, Libx;->b:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_height(I)V
+
+    const/16 v0, 0x23
+
+    invoke-interface {p0, v0}, Lgdm;->a(I)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Liby;->a(Ljava/util/List;)Libx;
+
+    move-result-object v0
+
+    iget v2, v0, Libx;->a:I
+
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_yuv_max_width(I)V
+
+    iget v0, v0, Libx;->b:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_yuv_max_height(I)V
+
+    iget v0, v1, Ligf;->a:I
+
+    invoke-static {v0}, Landroid/graphics/ImageFormat;->getBitsPerPixel(I)I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setRaw_bits_per_pixel(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PHYSICAL_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/SizeF;
+
+    invoke-virtual {v0}, Landroid/util/SizeF;->getWidth()F
+
+    move-result v2
+
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_physical_width_mm(F)V
+
+    invoke-virtual {v0}, Landroid/util/SizeF;->getHeight()F
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_physical_height_mm(F)V
+
+    iget v0, v1, Ligf;->a:I
+
+    iget-object v1, v1, Ligf;->b:Libx;
+
+    invoke-interface {p0, v0, v1}, Lgdm;->a(ILibx;)J
+
+    move-result-wide v0
+
+    long-to-float v0, v0
+
+    const v1, 0x49742400    # 1000000.0f
+
+    div-float/2addr v0, v1
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_readout_time_ms(F)V
+
+    return-object v6
+
+    :pswitch_1
+    const/4 v0, 0x3
+
+    goto/16 :goto_6
+
+    :pswitch_2
+    move v0, v3
+
+    goto/16 :goto_6
+
+    :pswitch_3
+    move v0, v4
+
+    goto/16 :goto_6
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
+.end method
+
+.method public static ab(Lgdm;)Lcom/google/googlex/gcam/StaticMetadata;
+    .locals 12
+
+    const/4 v4, 0x2
+
+    const/4 v3, 0x4
+
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    new-instance v6, Lcom/google/googlex/gcam/StaticMetadata;
+
+    invoke-direct {v6}, Lcom/google/googlex/gcam/StaticMetadata;-><init>()V
+
+    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    const-string v0, "Google"
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMake(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setModel(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "taimen"
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice(Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/google/googlex/gcam/GcamModule;->GetVersion()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v5, "HDR+ "
+
+    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSoftware(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice_os_version(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    if-ne v0, v2, :cond_1
+
+    move v0, v1
+
+    :goto_1
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_id(I)V
+
+    invoke-interface {p0}, Lgdm;->y()Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setHas_flash(Z)V
+
+    invoke-interface {p0}, Lgdm;->j()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    if-gtz v5, :cond_2
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "No focal lengths defined!"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v5}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_2
+    new-instance v5, Lcom/google/googlex/gcam/FloatVector;
+
+    invoke-direct {v5}, Lcom/google/googlex/gcam/FloatVector;-><init>()V
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v7
+
+    :goto_2
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Float;
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v0
+
+    invoke-virtual {v5, v0}, Lcom/google/googlex/gcam/FloatVector;->add(F)V
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {v6, v5}, Lcom/google/googlex/gcam/StaticMetadata;->setAvailable_focal_lengths_mm(Lcom/google/googlex/gcam/FloatVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_INFO_AVAILABLE_APERTURES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [F
+
+    array-length v5, v0
+
+    if-gtz v5, :cond_4
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "No aperture values defined!"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_4
+    new-instance v7, Lcom/google/googlex/gcam/FloatVector;
+
+    invoke-direct {v7}, Lcom/google/googlex/gcam/FloatVector;-><init>()V
+
+    array-length v8, v0
+
+    move v5, v1
+
+    :goto_3
+    if-ge v5, v8, :cond_5
+
+    aget v9, v0, v5
+
+    invoke-virtual {v7, v9}, Lcom/google/googlex/gcam/FloatVector;->add(F)V
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_3
+
+    :cond_5
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setAvailable_f_numbers(Lcom/google/googlex/gcam/FloatVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_BLACK_LEVEL_PATTERN:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/params/BlackLevelPattern;
+
+    new-array v7, v3, [F
+
+    move v5, v1
+
+    :goto_4
+    if-ge v5, v3, :cond_6
+
+    rem-int/lit8 v8, v5, 0x2
+
+    div-int/lit8 v9, v5, 0x2
+
+    invoke-virtual {v0, v8, v9}, Landroid/hardware/camera2/params/BlackLevelPattern;->getOffsetForIndex(II)I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    aput v8, v7, v5
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_4
+
+    :cond_6
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setBlack_levels_bayer([F)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_WHITE_LEVEL:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setWhite_level(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_OPTICAL_BLACK_REGIONS:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Landroid/graphics/Rect;
+
+    if-eqz v0, :cond_8
+
+    new-instance v7, Lcom/google/googlex/gcam/PixelRectVector;
+
+    invoke-direct {v7}, Lcom/google/googlex/gcam/PixelRectVector;-><init>()V
+
+    array-length v8, v0
+
+    move v5, v1
+
+    :goto_5
+    if-ge v5, v8, :cond_7
+
+    aget-object v9, v0, v5
+
+    new-instance v10, Lcom/google/googlex/gcam/PixelRect;
+
+    invoke-direct {v10}, Lcom/google/googlex/gcam/PixelRect;-><init>()V
+
+    iget v11, v9, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setX0(I)V
+
+    iget v11, v9, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setX1(I)V
+
+    iget v11, v9, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setY0(I)V
+
+    iget v9, v9, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v10, v9}, Lcom/google/googlex/gcam/PixelRect;->setY1(I)V
+
+    invoke-virtual {v7, v10}, Lcom/google/googlex/gcam/PixelRectVector;->add(Lcom/google/googlex/gcam/PixelRect;)V
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_5
+
+    :cond_7
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setOptically_black_regions(Lcom/google/googlex/gcam/PixelRectVector;)V
+
+    :cond_8
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_COLOR_FILTER_ARRANGEMENT:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "staticInfo: unsupported BayerPattern"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    move v0, v2
+
+    :goto_6
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setBayer_pattern(I)V
+
+    new-array v3, v4, [I
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_SENSITIVITY_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Range;
+
+    invoke-virtual {v0}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    aput v0, v3, v1
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_SENSITIVITY_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Range;
+
+    invoke-virtual {v0}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    aput v0, v3, v2
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_MAX_ANALOG_SENSITIVITY:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v6, v3}, Lcom/google/googlex/gcam/StaticMetadata;->setIso_range([I)V
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMax_analog_iso(I)V
+
+    new-instance v2, Lcom/google/googlex/gcam/ColorCalibrationVector;
+
+    invoke-direct {v2}, Lcom/google/googlex/gcam/ColorCalibrationVector;-><init>()V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    if-eqz v0, :cond_9
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v3
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_CALIBRATION_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v1
+
+    new-instance v4, Lcom/google/googlex/gcam/ColorCalibration;
+
+    invoke-direct {v4}, Lcom/google/googlex/gcam/ColorCalibration;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/ColorCalibration;->setIlluminant(I)V
+
+    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/ColorCalibration;->setXyz_to_model_rgb([F)V
+
+    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/ColorCalibration;->setModel_rgb_to_device_rgb([F)V
+
+    invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
+
+    :cond_9
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Byte;
+
+    if-eqz v0, :cond_a
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v3
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_CALIBRATION_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v1
+
+    new-instance v4, Lcom/google/googlex/gcam/ColorCalibration;
+
+    invoke-direct {v4}, Lcom/google/googlex/gcam/ColorCalibration;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Byte;->byteValue()B
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/ColorCalibration;->setIlluminant(I)V
+
+    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/ColorCalibration;->setXyz_to_model_rgb([F)V
+
+    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/ColorCalibration;->setModel_rgb_to_device_rgb([F)V
+
+    invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
+
+    :cond_a
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setColor_calibration(Lcom/google/googlex/gcam/ColorCalibrationVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PIXEL_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Size;
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_width(I)V
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_height(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_ACTIVE_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Rect;
+
+    new-instance v1, Lcom/google/googlex/gcam/PixelRect;
+
+    invoke-direct {v1}, Lcom/google/googlex/gcam/PixelRect;-><init>()V
+
+    iget v2, v0, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setX0(I)V
+
+    iget v2, v0, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setX1(I)V
+
+    iget v2, v0, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setY0(I)V
+
+    iget v0, v0, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v1, v0}, Lcom/google/googlex/gcam/PixelRect;->setY1(I)V
+
+    invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setActive_area(Lcom/google/googlex/gcam/PixelRect;)V
+
+    invoke-static {p0}, Lcnr;->a(Lgdm;)Ligf;
+
+    move-result-object v1
+
+    iget-object v0, v1, Ligf;->b:Libx;
+
+    iget v0, v0, Libx;->a:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_width(I)V
+
+    iget-object v0, v1, Ligf;->b:Libx;
+
+    iget v0, v0, Libx;->b:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_height(I)V
+
+    const/16 v0, 0x23
+
+    invoke-interface {p0, v0}, Lgdm;->a(I)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Liby;->a(Ljava/util/List;)Libx;
+
+    move-result-object v0
+
+    iget v2, v0, Libx;->a:I
+
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_yuv_max_width(I)V
+
+    iget v0, v0, Libx;->b:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_yuv_max_height(I)V
+
+    iget v0, v1, Ligf;->a:I
+
+    invoke-static {v0}, Landroid/graphics/ImageFormat;->getBitsPerPixel(I)I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setRaw_bits_per_pixel(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PHYSICAL_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/SizeF;
+
+    invoke-virtual {v0}, Landroid/util/SizeF;->getWidth()F
+
+    move-result v2
+
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_physical_width_mm(F)V
+
+    invoke-virtual {v0}, Landroid/util/SizeF;->getHeight()F
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_physical_height_mm(F)V
+
+    iget v0, v1, Ligf;->a:I
+
+    iget-object v1, v1, Ligf;->b:Libx;
+
+    invoke-interface {p0, v0, v1}, Lgdm;->a(ILibx;)J
+
+    move-result-wide v0
+
+    long-to-float v0, v0
+
+    const v1, 0x49742400    # 1000000.0f
+
+    div-float/2addr v0, v1
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_readout_time_ms(F)V
+
+    return-object v6
+
+    :pswitch_1
+    const/4 v0, 0x3
+
+    goto/16 :goto_6
+
+    :pswitch_2
+    move v0, v3
+
+    goto/16 :goto_6
+
+    :pswitch_3
+    move v0, v4
+
+    goto/16 :goto_6
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
+.end method
+
+.method public static ac(Lgdm;)Lcom/google/googlex/gcam/StaticMetadata;
+    .locals 12
+
+    const/4 v4, 0x2
+
+    const/4 v3, 0x4
+
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    new-instance v6, Lcom/google/googlex/gcam/StaticMetadata;
+
+    invoke-direct {v6}, Lcom/google/googlex/gcam/StaticMetadata;-><init>()V
+
+    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    const-string v0, "Google"
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMake(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setModel(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "muskie"
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice(Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/google/googlex/gcam/GcamModule;->GetVersion()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v5, "HDR+ "
+
+    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSoftware(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice_os_version(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    if-ne v0, v2, :cond_1
+
+    move v0, v1
+
+    :goto_1
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_id(I)V
+
+    invoke-interface {p0}, Lgdm;->y()Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setHas_flash(Z)V
+
+    invoke-interface {p0}, Lgdm;->j()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    if-gtz v5, :cond_2
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "No focal lengths defined!"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v5}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_2
+    new-instance v5, Lcom/google/googlex/gcam/FloatVector;
+
+    invoke-direct {v5}, Lcom/google/googlex/gcam/FloatVector;-><init>()V
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v7
+
+    :goto_2
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Float;
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v0
+
+    invoke-virtual {v5, v0}, Lcom/google/googlex/gcam/FloatVector;->add(F)V
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {v6, v5}, Lcom/google/googlex/gcam/StaticMetadata;->setAvailable_focal_lengths_mm(Lcom/google/googlex/gcam/FloatVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_INFO_AVAILABLE_APERTURES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [F
+
+    array-length v5, v0
+
+    if-gtz v5, :cond_4
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "No aperture values defined!"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_4
+    new-instance v7, Lcom/google/googlex/gcam/FloatVector;
+
+    invoke-direct {v7}, Lcom/google/googlex/gcam/FloatVector;-><init>()V
+
+    array-length v8, v0
+
+    move v5, v1
+
+    :goto_3
+    if-ge v5, v8, :cond_5
+
+    aget v9, v0, v5
+
+    invoke-virtual {v7, v9}, Lcom/google/googlex/gcam/FloatVector;->add(F)V
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_3
+
+    :cond_5
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setAvailable_f_numbers(Lcom/google/googlex/gcam/FloatVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_BLACK_LEVEL_PATTERN:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/params/BlackLevelPattern;
+
+    new-array v7, v3, [F
+
+    move v5, v1
+
+    :goto_4
+    if-ge v5, v3, :cond_6
+
+    rem-int/lit8 v8, v5, 0x2
+
+    div-int/lit8 v9, v5, 0x2
+
+    invoke-virtual {v0, v8, v9}, Landroid/hardware/camera2/params/BlackLevelPattern;->getOffsetForIndex(II)I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    aput v8, v7, v5
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_4
+
+    :cond_6
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setBlack_levels_bayer([F)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_WHITE_LEVEL:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setWhite_level(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_OPTICAL_BLACK_REGIONS:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Landroid/graphics/Rect;
+
+    if-eqz v0, :cond_8
+
+    new-instance v7, Lcom/google/googlex/gcam/PixelRectVector;
+
+    invoke-direct {v7}, Lcom/google/googlex/gcam/PixelRectVector;-><init>()V
+
+    array-length v8, v0
+
+    move v5, v1
+
+    :goto_5
+    if-ge v5, v8, :cond_7
+
+    aget-object v9, v0, v5
+
+    new-instance v10, Lcom/google/googlex/gcam/PixelRect;
+
+    invoke-direct {v10}, Lcom/google/googlex/gcam/PixelRect;-><init>()V
+
+    iget v11, v9, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setX0(I)V
+
+    iget v11, v9, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setX1(I)V
+
+    iget v11, v9, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setY0(I)V
+
+    iget v9, v9, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v10, v9}, Lcom/google/googlex/gcam/PixelRect;->setY1(I)V
+
+    invoke-virtual {v7, v10}, Lcom/google/googlex/gcam/PixelRectVector;->add(Lcom/google/googlex/gcam/PixelRect;)V
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_5
+
+    :cond_7
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setOptically_black_regions(Lcom/google/googlex/gcam/PixelRectVector;)V
+
+    :cond_8
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_COLOR_FILTER_ARRANGEMENT:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "staticInfo: unsupported BayerPattern"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    move v0, v2
+
+    :goto_6
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setBayer_pattern(I)V
+
+    new-array v3, v4, [I
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_SENSITIVITY_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Range;
+
+    invoke-virtual {v0}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    aput v0, v3, v1
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_SENSITIVITY_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Range;
+
+    invoke-virtual {v0}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    aput v0, v3, v2
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_MAX_ANALOG_SENSITIVITY:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v6, v3}, Lcom/google/googlex/gcam/StaticMetadata;->setIso_range([I)V
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMax_analog_iso(I)V
+
+    new-instance v2, Lcom/google/googlex/gcam/ColorCalibrationVector;
+
+    invoke-direct {v2}, Lcom/google/googlex/gcam/ColorCalibrationVector;-><init>()V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    if-eqz v0, :cond_9
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v3
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_CALIBRATION_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v1
+
+    new-instance v4, Lcom/google/googlex/gcam/ColorCalibration;
+
+    invoke-direct {v4}, Lcom/google/googlex/gcam/ColorCalibration;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/ColorCalibration;->setIlluminant(I)V
+
+    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/ColorCalibration;->setXyz_to_model_rgb([F)V
+
+    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/ColorCalibration;->setModel_rgb_to_device_rgb([F)V
+
+    invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
+
+    :cond_9
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Byte;
+
+    if-eqz v0, :cond_a
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v3
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_CALIBRATION_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v1
+
+    new-instance v4, Lcom/google/googlex/gcam/ColorCalibration;
+
+    invoke-direct {v4}, Lcom/google/googlex/gcam/ColorCalibration;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Byte;->byteValue()B
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/ColorCalibration;->setIlluminant(I)V
+
+    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/ColorCalibration;->setXyz_to_model_rgb([F)V
+
+    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/ColorCalibration;->setModel_rgb_to_device_rgb([F)V
+
+    invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
+
+    :cond_a
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setColor_calibration(Lcom/google/googlex/gcam/ColorCalibrationVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PIXEL_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Size;
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_width(I)V
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_height(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_ACTIVE_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Rect;
+
+    new-instance v1, Lcom/google/googlex/gcam/PixelRect;
+
+    invoke-direct {v1}, Lcom/google/googlex/gcam/PixelRect;-><init>()V
+
+    iget v2, v0, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setX0(I)V
+
+    iget v2, v0, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setX1(I)V
+
+    iget v2, v0, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setY0(I)V
+
+    iget v0, v0, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v1, v0}, Lcom/google/googlex/gcam/PixelRect;->setY1(I)V
+
+    invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setActive_area(Lcom/google/googlex/gcam/PixelRect;)V
+
+    invoke-static {p0}, Lcnr;->a(Lgdm;)Ligf;
+
+    move-result-object v1
+
+    iget-object v0, v1, Ligf;->b:Libx;
+
+    iget v0, v0, Libx;->a:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_width(I)V
+
+    iget-object v0, v1, Ligf;->b:Libx;
+
+    iget v0, v0, Libx;->b:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_height(I)V
+
+    const/16 v0, 0x23
+
+    invoke-interface {p0, v0}, Lgdm;->a(I)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Liby;->a(Ljava/util/List;)Libx;
+
+    move-result-object v0
+
+    iget v2, v0, Libx;->a:I
+
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_yuv_max_width(I)V
+
+    iget v0, v0, Libx;->b:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_yuv_max_height(I)V
+
+    iget v0, v1, Ligf;->a:I
+
+    invoke-static {v0}, Landroid/graphics/ImageFormat;->getBitsPerPixel(I)I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setRaw_bits_per_pixel(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PHYSICAL_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/SizeF;
+
+    invoke-virtual {v0}, Landroid/util/SizeF;->getWidth()F
+
+    move-result v2
+
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_physical_width_mm(F)V
+
+    invoke-virtual {v0}, Landroid/util/SizeF;->getHeight()F
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_physical_height_mm(F)V
+
+    iget v0, v1, Ligf;->a:I
+
+    iget-object v1, v1, Ligf;->b:Libx;
+
+    invoke-interface {p0, v0, v1}, Lgdm;->a(ILibx;)J
+
+    move-result-wide v0
+
+    long-to-float v0, v0
+
+    const v1, 0x49742400    # 1000000.0f
+
+    div-float/2addr v0, v1
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_readout_time_ms(F)V
+
+    return-object v6
+
+    :pswitch_1
+    const/4 v0, 0x3
+
+    goto/16 :goto_6
+
+    :pswitch_2
+    move v0, v3
+
+    goto/16 :goto_6
+
+    :pswitch_3
+    move v0, v4
+
+    goto/16 :goto_6
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
+.end method
+
+.method public static ad(Lgdm;)Lcom/google/googlex/gcam/StaticMetadata;
+    .locals 12
+
+    const/4 v4, 0x2
+
+    const/4 v3, 0x4
+
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    new-instance v6, Lcom/google/googlex/gcam/StaticMetadata;
+
+    invoke-direct {v6}, Lcom/google/googlex/gcam/StaticMetadata;-><init>()V
+
+    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    const-string v0, "Huawei"
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMake(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setModel(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "angler"
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice(Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/google/googlex/gcam/GcamModule;->GetVersion()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v5, "HDR+ "
+
+    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSoftware(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice_os_version(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    if-ne v0, v2, :cond_1
+
+    move v0, v1
+
+    :goto_1
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_id(I)V
+
+    invoke-interface {p0}, Lgdm;->y()Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setHas_flash(Z)V
+
+    invoke-interface {p0}, Lgdm;->j()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    if-gtz v5, :cond_2
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "No focal lengths defined!"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v5}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_2
+    new-instance v5, Lcom/google/googlex/gcam/FloatVector;
+
+    invoke-direct {v5}, Lcom/google/googlex/gcam/FloatVector;-><init>()V
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v7
+
+    :goto_2
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Float;
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v0
+
+    invoke-virtual {v5, v0}, Lcom/google/googlex/gcam/FloatVector;->add(F)V
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {v6, v5}, Lcom/google/googlex/gcam/StaticMetadata;->setAvailable_focal_lengths_mm(Lcom/google/googlex/gcam/FloatVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_INFO_AVAILABLE_APERTURES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [F
+
+    array-length v5, v0
+
+    if-gtz v5, :cond_4
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "No aperture values defined!"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_4
+    new-instance v7, Lcom/google/googlex/gcam/FloatVector;
+
+    invoke-direct {v7}, Lcom/google/googlex/gcam/FloatVector;-><init>()V
+
+    array-length v8, v0
+
+    move v5, v1
+
+    :goto_3
+    if-ge v5, v8, :cond_5
+
+    aget v9, v0, v5
+
+    invoke-virtual {v7, v9}, Lcom/google/googlex/gcam/FloatVector;->add(F)V
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_3
+
+    :cond_5
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setAvailable_f_numbers(Lcom/google/googlex/gcam/FloatVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_BLACK_LEVEL_PATTERN:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/params/BlackLevelPattern;
+
+    new-array v7, v3, [F
+
+    move v5, v1
+
+    :goto_4
+    if-ge v5, v3, :cond_6
+
+    rem-int/lit8 v8, v5, 0x2
+
+    div-int/lit8 v9, v5, 0x2
+
+    invoke-virtual {v0, v8, v9}, Landroid/hardware/camera2/params/BlackLevelPattern;->getOffsetForIndex(II)I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    aput v8, v7, v5
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_4
+
+    :cond_6
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setBlack_levels_bayer([F)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_WHITE_LEVEL:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setWhite_level(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_OPTICAL_BLACK_REGIONS:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Landroid/graphics/Rect;
+
+    if-eqz v0, :cond_8
+
+    new-instance v7, Lcom/google/googlex/gcam/PixelRectVector;
+
+    invoke-direct {v7}, Lcom/google/googlex/gcam/PixelRectVector;-><init>()V
+
+    array-length v8, v0
+
+    move v5, v1
+
+    :goto_5
+    if-ge v5, v8, :cond_7
+
+    aget-object v9, v0, v5
+
+    new-instance v10, Lcom/google/googlex/gcam/PixelRect;
+
+    invoke-direct {v10}, Lcom/google/googlex/gcam/PixelRect;-><init>()V
+
+    iget v11, v9, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setX0(I)V
+
+    iget v11, v9, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setX1(I)V
+
+    iget v11, v9, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setY0(I)V
+
+    iget v9, v9, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v10, v9}, Lcom/google/googlex/gcam/PixelRect;->setY1(I)V
+
+    invoke-virtual {v7, v10}, Lcom/google/googlex/gcam/PixelRectVector;->add(Lcom/google/googlex/gcam/PixelRect;)V
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_5
+
+    :cond_7
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setOptically_black_regions(Lcom/google/googlex/gcam/PixelRectVector;)V
+
+    :cond_8
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_COLOR_FILTER_ARRANGEMENT:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "staticInfo: unsupported BayerPattern"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    move v0, v2
+
+    :goto_6
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setBayer_pattern(I)V
+
+    new-array v3, v4, [I
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_SENSITIVITY_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Range;
+
+    invoke-virtual {v0}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    aput v0, v3, v1
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_SENSITIVITY_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Range;
+
+    invoke-virtual {v0}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    aput v0, v3, v2
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_MAX_ANALOG_SENSITIVITY:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v6, v3}, Lcom/google/googlex/gcam/StaticMetadata;->setIso_range([I)V
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMax_analog_iso(I)V
+
+    new-instance v2, Lcom/google/googlex/gcam/ColorCalibrationVector;
+
+    invoke-direct {v2}, Lcom/google/googlex/gcam/ColorCalibrationVector;-><init>()V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    if-eqz v0, :cond_9
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v3
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_CALIBRATION_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v1
+
+    new-instance v4, Lcom/google/googlex/gcam/ColorCalibration;
+
+    invoke-direct {v4}, Lcom/google/googlex/gcam/ColorCalibration;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/ColorCalibration;->setIlluminant(I)V
+
+    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/ColorCalibration;->setXyz_to_model_rgb([F)V
+
+    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/ColorCalibration;->setModel_rgb_to_device_rgb([F)V
+
+    invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
+
+    :cond_9
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Byte;
+
+    if-eqz v0, :cond_a
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v3
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_CALIBRATION_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v1
+
+    new-instance v4, Lcom/google/googlex/gcam/ColorCalibration;
+
+    invoke-direct {v4}, Lcom/google/googlex/gcam/ColorCalibration;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Byte;->byteValue()B
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/ColorCalibration;->setIlluminant(I)V
+
+    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/ColorCalibration;->setXyz_to_model_rgb([F)V
+
+    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/ColorCalibration;->setModel_rgb_to_device_rgb([F)V
+
+    invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
+
+    :cond_a
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setColor_calibration(Lcom/google/googlex/gcam/ColorCalibrationVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PIXEL_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Size;
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_width(I)V
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_height(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_ACTIVE_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Rect;
+
+    new-instance v1, Lcom/google/googlex/gcam/PixelRect;
+
+    invoke-direct {v1}, Lcom/google/googlex/gcam/PixelRect;-><init>()V
+
+    iget v2, v0, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setX0(I)V
+
+    iget v2, v0, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setX1(I)V
+
+    iget v2, v0, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setY0(I)V
+
+    iget v0, v0, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v1, v0}, Lcom/google/googlex/gcam/PixelRect;->setY1(I)V
+
+    invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setActive_area(Lcom/google/googlex/gcam/PixelRect;)V
+
+    invoke-static {p0}, Lcnr;->a(Lgdm;)Ligf;
+
+    move-result-object v1
+
+    iget-object v0, v1, Ligf;->b:Libx;
+
+    iget v0, v0, Libx;->a:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_width(I)V
+
+    iget-object v0, v1, Ligf;->b:Libx;
+
+    iget v0, v0, Libx;->b:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_height(I)V
+
+    const/16 v0, 0x23
+
+    invoke-interface {p0, v0}, Lgdm;->a(I)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Liby;->a(Ljava/util/List;)Libx;
+
+    move-result-object v0
+
+    iget v2, v0, Libx;->a:I
+
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_yuv_max_width(I)V
+
+    iget v0, v0, Libx;->b:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_yuv_max_height(I)V
+
+    iget v0, v1, Ligf;->a:I
+
+    invoke-static {v0}, Landroid/graphics/ImageFormat;->getBitsPerPixel(I)I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setRaw_bits_per_pixel(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PHYSICAL_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/SizeF;
+
+    invoke-virtual {v0}, Landroid/util/SizeF;->getWidth()F
+
+    move-result v2
+
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_physical_width_mm(F)V
+
+    invoke-virtual {v0}, Landroid/util/SizeF;->getHeight()F
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_physical_height_mm(F)V
+
+    iget v0, v1, Ligf;->a:I
+
+    iget-object v1, v1, Ligf;->b:Libx;
+
+    invoke-interface {p0, v0, v1}, Lgdm;->a(ILibx;)J
+
+    move-result-wide v0
+
+    long-to-float v0, v0
+
+    const v1, 0x49742400    # 1000000.0f
+
+    div-float/2addr v0, v1
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_readout_time_ms(F)V
+
+    return-object v6
+
+    :pswitch_1
+    const/4 v0, 0x3
+
+    goto/16 :goto_6
+
+    :pswitch_2
+    move v0, v3
+
+    goto/16 :goto_6
+
+    :pswitch_3
+    move v0, v4
+
+    goto/16 :goto_6
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
+.end method
+
+.method public static ae(Lgdm;)Lcom/google/googlex/gcam/StaticMetadata;
+    .locals 12
+
+    const/4 v4, 0x2
+
+    const/4 v3, 0x4
+
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    new-instance v6, Lcom/google/googlex/gcam/StaticMetadata;
+
+    invoke-direct {v6}, Lcom/google/googlex/gcam/StaticMetadata;-><init>()V
+
+    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    const-string v0, "motorola"
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMake(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setModel(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "shamu"
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice(Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/google/googlex/gcam/GcamModule;->GetVersion()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v5, "HDR+ "
+
+    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSoftware(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice_os_version(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    if-ne v0, v2, :cond_1
+
+    move v0, v1
+
+    :goto_1
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_id(I)V
+
+    invoke-interface {p0}, Lgdm;->y()Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setHas_flash(Z)V
+
+    invoke-interface {p0}, Lgdm;->j()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    if-gtz v5, :cond_2
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "No focal lengths defined!"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v5}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_2
+    new-instance v5, Lcom/google/googlex/gcam/FloatVector;
+
+    invoke-direct {v5}, Lcom/google/googlex/gcam/FloatVector;-><init>()V
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v7
+
+    :goto_2
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Float;
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v0
+
+    invoke-virtual {v5, v0}, Lcom/google/googlex/gcam/FloatVector;->add(F)V
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {v6, v5}, Lcom/google/googlex/gcam/StaticMetadata;->setAvailable_focal_lengths_mm(Lcom/google/googlex/gcam/FloatVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_INFO_AVAILABLE_APERTURES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [F
+
+    array-length v5, v0
+
+    if-gtz v5, :cond_4
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "No aperture values defined!"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_4
+    new-instance v7, Lcom/google/googlex/gcam/FloatVector;
+
+    invoke-direct {v7}, Lcom/google/googlex/gcam/FloatVector;-><init>()V
+
+    array-length v8, v0
+
+    move v5, v1
+
+    :goto_3
+    if-ge v5, v8, :cond_5
+
+    aget v9, v0, v5
+
+    invoke-virtual {v7, v9}, Lcom/google/googlex/gcam/FloatVector;->add(F)V
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_3
+
+    :cond_5
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setAvailable_f_numbers(Lcom/google/googlex/gcam/FloatVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_BLACK_LEVEL_PATTERN:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/params/BlackLevelPattern;
+
+    new-array v7, v3, [F
+
+    move v5, v1
+
+    :goto_4
+    if-ge v5, v3, :cond_6
+
+    rem-int/lit8 v8, v5, 0x2
+
+    div-int/lit8 v9, v5, 0x2
+
+    invoke-virtual {v0, v8, v9}, Landroid/hardware/camera2/params/BlackLevelPattern;->getOffsetForIndex(II)I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    aput v8, v7, v5
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_4
+
+    :cond_6
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setBlack_levels_bayer([F)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_WHITE_LEVEL:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setWhite_level(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_OPTICAL_BLACK_REGIONS:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Landroid/graphics/Rect;
+
+    if-eqz v0, :cond_8
+
+    new-instance v7, Lcom/google/googlex/gcam/PixelRectVector;
+
+    invoke-direct {v7}, Lcom/google/googlex/gcam/PixelRectVector;-><init>()V
+
+    array-length v8, v0
+
+    move v5, v1
+
+    :goto_5
+    if-ge v5, v8, :cond_7
+
+    aget-object v9, v0, v5
+
+    new-instance v10, Lcom/google/googlex/gcam/PixelRect;
+
+    invoke-direct {v10}, Lcom/google/googlex/gcam/PixelRect;-><init>()V
+
+    iget v11, v9, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setX0(I)V
+
+    iget v11, v9, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setX1(I)V
+
+    iget v11, v9, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setY0(I)V
+
+    iget v9, v9, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v10, v9}, Lcom/google/googlex/gcam/PixelRect;->setY1(I)V
+
+    invoke-virtual {v7, v10}, Lcom/google/googlex/gcam/PixelRectVector;->add(Lcom/google/googlex/gcam/PixelRect;)V
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_5
+
+    :cond_7
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setOptically_black_regions(Lcom/google/googlex/gcam/PixelRectVector;)V
+
+    :cond_8
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_COLOR_FILTER_ARRANGEMENT:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "staticInfo: unsupported BayerPattern"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    move v0, v2
+
+    :goto_6
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setBayer_pattern(I)V
+
+    new-array v3, v4, [I
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_SENSITIVITY_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Range;
+
+    invoke-virtual {v0}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    aput v0, v3, v1
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_SENSITIVITY_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Range;
+
+    invoke-virtual {v0}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    aput v0, v3, v2
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_MAX_ANALOG_SENSITIVITY:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v6, v3}, Lcom/google/googlex/gcam/StaticMetadata;->setIso_range([I)V
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMax_analog_iso(I)V
+
+    new-instance v2, Lcom/google/googlex/gcam/ColorCalibrationVector;
+
+    invoke-direct {v2}, Lcom/google/googlex/gcam/ColorCalibrationVector;-><init>()V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    if-eqz v0, :cond_9
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v3
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_CALIBRATION_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v1
+
+    new-instance v4, Lcom/google/googlex/gcam/ColorCalibration;
+
+    invoke-direct {v4}, Lcom/google/googlex/gcam/ColorCalibration;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/ColorCalibration;->setIlluminant(I)V
+
+    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/ColorCalibration;->setXyz_to_model_rgb([F)V
+
+    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/ColorCalibration;->setModel_rgb_to_device_rgb([F)V
+
+    invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
+
+    :cond_9
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Byte;
+
+    if-eqz v0, :cond_a
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v3
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_CALIBRATION_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v1
+
+    new-instance v4, Lcom/google/googlex/gcam/ColorCalibration;
+
+    invoke-direct {v4}, Lcom/google/googlex/gcam/ColorCalibration;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Byte;->byteValue()B
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/ColorCalibration;->setIlluminant(I)V
+
+    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/ColorCalibration;->setXyz_to_model_rgb([F)V
+
+    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/ColorCalibration;->setModel_rgb_to_device_rgb([F)V
+
+    invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
+
+    :cond_a
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setColor_calibration(Lcom/google/googlex/gcam/ColorCalibrationVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PIXEL_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Size;
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_width(I)V
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_height(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_ACTIVE_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Rect;
+
+    new-instance v1, Lcom/google/googlex/gcam/PixelRect;
+
+    invoke-direct {v1}, Lcom/google/googlex/gcam/PixelRect;-><init>()V
+
+    iget v2, v0, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setX0(I)V
+
+    iget v2, v0, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setX1(I)V
+
+    iget v2, v0, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setY0(I)V
+
+    iget v0, v0, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v1, v0}, Lcom/google/googlex/gcam/PixelRect;->setY1(I)V
+
+    invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setActive_area(Lcom/google/googlex/gcam/PixelRect;)V
+
+    invoke-static {p0}, Lcnr;->a(Lgdm;)Ligf;
+
+    move-result-object v1
+
+    iget-object v0, v1, Ligf;->b:Libx;
+
+    iget v0, v0, Libx;->a:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_width(I)V
+
+    iget-object v0, v1, Ligf;->b:Libx;
+
+    iget v0, v0, Libx;->b:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_height(I)V
+
+    const/16 v0, 0x23
+
+    invoke-interface {p0, v0}, Lgdm;->a(I)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Liby;->a(Ljava/util/List;)Libx;
+
+    move-result-object v0
+
+    iget v2, v0, Libx;->a:I
+
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_yuv_max_width(I)V
+
+    iget v0, v0, Libx;->b:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_yuv_max_height(I)V
+
+    iget v0, v1, Ligf;->a:I
+
+    invoke-static {v0}, Landroid/graphics/ImageFormat;->getBitsPerPixel(I)I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setRaw_bits_per_pixel(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PHYSICAL_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/SizeF;
+
+    invoke-virtual {v0}, Landroid/util/SizeF;->getWidth()F
+
+    move-result v2
+
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_physical_width_mm(F)V
+
+    invoke-virtual {v0}, Landroid/util/SizeF;->getHeight()F
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_physical_height_mm(F)V
+
+    iget v0, v1, Ligf;->a:I
+
+    iget-object v1, v1, Ligf;->b:Libx;
+
+    invoke-interface {p0, v0, v1}, Lgdm;->a(ILibx;)J
+
+    move-result-wide v0
+
+    long-to-float v0, v0
+
+    const v1, 0x49742400    # 1000000.0f
+
+    div-float/2addr v0, v1
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_readout_time_ms(F)V
+
+    return-object v6
+
+    :pswitch_1
+    const/4 v0, 0x3
+
+    goto/16 :goto_6
+
+    :pswitch_2
+    move v0, v3
+
+    goto/16 :goto_6
+
+    :pswitch_3
+    move v0, v4
+
+    goto/16 :goto_6
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
+.end method
+
+.method public static af(Lgdm;)Lcom/google/googlex/gcam/StaticMetadata;
+    .locals 12
+
+    const/4 v4, 0x2
+
+    const/4 v3, 0x4
+
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    new-instance v6, Lcom/google/googlex/gcam/StaticMetadata;
+
+    invoke-direct {v6}, Lcom/google/googlex/gcam/StaticMetadata;-><init>()V
+
+    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    const-string v0, "LGE"
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMake(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setModel(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "bullhead"
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice(Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/google/googlex/gcam/GcamModule;->GetVersion()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v5, "HDR+ "
+
+    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSoftware(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice_os_version(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    if-ne v0, v2, :cond_1
+
+    move v0, v1
+
+    :goto_1
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_id(I)V
+
+    invoke-interface {p0}, Lgdm;->y()Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setHas_flash(Z)V
+
+    invoke-interface {p0}, Lgdm;->j()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    if-gtz v5, :cond_2
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "No focal lengths defined!"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v5}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_2
+    new-instance v5, Lcom/google/googlex/gcam/FloatVector;
+
+    invoke-direct {v5}, Lcom/google/googlex/gcam/FloatVector;-><init>()V
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v7
+
+    :goto_2
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Float;
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v0
+
+    invoke-virtual {v5, v0}, Lcom/google/googlex/gcam/FloatVector;->add(F)V
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {v6, v5}, Lcom/google/googlex/gcam/StaticMetadata;->setAvailable_focal_lengths_mm(Lcom/google/googlex/gcam/FloatVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_INFO_AVAILABLE_APERTURES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [F
+
+    array-length v5, v0
+
+    if-gtz v5, :cond_4
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "No aperture values defined!"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_4
+    new-instance v7, Lcom/google/googlex/gcam/FloatVector;
+
+    invoke-direct {v7}, Lcom/google/googlex/gcam/FloatVector;-><init>()V
+
+    array-length v8, v0
+
+    move v5, v1
+
+    :goto_3
+    if-ge v5, v8, :cond_5
+
+    aget v9, v0, v5
+
+    invoke-virtual {v7, v9}, Lcom/google/googlex/gcam/FloatVector;->add(F)V
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_3
+
+    :cond_5
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setAvailable_f_numbers(Lcom/google/googlex/gcam/FloatVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_BLACK_LEVEL_PATTERN:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/params/BlackLevelPattern;
+
+    new-array v7, v3, [F
+
+    move v5, v1
+
+    :goto_4
+    if-ge v5, v3, :cond_6
+
+    rem-int/lit8 v8, v5, 0x2
+
+    div-int/lit8 v9, v5, 0x2
+
+    invoke-virtual {v0, v8, v9}, Landroid/hardware/camera2/params/BlackLevelPattern;->getOffsetForIndex(II)I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    aput v8, v7, v5
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_4
+
+    :cond_6
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setBlack_levels_bayer([F)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_WHITE_LEVEL:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setWhite_level(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_OPTICAL_BLACK_REGIONS:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Landroid/graphics/Rect;
+
+    if-eqz v0, :cond_8
+
+    new-instance v7, Lcom/google/googlex/gcam/PixelRectVector;
+
+    invoke-direct {v7}, Lcom/google/googlex/gcam/PixelRectVector;-><init>()V
+
+    array-length v8, v0
+
+    move v5, v1
+
+    :goto_5
+    if-ge v5, v8, :cond_7
+
+    aget-object v9, v0, v5
+
+    new-instance v10, Lcom/google/googlex/gcam/PixelRect;
+
+    invoke-direct {v10}, Lcom/google/googlex/gcam/PixelRect;-><init>()V
+
+    iget v11, v9, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setX0(I)V
+
+    iget v11, v9, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setX1(I)V
+
+    iget v11, v9, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setY0(I)V
+
+    iget v9, v9, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v10, v9}, Lcom/google/googlex/gcam/PixelRect;->setY1(I)V
+
+    invoke-virtual {v7, v10}, Lcom/google/googlex/gcam/PixelRectVector;->add(Lcom/google/googlex/gcam/PixelRect;)V
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_5
+
+    :cond_7
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setOptically_black_regions(Lcom/google/googlex/gcam/PixelRectVector;)V
+
+    :cond_8
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_COLOR_FILTER_ARRANGEMENT:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "staticInfo: unsupported BayerPattern"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    move v0, v2
+
+    :goto_6
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setBayer_pattern(I)V
+
+    new-array v3, v4, [I
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_SENSITIVITY_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Range;
+
+    invoke-virtual {v0}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    aput v0, v3, v1
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_SENSITIVITY_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Range;
+
+    invoke-virtual {v0}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    aput v0, v3, v2
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_MAX_ANALOG_SENSITIVITY:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v6, v3}, Lcom/google/googlex/gcam/StaticMetadata;->setIso_range([I)V
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMax_analog_iso(I)V
+
+    new-instance v2, Lcom/google/googlex/gcam/ColorCalibrationVector;
+
+    invoke-direct {v2}, Lcom/google/googlex/gcam/ColorCalibrationVector;-><init>()V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    if-eqz v0, :cond_9
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v3
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_CALIBRATION_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v1
+
+    new-instance v4, Lcom/google/googlex/gcam/ColorCalibration;
+
+    invoke-direct {v4}, Lcom/google/googlex/gcam/ColorCalibration;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/ColorCalibration;->setIlluminant(I)V
+
+    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/ColorCalibration;->setXyz_to_model_rgb([F)V
+
+    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/ColorCalibration;->setModel_rgb_to_device_rgb([F)V
+
+    invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
+
+    :cond_9
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Byte;
+
+    if-eqz v0, :cond_a
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v3
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_CALIBRATION_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v1
+
+    new-instance v4, Lcom/google/googlex/gcam/ColorCalibration;
+
+    invoke-direct {v4}, Lcom/google/googlex/gcam/ColorCalibration;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Byte;->byteValue()B
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/ColorCalibration;->setIlluminant(I)V
+
+    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/ColorCalibration;->setXyz_to_model_rgb([F)V
+
+    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/ColorCalibration;->setModel_rgb_to_device_rgb([F)V
+
+    invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
+
+    :cond_a
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setColor_calibration(Lcom/google/googlex/gcam/ColorCalibrationVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PIXEL_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Size;
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_width(I)V
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_height(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_ACTIVE_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Rect;
+
+    new-instance v1, Lcom/google/googlex/gcam/PixelRect;
+
+    invoke-direct {v1}, Lcom/google/googlex/gcam/PixelRect;-><init>()V
+
+    iget v2, v0, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setX0(I)V
+
+    iget v2, v0, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setX1(I)V
+
+    iget v2, v0, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setY0(I)V
+
+    iget v0, v0, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v1, v0}, Lcom/google/googlex/gcam/PixelRect;->setY1(I)V
+
+    invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setActive_area(Lcom/google/googlex/gcam/PixelRect;)V
+
+    invoke-static {p0}, Lcnr;->a(Lgdm;)Ligf;
+
+    move-result-object v1
+
+    iget-object v0, v1, Ligf;->b:Libx;
+
+    iget v0, v0, Libx;->a:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_width(I)V
+
+    iget-object v0, v1, Ligf;->b:Libx;
+
+    iget v0, v0, Libx;->b:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_height(I)V
+
+    const/16 v0, 0x23
+
+    invoke-interface {p0, v0}, Lgdm;->a(I)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Liby;->a(Ljava/util/List;)Libx;
+
+    move-result-object v0
+
+    iget v2, v0, Libx;->a:I
+
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_yuv_max_width(I)V
+
+    iget v0, v0, Libx;->b:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_yuv_max_height(I)V
+
+    iget v0, v1, Ligf;->a:I
+
+    invoke-static {v0}, Landroid/graphics/ImageFormat;->getBitsPerPixel(I)I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setRaw_bits_per_pixel(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PHYSICAL_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/SizeF;
+
+    invoke-virtual {v0}, Landroid/util/SizeF;->getWidth()F
+
+    move-result v2
+
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_physical_width_mm(F)V
+
+    invoke-virtual {v0}, Landroid/util/SizeF;->getHeight()F
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_physical_height_mm(F)V
+
+    iget v0, v1, Ligf;->a:I
+
+    iget-object v1, v1, Ligf;->b:Libx;
+
+    invoke-interface {p0, v0, v1}, Lgdm;->a(ILibx;)J
+
+    move-result-wide v0
+
+    long-to-float v0, v0
+
+    const v1, 0x49742400    # 1000000.0f
+
+    div-float/2addr v0, v1
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_readout_time_ms(F)V
+
+    return-object v6
+
+    :pswitch_1
+    const/4 v0, 0x3
+
+    goto/16 :goto_6
+
+    :pswitch_2
+    move v0, v3
+
+    goto/16 :goto_6
+
+    :pswitch_3
+    move v0, v4
+
+    goto/16 :goto_6
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
+.end method
+
+.method public static ag(Lgdm;)Lcom/google/googlex/gcam/StaticMetadata;
+    .locals 12
+
+    const/4 v4, 0x2
+
+    const/4 v3, 0x4
+
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    new-instance v6, Lcom/google/googlex/gcam/StaticMetadata;
+
+    invoke-direct {v6}, Lcom/google/googlex/gcam/StaticMetadata;-><init>()V
+
+    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+
+    const-string v0, "LGE"
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMake(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setModel(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v0, "hammerhead"
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice(Ljava/lang/String;)V
+
+    invoke-static {}, Lcom/google/googlex/gcam/GcamModule;->GetVersion()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v5, "HDR+ "
+
+    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v7
+
+    if-eqz v7, :cond_0
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSoftware(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice_os_version(Ljava/lang/String;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_FACING:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    if-ne v0, v2, :cond_1
+
+    move v0, v1
+
+    :goto_1
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_id(I)V
+
+    invoke-interface {p0}, Lgdm;->y()Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setHas_flash(Z)V
+
+    invoke-interface {p0}, Lgdm;->j()Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    if-gtz v5, :cond_2
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "No focal lengths defined!"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_0
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v5}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_2
+    new-instance v5, Lcom/google/googlex/gcam/FloatVector;
+
+    invoke-direct {v5}, Lcom/google/googlex/gcam/FloatVector;-><init>()V
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v7
+
+    :goto_2
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Float;
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v0
+
+    invoke-virtual {v5, v0}, Lcom/google/googlex/gcam/FloatVector;->add(F)V
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {v6, v5}, Lcom/google/googlex/gcam/StaticMetadata;->setAvailable_focal_lengths_mm(Lcom/google/googlex/gcam/FloatVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->LENS_INFO_AVAILABLE_APERTURES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [F
+
+    array-length v5, v0
+
+    if-gtz v5, :cond_4
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    const-string v1, "No aperture values defined!"
+
+    invoke-direct {v0, v1}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
+
+    :cond_4
+    new-instance v7, Lcom/google/googlex/gcam/FloatVector;
+
+    invoke-direct {v7}, Lcom/google/googlex/gcam/FloatVector;-><init>()V
+
+    array-length v8, v0
+
+    move v5, v1
+
+    :goto_3
+    if-ge v5, v8, :cond_5
+
+    aget v9, v0, v5
+
+    invoke-virtual {v7, v9}, Lcom/google/googlex/gcam/FloatVector;->add(F)V
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_3
+
+    :cond_5
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setAvailable_f_numbers(Lcom/google/googlex/gcam/FloatVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_BLACK_LEVEL_PATTERN:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/hardware/camera2/params/BlackLevelPattern;
+
+    new-array v7, v3, [F
+
+    move v5, v1
+
+    :goto_4
+    if-ge v5, v3, :cond_6
+
+    rem-int/lit8 v8, v5, 0x2
+
+    div-int/lit8 v9, v5, 0x2
+
+    invoke-virtual {v0, v8, v9}, Landroid/hardware/camera2/params/BlackLevelPattern;->getOffsetForIndex(II)I
+
+    move-result v8
+
+    int-to-float v8, v8
+
+    aput v8, v7, v5
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_4
+
+    :cond_6
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setBlack_levels_bayer([F)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_WHITE_LEVEL:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setWhite_level(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_OPTICAL_BLACK_REGIONS:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Landroid/graphics/Rect;
+
+    if-eqz v0, :cond_8
+
+    new-instance v7, Lcom/google/googlex/gcam/PixelRectVector;
+
+    invoke-direct {v7}, Lcom/google/googlex/gcam/PixelRectVector;-><init>()V
+
+    array-length v8, v0
+
+    move v5, v1
+
+    :goto_5
+    if-ge v5, v8, :cond_7
+
+    aget-object v9, v0, v5
+
+    new-instance v10, Lcom/google/googlex/gcam/PixelRect;
+
+    invoke-direct {v10}, Lcom/google/googlex/gcam/PixelRect;-><init>()V
+
+    iget v11, v9, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setX0(I)V
+
+    iget v11, v9, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setX1(I)V
+
+    iget v11, v9, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v10, v11}, Lcom/google/googlex/gcam/PixelRect;->setY0(I)V
+
+    iget v9, v9, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v10, v9}, Lcom/google/googlex/gcam/PixelRect;->setY1(I)V
+
+    invoke-virtual {v7, v10}, Lcom/google/googlex/gcam/PixelRectVector;->add(Lcom/google/googlex/gcam/PixelRect;)V
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_5
+
+    :cond_7
+    invoke-virtual {v6, v7}, Lcom/google/googlex/gcam/StaticMetadata;->setOptically_black_regions(Lcom/google/googlex/gcam/PixelRectVector;)V
+
+    :cond_8
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_COLOR_FILTER_ARRANGEMENT:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "staticInfo: unsupported BayerPattern"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    move v0, v2
+
+    :goto_6
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setBayer_pattern(I)V
+
+    new-array v3, v4, [I
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_SENSITIVITY_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Range;
+
+    invoke-virtual {v0}, Landroid/util/Range;->getLower()Ljava/lang/Comparable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    aput v0, v3, v1
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_SENSITIVITY_RANGE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Range;
+
+    invoke-virtual {v0}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    aput v0, v3, v2
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_MAX_ANALOG_SENSITIVITY:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v6, v3}, Lcom/google/googlex/gcam/StaticMetadata;->setIso_range([I)V
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setMax_analog_iso(I)V
+
+    new-instance v2, Lcom/google/googlex/gcam/ColorCalibrationVector;
+
+    invoke-direct {v2}, Lcom/google/googlex/gcam/ColorCalibrationVector;-><init>()V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    if-eqz v0, :cond_9
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v3
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_CALIBRATION_TRANSFORM1:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v1
+
+    new-instance v4, Lcom/google/googlex/gcam/ColorCalibration;
+
+    invoke-direct {v4}, Lcom/google/googlex/gcam/ColorCalibration;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/ColorCalibration;->setIlluminant(I)V
+
+    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/ColorCalibration;->setXyz_to_model_rgb([F)V
+
+    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/ColorCalibration;->setModel_rgb_to_device_rgb([F)V
+
+    invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
+
+    :cond_9
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_REFERENCE_ILLUMINANT2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Byte;
+
+    if-eqz v0, :cond_a
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_COLOR_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v3
+
+    sget-object v1, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_CALIBRATION_TRANSFORM2:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v1}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/hardware/camera2/params/ColorSpaceTransform;
+
+    invoke-static {v1}, Lcoj;->a(Landroid/hardware/camera2/params/ColorSpaceTransform;)[F
+
+    move-result-object v1
+
+    new-instance v4, Lcom/google/googlex/gcam/ColorCalibration;
+
+    invoke-direct {v4}, Lcom/google/googlex/gcam/ColorCalibration;-><init>()V
+
+    invoke-virtual {v0}, Ljava/lang/Byte;->byteValue()B
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Lcom/google/googlex/gcam/ColorCalibration;->setIlluminant(I)V
+
+    invoke-virtual {v4, v3}, Lcom/google/googlex/gcam/ColorCalibration;->setXyz_to_model_rgb([F)V
+
+    invoke-virtual {v4, v1}, Lcom/google/googlex/gcam/ColorCalibration;->setModel_rgb_to_device_rgb([F)V
+
+    invoke-virtual {v2, v4}, Lcom/google/googlex/gcam/ColorCalibrationVector;->add(Lcom/google/googlex/gcam/ColorCalibration;)V
+
+    :cond_a
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setColor_calibration(Lcom/google/googlex/gcam/ColorCalibrationVector;)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PIXEL_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/Size;
+
+    invoke-virtual {v0}, Landroid/util/Size;->getWidth()I
+
+    move-result v1
+
+    invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_width(I)V
+
+    invoke-virtual {v0}, Landroid/util/Size;->getHeight()I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setPixel_array_height(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_ACTIVE_ARRAY_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/Rect;
+
+    new-instance v1, Lcom/google/googlex/gcam/PixelRect;
+
+    invoke-direct {v1}, Lcom/google/googlex/gcam/PixelRect;-><init>()V
+
+    iget v2, v0, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setX0(I)V
+
+    iget v2, v0, Landroid/graphics/Rect;->right:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setX1(I)V
+
+    iget v2, v0, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v1, v2}, Lcom/google/googlex/gcam/PixelRect;->setY0(I)V
+
+    iget v0, v0, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v1, v0}, Lcom/google/googlex/gcam/PixelRect;->setY1(I)V
+
+    invoke-virtual {v6, v1}, Lcom/google/googlex/gcam/StaticMetadata;->setActive_area(Lcom/google/googlex/gcam/PixelRect;)V
+
+    invoke-static {p0}, Lcnr;->a(Lgdm;)Ligf;
+
+    move-result-object v1
+
+    iget-object v0, v1, Ligf;->b:Libx;
+
+    iget v0, v0, Libx;->a:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_width(I)V
+
+    iget-object v0, v1, Ligf;->b:Libx;
+
+    iget v0, v0, Libx;->b:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_raw_max_height(I)V
+
+    const/16 v0, 0x23
+
+    invoke-interface {p0, v0}, Lgdm;->a(I)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-static {v0}, Liby;->a(Ljava/util/List;)Libx;
+
+    move-result-object v0
+
+    iget v2, v0, Libx;->a:I
+
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_yuv_max_width(I)V
+
+    iget v0, v0, Libx;->b:I
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_yuv_max_height(I)V
+
+    iget v0, v1, Ligf;->a:I
+
+    invoke-static {v0}, Landroid/graphics/ImageFormat;->getBitsPerPixel(I)I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setRaw_bits_per_pixel(I)V
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SENSOR_INFO_PHYSICAL_SIZE:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    invoke-interface {p0, v0}, Lgdm;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/util/SizeF;
+
+    invoke-virtual {v0}, Landroid/util/SizeF;->getWidth()F
+
+    move-result v2
+
+    invoke-virtual {v6, v2}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_physical_width_mm(F)V
+
+    invoke-virtual {v0}, Landroid/util/SizeF;->getHeight()F
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setSensor_physical_height_mm(F)V
+
+    iget v0, v1, Ligf;->a:I
+
+    iget-object v1, v1, Ligf;->b:Libx;
+
+    invoke-interface {p0, v0, v1}, Lgdm;->a(ILibx;)J
+
+    move-result-wide v0
+
+    long-to-float v0, v0
+
+    const v1, 0x49742400    # 1000000.0f
+
+    div-float/2addr v0, v1
+
+    invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_readout_time_ms(F)V
+
+    return-object v6
+
+    :pswitch_1
+    const/4 v0, 0x3
+
+    goto/16 :goto_6
+
+    :pswitch_2
+    move v0, v3
+
+    goto/16 :goto_6
+
+    :pswitch_3
+    move v0, v4
+
+    goto/16 :goto_6
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
 .end method
 
 .method public static b(Lihr;Lgdm;)Lcom/google/googlex/gcam/SpatialGainMap;

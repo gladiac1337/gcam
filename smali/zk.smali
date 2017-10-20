@@ -138,6 +138,12 @@
 
     move-result-object v1
 
+    const/16 v1, 0x64
+
+    invoke-static {v1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+
+    move-result-object v1
+
     invoke-direct {p0, v0, v1}, Lzk;->b(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -829,11 +835,23 @@
 
     move-result-object v0
 
+    const/16 v0, 0x64
+
+    invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+
+    move-result-object v0
+
     iget-object v1, p0, Lzk;->z:Landroid/hardware/camera2/CaptureRequest$Builder;
 
     sget-object v2, Landroid/hardware/camera2/CaptureRequest;->JPEG_QUALITY:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-virtual {v1, v2}, Landroid/hardware/camera2/CaptureRequest$Builder;->get(Landroid/hardware/camera2/CaptureRequest$Key;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    const/16 v1, 0x64
+
+    invoke-static {v1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v1
 
@@ -866,7 +884,7 @@
 
     move-result v0
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_a
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_VIDEO_STABILIZATION_MODE:Landroid/hardware/camera2/CaptureRequest$Key;

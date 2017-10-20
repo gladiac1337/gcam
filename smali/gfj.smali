@@ -26,7 +26,7 @@
 
 
 # virtual methods
-.method public final a(Lihr;)V
+.method public final a(Lihr;Leqd;)V
     .locals 6
 
     const/16 v4, 0x23

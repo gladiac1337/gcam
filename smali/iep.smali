@@ -31,6 +31,19 @@
 
     iget-object v1, p0, Liep;->a:Landroid/hardware/camera2/CameraDevice;
 
+    invoke-virtual {v1}, Landroid/hardware/camera2/CameraDevice;->getId()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p1, 0x1
+
+    :cond_0
     invoke-virtual {v1, p1}, Landroid/hardware/camera2/CameraDevice;->createCaptureRequest(I)Landroid/hardware/camera2/CaptureRequest$Builder;
 
     move-result-object v1

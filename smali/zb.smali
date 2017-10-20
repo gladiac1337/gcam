@@ -879,6 +879,12 @@
 
     move-result-object v5
 
+    const/16 v5, 0x64
+
+    invoke-static {v5}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+
+    move-result-object v5
+
     invoke-virtual {v0, v4, v5}, Lzk;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
     iget-object v4, v0, Lzk;->b:Lacx;

@@ -187,6 +187,12 @@
 
     iget-object v1, v1, Lbfz;->b:Ljava/lang/Byte;
 
+    const/16 v1, 0x64
+
+    invoke-static {v1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+
+    move-result-object v1
+
     invoke-virtual {v2, v0, v1}, Lihp;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
     sget-object v1, Landroid/hardware/camera2/CaptureRequest;->JPEG_ORIENTATION:Landroid/hardware/camera2/CaptureRequest$Key;

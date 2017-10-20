@@ -68,6 +68,8 @@
     const/16 v0, 0x64
 
     :try_start_2
+    const/16 v0, 0x64
+
     invoke-virtual {p0, p1, v0, v1}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
     invoke-virtual {v1}, Ljava/io/OutputStream;->close()V

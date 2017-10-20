@@ -990,6 +990,8 @@
 
     move-result v3
 
+    const/4 v3, 0x1
+
     const-string v0, "is_smartburst_supported"
 
     invoke-virtual {v10, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -1009,6 +1011,8 @@
     invoke-virtual {v10, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v0
+
+    const/4 v0, 0x1
 
     move v7, v4
 
@@ -1731,6 +1735,8 @@
 
     move-result v1
 
+    const/4 v1, 0x1
+
     if-nez v1, :cond_16
 
     const-string v1, "pref_category_general"
@@ -2130,40 +2136,6 @@
     invoke-direct {p0, v0}, Leqh;->a(Landroid/preference/PreferenceScreen;)V
 
     :cond_2
-    const-string v0, "pref_launch_help"
-
-    invoke-virtual {p0, v0}, Leqh;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
-
-    move-result-object v0
-
-    new-instance v2, Leqj;
-
-    invoke-direct {v2, v1}, Leqj;-><init>(Landroid/app/Activity;)V
-
-    invoke-virtual {v0, v2}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
-
-    const-string v0, "pref_launch_feedback"
-
-    invoke-virtual {p0, v0}, Leqh;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
-
-    move-result-object v0
-
-    new-instance v2, Leqk;
-
-    invoke-direct {v2, v1}, Leqk;-><init>(Landroid/app/Activity;)V
-
-    invoke-virtual {v0, v2}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
-
-    invoke-virtual {p0}, Leqh;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/preference/PreferenceScreen;->getSharedPreferences()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    invoke-interface {v0, p0}, Landroid/content/SharedPreferences;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
-
     invoke-virtual {p0}, Leqh;->b()Z
 
     move-result v0

@@ -376,6 +376,37 @@
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setMin_payload_frames(I)V
 
+    const/4 v4, 0x3
+
+    iget-object v2, p0, Lcpa;->D:Lcnt;
+
+    iget-object v2, v2, Lcnt;->e:Lbhm;
+
+    invoke-virtual {v2}, Lbhm;->cpc()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-le v2, v3, :cond_3
+
+    const/4 v3, 0x1
+
+    if-eq v2, v3, :cond_4
+
+    const/4 v3, 0x2
+
+    if-eq v2, v3, :cond_5
+
+    const/4 v3, 0x3
+
+    if-eq v2, v3, :cond_6
+
+    const/4 v3, 0x4
+
+    if-ge v2, v3, :cond_7
+
+    :goto_1
     iget-object v2, p0, Lcpa;->D:Lcnt;
 
     iget-object v3, v2, Lcnt;->e:Lbhm;
@@ -383,8 +414,6 @@
     invoke-virtual {v3}, Lbhm;->f()I
 
     move-result v3
-
-    const/4 v4, 0x3
 
     iget-object v2, v2, Lcnt;->f:Lihe;
 
@@ -465,6 +494,31 @@
     monitor-exit v1
 
     goto/16 :goto_0
+
+    :cond_3
+    const/4 v4, 0x3
+
+    goto/16 :goto_1
+
+    :cond_4
+    const/4 v4, 0x5
+
+    goto/16 :goto_1
+
+    :cond_5
+    const/16 v4, 0xf
+
+    goto/16 :goto_1
+
+    :cond_6
+    const/16 v4, 0x19
+
+    goto/16 :goto_1
+
+    :cond_7
+    const/16 v4, 0x20
+
+    goto/16 :goto_1
 
     :catchall_0
     move-exception v0

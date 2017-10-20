@@ -134,26 +134,26 @@
     goto :goto_0
 
     :cond_2
-    iget-object v2, p0, Lfuh;->c:Lgzo;
+    invoke-virtual {p1}, Lbhm;->cgc()I
 
-    iget-object v2, v2, Lgzo;->b:Ligz;
+    move-result v2
 
-    iget-boolean v2, v2, Ligz;->c:Z
+    const/4 v3, 0x1
 
-    if-eqz v2, :cond_3
+    if-ne v2, v3, :cond_3
 
     const/16 v0, 0x244
 
     goto :goto_1
 
     :cond_3
-    iget-object v2, p0, Lfuh;->c:Lgzo;
+    invoke-virtual {p1}, Lbhm;->cgc()I
 
-    iget-object v2, v2, Lgzo;->b:Ligz;
+    move-result v2
 
-    iget-boolean v2, v2, Ligz;->d:Z
+    const/4 v3, 0x2
 
-    if-nez v2, :cond_1
+    if-eq v2, v3, :cond_1
 
     iget-object v2, p0, Lfuh;->c:Lgzo;
 
@@ -168,21 +168,13 @@
     goto :goto_1
 
     :cond_4
-    iget-object v2, p0, Lfuh;->c:Lgzo;
+    invoke-virtual {p1}, Lbhm;->cgc()I
 
-    iget-object v2, v2, Lgzo;->b:Ligz;
+    move-result v2
 
-    iget-boolean v2, v2, Ligz;->f:Z
+    const/4 v3, 0x3
 
-    if-nez v2, :cond_1
-
-    iget-object v2, p0, Lfuh;->c:Lgzo;
-
-    iget-object v2, v2, Lgzo;->b:Ligz;
-
-    iget-boolean v2, v2, Ligz;->g:Z
-
-    if-nez v2, :cond_1
+    if-ge v2, v3, :cond_1
 
     iget-object v2, p0, Lfuh;->c:Lgzo;
 

@@ -240,7 +240,11 @@
 
     move-result v0
 
+    const/4 v0, 0x3
+
     goto :goto_1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

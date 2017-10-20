@@ -499,7 +499,7 @@
 
 # virtual methods
 .method public final a(Ljuk;Lgdm;Ldhl;Ldih;Lgdl;Lcom/google/android/apps/camera/legacy/app/stats/CameraDeviceInstrumentationSession;)Ldie;
-    .locals 8
+    .locals 9
 
     invoke-static {p1}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -585,177 +585,41 @@
 
     invoke-static {}, Ldif;->h()Z
 
-    iget-object v0, p0, Ldik;->e:Lgzo;
-
-    iget-object v0, v0, Lgzo;->b:Ligz;
-
-    iget-boolean v0, v0, Ligz;->g:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Ldik;->e:Lgzo;
-
-    iget-object v0, v0, Lgzo;->b:Ligz;
-
-    iget-boolean v0, v0, Ligz;->f:Z
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    iget-object v0, p0, Ldik;->c:Ldif;
-
-    const-string v6, "persist.camera.cam_component"
-
-    const-string v7, "nexus2016_tuning"
-
-    invoke-virtual {v0, v6, v7}, Ldif;->a(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Ldik;->f:Lbiu;
-
-    const-string v3, "EXPERIMENTAL CONFIG: Pixel2016 Tuning"
-
-    const/4 v6, 0x1
-
-    invoke-virtual {v0, v3, v6}, Lbiu;->a(Ljava/lang/String;I)V
-
-    sget-object v0, Ldik;->a:Ljava/lang/String;
-
-    const-string v3, "Selected nexus2016Tuning OneCamera configuration."
-
-    invoke-static {v0, v3}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x3
-
-    new-array v0, v0, [I
-
-    fill-array-data v0, :array_0
-
-    invoke-static {p2, v0}, Ldik;->a(Lgdm;[I)Ligf;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v3, Ldqk;
-
-    iget v6, p4, Ldih;->a:I
-
-    iget-object v7, v0, Ligf;->b:Libx;
-
-    iget v0, v0, Ligf;->a:I
-
-    invoke-direct {v3, v6, v7, v0}, Ldqk;-><init>(ILibx;I)V
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Ldik;->a(Z)Legt;
-
-    move-result-object v6
-
-    new-instance v0, Ldnn;
-
-    invoke-direct/range {v0 .. v6}, Ldnn;-><init>(Ldob;Ldpy;Ldqk;Ldqq;Ldpt;Legt;)V
-
-    :goto_0
-    return-object v0
-
-    :cond_1
-    iget-object v0, p0, Ldik;->e:Lgzo;
-
-    iget-object v0, v0, Lgzo;->b:Ligz;
-
-    iget-boolean v0, v0, Ligz;->g:Z
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Ldik;->e:Lgzo;
-
-    iget-object v0, v0, Lgzo;->b:Ligz;
-
-    iget-boolean v0, v0, Ligz;->f:Z
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Ldik;->e:Lgzo;
-
-    invoke-virtual {v0}, Lgzo;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    :cond_2
-    iget-object v0, p0, Ldik;->c:Ldif;
-
-    const-string v6, "persist.camera.cam_component"
-
-    const-string v7, "experimental_features"
-
-    invoke-virtual {v0, v6, v7}, Ldif;->a(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Ldik;->f:Lbiu;
-
-    const-string v3, "EXPERIMENTAL CONFIG: Experimental Features (Pixel)"
-
-    const/4 v6, 0x1
-
-    invoke-virtual {v0, v3, v6}, Lbiu;->a(Ljava/lang/String;I)V
-
-    sget-object v0, Ldik;->a:Ljava/lang/String;
-
-    const-string v3, "Selected pixelExperimentalFeatures OneCamera configuration."
-
-    invoke-static {v0, v3}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {p4, p2}, Ldik;->a(Ldih;Lgdm;)Ldqk;
-
-    move-result-object v3
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Ldik;->a(Z)Legt;
-
-    move-result-object v6
-
-    new-instance v0, Ldnm;
-
-    invoke-direct/range {v0 .. v6}, Ldnm;-><init>(Ldob;Ldpy;Ldqk;Ldqq;Ldpt;Legt;)V
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Ldik;->e:Lgzo;
-
-    iget-object v0, v0, Lgzo;->b:Ligz;
-
-    iget-boolean v0, v0, Ligz;->c:Z
-
-    if-eqz v0, :cond_5
-
-    iget-object v0, p0, Ldik;->d:Lbhm;
-
-    invoke-virtual {v0}, Lbhm;->d()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
     invoke-interface {p2}, Lgdm;->b()Lift;
 
     move-result-object v0
 
     sget-object v6, Lift;->b:Lift;
 
-    if-ne v0, v6, :cond_5
+    if-ne v0, v6, :cond_7
 
+    iget-object v0, p0, Ldik;->d:Lbhm;
+
+    invoke-virtual {v0}, Lbhm;->cgc()I
+
+    move-result v0
+
+    const/4 v8, 0x0
+
+    if-le v0, v8, :cond_7
+
+    const/4 v8, 0x1
+
+    if-eq v0, v8, :cond_0
+
+    const/4 v8, 0x2
+
+    if-eq v0, v8, :cond_2
+
+    const/4 v8, 0x3
+
+    if-eq v0, v8, :cond_3
+
+    const/4 v8, 0x4
+
+    if-eq v0, v8, :cond_5
+
+    :cond_0
     invoke-static {p4}, Ldik;->a(Ldih;)I
 
     move-result v0
@@ -784,7 +648,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_1
 
     sget-object v0, Ldik;->a:Ljava/lang/String;
 
@@ -796,9 +660,9 @@
 
     invoke-direct {v0, v1, v2, v4, v3}, Ldnu;-><init>(Ldob;Ldpy;Ldqk;Legt;)V
 
-    goto/16 :goto_0
+    return-object v0
 
-    :cond_4
+    :cond_1
     sget-object v0, Ldik;->a:Ljava/lang/String;
 
     const-string v5, "Selected Nexus6HdrPlusAutoNoZsl OneCamera configuration."
@@ -809,171 +673,9 @@
 
     invoke-direct {v0, v1, v2, v4, v3}, Ldnv;-><init>(Ldob;Ldpy;Ldqk;Legt;)V
 
-    goto/16 :goto_0
+    return-object v0
 
-    :cond_5
-    iget-object v0, p0, Ldik;->e:Lgzo;
-
-    iget-object v0, v0, Lgzo;->b:Ligz;
-
-    iget-boolean v0, v0, Ligz;->c:Z
-
-    if-eqz v0, :cond_6
-
-    iget-object v0, p0, Ldik;->d:Lbhm;
-
-    invoke-virtual {v0}, Lbhm;->d()Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    invoke-interface {p2}, Lgdm;->b()Lift;
-
-    move-result-object v0
-
-    sget-object v6, Lift;->b:Lift;
-
-    if-ne v0, v6, :cond_6
-
-    sget-object v0, Ldik;->a:Ljava/lang/String;
-
-    const-string v3, "Selected Nexus6ZslYuv OneCamera configuration."
-
-    invoke-static {v0, v3}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2}, Ldob;->a(Ldpy;)Ldnw;
-
-    move-result-object v0
-
-    goto/16 :goto_0
-
-    :cond_6
-    iget-object v0, p0, Ldik;->e:Lgzo;
-
-    iget-object v0, v0, Lgzo;->b:Ligz;
-
-    iget-boolean v0, v0, Ligz;->c:Z
-
-    if-eqz v0, :cond_7
-
-    invoke-interface {p2}, Lgdm;->b()Lift;
-
-    move-result-object v0
-
-    sget-object v6, Lift;->a:Lift;
-
-    if-ne v0, v6, :cond_7
-
-    sget-object v0, Ldik;->a:Ljava/lang/String;
-
-    const-string v3, "Selected Nexus6ZslYuv OneCamera configuration."
-
-    invoke-static {v0, v3}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v1, v2}, Ldob;->a(Ldpy;)Ldnw;
-
-    move-result-object v0
-
-    goto/16 :goto_0
-
-    :cond_7
-    iget-object v0, p0, Ldik;->e:Lgzo;
-
-    iget-object v0, v0, Lgzo;->b:Ligz;
-
-    iget-boolean v0, v0, Ligz;->b:Z
-
-    if-eqz v0, :cond_9
-
-    iget-object v0, p0, Ldik;->d:Lbhm;
-
-    invoke-virtual {v0}, Lbhm;->d()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    sget-object v0, Ldii;->e:Ldii;
-
-    invoke-virtual {v3, v0}, Ldii;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    sget-object v0, Ldik;->a:Ljava/lang/String;
-
-    const-string v3, "Selected Nexus5X OneCamera configuration."
-
-    invoke-static {v0, v3}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Ldik;->d:Lbhm;
-
-    invoke-virtual {v0}, Lbhm;->h()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    invoke-static {p4, p2}, Ldik;->a(Ldih;Lgdm;)Ldqk;
-
-    move-result-object v3
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Ldik;->a(Z)Legt;
-
-    move-result-object v6
-
-    new-instance v0, Ldnp;
-
-    invoke-direct/range {v0 .. v6}, Ldnp;-><init>(Ldob;Ldpy;Ldqk;Ldqq;Ldpt;Legt;)V
-
-    goto/16 :goto_0
-
-    :cond_8
-    invoke-static {p4, p2}, Ldik;->a(Ldih;Lgdm;)Ldqk;
-
-    move-result-object v3
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Ldik;->a(Z)Legt;
-
-    move-result-object v6
-
-    new-instance v0, Ldnq;
-
-    invoke-direct/range {v0 .. v6}, Ldnq;-><init>(Ldob;Ldpy;Ldqk;Ldqq;Ldpt;Legt;)V
-
-    goto/16 :goto_0
-
-    :cond_9
-    iget-object v0, p0, Ldik;->e:Lgzo;
-
-    iget-object v0, v0, Lgzo;->b:Ligz;
-
-    iget-boolean v0, v0, Ligz;->d:Z
-
-    if-eqz v0, :cond_a
-
-    iget-object v0, p0, Ldik;->d:Lbhm;
-
-    invoke-virtual {v0}, Lbhm;->d()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    sget-object v0, Ldii;->e:Ldii;
-
-    invoke-virtual {v3, v0}, Ldii;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
+    :cond_2
     sget-object v0, Ldik;->a:Ljava/lang/String;
 
     const-string v3, "Selected Nexus6P OneCamera configuration."
@@ -994,102 +696,9 @@
 
     invoke-direct/range {v0 .. v6}, Ldno;-><init>(Ldob;Ldpy;Ldqk;Ldqq;Ldpt;Legt;)V
 
-    goto/16 :goto_0
+    return-object v0
 
-    :cond_a
-    iget-object v0, p0, Ldik;->e:Lgzo;
-
-    iget-object v0, v0, Lgzo;->b:Ligz;
-
-    iget-boolean v0, v0, Ligz;->g:Z
-
-    if-nez v0, :cond_b
-
-    iget-object v0, p0, Ldik;->e:Lgzo;
-
-    iget-object v0, v0, Lgzo;->b:Ligz;
-
-    iget-boolean v0, v0, Ligz;->f:Z
-
-    if-eqz v0, :cond_c
-
-    :cond_b
-    iget-object v0, p0, Ldik;->d:Lbhm;
-
-    invoke-virtual {v0}, Lbhm;->d()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_c
-
-    sget-object v0, Ldii;->e:Ldii;
-
-    invoke-virtual {v3, v0}, Ldii;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_c
-
-    sget-object v0, Ldik;->a:Ljava/lang/String;
-
-    const-string v3, "Selected Pixel 2016 Zsl Hdr OneCamera configuration."
-
-    invoke-static {v0, v3}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {p4, p2}, Ldik;->a(Ldih;Lgdm;)Ldqk;
-
-    move-result-object v3
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Ldik;->a(Z)Legt;
-
-    move-result-object v6
-
-    new-instance v0, Ldoc;
-
-    invoke-direct/range {v0 .. v6}, Ldoc;-><init>(Ldob;Ldpy;Ldqk;Ldqq;Ldpt;Legt;)V
-
-    goto/16 :goto_0
-
-    :cond_c
-    iget-object v0, p0, Ldik;->e:Lgzo;
-
-    invoke-virtual {v0}, Lgzo;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_d
-
-    invoke-interface {p2}, Lgdm;->x()Z
-
-    :cond_d
-    iget-object v0, p0, Ldik;->e:Lgzo;
-
-    invoke-virtual {v0}, Lgzo;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_e
-
-    invoke-interface {p2}, Lgdm;->x()Z
-
-    iget-object v0, p0, Ldik;->d:Lbhm;
-
-    invoke-virtual {v0}, Lbhm;->d()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_e
-
-    sget-object v0, Ldii;->e:Ldii;
-
-    invoke-virtual {v3, v0}, Ldii;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_e
-
+    :cond_3
     sget-object v0, Ldik;->a:Ljava/lang/String;
 
     const-string v3, "Selected Pixel 2017 Zsl Hdr+ OneCamera configuration."
@@ -1100,8 +709,24 @@
 
     move-result-object v3
 
+    iget-object v0, p0, Ldik;->d:Lbhm;
+
+    invoke-virtual {v0}, Lbhm;->ims()I
+
+    move-result v0
+
+    const/4 v8, 0x3
+
+    if-le v0, v8, :cond_4
+
     const/4 v0, 0x0
 
+    goto :goto_0
+
+    :cond_4
+    const/4 v0, 0x1
+
+    :goto_0
     invoke-direct {p0, v0}, Ldik;->a(Z)Legt;
 
     move-result-object v6
@@ -1110,9 +735,66 @@
 
     invoke-direct/range {v0 .. v6}, Ldod;-><init>(Ldob;Ldpy;Ldqk;Ldqq;Ldpt;Legt;)V
 
-    goto/16 :goto_0
+    return-object v0
 
-    :cond_e
+    :cond_5
+    sget-object v0, Ldik;->a:Ljava/lang/String;
+
+    const-string v3, "Selected nexus2016Tuning OneCamera configuration."
+
+    invoke-static {v0, v3}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x3
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_0
+
+    invoke-static {p2, v0}, Ldik;->a(Lgdm;[I)Ligf;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v3, Ldqk;
+
+    iget v6, p4, Ldih;->a:I
+
+    iget-object v7, v0, Ligf;->b:Libx;
+
+    iget v0, v0, Ligf;->a:I
+
+    invoke-direct {v3, v6, v7, v0}, Ldqk;-><init>(ILibx;I)V
+
+    iget-object v0, p0, Ldik;->d:Lbhm;
+
+    invoke-virtual {v0}, Lbhm;->ims()I
+
+    move-result v0
+
+    const/4 v8, 0x3
+
+    if-le v0, v8, :cond_6
+
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_6
+    const/4 v0, 0x1
+
+    :goto_1
+    invoke-direct {p0, v0}, Ldik;->a(Z)Legt;
+
+    move-result-object v6
+
+    new-instance v0, Ldnn;
+
+    invoke-direct/range {v0 .. v6}, Ldnn;-><init>(Ldob;Ldpy;Ldqk;Ldqq;Ldpt;Legt;)V
+
+    return-object v0
+
+    :cond_7
     invoke-virtual {v3}, Ldii;->ordinal()I
 
     move-result v0
@@ -1174,7 +856,7 @@
 
     invoke-direct {v0, v1, v2}, Ldog;-><init>(Ldob;Ldpy;)V
 
-    goto/16 :goto_0
+    return-object v0
 
     :pswitch_1
     sget-object v0, Ldik;->a:Ljava/lang/String;
@@ -1187,7 +869,7 @@
 
     invoke-direct {v0, v1, v2}, Ldoh;-><init>(Ldob;Ldpy;)V
 
-    goto/16 :goto_0
+    return-object v0
 
     :pswitch_2
     sget-object v0, Ldik;->a:Ljava/lang/String;
@@ -1200,7 +882,7 @@
 
     invoke-direct {v0, v1, v2}, Ldoj;-><init>(Ldob;Ldpy;)V
 
-    goto/16 :goto_0
+    return-object v0
 
     :pswitch_3
     sget-object v0, Ldik;->a:Ljava/lang/String;
@@ -1213,7 +895,9 @@
 
     invoke-direct {v0, v1, v2, v4, v5}, Ldoi;-><init>(Ldob;Ldpy;Ldqq;Ldpt;)V
 
-    goto/16 :goto_0
+    return-object v0
+
+    nop
 
     :array_0
     .array-data 4

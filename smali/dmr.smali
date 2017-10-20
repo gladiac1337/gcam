@@ -38,7 +38,7 @@
 
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->JPEG_QUALITY:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    const/16 v1, 0x5f
+    const/16 v1, 0x64
 
     invoke-static {v1}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 

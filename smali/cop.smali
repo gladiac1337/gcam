@@ -292,7 +292,7 @@
 .end method
 
 .method private final a(Libx;FLcom/google/googlex/gcam/AeResults;)Lcom/google/googlex/gcam/AeShotParams;
-    .locals 3
+    .locals 5
 
     const/4 v2, 0x1
 
@@ -324,16 +324,46 @@
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/AeShotParams;->setProcess_bayer_for_payload(Z)V
 
+    const/16 v4, 0x64
+
+    iget-object v1, p0, Lcop;->k:Libx;
+
+    iget v1, v1, Libx;->a:I
+
+    iget-object v3, p0, Lcop;->l:Libx;
+
+    iget v3, v3, Libx;->a:I
+
+    sub-int v3, v1, v3
+
+    if-lt v3, v4, :cond_1
+
     iget-object v1, p0, Lcop;->l:Libx;
 
     iget v1, v1, Libx;->a:I
 
+    :cond_1
     invoke-virtual {v0, v1}, Lcom/google/googlex/gcam/AeShotParams;->setTarget_width(I)V
+
+    const/16 v4, 0x64
+
+    iget-object v1, p0, Lcop;->k:Libx;
+
+    iget v1, v1, Libx;->b:I
+
+    iget-object v3, p0, Lcop;->l:Libx;
+
+    iget v3, v3, Libx;->b:I
+
+    sub-int v3, v1, v3
+
+    if-lt v3, v4, :cond_2
 
     iget-object v1, p0, Lcop;->l:Libx;
 
     iget v1, v1, Libx;->b:I
 
+    :cond_2
     invoke-virtual {v0, v1}, Lcom/google/googlex/gcam/AeShotParams;->setTarget_height(I)V
 
     goto :goto_0

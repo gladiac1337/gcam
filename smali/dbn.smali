@@ -238,6 +238,8 @@
 
     iget-boolean v10, v10, Ligz;->f:Z
 
+    const/4 v10, 0x1
+
     if-nez v10, :cond_4
 
     iget-object v10, v15, Ldbm;->E:Lgzo;
