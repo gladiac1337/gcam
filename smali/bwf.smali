@@ -264,7 +264,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_6
 
     new-instance v2, Lixr;
 
@@ -303,7 +303,7 @@
 
     move-result v5
 
-    if-eqz v5, :cond_1
+    if-eqz v5, :cond_2
 
     invoke-virtual {v3}, Lcom/google/android/libraries/smartburst/filterfw/MffContext;->getApplicationContext()Landroid/content/Context;
 
@@ -627,8 +627,19 @@
 
     iget-boolean v3, v3, Ligz;->d:Z
 
-    if-eqz v3, :cond_4
+    if-nez v3, :cond_1
 
+    invoke-static {}, Lgzo;->a()Lgzo;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lgzo;->b:Ligz;
+
+    iget-boolean v3, v3, Ligz;->b:Z
+
+    if-eqz v3, :cond_5
+
+    :cond_1
     iget-object v3, p0, Lbwf;->H:Lgvq;
 
     iget-object v4, p0, Lbwf;->n:Leot;
@@ -669,7 +680,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_3
+    if-eqz v6, :cond_4
 
     sget-object v6, Libh;->a:Libh;
 
@@ -679,7 +690,7 @@
 
     move-result v5
 
-    if-eqz v5, :cond_3
+    if-eqz v5, :cond_4
 
     invoke-virtual {v3, v4}, Libh;->b(Libx;)Landroid/graphics/Rect;
 
@@ -794,12 +805,12 @@
 
     return-void
 
-    :cond_1
+    :cond_2
     invoke-static {v2}, Lixp;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     sget-object v5, Lisy;->a:Lisy;
 
-    if-ne v4, v5, :cond_2
+    if-ne v4, v5, :cond_3
 
     const/4 v5, 0x1
 
@@ -886,17 +897,10 @@
 
     goto/16 :goto_1
 
-    :cond_2
+    :cond_3
     const/4 v5, 0x0
 
     goto :goto_3
-
-    :cond_3
-    sget-object v3, Lbwf;->i:Landroid/graphics/RectF;
-
-    move-object v4, v3
-
-    goto/16 :goto_2
 
     :cond_4
     sget-object v3, Lbwf;->i:Landroid/graphics/RectF;
@@ -906,6 +910,13 @@
     goto/16 :goto_2
 
     :cond_5
+    sget-object v3, Lbwf;->i:Landroid/graphics/RectF;
+
+    move-object v4, v3
+
+    goto/16 :goto_2
+
+    :cond_6
     move-object v2, v3
 
     goto/16 :goto_0

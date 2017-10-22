@@ -110,6 +110,8 @@
 
     move-result v1
 
+    const/16 v1, 0xc
+
     iput v1, p0, Leez;->k:I
 
     invoke-interface {p10}, Lcoo;->b()Lcom/google/googlex/gcam/InitParams;
@@ -119,6 +121,8 @@
     invoke-virtual {v1}, Lcom/google/googlex/gcam/InitParams;->getMax_payload_frames()I
 
     move-result v1
+
+    const/16 v1, 0xd
 
     iput v1, p0, Leez;->l:I
 

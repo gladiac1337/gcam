@@ -73,6 +73,16 @@
 
     iget-boolean v0, v0, Ligz;->g:Z
 
+    const/4 v0, 0x1
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lgar;->f:Lgzo;
+
+    iget-object v0, v0, Lgzo;->b:Ligz;
+
+    iget-boolean v0, v0, Ligz;->f:Z
+
     if-nez v0, :cond_1
 
     const-string v0, "GyroCaptureInitializer"

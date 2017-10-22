@@ -413,7 +413,7 @@
 
     move-object/from16 v20, v0
 
-    invoke-virtual/range {v21 .. v21}, Lgzo;->c()Z
+    invoke-virtual/range {v21 .. v21}, Lgzo;->i()Z
 
     move-result v21
 

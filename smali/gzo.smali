@@ -389,6 +389,8 @@
 
     move-result v0
 
+    const/4 v0, 0x1
+
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lgzo;->c:Ligy;
@@ -415,6 +417,8 @@
 
     move-result v0
 
+    const/4 v0, 0x1
+
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lgzo;->c:Ligy;
@@ -432,4 +436,12 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method public final i()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

@@ -226,78 +226,13 @@
 
     const-string v2, "camera:gcam_enabled"
 
-    iget-object v0, p0, Lbhm;->b:Lgzo;
-
-    iget-object v0, v0, Lgzo;->b:Ligz;
-
-    iget-boolean v0, v0, Ligz;->a:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lbhm;->b:Lgzo;
-
-    iget-object v0, v0, Lgzo;->b:Ligz;
-
-    iget-boolean v0, v0, Ligz;->c:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lbhm;->b:Lgzo;
-
-    iget-object v0, v0, Lgzo;->b:Ligz;
-
-    iget-boolean v0, v0, Ligz;->d:Z
-
     const/4 v0, 0x1
 
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lbhm;->b:Lgzo;
-
-    iget-object v0, v0, Lgzo;->b:Ligz;
-
-    iget-boolean v0, v0, Ligz;->b:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lbhm;->b:Lgzo;
-
-    iget-object v0, v0, Lgzo;->b:Ligz;
-
-    iget-boolean v0, v0, Ligz;->f:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lbhm;->b:Lgzo;
-
-    iget-object v0, v0, Lgzo;->b:Ligz;
-
-    iget-boolean v0, v0, Ligz;->g:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lbhm;->b:Lgzo;
-
-    invoke-virtual {v0}, Lgzo;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
     invoke-virtual {p0, v1, v2, v0}, Lbhm;->a(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
     move-result v0
 
     return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 .method public final e()I

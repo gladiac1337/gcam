@@ -1089,6 +1089,8 @@
 
     move-result v3
 
+    const/4 v3, 0x1
+
     if-nez v3, :cond_1
 
     const-string v3, "pref_camera_hdrplus_option_available_key"
@@ -1102,6 +1104,8 @@
     invoke-virtual {v2, v3}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
 
     :cond_1
+    const/4 v7, 0x1
+
     if-nez v7, :cond_2
 
     const-string v3, "pref_camera_dirty_lens_key"
@@ -1124,6 +1128,8 @@
     invoke-virtual {v0, v2}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
 
     :cond_3
+    const/4 v5, 0x1
+
     if-nez v5, :cond_4
 
     const-string v2, "pref_category_experimental"
@@ -1349,6 +1355,8 @@
     invoke-virtual {v0}, Lgzo;->c()Z
 
     move-result v0
+
+    const/4 v0, 0x1
 
     if-eqz v0, :cond_8
 

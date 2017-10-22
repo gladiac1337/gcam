@@ -188,6 +188,14 @@
 
     iget-object v6, v6, Lgzo;->b:Ligz;
 
+    iget-boolean v6, v6, Ligz;->d:Z
+
+    if-nez v6, :cond_0
+
+    iget-object v6, v2, Lbhp;->a:Lgzo;
+
+    iget-object v6, v6, Lgzo;->b:Ligz;
+
     iget-boolean v6, v6, Ligz;->g:Z
 
     if-nez v6, :cond_0
@@ -316,6 +324,14 @@
 
     iget-object v6, v6, Lgzo;->b:Ligz;
 
+    iget-boolean v6, v6, Ligz;->d:Z
+
+    if-nez v6, :cond_6
+
+    iget-object v6, v2, Lbhp;->a:Lgzo;
+
+    iget-object v6, v6, Lgzo;->b:Ligz;
+
     iget-boolean v6, v6, Ligz;->g:Z
 
     if-nez v6, :cond_6
@@ -369,12 +385,12 @@
 
     sget-object v1, Lefx;->b:Lefx;
 
-    goto :goto_2
+    goto/16 :goto_2
 
     :cond_b
     sget-object v1, Lefx;->a:Lefx;
 
-    goto :goto_2
+    goto/16 :goto_2
 
     :cond_c
     sget-object v1, Lefx;->a:Lefx;
