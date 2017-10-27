@@ -56,6 +56,34 @@
     check-cast v0, Lggg;
 
     invoke-direct {v3, v0}, Lggi;-><init>(Lggg;)V
+
+    iget-object v4, p0, Ldis;->a:Ldiq;
+
+    iget-object v4, v4, Ldiq;->c:Lgdy;
+
+    invoke-interface {v4, v3}, Lgdy;->c(Lggi;)Lggi;
+
+    move-result-object v6
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Lggg;
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v6}, Lggi;->c()Lggg;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    invoke-static {v4}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v6
+
+    sget-object v4, Lggp;->b:Lggp;
+
+    invoke-interface {v2, v6, v4}, Ldol;->a(Ljava/util/List;Lggp;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2

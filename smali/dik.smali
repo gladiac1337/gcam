@@ -591,7 +591,7 @@
 
     sget-object v6, Lift;->b:Lift;
 
-    if-ne v0, v6, :cond_7
+    if-ne v0, v6, :cond_8
 
     iget-object v0, p0, Ldik;->d:Lbhm;
 
@@ -601,7 +601,7 @@
 
     const/4 v8, 0x0
 
-    if-le v0, v8, :cond_7
+    if-le v0, v8, :cond_8
 
     const/4 v8, 0x1
 
@@ -609,15 +609,15 @@
 
     const/4 v8, 0x2
 
-    if-eq v0, v8, :cond_2
+    if-eq v0, v8, :cond_3
 
     const/4 v8, 0x3
 
-    if-eq v0, v8, :cond_3
+    if-eq v0, v8, :cond_4
 
     const/4 v8, 0x4
 
-    if-eq v0, v8, :cond_5
+    if-eq v0, v8, :cond_6
 
     :cond_0
     invoke-static {p4}, Ldik;->a(Ldih;)I
@@ -642,14 +642,25 @@
 
     move-result-object v3
 
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v5, "sagit"
+
+    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
     iget-object v0, p0, Ldik;->d:Lbhm;
 
     invoke-virtual {v0}, Lbhm;->i()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
+    :cond_1
     sget-object v0, Ldik;->a:Ljava/lang/String;
 
     const-string v5, "Selected Nexus6HdrPlusAuto OneCamera configuration."
@@ -662,7 +673,7 @@
 
     return-object v0
 
-    :cond_1
+    :cond_2
     sget-object v0, Ldik;->a:Ljava/lang/String;
 
     const-string v5, "Selected Nexus6HdrPlusAutoNoZsl OneCamera configuration."
@@ -675,7 +686,7 @@
 
     return-object v0
 
-    :cond_2
+    :cond_3
     sget-object v0, Ldik;->a:Ljava/lang/String;
 
     const-string v3, "Selected Nexus6P OneCamera configuration."
@@ -698,7 +709,7 @@
 
     return-object v0
 
-    :cond_3
+    :cond_4
     iget-object v0, p0, Ldik;->c:Ldif;
 
     const-string v6, "persist.camera.cam_component"
@@ -727,13 +738,13 @@
 
     const/4 v8, 0x3
 
-    if-le v0, v8, :cond_4
+    if-le v0, v8, :cond_5
 
     const/4 v0, 0x0
 
     goto :goto_0
 
-    :cond_4
+    :cond_5
     const/4 v0, 0x1
 
     :goto_0
@@ -745,7 +756,7 @@
 
     invoke-direct/range {v0 .. v6}, Ldnm;-><init>(Ldob;Ldpy;Ldqk;Ldqq;Ldpt;Legt;)V
 
-    :cond_5
+    :cond_6
     iget-object v0, p0, Ldik;->c:Ldif;
 
     const-string v6, "persist.camera.cam_component"
@@ -792,13 +803,13 @@
 
     const/4 v8, 0x3
 
-    if-le v0, v8, :cond_6
+    if-le v0, v8, :cond_7
 
     const/4 v0, 0x0
 
     goto :goto_1
 
-    :cond_6
+    :cond_7
     const/4 v0, 0x1
 
     :goto_1
@@ -812,7 +823,7 @@
 
     return-object v0
 
-    :cond_7
+    :cond_8
     invoke-virtual {v3}, Ldii;->ordinal()I
 
     move-result v0
