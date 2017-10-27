@@ -160,7 +160,7 @@
 
     invoke-direct {v2}, Lcom/google/googlex/gcam/PostviewParams;-><init>()V
 
-    const/4 v3, 0x5
+    const/4 v3, 0x6
 
     invoke-virtual {v2, v3}, Lcom/google/googlex/gcam/PostviewParams;->setPixel_format(I)V
 
