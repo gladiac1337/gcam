@@ -160,7 +160,7 @@
 
     invoke-direct {v2}, Lcom/google/googlex/gcam/PostviewParams;-><init>()V
 
-    const/4 v3, 0x6
+    const/4 v3, 0x5
 
     invoke-virtual {v2, v3}, Lcom/google/googlex/gcam/PostviewParams;->setPixel_format(I)V
 
@@ -636,17 +636,25 @@
 
     invoke-virtual {v0, v4}, Lcom/google/googlex/gcam/ShotParams;->setImage_rotation(I)V
 
+    const/16 v4, 0x64
+
+    move-object/from16 v0, v22
+
+    invoke-virtual {v0, v4}, Lcom/google/googlex/gcam/ShotParams;->setFinal_jpg_quality(I)V
+
     const/4 v4, 0x1
 
     move-object/from16 v0, v22
 
     invoke-virtual {v0, v4}, Lcom/google/googlex/gcam/ShotParams;->setManually_rotate_final_jpg(Z)V
 
+    const/4 v2, 0x1
+
     move-object/from16 v0, v22
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/ShotParams;->setSave_merged_dng(Z)V
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
     move-object/from16 v0, v22
 
