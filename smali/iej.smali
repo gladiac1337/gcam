@@ -189,7 +189,7 @@
 
     sget v0, Lcom/google/android/libraries/camera/exif/ExifInterface;->d:I
 
-    sget-object v1, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+    sget-object v1, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
     invoke-direct {p0, v0, v1}, Liej;->a(ILjava/lang/Object;)V
 

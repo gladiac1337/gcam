@@ -695,7 +695,7 @@
     :cond_0
     const-string v0, "Make"
 
-    sget-object v1, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+    sget-object v1, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
     invoke-virtual {v6, v0, v1}, Landroid/media/ExifInterface;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0

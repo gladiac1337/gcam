@@ -978,6 +978,8 @@
 
     move-result v5
 
+    const/4 v5, 0x1
+
     const-string v0, "is_advice_module_supported"
 
     invoke-virtual {v10, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z

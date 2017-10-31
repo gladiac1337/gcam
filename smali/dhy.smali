@@ -213,6 +213,8 @@
 
     move-result v0
 
+    const/4 v0, 0x1
+
     if-nez v0, :cond_1
 
     sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
@@ -226,7 +228,7 @@
     if-eqz v0, :cond_2
 
     :cond_1
-    const/4 v0, 0x1
+    const/4 v0, 0x3
 
     :goto_1
     invoke-static {v0}, Ldii;->a(I)Ljhi;
@@ -243,8 +245,6 @@
     invoke-static {v0, v1, v2}, Lhym;->a(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
     move-result v0
-
-    const/4 v0, 0x3
 
     goto :goto_1
 

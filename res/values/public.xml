@@ -3637,6 +3637,8 @@
     <public type="string" name="pref_parameters_camera_2" id="0x7f11036c" />
     <public type="string" name="pref_parameters_camera_3" id="0x7f11036d" />
     <public type="string" name="pref_parameters_camera_4" id="0x7f11036e" />
+    <public type="string" name="pref_config_camera_5" id="0x7f11036f" />
+    <public type="string" name="pref_config_camera_6" id="0x7f110370" />
     <public type="style" name="AlertDialog.AppCompat" id="0x7f120000" />
     <public type="style" name="AlertDialog.AppCompat.Light" id="0x7f120001" />
     <public type="style" name="Animation.AppCompat.Dialog" id="0x7f120002" />
