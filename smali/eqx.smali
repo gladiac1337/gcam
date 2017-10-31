@@ -390,6 +390,8 @@
 
     iget-boolean v0, v0, Ligz;->a:Z
 
+    const/4 v0, 0x1
+
     if-eqz v0, :cond_2
 
     if-eqz p1, :cond_2

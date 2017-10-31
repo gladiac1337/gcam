@@ -1252,7 +1252,7 @@
     if-eqz v2, :cond_1
 
     :cond_0
-    const/4 v0, 0x5
+    const/4 v0, 0x7
 
     :cond_1
     iget-object v1, v1, Lbhm;->a:Landroid/content/ContentResolver;

@@ -2584,6 +2584,12 @@
 
     invoke-virtual {v4, v2, v7}, Lgsf;->a(Ljava/lang/String;Z)V
 
+    const-string v2, "pref_camera_hdr_plus_raw_out_key"
+
+    const/4 v7, 0x1
+
+    invoke-virtual {v4, v2, v7}, Lgsf;->a(Ljava/lang/String;Z)V
+
     const-string v2, "pref_camera_selfie_flashmode_key"
 
     const/4 v7, 0x0

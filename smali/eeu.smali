@@ -57,6 +57,8 @@
 
     iget-boolean v0, v0, Ligz;->a:Z
 
+    const/4 v0, 0x1
+
     if-eqz v0, :cond_0
 
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_CAPTURE_INTENT:Landroid/hardware/camera2/CaptureRequest$Key;

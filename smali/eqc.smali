@@ -1293,6 +1293,8 @@
 
     iget-boolean v0, v0, Ligz;->a:Z
 
+    const/4 v0, 0x1
+
     if-eqz v0, :cond_14
 
     const-string v0, "default_scope"
