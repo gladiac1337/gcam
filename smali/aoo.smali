@@ -56,8 +56,6 @@
 
     iget v3, p0, Laoo;->b:I
 
-    const/16 v3, 0x64
-
     invoke-virtual {v0, v2, v3, v1}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
     invoke-interface {p1}, Lahg;->d()V

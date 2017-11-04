@@ -747,8 +747,8 @@
     <public type="drawable" name="zoom_slider_thumb" id="0x7f020153" />
     <public type="drawable" name="menu_bg_pressed" id="0x7f020116" />
     <public type="drawable" name="common_full_open_on_phone" id="0x7f02006c" />
-    <public type="mipmap" name="adaptiveproduct_pixelcamera" id="0x7f030006" />
     <public type="mipmap" name="adaptiveproduct_pixelcamera_launcher" id="0x7f030002" />
+    <public type="mipmap" name="adaptiveproduct_pixelcamera" id="0x7f030006" />
     <public type="mipmap" name="adaptiveproduct_pixelcamera_background_color_108" id="0x7f030000" />
     <public type="mipmap" name="adaptiveproduct_pixelcamera_foreground_color_108" id="0x7f030001" />
     <public type="mipmap" name="logo_google_camera" id="0x7f030003" />
@@ -3637,8 +3637,10 @@
     <public type="string" name="pref_parameters_camera_2" id="0x7f11036c" />
     <public type="string" name="pref_parameters_camera_3" id="0x7f11036d" />
     <public type="string" name="pref_parameters_camera_4" id="0x7f11036e" />
-    <public type="string" name="pref_config_camera_5" id="0x7f11036f" />
-    <public type="string" name="pref_config_camera_6" id="0x7f110370" />
+    <public type="string" name="pref_hdr_plus_jpeg_title" id="0x7f11036f" />
+    <public type="string" name="pref_hdr_plus_jpeg_summary" id="0x7f110370" />
+    <public type="string" name="pref_config_camera_5" id="0x7f110371" />
+    <public type="string" name="pref_config_camera_6" id="0x7f110372" />
     <public type="style" name="AlertDialog.AppCompat" id="0x7f120000" />
     <public type="style" name="AlertDialog.AppCompat.Light" id="0x7f120001" />
     <public type="style" name="Animation.AppCompat.Dialog" id="0x7f120002" />

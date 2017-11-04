@@ -94,61 +94,33 @@
 .method public final b()Z
     .locals 3
 
-    const/4 v2, 0x4
-
-    invoke-virtual {p0}, Lbhm;->cgc()I
-
-    move-result v0
-
-    if-eq v0, v2, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
     iget-object v1, p0, Lbhm;->a:Landroid/content/ContentResolver;
 
     const-string v2, "camera:smartburst_enabled"
+
+    const/4 v0, 0x1
 
     invoke-virtual {p0, v1, v2, v0}, Lbhm;->a(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
     move-result v0
 
     return v0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_0
 .end method
 
 .method public final c()Z
     .locals 3
 
-    const/4 v2, 0x4
-
-    invoke-virtual {p0}, Lbhm;->cgc()I
-
-    move-result v0
-
-    if-eq v0, v2, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
     iget-object v1, p0, Lbhm;->a:Landroid/content/ContentResolver;
 
     const-string v2, "camera:hybrid_burst_enabled"
+
+    const/4 v0, 0x1
 
     invoke-virtual {p0, v1, v2, v0}, Lbhm;->a(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
     move-result v0
 
     return v0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_0
 .end method
 
 .method public cgc()I

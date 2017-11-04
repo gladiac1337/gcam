@@ -2804,7 +2804,7 @@
 
     const-string v2, "pref_camera_jpegquality_key"
 
-    const v3, 0x7f110213
+    const v3, 0x7f110212
 
     invoke-virtual {v5, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

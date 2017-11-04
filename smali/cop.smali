@@ -636,7 +636,7 @@
 
     invoke-virtual {v0, v4}, Lcom/google/googlex/gcam/ShotParams;->setImage_rotation(I)V
 
-    const/16 v4, 0x64
+    const/16 v4, 0x5f
 
     move-object/from16 v0, v22
 

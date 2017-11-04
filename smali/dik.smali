@@ -701,19 +701,9 @@
     return-object v0
 
     :cond_3
-    iget-object v0, p0, Ldik;->c:Ldif;
-
-    const-string v6, "persist.camera.cam_component"
-
-    const-string v7, "experimental_features"
-
-    invoke-virtual {v0, v6, v7}, Ldif;->a(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v0
-
     sget-object v0, Ldik;->a:Ljava/lang/String;
 
-    const-string v3, "Selected pixelExperimentalFeatures OneCamera configuration."
+    const-string v3, "Selected Pixel 2017 Zsl Hdr+ OneCamera configuration."
 
     invoke-static {v0, v3}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -743,21 +733,13 @@
 
     move-result-object v6
 
-    new-instance v0, Ldnm;
+    new-instance v0, Ldod;
 
-    invoke-direct/range {v0 .. v6}, Ldnm;-><init>(Ldob;Ldpy;Ldqk;Ldqq;Ldpt;Legt;)V
+    invoke-direct/range {v0 .. v6}, Ldod;-><init>(Ldob;Ldpy;Ldqk;Ldqq;Ldpt;Legt;)V
+
+    return-object v0
 
     :cond_5
-    iget-object v0, p0, Ldik;->c:Ldif;
-
-    const-string v6, "persist.camera.cam_component"
-
-    const-string v7, "nexus2016_tuning"
-
-    invoke-virtual {v0, v6, v7}, Ldif;->a(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v0
-
     sget-object v0, Ldik;->a:Ljava/lang/String;
 
     const-string v3, "Selected nexus2016Tuning OneCamera configuration."
@@ -916,8 +898,6 @@
     invoke-direct {v0, v1, v2, v4, v5}, Ldoi;-><init>(Ldob;Ldpy;Ldqq;Ldpt;)V
 
     return-object v0
-
-    nop
 
     :array_0
     .array-data 4

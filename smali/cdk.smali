@@ -64,8 +64,6 @@
 
     iget v5, p0, Lcdk;->b:I
 
-    const/16 v5, 0x64
-
     invoke-virtual {v0, v1, v5, v4}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0

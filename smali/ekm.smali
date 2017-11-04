@@ -352,8 +352,6 @@
 
     sget-object v7, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
-    const/16 v5, 0x64
-
     invoke-virtual {v0, v7, v5, v6}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
     invoke-virtual {v6}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B

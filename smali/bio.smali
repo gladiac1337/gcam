@@ -159,7 +159,7 @@
 
     const-string v1, "camera.enable_pd"
 
-    invoke-direct {v0, v1, v2}, Lbkt;-><init>(Ljava/lang/String;Z)V
+    invoke-direct {v0, v1, v3}, Lbkt;-><init>(Ljava/lang/String;Z)V
 
     sput-object v0, Lbio;->m:Lbkt;
 
@@ -167,7 +167,7 @@
 
     const-string v1, "camera.enable_pd_blur"
 
-    invoke-direct {v0, v1, v2}, Lbkt;-><init>(Ljava/lang/String;Z)V
+    invoke-direct {v0, v1, v3}, Lbkt;-><init>(Ljava/lang/String;Z)V
 
     sput-object v0, Lbio;->n:Lbkt;
 
@@ -237,7 +237,7 @@
 
     const-string v1, "camera.use_photos"
 
-    invoke-virtual {p2}, Lgzo;->g()Z
+    invoke-virtual {p2}, Lgzo;->c()Z
 
     move-result v2
 
@@ -249,7 +249,7 @@
 
     const-string v1, "camera.diet_burst"
 
-    invoke-virtual {p2}, Lgzo;->g()Z
+    invoke-virtual {p2}, Lgzo;->c()Z
 
     move-result v2
 

@@ -205,25 +205,19 @@
 
     if-eqz v0, :cond_2
 
-    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+    iget-object v0, p1, Lbhm;->b:Lgzo;
 
-    const-string v1, "hammerhead"
+    iget-object v0, v0, Lgzo;->b:Ligz;
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    const/4 v0, 0x1
+    iget-boolean v0, v0, Ligz;->a:Z
 
     if-nez v0, :cond_1
 
-    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+    iget-object v0, p1, Lbhm;->b:Lgzo;
 
-    const-string v1, "shamu"
+    iget-object v0, v0, Lgzo;->b:Ligz;
 
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
+    iget-boolean v0, v0, Ligz;->c:Z
 
     if-eqz v0, :cond_2
 
@@ -247,8 +241,6 @@
     move-result v0
 
     goto :goto_1
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0
