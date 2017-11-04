@@ -740,6 +740,16 @@
     return-object v0
 
     :cond_5
+    iget-object v0, p0, Ldik;->c:Ldif;
+
+    const-string v6, "persist.camera.cam_component"
+
+    const-string v7, "nexus2016_tuning"
+
+    invoke-virtual {v0, v6, v7}, Ldif;->a(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
     sget-object v0, Ldik;->a:Ljava/lang/String;
 
     const-string v3, "Selected nexus2016Tuning OneCamera configuration."

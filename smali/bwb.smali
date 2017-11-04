@@ -479,8 +479,6 @@
 
     iget-boolean v3, v3, Ligz;->a:Z
 
-    const/4 v3, 0x1
-
     if-eqz v3, :cond_0
 
     new-instance v3, Landroid/util/Range;

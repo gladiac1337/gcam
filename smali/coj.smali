@@ -4106,11 +4106,11 @@
 
     invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setFrame_readout_time_ms(F)V
 
-    return-object v6
-
     const-string v0, "taimen"
 
     invoke-virtual {v6, v0}, Lcom/google/googlex/gcam/StaticMetadata;->setDevice(Ljava/lang/String;)V
+
+    return-object v6
 
     :pswitch_1
     const/4 v0, 0x3

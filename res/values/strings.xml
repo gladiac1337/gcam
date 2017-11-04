@@ -882,10 +882,10 @@ It is necessary to completely close the application, the changes will take effec
     <string name="pref_config_camera_title">Config camera HDR+</string>
     <string name="pref_config_camera_default">0</string>
     <string name="pref_config_camera_0">No HDR+</string>
-    <string name="pref_config_camera_1">Nexus (Max = High)</string>
-    <string name="pref_config_camera_2">Nexus 6P (Max = Super High)</string>
-    <string name="pref_config_camera_3">Pixel 2017 (Max = Very High)</string>
-    <string name="pref_config_camera_4">Pixel + Smartburst (bad touch-focus) (Max = Very High)</string>
+    <string name="pref_config_camera_1">Nexus6 (Max = High)</string>
+    <string name="pref_config_camera_2">Nexus6P (Max = Super High)</string>
+    <string name="pref_config_camera_3">Pixel 2017 Zsl (Max = Very High)</string>
+    <string name="pref_config_camera_4">Nexus 2016 Tuning (Max = Very High)</string>
     <string name="pref_parameters_camera_title">HDR+ parameters</string>
     <string name="pref_parameters_camera_default">0</string>
     <string name="pref_parameters_camera_0">Default</string>

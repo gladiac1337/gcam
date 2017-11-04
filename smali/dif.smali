@@ -377,8 +377,6 @@
 
     iget-boolean v0, v0, Ligz;->a:Z
 
-    const/4 v0, 0x1
-
     if-nez v0, :cond_0
 
     const/4 v0, 0x1

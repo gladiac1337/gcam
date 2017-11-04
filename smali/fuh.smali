@@ -97,8 +97,6 @@
 
     iget-boolean v2, v2, Ligz;->a:Z
 
-    const/4 v2, 0x1
-
     if-eqz v2, :cond_2
 
     const/16 v0, 0x20d
