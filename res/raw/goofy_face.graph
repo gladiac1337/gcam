@@ -60,7 +60,7 @@
 
 @filter MultiFaceTrackerFilter faceTracker {
   numChannelsDetector = 3;
-  quality = 0.0f;
+  quality = 1.0f;
   smoothness = 0.2f;
   minEyeDist = 25.0f;
   rollRange = 45.0f;

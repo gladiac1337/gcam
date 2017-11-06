@@ -370,7 +370,7 @@
 .end method
 
 .method private final declared-synchronized a(ILeap;Lgdr;Lcom/google/googlex/gcam/AeResults;Lihr;Z)Lcoz;
-    .locals 23
+    .locals 24
 
     monitor-enter p0
 
@@ -598,6 +598,17 @@
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/ShotCallbacks;->setFinished_callback(Lcom/google/googlex/gcam/BurstCallback;)V
 
+    iget-object v2, v5, Lcpa;->B:Lbhm;
+
+    invoke-virtual {v2}, Lbhm;->qjpg()I
+
+    move-result v23
+
+    if-nez v23, :cond_3
+
+    const/16 v23, 0x5f
+
+    :cond_3
     sget-object v2, Lcnu;->e:Lcnu;
 
     invoke-interface {v4, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -636,7 +647,7 @@
 
     invoke-virtual {v0, v4}, Lcom/google/googlex/gcam/ShotParams;->setImage_rotation(I)V
 
-    const/16 v4, 0x5f
+    move/from16 v4, v23
 
     move-object/from16 v0, v22
 
@@ -654,7 +665,7 @@
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/ShotParams;->setSave_merged_dng(Z)V
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     move-object/from16 v0, v22
 
@@ -680,7 +691,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
     const/4 v2, 0x0
 
@@ -688,7 +699,7 @@
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/ShotParams;->setResampling_method_override(I)V
 
-    :cond_3
+    :cond_4
     invoke-static/range {p3 .. p3}, Lcoj;->a(Lgdr;)I
 
     move-result v2
@@ -709,7 +720,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_8
 
     const/4 v2, 0x1
 
@@ -728,7 +739,7 @@
 
     sget-object v3, Lgmm;->a:Lgmm;
 
-    if-ne v2, v3, :cond_8
+    if-ne v2, v3, :cond_9
 
     const/4 v2, 0x0
 
@@ -737,7 +748,7 @@
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/ShotParams;->setWb_mode(I)V
 
-    if-eqz p6, :cond_9
+    if-eqz p6, :cond_a
 
     const-string v2, "z"
 
@@ -752,7 +763,7 @@
 
     invoke-virtual {v0, v1}, Lcom/google/googlex/gcam/ShotParams;->setZsl(Z)V
 
-    if-eqz p6, :cond_a
+    if-eqz p6, :cond_b
 
     const/4 v2, 0x1
 
@@ -805,7 +816,7 @@
 
     invoke-static {v3, v2}, Lbhy;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-nez p4, :cond_4
+    if-nez p4, :cond_5
 
     invoke-virtual/range {v22 .. v22}, Lcom/google/googlex/gcam/ShotParams;->getAe()Lcom/google/googlex/gcam/AeShotParams;
 
@@ -845,7 +856,7 @@
 
     invoke-static/range {v2 .. v7}, Lcoj;->a(Lcom/google/googlex/gcam/AeShotParams;Landroid/graphics/Rect;[Landroid/hardware/camera2/params/MeteringRectangle;Libx;Lgdm;F)V
 
-    :cond_4
+    :cond_5
     const/16 v18, 0x0
 
     move-object/from16 v0, p0
@@ -866,7 +877,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_5
+    if-nez v3, :cond_6
 
     move-object/from16 v0, p0
 
@@ -876,7 +887,7 @@
 
     move-result v3
 
-    if-nez v3, :cond_5
+    if-nez v3, :cond_6
 
     move-object/from16 v0, p0
 
@@ -886,19 +897,19 @@
 
     move-result v3
 
-    if-eqz v3, :cond_b
+    if-eqz v3, :cond_c
 
-    :cond_5
+    :cond_6
     const/4 v3, 0x1
 
     :goto_6
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_7
 
     invoke-virtual {v2}, Ljhi;->a()Z
 
     move-result v3
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_7
 
     new-instance v18, Lcom/google/googlex/gcam/ImageSaverParams;
 
@@ -936,7 +947,7 @@
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/ImageSaverParams;->setDest_folder(Ljava/lang/String;)V
 
-    :cond_6
+    :cond_7
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcop;->c:Lcom/google/googlex/gcam/Gcam;
@@ -977,7 +988,7 @@
 
     move-result-object v10
 
-    if-eqz v10, :cond_d
+    if-eqz v10, :cond_e
 
     move-object/from16 v0, p0
 
@@ -1021,7 +1032,7 @@
 
     move-result v3
 
-    if-eqz v3, :cond_c
+    if-eqz v3, :cond_d
 
     move-object/from16 v0, p0
 
@@ -1085,23 +1096,23 @@
 
     return-object v2
 
-    :cond_7
+    :cond_8
     const/4 v2, 0x0
 
     goto/16 :goto_2
 
-    :cond_8
+    :cond_9
     const/4 v2, 0x1
 
     goto/16 :goto_3
 
-    :cond_9
+    :cond_a
     :try_start_2
     const-string v2, "n"
 
     goto/16 :goto_4
 
-    :cond_a
+    :cond_b
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcop;->i:Lgdm;
@@ -1124,17 +1135,17 @@
 
     goto/16 :goto_5
 
-    :cond_b
+    :cond_c
     const/4 v3, 0x0
 
     goto/16 :goto_6
 
-    :cond_c
+    :cond_d
     const/4 v7, 0x0
 
     goto :goto_7
 
-    :cond_d
+    :cond_e
     const/4 v2, 0x0
 
     goto :goto_8

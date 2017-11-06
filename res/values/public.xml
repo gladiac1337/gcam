@@ -1099,6 +1099,8 @@
     <public type="array" name="pref_config_camera_entryvalues" id="0x7f0a0040" />
     <public type="array" name="pref_parameters_camera_entries" id="0x7f0a0041" />
     <public type="array" name="pref_parameters_camera_entryvalues" id="0x7f0a0042" />
+    <public type="array" name="pref_qjpg_entries" id="0x7f0a0043" />
+    <public type="array" name="pref_qjpg_entryvalues" id="0x7f0a0044" />
     <public type="bool" name="abc_action_bar_embed_tabs" id="0x7f0b0000" />
     <public type="bool" name="abc_allow_stacked_button_bar" id="0x7f0b0001" />
     <public type="bool" name="abc_config_actionMenuItemAllCaps" id="0x7f0b0002" />
@@ -3637,10 +3639,22 @@
     <public type="string" name="pref_parameters_camera_2" id="0x7f11036c" />
     <public type="string" name="pref_parameters_camera_3" id="0x7f11036d" />
     <public type="string" name="pref_parameters_camera_4" id="0x7f11036e" />
-    <public type="string" name="pref_hdr_plus_jpeg_title" id="0x7f11036f" />
-    <public type="string" name="pref_hdr_plus_jpeg_summary" id="0x7f110370" />
-    <public type="string" name="pref_config_camera_5" id="0x7f110371" />
-    <public type="string" name="pref_config_camera_6" id="0x7f110372" />
+    <public type="string" name="pref_qjpg_title" id="0x7f11036f" />
+    <public type="string" name="pref_qjpg_default" id="0x7f110370" />
+    <public type="string" name="pref_qjpg_95" id="0x7f110371" />
+    <public type="string" name="pref_qjpg_96" id="0x7f110372" />
+    <public type="string" name="pref_qjpg_97" id="0x7f110373" />
+    <public type="string" name="pref_qjpg_98" id="0x7f110374" />
+    <public type="string" name="pref_qjpg_99" id="0x7f110375" />
+    <public type="string" name="pref_qjpg_100" id="0x7f110376" />
+    <public type="string" name="pref_qjpg_80" id="0x7f110377" />
+    <public type="string" name="pref_qjpg_90" id="0x7f110378" />
+    <public type="string" name="pref_config_camera_5" id="0x7f110379" />
+    <public type="string" name="pref_config_camera_6" id="0x7f11037a" />
+    <public type="string" name="pref_config_camera_7" id="0x7f11037b" />
+    <public type="string" name="pref_config_camera_8" id="0x7f11037c" />
+    <public type="string" name="pref_config_camera_9" id="0x7f11037d" />
+    <public type="string" name="pref_qjpg_summary" id="0x7f11037e" />
     <public type="style" name="AlertDialog.AppCompat" id="0x7f120000" />
     <public type="style" name="AlertDialog.AppCompat.Light" id="0x7f120001" />
     <public type="style" name="Animation.AppCompat.Dialog" id="0x7f120002" />

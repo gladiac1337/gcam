@@ -10,7 +10,7 @@
 # instance fields
 .field private A:Lfuj;
 
-.field private B:Lbhm;
+.field public final B:Lbhm;
 
 .field private C:Lgzq;
 
