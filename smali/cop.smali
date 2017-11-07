@@ -370,7 +370,7 @@
 .end method
 
 .method private final declared-synchronized a(ILeap;Lgdr;Lcom/google/googlex/gcam/AeResults;Lihr;Z)Lcoz;
-    .locals 24
+    .locals 25
 
     monitor-enter p0
 
@@ -609,6 +609,12 @@
     const/16 v23, 0x5f
 
     :cond_3
+    iget-object v2, v5, Lcpa;->B:Lbhm;
+
+    invoke-virtual {v2}, Lbhm;->cdng()I
+
+    move-result v24
+
     sget-object v2, Lcnu;->e:Lcnu;
 
     invoke-interface {v4, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -665,7 +671,7 @@
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/ShotParams;->setSave_merged_dng(Z)V
 
-    const/4 v2, 0x1
+    move/from16 v2, v24
 
     move-object/from16 v0, v22
 
@@ -1149,6 +1155,8 @@
     const/4 v2, 0x0
 
     goto :goto_8
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

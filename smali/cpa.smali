@@ -506,17 +506,17 @@
     goto/16 :goto_1
 
     :cond_5
-    const/16 v4, 0xa
+    const/16 v4, 0xe
 
     goto/16 :goto_1
 
     :cond_6
-    const/16 v4, 0x11
+    const/16 v4, 0x20
 
     goto/16 :goto_1
 
     :cond_7
-    const/16 v4, 0x17
+    const/16 v4, 0x2e
 
     goto/16 :goto_1
 

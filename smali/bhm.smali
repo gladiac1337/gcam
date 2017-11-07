@@ -36,6 +36,38 @@
 
 
 # virtual methods
+.method public MenuValue(Ljava/lang/String;)I
+    .locals 3
+
+    iget-object v1, p0, Lbhm;->d:Landroid/content/SharedPreferences;
+
+    invoke-interface {v1, p1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v2, 0x0
+
+    iget-object v1, p0, Lbhm;->d:Landroid/content/SharedPreferences;
+
+    invoke-interface {v1, p1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public final a()Ljava/lang/String;
     .locals 3
 
@@ -123,72 +155,40 @@
     return v0
 .end method
 
-.method public cgc()I
-    .locals 4
+.method public cdng()I
+    .locals 1
 
-    iget-object v1, p0, Lbhm;->d:Landroid/content/SharedPreferences;
+    const-string v0, "pref_compress_dng_key"
 
-    const-string v2, "pref_config_camera_key"
-
-    invoke-interface {v1, v2}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+    invoke-virtual {p0, v0}, Lbhm;->MenuValue(Ljava/lang/String;)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    const/4 v3, 0x0
-
-    iget-object v1, p0, Lbhm;->d:Landroid/content/SharedPreferences;
-
-    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    :goto_0
     return v0
+.end method
 
-    :cond_0
-    const/4 v0, 0x0
+.method public cgc()I
+    .locals 1
 
-    goto :goto_0
+    const-string v0, "pref_config_camera_key"
+
+    invoke-virtual {p0, v0}, Lbhm;->MenuValue(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public cpc()I
-    .locals 4
+    .locals 1
 
-    iget-object v1, p0, Lbhm;->d:Landroid/content/SharedPreferences;
+    const-string v0, "pref_parameters_camera_key"
 
-    const-string v2, "pref_parameters_camera_key"
-
-    invoke-interface {v1, v2}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+    invoke-virtual {p0, v0}, Lbhm;->MenuValue(Ljava/lang/String;)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    const/4 v3, 0x0
-
-    iget-object v1, p0, Lbhm;->d:Landroid/content/SharedPreferences;
-
-    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    :goto_0
     return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 .method public final d()Z
@@ -211,6 +211,18 @@
     .locals 6
 
     const/16 v2, 0xf
+
+    invoke-virtual {p0}, Lbhm;->cpc()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    if-eq v1, v2, :cond_4
+
+    const/4 v2, 0x4
+
+    if-eq v1, v2, :cond_5
 
     invoke-virtual {p0}, Lbhm;->cgc()I
 
@@ -272,12 +284,34 @@
     const/16 v2, 0xe
 
     goto :goto_0
+
+    :cond_4
+    const/16 v2, 0x20
+
+    goto :goto_0
+
+    :cond_5
+    const/16 v2, 0x2e
+
+    goto :goto_0
 .end method
 
 .method public final f()I
     .locals 5
 
     const/16 v0, 0x8
+
+    invoke-virtual {p0}, Lbhm;->cpc()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    if-eq v1, v2, :cond_2
+
+    const/4 v2, 0x4
+
+    if-eq v1, v2, :cond_3
 
     invoke-virtual {p0}, Lbhm;->cgc()I
 
@@ -313,6 +347,16 @@
 
     :cond_1
     const/4 v0, 0x7
+
+    goto :goto_0
+
+    :cond_2
+    const/16 v0, 0xa
+
+    goto :goto_0
+
+    :cond_3
+    const/16 v0, 0xc
 
     goto :goto_0
 .end method
@@ -437,69 +481,25 @@
 .end method
 
 .method public ims()I
-    .locals 4
+    .locals 1
 
-    iget-object v1, p0, Lbhm;->d:Landroid/content/SharedPreferences;
+    const-string v0, "pref_input_model_key"
 
-    const-string v2, "pref_input_model_key"
-
-    invoke-interface {v1, v2}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+    invoke-virtual {p0, v0}, Lbhm;->MenuValue(Ljava/lang/String;)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    const/4 v3, 0x0
-
-    iget-object v1, p0, Lbhm;->d:Landroid/content/SharedPreferences;
-
-    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    :goto_0
     return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 .method public qjpg()I
-    .locals 4
+    .locals 1
 
-    iget-object v1, p0, Lbhm;->d:Landroid/content/SharedPreferences;
+    const-string v0, "pref_qjpg_key"
 
-    const-string v2, "pref_qjpg_key"
-
-    invoke-interface {v1, v2}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+    invoke-virtual {p0, v0}, Lbhm;->MenuValue(Ljava/lang/String;)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    const/4 v3, 0x0
-
-    iget-object v1, p0, Lbhm;->d:Landroid/content/SharedPreferences;
-
-    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    :goto_0
     return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

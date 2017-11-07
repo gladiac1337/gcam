@@ -908,4 +908,6 @@ It is necessary to completely close the application, the changes will take effec
     <string name="pref_config_camera_7">PIXEL Experimental Features</string>
     <string name="pref_config_camera_8">PIXEL 2016 Zsl Hdr</string>
     <string name="pref_config_camera_9">PIXEL 2017 Zsl Hdr+</string>
+    <string name="mod_settings">B-S-G Mod settings</string>
+    <string name="pref_compress_dng_title">Compress RAW(*.DNG)</string>
 </resources>
