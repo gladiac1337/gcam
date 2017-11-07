@@ -3507,7 +3507,6 @@
     <public type="string" name="setting_general" id="0x7f1102e8" />
     <public type="string" name="setting_google_feedback" id="0x7f1102e9" />
     <public type="string" name="setting_google_help" id="0x7f1102ea" />
-    <public type="string" name="setting_google_help_and_feedback" id="0x7f1102eb" />
     <public type="string" name="setting_location" id="0x7f1102ec" />
     <public type="string" name="setting_none_value" id="0x7f1102ed" />
     <public type="string" name="setting_off" id="0x7f1102ee" />
@@ -3654,7 +3653,12 @@
     <public type="string" name="pref_config_camera_7" id="0x7f11037b" />
     <public type="string" name="pref_config_camera_8" id="0x7f11037c" />
     <public type="string" name="pref_config_camera_9" id="0x7f11037d" />
-    <public type="string" name="pref_qjpg_summary" id="0x7f11037e" />
+    <public type="string" name="pref_developer_title" id="0x7f11037e" />
+    <public type="string" name="pref_qjpg_summary" id="0x7f11037f" />
+    <public type="string" name="mod_settings" id="0x7f110380" />
+    <public type="string" name="pref_compress_dng_title" id="0x7f110381" />
+    <public type="string" name="pref_compress_dng_summary" id="0x7f110382" />
+    <public type="string" name="setting_google_help_and_feedback" id="0x7f1102eb" />
     <public type="style" name="AlertDialog.AppCompat" id="0x7f120000" />
     <public type="style" name="AlertDialog.AppCompat.Light" id="0x7f120001" />
     <public type="style" name="Animation.AppCompat.Dialog" id="0x7f120002" />

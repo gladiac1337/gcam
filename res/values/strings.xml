@@ -759,7 +759,6 @@ Keep subject centered."</string>
     <string name="setting_general">General</string>
     <string name="setting_google_feedback">Send feedback</string>
     <string name="setting_google_help">Help</string>
-    <string name="setting_google_help_and_feedback">Help &amp; feedback</string>
     <string name="setting_location">Location</string>
     <string name="setting_none_value">none</string>
     <string name="setting_off">Off</string>
@@ -882,10 +881,10 @@ It is necessary to completely close the application, the changes will take effec
     <string name="pref_config_camera_title">Config camera HDR+</string>
     <string name="pref_config_camera_default">0</string>
     <string name="pref_config_camera_0">No HDR+</string>
-    <string name="pref_config_camera_1">NEXUS 5X ZSL</string>
-    <string name="pref_config_camera_2">NEXUS 5X no ZSL</string>
-    <string name="pref_config_camera_3">NEXUS 6 ZSL</string>
-    <string name="pref_config_camera_4">NEXUS 6 no ZSL</string>
+    <string name="pref_config_camera_1">Nexus 5X ZSL</string>
+    <string name="pref_config_camera_2">Nexus 5X no ZSL</string>
+    <string name="pref_config_camera_3">Nexus 6 Auto ZSL</string>
+    <string name="pref_config_camera_4">Nexus 6 Auto no ZSL</string>
     <string name="pref_parameters_camera_title">HDR+ parameters</string>
     <string name="pref_parameters_camera_default">0</string>
     <string name="pref_parameters_camera_0">Default</string>
@@ -903,10 +902,14 @@ It is necessary to completely close the application, the changes will take effec
     <string name="pref_qjpg_100">100%</string>
     <string name="pref_qjpg_80">80%</string>
     <string name="pref_qjpg_90">90%</string>
-    <string name="pref_config_camera_5">NEXUS 6P</string>
-    <string name="pref_config_camera_6">NEXUS 2016 Tuning</string>
-    <string name="pref_config_camera_7">PIXEL Experimental Features</string>
-    <string name="pref_config_camera_8">PIXEL 2016 Zsl Hdr</string>
-    <string name="pref_config_camera_9">PIXEL 2017 Zsl Hdr+</string>
-    <string name="pref_qjpg_summary">Final jpg quality HDR+ %s</string>
+    <string name="pref_config_camera_5">Nexus 6P</string>
+    <string name="pref_config_camera_6">Nexus 2016 Tuning</string>
+    <string name="pref_config_camera_7">Pixel Experimental Features</string>
+    <string name="pref_config_camera_8">Pixel 2016 Zsl Hdr</string>
+    <string name="pref_config_camera_9">Pixel 2017 Zsl Hdr+</string>
+    <string name="pref_developer_title">Debugging and tools</string>
+    <string name="pref_qjpg_summary">Final jpg quality HDR+ is %s</string>
+    <string name="mod_settings">B-S-G Mod settings</string>
+    <string name="pref_compress_dng_title">Compress RAW(*.DNG)</string>
+    <string name="pref_compress_dng_summary">Compress RAW as there is direct potential in reduction of file sizes</string>
 </resources>
