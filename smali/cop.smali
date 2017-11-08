@@ -1205,6 +1205,27 @@
     :cond_0
     iput-object v0, v6, Lcpp;->c:Lcom/google/googlex/gcam/RawWriteView;
 
+    iget-object v4, p0, Lcop;->b:Lcpa;
+
+    iget-object v4, v4, Lcpa;->B:Lbhm;
+
+    invoke-virtual {v4}, Lbhm;->blp()I
+
+    move-result v4
+
+    const/4 v0, 0x0
+
+    if-eq v4, v0, :cond_1
+
+    const/4 v0, 0x1
+
+    if-eq v4, v0, :cond_2
+
+    const/4 v0, 0x2
+
+    if-eq v4, v0, :cond_3
+
+    :cond_1
     const/4 v4, 0x0
 
     move-object v0, p3
@@ -1219,13 +1240,48 @@
 
     move-result-object v0
 
+    goto :goto_0
+
+    :cond_2
+    const/4 v4, 0x0
+
+    move-object v0, p3
+
+    move-object v1, p7
+
+    move-object v3, v2
+
+    move v5, p4
+
+    invoke-static/range {v0 .. v5}, Lcoj;->aa(Lihr;Lgdm;Lcnw;Ljava/lang/String;ZF)Lcom/google/googlex/gcam/FrameMetadata;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_3
+    const/4 v4, 0x0
+
+    move-object v0, p3
+
+    move-object v1, p7
+
+    move-object v3, v2
+
+    move v5, p4
+
+    invoke-static/range {v0 .. v5}, Lcoj;->aaa(Lihr;Lgdm;Lcnw;Ljava/lang/String;ZF)Lcom/google/googlex/gcam/FrameMetadata;
+
+    move-result-object v0
+
+    :goto_0
     iput-object v0, v6, Lcpp;->a:Lcom/google/googlex/gcam/FrameMetadata;
 
     invoke-static {p3, p7}, Lcoj;->b(Lihr;Lgdm;)Lcom/google/googlex/gcam/SpatialGainMap;
 
     move-result-object v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_4
 
     new-instance v0, Lcom/google/googlex/gcam/SpatialGainMap;
 
@@ -1233,7 +1289,7 @@
 
     iput-object v0, v6, Lcpp;->d:Lcom/google/googlex/gcam/SpatialGainMap;
 
-    :goto_0
+    :goto_1
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_EXPOSURE_COMPENSATION:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p3, v0}, Lihr;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -1276,7 +1332,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_5
 
     sget-object v0, Lcop;->a:Ljava/lang/String;
 
@@ -1314,15 +1370,15 @@
 
     invoke-static {v0, v1}, Lbhy;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    :goto_1
+    :goto_2
     return-object v2
 
-    :cond_1
+    :cond_4
     iput-object v0, v6, Lcpp;->d:Lcom/google/googlex/gcam/SpatialGainMap;
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_2
+    :cond_5
     iget-object v0, v6, Lcpp;->e:Lcom/google/googlex/gcam/AeShotParams;
 
     sget-object v2, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_REGIONS:Landroid/hardware/camera2/CaptureResult$Key;
@@ -1343,7 +1399,7 @@
 
     move-object v2, v6
 
-    goto :goto_1
+    goto :goto_2
 .end method
 
 .method private final declared-synchronized a(Lcom/google/googlex/gcam/IShot;Lcpr;)Libw;
@@ -1412,7 +1468,7 @@
 .end method
 
 .method private final a(Lcom/google/googlex/gcam/IShot;)V
-    .locals 8
+    .locals 10
 
     const/4 v6, 0x0
 
@@ -1431,7 +1487,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_4
 
     invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1453,7 +1509,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_0
+    if-eqz v4, :cond_3
 
     const/4 v4, 0x1
 
@@ -1462,20 +1518,56 @@
 
     move-result v5
 
+    iget-object v8, p0, Lcop;->b:Lcpa;
+
+    iget-object v8, v8, Lcpa;->B:Lbhm;
+
+    invoke-virtual {v8}, Lbhm;->blp()I
+
+    move-result v8
+
+    const/4 v9, 0x0
+
+    if-eq v8, v9, :cond_0
+
+    const/4 v9, 0x1
+
+    if-eq v8, v9, :cond_1
+
+    const/4 v9, 0x2
+
+    if-eq v8, v9, :cond_2
+
+    :cond_0
     invoke-static/range {v0 .. v5}, Lcoj;->a(Lihr;Lgdm;Lcnw;Ljava/lang/String;ZF)Lcom/google/googlex/gcam/FrameMetadata;
 
     move-result-object v0
 
+    goto :goto_2
+
+    :cond_1
+    invoke-static/range {v0 .. v5}, Lcoj;->aa(Lihr;Lgdm;Lcnw;Ljava/lang/String;ZF)Lcom/google/googlex/gcam/FrameMetadata;
+
+    move-result-object v0
+
+    goto :goto_2
+
+    :cond_2
+    invoke-static/range {v0 .. v5}, Lcoj;->aaa(Lihr;Lgdm;Lcnw;Ljava/lang/String;ZF)Lcom/google/googlex/gcam/FrameMetadata;
+
+    move-result-object v0
+
+    :goto_2
     invoke-virtual {p1, v0}, Lcom/google/googlex/gcam/IShot;->AddFrameMetadataForLogging(Lcom/google/googlex/gcam/FrameMetadata;)Z
 
     goto :goto_0
 
-    :cond_0
+    :cond_3
     move v4, v6
 
     goto :goto_1
 
-    :cond_1
+    :cond_4
     return-void
 .end method
 
@@ -1741,7 +1833,7 @@
 .end method
 
 .method public final a(Lcoz;ILihr;Liia;)V
-    .locals 6
+    .locals 8
 
     const/4 v4, 0x1
 
@@ -1761,7 +1853,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_3
 
     :goto_0
     invoke-direct {p0}, Lcop;->c()F
@@ -1770,10 +1862,46 @@
 
     move-object v0, p3
 
+    iget-object v7, p0, Lcop;->b:Lcpa;
+
+    iget-object v7, v7, Lcpa;->B:Lbhm;
+
+    invoke-virtual {v7}, Lbhm;->blp()I
+
+    move-result v7
+
+    const/4 v6, 0x0
+
+    if-eq v7, v6, :cond_0
+
+    const/4 v6, 0x1
+
+    if-eq v7, v6, :cond_1
+
+    const/4 v6, 0x2
+
+    if-eq v7, v6, :cond_2
+
+    :cond_0
     invoke-static/range {v0 .. v5}, Lcoj;->a(Lihr;Lgdm;Lcnw;Ljava/lang/String;ZF)Lcom/google/googlex/gcam/FrameMetadata;
 
     move-result-object v1
 
+    goto :goto_1
+
+    :cond_1
+    invoke-static/range {v0 .. v5}, Lcoj;->aa(Lihr;Lgdm;Lcnw;Ljava/lang/String;ZF)Lcom/google/googlex/gcam/FrameMetadata;
+
+    move-result-object v1
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static/range {v0 .. v5}, Lcoj;->aaa(Lihr;Lgdm;Lcnw;Ljava/lang/String;ZF)Lcom/google/googlex/gcam/FrameMetadata;
+
+    move-result-object v1
+
+    :goto_1
     iget-object v0, p0, Lcop;->i:Lgdm;
 
     invoke-static {p3, v0}, Lcoj;->b(Lihr;Lgdm;)Lcom/google/googlex/gcam/SpatialGainMap;
@@ -1802,7 +1930,7 @@
 
     return-void
 
-    :cond_0
+    :cond_3
     const/4 v4, 0x0
 
     goto :goto_0

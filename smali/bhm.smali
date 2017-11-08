@@ -139,6 +139,18 @@
     return v0
 .end method
 
+.method public blp()I
+    .locals 1
+
+    const-string v0, "pref_BlackLevelPattern_key"
+
+    invoke-virtual {p0, v0}, Lbhm;->MenuValue(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public final c()Z
     .locals 3
 
