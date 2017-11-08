@@ -1195,23 +1195,13 @@
 
     const/4 v0, 0x3
 
-    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    const-string v5, "OnePlus3"
-
-    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
     iget-object v2, v1, Lbhm;->b:Lgzo;
 
     iget-object v2, v2, Lgzo;->b:Ligz;
 
     iget-boolean v2, v2, Ligz;->a:Z
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_0
 
     iget-object v2, v1, Lbhm;->b:Lgzo;
 
@@ -1219,7 +1209,7 @@
 
     iget-boolean v2, v2, Ligz;->c:Z
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_0
 
     iget-object v2, v1, Lbhm;->b:Lgzo;
 
@@ -1227,7 +1217,7 @@
 
     iget-boolean v2, v2, Ligz;->b:Z
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_0
 
     iget-object v2, v1, Lbhm;->b:Lgzo;
 
@@ -1235,7 +1225,7 @@
 
     iget-boolean v2, v2, Ligz;->d:Z
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_0
 
     iget-object v2, v1, Lbhm;->b:Lgzo;
 
@@ -1243,7 +1233,7 @@
 
     iget-boolean v2, v2, Ligz;->f:Z
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_0
 
     iget-object v2, v1, Lbhm;->b:Lgzo;
 
@@ -1251,7 +1241,7 @@
 
     iget-boolean v2, v2, Ligz;->g:Z
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_0
 
     iget-object v2, v1, Lbhm;->b:Lgzo;
 
@@ -1259,15 +1249,24 @@
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_1
 
     :cond_0
+    const/16 v0, 0x1c
+
+    sget-object v2, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v3, "OnePlus3"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
     const/4 v0, 0x5
 
     :cond_1
-    const/16 v0, 0x1c
-
-    :cond_2
     iget-object v1, v1, Lbhm;->a:Landroid/content/ContentResolver;
 
     const-string v2, "lens_blur_megapixels"
@@ -1318,7 +1317,7 @@
 
     iget-object v0, v0, Lhgk;->b:Labe;
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_3
 
     iget-object v0, p0, Lhfe;->i:Lbtw;
 
@@ -1334,11 +1333,11 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    :cond_3
+    :cond_2
     :goto_0
     return-void
 
-    :cond_4
+    :cond_3
     iget-object v0, p0, Lhfe;->l:Lhgk;
 
     iget-object v0, v0, Lhgk;->b:Labe;
@@ -1375,7 +1374,7 @@
 
     sget-object v1, Labz;->b:Labz;
 
-    if-ne v0, v1, :cond_5
+    if-ne v0, v1, :cond_4
 
     iget-object v0, p0, Lhfe;->k:Landroid/os/Handler;
 
@@ -1383,7 +1382,7 @@
 
     invoke-virtual {p1, v0, v1}, Labe;->a(Landroid/os/Handler;Laau;)V
 
-    :cond_5
+    :cond_4
     iget-object v0, p0, Lhfe;->l:Lhgk;
 
     iget-object v0, v0, Lhgk;->f:Lacl;
@@ -1408,11 +1407,11 @@
 
     cmpg-float v2, v0, v4
 
-    if-gez v2, :cond_6
+    if-gez v2, :cond_5
 
     div-float v0, v4, v0
 
-    :cond_6
+    :cond_5
     iget-object v2, p0, Lhfe;->j:Lbtw;
 
     invoke-interface {v2}, Lbtw;->t()Leug;
@@ -1425,7 +1424,7 @@
 
     cmpl-float v2, v2, v0
 
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_6
 
     iput v0, p0, Lhfe;->W:F
 
@@ -1433,7 +1432,7 @@
 
     invoke-interface {v2, v0}, Lbtw;->a(F)V
 
-    :cond_7
+    :cond_6
     iget-object v0, p0, Lhfe;->T:Leut;
 
     iget-object v2, v1, Lact;->a:Landroid/graphics/Point;
@@ -1470,7 +1469,7 @@
 
     iget-object v0, v0, Leug;->P:Landroid/graphics/SurfaceTexture;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     iget-object v1, p0, Lhfe;->l:Lhgk;
 

@@ -1384,6 +1384,8 @@
 
     move-result v5
 
+    const/16 v5, 0x41
+
     int-to-float v5, v5
 
     aput v5, v4, v3
@@ -3706,6 +3708,8 @@
 
     move-result v8
 
+    const/16 v8, 0x41
+
     int-to-float v8, v8
 
     aput v8, v7, v5
@@ -4362,6 +4366,8 @@
 
     move-result v8
 
+    const/16 v8, 0x41
+
     int-to-float v8, v8
 
     aput v8, v7, v5
@@ -5011,6 +5017,8 @@
     invoke-virtual {v0, v8, v9}, Landroid/hardware/camera2/params/BlackLevelPattern;->getOffsetForIndex(II)I
 
     move-result v8
+
+    const/16 v8, 0x41
 
     int-to-float v8, v8
 
@@ -5662,6 +5670,8 @@
 
     move-result v8
 
+    const/16 v8, 0x41
+
     int-to-float v8, v8
 
     aput v8, v7, v5
@@ -6311,6 +6321,8 @@
     invoke-virtual {v0, v8, v9}, Landroid/hardware/camera2/params/BlackLevelPattern;->getOffsetForIndex(II)I
 
     move-result v8
+
+    const/16 v8, 0x41
 
     int-to-float v8, v8
 
@@ -6962,6 +6974,8 @@
 
     move-result v8
 
+    const/16 v8, 0x41
+
     int-to-float v8, v8
 
     aput v8, v7, v5
@@ -7612,6 +7626,8 @@
 
     move-result v8
 
+    const/16 v8, 0x41
+
     int-to-float v8, v8
 
     aput v8, v7, v5
@@ -8261,6 +8277,8 @@
     invoke-virtual {v0, v8, v9}, Landroid/hardware/camera2/params/BlackLevelPattern;->getOffsetForIndex(II)I
 
     move-result v8
+
+    const/16 v8, 0x41
 
     int-to-float v8, v8
 
