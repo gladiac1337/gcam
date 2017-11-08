@@ -142,7 +142,7 @@
 .method public blp()I
     .locals 1
 
-    const-string v0, "pref_BlackLevelPattern_key"
+    const-string v0, "pref_blp_key"
 
     invoke-virtual {p0, v0}, Lbhm;->MenuValue(Ljava/lang/String;)I
 

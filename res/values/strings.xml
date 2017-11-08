@@ -910,9 +910,9 @@ It is necessary to completely close the application, the changes will take effec
     <string name="pref_config_camera_9">PIXEL 2017 Zsl Hdr+</string>
     <string name="mod_settings">B-S-G Mod settings</string>
     <string name="pref_compress_dng_title">Compress RAW(*.DNG)</string>
-    <string name="pref_BlackLevelPattern_title">BlackLevelPattern</string>
-    <string name="pref_BlackLevelPattern_default">0</string>
-    <string name="pref_BlackLevelPattern_auto">Auto</string>
-    <string name="pref_BlackLevelPattern_41">41(MI5)</string>
-    <string name="pref_BlackLevelPattern_100">100(Omni)</string>
+    <string name="pref_blp_title">BlackLevelPattern</string>
+    <string name="pref_blp_default">0</string>
+    <string name="pref_blp_auto">Auto</string>
+    <string name="pref_blp_41">41(MI5)</string>
+    <string name="pref_blp_100">100(Omni)</string>
 </resources>
