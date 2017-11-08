@@ -1962,7 +1962,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_9
 
     const/4 v4, 0x1
 
@@ -1982,10 +1982,6 @@
     const/4 v5, 0x1
 
     if-eq v0, v5, :cond_5
-
-    const/4 v5, 0x2
-
-    if-eq v0, v5, :cond_6
 
     :cond_4
     invoke-direct {p0}, Lcop;->c()F
@@ -2015,21 +2011,6 @@
 
     move-result-object v1
 
-    goto :goto_2
-
-    :cond_6
-    invoke-direct {p0}, Lcop;->c()F
-
-    move-result v5
-
-    move-object v0, p3
-
-    move-object/from16 v6, p6
-
-    invoke-static/range {v0 .. v7}, Lcoj;->aaa(Lihr;Lgdm;Lcnw;Ljava/lang/String;ZF[Landroid/hardware/camera2/params/Face;Lcom/google/googlex/gcam/GyroSampleVector;)Lcom/google/googlex/gcam/FrameMetadata;
-
-    move-result-object v1
-
     :goto_2
     iget-object v0, p0, Lcop;->i:Lgdm;
 
@@ -2037,18 +2018,18 @@
 
     move-result-object v8
 
-    if-nez v8, :cond_7
+    if-nez v8, :cond_6
 
     new-instance v8, Lcom/google/googlex/gcam/SpatialGainMap;
 
     invoke-direct {v8}, Lcom/google/googlex/gcam/SpatialGainMap;-><init>()V
 
-    :cond_7
+    :cond_6
     invoke-direct {p0, p4}, Lcop;->a(Liia;)Landroid/util/Pair;
 
     move-result-object v4
 
-    if-nez p5, :cond_b
+    if-nez p5, :cond_a
 
     sget-wide v2, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->a:J
 
@@ -2097,7 +2078,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_8
 
     sget-object v0, Lcop;->a:Ljava/lang/String;
 
@@ -2143,19 +2124,19 @@
 
     invoke-virtual {p1}, Lcoz;->b()Z
 
-    if-eqz p4, :cond_8
+    if-eqz p4, :cond_7
 
     invoke-interface {p4}, Liia;->close()V
 
-    :cond_8
-    if-eqz p5, :cond_9
+    :cond_7
+    if-eqz p5, :cond_8
 
     invoke-interface {p5}, Liia;->close()V
 
-    :cond_9
+    :cond_8
     iget-object v2, p1, Lcoz;->a:Lcpr;
 
-    if-nez p4, :cond_d
+    if-nez p4, :cond_c
 
     const-wide/16 v0, -0x1
 
@@ -2176,12 +2157,12 @@
 
     goto/16 :goto_0
 
-    :cond_a
+    :cond_9
     const/4 v4, 0x0
 
     goto/16 :goto_1
 
-    :cond_b
+    :cond_a
     invoke-interface {p5}, Liia;->l_()I
 
     move-result v0
@@ -2224,7 +2205,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_c
+    if-eqz v2, :cond_b
 
     iget-object v2, p0, Lcop;->b:Lcpa;
 
@@ -2252,7 +2233,7 @@
 
     goto/16 :goto_3
 
-    :cond_c
+    :cond_b
     sget-wide v2, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->a:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -2271,7 +2252,7 @@
 
     goto/16 :goto_3
 
-    :cond_d
+    :cond_c
     invoke-interface {p4}, Liia;->e()J
 
     move-result-wide v0

@@ -382,14 +382,4 @@
         <item>99</item>
         <item>100</item>
     </string-array>
-    <string-array name="pref_blp_entries">
-        <item>@string/pref_blp_auto</item>
-        <item>@string/pref_blp_41</item>
-        <item>@string/pref_blp_100</item>
-    </string-array>
-    <string-array name="pref_blp_entryvalues">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
 </resources>
