@@ -591,7 +591,7 @@
 
     sget-object v6, Lift;->b:Lift;
 
-    if-ne v0, v6, :cond_f
+    if-ne v0, v6, :cond_11
 
     iget-object v0, p0, Ldik;->d:Lbhm;
 
@@ -601,45 +601,107 @@
 
     const/4 v8, 0x0
 
-    if-le v0, v8, :cond_f
+    if-le v0, v8, :cond_11
 
     const/4 v8, 0x1
 
-    if-eq v0, v8, :cond_0
+    if-eq v0, v8, :cond_2
 
     const/4 v8, 0x2
 
-    if-eq v0, v8, :cond_2
+    if-eq v0, v8, :cond_4
 
     const/4 v8, 0x3
 
-    if-eq v0, v8, :cond_4
+    if-eq v0, v8, :cond_6
 
     const/4 v8, 0x4
 
-    if-eq v0, v8, :cond_5
+    if-eq v0, v8, :cond_7
 
     const/4 v8, 0x5
 
-    if-eq v0, v8, :cond_6
+    if-eq v0, v8, :cond_8
 
     const/4 v8, 0x6
 
-    if-eq v0, v8, :cond_7
+    if-eq v0, v8, :cond_9
 
     const/4 v8, 0x7
 
-    if-eq v0, v8, :cond_9
+    if-eq v0, v8, :cond_b
 
     const/16 v8, 0x8
 
-    if-eq v0, v8, :cond_b
+    if-eq v0, v8, :cond_d
 
     const/16 v8, 0x9
 
-    if-eq v0, v8, :cond_d
+    if-eq v0, v8, :cond_f
+
+    const/16 v8, 0xa
+
+    if-eq v0, v8, :cond_0
+
+    if-gt v0, v8, :cond_11
 
     :cond_0
+    invoke-static {p4}, Ldik;->a(Ldih;)I
+
+    move-result v0
+
+    invoke-static {p2}, Lcnr;->a(Lgdm;)Ligf;
+
+    move-result-object v3
+
+    new-instance v4, Ldqk;
+
+    iget-object v5, v3, Ligf;->b:Libx;
+
+    iget v3, v3, Ligf;->a:I
+
+    invoke-direct {v4, v0, v5, v3}, Ldqk;-><init>(ILibx;I)V
+
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0}, Ldik;->a(Z)Legt;
+
+    move-result-object v3
+
+    iget-object v0, p0, Ldik;->d:Lbhm;
+
+    invoke-virtual {v0}, Lbhm;->i()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Ldik;->a:Ljava/lang/String;
+
+    const-string v5, "Selected Nexus6HdrPlusAuto OneCamera configuration."
+
+    invoke-static {v0, v5}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Ldnu;
+
+    invoke-direct {v0, v1, v2, v4, v3}, Ldnu;-><init>(Ldob;Ldpy;Ldqk;Legt;)V
+
+    return-object v0
+
+    :cond_1
+    sget-object v0, Ldik;->a:Ljava/lang/String;
+
+    const-string v5, "Selected Nexus6HdrPlusAutoNoZsl OneCamera configuration."
+
+    invoke-static {v0, v5}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Ldnv;
+
+    invoke-direct {v0, v1, v2, v4, v3}, Ldnv;-><init>(Ldob;Ldpy;Ldqk;Legt;)V
+
+    return-object v0
+
+    :cond_2
     sget-object v0, Ldik;->a:Ljava/lang/String;
 
     const-string v3, "Selected Nexus5X OneCamera configuration."
@@ -664,13 +726,13 @@
 
     const/4 v8, 0x3
 
-    if-le v0, v8, :cond_1
+    if-le v0, v8, :cond_3
 
     const/4 v0, 0x0
 
     goto :goto_0
 
-    :cond_1
+    :cond_3
     const/4 v0, 0x1
 
     :goto_0
@@ -684,7 +746,7 @@
 
     return-object v0
 
-    :cond_2
+    :cond_4
     sget-object v0, Ldik;->a:Ljava/lang/String;
 
     const-string v3, "Selected Nexus5X OneCamera configuration."
@@ -709,13 +771,13 @@
 
     const/4 v8, 0x3
 
-    if-le v0, v8, :cond_3
+    if-le v0, v8, :cond_5
 
     const/4 v0, 0x0
 
     goto :goto_1
 
-    :cond_3
+    :cond_5
     const/4 v0, 0x1
 
     :goto_1
@@ -729,7 +791,7 @@
 
     return-object v0
 
-    :cond_4
+    :cond_6
     invoke-static {p4}, Ldik;->a(Ldih;)I
 
     move-result v0
@@ -770,7 +832,7 @@
 
     return-object v0
 
-    :cond_5
+    :cond_7
     invoke-static {p4}, Ldik;->a(Ldih;)I
 
     move-result v0
@@ -811,7 +873,7 @@
 
     return-object v0
 
-    :cond_6
+    :cond_8
     sget-object v0, Ldik;->a:Ljava/lang/String;
 
     const-string v3, "Selected Nexus6P OneCamera configuration."
@@ -834,7 +896,7 @@
 
     return-object v0
 
-    :cond_7
+    :cond_9
     iget-object v0, p0, Ldik;->c:Ldif;
 
     const-string v6, "persist.camera.cam_component"
@@ -881,13 +943,13 @@
 
     const/4 v8, 0x3
 
-    if-le v0, v8, :cond_8
+    if-le v0, v8, :cond_a
 
     const/4 v0, 0x0
 
     goto :goto_2
 
-    :cond_8
+    :cond_a
     const/4 v0, 0x1
 
     :goto_2
@@ -901,7 +963,7 @@
 
     return-object v0
 
-    :cond_9
+    :cond_b
     iget-object v0, p0, Ldik;->c:Ldif;
 
     const-string v6, "persist.camera.cam_component"
@@ -930,13 +992,13 @@
 
     const/4 v8, 0x3
 
-    if-le v0, v8, :cond_a
+    if-le v0, v8, :cond_c
 
     const/4 v0, 0x0
 
     goto :goto_3
 
-    :cond_a
+    :cond_c
     const/4 v0, 0x1
 
     :goto_3
@@ -950,49 +1012,10 @@
 
     return-object v0
 
-    :cond_b
-    sget-object v0, Ldik;->a:Ljava/lang/String;
-
-    const-string v3, "Selected Pixel 2016 Zsl Hdr OneCamera configuration."
-
-    invoke-static {v0, v3}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {p4, p2}, Ldik;->a(Ldih;Lgdm;)Ldqk;
-
-    move-result-object v3
-
-    iget-object v0, p0, Ldik;->d:Lbhm;
-
-    invoke-virtual {v0}, Lbhm;->ims()I
-
-    move-result v0
-
-    const/4 v8, 0x3
-
-    if-le v0, v8, :cond_c
-
-    const/4 v0, 0x0
-
-    goto :goto_4
-
-    :cond_c
-    const/4 v0, 0x1
-
-    :goto_4
-    invoke-direct {p0, v0}, Ldik;->a(Z)Legt;
-
-    move-result-object v6
-
-    new-instance v0, Ldoc;
-
-    invoke-direct/range {v0 .. v6}, Ldoc;-><init>(Ldob;Ldpy;Ldqk;Ldqq;Ldpt;Legt;)V
-
-    return-object v0
-
     :cond_d
     sget-object v0, Ldik;->a:Ljava/lang/String;
 
-    const-string v3, "Selected Pixel 2017 Zsl Hdr+ OneCamera configuration."
+    const-string v3, "Selected Pixel 2016 Zsl Hdr OneCamera configuration."
 
     invoke-static {v0, v3}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1012,9 +1035,48 @@
 
     const/4 v0, 0x0
 
-    goto :goto_5
+    goto :goto_4
 
     :cond_e
+    const/4 v0, 0x1
+
+    :goto_4
+    invoke-direct {p0, v0}, Ldik;->a(Z)Legt;
+
+    move-result-object v6
+
+    new-instance v0, Ldoc;
+
+    invoke-direct/range {v0 .. v6}, Ldoc;-><init>(Ldob;Ldpy;Ldqk;Ldqq;Ldpt;Legt;)V
+
+    return-object v0
+
+    :cond_f
+    sget-object v0, Ldik;->a:Ljava/lang/String;
+
+    const-string v3, "Selected Pixel 2017 Zsl Hdr+ OneCamera configuration."
+
+    invoke-static {v0, v3}, Lbhy;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {p4, p2}, Ldik;->a(Ldih;Lgdm;)Ldqk;
+
+    move-result-object v3
+
+    iget-object v0, p0, Ldik;->d:Lbhm;
+
+    invoke-virtual {v0}, Lbhm;->ims()I
+
+    move-result v0
+
+    const/4 v8, 0x3
+
+    if-le v0, v8, :cond_10
+
+    const/4 v0, 0x0
+
+    goto :goto_5
+
+    :cond_10
     const/4 v0, 0x1
 
     :goto_5
@@ -1028,7 +1090,7 @@
 
     return-object v0
 
-    :cond_f
+    :cond_11
     invoke-virtual {v3}, Ldii;->ordinal()I
 
     move-result v0
