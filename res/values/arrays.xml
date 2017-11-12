@@ -333,9 +333,6 @@
         <item>@string/pref_config_camera_4</item>
         <item>@string/pref_config_camera_5</item>
         <item>@string/pref_config_camera_6</item>
-        <item>@string/pref_config_camera_7</item>
-        <item>@string/pref_config_camera_8</item>
-        <item>@string/pref_config_camera_9</item>
     </string-array>
     <string-array name="pref_config_camera_entryvalues">
         <item>0</item>
@@ -346,9 +343,6 @@
         <item>4</item>
         <item>5</item>
         <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
     </string-array>
     <string-array name="pref_parameters_camera_entries">
         <item>@string/pref_parameters_camera_0</item>

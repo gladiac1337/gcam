@@ -904,15 +904,12 @@ It is necessary to completely close the application, the changes will take effec
     <string name="pref_qjpg_90">90%</string>
     <string name="pref_config_camera_5">Nexus 6P</string>
     <string name="pref_config_camera_6">Nexus 2016 Tuning</string>
-    <string name="pref_config_camera_7">Pixel Experimental Features</string>
-    <string name="pref_config_camera_8">Pixel 2016 Zsl Hdr</string>
-    <string name="pref_config_camera_9">Pixel 2017 Zsl Hdr+</string>
     <string name="pref_developer_title">Debugging and tools</string>
     <string name="pref_qjpg_summary">Final jpg quality HDR+ is %s</string>
     <string name="mod_settings">B-S-G Mod settings</string>
     <string name="pref_compress_dng_title">Compress RAW(*.DNG)</string>
     <string name="pref_compress_dng_summary">Compress RAW as there is direct potential in reduction of file sizes</string>
     <string name="pref_removing_reddish_title">Removing the pinkish/reddish</string>
-    <string name="pref_removing_reddish_summary">Removing the pinkish/reddish</string>
+    <string name="pref_removing_reddish_summary">Removing pink/reddish on photos taken at night</string>
     <string name="pref_config_camera_10">Nexus 6 (old)</string>
 </resources>

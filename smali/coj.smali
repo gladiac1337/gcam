@@ -3609,7 +3609,7 @@
 
     move-result v8
 
-    if-nez v8, :cond_1
+    if-eqz v8, :cond_1
 
     const/16 v4, 0x64
 
