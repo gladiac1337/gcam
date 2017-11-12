@@ -36,7 +36,7 @@
 
     const-string v1, "pref_has_checked_gouda_mode"
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Lgse;->a(Ljava/lang/String;Z)Liaj;
 

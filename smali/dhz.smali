@@ -102,44 +102,13 @@
 
     const/4 v1, 0x0
 
-    if-eq v0, v1, :cond_4
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_4
-
-    const/4 v1, 0x2
-
     if-eq v0, v1, :cond_2
 
-    const/4 v1, 0x3
+    sget-object v0, Ldii;->e:Ldii;
 
-    if-ge v0, v1, :cond_3
+    goto :goto_1
 
     :cond_2
-    sget-object v0, Ldii;->e:Ldii;
-
-    goto :goto_1
-
-    :cond_3
-    sget-object v0, Ldii;->e:Ldii;
-
-    goto :goto_1
-
-    :cond_4
-    iget-object v0, p0, Ldhz;->b:Lgzo;
-
-    invoke-virtual {v0}, Lgzo;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    sget-object v0, Ldii;->e:Ldii;
-
-    goto :goto_1
-
-    :cond_5
     sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->INFO_SUPPORTED_HARDWARE_LEVEL:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
     invoke-interface {p1, v0}, Lgdm;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
@@ -148,7 +117,7 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_3
 
     sget-object v0, Ldhy;->a:Ljava/lang/String;
 
@@ -160,70 +129,42 @@
 
     goto :goto_1
 
-    :cond_6
+    :cond_3
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
 
     const/4 v2, 0x2
 
-    if-ne v1, v2, :cond_7
+    if-ne v1, v2, :cond_4
 
     sget-object v0, Ldii;->b:Ldii;
 
     goto :goto_1
 
-    :cond_7
-    iget-object v1, p0, Ldhz;->b:Lgzo;
-
-    iget-object v1, v1, Lgzo;->b:Ligz;
-
-    iget-boolean v1, v1, Ligz;->a:Z
-
-    if-nez v1, :cond_9
-
-    iget-object v1, p0, Ldhz;->b:Lgzo;
-
-    iget-object v1, v1, Lgzo;->c:Ligy;
-
-    iget-boolean v1, v1, Ligy;->b:Z
-
-    if-nez v1, :cond_8
-
+    :cond_4
     iget-object v2, p0, Ldhz;->a:Lbhm;
 
     invoke-virtual {v2}, Lbhm;->cgc()I
 
     move-result v2
 
-    const/4 v1, 0x1
+    const/4 v1, 0x0
 
-    if-eq v2, v1, :cond_9
+    if-eq v2, v1, :cond_5
 
-    :cond_8
-    iget-object v1, p0, Ldhz;->b:Lgzo;
-
-    iget-object v1, v1, Lgzo;->b:Ligz;
-
-    invoke-virtual {v1}, Ligz;->b()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_a
-
-    :cond_9
     sget-object v0, Ldii;->c:Ldii;
 
     goto :goto_1
 
-    :cond_a
+    :cond_5
     iget-object v1, p0, Ldhz;->b:Lgzo;
 
     invoke-virtual {v1}, Lgzo;->d()Z
 
     move-result v1
 
-    if-eqz v1, :cond_c
+    if-eqz v1, :cond_7
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -231,7 +172,7 @@
 
     const/4 v2, 0x1
 
-    if-ne v1, v2, :cond_c
+    if-ne v1, v2, :cond_7
 
     invoke-interface {p1, v3}, Lgdm;->a(I)Ljava/util/List;
 
@@ -245,35 +186,35 @@
 
     move-result v0
 
-    if-lez v0, :cond_b
+    if-lez v0, :cond_6
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-lez v0, :cond_b
+    if-lez v0, :cond_6
 
     sget-object v0, Ldii;->d:Ldii;
 
     goto/16 :goto_1
 
-    :cond_b
+    :cond_6
     sget-object v0, Ldii;->a:Ldii;
 
     goto/16 :goto_1
 
-    :cond_c
+    :cond_7
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v1
 
-    if-nez v1, :cond_d
+    if-nez v1, :cond_8
 
     sget-object v0, Ldii;->c:Ldii;
 
     goto/16 :goto_1
 
-    :cond_d
+    :cond_8
     sget-object v1, Ldhy;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

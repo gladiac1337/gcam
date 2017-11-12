@@ -187,17 +187,33 @@
 .method public final a(IILibu;Ljhi;)V
     .locals 14
 
-    sget v0, Lcom/google/android/libraries/camera/exif/ExifInterface;->d:I
+    iget-object v0, p0, Liej;->a:Lcom/google/android/libraries/camera/exif/ExifInterface;
 
-    sget-object v1, Landroid/os/Build;->BRAND:Ljava/lang/String;
+    iget-object v1, p0, Liej;->a:Lcom/google/android/libraries/camera/exif/ExifInterface;
 
-    invoke-direct {p0, v0, v1}, Liej;->a(ILjava/lang/Object;)V
+    sget v2, Lcom/google/android/libraries/camera/exif/ExifInterface;->d:I
 
-    sget v0, Lcom/google/android/libraries/camera/exif/ExifInterface;->e:I
+    sget-object v3, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
-    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
+    invoke-virtual {v1, v2, v3}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(ILjava/lang/Object;)Lieh;
 
-    invoke-direct {p0, v0, v1}, Liej;->a(ILjava/lang/Object;)V
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(Lieh;)Lieh;
+
+    iget-object v0, p0, Liej;->a:Lcom/google/android/libraries/camera/exif/ExifInterface;
+
+    iget-object v1, p0, Liej;->a:Lcom/google/android/libraries/camera/exif/ExifInterface;
+
+    sget v2, Lcom/google/android/libraries/camera/exif/ExifInterface;->e:I
+
+    sget-object v3, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    invoke-virtual {v1, v2, v3}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(ILjava/lang/Object;)Lieh;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(Lieh;)Lieh;
 
     iget-object v0, p0, Liej;->a:Lcom/google/android/libraries/camera/exif/ExifInterface;
 

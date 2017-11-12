@@ -912,4 +912,7 @@ It is necessary to completely close the application, the changes will take effec
     <string name="pref_removing_reddish_title">Removing the pinkish/reddish</string>
     <string name="pref_removing_reddish_summary">Removing pink/reddish on photos taken at night</string>
     <string name="pref_config_camera_10">Nexus 6 (old)</string>
+    <item type="string" name="APKTOOL_DUMMY_37b">false</item>
+    <item type="string" name="APKTOOL_DUMMY_37c">false</item>
+    <item type="string" name="APKTOOL_DUMMY_37d">false</item>
 </resources>
