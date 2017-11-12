@@ -26,14 +26,14 @@
 
 
 # virtual methods
-.method public final a(Lihr;Leqd;)V
+.method public final a(Leqd;Lihr;)V
     .locals 6
 
     const/16 v4, 0x23
 
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_MODE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    invoke-interface {p1, v0}, Lihr;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+    invoke-interface {p2, v0}, Lihr;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -96,7 +96,7 @@
 
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AF_STATE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    invoke-interface {p1, v0}, Lihr;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+    invoke-interface {p2, v0}, Lihr;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -159,7 +159,7 @@
 
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->LENS_FOCUS_DISTANCE:Landroid/hardware/camera2/CaptureResult$Key;
 
-    invoke-interface {p1, v0}, Lihr;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
+    invoke-interface {p2, v0}, Lihr;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -173,11 +173,11 @@
 
     check-cast v3, Ljava/lang/Float;
 
-    invoke-virtual {p0, p1}, Lgfj;->b(Lihr;)Z
+    invoke-virtual {p0, p2}, Lgfj;->b(Lihr;)Z
 
     move-result v4
 
-    invoke-virtual {p0, p1}, Lgfj;->c(Lihr;)Ljhi;
+    invoke-virtual {p0, p2}, Lgfj;->c(Lihr;)Ljhi;
 
     move-result-object v5
 

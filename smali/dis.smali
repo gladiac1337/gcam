@@ -71,6 +71,34 @@
 
     invoke-direct {v4, v5}, Ldix;-><init>(Lgpt;)V
 
+    iget-object v7, p0, Ldis;->a:Ldiq;
+
+    iget-object v7, v7, Ldiq;->c:Lgdy;
+
+    invoke-interface {v7, v3}, Lgdy;->c(Lggi;)Lggi;
+
+    move-result-object v6
+
+    const/4 v7, 0x1
+
+    new-array v7, v7, [Lggg;
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v6}, Lggi;->c()Lggg;
+
+    move-result-object v6
+
+    aput-object v6, v7, v5
+
+    invoke-static {v7}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v6
+
+    sget-object v7, Lggp;->b:Lggp;
+
+    invoke-interface {v2, v6, v7}, Ldol;->a(Ljava/util/List;Lggp;)V
+
     iget-object v5, p0, Ldis;->a:Ldiq;
 
     iget-object v5, v5, Ldiq;->c:Lgdy;
