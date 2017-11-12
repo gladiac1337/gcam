@@ -3482,6 +3482,32 @@
     .end array-data
 .end method
 
+.method public static aa(Lihr;Lgdm;Lcnw;Ljava/lang/String;ZF)Lcom/google/googlex/gcam/FrameMetadata;
+    .locals 8
+
+    const/4 v6, 0x0
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move v4, p4
+
+    move v5, p5
+
+    move-object v7, v6
+
+    invoke-static/range {v0 .. v7}, Lcoj;->aa(Lihr;Lgdm;Lcnw;Ljava/lang/String;ZF[Landroid/hardware/camera2/params/Face;Lcom/google/googlex/gcam/GyroSampleVector;)Lcom/google/googlex/gcam/FrameMetadata;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public static aa(Lihr;Lgdm;Lcnw;Ljava/lang/String;ZF[Landroid/hardware/camera2/params/Face;Lcom/google/googlex/gcam/GyroSampleVector;)Lcom/google/googlex/gcam/FrameMetadata;
     .locals 12
 
