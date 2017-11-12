@@ -912,4 +912,7 @@ It is necessary to completely close the application, the changes will take effec
     <string name="mod_settings">B-S-G Mod settings</string>
     <string name="pref_compress_dng_title">Compress RAW(*.DNG)</string>
     <string name="pref_compress_dng_summary">Compress RAW as there is direct potential in reduction of file sizes</string>
+    <string name="pref_removing_reddish_title">Removing the pinkish/reddish</string>
+    <string name="pref_removing_reddish_summary">Removing the pinkish/reddish</string>
+    <string name="pref_config_camera_10">Nexus 6 (old)</string>
 </resources>

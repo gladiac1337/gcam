@@ -328,6 +328,7 @@
         <item>@string/pref_config_camera_0</item>
         <item>@string/pref_config_camera_1</item>
         <item>@string/pref_config_camera_2</item>
+        <item>@string/pref_config_camera_10</item>
         <item>@string/pref_config_camera_3</item>
         <item>@string/pref_config_camera_4</item>
         <item>@string/pref_config_camera_5</item>
@@ -340,6 +341,7 @@
         <item>0</item>
         <item>1</item>
         <item>2</item>
+        <item>10</item>
         <item>3</item>
         <item>4</item>
         <item>5</item>
