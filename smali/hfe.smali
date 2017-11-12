@@ -1179,7 +1179,7 @@
 .end method
 
 .method public final a(Labe;)V
-    .locals 6
+    .locals 8
 
     const/4 v5, 0x0
 
@@ -1252,6 +1252,18 @@
     if-eqz v2, :cond_1
 
     :cond_0
+    const/4 v0, 0x5
+
+    sget-object v6, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v7, "capricorn"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
     const/16 v0, 0x1c
 
     :cond_1

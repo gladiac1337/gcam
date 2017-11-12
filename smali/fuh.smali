@@ -157,10 +157,6 @@
 
     if-eq v2, v3, :cond_5
 
-    const/16 v3, 0xa
-
-    if-eq v2, v3, :cond_5
-
     goto :goto_1
 
     :cond_2

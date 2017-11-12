@@ -205,7 +205,7 @@
 
     if-eqz v0, :cond_2
 
-    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
     const-string v1, "hammerhead"
 
@@ -215,7 +215,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+    sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
     const-string v1, "shamu"
 
@@ -244,8 +244,19 @@
 
     move-result v0
 
+    sget-object v2, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v1, "capricorn"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
     const/4 v0, 0x3
 
+    :cond_3
     goto :goto_1
 
     nop

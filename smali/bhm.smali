@@ -260,10 +260,6 @@
 
     if-eq v4, v5, :cond_2
 
-    const/16 v5, 0xa
-
-    if-eq v4, v5, :cond_6
-
     const/4 v5, 0x6
 
     if-ge v4, v5, :cond_3
@@ -308,22 +304,6 @@
 
     :cond_5
     const/16 v2, 0x2e
-
-    goto :goto_0
-
-    :cond_6
-    const/16 v2, 0x9
-
-    invoke-virtual {p0}, Lbhm;->i()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    const/16 v2, 0x1
 
     goto :goto_0
 .end method
@@ -447,10 +427,6 @@
     const/16 v2, 0x9
 
     if-eq v1, v2, :cond_3
-
-    const/16 v2, 0xa
-
-    if-eq v1, v2, :cond_1
 
     :goto_0
     iget-object v1, p0, Lbhm;->a:Landroid/content/ContentResolver;
