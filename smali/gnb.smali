@@ -19,7 +19,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
     const/4 v5, 0x3
 
     const/4 v4, 0x2
@@ -28,7 +27,6 @@
 
     const/4 v2, 0x0
 
-    .line 5
     new-instance v0, Lgnb;
 
     const-string v1, "PORTRAIT"
@@ -37,7 +35,6 @@
 
     sput-object v0, Lgnb;->a:Lgnb;
 
-    .line 6
     new-instance v0, Lgnb;
 
     const-string v1, "PORTRAIT_REVERSED"
@@ -46,7 +43,6 @@
 
     sput-object v0, Lgnb;->b:Lgnb;
 
-    .line 7
     new-instance v0, Lgnb;
 
     const-string v1, "LANDSCAPE"
@@ -55,7 +51,6 @@
 
     sput-object v0, Lgnb;->c:Lgnb;
 
-    .line 8
     new-instance v0, Lgnb;
 
     const-string v1, "LANDSCAPE_REVERSED"
@@ -64,7 +59,6 @@
 
     sput-object v0, Lgnb;->d:Lgnb;
 
-    .line 9
     const/4 v0, 0x4
 
     new-array v0, v0, [Lgnb;
@@ -93,19 +87,14 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     return-void
 .end method
 
 .method public static values()[Lgnb;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lgnb;->e:[Lgnb;
 
     invoke-virtual {v0}, [Lgnb;->clone()Ljava/lang/Object;
@@ -122,8 +111,6 @@
 .method public final a()Z
     .locals 1
 
-    .prologue
-    .line 4
     sget-object v0, Lgnb;->c:Lgnb;
 
     if-eq p0, v0, :cond_0

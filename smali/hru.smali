@@ -16,10 +16,8 @@
 .method public constructor <init>(Lhkc;Lhkd;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-boolean v2, p0, Lhru;->b:Z
@@ -42,12 +40,10 @@
 
     aput-object v2, v0, v1
 
-    .line 2
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 3
     iput v0, p0, Lhru;->c:I
 
     return-void

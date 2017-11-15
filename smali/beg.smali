@@ -35,7 +35,6 @@
 .method static constructor <clinit>()V
     .locals 10
 
-    .prologue
     const/4 v9, 0x5
 
     const/4 v8, 0x4
@@ -46,7 +45,6 @@
 
     const/4 v0, 0x0
 
-    .line 7
     new-instance v1, Lbeg;
 
     const-string v2, "QUALITY_QCIF"
@@ -57,7 +55,6 @@
 
     sput-object v1, Lbeg;->c:Lbeg;
 
-    .line 8
     new-instance v1, Lbeg;
 
     const-string v2, "QUALITY_QVGA"
@@ -72,7 +69,6 @@
 
     sput-object v1, Lbeg;->d:Lbeg;
 
-    .line 9
     new-instance v1, Lbeg;
 
     const-string v2, "QUALITY_CIF"
@@ -83,7 +79,6 @@
 
     sput-object v1, Lbeg;->e:Lbeg;
 
-    .line 10
     new-instance v1, Lbeg;
 
     const-string v2, "QUALITY_480P"
@@ -94,7 +89,6 @@
 
     sput-object v1, Lbeg;->f:Lbeg;
 
-    .line 11
     new-instance v1, Lbeg;
 
     const-string v2, "QUALITY_720P"
@@ -105,7 +99,6 @@
 
     sput-object v1, Lbeg;->g:Lbeg;
 
-    .line 12
     new-instance v1, Lbeg;
 
     const-string v2, "QUALITY_1080P"
@@ -118,7 +111,6 @@
 
     sput-object v1, Lbeg;->h:Lbeg;
 
-    .line 13
     new-instance v1, Lbeg;
 
     const-string v2, "QUALITY_2160P"
@@ -133,7 +125,6 @@
 
     sput-object v1, Lbeg;->i:Lbeg;
 
-    .line 14
     const/4 v1, 0x7
 
     new-array v1, v1, [Lbeg;
@@ -172,21 +163,18 @@
 
     sput-object v1, Lbeg;->l:[Lbeg;
 
-    .line 15
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     sput-object v1, Lbeg;->j:Ljava/util/Map;
 
-    .line 16
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     sput-object v1, Lbeg;->k:Ljava/util/Map;
 
-    .line 17
     invoke-static {}, Lbeg;->values()[Lbeg;
 
     move-result-object v1
@@ -198,14 +186,12 @@
 
     aget-object v3, v1, v0
 
-    .line 18
     sget-object v4, Lbeg;->j:Ljava/util/Map;
 
     iget-object v5, v3, Lbeg;->b:Libp;
 
     invoke-interface {v4, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 19
     sget-object v4, Lbeg;->k:Ljava/util/Map;
 
     iget v5, v3, Lbeg;->a:I
@@ -216,12 +202,10 @@
 
     invoke-interface {v4, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 20
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 21
     :cond_0
     return-void
 .end method
@@ -229,25 +213,18 @@
 .method private constructor <init>(Ljava/lang/String;IILibp;)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 4
     iput p3, p0, Lbeg;->a:I
 
-    .line 5
     iput-object p4, p0, Lbeg;->b:Libp;
 
-    .line 6
     return-void
 .end method
 
 .method public static a(Libp;)Lbeg;
     .locals 1
 
-    .prologue
-    .line 2
     sget-object v0, Lbeg;->j:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -262,8 +239,6 @@
 .method public static values()[Lbeg;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lbeg;->l:[Lbeg;
 
     invoke-virtual {v0}, [Lbeg;->clone()Ljava/lang/Object;

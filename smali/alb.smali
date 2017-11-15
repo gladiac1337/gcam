@@ -16,17 +16,12 @@
 .method constructor <init>(Ljava/util/List;Lha;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lalb;->a:Ljava/util/List;
 
-    .line 3
     iput-object p2, p0, Lalb;->b:Lha;
 
-    .line 4
     return-void
 .end method
 
@@ -35,23 +30,18 @@
 .method public final a(Ljava/lang/Object;IILaeo;)Lakw;
     .locals 7
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 5
-    .line 6
     iget-object v0, p0, Lalb;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v4
 
-    .line 7
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5, v4}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 8
     const/4 v0, 0x0
 
     move v3, v0
@@ -61,7 +51,6 @@
     :goto_0
     if-ge v3, v4, :cond_0
 
-    .line 9
     iget-object v0, p0, Lalb;->a:Ljava/util/List;
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -70,30 +59,24 @@
 
     check-cast v0, Lakv;
 
-    .line 10
     invoke-interface {v0, p1}, Lakv;->a(Ljava/lang/Object;)Z
 
     move-result v6
 
     if-eqz v6, :cond_2
 
-    .line 11
     invoke-interface {v0, p1, p2, p3, p4}, Lakv;->a(Ljava/lang/Object;IILaeo;)Lakw;
 
     move-result-object v6
 
-    .line 12
     if-eqz v6, :cond_2
 
-    .line 13
     iget-object v0, v6, Lakw;->a:Laek;
 
-    .line 14
     iget-object v1, v6, Lakw;->c:Laet;
 
     invoke-interface {v5, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 15
     :goto_1
     add-int/lit8 v1, v3, 0x1
 
@@ -103,7 +86,6 @@
 
     goto :goto_0
 
-    .line 16
     :cond_0
     invoke-interface {v5}, Ljava/util/List;->isEmpty()Z
 
@@ -111,7 +93,6 @@
 
     if-nez v0, :cond_1
 
-    .line 17
     new-instance v0, Lakw;
 
     new-instance v2, Lalc;
@@ -122,7 +103,6 @@
 
     invoke-direct {v0, v1, v2}, Lakw;-><init>(Laek;Laet;)V
 
-    .line 18
     :goto_2
     return-object v0
 
@@ -140,8 +120,6 @@
 .method public final a(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 19
     iget-object v0, p0, Lalb;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -161,17 +139,14 @@
 
     check-cast v0, Lakv;
 
-    .line 20
     invoke-interface {v0, p1}, Lakv;->a(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 21
     const/4 v0, 0x1
 
-    .line 23
     :goto_0
     return v0
 
@@ -184,13 +159,10 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lalb;->a:Ljava/util/List;
 
     iget-object v1, p0, Lalb;->a:Ljava/util/List;
 
-    .line 25
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
@@ -239,6 +211,5 @@
 
     move-result-object v0
 
-    .line 26
     return-object v0
 .end method

@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 5
     const-string v0, "focusPtNormalizer"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -31,22 +29,16 @@
 .method public constructor <init>(Lgni;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgza;->b:Lgni;
 
-    .line 3
     return-void
 .end method
 
 .method public static a(F)F
     .locals 2
 
-    .prologue
-    .line 4
     const/4 v0, 0x0
 
     const/high16 v1, 0x3f800000    # 1.0f

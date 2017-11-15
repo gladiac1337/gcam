@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 1
     new-instance v0, Ljoo;
 
     const-string v1, "SHA-256"

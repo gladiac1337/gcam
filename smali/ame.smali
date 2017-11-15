@@ -14,14 +14,10 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lame;->a:Landroid/content/Context;
 
-    .line 3
     return-void
 .end method
 
@@ -30,8 +26,6 @@
 .method public final a(Lald;)Lakv;
     .locals 2
 
-    .prologue
-    .line 4
     new-instance v0, Lamd;
 
     iget-object v1, p0, Lame;->a:Landroid/content/Context;

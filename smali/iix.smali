@@ -18,11 +18,8 @@
 .method public constructor <init>(Liiy;Licu;)V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -61,20 +58,16 @@
 
     move-result-object v0
 
-    .line 3
     iput-object p2, p0, Liix;->c:Licu;
 
-    .line 4
     iput-object p1, p0, Liix;->a:Liiy;
 
-    .line 5
     new-instance v1, Licr;
 
     invoke-direct {v1, p2, v0}, Licr;-><init>(Licu;Ljava/lang/String;)V
 
     iput-object v1, p0, Liix;->b:Licr;
 
-    .line 6
     return-void
 .end method
 
@@ -83,8 +76,6 @@
 .method public final a(J)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 12
     iget-object v0, p0, Liix;->a:Liiy;
 
     invoke-interface {v0, p1, p2}, Liiy;->a(J)Ljava/lang/Object;
@@ -97,8 +88,6 @@
 .method public final a()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 13
     iget-object v0, p0, Liix;->a:Liiy;
 
     invoke-interface {v0}, Liiy;->a()Ljava/util/List;
@@ -111,26 +100,20 @@
 .method public final a(JLjava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Liix;->b:Licr;
 
     invoke-virtual {v0}, Licr;->a()V
 
-    .line 8
     iget-object v0, p0, Liix;->a:Liiy;
 
     invoke-interface {v0, p1, p2, p3}, Liiy;->a(JLjava/lang/Object;)V
 
-    .line 9
     return-void
 .end method
 
 .method public final a(I)Z
     .locals 1
 
-    .prologue
-    .line 18
     iget-object v0, p0, Liix;->a:Liiy;
 
     invoke-interface {v0, p1}, Liiy;->a(I)Z
@@ -143,8 +126,6 @@
 .method public final b()I
     .locals 1
 
-    .prologue
-    .line 19
     iget-object v0, p0, Liix;->a:Liiy;
 
     invoke-interface {v0}, Liiy;->b()I
@@ -157,8 +138,6 @@
 .method public final c()I
     .locals 1
 
-    .prologue
-    .line 20
     iget-object v0, p0, Liix;->a:Liiy;
 
     invoke-interface {v0}, Liiy;->c()I
@@ -171,8 +150,6 @@
 .method public final d()Ljava/util/Collection;
     .locals 4
 
-    .prologue
-    .line 16
     iget-object v0, p0, Liix;->c:Licu;
 
     iget-object v1, p0, Liix;->a:Liiy;
@@ -211,7 +188,6 @@
 
     invoke-interface {v0, v1}, Licu;->b(Ljava/lang/String;)V
 
-    .line 17
     iget-object v0, p0, Liix;->a:Liiy;
 
     invoke-interface {v0}, Liiy;->d()Ljava/util/Collection;
@@ -224,8 +200,6 @@
 .method public final e()Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 14
     iget-object v0, p0, Liix;->c:Licu;
 
     iget-object v1, p0, Liix;->a:Liiy;
@@ -264,7 +238,6 @@
 
     invoke-interface {v0, v1}, Licu;->b(Ljava/lang/String;)V
 
-    .line 15
     iget-object v0, p0, Liix;->a:Liiy;
 
     invoke-interface {v0}, Liiy;->e()Ljava/lang/Object;
@@ -277,8 +250,6 @@
 .method public final f()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 11
     iget-object v0, p0, Liix;->a:Liiy;
 
     invoke-interface {v0}, Liiy;->f()Ljava/lang/Object;
@@ -291,8 +262,6 @@
 .method public final g()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Liix;->a:Liiy;
 
     invoke-interface {v0}, Liiy;->g()Ljava/lang/Object;

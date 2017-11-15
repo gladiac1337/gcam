@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/google/android/libraries/smartburst/pipeline/Pipeline;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lccr;->a:Lcom/google/android/libraries/smartburst/pipeline/Pipeline;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final a(Ljava/lang/Object;Ljava/util/concurrent/Executor;)Lilf;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lccr;->a:Lcom/google/android/libraries/smartburst/pipeline/Pipeline;
 
     invoke-interface {v0}, Lcom/google/android/libraries/smartburst/pipeline/Pipeline;->process()Lilf;

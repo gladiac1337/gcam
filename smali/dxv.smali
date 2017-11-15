@@ -16,8 +16,6 @@
 .method public constructor <init>(Ldvk;Lgpa;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldxv;->b:Ldvk;
 
     iput-object p2, p0, Ldxv;->a:Lgpa;
@@ -32,19 +30,14 @@
 .method public final a()Ljuw;
     .locals 5
 
-    .prologue
-    .line 2
     new-instance v0, Ljvi;
 
     invoke-direct {v0}, Ljvi;-><init>()V
 
-    .line 4
     iget-object v1, p0, Ldxv;->b:Ldvk;
 
-    .line 5
     iget-object v1, v1, Ldvk;->a:Ljava/util/concurrent/Executor;
 
-    .line 6
     new-instance v2, Ldvl;
 
     iget-object v3, p0, Ldxv;->b:Ldvk;
@@ -55,22 +48,18 @@
 
     invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 7
     return-object v0
 .end method
 
 .method public final b()Ljuw;
     .locals 2
 
-    .prologue
-    .line 8
     iget-object v0, p0, Ldxv;->a:Lgpa;
 
     iget-object v0, v0, Lgpa;->b:Liil;
 
     invoke-interface {v0}, Liil;->close()V
 
-    .line 9
     new-instance v0, Lief;
 
     const-string v1, "Software jpeg saver was closed"

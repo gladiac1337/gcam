@@ -15,8 +15,6 @@
 .method public constructor <init>(Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;Lhij;)V
     .locals 0
 
-    .prologue
-    .line 2
     iput-object p1, p0, Lhsn;->b:Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;
 
     iput-object p2, p0, Lhsn;->a:Lhij;
@@ -31,8 +29,6 @@
 .method public final a(Lhvo;)V
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V

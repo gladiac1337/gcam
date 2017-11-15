@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 1
     new-instance v0, Lgii;
 
     const-string v1, "TOTAL_CAPTURE_RESULT"
@@ -31,7 +29,6 @@
 
     sput-object v0, Lgij;->a:Lgii;
 
-    .line 2
     new-instance v0, Lgii;
 
     const-string v1, "IMAGE_ID"
@@ -40,14 +37,12 @@
 
     sput-object v0, Lgij;->b:Lgii;
 
-    .line 3
     new-instance v0, Lgii;
 
     const-string v1, "REQUEST"
 
     invoke-direct {v0, v1}, Lgii;-><init>(Ljava/lang/String;)V
 
-    .line 4
     new-instance v0, Lgii;
 
     const-string v1, "ORIENTATION"
@@ -56,7 +51,6 @@
 
     sput-object v0, Lgij;->c:Lgii;
 
-    .line 5
     new-instance v0, Lgii;
 
     const-string v1, "BURST_ID"
@@ -65,7 +59,6 @@
 
     sput-object v0, Lgij;->d:Lgii;
 
-    .line 6
     new-instance v0, Lgii;
 
     const-string v1, "BURST_START_TIME"
@@ -74,7 +67,6 @@
 
     sput-object v0, Lgij;->e:Lgii;
 
-    .line 7
     new-instance v0, Lgii;
 
     const-string v1, "BURST_INDEX"

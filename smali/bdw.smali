@@ -17,23 +17,16 @@
 .method public constructor <init>(Lgqd;III)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbdw;->a:Lgqd;
 
-    .line 3
     iput p2, p0, Lbdw;->b:I
 
-    .line 4
     iput p3, p0, Lbdw;->c:I
 
-    .line 5
     iput p4, p0, Lbdw;->d:I
 
-    .line 6
     return-void
 .end method
 
@@ -42,8 +35,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 6
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lbdw;->a:Lgqd;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

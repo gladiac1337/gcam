@@ -14,8 +14,6 @@
 .method constructor <init>(J)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-wide p1, p0, Lbny;->a:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,11 +24,8 @@
 .method private final a(Landroid/database/sqlite/SQLiteDatabase;)Ljht;
     .locals 10
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 2
-    .line 4
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -39,10 +34,8 @@
 
     const-string v1, "type_uri"
 
-    .line 5
     sget-object v2, Lbnw;->e:[Ljava/lang/String;
 
-    .line 6
     const-string v3, "media_store_id = ?"
 
     const/4 v4, 0x1
@@ -53,7 +46,6 @@
 
     iget-wide v8, p0, Lbny;->a:J
 
-    .line 7
     invoke-static {v8, v9}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v7
@@ -64,12 +56,10 @@
 
     move-object v7, v5
 
-    .line 8
     invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
-    .line 9
     :try_start_0
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -77,20 +67,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 10
     const-string v0, "special_type_id"
 
-    .line 11
     invoke-interface {v1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 12
     invoke-interface {v1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 13
     invoke-static {v0}, Lbnv;->a(Ljava/lang/String;)Lbnv;
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
@@ -99,11 +85,9 @@
 
     move-result-object v5
 
-    .line 14
     :cond_0
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 20
     :goto_0
     invoke-static {v5}, Ljht;->c(Ljava/lang/Object;)Ljht;
 
@@ -111,7 +95,6 @@
 
     return-object v0
 
-    .line 17
     :catch_0
     move-exception v0
 
@@ -120,7 +103,6 @@
 
     goto :goto_0
 
-    .line 19
     :catchall_0
     move-exception v0
 
@@ -128,7 +110,6 @@
 
     throw v0
 
-    .line 17
     :catch_1
     move-exception v0
 
@@ -140,8 +121,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 21
     check-cast p1, Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-direct {p0, p1}, Lbny;->a(Landroid/database/sqlite/SQLiteDatabase;)Ljht;

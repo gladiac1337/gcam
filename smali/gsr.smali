@@ -17,14 +17,12 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x2
 
     const/4 v3, 0x1
 
     const/4 v2, 0x0
 
-    .line 3
     new-instance v0, Lgsr;
 
     const-string v1, "SHUTTER"
@@ -33,7 +31,6 @@
 
     sput-object v0, Lgsr;->a:Lgsr;
 
-    .line 4
     new-instance v0, Lgsr;
 
     const-string v1, "ZOOM"
@@ -42,7 +39,6 @@
 
     sput-object v0, Lgsr;->b:Lgsr;
 
-    .line 5
     new-instance v0, Lgsr;
 
     const-string v1, "NOOP"
@@ -51,7 +47,6 @@
 
     sput-object v0, Lgsr;->c:Lgsr;
 
-    .line 6
     const/4 v0, 0x3
 
     new-array v0, v0, [Lgsr;
@@ -76,8 +71,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -86,8 +79,6 @@
 .method public static values()[Lgsr;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lgsr;->d:[Lgsr;
 
     invoke-virtual {v0}, [Lgsr;->clone()Ljava/lang/Object;

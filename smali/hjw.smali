@@ -56,13 +56,10 @@
 .method public final handleMessage(Landroid/os/Message;)V
     .locals 5
 
-    .prologue
-    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 4
     const-string v0, "GoogleApiAvailability"
 
     iget v1, p1, Landroid/os/Message;->what:I
@@ -93,7 +90,6 @@
     :goto_0
     return-void
 
-    .line 1
     :pswitch_0
     iget-object v0, p0, Lhjw;->a:Landroid/content/Context;
 
@@ -111,7 +107,6 @@
 
     iget-object v2, p0, Lhjw;->a:Landroid/content/Context;
 
-    .line 3
     const/4 v3, 0x0
 
     const-string v4, "n"
@@ -124,7 +119,6 @@
 
     goto :goto_0
 
-    .line 1
     nop
 
     :pswitch_data_0

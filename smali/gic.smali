@@ -14,14 +14,10 @@
 .method public constructor <init>(Lghn;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgic;->a:Lghn;
 
-    .line 3
     return-void
 .end method
 
@@ -30,30 +26,24 @@
 .method public final a(Lgho;)Lggu;
     .locals 4
 
-    .prologue
-    .line 4
     new-instance v0, Lgie;
 
     invoke-direct {v0}, Lgie;-><init>()V
 
-    .line 5
     invoke-static {v0}, Lfsp;->a(Licn;)Lggu;
 
     move-result-object v1
 
-    .line 6
     iget-object v2, p0, Lgic;->a:Lghn;
 
     new-instance v3, Lgid;
 
     invoke-direct {v3, p1, v0}, Lgid;-><init>(Lgho;Lgie;)V
 
-    .line 7
     invoke-interface {v2, v3}, Lghn;->a(Lgho;)Lggu;
 
     move-result-object v0
 
-    .line 8
     const/4 v2, 0x2
 
     new-array v2, v2, [Lggu;

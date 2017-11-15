@@ -14,8 +14,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgsy;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgsy;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->isPressed()Z
@@ -42,7 +38,6 @@
 
     move v1, v0
 
-    .line 3
     :goto_0
     iget-object v2, p0, Lgsy;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
@@ -64,15 +59,12 @@
 
     invoke-static {v2, v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$902(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;I)I
 
-    .line 4
     iget-object v0, p0, Lgsy;->a:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->invalidate()V
 
-    .line 5
     return-void
 
-    .line 2
     :cond_0
     const/high16 v0, 0x3f800000    # 1.0f
 

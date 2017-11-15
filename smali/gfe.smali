@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 43
     const-string v0, "PointMtgParams"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -38,28 +36,20 @@
 .method private constructor <init>(Landroid/graphics/PointF;Landroid/graphics/PointF;Lgfd;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgfe;->b:Landroid/graphics/PointF;
 
-    .line 3
     iput-object p2, p0, Lgfe;->c:Landroid/graphics/PointF;
 
-    .line 4
     iput-object p3, p0, Lgfe;->d:Lgfd;
 
-    .line 5
     return-void
 .end method
 
 .method private static a(III)I
     .locals 1
 
-    .prologue
-    .line 42
     invoke-static {p0, p1}, Ljava/lang/Math;->max(II)I
 
     move-result v0
@@ -74,13 +64,10 @@
 .method private final a(Landroid/graphics/PointF;Landroid/graphics/Rect;)Landroid/hardware/camera2/params/MeteringRectangle;
     .locals 7
 
-    .prologue
     const/4 v5, 0x0
 
     const/high16 v4, 0x3f800000    # 1.0f
 
-    .line 12
-    .line 13
     invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
     move-result v0
@@ -93,7 +80,6 @@
 
     if-gez v0, :cond_1
 
-    .line 14
     :cond_0
     sget-object v0, Lgfe;->a:Ljava/lang/String;
 
@@ -131,7 +117,6 @@
 
     invoke-static {v0, v1}, Lbhz;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 15
     :cond_1
     iget v0, p2, Landroid/graphics/Rect;->left:I
 
@@ -141,7 +126,6 @@
 
     iput v0, p2, Landroid/graphics/Rect;->left:I
 
-    .line 16
     iget v0, p2, Landroid/graphics/Rect;->top:I
 
     invoke-static {v5, v0}, Ljava/lang/Math;->max(II)I
@@ -150,7 +134,6 @@
 
     iput v0, p2, Landroid/graphics/Rect;->top:I
 
-    .line 17
     iget v0, p2, Landroid/graphics/Rect;->left:I
 
     iget v1, p2, Landroid/graphics/Rect;->right:I
@@ -161,7 +144,6 @@
 
     iput v0, p2, Landroid/graphics/Rect;->right:I
 
-    .line 18
     iget v0, p2, Landroid/graphics/Rect;->top:I
 
     iget v1, p2, Landroid/graphics/Rect;->bottom:I
@@ -172,7 +154,6 @@
 
     iput v0, p2, Landroid/graphics/Rect;->bottom:I
 
-    .line 21
     invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
     move-result v0
@@ -189,7 +170,6 @@
 
     move-result v0
 
-    .line 22
     const v1, 0x3d7ae148    # 0.06125f
 
     int-to-float v0, v0
@@ -198,15 +178,12 @@
 
     float-to-int v1, v0
 
-    .line 23
     iget-object v0, p0, Lgfe;->d:Lgfd;
 
-    .line 25
     iget v0, v0, Lgfd;->a:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 30
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Unsupported Sensor Orientation"
@@ -215,7 +192,6 @@
 
     throw v0
 
-    .line 27
     :sswitch_0
     new-instance v0, Landroid/graphics/PointF;
 
@@ -229,7 +205,6 @@
 
     move-object p1, v0
 
-    .line 32
     :goto_0
     :sswitch_1
     new-instance v0, Landroid/graphics/PointF;
@@ -240,7 +215,6 @@
 
     iget v3, p1, Landroid/graphics/PointF;->x:F
 
-    .line 33
     invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
     move-result v4
@@ -257,7 +231,6 @@
 
     iget v4, p1, Landroid/graphics/PointF;->y:F
 
-    .line 34
     invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
 
     move-result v5
@@ -270,7 +243,6 @@
 
     invoke-direct {v0, v2, v3}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 36
     new-instance v2, Landroid/graphics/Rect;
 
     iget v3, v0, Landroid/graphics/PointF;->x:F
@@ -307,7 +279,6 @@
 
     invoke-direct {v2, v3, v4, v5, v0}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 37
     iget v0, v2, Landroid/graphics/Rect;->left:I
 
     iget v1, p2, Landroid/graphics/Rect;->left:I
@@ -320,7 +291,6 @@
 
     iput v0, v2, Landroid/graphics/Rect;->left:I
 
-    .line 38
     iget v0, v2, Landroid/graphics/Rect;->top:I
 
     iget v1, p2, Landroid/graphics/Rect;->top:I
@@ -333,7 +303,6 @@
 
     iput v0, v2, Landroid/graphics/Rect;->top:I
 
-    .line 39
     iget v0, v2, Landroid/graphics/Rect;->right:I
 
     iget v1, p2, Landroid/graphics/Rect;->left:I
@@ -346,7 +315,6 @@
 
     iput v0, v2, Landroid/graphics/Rect;->right:I
 
-    .line 40
     iget v0, v2, Landroid/graphics/Rect;->bottom:I
 
     iget v1, p2, Landroid/graphics/Rect;->top:I
@@ -359,7 +327,6 @@
 
     iput v0, v2, Landroid/graphics/Rect;->bottom:I
 
-    .line 41
     new-instance v0, Landroid/hardware/camera2/params/MeteringRectangle;
 
     const/16 v1, 0x7a
@@ -368,7 +335,6 @@
 
     return-object v0
 
-    .line 28
     :sswitch_2
     new-instance v0, Landroid/graphics/PointF;
 
@@ -386,7 +352,6 @@
 
     goto :goto_0
 
-    .line 29
     :sswitch_3
     new-instance v0, Landroid/graphics/PointF;
 
@@ -402,7 +367,6 @@
 
     goto/16 :goto_0
 
-    .line 25
     nop
 
     :sswitch_data_0
@@ -417,12 +381,10 @@
 .method public static a(Landroid/graphics/PointF;Landroid/graphics/PointF;ILgfj;)Lgfe;
     .locals 4
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 6
     rem-int/lit8 v0, p2, 0x5a
 
     if-nez v0, :cond_0
@@ -434,7 +396,6 @@
 
     invoke-static {v0, v3}, Liya;->a(ZLjava/lang/Object;)V
 
-    .line 7
     if-ltz p2, :cond_1
 
     :goto_1
@@ -442,10 +403,8 @@
 
     invoke-static {v1, v0}, Liya;->a(ZLjava/lang/Object;)V
 
-    .line 8
     rem-int/lit16 v0, p2, 0x168
 
-    .line 9
     new-instance v1, Lgfe;
 
     new-instance v2, Lgfd;
@@ -459,13 +418,11 @@
     :cond_0
     move v0, v2
 
-    .line 6
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 7
     goto :goto_1
 .end method
 
@@ -474,8 +431,6 @@
 .method public final a(Landroid/graphics/Rect;)[Landroid/hardware/camera2/params/MeteringRectangle;
     .locals 3
 
-    .prologue
-    .line 11
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/hardware/camera2/params/MeteringRectangle;
@@ -496,8 +451,6 @@
 .method public final b(Landroid/graphics/Rect;)[Landroid/hardware/camera2/params/MeteringRectangle;
     .locals 3
 
-    .prologue
-    .line 10
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/hardware/camera2/params/MeteringRectangle;

@@ -26,8 +26,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 20
     const-string v0, "StackSaverImpl"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -42,11 +40,8 @@
 .method public constructor <init>(Leou;Lgwb;Lgvs;Ljht;Landroid/content/ContentResolver;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -55,7 +50,6 @@
 
     iput-object v0, p0, Leot;->b:Leou;
 
-    .line 3
     invoke-static {p2}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -64,7 +58,6 @@
 
     iput-object v0, p0, Leot;->c:Lgwb;
 
-    .line 4
     invoke-static {p3}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -73,10 +66,8 @@
 
     iput-object v0, p0, Leot;->d:Lgvs;
 
-    .line 5
     iput-object p4, p0, Leot;->f:Ljht;
 
-    .line 6
     invoke-static {p5}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -85,7 +76,6 @@
 
     iput-object v0, p0, Leot;->e:Landroid/content/ContentResolver;
 
-    .line 7
     return-void
 .end method
 
@@ -94,21 +84,16 @@
 .method public final a(Lgvy;Leox;)Leov;
     .locals 8
 
-    .prologue
-    .line 8
-    .line 9
     iget-object v0, p0, Leot;->b:Leou;
 
     invoke-interface {v0}, Leou;->k()Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 10
     new-instance v1, Landroid/net/Uri$Builder;
 
     invoke-direct {v1}, Landroid/net/Uri$Builder;-><init>()V
 
-    .line 12
     invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
     move-result-object v2
@@ -117,7 +102,6 @@
 
     move-result-object v2
 
-    .line 13
     invoke-virtual {v0}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v3
@@ -126,7 +110,6 @@
 
     move-result-object v2
 
-    .line 14
     invoke-virtual {v0}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v0
@@ -135,7 +118,6 @@
 
     move-result-object v0
 
-    .line 15
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object v2
@@ -146,12 +128,10 @@
 
     invoke-virtual {v0, v2}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
 
-    .line 16
     invoke-virtual {v1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 18
     sget-object v0, Leot;->a:Ljava/lang/String;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -188,7 +168,6 @@
 
     invoke-static {v0, v2}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 19
     new-instance v0, Leov;
 
     iget-object v2, p0, Leot;->c:Lgwb;

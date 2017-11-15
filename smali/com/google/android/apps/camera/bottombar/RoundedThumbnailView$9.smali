@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-static {}, Lgzj;->values()[Lgzj;
 
     move-result-object v0

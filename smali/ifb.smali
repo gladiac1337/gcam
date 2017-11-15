@@ -14,14 +14,10 @@
 .method public constructor <init>(Landroid/hardware/camera2/CaptureRequest;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lifb;->a:Landroid/hardware/camera2/CaptureRequest;
 
-    .line 3
     return-void
 .end method
 
@@ -30,8 +26,6 @@
 .method public final a()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lifb;->a:Landroid/hardware/camera2/CaptureRequest;
 
     invoke-virtual {v0}, Landroid/hardware/camera2/CaptureRequest;->getTag()Ljava/lang/Object;
@@ -44,8 +38,6 @@
 .method public final a(Landroid/hardware/camera2/CaptureRequest$Key;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lifb;->a:Landroid/hardware/camera2/CaptureRequest;
 
     invoke-virtual {v0, p1}, Landroid/hardware/camera2/CaptureRequest;->get(Landroid/hardware/camera2/CaptureRequest$Key;)Ljava/lang/Object;
@@ -58,8 +50,6 @@
 .method public final b()Lifo;
     .locals 2
 
-    .prologue
-    .line 15
     new-instance v0, Lifo;
 
     iget-object v1, p0, Lifb;->a:Landroid/hardware/camera2/CaptureRequest;
@@ -72,18 +62,13 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 6
     if-ne p0, p1, :cond_0
 
-    .line 7
     const/4 v0, 0x1
 
-    .line 11
     :goto_0
     return v0
 
-    .line 8
     :cond_0
     if-eqz p1, :cond_1
 
@@ -97,17 +82,14 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 9
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 10
     :cond_2
     check-cast p1, Lifb;
 
-    .line 11
     iget-object v0, p0, Lifb;->a:Landroid/hardware/camera2/CaptureRequest;
 
     iget-object v1, p1, Lifb;->a:Landroid/hardware/camera2/CaptureRequest;
@@ -122,8 +104,6 @@
 .method public final hashCode()I
     .locals 3
 
-    .prologue
-    .line 12
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -134,11 +114,9 @@
 
     aput-object v2, v0, v1
 
-    .line 13
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 14
     return v0
 .end method

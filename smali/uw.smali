@@ -14,8 +14,6 @@
 .method constructor <init>(Luv;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Luw;->a:Luv;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final a()I
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Luw;->a:Luv;
 
     invoke-virtual {v0}, Luv;->p()I
@@ -42,16 +38,12 @@
 .method public final a(Landroid/view/View;)I
     .locals 2
 
-    .prologue
-    .line 7
-    .line 8
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Luz;
 
-    .line 9
     invoke-static {p1}, Luv;->d(Landroid/view/View;)I
 
     move-result v1
@@ -66,8 +58,6 @@
 .method public final a(I)Landroid/view/View;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Luw;->a:Luv;
 
     invoke-virtual {v0, p1}, Luv;->f(I)Landroid/view/View;
@@ -80,14 +70,10 @@
 .method public final b()I
     .locals 2
 
-    .prologue
-    .line 4
     iget-object v0, p0, Luw;->a:Luv;
 
-    .line 5
     iget v0, v0, Luv;->q:I
 
-    .line 6
     iget-object v1, p0, Luw;->a:Luv;
 
     invoke-virtual {v1}, Luv;->r()I
@@ -102,16 +88,12 @@
 .method public final b(Landroid/view/View;)I
     .locals 2
 
-    .prologue
-    .line 10
-    .line 11
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Luz;
 
-    .line 12
     invoke-static {p1}, Luv;->f(Landroid/view/View;)I
 
     move-result v1

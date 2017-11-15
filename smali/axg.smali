@@ -14,11 +14,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -35,14 +32,11 @@
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 3
     iget-object v0, p0, Laxg;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 4
     return-void
 .end method

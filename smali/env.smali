@@ -14,8 +14,6 @@
 .method constructor <init>(Lenn;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lenv;->a:Lenn;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,21 +26,15 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 2
     :try_start_0
     iget-object v0, p0, Lenv;->a:Lenn;
 
-    .line 3
     iget-object v0, v0, Lenn;->j:Lgvs;
 
-    .line 4
     iget-object v1, p0, Lenv;->a:Lenn;
 
-    .line 5
     iget-object v1, v1, Lenn;->i:Leoy;
 
-    .line 6
     invoke-virtual {v1}, Leoy;->c()Ljava/io/File;
 
     move-result-object v1
@@ -53,7 +45,6 @@
 
     move-result-object v0
 
-    .line 15
     new-instance v1, Landroid/graphics/drawable/BitmapDrawable;
 
     new-instance v2, Ljava/io/ByteArrayInputStream;
@@ -62,24 +53,20 @@
 
     invoke-direct {v1, v2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Ljava/io/InputStream;)V
 
-    .line 16
     invoke-virtual {v1}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    .line 17
     iget-object v1, p0, Lenv;->a:Lenn;
 
     const-string v2, "Could not decode preview file: "
 
     iget-object v0, p0, Lenv;->a:Lenn;
 
-    .line 18
     iget-object v0, v0, Lenn;->i:Leoy;
 
-    .line 19
     invoke-virtual {v0}, Leoy;->c()Ljava/io/File;
 
     move-result-object v0
@@ -102,27 +89,21 @@
 
     move-result-object v0
 
-    .line 20
     :goto_0
     invoke-virtual {v1, v0}, Lenn;->b(Ljava/lang/String;)V
 
-    .line 33
     :goto_1
     return-void
 
-    .line 8
     :catch_0
     move-exception v0
 
-    .line 9
     iget-object v1, p0, Lenv;->a:Lenn;
 
     iget-object v2, p0, Lenv;->a:Lenn;
 
-    .line 10
     iget-object v2, v2, Lenn;->i:Leoy;
 
-    .line 11
     invoke-virtual {v2}, Leoy;->c()Ljava/io/File;
 
     move-result-object v2
@@ -131,7 +112,6 @@
 
     move-result-object v2
 
-    .line 12
     invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
 
     move-result-object v0
@@ -184,12 +164,10 @@
 
     move-result-object v0
 
-    .line 13
     invoke-virtual {v1, v0}, Lenn;->b(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 19
     :cond_0
     new-instance v0, Ljava/lang/String;
 
@@ -197,20 +175,15 @@
 
     goto :goto_0
 
-    .line 22
     :cond_1
     iget-object v0, p0, Lenv;->a:Lenn;
 
-    .line 23
     iget-object v0, v0, Lenn;->g:Lenz;
 
-    .line 24
     iget-object v2, p0, Lenv;->a:Lenn;
 
-    .line 25
     iget-object v2, v2, Lenn;->h:Leoa;
 
-    .line 26
     new-instance v3, Laml;
 
     new-instance v4, Laht;
@@ -219,22 +192,16 @@
 
     invoke-direct {v3, v1, v4}, Laml;-><init>(Landroid/graphics/drawable/BitmapDrawable;Lahs;)V
 
-    .line 27
     invoke-virtual {v0, v2, v3}, Lenz;->a(Leoa;Lany;)V
 
-    .line 28
     iget-object v0, p0, Lenv;->a:Lenn;
 
-    .line 29
     iget-object v0, v0, Lenn;->e:Leon;
 
-    .line 30
     iget-object v1, p0, Lenv;->a:Lenn;
 
-    .line 31
     iget-object v1, v1, Lenn;->p:Landroid/net/Uri;
 
-    .line 32
     invoke-virtual {v0, v1}, Leon;->c(Landroid/net/Uri;)V
 
     goto :goto_1

@@ -13,17 +13,12 @@
 .method public constructor <init>(Lgik;Ljava/util/concurrent/Executor;)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lbko;->b:Lgik;
 
-    .line 4
     iput-object p2, p0, Lbko;->a:Ljava/util/concurrent/Executor;
 
-    .line 5
     return-void
 .end method
 
@@ -32,8 +27,6 @@
 .method public final a(Lgpa;)Ljuw;
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lbko;->b:Lgik;
 
     new-instance v1, Lbkg;

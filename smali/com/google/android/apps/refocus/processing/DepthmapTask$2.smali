@@ -18,8 +18,6 @@
 .method constructor <init>(Lcom/google/android/apps/refocus/processing/DepthmapTask;Ljava/util/concurrent/atomic/AtomicBoolean;Lcom/google/android/apps/refocus/image/ColorImage;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p2, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask$2;->val$success:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     iput-object p3, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask$2;->val$frame:Lcom/google/android/apps/refocus/image/ColorImage;
@@ -36,8 +34,6 @@
 .method public run()V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcom/google/android/apps/refocus/processing/DepthmapTask$2;->val$success:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -52,6 +48,5 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
-    .line 3
     return-void
 .end method

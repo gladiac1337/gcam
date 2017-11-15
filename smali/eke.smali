@@ -13,8 +13,6 @@
 .method public constructor <init>(Ldum;Ldvd;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leke;->b:Ldum;
 
     iput-object p2, p0, Leke;->a:Ldvd;

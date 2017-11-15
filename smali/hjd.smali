@@ -36,8 +36,6 @@
 .method private constructor <init>(Lhjb;[BB)V
     .locals 4
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhjd;->i:Lhjb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -136,7 +134,6 @@
 
     iget-wide v2, v1, Lhrn;->a:J
 
-    .line 2
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
 
     move-result-object v1
@@ -149,7 +146,6 @@
 
     int-to-long v2, v1
 
-    .line 3
     iput-wide v2, v0, Lhrn;->d:J
 
     if-eqz p2, :cond_0

@@ -7,8 +7,6 @@
 .method public constructor <init>(Ljava/lang/String;[Ljava/lang/Class;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/performance/primes/metriccapture/PackageStatsCapture$PackageStatsInvocation;-><init>(Ljava/lang/String;[Ljava/lang/Class;)V
 
     return-void
@@ -19,8 +17,6 @@
 .method final a(Ljava/lang/String;ILandroid/content/pm/IPackageStatsObserver;)[Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 2
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;

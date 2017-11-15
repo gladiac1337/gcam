@@ -16,11 +16,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     new-instance v0, Liag;
 
     invoke-static {}, Lfsp;->d()Lggq;
@@ -31,14 +28,12 @@
 
     iput-object v0, p0, Lghb;->a:Liag;
 
-    .line 6
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lghb;->b:Ljava/util/List;
 
-    .line 7
     return-void
 .end method
 
@@ -47,8 +42,6 @@
 .method public final a(Licn;Ljava/util/concurrent/Executor;)Lich;
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lghb;->a:Liag;
 
     invoke-virtual {v0, p1, p2}, Liag;->a(Licn;Ljava/util/concurrent/Executor;)Lich;
@@ -61,8 +54,6 @@
 .method public final declared-synchronized a(Lggu;)V
     .locals 2
 
-    .prologue
-    .line 1
     monitor-enter p0
 
     :try_start_0
@@ -70,7 +61,6 @@
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 2
     iget-object v0, p0, Lghb;->a:Liag;
 
     iget-object v1, p0, Lghb;->b:Ljava/util/List;
@@ -83,12 +73,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3
     monitor-exit p0
 
     return-void
 
-    .line 1
     :catchall_0
     move-exception v0
 
@@ -100,9 +88,6 @@
 .method public final synthetic b()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 9
-    .line 10
     iget-object v0, p0, Lghb;->a:Liag;
 
     invoke-virtual {v0}, Liag;->b()Ljava/lang/Object;
@@ -111,6 +96,5 @@
 
     check-cast v0, Lggq;
 
-    .line 11
     return-object v0
 .end method

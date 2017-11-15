@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 6
     const/16 v0, 0x5f
 
     invoke-static {v0}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
@@ -35,19 +33,13 @@
 .method public constructor <init>(Liio;Lgwb;Lgvp;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbfy;->b:Liio;
 
-    .line 3
     iput-object p2, p0, Lbfy;->c:Lgwb;
 
-    .line 4
     iput-object p3, p0, Lbfy;->d:Lgvp;
 
-    .line 5
     return-void
 .end method

@@ -16,8 +16,6 @@
 .method public final synthetic a(Landroid/content/Context;Landroid/os/Looper;Lhls;Ljava/lang/Object;Lhkn;Lhko;)Lhkj;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V

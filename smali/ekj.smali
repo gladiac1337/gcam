@@ -7,8 +7,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 11
     const-string v0, "LSScorer"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -19,11 +17,8 @@
 .method public static a(Lgpa;)D
     .locals 9
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lgpa;->b:Liil;
 
-    .line 2
     invoke-interface {v1}, Liil;->d()Ljava/util/List;
 
     move-result-object v0
@@ -38,27 +33,22 @@
 
     check-cast v4, Liim;
 
-    .line 4
     invoke-interface {v1}, Liil;->f()I
 
     move-result v0
 
-    .line 5
     invoke-interface {v1}, Liil;->c()I
 
     move-result v1
 
-    .line 6
     invoke-interface {v4}, Liim;->c()Ljava/nio/ByteBuffer;
 
     move-result-object v2
 
-    .line 7
     invoke-interface {v4}, Liim;->b()I
 
     move-result v3
 
-    .line 8
     invoke-interface {v4}, Liim;->a()I
 
     move-result v4
@@ -79,13 +69,11 @@
 
     iget v8, v8, Landroid/graphics/Rect;->bottom:I
 
-    .line 9
     invoke-static/range {v0 .. v8}, Lcom/android/camera/util/ImgUtilNative;->a(IILjava/nio/ByteBuffer;IIIIII)F
 
     move-result v0
 
     float-to-double v0, v0
 
-    .line 10
     return-wide v0
 .end method

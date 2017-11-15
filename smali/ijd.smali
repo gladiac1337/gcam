@@ -17,43 +17,34 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     new-instance v0, Ljava/util/TreeMap;
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
     iput-object v0, p0, Lijd;->b:Ljava/util/NavigableMap;
 
-    .line 23
     const/4 v0, 0x0
 
     iput v0, p0, Lijd;->d:I
 
-    .line 24
     const/16 v0, 0xc8
 
     iput v0, p0, Lijd;->a:I
 
-    .line 25
     const/16 v0, 0x258
 
     new-array v0, v0, [F
 
     iput-object v0, p0, Lijd;->c:[F
 
-    .line 26
     return-void
 .end method
 
 .method private final declared-synchronized a(J)Ljava/util/Map$Entry;
     .locals 3
 
-    .prologue
-    .line 27
     monitor-enter p0
 
     :try_start_0
@@ -88,20 +79,16 @@
 .method private static a(Ljava/util/Map$Entry;J)Ljava/util/Map$Entry;
     .locals 7
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 29
     if-nez p0, :cond_1
 
     move-object p0, v1
 
-    .line 33
     :cond_0
     :goto_0
     return-object p0
 
-    .line 31
     :cond_1
     invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -127,15 +114,12 @@
 
     move-object p0, v1
 
-    .line 33
     goto :goto_0
 .end method
 
 .method private final declared-synchronized a(I[F)V
     .locals 3
 
-    .prologue
-    .line 46
     monitor-enter p0
 
     const/4 v0, 0x0
@@ -145,7 +129,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 47
     :try_start_0
     iget-object v1, p0, Lijd;->c:[F
 
@@ -159,18 +142,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 48
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 49
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 46
     :catchall_0
     move-exception v0
 
@@ -182,8 +162,6 @@
 .method private final declared-synchronized a(JLjava/util/Map$Entry;Ljava/util/Map$Entry;[F)V
     .locals 9
 
-    .prologue
-    .line 34
     monitor-enter p0
 
     :try_start_0
@@ -203,7 +181,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 35
     invoke-interface {p3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -218,13 +195,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 45
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 37
     :cond_1
     :try_start_1
     invoke-interface {p4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -251,7 +226,6 @@
 
     long-to-float v1, v0
 
-    .line 38
     invoke-interface {p4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -268,7 +242,6 @@
 
     div-float v2, v0, v1
 
-    .line 39
     invoke-interface {p3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v0
@@ -285,7 +258,6 @@
 
     div-float v1, v0, v1
 
-    .line 40
     invoke-interface {p3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -296,7 +268,6 @@
 
     move-result v3
 
-    .line 41
     invoke-interface {p4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -307,7 +278,6 @@
 
     move-result v4
 
-    .line 42
     const/4 v0, 0x0
 
     :goto_0
@@ -315,7 +285,6 @@
 
     if-ge v0, v5, :cond_0
 
-    .line 43
     iget-object v5, p0, Lijd;->c:[F
 
     mul-int/lit8 v6, v3, 0x3
@@ -342,12 +311,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 44
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 34
     :catchall_0
     move-exception v0
 
@@ -359,8 +326,6 @@
 .method private final declared-synchronized b(J)Ljava/util/Map$Entry;
     .locals 3
 
-    .prologue
-    .line 28
     monitor-enter p0
 
     :try_start_0
@@ -397,8 +362,6 @@
 .method public final declared-synchronized a(JFFF)V
     .locals 3
 
-    .prologue
-    .line 13
     monitor-enter p0
 
     :try_start_0
@@ -410,7 +373,6 @@
 
     aput p3, v0, v1
 
-    .line 14
     iget-object v0, p0, Lijd;->c:[F
 
     iget v1, p0, Lijd;->d:I
@@ -421,7 +383,6 @@
 
     aput p4, v0, v1
 
-    .line 15
     iget-object v0, p0, Lijd;->c:[F
 
     iget v1, p0, Lijd;->d:I
@@ -432,7 +393,6 @@
 
     aput p5, v0, v1
 
-    .line 16
     iget-object v0, p0, Lijd;->b:Ljava/util/NavigableMap;
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -447,7 +407,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/NavigableMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 17
     iget v0, p0, Lijd;->d:I
 
     add-int/lit8 v0, v0, 0x1
@@ -458,7 +417,6 @@
 
     iput v0, p0, Lijd;->d:I
 
-    .line 18
     :goto_0
     iget-object v0, p0, Lijd;->b:Ljava/util/NavigableMap;
 
@@ -470,7 +428,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 19
     iget-object v0, p0, Lijd;->b:Ljava/util/NavigableMap;
 
     iget-object v1, p0, Lijd;->b:Ljava/util/NavigableMap;
@@ -485,7 +442,6 @@
 
     goto :goto_0
 
-    .line 13
     :catchall_0
     move-exception v0
 
@@ -493,7 +449,6 @@
 
     throw v0
 
-    .line 20
     :cond_0
     monitor-exit p0
 
@@ -503,10 +458,8 @@
 .method public final declared-synchronized a(J[F)Z
     .locals 9
 
-    .prologue
     const/4 v7, 0x1
 
-    .line 1
     monitor-enter p0
 
     :try_start_0
@@ -514,12 +467,10 @@
 
     move-result-object v4
 
-    .line 2
     invoke-direct {p0, p1, p2}, Lijd;->b(J)Ljava/util/Map$Entry;
 
     move-result-object v5
 
-    .line 3
     if-eqz v4, :cond_0
 
     if-eqz v5, :cond_0
@@ -530,24 +481,20 @@
 
     move-object v6, p3
 
-    .line 4
     invoke-direct/range {v1 .. v6}, Lijd;->a(JLjava/util/Map$Entry;Ljava/util/Map$Entry;[F)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move v0, v7
 
-    .line 12
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 6
     :cond_0
     if-eqz v4, :cond_1
 
-    .line 7
     :try_start_1
     invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -563,14 +510,11 @@
 
     move v0, v7
 
-    .line 8
     goto :goto_0
 
-    .line 9
     :cond_1
     if-eqz v5, :cond_2
 
-    .line 10
     invoke-interface {v5}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -587,16 +531,13 @@
 
     move v0, v7
 
-    .line 11
     goto :goto_0
 
-    .line 12
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1
     :catchall_0
     move-exception v0
 

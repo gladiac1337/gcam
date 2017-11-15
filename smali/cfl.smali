@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 26
     const-string v0, "PhotoDataFact"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -27,8 +25,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,8 +33,6 @@
 .method public static a(Landroid/database/Cursor;)Lfvj;
     .locals 20
 
-    .prologue
-    .line 2
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
@@ -47,7 +41,6 @@
 
     move-result-wide v4
 
-    .line 3
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
@@ -56,7 +49,6 @@
 
     move-result-object v6
 
-    .line 4
     const/4 v2, 0x2
 
     move-object/from16 v0, p0
@@ -65,7 +57,6 @@
 
     move-result-object v7
 
-    .line 5
     const/4 v2, 0x3
 
     move-object/from16 v0, p0
@@ -74,7 +65,6 @@
 
     move-result-wide v2
 
-    .line 6
     const/4 v8, 0x4
 
     move-object/from16 v0, p0
@@ -83,23 +73,18 @@
 
     move-result-wide v10
 
-    .line 7
     new-instance v8, Ljava/util/Date;
 
     invoke-direct {v8, v2, v3}, Ljava/util/Date;-><init>(J)V
 
-    .line 8
     new-instance v9, Ljava/util/Date;
 
-    .line 9
     const-wide/16 v2, 0x3e8
 
     mul-long/2addr v2, v10
 
-    .line 10
     invoke-direct {v9, v2, v3}, Ljava/util/Date;-><init>(J)V
 
-    .line 11
     const/4 v2, 0x5
 
     move-object/from16 v0, p0
@@ -108,7 +93,6 @@
 
     move-result-object v10
 
-    .line 12
     const/4 v2, 0x6
 
     move-object/from16 v0, p0
@@ -117,7 +101,6 @@
 
     move-result v16
 
-    .line 13
     const/4 v2, 0x7
 
     move-object/from16 v0, p0
@@ -126,7 +109,6 @@
 
     move-result v2
 
-    .line 14
     const/16 v3, 0x8
 
     move-object/from16 v0, p0
@@ -135,12 +117,10 @@
 
     move-result v3
 
-    .line 15
     if-lez v2, :cond_0
 
     if-gtz v3, :cond_1
 
-    .line 16
     :cond_0
     sget-object v11, Lcfl;->a:Ljava/lang/String;
 
@@ -194,10 +174,8 @@
 
     invoke-static {v11, v2}, Lbhz;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 17
     sget-object v13, Ljhi;->a:Ljhi;
 
-    .line 20
     :goto_0
     const/16 v2, 0x9
 
@@ -207,7 +185,6 @@
 
     move-result-wide v14
 
-    .line 21
     const/16 v2, 0xa
 
     move-object/from16 v0, p0
@@ -216,7 +193,6 @@
 
     move-result-wide v2
 
-    .line 22
     const/16 v11, 0xb
 
     move-object/from16 v0, p0
@@ -225,14 +201,12 @@
 
     move-result-wide v18
 
-    .line 23
     move-wide/from16 v0, v18
 
     invoke-static {v2, v3, v0, v1}, Lfvl;->a(DD)Lfvl;
 
     move-result-object v17
 
-    .line 24
     sget-object v2, Lcfn;->a:Landroid/net/Uri;
 
     invoke-virtual {v2}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
@@ -251,7 +225,6 @@
 
     move-result-object v11
 
-    .line 25
     new-instance v3, Lfvj;
 
     const/4 v12, 0x0
@@ -262,7 +235,6 @@
 
     return-object v3
 
-    .line 19
     :cond_1
     new-instance v11, Lici;
 

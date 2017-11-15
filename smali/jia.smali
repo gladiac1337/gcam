@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 3
     new-instance v0, Ljib;
 
     const-string v1, "ALWAYS_TRUE"
@@ -32,7 +30,6 @@
 
     sput-object v0, Ljia;->b:Ljia;
 
-    .line 4
     new-instance v0, Ljic;
 
     const-string v1, "ALWAYS_FALSE"
@@ -41,7 +38,6 @@
 
     sput-object v0, Ljia;->c:Ljia;
 
-    .line 5
     new-instance v0, Ljid;
 
     const-string v1, "IS_NULL"
@@ -50,7 +46,6 @@
 
     sput-object v0, Ljia;->a:Ljia;
 
-    .line 6
     new-instance v0, Ljie;
 
     const-string v1, "NOT_NULL"
@@ -59,7 +54,6 @@
 
     sput-object v0, Ljia;->d:Ljia;
 
-    .line 7
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljia;
@@ -96,8 +90,6 @@
 .method constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -106,8 +98,6 @@
 .method public static values()[Ljia;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Ljia;->e:[Ljia;
 
     invoke-virtual {v0}, [Ljia;->clone()Ljava/lang/Object;

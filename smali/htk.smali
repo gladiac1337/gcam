@@ -22,13 +22,10 @@
 .method public final handleMessage(Landroid/os/Message;)V
     .locals 4
 
-    .prologue
-    .line 1
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 13
     const-string v0, "GACStateManager"
 
     iget v1, p1, Landroid/os/Message;->what:I
@@ -58,7 +55,6 @@
     :goto_0
     return-void
 
-    .line 1
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -66,27 +62,21 @@
 
     iget-object v1, p0, Lhtk;->a:Lhti;
 
-    .line 3
     iget-object v2, v1, Lhti;->a:Ljava/util/concurrent/locks/Lock;
 
-    .line 4
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    .line 5
     :try_start_0
     iget-object v2, v1, Lhti;->k:Lhth;
 
-    .line 6
     iget-object v3, v0, Lhtj;->a:Lhth;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eq v2, v3, :cond_0
 
-    .line 7
     iget-object v0, v1, Lhti;->a:Ljava/util/concurrent/locks/Lock;
 
-    .line 8
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     goto :goto_0
@@ -97,10 +87,8 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 9
     iget-object v0, v1, Lhti;->a:Ljava/util/concurrent/locks/Lock;
 
-    .line 10
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     goto :goto_0
@@ -108,15 +96,12 @@
     :catchall_0
     move-exception v0
 
-    .line 11
     iget-object v1, v1, Lhti;->a:Ljava/util/concurrent/locks/Lock;
 
-    .line 12
     invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
     throw v0
 
-    .line 13
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -124,7 +109,6 @@
 
     throw v0
 
-    .line 1
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

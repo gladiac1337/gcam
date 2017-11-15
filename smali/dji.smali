@@ -16,25 +16,18 @@
 .method private constructor <init>(Ljxn;Ljxn;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldji;->a:Ljxn;
 
-    .line 3
     iput-object p2, p0, Ldji;->b:Ljxn;
 
-    .line 4
     return-void
 .end method
 
 .method public static a(Ljxn;Ljxn;)Ljxn;
     .locals 1
 
-    .prologue
-    .line 5
     new-instance v0, Ldji;
 
     invoke-direct {v0, p0, p1}, Ldji;-><init>(Ljxn;Ljxn;)V
@@ -47,12 +40,8 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 6
 
-    .prologue
-    .line 6
-    .line 7
     iget-object v0, p0, Ldji;->a:Ljxn;
 
-    .line 8
     invoke-interface {v0}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -71,7 +60,6 @@
 
     move-result v1
 
-    .line 10
     new-instance v2, Laxq;
 
     int-to-long v4, v1
@@ -80,16 +68,13 @@
 
     invoke-direct {v2, v0, v4, v5, v1}, Laxq;-><init>(Ljava/util/concurrent/ScheduledExecutorService;JLjava/util/concurrent/TimeUnit;)V
 
-    .line 11
     const-string v0, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 12
     invoke-static {v2, v0}, Ljwd;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Laxq;
 
-    .line 13
     return-object v0
 .end method

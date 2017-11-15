@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 22
     const-string v0, "0123456789abcdef"
 
     invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
@@ -27,8 +25,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,8 +33,6 @@
 .method static a([B)Ljoi;
     .locals 1
 
-    .prologue
-    .line 3
     new-instance v0, Ljoj;
 
     invoke-direct {v0, p0}, Ljoj;-><init>([B)V
@@ -66,8 +60,6 @@
 .method e()[B
     .locals 1
 
-    .prologue
-    .line 2
     invoke-virtual {p0}, Ljoi;->d()[B
 
     move-result-object v0
@@ -78,18 +70,14 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 4
     instance-of v1, p1, Ljoi;
 
     if-eqz v1, :cond_0
 
-    .line 5
     check-cast p1, Ljoi;
 
-    .line 6
     invoke-virtual {p0}, Ljoi;->a()I
 
     move-result v1
@@ -108,7 +96,6 @@
 
     const/4 v0, 0x1
 
-    .line 7
     :cond_0
     return v0
 .end method
@@ -116,8 +103,6 @@
 .method public final hashCode()I
     .locals 5
 
-    .prologue
-    .line 8
     invoke-virtual {p0}, Ljoi;->a()I
 
     move-result v0
@@ -126,29 +111,24 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 9
     invoke-virtual {p0}, Ljoi;->b()I
 
     move-result v1
 
-    .line 15
     :cond_0
     return v1
 
-    .line 10
     :cond_1
     invoke-virtual {p0}, Ljoi;->e()[B
 
     move-result-object v2
 
-    .line 11
     const/4 v0, 0x0
 
     aget-byte v0, v2, v0
 
     and-int/lit16 v1, v0, 0xff
 
-    .line 12
     const/4 v0, 0x1
 
     :goto_0
@@ -156,7 +136,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 13
     aget-byte v3, v2, v0
 
     and-int/lit16 v3, v3, 0xff
@@ -167,7 +146,6 @@
 
     or-int/2addr v1, v3
 
-    .line 14
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -176,13 +154,10 @@
 .method public final toString()Ljava/lang/String;
     .locals 7
 
-    .prologue
-    .line 16
     invoke-virtual {p0}, Ljoi;->e()[B
 
     move-result-object v1
 
-    .line 17
     new-instance v2, Ljava/lang/StringBuilder;
 
     array-length v0, v1
@@ -191,7 +166,6 @@
 
     invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 18
     array-length v3, v1
 
     const/4 v0, 0x0
@@ -201,7 +175,6 @@
 
     aget-byte v4, v1, v0
 
-    .line 19
     sget-object v5, Ljoi;->a:[C
 
     shr-int/lit8 v6, v4, 0x4
@@ -222,12 +195,10 @@
 
     invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 20
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 21
     :cond_0
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

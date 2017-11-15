@@ -16,14 +16,10 @@
 .method constructor <init>(Ljio;Ljava/util/SortedMap;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljix;->d:Ljio;
 
-    .line 2
     invoke-direct {p0, p1, p2}, Ljip;-><init>(Ljio;Ljava/util/Map;)V
 
-    .line 3
     return-void
 .end method
 
@@ -32,8 +28,6 @@
 .method b()Ljava/util/SortedSet;
     .locals 3
 
-    .prologue
-    .line 13
     new-instance v0, Ljiy;
 
     iget-object v1, p0, Ljix;->d:Ljio;
@@ -50,11 +44,8 @@
 .method public c()Ljava/util/SortedSet;
     .locals 1
 
-    .prologue
-    .line 11
     iget-object v0, p0, Ljix;->c:Ljava/util/SortedSet;
 
-    .line 12
     if-nez v0, :cond_0
 
     invoke-virtual {p0}, Ljix;->b()Ljava/util/SortedSet;
@@ -70,8 +61,6 @@
 .method public comparator()Ljava/util/Comparator;
     .locals 1
 
-    .prologue
-    .line 5
     invoke-virtual {p0}, Ljix;->d()Ljava/util/SortedMap;
 
     move-result-object v0
@@ -86,8 +75,6 @@
 .method d()Ljava/util/SortedMap;
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Ljix;->a:Ljava/util/Map;
 
     check-cast v0, Ljava/util/SortedMap;
@@ -98,8 +85,6 @@
 .method synthetic e()Ljava/util/Set;
     .locals 1
 
-    .prologue
-    .line 15
     invoke-virtual {p0}, Ljix;->b()Ljava/util/SortedSet;
 
     move-result-object v0
@@ -110,8 +95,6 @@
 .method public firstKey()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Ljix;->d()Ljava/util/SortedMap;
 
     move-result-object v0
@@ -126,8 +109,6 @@
 .method public headMap(Ljava/lang/Object;)Ljava/util/SortedMap;
     .locals 3
 
-    .prologue
-    .line 8
     new-instance v0, Ljix;
 
     iget-object v1, p0, Ljix;->d:Ljio;
@@ -148,8 +129,6 @@
 .method public synthetic keySet()Ljava/util/Set;
     .locals 1
 
-    .prologue
-    .line 14
     invoke-virtual {p0}, Ljix;->c()Ljava/util/SortedSet;
 
     move-result-object v0
@@ -160,8 +139,6 @@
 .method public lastKey()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 7
     invoke-virtual {p0}, Ljix;->d()Ljava/util/SortedMap;
 
     move-result-object v0
@@ -176,8 +153,6 @@
 .method public subMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedMap;
     .locals 3
 
-    .prologue
-    .line 9
     new-instance v0, Ljix;
 
     iget-object v1, p0, Ljix;->d:Ljio;
@@ -198,8 +173,6 @@
 .method public tailMap(Ljava/lang/Object;)Ljava/util/SortedMap;
     .locals 3
 
-    .prologue
-    .line 10
     new-instance v0, Ljix;
 
     iget-object v1, p0, Ljix;->d:Ljio;

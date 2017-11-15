@@ -11,11 +11,8 @@
 .method public constructor <init>(Ljuw;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljub;-><init>()V
 
-    .line 2
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -24,7 +21,6 @@
 
     iput-object v0, p0, Ljuc;->a:Ljuw;
 
-    .line 3
     return-void
 .end method
 
@@ -33,21 +29,16 @@
 .method public final a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Ljuc;->a:Ljuw;
 
     invoke-interface {v0, p1, p2}, Ljuw;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    .line 5
     return-void
 .end method
 
 .method public final cancel(Z)Z
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Ljuc;->a:Ljuw;
 
     invoke-interface {v0, p1}, Ljuw;->cancel(Z)Z
@@ -60,8 +51,6 @@
 .method public final get()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Ljuc;->a:Ljuw;
 
     invoke-interface {v0}, Ljuw;->get()Ljava/lang/Object;
@@ -74,8 +63,6 @@
 .method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Ljuc;->a:Ljuw;
 
     invoke-interface {v0, p1, p2, p3}, Ljuw;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
@@ -88,8 +75,6 @@
 .method public final isCancelled()Z
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Ljuc;->a:Ljuw;
 
     invoke-interface {v0}, Ljuw;->isCancelled()Z
@@ -102,8 +87,6 @@
 .method public final isDone()Z
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Ljuc;->a:Ljuw;
 
     invoke-interface {v0}, Ljuw;->isDone()Z

@@ -23,7 +23,6 @@
 .method static constructor <clinit>()V
     .locals 7
 
-    .prologue
     const/4 v6, 0x3
 
     const/4 v5, 0x2
@@ -32,7 +31,6 @@
 
     const/4 v3, 0x0
 
-    .line 22
     new-instance v0, Licf;
 
     const-string v1, "CLOCKWISE_0"
@@ -41,7 +39,6 @@
 
     sput-object v0, Licf;->a:Licf;
 
-    .line 23
     new-instance v0, Licf;
 
     const-string v1, "CLOCKWISE_90"
@@ -52,7 +49,6 @@
 
     sput-object v0, Licf;->b:Licf;
 
-    .line 24
     new-instance v0, Licf;
 
     const-string v1, "CLOCKWISE_180"
@@ -63,7 +59,6 @@
 
     sput-object v0, Licf;->c:Licf;
 
-    .line 25
     new-instance v0, Licf;
 
     const-string v1, "CLOCKWISE_270"
@@ -74,7 +69,6 @@
 
     sput-object v0, Licf;->d:Licf;
 
-    .line 26
     const/4 v0, 0x4
 
     new-array v0, v0, [Licf;
@@ -103,32 +97,24 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput p3, p0, Licf;->e:I
 
-    .line 4
     return-void
 .end method
 
 .method public static a(I)Licf;
     .locals 4
 
-    .prologue
     const/16 v3, 0x87
 
     const/16 v2, 0x2d
 
-    .line 6
     sparse-switch p0, :sswitch_data_0
 
-    .line 12
     div-int/lit16 v0, p0, 0x168
 
-    .line 13
     invoke-static {v0}, Ljava/lang/Math;->abs(I)I
 
     move-result v0
@@ -141,63 +127,52 @@
 
     rem-int/lit16 v0, v0, 0x168
 
-    .line 14
     const/16 v1, 0x13b
 
     if-gt v0, v1, :cond_0
 
     if-gt v0, v2, :cond_1
 
-    .line 15
     :cond_0
     sget-object v0, Licf;->a:Licf;
 
-    .line 20
     :goto_0
     return-object v0
 
-    .line 7
     :sswitch_0
     sget-object v0, Licf;->a:Licf;
 
     goto :goto_0
 
-    .line 8
     :sswitch_1
     sget-object v0, Licf;->a:Licf;
 
     goto :goto_0
 
-    .line 9
     :sswitch_2
     sget-object v0, Licf;->b:Licf;
 
     goto :goto_0
 
-    .line 10
     :sswitch_3
     sget-object v0, Licf;->c:Licf;
 
     goto :goto_0
 
-    .line 11
     :sswitch_4
     sget-object v0, Licf;->d:Licf;
 
     goto :goto_0
 
-    .line 16
     :cond_1
     if-le v0, v2, :cond_2
 
     if-gt v0, v3, :cond_2
 
-    .line 17
     sget-object v0, Licf;->b:Licf;
 
     goto :goto_0
 
-    .line 18
     :cond_2
     if-le v0, v3, :cond_3
 
@@ -205,18 +180,15 @@
 
     if-gt v0, v1, :cond_3
 
-    .line 19
     sget-object v0, Licf;->c:Licf;
 
     goto :goto_0
 
-    .line 20
     :cond_3
     sget-object v0, Licf;->d:Licf;
 
     goto :goto_0
 
-    .line 6
     nop
 
     :sswitch_data_0
@@ -232,8 +204,6 @@
 .method public static b(I)Licf;
     .locals 1
 
-    .prologue
-    .line 21
     rsub-int v0, p0, 0x168
 
     rem-int/lit16 v0, v0, 0x168
@@ -248,8 +218,6 @@
 .method public static values()[Licf;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Licf;->f:[Licf;
 
     invoke-virtual {v0}, [Licf;->clone()Ljava/lang/Object;
@@ -266,8 +234,6 @@
 .method public final a()I
     .locals 1
 
-    .prologue
-    .line 5
     iget v0, p0, Licf;->e:I
 
     rsub-int v0, v0, 0x168

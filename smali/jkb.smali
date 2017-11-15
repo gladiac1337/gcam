@@ -11,8 +11,6 @@
 .method constructor <init>(Ljka;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljkb;->a:Ljka;
 
     invoke-direct {p0}, Ljmi;-><init>()V
@@ -25,8 +23,6 @@
 .method final a()Ljmd;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ljkb;->a:Ljka;
 
     return-object v0
@@ -35,8 +31,6 @@
 .method public final iterator()Ljava/util/Iterator;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Ljkb;->a:Ljka;
 
     invoke-virtual {v0}, Ljka;->k()Ljava/util/Iterator;
@@ -49,8 +43,6 @@
 .method public final size()I
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Ljkb;->a:Ljka;
 
     invoke-virtual {v0}, Ljka;->d()Ljnj;

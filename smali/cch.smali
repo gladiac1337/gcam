@@ -14,8 +14,6 @@
 .method constructor <init>(Lcce;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcch;->a:Lcce;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v1, p0, Lcch;->a:Lcce;
 
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
@@ -42,9 +38,7 @@
 
     move-result v0
 
-    .line 3
     invoke-virtual {v1, v0}, Lcce;->a(F)V
 
-    .line 4
     return-void
 .end method

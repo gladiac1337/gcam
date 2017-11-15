@@ -31,8 +31,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 31
     const-string v0, "CptrBtnReadiness"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -47,31 +45,24 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Lhzt;
 
     invoke-direct {v0}, Lhzt;-><init>()V
 
     invoke-direct {p0, v0}, Lcqy;-><init>(Ljava/util/concurrent/Executor;)V
 
-    .line 2
     return-void
 .end method
 
 .method private constructor <init>(Ljava/util/concurrent/Executor;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     iput-boolean v2, p0, Lcqy;->h:Z
 
-    .line 5
     new-instance v0, Liag;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -82,10 +73,8 @@
 
     iput-object v0, p0, Lcqy;->b:Liag;
 
-    .line 6
     iput-object p1, p0, Lcqy;->c:Ljava/util/concurrent/Executor;
 
-    .line 7
     new-instance v0, Liag;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -96,7 +85,6 @@
 
     invoke-virtual {p0, v0}, Lcqy;->b(Liau;)V
 
-    .line 8
     new-instance v0, Liag;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -107,7 +95,6 @@
 
     invoke-virtual {p0, v0}, Lcqy;->c(Liau;)V
 
-    .line 9
     return-void
 .end method
 
@@ -116,8 +103,6 @@
 .method public final a(Licn;Ljava/util/concurrent/Executor;)Lich;
     .locals 1
 
-    .prologue
-    .line 12
     iget-object v0, p0, Lcqy;->b:Liag;
 
     invoke-virtual {v0, p1, p2}, Liag;->a(Licn;Ljava/util/concurrent/Executor;)Lich;
@@ -130,14 +115,10 @@
 .method public final a()Ljava/lang/Boolean;
     .locals 1
 
-    .prologue
-    .line 13
     iget-object v0, p0, Lcqy;->b:Liag;
 
-    .line 14
     iget-object v0, v0, Liag;->c:Ljava/lang/Object;
 
-    .line 15
     check-cast v0, Ljava/lang/Boolean;
 
     return-object v0
@@ -146,8 +127,6 @@
 .method public final a(Liau;)V
     .locals 2
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lcqy;->c:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcqz;
@@ -156,15 +135,12 @@
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 11
     return-void
 .end method
 
 .method public final synthetic b()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 30
     invoke-virtual {p0}, Lcqy;->a()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -175,21 +151,16 @@
 .method final b(Liau;)V
     .locals 3
 
-    .prologue
-    .line 18
     iput-object p1, p0, Lcqy;->d:Liau;
 
-    .line 19
     iget-object v0, p0, Lcqy;->f:Lich;
 
     if-eqz v0, :cond_0
 
-    .line 20
     iget-object v0, p0, Lcqy;->f:Lich;
 
     invoke-interface {v0}, Lich;->close()V
 
-    .line 21
     :cond_0
     iget-object v0, p0, Lcqy;->d:Liau;
 
@@ -199,35 +170,28 @@
 
     iget-object v2, p0, Lcqy;->c:Ljava/util/concurrent/Executor;
 
-    .line 22
     invoke-interface {v0, v1, v2}, Liau;->a(Licn;Ljava/util/concurrent/Executor;)Lich;
 
     move-result-object v0
 
     iput-object v0, p0, Lcqy;->f:Lich;
 
-    .line 23
     return-void
 .end method
 
 .method final c(Liau;)V
     .locals 2
 
-    .prologue
-    .line 24
     iput-object p1, p0, Lcqy;->e:Liau;
 
-    .line 25
     iget-object v0, p0, Lcqy;->g:Lich;
 
     if-eqz v0, :cond_0
 
-    .line 26
     iget-object v0, p0, Lcqy;->g:Lich;
 
     invoke-interface {v0}, Lich;->close()V
 
-    .line 27
     :cond_0
     new-instance v0, Lcrd;
 
@@ -235,22 +199,18 @@
 
     iget-object v1, p0, Lcqy;->c:Ljava/util/concurrent/Executor;
 
-    .line 28
     invoke-interface {p1, v0, v1}, Liau;->a(Licn;Ljava/util/concurrent/Executor;)Lich;
 
     move-result-object v0
 
     iput-object v0, p0, Lcqy;->g:Lich;
 
-    .line 29
     return-void
 .end method
 
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 16
     iget-object v0, p0, Lcqy;->c:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lcrb;
@@ -259,6 +219,5 @@
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 17
     return-void
 .end method

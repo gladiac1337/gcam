@@ -29,19 +29,15 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgxb;->a:Lgwz;
 
     iget-object v1, p0, Lgxb;->b:Landroid/os/Handler;
 
-    .line 2
     new-instance v2, Lgxc;
 
     invoke-direct {v2, v0}, Lgxc;-><init>(Lgwz;)V
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 3
     return-void
 .end method

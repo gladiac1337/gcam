@@ -20,8 +20,6 @@
 .method constructor <init>(Lcom/google/android/apps/refocus/ViewerActivity;Landroid/net/Uri;Ljvi;Lcom/google/android/apps/refocus/processing/RenderingTask;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhgr;->a:Lcom/google/android/apps/refocus/ViewerActivity;
 
     iput-object p2, p0, Lhgr;->b:Landroid/net/Uri;
@@ -40,22 +38,16 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 5
 
-    .prologue
-    .line 2
-    .line 3
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 4
     iget-object v1, p0, Lhgr;->b:Landroid/net/Uri;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 5
     sget-object v1, Lcom/google/android/apps/refocus/ViewerActivity;->d:Ljava/lang/String;
 
-    .line 6
     iget-object v2, p0, Lhgr;->b:Landroid/net/Uri;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -92,29 +84,23 @@
 
     invoke-static {v1, v2}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7
     iget-object v1, p0, Lhgr;->c:Ljvi;
 
     invoke-virtual {v1, v0}, Ljsw;->a(Ljava/lang/Object;)Z
 
-    .line 8
     iget-object v0, p0, Lhgr;->d:Lcom/google/android/apps/refocus/processing/RenderingTask;
 
     invoke-virtual {v0, p0}, Lcom/google/android/apps/refocus/processing/RenderingTask;->removeFinishedCallback(Libu;)V
 
-    .line 9
     iget-object v0, p0, Lhgr;->a:Lcom/google/android/apps/refocus/ViewerActivity;
 
-    .line 10
     iget-object v0, v0, Lcom/google/android/apps/refocus/ViewerActivity;->s:Landroid/os/Handler;
 
-    .line 11
     new-instance v1, Lhgs;
 
     invoke-direct {v1, p0}, Lhgs;-><init>(Lhgr;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 12
     return-void
 .end method

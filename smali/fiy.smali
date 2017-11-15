@@ -29,13 +29,10 @@
 .method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lfiy;->a:Lfiw;
 
     iget-object v1, p0, Lfiy;->b:Landroid/widget/ImageButton;
 
-    .line 2
     invoke-virtual {v0}, Lfiw;->c()Z
 
     move-result v2
@@ -48,10 +45,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 3
     invoke-virtual {v0, v1}, Lfiw;->a(Landroid/view/View;)V
 
-    .line 4
     :cond_0
     return-void
 .end method

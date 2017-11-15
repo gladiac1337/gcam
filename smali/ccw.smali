@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 40
     const-string v0, "BurstExif"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -33,7 +31,6 @@
 .method public static a(Lcom/google/android/libraries/camera/exif/ExifInterface;)Landroid/location/Location;
     .locals 12
 
-    .prologue
     const-wide/16 v10, 0x0
 
     const/4 v0, 0x0
@@ -44,38 +41,32 @@
 
     const/4 v6, 0x0
 
-    .line 13
     invoke-static {p0}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 15
     sget v1, Lcom/google/android/libraries/camera/exif/ExifInterface;->E:I
 
     invoke-virtual {p0, v1}, Lcom/google/android/libraries/camera/exif/ExifInterface;->e(I)[Licg;
 
     move-result-object v2
 
-    .line 16
     sget v1, Lcom/google/android/libraries/camera/exif/ExifInterface;->D:I
 
     invoke-virtual {p0, v1}, Lcom/google/android/libraries/camera/exif/ExifInterface;->getTagStringValue(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 17
     sget v1, Lcom/google/android/libraries/camera/exif/ExifInterface;->G:I
 
     invoke-virtual {p0, v1}, Lcom/google/android/libraries/camera/exif/ExifInterface;->e(I)[Licg;
 
     move-result-object v4
 
-    .line 18
     sget v1, Lcom/google/android/libraries/camera/exif/ExifInterface;->F:I
 
     invoke-virtual {p0, v1}, Lcom/google/android/libraries/camera/exif/ExifInterface;->getTagStringValue(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 19
     if-eqz v2, :cond_0
 
     if-eqz v4, :cond_0
@@ -95,28 +86,23 @@
     :cond_0
     move-object v1, v0
 
-    .line 26
     :goto_0
     if-eqz v1, :cond_2
 
-    .line 27
     new-instance v0, Landroid/location/Location;
 
     const-string v2, "exif-provider"
 
     invoke-direct {v0, v2}, Landroid/location/Location;-><init>(Ljava/lang/String;)V
 
-    .line 28
     aget-wide v2, v1, v6
 
     invoke-virtual {v0, v2, v3}, Landroid/location/Location;->setLatitude(D)V
 
-    .line 29
     aget-wide v2, v1, v7
 
     invoke-virtual {v0, v2, v3}, Landroid/location/Location;->setLongitude(D)V
 
-    .line 30
     invoke-virtual {v0}, Landroid/location/Location;->getTime()J
 
     move-result-wide v2
@@ -125,14 +111,12 @@
 
     if-nez v1, :cond_1
 
-    .line 31
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     invoke-virtual {v0, v2, v3}, Landroid/location/Location;->setTime(J)V
 
-    .line 32
     :cond_1
     invoke-virtual {v0}, Landroid/location/Location;->getElapsedRealtimeNanos()J
 
@@ -142,31 +126,26 @@
 
     if-nez v1, :cond_2
 
-    .line 33
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
 
     move-result-wide v2
 
     invoke-virtual {v0, v2, v3}, Landroid/location/Location;->setElapsedRealtimeNanos(J)V
 
-    .line 35
     :cond_2
     return-object v0
 
-    .line 21
     :cond_3
     const/4 v1, 0x2
 
     new-array v1, v1, [D
 
-    .line 22
     invoke-static {v2, v3}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a([Licg;Ljava/lang/String;)D
 
     move-result-wide v2
 
     aput-wide v2, v1, v6
 
-    .line 23
     invoke-static {v4, v5}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a([Licg;Ljava/lang/String;)D
 
     move-result-wide v2
@@ -179,11 +158,8 @@
 .method static a(Ljava/io/File;)Lcom/google/android/libraries/camera/exif/ExifInterface;
     .locals 4
 
-    .prologue
-    .line 1
     invoke-static {p0}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     :try_start_0
     new-instance v2, Ljava/io/BufferedInputStream;
 
@@ -197,28 +173,23 @@
 
     const/4 v1, 0x0
 
-    .line 3
     :try_start_1
     new-instance v0, Lcom/google/android/libraries/camera/exif/ExifInterface;
 
     invoke-direct {v0}, Lcom/google/android/libraries/camera/exif/ExifInterface;-><init>()V
 
-    .line 4
     invoke-virtual {v0, v2}, Lcom/google/android/libraries/camera/exif/ExifInterface;->a(Ljava/io/InputStream;)V
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 6
     :try_start_2
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 7
     return-object v0
 
-    .line 8
     :catch_0
     move-exception v0
 
@@ -227,7 +198,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 9
     :catchall_0
     move-exception v1
 
@@ -255,16 +225,12 @@
     :catch_1
     move-exception v0
 
-    .line 10
     new-instance v1, Lccy;
 
-    .line 11
     invoke-direct {v1, v0}, Lccy;-><init>(Ljava/lang/Exception;)V
 
-    .line 12
     throw v1
 
-    .line 9
     :catch_2
     move-exception v2
 
@@ -289,17 +255,12 @@
 .method public static a(Lipm;Ljava/io/File;Ljava/util/concurrent/Executor;)Lilf;
     .locals 1
 
-    .prologue
-    .line 36
     invoke-static {p0}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 37
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 38
     invoke-static {p2}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 39
     new-instance v0, Lccx;
 
     invoke-direct {v0, p1}, Lccx;-><init>(Ljava/io/File;)V

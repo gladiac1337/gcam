@@ -31,17 +31,13 @@
 .method public getBooleanFlagValue(Ljava/lang/String;ZI)Z
     .locals 3
 
-    .prologue
-    .line 1
     iget-boolean v0, p0, Lcom/google/android/gms/flags/impl/FlagProviderImpl;->a:Z
 
     if-nez v0, :cond_0
 
-    .line 3
     :goto_0
     return p2
 
-    .line 1
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/flags/impl/FlagProviderImpl;->b:Landroid/content/SharedPreferences;
 
@@ -49,7 +45,6 @@
 
     move-result-object v1
 
-    .line 2
     new-instance v2, Lhnv;
 
     invoke-direct {v2, v0, p1, v1}, Lhnv;-><init>(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Boolean;)V
@@ -60,7 +55,6 @@
 
     check-cast v0, Ljava/lang/Boolean;
 
-    .line 3
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p2
@@ -71,17 +65,13 @@
 .method public getIntFlagValue(Ljava/lang/String;II)I
     .locals 3
 
-    .prologue
-    .line 4
     iget-boolean v0, p0, Lcom/google/android/gms/flags/impl/FlagProviderImpl;->a:Z
 
     if-nez v0, :cond_0
 
-    .line 6
     :goto_0
     return p2
 
-    .line 4
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/flags/impl/FlagProviderImpl;->b:Landroid/content/SharedPreferences;
 
@@ -89,7 +79,6 @@
 
     move-result-object v1
 
-    .line 5
     new-instance v2, Lhnw;
 
     invoke-direct {v2, v0, p1, v1}, Lhnw;-><init>(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Integer;)V
@@ -100,7 +89,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 6
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result p2
@@ -111,17 +99,13 @@
 .method public getLongFlagValue(Ljava/lang/String;JI)J
     .locals 4
 
-    .prologue
-    .line 7
     iget-boolean v0, p0, Lcom/google/android/gms/flags/impl/FlagProviderImpl;->a:Z
 
     if-nez v0, :cond_0
 
-    .line 9
     :goto_0
     return-wide p2
 
-    .line 7
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/flags/impl/FlagProviderImpl;->b:Landroid/content/SharedPreferences;
 
@@ -129,7 +113,6 @@
 
     move-result-object v1
 
-    .line 8
     new-instance v2, Lhnx;
 
     invoke-direct {v2, v0, p1, v1}, Lhnx;-><init>(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/Long;)V
@@ -140,7 +123,6 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    .line 9
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide p2
@@ -151,21 +133,16 @@
 .method public getStringFlagValue(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 10
     iget-boolean v0, p0, Lcom/google/android/gms/flags/impl/FlagProviderImpl;->a:Z
 
     if-nez v0, :cond_0
 
-    .line 12
     :goto_0
     return-object p2
 
-    .line 10
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/flags/impl/FlagProviderImpl;->b:Landroid/content/SharedPreferences;
 
-    .line 11
     new-instance v1, Lhny;
 
     invoke-direct {v1, v0, p1, p2}, Lhny;-><init>(Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/String;)V
@@ -178,7 +155,6 @@
 
     move-object p2, v0
 
-    .line 12
     goto :goto_0
 .end method
 

@@ -25,11 +25,8 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lglz;->a:Lglx;
 
-    .line 2
     iget-object v0, v1, Lglx;->c:Liau;
 
     invoke-interface {v0}, Liau;->b()Ljava/lang/Object;
@@ -40,6 +37,5 @@
 
     invoke-virtual {v1, v0}, Lglx;->a(Lgys;)V
 
-    .line 3
     return-void
 .end method

@@ -16,8 +16,6 @@
 .method public constructor <init>(ILjava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput p1, p0, Laxn;->a:I
 
     iput-object p2, p0, Laxn;->b:Ljava/lang/String;
@@ -32,8 +30,6 @@
 .method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
     .locals 3
 
-    .prologue
-    .line 2
     new-instance v0, Lavv;
 
     iget v1, p0, Laxn;->a:I

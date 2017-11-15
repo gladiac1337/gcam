@@ -36,47 +36,32 @@
 .method public constructor <init>(Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lenm;->a:Ljxn;
 
-    .line 3
     iput-object p2, p0, Lenm;->b:Ljxn;
 
-    .line 4
     iput-object p3, p0, Lenm;->c:Ljxn;
 
-    .line 5
     iput-object p4, p0, Lenm;->d:Ljxn;
 
-    .line 6
     iput-object p5, p0, Lenm;->e:Ljxn;
 
-    .line 7
     iput-object p6, p0, Lenm;->f:Ljxn;
 
-    .line 8
     iput-object p7, p0, Lenm;->g:Ljxn;
 
-    .line 9
     iput-object p8, p0, Lenm;->h:Ljxn;
 
-    .line 10
     iput-object p9, p0, Lenm;->i:Ljxn;
 
-    .line 11
     iput-object p10, p0, Lenm;->j:Ljxn;
 
-    .line 12
     iput-object p11, p0, Lenm;->k:Ljxn;
 
-    .line 13
     iput-object p12, p0, Lenm;->l:Ljxn;
 
-    .line 14
     return-void
 .end method
 
@@ -85,9 +70,6 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 13
 
-    .prologue
-    .line 15
-    .line 16
     new-instance v0, Lenk;
 
     iget-object v1, p0, Lenm;->a:Ljxn;
@@ -116,6 +98,5 @@
 
     invoke-direct/range {v0 .. v12}, Lenk;-><init>(Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;)V
 
-    .line 17
     return-object v0
 .end method

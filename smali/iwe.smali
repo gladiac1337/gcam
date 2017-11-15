@@ -14,8 +14,6 @@
 .method constructor <init>(Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Liwe;->a:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,9 +26,6 @@
 .method public final synthetic a(Litk;)Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 2
-    .line 3
     new-instance v1, Lirp;
 
     iget-object v2, p0, Liwe;->a:Landroid/content/Context;
@@ -47,6 +42,5 @@
 
     invoke-direct {v1, v2, v0}, Lirp;-><init>(Landroid/content/Context;Ljan;)V
 
-    .line 4
     return-object v1
 .end method

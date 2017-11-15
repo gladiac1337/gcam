@@ -14,8 +14,6 @@
 .method public constructor <init>(Ljava/util/Set;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfjl;->a:Ljava/util/Set;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lfjl;->a:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -49,12 +45,10 @@
 
     check-cast v0, Lfjk;
 
-    .line 3
     invoke-interface {v0}, Lfjk;->a()V
 
     goto :goto_0
 
-    .line 5
     :cond_0
     return-void
 .end method

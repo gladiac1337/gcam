@@ -14,8 +14,6 @@
 .method constructor <init>(Ljai;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljaj;->a:Ljai;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,15 +26,12 @@
 .method public final a(J)V
     .locals 3
 
-    .prologue
-    .line 6
     iget-object v0, p0, Ljaj;->a:Ljai;
 
     iget-object v1, v0, Ljai;->c:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 7
     :try_start_0
     iget-object v0, p0, Ljaj;->a:Ljai;
 
@@ -48,7 +43,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/TreeSet;->remove(Ljava/lang/Object;)Z
 
-    .line 8
     iget-object v0, p0, Ljaj;->a:Ljai;
 
     iget-object v0, v0, Ljai;->b:Ljava/util/TreeSet;
@@ -61,7 +55,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 9
     iget-object v0, p0, Ljaj;->a:Ljai;
 
     iget-object v0, v0, Ljai;->b:Ljava/util/TreeSet;
@@ -76,7 +69,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/TreeSet;->remove(Ljava/lang/Object;)Z
 
-    .line 10
     :cond_0
     iget-object v0, p0, Ljaj;->a:Ljai;
 
@@ -88,7 +80,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
 
-    .line 11
     monitor-exit v1
 
     return-void
@@ -106,15 +97,12 @@
 .method public final b(J)V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ljaj;->a:Ljai;
 
     iget-object v1, v0, Ljai;->c:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Ljaj;->a:Ljai;
 
@@ -130,7 +118,6 @@
 
     if-nez v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Ljaj;->a:Ljai;
 
     iget-object v0, v0, Ljai;->a:Ljava/util/TreeSet;
@@ -141,7 +128,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
 
-    .line 5
     :cond_0
     monitor-exit v1
 

@@ -63,7 +63,6 @@
 .method static constructor <clinit>()V
     .locals 10
 
-    .prologue
     const/4 v9, 0x0
 
     const/4 v8, 0x1
@@ -74,7 +73,6 @@
 
     const/4 v5, 0x2
 
-    .line 13
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "NONE"
@@ -83,7 +81,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->NONE:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 14
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "FLOAT_32"
@@ -92,7 +89,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->FLOAT_32:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 15
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "FLOAT_64"
@@ -103,7 +99,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->FLOAT_64:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 16
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "SIGNED_8"
@@ -114,7 +109,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->SIGNED_8:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 17
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "SIGNED_16"
@@ -125,7 +119,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->SIGNED_16:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 18
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "SIGNED_32"
@@ -138,7 +131,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->SIGNED_32:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 19
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "SIGNED_64"
@@ -151,7 +143,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->SIGNED_64:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 20
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "UNSIGNED_8"
@@ -162,7 +153,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->UNSIGNED_8:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 21
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "UNSIGNED_16"
@@ -173,7 +163,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->UNSIGNED_16:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 22
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "UNSIGNED_32"
@@ -186,7 +175,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->UNSIGNED_32:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 23
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "UNSIGNED_64"
@@ -199,7 +187,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->UNSIGNED_64:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 24
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "BOOLEAN"
@@ -212,7 +199,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->BOOLEAN:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 25
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "UNSIGNED_5_6_5"
@@ -225,7 +211,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->UNSIGNED_5_6_5:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 26
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "UNSIGNED_5_5_5_1"
@@ -238,7 +223,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->UNSIGNED_5_5_5_1:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 27
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "UNSIGNED_4_4_4_4"
@@ -251,7 +235,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->UNSIGNED_4_4_4_4:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 28
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "MATRIX_4X4"
@@ -266,7 +249,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->MATRIX_4X4:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 29
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "MATRIX_3X3"
@@ -281,7 +263,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->MATRIX_3X3:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 30
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "MATRIX_2X2"
@@ -296,7 +277,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->MATRIX_2X2:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 31
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "RS_ELEMENT"
@@ -309,7 +289,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->RS_ELEMENT:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 32
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "RS_TYPE"
@@ -322,7 +301,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->RS_TYPE:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 33
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "RS_ALLOCATION"
@@ -335,7 +313,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->RS_ALLOCATION:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 34
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "RS_SAMPLER"
@@ -348,7 +325,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->RS_SAMPLER:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 35
     new-instance v0, Landroid/support/v8/renderscript/Element$DataType;
 
     const-string v1, "RS_SCRIPT"
@@ -361,7 +337,6 @@
 
     sput-object v0, Landroid/support/v8/renderscript/Element$DataType;->RS_SCRIPT:Landroid/support/v8/renderscript/Element$DataType;
 
-    .line 36
     const/16 v0, 0x17
 
     new-array v0, v0, [Landroid/support/v8/renderscript/Element$DataType;
@@ -502,31 +477,24 @@
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 2
 
-    .prologue
-    .line 7
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 8
     iput p3, p0, Landroid/support/v8/renderscript/Element$DataType;->mID:I
 
-    .line 9
     const/4 v0, 0x4
 
     iput v0, p0, Landroid/support/v8/renderscript/Element$DataType;->mSize:I
 
-    .line 10
     sget v0, Landroid/support/v8/renderscript/RenderScript;->sPointerSize:I
 
     const/16 v1, 0x8
 
     if-ne v0, v1, :cond_0
 
-    .line 11
     const/16 v0, 0x20
 
     iput v0, p0, Landroid/support/v8/renderscript/Element$DataType;->mSize:I
 
-    .line 12
     :cond_0
     return-void
 .end method
@@ -534,25 +502,18 @@
 .method private constructor <init>(Ljava/lang/String;III)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 4
     iput p3, p0, Landroid/support/v8/renderscript/Element$DataType;->mID:I
 
-    .line 5
     iput p4, p0, Landroid/support/v8/renderscript/Element$DataType;->mSize:I
 
-    .line 6
     return-void
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Landroid/support/v8/renderscript/Element$DataType;
     .locals 1
 
-    .prologue
-    .line 2
     const-class v0, Landroid/support/v8/renderscript/Element$DataType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -567,8 +528,6 @@
 .method public static values()[Landroid/support/v8/renderscript/Element$DataType;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Landroid/support/v8/renderscript/Element$DataType;->$VALUES:[Landroid/support/v8/renderscript/Element$DataType;
 
     invoke-virtual {v0}, [Landroid/support/v8/renderscript/Element$DataType;->clone()Ljava/lang/Object;

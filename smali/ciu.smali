@@ -29,13 +29,10 @@
 .method public final onClick(Landroid/content/DialogInterface;I)V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lciu;->a:Lcis;
 
     iget-object v1, p0, Lciu;->b:Landroid/app/Activity;
 
-    .line 2
     iget-object v0, v0, Lcis;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
@@ -44,10 +41,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
-    .line 4
     :cond_0
     return-void
 .end method

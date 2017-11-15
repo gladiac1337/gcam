@@ -14,8 +14,6 @@
 .method private constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -26,12 +24,10 @@
 
     iget-object v0, p0, Lhka;->b:Landroid/content/Context;
 
-    .line 2
     sget-object v1, Lhpv;->a:Lhpv;
 
     invoke-virtual {v1, v0}, Lhpv;->a(Landroid/content/Context;)Lhpu;
 
-    .line 3
     return-void
 .end method
 

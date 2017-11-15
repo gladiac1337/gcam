@@ -21,56 +21,44 @@
 .method public constructor <init>(ILandroid/view/View;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Landroid/graphics/drawable/shapes/RectShape;-><init>()V
 
-    .line 2
     const/4 v0, 0x0
 
     iput-object v0, p0, Lgmu;->a:Landroid/view/View;
 
-    .line 3
     const/4 v0, 0x0
 
     iput v0, p0, Lgmu;->d:F
 
-    .line 4
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lgmu;->b:Z
 
-    .line 5
     iput p1, p0, Lgmu;->e:I
 
-    .line 6
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lgmu;->f:Landroid/graphics/RectF;
 
-    .line 7
     iput-object p2, p0, Lgmu;->c:Landroid/view/View;
 
-    .line 8
     return-void
 .end method
 
 .method private final a()Landroid/graphics/RectF;
     .locals 9
 
-    .prologue
     const/4 v8, 0x2
 
     const/4 v7, 0x1
 
     const/4 v1, 0x0
 
-    .line 16
     iget v0, p0, Lgmu;->e:I
 
-    .line 17
     invoke-virtual {p0}, Lgmu;->rect()Landroid/graphics/RectF;
 
     move-result-object v2
@@ -91,7 +79,6 @@
 
     float-to-int v2, v2
 
-    .line 18
     sub-int/2addr v2, v0
 
     int-to-float v2, v2
@@ -104,20 +91,16 @@
 
     add-int v3, v0, v2
 
-    .line 21
     iget-object v0, p0, Lgmu;->a:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 22
     new-array v0, v8, [I
 
-    .line 23
     iget-object v2, p0, Lgmu;->a:Landroid/view/View;
 
     invoke-virtual {v2, v0}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 24
     aget v2, v0, v7
 
     iget-object v4, p0, Lgmu;->a:Landroid/view/View;
@@ -128,10 +111,8 @@
 
     add-int/2addr v4, v2
 
-    .line 25
     iget-object v2, p0, Lgmu;->a:Landroid/view/View;
 
-    .line 26
     invoke-virtual {v2}, Landroid/view/View;->getWidth()I
 
     move-result v2
@@ -152,7 +133,6 @@
 
     sub-int/2addr v2, v5
 
-    .line 27
     aget v0, v0, v1
 
     iget-object v5, p0, Lgmu;->a:Landroid/view/View;
@@ -163,10 +143,8 @@
 
     add-int/2addr v0, v5
 
-    .line 28
     iget-object v5, p0, Lgmu;->a:Landroid/view/View;
 
-    .line 29
     invoke-virtual {v5}, Landroid/view/View;->getHeight()I
 
     move-result v5
@@ -187,36 +165,29 @@
 
     sub-int/2addr v5, v6
 
-    .line 30
     div-int/lit8 v2, v2, 0x2
 
     add-int/2addr v2, v0
 
-    .line 31
     div-int/lit8 v0, v5, 0x2
 
     add-int/2addr v0, v4
 
-    .line 32
     :goto_0
     new-array v4, v8, [I
 
-    .line 33
     iget-object v5, p0, Lgmu;->c:Landroid/view/View;
 
     invoke-virtual {v5, v4}, Landroid/view/View;->getLocationOnScreen([I)V
 
-    .line 34
     aget v1, v4, v1
 
     sub-int v1, v2, v1
 
-    .line 35
     aget v2, v4, v7
 
     sub-int/2addr v0, v2
 
-    .line 36
     iget-object v2, p0, Lgmu;->f:Landroid/graphics/RectF;
 
     sub-int v4, v1, v3
@@ -237,7 +208,6 @@
 
     invoke-virtual {v2, v4, v5, v1, v0}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 37
     iget-object v0, p0, Lgmu;->f:Landroid/graphics/RectF;
 
     return-object v0
@@ -255,8 +225,6 @@
 .method public final a(F)V
     .locals 1
 
-    .prologue
-    .line 9
     const/4 v0, 0x0
 
     cmpl-float v0, p1, v0
@@ -268,13 +236,10 @@
     :goto_0
     invoke-static {v0}, Liya;->b(Z)V
 
-    .line 10
     iput p1, p0, Lgmu;->d:F
 
-    .line 11
     return-void
 
-    .line 9
     :cond_0
     const/4 v0, 0x0
 
@@ -284,17 +249,13 @@
 .method public final draw(Landroid/graphics/Canvas;Landroid/graphics/Paint;)V
     .locals 1
 
-    .prologue
-    .line 12
     iget-boolean v0, p0, Lgmu;->b:Z
 
     if-nez v0, :cond_0
 
-    .line 15
     :goto_0
     return-void
 
-    .line 14
     :cond_0
     invoke-direct {p0}, Lgmu;->a()Landroid/graphics/RectF;
 
@@ -308,23 +269,18 @@
 .method public final getOutline(Landroid/graphics/Outline;)V
     .locals 6
 
-    .prologue
-    .line 38
     iget-boolean v0, p0, Lgmu;->b:Z
 
     if-nez v0, :cond_0
 
-    .line 44
     :goto_0
     return-void
 
-    .line 40
     :cond_0
     invoke-direct {p0}, Lgmu;->a()Landroid/graphics/RectF;
 
     move-result-object v0
 
-    .line 41
     iget v1, v0, Landroid/graphics/RectF;->left:F
 
     float-to-double v2, v1
@@ -349,7 +305,6 @@
 
     float-to-double v4, v3
 
-    .line 42
     invoke-static {v4, v5}, Ljava/lang/Math;->floor(D)D
 
     move-result-wide v4
@@ -366,7 +321,6 @@
 
     double-to-int v0, v4
 
-    .line 43
     invoke-virtual {p1, v1, v2, v3, v0}, Landroid/graphics/Outline;->setOval(IIII)V
 
     goto :goto_0

@@ -13,11 +13,8 @@
 .method public constructor <init>(Lauh;Ldlv;Ljxn;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lggu;-><init>()V
 
-    .line 2
     return-void
 .end method
 
@@ -26,7 +23,5 @@
 .method public final a(Liic;)V
     .locals 0
 
-    .prologue
-    .line 3
     return-void
 .end method

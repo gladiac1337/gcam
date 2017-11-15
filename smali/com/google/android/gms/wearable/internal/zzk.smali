@@ -670,124 +670,93 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 1
-    .line 3
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lhjg;->m(Landroid/os/Parcel;I)I
 
     move-result v1
 
-    .line 4
     const/4 v0, 0x2
 
-    .line 5
     iget v2, p0, Lcom/google/android/gms/wearable/internal/zzk;->a:I
 
-    .line 6
     invoke-static {p1, v0, v2}, Lhjg;->c(Landroid/os/Parcel;II)V
 
     const/4 v0, 0x3
 
-    .line 7
     iget-object v2, p0, Lcom/google/android/gms/wearable/internal/zzk;->b:Ljava/lang/String;
 
-    .line 8
     invoke-static {p1, v0, v2}, Lhjg;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/4 v0, 0x4
 
-    .line 9
     iget-object v2, p0, Lcom/google/android/gms/wearable/internal/zzk;->c:Ljava/lang/String;
 
-    .line 10
     invoke-static {p1, v0, v2}, Lhjg;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/4 v0, 0x5
 
-    .line 11
     iget-object v2, p0, Lcom/google/android/gms/wearable/internal/zzk;->d:Ljava/lang/String;
 
-    .line 12
     invoke-static {p1, v0, v2}, Lhjg;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/4 v0, 0x6
 
-    .line 13
     iget-object v2, p0, Lcom/google/android/gms/wearable/internal/zzk;->e:Ljava/lang/String;
 
-    .line 14
     invoke-static {p1, v0, v2}, Lhjg;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/4 v0, 0x7
 
-    .line 15
     iget-object v2, p0, Lcom/google/android/gms/wearable/internal/zzk;->f:Ljava/lang/String;
 
-    .line 16
     invoke-static {p1, v0, v2}, Lhjg;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/16 v2, 0x8
 
-    .line 17
     iget-object v0, p0, Lcom/google/android/gms/wearable/internal/zzk;->g:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
     iget-object v0, p0, Lcom/google/android/gms/wearable/internal/zzk;->b:Ljava/lang/String;
 
-    .line 18
     :goto_0
     invoke-static {p1, v2, v0}, Lhjg;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/16 v0, 0x9
 
-    .line 19
     iget-byte v2, p0, Lcom/google/android/gms/wearable/internal/zzk;->h:B
 
-    .line 20
     invoke-static {p1, v0, v2}, Lhjg;->a(Landroid/os/Parcel;IB)V
 
     const/16 v0, 0xa
 
-    .line 21
     iget-byte v2, p0, Lcom/google/android/gms/wearable/internal/zzk;->i:B
 
-    .line 22
     invoke-static {p1, v0, v2}, Lhjg;->a(Landroid/os/Parcel;IB)V
 
     const/16 v0, 0xb
 
-    .line 23
     iget-byte v2, p0, Lcom/google/android/gms/wearable/internal/zzk;->j:B
 
-    .line 24
     invoke-static {p1, v0, v2}, Lhjg;->a(Landroid/os/Parcel;IB)V
 
     const/16 v0, 0xc
 
-    .line 25
     iget-byte v2, p0, Lcom/google/android/gms/wearable/internal/zzk;->k:B
 
-    .line 26
     invoke-static {p1, v0, v2}, Lhjg;->a(Landroid/os/Parcel;IB)V
 
     const/16 v0, 0xd
 
-    .line 27
     iget-object v2, p0, Lcom/google/android/gms/wearable/internal/zzk;->l:Ljava/lang/String;
 
-    .line 28
     invoke-static {p1, v0, v2}, Lhjg;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    .line 29
     invoke-static {p1, v1}, Lhjg;->n(Landroid/os/Parcel;I)V
 
-    .line 30
     return-void
 
-    .line 17
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/wearable/internal/zzk;->g:Ljava/lang/String;
 

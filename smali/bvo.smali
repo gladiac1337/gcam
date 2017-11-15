@@ -21,35 +21,26 @@
 .method private constructor <init>(Ljava/util/concurrent/Executor;)V
     .locals 1
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lbvo;->a:Ljava/util/concurrent/Executor;
 
-    .line 5
     new-instance v0, Ljvi;
 
     invoke-direct {v0}, Ljvi;-><init>()V
 
-    .line 6
     iput-object v0, p0, Lbvo;->e:Ljvi;
 
-    .line 7
     iget-object v0, p0, Lbvo;->e:Ljvi;
 
     iput-object v0, p0, Lbvo;->f:Ljuw;
 
-    .line 8
     return-void
 .end method
 
 .method public static a(Ljava/util/concurrent/Executor;)Lbvo;
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Lbvo;
 
     invoke-direct {v0, p0}, Lbvo;-><init>(Ljava/util/concurrent/Executor;)V
@@ -62,13 +53,10 @@
 .method public final a(Ljxn;Ljava/lang/String;)Lbvo;
     .locals 5
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lbvo;->c:Licu;
 
     if-eqz v0, :cond_0
 
-    .line 10
     iget-object v1, p0, Lbvo;->c:Licu;
 
     const-string v2, "Futures.transform: "
@@ -90,7 +78,6 @@
     :goto_0
     invoke-interface {v1, v0}, Licu;->b(Ljava/lang/String;)V
 
-    .line 11
     :cond_0
     iget-object v0, p0, Lbvo;->f:Ljuw;
 
@@ -100,19 +87,16 @@
 
     iget-object v2, p0, Lbvo;->a:Ljava/util/concurrent/Executor;
 
-    .line 12
     invoke-static {v0, v1, v2}, Ljuh;->a(Ljuw;Ljtu;Ljava/util/concurrent/Executor;)Ljuw;
 
     move-result-object v0
 
     iput-object v0, p0, Lbvo;->f:Ljuw;
 
-    .line 13
     iget-object v0, p0, Lbvo;->c:Licu;
 
     if-eqz v0, :cond_1
 
-    .line 14
     iget-object v0, p0, Lbvo;->c:Licu;
 
     iget-object v1, p0, Lbvo;->f:Ljuw;
@@ -137,14 +121,11 @@
 
     move-result-object v3
 
-    .line 15
     invoke-static {v0, v1, v2, v3}, Lapb;->a(Licu;Ljuw;Ljava/lang/String;Ljava/lang/String;)Ljuw;
 
-    .line 16
     :cond_1
     return-object p0
 
-    .line 10
     :cond_2
     new-instance v0, Ljava/lang/String;
 
@@ -156,10 +137,8 @@
 .method public final a()Ljuw;
     .locals 4
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 19
     iget-object v0, p0, Lbvo;->e:Ljvi;
 
     invoke-virtual {v0}, Ljsw;->isDone()Z
@@ -181,7 +160,6 @@
     :goto_0
     invoke-static {v0}, Liya;->b(Z)V
 
-    .line 20
     iget-object v0, p0, Lbvo;->d:Liad;
 
     if-nez v0, :cond_0
@@ -190,7 +168,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 21
     :cond_0
     iget-object v0, p0, Lbvo;->f:Ljuw;
 
@@ -198,13 +175,10 @@
 
     invoke-direct {v2, p0}, Lbvr;-><init>(Lbvo;)V
 
-    .line 22
     sget-object v3, Ljvc;->a:Ljvc;
 
-    .line 23
     invoke-static {v0, v2, v3}, Ljuh;->a(Ljuw;Ljug;Ljava/util/concurrent/Executor;)V
 
-    .line 24
     :cond_1
     iget-object v0, p0, Lbvo;->e:Ljvi;
 
@@ -214,12 +188,10 @@
 
     invoke-virtual {v0, v1}, Ljsw;->a(Ljava/lang/Object;)Z
 
-    .line 25
     iget-object v0, p0, Lbvo;->f:Ljuw;
 
     return-object v0
 
-    .line 19
     :cond_2
     const/4 v0, 0x0
 
@@ -229,8 +201,6 @@
 .method public final b(Ljxn;Ljava/lang/String;)Lbvo;
     .locals 3
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lbvo;->f:Ljuw;
 
     new-instance v1, Lbvq;
@@ -241,6 +211,5 @@
 
     invoke-static {v0, v1, v2}, Ljuh;->a(Ljuw;Ljug;Ljava/util/concurrent/Executor;)V
 
-    .line 18
     return-object p0
 .end method

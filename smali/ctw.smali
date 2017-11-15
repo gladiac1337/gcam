@@ -14,8 +14,6 @@
 .method constructor <init>(Lctv;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lctw;->a:Lctv;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,22 +26,16 @@
 .method public final a()V
     .locals 0
 
-    .prologue
-    .line 7
     return-void
 .end method
 
 .method public final a(F)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lctw;->a:Lctv;
 
-    .line 3
     iget-object v0, v0, Lctv;->a:Lctx;
 
-    .line 5
     iget-object v0, v0, Lctx;->a:Lcsk;
 
     invoke-static {v0}, Lcsk;->a(Lcsk;)Liau;
@@ -56,6 +48,5 @@
 
     invoke-interface {v0, v1}, Liau;->a(Ljava/lang/Object;)V
 
-    .line 6
     return-void
 .end method

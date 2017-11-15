@@ -14,8 +14,6 @@
 .method public constructor <init>(Lilf;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lilo;->a:Lilf;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final a(Ljava/lang/Object;Ljava/util/concurrent/Executor;)Lilf;
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lilo;->a:Lilf;
 
     new-instance v1, Lilp;

@@ -186,8 +186,6 @@
 .method public hashCode()I
     .locals 3
 
-    .prologue
-    .line 25
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -244,12 +242,10 @@
 
     aput-object v2, v0, v1
 
-    .line 26
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 27
     return v0
 .end method
 
@@ -506,91 +502,67 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 1
-    .line 3
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lhjg;->m(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 4
     const/4 v1, 0x2
 
-    .line 5
     iget-object v2, p0, Lcom/google/android/gms/wearable/ConnectionConfiguration;->a:Ljava/lang/String;
 
-    .line 6
     invoke-static {p1, v1, v2}, Lhjg;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/4 v1, 0x3
 
-    .line 7
     iget-object v2, p0, Lcom/google/android/gms/wearable/ConnectionConfiguration;->b:Ljava/lang/String;
 
-    .line 8
     invoke-static {p1, v1, v2}, Lhjg;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/4 v1, 0x4
 
-    .line 9
     iget v2, p0, Lcom/google/android/gms/wearable/ConnectionConfiguration;->c:I
 
-    .line 10
     invoke-static {p1, v1, v2}, Lhjg;->c(Landroid/os/Parcel;II)V
 
     const/4 v1, 0x5
 
-    .line 11
     iget v2, p0, Lcom/google/android/gms/wearable/ConnectionConfiguration;->d:I
 
-    .line 12
     invoke-static {p1, v1, v2}, Lhjg;->c(Landroid/os/Parcel;II)V
 
     const/4 v1, 0x6
 
-    .line 13
     iget-boolean v2, p0, Lcom/google/android/gms/wearable/ConnectionConfiguration;->e:Z
 
-    .line 14
     invoke-static {p1, v1, v2}, Lhjg;->a(Landroid/os/Parcel;IZ)V
 
     const/4 v1, 0x7
 
-    .line 15
     iget-boolean v2, p0, Lcom/google/android/gms/wearable/ConnectionConfiguration;->f:Z
 
-    .line 16
     invoke-static {p1, v1, v2}, Lhjg;->a(Landroid/os/Parcel;IZ)V
 
     const/16 v1, 0x8
 
-    .line 17
     iget-object v2, p0, Lcom/google/android/gms/wearable/ConnectionConfiguration;->g:Ljava/lang/String;
 
-    .line 18
     invoke-static {p1, v1, v2}, Lhjg;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/16 v1, 0x9
 
-    .line 19
     iget-boolean v2, p0, Lcom/google/android/gms/wearable/ConnectionConfiguration;->h:Z
 
-    .line 20
     invoke-static {p1, v1, v2}, Lhjg;->a(Landroid/os/Parcel;IZ)V
 
     const/16 v1, 0xa
 
-    .line 21
     iget-object v2, p0, Lcom/google/android/gms/wearable/ConnectionConfiguration;->i:Ljava/lang/String;
 
-    .line 22
     invoke-static {p1, v1, v2}, Lhjg;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    .line 23
     invoke-static {p1, v0}, Lhjg;->n(Landroid/os/Parcel;I)V
 
-    .line 24
     return-void
 .end method

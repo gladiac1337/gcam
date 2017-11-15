@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 64
     const-string v0, "MemoryManager"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -37,17 +35,12 @@
 .method public constructor <init>(Lful;Ljava/util/concurrent/Executor;)V
     .locals 8
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iget-wide v0, p1, Lful;->a:J
 
-    .line 4
     iput-wide v0, p0, Lfun;->d:J
 
-    .line 5
     new-instance v0, Ljava/util/EnumMap;
 
     const-class v1, Lfui;
@@ -56,14 +49,12 @@
 
     iput-object v0, p0, Lfun;->e:Ljava/util/EnumMap;
 
-    .line 6
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lfun;->b:Ljava/lang/Object;
 
-    .line 7
     sget-object v0, Lfun;->a:Ljava/lang/String;
 
     iget-wide v2, p0, Lfun;->d:J
@@ -112,26 +103,20 @@
 
     invoke-static {v0, v1}, Lbhz;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8
     iput-object p2, p0, Lfun;->c:Ljava/util/concurrent/Executor;
 
-    .line 9
     return-void
 .end method
 
 .method private final b()J
     .locals 6
 
-    .prologue
-    .line 57
     iget-object v4, p0, Lfun;->b:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 58
     const-wide/16 v0, 0x0
 
-    .line 59
     :try_start_0
     iget-object v2, p0, Lfun;->e:Ljava/util/EnumMap;
 
@@ -158,7 +143,6 @@
 
     check-cast v0, Lfui;
 
-    .line 60
     iget-object v1, p0, Lfun;->e:Ljava/util/EnumMap;
 
     invoke-virtual {v1, v0}, Ljava/util/EnumMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -187,10 +171,8 @@
 
     move-wide v2, v0
 
-    .line 61
     goto :goto_0
 
-    .line 62
     :cond_0
     iget-wide v0, p0, Lfun;->d:J
 
@@ -200,7 +182,6 @@
 
     return-wide v0
 
-    .line 63
     :catchall_0
     move-exception v0
 
@@ -214,21 +195,17 @@
 .method private final b(Lfui;)Z
     .locals 10
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 42
     iget-object v2, p0, Lfun;->b:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 43
     :try_start_0
     invoke-direct {p0}, Lfun;->b()J
 
     move-result-wide v4
 
-    .line 44
     iget-object v0, p0, Lfun;->e:Ljava/util/EnumMap;
 
     invoke-virtual {v0, p1}, Ljava/util/EnumMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -239,7 +216,6 @@
 
     iget-object v0, v0, Lfuq;->a:Lfuj;
 
-    .line 45
     invoke-interface {v0}, Lfuj;->c()Liau;
 
     move-result-object v0
@@ -254,17 +230,14 @@
 
     move-result-wide v6
 
-    .line 46
     const-wide/16 v8, 0x0
 
     cmp-long v0, v6, v8
 
     if-gez v0, :cond_0
 
-    .line 47
     sget-object v0, Lfun;->a:Ljava/lang/String;
 
-    .line 48
     invoke-virtual {p1}, Lfui;->name()Ljava/lang/String;
 
     move-result-object v3
@@ -313,19 +286,15 @@
 
     move-result-object v3
 
-    .line 49
     invoke-static {v0, v3}, Lbhz;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 50
     monitor-exit v2
 
     move v0, v1
 
-    .line 55
     :goto_0
     return v0
 
-    .line 51
     :cond_0
     cmp-long v0, v6, v4
 
@@ -333,11 +302,9 @@
 
     const/4 v0, 0x1
 
-    .line 52
     :goto_1
     sget-object v1, Lfun;->a:Ljava/lang/String;
 
-    .line 53
     invoke-virtual {p1}, Lfui;->name()Ljava/lang/String;
 
     move-result-object v3
@@ -396,15 +363,12 @@
 
     move-result-object v3
 
-    .line 54
     invoke-static {v1, v3}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 55
     monitor-exit v2
 
     goto :goto_0
 
-    .line 56
     :catchall_0
     move-exception v0
 
@@ -417,7 +381,6 @@
     :cond_1
     move v0, v1
 
-    .line 51
     goto :goto_1
 .end method
 
@@ -426,13 +389,10 @@
 .method public final a(Lfui;)Liau;
     .locals 5
 
-    .prologue
-    .line 30
     iget-object v1, p0, Lfun;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 31
     :try_start_0
     iget-object v0, p0, Lfun;->e:Ljava/util/EnumMap;
 
@@ -442,7 +402,6 @@
 
     if-nez v0, :cond_0
 
-    .line 32
     new-instance v0, Ljava/lang/IllegalStateException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -481,7 +440,6 @@
 
     throw v0
 
-    .line 34
     :catchall_0
     move-exception v0
 
@@ -491,7 +449,6 @@
 
     throw v0
 
-    .line 33
     :cond_0
     :try_start_1
     iget-object v0, p0, Lfun;->e:Ljava/util/EnumMap;
@@ -514,19 +471,15 @@
 .method final a()V
     .locals 6
 
-    .prologue
-    .line 35
     iget-object v2, p0, Lfun;->b:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 36
     :try_start_0
     invoke-direct {p0}, Lfun;->b()J
 
     move-result-wide v4
 
-    .line 37
     iget-object v0, p0, Lfun;->e:Ljava/util/EnumMap;
 
     invoke-virtual {v0}, Ljava/util/EnumMap;->keySet()Ljava/util/Set;
@@ -550,7 +503,6 @@
 
     check-cast v0, Lfui;
 
-    .line 38
     iget-object v1, p0, Lfun;->e:Ljava/util/EnumMap;
 
     invoke-virtual {v1, v0}, Ljava/util/EnumMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -573,7 +525,6 @@
 
     goto :goto_0
 
-    .line 41
     :catchall_0
     move-exception v0
 
@@ -583,7 +534,6 @@
 
     throw v0
 
-    .line 40
     :cond_0
     :try_start_1
     sget-object v0, Lfun;->a:Ljava/lang/String;
@@ -610,7 +560,6 @@
 
     invoke-static {v0, v1}, Lbhz;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 41
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -621,15 +570,12 @@
 .method public final a(Lfuj;)Z
     .locals 7
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 10
     iget-object v2, p0, Lfun;->b:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 11
     :try_start_0
     iget-object v1, p0, Lfun;->e:Ljava/util/EnumMap;
 
@@ -643,7 +589,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 12
     sget-object v3, Lfun;->a:Ljava/lang/String;
 
     const-string v4, "Feature already registered: "
@@ -673,14 +618,11 @@
     :goto_0
     invoke-static {v3, v1}, Lbhz;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 13
     monitor-exit v2
 
-    .line 28
     :goto_1
     return v0
 
-    .line 12
     :cond_0
     new-instance v1, Ljava/lang/String;
 
@@ -688,7 +630,6 @@
 
     goto :goto_0
 
-    .line 29
     :catchall_0
     move-exception v0
 
@@ -698,7 +639,6 @@
 
     throw v0
 
-    .line 14
     :cond_1
     :try_start_1
     sget-object v1, Lfun;->a:Ljava/lang/String;
@@ -730,7 +670,6 @@
     :goto_2
     invoke-static {v1, v0}, Lbhz;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 15
     new-instance v0, Liag;
 
     const/4 v1, 0x0
@@ -741,7 +680,6 @@
 
     invoke-direct {v0, v1}, Liag;-><init>(Ljava/lang/Object;)V
 
-    .line 17
     invoke-interface {p1}, Lfuj;->b()Liau;
 
     move-result-object v1
@@ -752,12 +690,10 @@
 
     iget-object v4, p0, Lfun;->c:Ljava/util/concurrent/Executor;
 
-    .line 18
     invoke-interface {v1, v3, v4}, Liau;->a(Licn;Ljava/util/concurrent/Executor;)Lich;
 
     move-result-object v1
 
-    .line 20
     invoke-interface {p1}, Lfuj;->c()Liau;
 
     move-result-object v3
@@ -768,43 +704,34 @@
 
     iget-object v5, p0, Lfun;->c:Ljava/util/concurrent/Executor;
 
-    .line 21
     invoke-interface {v3, v4, v5}, Liau;->a(Licn;Ljava/util/concurrent/Executor;)Lich;
 
     move-result-object v3
 
-    .line 22
     iget-object v4, p0, Lfun;->e:Ljava/util/EnumMap;
 
-    .line 23
     invoke-interface {p1}, Lfuj;->a()Lfui;
 
     move-result-object v5
 
     new-instance v6, Lfuq;
 
-    .line 24
     invoke-static {v1, v3}, Ljkv;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljkv;
 
     move-result-object v1
 
-    .line 25
     invoke-direct {v6, p1, v0, v1}, Lfuq;-><init>(Lfuj;Liag;Ljava/util/Collection;)V
 
-    .line 26
     invoke-virtual {v4, v5, v6}, Ljava/util/EnumMap;->put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 27
     invoke-virtual {p0}, Lfun;->a()V
 
-    .line 28
     const/4 v0, 0x1
 
     monitor-exit v2
 
     goto :goto_1
 
-    .line 14
     :cond_2
     new-instance v0, Ljava/lang/String;
 

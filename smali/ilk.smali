@@ -16,8 +16,6 @@
 .method public constructor <init>(Lilv;Ljava/util/concurrent/Callable;Liml;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lilk;->a:Lilv;
 
     iput-object p2, p0, Lilk;->b:Ljava/util/concurrent/Callable;
@@ -32,8 +30,6 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     :try_start_0
     iget-object v0, p0, Lilk;->a:Lilv;
 
@@ -51,26 +47,20 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 9
     :goto_0
     return-void
 
-    .line 4
     :catch_0
     move-exception v0
 
-    .line 5
     iget-object v1, p0, Lilk;->a:Lilv;
 
-    .line 6
     invoke-static {v0}, Lilh;->a(Ljava/lang/Throwable;)Lilh;
 
     move-result-object v0
 
-    .line 7
     check-cast v0, Lilh;
 
-    .line 8
     invoke-virtual {v1, v0}, Lilv;->a(Lilh;)Z
 
     goto :goto_0
@@ -79,8 +69,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lilk;->b:Ljava/util/concurrent/Callable;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

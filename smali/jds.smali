@@ -59,8 +59,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 20
     new-instance v0, Ljeb;
 
     const-string v1, "TIMESTAMPNS"
@@ -69,7 +67,6 @@
 
     sput-object v0, Ljds;->a:Ljea;
 
-    .line 21
     new-instance v0, Ljed;
 
     const-string v1, "METADATAIMAGESIZE"
@@ -78,7 +75,6 @@
 
     sput-object v0, Ljds;->b:Ljea;
 
-    .line 22
     new-instance v0, Ljdw;
 
     const-string v1, "FACES"
@@ -87,7 +83,6 @@
 
     sput-object v0, Ljds;->c:Ljea;
 
-    .line 23
     new-instance v0, Ljdx;
 
     const-string v1, "FACESHARPNESSLIST"
@@ -96,7 +91,6 @@
 
     sput-object v0, Ljds;->d:Ljea;
 
-    .line 24
     new-instance v0, Ljdy;
 
     const-string v1, "FACEAVERAGESHARPNESS"
@@ -105,7 +99,6 @@
 
     sput-object v0, Ljds;->e:Ljea;
 
-    .line 25
     new-instance v0, Ljdy;
 
     const-string v1, "FACEAVERAGELEFTEYEOPEN"
@@ -114,7 +107,6 @@
 
     sput-object v0, Ljds;->f:Ljea;
 
-    .line 26
     new-instance v0, Ljdy;
 
     const-string v1, "FACEMINIMUMMAXIMUMEYEOPEN"
@@ -123,7 +115,6 @@
 
     sput-object v0, Ljds;->g:Ljea;
 
-    .line 27
     new-instance v0, Ljdy;
 
     const-string v1, "FACEMINIMUMLEFTEYEOPEN"
@@ -132,7 +123,6 @@
 
     sput-object v0, Ljds;->h:Ljea;
 
-    .line 28
     new-instance v0, Ljdy;
 
     const-string v1, "FACEMAXIMUMLEFTEYEOPEN"
@@ -141,7 +131,6 @@
 
     sput-object v0, Ljds;->i:Ljea;
 
-    .line 29
     new-instance v0, Ljdy;
 
     const-string v1, "FACEAVERAGERIGHTEYEOPEN"
@@ -150,7 +139,6 @@
 
     sput-object v0, Ljds;->j:Ljea;
 
-    .line 30
     new-instance v0, Ljdy;
 
     const-string v1, "FACEMINIMUMRIGHTEYEOPEN"
@@ -159,7 +147,6 @@
 
     sput-object v0, Ljds;->k:Ljea;
 
-    .line 31
     new-instance v0, Ljdy;
 
     const-string v1, "FACEMAXIMUMRIGHTEYEOPEN"
@@ -168,7 +155,6 @@
 
     sput-object v0, Ljds;->l:Ljea;
 
-    .line 32
     new-instance v0, Ljdy;
 
     const-string v1, "FACEAVERAGESMILING"
@@ -177,7 +163,6 @@
 
     sput-object v0, Ljds;->m:Ljea;
 
-    .line 33
     new-instance v0, Ljdy;
 
     const-string v1, "FACEMINIMUMSMILING"
@@ -186,7 +171,6 @@
 
     sput-object v0, Ljds;->n:Ljea;
 
-    .line 34
     new-instance v0, Ljdy;
 
     const-string v1, "FACEMAXIMUMSMILING"
@@ -195,7 +179,6 @@
 
     sput-object v0, Ljds;->o:Ljea;
 
-    .line 35
     new-instance v0, Ljec;
 
     const-string v1, "FACEBOUNDINGBOX"
@@ -204,7 +187,6 @@
 
     sput-object v0, Ljds;->p:Ljea;
 
-    .line 36
     new-instance v0, Ljdy;
 
     const-string v1, "INTEGRALMOTIONSALIENCY"
@@ -213,7 +195,6 @@
 
     sput-object v0, Ljds;->q:Ljea;
 
-    .line 37
     new-instance v0, Ljdy;
 
     const-string v1, "LOWPASSMOTIONSALIENCY"
@@ -222,7 +203,6 @@
 
     sput-object v0, Ljds;->r:Ljea;
 
-    .line 38
     new-instance v0, Ljdu;
 
     const-string v1, "HIGHMOTION"
@@ -231,14 +211,12 @@
 
     sput-object v0, Ljds;->s:Ljea;
 
-    .line 39
     new-instance v0, Ljdz;
 
     const-string v1, "STABILIZATIONTRANSFORM"
 
     invoke-direct {v0, v1}, Ljdz;-><init>(Ljava/lang/String;)V
 
-    .line 40
     new-instance v0, Ljdy;
 
     const-string v1, "PERCEPTUALSHARPNESS"
@@ -247,7 +225,6 @@
 
     sput-object v0, Ljds;->t:Ljea;
 
-    .line 41
     new-instance v0, Ljdy;
 
     const-string v1, "MAXGRIDSHARPNESS"
@@ -256,7 +233,6 @@
 
     sput-object v0, Ljds;->u:Ljea;
 
-    .line 42
     new-instance v0, Ljdv;
 
     const-string v1, "FACEIMAGES"
@@ -265,35 +241,28 @@
 
     sput-object v0, Ljds;->v:Ljea;
 
-    .line 43
     new-instance v0, Ljdt;
 
     invoke-direct {v0}, Ljdt;-><init>()V
 
-    .line 44
     invoke-static {v0}, Liui;->a(Ljig;)Ljig;
 
     move-result-object v0
 
     sput-object v0, Ljds;->x:Ljig;
 
-    .line 45
     return-void
 .end method
 
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 4
     iput-object v0, p0, Ljds;->w:Ljava/util/HashMap;
 
     return-void
@@ -302,8 +271,6 @@
 .method public static a(Ljava/lang/String;)Ljea;
     .locals 1
 
-    .prologue
-    .line 5
     sget-object v0, Ljds;->x:Ljig;
 
     invoke-interface {v0}, Ljig;->a()Ljava/lang/Object;
@@ -326,18 +293,14 @@
 .method public final a(Ljea;)Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 8
     iget-object v0, p0, Ljds;->w:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 9
     if-nez v0, :cond_0
 
-    .line 10
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -382,7 +345,6 @@
 
     throw v0
 
-    .line 11
     :cond_0
     return-object v0
 .end method
@@ -390,21 +352,16 @@
 .method public final a(Ljea;Ljava/lang/Object;)Ljds;
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Ljds;->w:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     return-object p0
 .end method
 
 .method public final a(Ljds;)V
     .locals 4
 
-    .prologue
-    .line 13
     iget-object v0, p1, Ljds;->w:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -428,21 +385,18 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 14
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljea;
 
-    .line 15
     invoke-virtual {p0, v1}, Ljds;->b(Ljea;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 16
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -487,7 +441,6 @@
 
     throw v0
 
-    .line 17
     :cond_0
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -497,7 +450,6 @@
 
     goto :goto_0
 
-    .line 19
     :cond_1
     return-void
 .end method
@@ -505,8 +457,6 @@
 .method public final b(Ljea;)Z
     .locals 1
 
-    .prologue
-    .line 12
     iget-object v0, p0, Ljds;->w:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z

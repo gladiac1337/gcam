@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public final a(Liic;)F
     .locals 1
 
-    .prologue
-    .line 2
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->STATISTICS_FACES:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p1, v0}, Liic;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -32,7 +28,6 @@
 
     check-cast v0, [Landroid/hardware/camera2/params/Face;
 
-    .line 3
     if-eqz v0, :cond_0
 
     array-length v0, v0

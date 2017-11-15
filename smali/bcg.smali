@@ -22,8 +22,6 @@
 .method constructor <init>(Lbcc;Liia;Liht;Lbcv;Ljvi;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbcg;->e:Lbcc;
 
     iput-object p2, p0, Lbcg;->a:Liia;
@@ -42,10 +40,8 @@
 .method private final a()Ljava/lang/Void;
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Lbcg;->a:Liia;
 
@@ -59,15 +55,12 @@
 
     invoke-virtual {v0, v1, v2}, Liia;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 3
     iget-object v0, p0, Lbcg;->b:Liht;
 
     iget-object v1, p0, Lbcg;->e:Lbcc;
 
-    .line 4
     iget-object v1, v1, Lbcc;->b:Lbcx;
 
-    .line 5
     iget-object v2, p0, Lbcg;->b:Liht;
 
     iget-object v3, p0, Lbcg;->a:Liia;
@@ -80,10 +73,8 @@
 
     const/4 v3, 0x0
 
-    .line 6
     invoke-interface {v0, v1, v2, v3}, Liht;->b(Ljava/util/List;Lihu;Landroid/os/Handler;)I
 
-    .line 7
     iget-object v0, p0, Lbcg;->e:Lbcc;
 
     invoke-static {v0}, Lbcc;->a(Lbcc;)Liau;
@@ -101,15 +92,12 @@
     .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Lief; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 11
     :goto_0
     return-object v4
 
-    .line 9
     :catch_0
     move-exception v0
 
-    .line 10
     :goto_1
     iget-object v1, p0, Lbcg;->d:Ljvi;
 
@@ -117,7 +105,6 @@
 
     goto :goto_0
 
-    .line 9
     :catch_1
     move-exception v0
 
@@ -129,8 +116,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 12
     invoke-direct {p0}, Lbcg;->a()Ljava/lang/Void;
 
     move-result-object v0

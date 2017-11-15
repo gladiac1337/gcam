@@ -18,13 +18,10 @@
 .method constructor <init>(Lchl;)V
     .locals 2
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lchq;->b:Lchl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -33,7 +30,6 @@
 
     iput-object v0, p0, Lchq;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 3
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -46,42 +42,31 @@
 .method private final a(Lgih;Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;)Lgih;
     .locals 10
 
-    .prologue
     const-wide/32 v8, 0x2dc6c0
 
-    .line 95
     iget-object v0, p0, Lchq;->b:Lchl;
 
-    .line 96
     iget-object v7, v0, Lchl;->k:Ljava/lang/Object;
 
-    .line 97
     monitor-enter v7
 
-    .line 98
     :try_start_0
     iget-object v0, p0, Lchq;->b:Lchl;
 
-    .line 99
     iget-object v0, v0, Lchl;->n:Lbpo;
 
-    .line 100
     if-eqz v0, :cond_0
 
-    .line 101
     iget-object v0, p0, Lchq;->b:Lchl;
 
-    .line 102
     iget-object v1, v0, Lchl;->n:Lbpo;
 
-    .line 104
     invoke-virtual {p1}, Lgih;->e()J
 
     move-result-wide v2
 
     sub-long/2addr v2, v8
 
-    .line 105
     invoke-virtual {p1}, Lgih;->e()J
 
     move-result-wide v4
@@ -90,19 +75,15 @@
 
     iget-object v0, p0, Lchq;->b:Lchl;
 
-    .line 106
     iget-object v6, v0, Lchl;->e:Lbpp;
 
-    .line 107
     invoke-interface/range {v1 .. v6}, Lbpo;->a(JJLbpp;)V
 
-    .line 108
     :cond_0
     monitor-exit v7
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 110
     invoke-virtual {p1}, Lgih;->h()Ljuw;
 
     move-result-object v0
@@ -111,16 +92,12 @@
 
     invoke-direct {v1, p0, p2}, Lchr;-><init>(Lchq;Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;)V
 
-    .line 111
     sget-object v2, Ljvc;->a:Ljvc;
 
-    .line 112
     invoke-static {v0, v1, v2}, Ljuh;->a(Ljuw;Ljug;Ljava/util/concurrent/Executor;)V
 
-    .line 113
     return-object p1
 
-    .line 108
     :catchall_0
     move-exception v0
 
@@ -137,39 +114,31 @@
 .method public final a()V
     .locals 15
 
-    .prologue
     const/4 v4, 0x0
 
     const/4 v5, 0x1
 
     const/4 v3, 0x0
 
-    .line 9
     iget-object v0, p0, Lchq;->b:Lchl;
 
-    .line 10
     iget-object v0, v0, Lchl;->a:Ldol;
 
-    .line 11
     invoke-interface {v0}, Ldol;->a()Ldom;
 
     move-result-object v6
 
-    .line 12
     :try_start_0
     iget-object v0, p0, Lchq;->b:Lchl;
 
-    .line 13
     iget-object v0, v0, Lchl;->b:Lghe;
 
-    .line 14
     invoke-interface {v0}, Lghe;->a()Lghf;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     move-result-object v7
 
-    .line 16
     :try_start_1
     iget-object v0, p0, Lchq;->b:Lchl;
 
@@ -177,15 +146,12 @@
 
     move-result-object v1
 
-    .line 18
     invoke-virtual {v0}, Lchl;->i()Lggm;
 
     move-result-object v0
 
-    .line 19
     invoke-virtual {v0, v1}, Lggm;->a(Lggb;)Lggm;
 
-    .line 21
     invoke-virtual {v0}, Lggm;->c()Lggk;
 
     move-result-object v0
@@ -194,28 +160,22 @@
 
     move-result-object v0
 
-    .line 22
     sget-object v1, Lggt;->a:Lggt;
 
     invoke-interface {v6, v0, v1}, Ldom;->a(Ljava/util/List;Lggt;)V
 
-    .line 23
     iget-object v0, p0, Lchq;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0, v7}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 24
     iget-object v0, p0, Lchq;->b:Lchl;
 
-    .line 25
     iget-object v8, v0, Lchl;->c:Liiy;
 
-    .line 27
     iget-object v0, p0, Lchq;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-virtual {v0, v7}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    .line 28
     :cond_0
     :goto_0
     iget-object v0, p0, Lchq;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -226,13 +186,10 @@
 
     if-eqz v0, :cond_b
 
-    .line 29
     iget-object v0, p0, Lchq;->b:Lchl;
 
-    .line 30
     iget v0, v0, Lchl;->l:I
 
-    .line 32
     invoke-interface {v7}, Lghf;->d()I
 
     move-result v1
@@ -250,11 +207,9 @@
     :cond_1
     move v0, v5
 
-    .line 33
     :goto_1
     if-nez v0, :cond_5
 
-    .line 34
     const-string v0, "BurstController"
 
     const-string v1, "Could not increase capacity for burst. Will retry next frame..."
@@ -264,7 +219,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
-    .line 35
     const-wide/16 v0, 0x21
 
     :try_start_2
@@ -276,7 +230,6 @@
 
     goto :goto_0
 
-    .line 38
     :catch_0
     move-exception v0
 
@@ -287,7 +240,6 @@
 
     invoke-static {v0, v1}, Lbhz;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 39
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -299,7 +251,6 @@
 
     goto :goto_0
 
-    .line 83
     :catch_1
     move-exception v0
 
@@ -308,7 +259,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 84
     :catchall_0
     move-exception v1
 
@@ -336,23 +286,19 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 88
     :catchall_1
     move-exception v0
 
     :try_start_7
     iget-object v1, p0, Lchq;->b:Lchl;
 
-    .line 89
     invoke-virtual {v1, v6}, Lchl;->a(Ldom;)V
 
-    .line 90
     throw v0
     :try_end_7
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_2
     .catchall {:try_start_7 .. :try_end_7} :catchall_5
 
-    .line 92
     :catch_2
     move-exception v0
 
@@ -361,7 +307,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 93
     :catchall_2
     move-exception v1
 
@@ -386,10 +331,8 @@
     :cond_4
     move v0, v4
 
-    .line 32
     goto :goto_1
 
-    .line 41
     :cond_5
     :try_start_a
     invoke-interface {v7}, Lghf;->a()Ljava/lang/Object;
@@ -402,13 +345,11 @@
     .catch Ljava/lang/Throwable; {:try_start_a .. :try_end_a} :catch_1
     .catchall {:try_start_a .. :try_end_a} :catchall_3
 
-    .line 43
     :try_start_b
     invoke-interface {v0}, Lghd;->e()Ljuw;
 
     move-result-object v2
 
-    .line 44
     const/4 v1, 0x1
 
     new-array v1, v1, [I
@@ -423,51 +364,41 @@
 
     move-result-object v9
 
-    .line 45
     if-nez v9, :cond_7
 
     move-object v2, v3
 
-    .line 54
     :goto_6
     if-eqz v2, :cond_6
 
-    .line 55
     iget-object v1, p0, Lchq;->b:Lchl;
 
-    .line 56
     iget-object v1, v1, Lchl;->f:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 57
     invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lchp;
 
-    .line 58
     if-eqz v1, :cond_8
 
-    .line 60
     invoke-virtual {v2}, Lgih;->e()J
 
     move-result-wide v10
 
     iget-object v9, v1, Lchp;->i:Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;
 
-    .line 61
     invoke-direct {p0, v2, v9}, Lchq;->a(Lgih;Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;)Lgih;
 
     move-result-object v2
 
-    .line 62
     sget-object v9, Lgij;->d:Lgii;
 
     iget-object v12, v1, Lchp;->b:Ljava/util/UUID;
 
     invoke-virtual {v2, v9, v12}, Lgih;->a(Lgii;Ljava/lang/Object;)Lgih;
 
-    .line 63
     sget-object v9, Lgij;->e:Lgii;
 
     iget-wide v12, v1, Lchp;->c:J
@@ -478,7 +409,6 @@
 
     invoke-virtual {v2, v9, v12}, Lgih;->a(Lgii;Ljava/lang/Object;)Lgih;
 
-    .line 64
     sget-object v9, Lgij;->f:Lgii;
 
     iget-object v12, v1, Lchp;->e:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -493,34 +423,27 @@
 
     invoke-virtual {v2, v9, v12}, Lgih;->a(Lgii;Ljava/lang/Object;)Lgih;
 
-    .line 65
     sget-object v9, Lgij;->c:Lgii;
 
     iget-object v12, v1, Lchp;->d:Licf;
 
     invoke-virtual {v2, v9, v12}, Lgih;->a(Lgii;Ljava/lang/Object;)Lgih;
 
-    .line 67
     invoke-interface {v8, v10, v11, v2}, Liiy;->a(JLjava/lang/Object;)V
 
-    .line 68
     iget-object v1, v1, Lchp;->i:Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;
 
     invoke-virtual {v1}, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->h()V
 
-    .line 69
     iget-object v1, p0, Lchq;->b:Lchl;
 
-    .line 70
     iget-object v1, v1, Lchl;->d:Lchv;
 
-    .line 71
     invoke-interface {v1}, Lchv;->b()V
     :try_end_b
     .catch Ljava/lang/Throwable; {:try_start_b .. :try_end_b} :catch_4
     .catchall {:try_start_b .. :try_end_b} :catchall_6
 
-    .line 74
     :cond_6
     :goto_7
     if-eqz v0, :cond_0
@@ -534,7 +457,6 @@
 
     goto/16 :goto_0
 
-    .line 79
     :catch_3
     move-exception v0
 
@@ -545,7 +467,6 @@
 
     invoke-static {v0, v1}, Lbhz;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
     invoke-virtual {p0}, Lchq;->b()V
     :try_end_d
     .catch Ljava/lang/Throwable; {:try_start_d .. :try_end_d} :catch_1
@@ -553,7 +474,6 @@
 
     goto/16 :goto_0
 
-    .line 84
     :catchall_3
     move-exception v0
 
@@ -561,7 +481,6 @@
 
     goto/16 :goto_2
 
-    .line 48
     :cond_7
     :try_start_e
     invoke-interface {v9}, Liil;->f()I
@@ -578,10 +497,8 @@
 
     iget-object v1, p0, Lchq;->b:Lchl;
 
-    .line 49
     iget-object v1, v1, Lchl;->f:Ljava/util/concurrent/atomic/AtomicReference;
 
-    .line 50
     invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v1
@@ -590,14 +507,12 @@
 
     iget-object v1, v1, Lchp;->j:Lici;
 
-    .line 51
     invoke-static {v10, v1}, Licj;->a(Lici;Lici;)Landroid/graphics/Rect;
 
     move-result-object v1
 
     invoke-interface {v9, v1}, Liil;->a(Landroid/graphics/Rect;)V
 
-    .line 52
     new-instance v1, Lgih;
 
     invoke-direct {v1, v9, v2}, Lgih;-><init>(Liil;Ljuw;)V
@@ -606,7 +521,6 @@
 
     goto/16 :goto_6
 
-    .line 72
     :cond_8
     const-string v1, "BurstController"
 
@@ -614,7 +528,6 @@
 
     invoke-static {v1, v9}, Lbhz;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 73
     invoke-virtual {v2}, Lgih;->close()V
     :try_end_e
     .catch Ljava/lang/Throwable; {:try_start_e .. :try_end_e} :catch_4
@@ -622,7 +535,6 @@
 
     goto :goto_7
 
-    .line 75
     :catch_4
     move-exception v1
 
@@ -631,7 +543,6 @@
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_4
 
-    .line 76
     :catchall_4
     move-exception v2
 
@@ -674,7 +585,6 @@
 
     goto :goto_9
 
-    .line 82
     :cond_b
     if-eqz v7, :cond_c
 
@@ -683,27 +593,22 @@
     :try_end_12
     .catchall {:try_start_12 .. :try_end_12} :catchall_1
 
-    .line 85
     :cond_c
     :try_start_13
     iget-object v0, p0, Lchq;->b:Lchl;
 
-    .line 86
     invoke-virtual {v0, v6}, Lchl;->a(Ldom;)V
     :try_end_13
     .catch Ljava/lang/Throwable; {:try_start_13 .. :try_end_13} :catch_2
     .catchall {:try_start_13 .. :try_end_13} :catchall_5
 
-    .line 91
     if-eqz v6, :cond_d
 
     invoke-interface {v6}, Ldom;->close()V
 
-    .line 94
     :cond_d
     return-void
 
-    .line 84
     :catch_6
     move-exception v2
 
@@ -719,7 +624,6 @@
 
     goto/16 :goto_3
 
-    .line 93
     :catch_7
     move-exception v1
 
@@ -737,7 +641,6 @@
 
     goto/16 :goto_4
 
-    .line 76
     :catchall_6
     move-exception v1
 
@@ -749,8 +652,6 @@
 .method public final b()V
     .locals 3
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lchq;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -763,7 +664,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lchq;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
     const/4 v1, 0x0
@@ -774,13 +674,10 @@
 
     check-cast v0, Lghf;
 
-    .line 6
     if-eqz v0, :cond_0
 
-    .line 7
     invoke-interface {v0}, Lghf;->close()V
 
-    .line 8
     :cond_0
     return-void
 .end method

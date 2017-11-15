@@ -20,17 +20,12 @@
 .method public constructor <init>(Ljava/util/Comparator;[Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljlj;->a:Ljava/util/Comparator;
 
-    .line 3
     iput-object p2, p0, Ljlj;->b:[Ljava/lang/Object;
 
-    .line 4
     return-void
 .end method
 
@@ -39,8 +34,6 @@
 .method final readResolve()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 5
     new-instance v0, Ljli;
 
     iget-object v1, p0, Ljlj;->a:Ljava/util/Comparator;

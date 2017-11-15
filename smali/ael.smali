@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 18
     new-instance v0, Laem;
 
     invoke-direct {v0}, Laem;-><init>()V
@@ -35,47 +33,36 @@
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/Object;Laen;)V
     .locals 1
 
-    .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
     invoke-static {p1}, Lapb;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lael;->d:Ljava/lang/String;
 
-    .line 7
     iput-object p2, p0, Lael;->b:Ljava/lang/Object;
 
-    .line 9
     const-string v0, "Argument must not be null"
 
     invoke-static {p3, v0}, Lapb;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 10
     check-cast v0, Laen;
 
     iput-object v0, p0, Lael;->c:Laen;
 
-    .line 11
     return-void
 .end method
 
 .method public static a(Ljava/lang/String;Ljava/lang/Object;)Lael;
     .locals 2
 
-    .prologue
-    .line 1
     new-instance v0, Lael;
 
-    .line 2
     sget-object v1, Lael;->a:Laen;
 
-    .line 3
     invoke-direct {v0, p0, p1, v1}, Lael;-><init>(Ljava/lang/String;Ljava/lang/Object;Laen;)V
 
     return-object v0
@@ -84,8 +71,6 @@
 .method public static a(Ljava/lang/String;Ljava/lang/Object;Laen;)Lael;
     .locals 1
 
-    .prologue
-    .line 4
     new-instance v0, Lael;
 
     invoke-direct {v0, p0, p1, p2}, Lael;-><init>(Ljava/lang/String;Ljava/lang/Object;Laen;)V
@@ -98,16 +83,12 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 12
     instance-of v0, p1, Lael;
 
     if-eqz v0, :cond_0
 
-    .line 13
     check-cast p1, Lael;
 
-    .line 14
     iget-object v0, p0, Lael;->d:Ljava/lang/String;
 
     iget-object v1, p1, Lael;->d:Ljava/lang/String;
@@ -116,7 +97,6 @@
 
     move-result v0
 
-    .line 15
     :goto_0
     return v0
 
@@ -129,8 +109,6 @@
 .method public final hashCode()I
     .locals 1
 
-    .prologue
-    .line 16
     iget-object v0, p0, Lael;->d:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -143,8 +121,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lael;->d:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

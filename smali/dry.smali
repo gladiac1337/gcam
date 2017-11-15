@@ -18,20 +18,14 @@
 .method constructor <init>(Ldri;Lggb;Lhzr;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldry;->a:Ldri;
 
-    .line 3
     iput-object p2, p0, Ldry;->b:Lggb;
 
-    .line 4
     iput-object p3, p0, Ldry;->c:Lhzr;
 
-    .line 5
     return-void
 .end method
 
@@ -40,8 +34,6 @@
 .method public final a()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Ldry;->a:Ldri;
 
     invoke-virtual {v0}, Ldri;->a()Ljava/util/List;
@@ -54,8 +46,6 @@
 .method public final b()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Ldry;->a:Ldri;
 
     invoke-virtual {v0}, Ldri;->b()Ljava/util/List;
@@ -68,21 +58,16 @@
 .method public final close()V
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Ldry;->c:Lhzr;
 
     invoke-virtual {v0}, Lhzr;->close()V
 
-    .line 10
     return-void
 .end method
 
 .method public final e()Lggb;
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Ldry;->b:Lggb;
 
     return-object v0

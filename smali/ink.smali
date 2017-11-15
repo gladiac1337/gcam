@@ -25,26 +25,20 @@
 .method public final a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Link;->a:Landroid/media/MediaFormat;
 
     check-cast p1, Landroid/media/MediaFormat;
 
-    .line 2
     if-eqz p1, :cond_0
 
-    .line 4
     const-string v1, "oo.muxer.drop_initial_non_keyframes"
 
     invoke-static {v1, v0, p1}, Licy;->a(Ljava/lang/String;Landroid/media/MediaFormat;Landroid/media/MediaFormat;)V
 
-    .line 5
     const-string v1, "oo.muxer.force_sequential"
 
     invoke-static {v1, v0, p1}, Licy;->a(Ljava/lang/String;Landroid/media/MediaFormat;Landroid/media/MediaFormat;)V
 
-    .line 7
     :cond_0
     return-object p1
 .end method

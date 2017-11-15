@@ -25,72 +25,54 @@
 .method public constructor <init>(Landroid/hardware/camera2/CameraManager;Lidm;Ljava/util/concurrent/Executor;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lchd;->c:Landroid/hardware/camera2/CameraManager;
 
-    .line 3
     iput-object p2, p0, Lchd;->d:Lidm;
 
-    .line 4
     iput-object p3, p0, Lchd;->e:Ljava/util/concurrent/Executor;
 
-    .line 5
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lchd;->a:Ljava/lang/Object;
 
-    .line 6
     return-void
 .end method
 
 .method private final c()Ljuw;
     .locals 3
 
-    .prologue
-    .line 13
     const/4 v0, 0x0
 
-    .line 14
     iget-object v1, p0, Lchd;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 15
     :try_start_0
     iget-object v2, p0, Lchd;->b:Ljvi;
 
     if-nez v2, :cond_0
 
-    .line 17
     new-instance v0, Ljvi;
 
     invoke-direct {v0}, Ljvi;-><init>()V
 
-    .line 18
     iput-object v0, p0, Lchd;->b:Ljvi;
 
-    .line 19
     const/4 v0, 0x1
 
-    .line 20
     :cond_0
     iget-object v2, p0, Lchd;->b:Ljvi;
 
-    .line 21
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 22
     if-eqz v0, :cond_1
 
-    .line 23
     iget-object v0, p0, Lchd;->e:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lche;
@@ -99,11 +81,9 @@
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 24
     :cond_1
     return-object v2
 
-    .line 21
     :catchall_0
     move-exception v0
 
@@ -120,8 +100,6 @@
 .method public final a()Ljuw;
     .locals 1
 
-    .prologue
-    .line 7
     :try_start_0
     iget-object v0, p0, Lchd;->c:Landroid/hardware/camera2/CameraManager;
 
@@ -129,14 +107,12 @@
 
     move-result-object v0
 
-    .line 8
     if-eqz v0, :cond_0
 
     array-length v0, v0
 
     if-lez v0, :cond_0
 
-    .line 9
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -149,7 +125,6 @@
 
     move-result-object v0
 
-    .line 12
     :goto_0
     return-object v0
 
@@ -167,24 +142,20 @@
 .method final b()Z
     .locals 10
 
-    .prologue
     const/4 v3, 0x0
 
     const/4 v0, 0x0
 
-    .line 25
     const-string v1, "CamDeviceVerify"
 
     const-string v2, "Attempting to reconnect to the camera service with a 7000ms timeout in 200ms increments."
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 26
     new-instance v4, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {v4, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    .line 28
     :try_start_0
     new-instance v5, Lhzr;
 
@@ -194,7 +165,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 29
     :try_start_1
     new-instance v2, Lchf;
 
@@ -203,36 +173,30 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
-    .line 30
     :try_start_2
     iget-object v1, p0, Lchd;->c:Landroid/hardware/camera2/CameraManager;
 
     const-string v6, "PollUntilReconnect"
 
-    .line 31
     invoke-static {v5, v6}, Lhzo;->a(Lhzr;Ljava/lang/String;)Landroid/os/Handler;
 
     move-result-object v6
 
-    .line 32
     invoke-virtual {v1, v2, v6}, Landroid/hardware/camera2/CameraManager;->registerAvailabilityCallback(Landroid/hardware/camera2/CameraManager$AvailabilityCallback;Landroid/os/Handler;)V
 
     move v1, v0
 
-    .line 33
     :goto_0
     const/16 v6, 0x23
 
     if-ge v1, v6, :cond_2
 
-    .line 34
     iget-object v6, p0, Lchd;->c:Landroid/hardware/camera2/CameraManager;
 
     invoke-virtual {v6}, Landroid/hardware/camera2/CameraManager;->getCameraIdList()[Ljava/lang/String;
 
     move-result-object v6
 
-    .line 35
     if-eqz v6, :cond_1
 
     array-length v6, v6
@@ -245,7 +209,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 36
     const-string v4, "CamDeviceVerify"
 
     add-int/lit8 v1, v1, 0x1
@@ -280,7 +243,6 @@
 
     invoke-static {v4, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 37
     iget-object v1, p0, Lchd;->d:Lidm;
 
     sget-object v4, Lidn;->a:Lidn;
@@ -290,7 +252,6 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_6
     .catchall {:try_start_2 .. :try_end_2} :catchall_4
 
-    .line 38
     :try_start_3
     invoke-virtual {v5}, Lhzr;->close()V
     :try_end_3
@@ -298,20 +259,16 @@
     .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 39
     iget-object v0, p0, Lchd;->c:Landroid/hardware/camera2/CameraManager;
 
     invoke-virtual {v0, v2}, Landroid/hardware/camera2/CameraManager;->unregisterAvailabilityCallback(Landroid/hardware/camera2/CameraManager$AvailabilityCallback;)V
 
-    .line 40
     const/4 v0, 0x1
 
-    .line 56
     :cond_0
     :goto_1
     return v0
 
-    .line 41
     :cond_1
     const-wide/16 v6, 0xc8
 
@@ -320,12 +277,10 @@
     :try_start_4
     invoke-static {v6, v7, v8}, Ljava/lang/Thread;->sleep(JI)V
 
-    .line 42
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 43
     :cond_2
     const-string v1, "CamDeviceVerify"
 
@@ -333,7 +288,6 @@
 
     invoke-static {v1, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 44
     iget-object v1, p0, Lchd;->d:Lidm;
 
     sget-object v4, Lidn;->b:Lidn;
@@ -343,7 +297,6 @@
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_6
     .catchall {:try_start_4 .. :try_end_4} :catchall_4
 
-    .line 45
     :try_start_5
     invoke-virtual {v5}, Lhzr;->close()V
     :try_end_5
@@ -351,14 +304,12 @@
     .catch Ljava/lang/InterruptedException; {:try_start_5 .. :try_end_5} :catch_3
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 48
     iget-object v1, p0, Lchd;->c:Landroid/hardware/camera2/CameraManager;
 
     invoke-virtual {v1, v2}, Landroid/hardware/camera2/CameraManager;->unregisterAvailabilityCallback(Landroid/hardware/camera2/CameraManager$AvailabilityCallback;)V
 
     goto :goto_1
 
-    .line 46
     :catch_0
     move-exception v1
 
@@ -370,7 +321,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 47
     :catchall_0
     move-exception v3
 
@@ -399,11 +349,9 @@
     .catch Ljava/lang/InterruptedException; {:try_start_8 .. :try_end_8} :catch_3
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 49
     :catch_1
     move-exception v1
 
-    .line 50
     :goto_5
     :try_start_9
     const-string v3, "CamDeviceVerify"
@@ -412,7 +360,6 @@
 
     invoke-static {v3, v4, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 51
     iget-object v1, p0, Lchd;->d:Lidm;
 
     sget-object v3, Lidn;->c:Lidn;
@@ -421,17 +368,14 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
-    .line 52
     if-eqz v2, :cond_0
 
-    .line 53
     iget-object v1, p0, Lchd;->c:Landroid/hardware/camera2/CameraManager;
 
     invoke-virtual {v1, v2}, Landroid/hardware/camera2/CameraManager;->unregisterAvailabilityCallback(Landroid/hardware/camera2/CameraManager$AvailabilityCallback;)V
 
     goto :goto_1
 
-    .line 47
     :catch_2
     move-exception v4
 
@@ -440,13 +384,11 @@
 
     goto :goto_4
 
-    .line 49
     :catch_3
     move-exception v1
 
     goto :goto_5
 
-    .line 47
     :cond_3
     invoke-virtual {v5}, Lhzr;->close()V
     :try_end_a
@@ -456,14 +398,12 @@
 
     goto :goto_4
 
-    .line 54
     :catchall_1
     move-exception v0
 
     :goto_6
     if-eqz v2, :cond_4
 
-    .line 55
     iget-object v1, p0, Lchd;->c:Landroid/hardware/camera2/CameraManager;
 
     invoke-virtual {v1, v2}, Landroid/hardware/camera2/CameraManager;->unregisterAvailabilityCallback(Landroid/hardware/camera2/CameraManager$AvailabilityCallback;)V
@@ -471,7 +411,6 @@
     :cond_4
     throw v0
 
-    .line 54
     :catchall_2
     move-exception v0
 
@@ -479,7 +418,6 @@
 
     goto :goto_6
 
-    .line 49
     :catch_4
     move-exception v1
 
@@ -494,7 +432,6 @@
 
     goto :goto_5
 
-    .line 47
     :catchall_3
     move-exception v1
 
@@ -507,7 +444,6 @@
 
     goto :goto_3
 
-    .line 46
     :catch_6
     move-exception v1
 

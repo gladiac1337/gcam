@@ -17,22 +17,15 @@
 .method public constructor <init>(FFFF)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lgzh;->a:F
 
-    .line 3
     iput p2, p0, Lgzh;->b:F
 
-    .line 4
     iput p3, p0, Lgzh;->c:F
 
-    .line 5
     iput p4, p0, Lgzh;->d:F
 
-    .line 6
     return-void
 .end method

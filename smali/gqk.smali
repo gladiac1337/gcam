@@ -18,8 +18,6 @@
 .method constructor <init>(Ljxn;Lhzt;Lfrm;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgqk;->a:Ljxn;
 
     iput-object p2, p0, Lgqk;->b:Lhzt;
@@ -36,8 +34,6 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgqk;->a:Ljxn;
 
     invoke-interface {v0}, Ljxn;->a()Ljava/lang/Object;
@@ -46,13 +42,11 @@
 
     check-cast v0, Lgqf;
 
-    .line 3
     iget-object v1, p0, Lgqk;->b:Lhzt;
 
     iget-object v2, p0, Lgqk;->c:Lfrm;
 
     invoke-static {v1, v2, v0}, Lfsi;->a(Lhzt;Lfrm;Lfsf;)V
 
-    .line 4
     return-void
 .end method

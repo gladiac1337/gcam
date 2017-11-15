@@ -23,10 +23,8 @@
 .method public constructor <init>(Lhtm;Lhkj;Lhru;)V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 4
     iput-object p1, p0, Lhpm;->f:Lhtm;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,8 +49,6 @@
 .method final a()V
     .locals 3
 
-    .prologue
-    .line 6
     iget-boolean v0, p0, Lhpm;->e:Z
 
     if-eqz v0, :cond_0
@@ -76,8 +72,6 @@
 .method public final a(Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 2
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lhpm;->f:Lhtm;
 
     invoke-static {v0}, Lhtm;->a(Lhtm;)Landroid/os/Handler;
@@ -96,8 +90,6 @@
 .method public final b(Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhpm;->f:Lhtm;
 
     invoke-static {v0}, Lhtm;->h(Lhtm;)Ljava/util/Map;
@@ -112,7 +104,6 @@
 
     check-cast v0, Lhtn;
 
-    .line 2
     iget-object v1, v0, Lhtn;->h:Lhtm;
 
     invoke-static {v1}, Lhtm;->a(Lhtm;)Landroid/os/Handler;
@@ -127,6 +118,5 @@
 
     invoke-virtual {v0, p1}, Lhtn;->a(Lcom/google/android/gms/common/ConnectionResult;)V
 
-    .line 3
     return-void
 .end method

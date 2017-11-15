@@ -25,19 +25,16 @@
 .method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 7
 
-    .prologue
     const/4 v0, 0x0
 
     const/high16 v6, 0x447a0000    # 1000.0f
 
-    .line 1
     iget-object v1, p0, Lelu;->a:Lelq;
 
     check-cast p1, Lcht;
 
     check-cast p2, Lcht;
 
-    .line 2
     iget-object v2, v1, Lelq;->i:Lijh;
 
     invoke-interface {p1}, Lcht;->g()J
@@ -48,7 +45,6 @@
 
     move-result-object v2
 
-    .line 3
     iget-object v1, v1, Lelq;->i:Lijh;
 
     invoke-interface {p2}, Lcht;->g()J
@@ -59,7 +55,6 @@
 
     move-result-object v3
 
-    .line 4
     if-eqz v2, :cond_1
 
     invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
@@ -70,7 +65,6 @@
 
     float-to-int v1, v1
 
-    .line 5
     :goto_0
     if-eqz v3, :cond_0
 
@@ -82,16 +76,13 @@
 
     float-to-int v0, v0
 
-    .line 6
     :cond_0
     sub-int/2addr v0, v1
 
-    .line 7
     return v0
 
     :cond_1
     move v1, v0
 
-    .line 4
     goto :goto_0
 .end method

@@ -11,8 +11,6 @@
 .method constructor <init>(Ljji;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljjj;->a:Ljji;
 
     invoke-direct {p0}, Ljmg;-><init>()V
@@ -25,8 +23,6 @@
 .method final a()Ljmd;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ljjj;->a:Ljji;
 
     return-object v0

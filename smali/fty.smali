@@ -35,8 +35,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 64
     const-string v0, "ProcessingImg"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -51,48 +49,34 @@
 .method constructor <init>(Landroid/content/ContentResolver;Landroid/net/Uri;Ljxn;Landroid/net/Uri;JLjava/lang/String;Lgry;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     new-instance v0, Ljvi;
 
     invoke-direct {v0}, Ljvi;-><init>()V
 
-    .line 4
     iput-object v0, p0, Lfty;->a:Ljvi;
 
-    .line 5
     iput-object p1, p0, Lfty;->c:Landroid/content/ContentResolver;
 
-    .line 6
     iput-object p2, p0, Lfty;->d:Landroid/net/Uri;
 
-    .line 7
     iput-object p3, p0, Lfty;->e:Ljxn;
 
-    .line 8
     iput-object p4, p0, Lfty;->f:Landroid/net/Uri;
 
-    .line 9
     iput-wide p5, p0, Lfty;->g:J
 
-    .line 10
     iput-object p7, p0, Lfty;->h:Ljava/lang/String;
 
-    .line 11
     iput-object p8, p0, Lfty;->i:Lgry;
 
-    .line 12
     return-void
 .end method
 
 .method private final declared-synchronized a(Lfua;)V
     .locals 5
 
-    .prologue
-    .line 23
     monitor-enter p0
 
     :try_start_0
@@ -100,7 +84,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 24
     sget-object v0, Lfty;->b:Ljava/lang/String;
 
     iget-object v1, p0, Lfty;->f:Landroid/net/Uri;
@@ -141,13 +124,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 59
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 26
     :cond_0
     :try_start_1
     invoke-interface {p1}, Lfua;->f()Ljht;
@@ -172,34 +153,27 @@
 
     move-object v1, v0
 
-    .line 27
     :goto_1
     iget-object v0, p0, Lfty;->e:Ljxn;
 
-    .line 28
     invoke-interface {v0}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lftl;
 
-    .line 29
     invoke-interface {p1}, Lfua;->a()Ljava/io/File;
 
     move-result-object v2
 
-    .line 30
     iput-object v2, v0, Lftl;->a:Ljava/io/File;
 
-    .line 33
     invoke-interface {p1}, Lfua;->e()Ljht;
 
     move-result-object v2
 
-    .line 34
     iput-object v2, v0, Lftl;->b:Ljht;
 
-    .line 37
     invoke-interface {p1}, Lfua;->b()Lgvw;
 
     move-result-object v2
@@ -208,15 +182,12 @@
 
     move-result-object v0
 
-    .line 38
     invoke-interface {p1}, Lfua;->c()Licf;
 
     move-result-object v2
 
-    .line 39
     iput-object v2, v0, Lftl;->c:Licf;
 
-    .line 42
     invoke-interface {p1}, Lfua;->d()Lici;
 
     move-result-object v2
@@ -227,25 +198,20 @@
 
     iget-wide v2, p0, Lfty;->g:J
 
-    .line 43
     invoke-virtual {v0, v2, v3}, Lftl;->a(J)Lftl;
 
     move-result-object v0
 
-    .line 44
     invoke-virtual {v0, v1}, Lftl;->a(Ljava/lang/String;)Lftl;
 
     move-result-object v0
 
-    .line 45
     invoke-virtual {v0}, Lftl;->a()Lfti;
 
     move-result-object v0
 
-    .line 46
     iget-object v0, v0, Lfti;->a:Landroid/content/ContentValues;
 
-    .line 48
     iget-object v1, p0, Lfty;->d:Landroid/net/Uri;
 
     invoke-virtual {v1}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
@@ -254,7 +220,6 @@
 
     iget-object v2, p0, Lfty;->f:Landroid/net/Uri;
 
-    .line 49
     invoke-virtual {v2}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v2
@@ -263,14 +228,12 @@
 
     move-result-object v1
 
-    .line 50
     invoke-virtual {v1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-object v1
 
-    .line 51
     :try_start_2
     iget-object v2, p0, Lfty;->c:Landroid/content/ContentResolver;
 
@@ -282,12 +245,10 @@
 
     move-result v0
 
-    .line 52
     const/4 v2, 0x1
 
     if-ne v0, v2, :cond_2
 
-    .line 53
     iget-object v0, p0, Lfty;->a:Ljvi;
 
     invoke-virtual {v0, v1}, Ljsw;->a(Ljava/lang/Object;)Z
@@ -297,11 +258,9 @@
 
     goto :goto_0
 
-    .line 56
     :catch_0
     move-exception v0
 
-    .line 57
     :try_start_3
     sget-object v2, Lfty;->b:Ljava/lang/String;
 
@@ -328,7 +287,6 @@
     :goto_2
     invoke-static {v2, v1}, Lbhz;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 58
     iget-object v1, p0, Lfty;->a:Ljvi;
 
     invoke-virtual {v1, v0}, Ljsw;->a(Ljava/lang/Throwable;)Z
@@ -337,7 +295,6 @@
 
     goto/16 :goto_0
 
-    .line 23
     :catchall_0
     move-exception v0
 
@@ -345,7 +302,6 @@
 
     throw v0
 
-    .line 26
     :cond_1
     :try_start_4
     iget-object v0, p0, Lfty;->h:Ljava/lang/String;
@@ -356,7 +312,6 @@
 
     goto/16 :goto_1
 
-    .line 54
     :cond_2
     :try_start_5
     iget-object v0, p0, Lfty;->a:Ljvi;
@@ -372,7 +327,6 @@
 
     goto/16 :goto_0
 
-    .line 57
     :cond_3
     :try_start_6
     new-instance v1, Ljava/lang/String;
@@ -389,8 +343,6 @@
 .method public final a()J
     .locals 2
 
-    .prologue
-    .line 20
     iget-object v0, p0, Lfty;->f:Landroid/net/Uri;
 
     invoke-virtual {v0}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
@@ -407,8 +359,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 63
     check-cast p1, Lfua;
 
     invoke-direct {p0, p1}, Lfty;->a(Lfua;)V
@@ -419,24 +369,18 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 1
 
-    .prologue
-    .line 60
     invoke-virtual {p0}, Lfty;->e()Z
 
-    .line 61
     iget-object v0, p0, Lfty;->a:Ljvi;
 
     invoke-virtual {v0, p1}, Ljsw;->a(Ljava/lang/Throwable;)Z
 
-    .line 62
     return-void
 .end method
 
 .method public final b()Landroid/net/Uri;
     .locals 1
 
-    .prologue
-    .line 21
     iget-object v0, p0, Lfty;->f:Landroid/net/Uri;
 
     return-object v0
@@ -445,8 +389,6 @@
 .method public final c()Ljuw;
     .locals 1
 
-    .prologue
-    .line 22
     iget-object v0, p0, Lfty;->a:Ljvi;
 
     return-object v0
@@ -455,8 +397,6 @@
 .method public final d()Lgry;
     .locals 1
 
-    .prologue
-    .line 13
     iget-object v0, p0, Lfty;->i:Lgry;
 
     return-object v0
@@ -465,12 +405,10 @@
 .method public final declared-synchronized e()Z
     .locals 6
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 14
     monitor-enter p0
 
     :try_start_0
@@ -478,7 +416,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 15
     sget-object v1, Lfty;->b:Ljava/lang/String;
 
     const-string v2, "Was deleted already"
@@ -487,13 +424,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 19
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 17
     :cond_0
     :try_start_1
     iget-object v2, p0, Lfty;->c:Landroid/content/ContentResolver;
@@ -508,7 +443,6 @@
 
     move-result v2
 
-    .line 18
     if-ne v2, v1, :cond_1
 
     move v0, v1
@@ -516,14 +450,12 @@
     :cond_1
     iput-boolean v0, p0, Lfty;->j:Z
 
-    .line 19
     iget-boolean v0, p0, Lfty;->j:Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 14
     :catchall_0
     move-exception v0
 

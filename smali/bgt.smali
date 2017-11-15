@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,11 +15,8 @@
 .method public static a(Ljava/lang/Object;I)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 2
     if-nez p0, :cond_0
 
-    .line 3
     new-instance v0, Ljava/lang/NullPointerException;
 
     const/16 v1, 0x5d
@@ -48,7 +43,6 @@
 
     throw v0
 
-    .line 4
     :cond_0
     return-object p0
 .end method

@@ -14,11 +14,8 @@
 .method public constructor <init>(Ljxn;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lata;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -29,18 +26,14 @@
 
     iput-object v0, p0, Lata;->a:Ljxn;
 
-    .line 3
     return-void
 .end method
 
 .method private static a(Ljava/lang/Object;I)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 4
     if-nez p0, :cond_0
 
-    .line 5
     new-instance v0, Ljava/lang/NullPointerException;
 
     const/16 v1, 0x5d
@@ -67,7 +60,6 @@
 
     throw v0
 
-    .line 6
     :cond_0
     return-object p0
 .end method
@@ -77,14 +69,10 @@
 .method public final synthetic a(Lase;Lgdq;Liau;Ljht;Liau;)Lask;
     .locals 3
 
-    .prologue
-    .line 7
-    .line 8
     new-instance v1, Lasz;
 
     iget-object v0, p0, Lata;->a:Ljxn;
 
-    .line 9
     invoke-interface {v0}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -101,31 +89,25 @@
 
     const/4 v2, 0x2
 
-    .line 10
     invoke-static {p1, v2}, Lata;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     const/4 v2, 0x3
 
-    .line 11
     invoke-static {p2, v2}, Lata;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     const/4 v2, 0x4
 
-    .line 12
     invoke-static {p3, v2}, Lata;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     const/4 v2, 0x5
 
-    .line 13
     invoke-static {p4, v2}, Lata;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     const/4 v2, 0x6
 
-    .line 14
     invoke-static {p5, v2}, Lata;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     invoke-direct {v1, v0}, Lasz;-><init>(Lasf;)V
 
-    .line 15
     return-object v1
 .end method

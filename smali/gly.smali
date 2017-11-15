@@ -25,15 +25,11 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgly;->a:Lglx;
 
     check-cast p1, Lgys;
 
-    .line 2
     invoke-virtual {v0, p1}, Lglx;->a(Lgys;)V
 
-    .line 3
     return-void
 .end method

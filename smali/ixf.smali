@@ -10,13 +10,10 @@
 .method public constructor <init>(Landroid/graphics/Bitmap;)V
     .locals 1
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Ljgo;-><init>(Ljava/lang/Object;B)V
 
-    .line 2
     return-void
 .end method
 
@@ -25,8 +22,6 @@
 .method public final a()I
     .locals 1
 
-    .prologue
-    .line 3
     invoke-virtual {p0}, Lixf;->e()Ljava/lang/Object;
 
     move-result-object v0
@@ -46,8 +41,6 @@
 .method protected bridge synthetic a(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 6
     check-cast p1, Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, p1}, Lixf;->a(Landroid/graphics/Bitmap;)V
@@ -58,8 +51,6 @@
 .method public final b()I
     .locals 1
 
-    .prologue
-    .line 4
     invoke-virtual {p0}, Lixf;->e()Ljava/lang/Object;
 
     move-result-object v0
@@ -76,8 +67,6 @@
 .method public final c()I
     .locals 1
 
-    .prologue
-    .line 5
     invoke-virtual {p0}, Lixf;->e()Ljava/lang/Object;
 
     move-result-object v0

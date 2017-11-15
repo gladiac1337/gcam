@@ -34,8 +34,6 @@
 .method constructor <init>(Lgnq;JLgom;Lcom/google/googlex/gcam/InterleavedImageU8;Lcom/google/googlex/gcam/GoudaRequest;Lcom/google/googlex/gcam/InterleavedImageU16;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgns;->f:Lgnq;
 
     iput-wide p2, p0, Lgns;->g:J
@@ -58,16 +56,12 @@
 .method public final a()Ljuw;
     .locals 10
 
-    .prologue
-    .line 2
     new-instance v3, Ljvi;
 
     invoke-direct {v3}, Ljvi;-><init>()V
 
-    .line 4
     sget-object v0, Lgnq;->a:Ljava/lang/String;
 
-    .line 5
     iget-wide v4, p0, Lgns;->g:J
 
     const/16 v1, 0x24
@@ -92,13 +86,10 @@
 
     invoke-static {v0, v1}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
     iget-object v0, p0, Lgns;->f:Lgnq;
 
-    .line 7
     iget-object v9, v0, Lgnq;->b:Ljava/util/concurrent/Executor;
 
-    .line 8
     new-instance v0, Lgnt;
 
     iget-object v2, p0, Lgns;->h:Lgom;
@@ -117,15 +108,12 @@
 
     invoke-interface {v9, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 9
     return-object v3
 .end method
 
 .method public final b()Ljuw;
     .locals 1
 
-    .prologue
-    .line 10
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;

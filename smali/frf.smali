@@ -20,34 +20,28 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
     const/16 v1, 0x26
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lfrf;->a:Ljava/util/ArrayList;
 
-    .line 3
     new-array v0, v1, [F
 
     fill-array-data v0, :array_0
 
     iput-object v0, p0, Lfrf;->b:[F
 
-    .line 4
     new-array v0, v1, [F
 
     fill-array-data v0, :array_1
 
     iput-object v0, p0, Lfrf;->c:[F
 
-    .line 5
     new-array v0, v1, [F
 
     fill-array-data v0, :array_2
@@ -56,7 +50,6 @@
 
     return-void
 
-    .line 3
     :array_0
     .array-data 4
         -0x409b4e87
@@ -99,7 +92,6 @@
         -0x409b4e87
     .end array-data
 
-    .line 4
     :array_1
     .array-data 4
         0x0
@@ -142,7 +134,6 @@
         0x0
     .end array-data
 
-    .line 5
     :array_2
     .array-data 4
         0x3f000000    # 0.5f
@@ -191,28 +182,22 @@
 .method public final a(FLfpg;[FII)V
     .locals 10
 
-    .prologue
     const/high16 v1, 0x40000000    # 2.0f
 
-    .line 6
     if-nez p2, :cond_1
 
-    .line 30
     :cond_0
     return-void
 
-    .line 8
     :cond_1
     int-to-float v0, p4
 
     div-float v2, v0, v1
 
-    .line 9
     int-to-float v0, p5
 
     div-float v3, v0, v1
 
-    .line 10
     invoke-static {v2, v3}, Ljava/lang/Math;->min(FF)F
 
     move-result v0
@@ -221,42 +206,34 @@
 
     mul-float v4, v0, v1
 
-    .line 11
     iget-object v0, p0, Lfrf;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 12
     iget-object v0, p0, Lfrf;->b:[F
 
     array-length v5, v0
 
-    .line 13
     new-instance v6, Landroid/graphics/PointF;
 
     invoke-direct {v6}, Landroid/graphics/PointF;-><init>()V
 
-    .line 15
     iget-object v0, p2, Lfpg;->e:Lfpp;
 
     if-eqz v0, :cond_2
 
-    .line 16
     iget-object v0, p2, Lfpg;->e:Lfpp;
 
-    .line 17
     iget v0, v0, Lfoe;->d:I
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 18
     iget-object v0, p2, Lfpg;->e:Lfpp;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {v0, v1}, Lfpp;->a(F)V
 
-    .line 19
     :cond_2
     const/4 v0, 0x0
 
@@ -265,7 +242,6 @@
     :goto_0
     if-ge v1, v5, :cond_0
 
-    .line 20
     iget-object v0, p0, Lfrf;->b:[F
 
     aget v0, v0, v1
@@ -278,7 +254,6 @@
 
     iput v0, v6, Landroid/graphics/PointF;->x:F
 
-    .line 21
     iget-object v0, p0, Lfrf;->c:[F
 
     aget v0, v0, v1
@@ -291,7 +266,6 @@
 
     iput v0, v6, Landroid/graphics/PointF;->y:F
 
-    .line 22
     iget-object v0, p0, Lfrf;->d:[F
 
     aget v0, v0, v1
@@ -300,7 +274,6 @@
 
     mul-float/2addr v0, v7
 
-    .line 23
     iget-object v7, p2, Lfpg;->b:Lfoh;
 
     if-eqz v7, :cond_3
@@ -309,7 +282,6 @@
 
     if-nez v7, :cond_4
 
-    .line 29
     :cond_3
     :goto_1
     add-int/lit8 v0, v1, 0x1
@@ -318,7 +290,6 @@
 
     goto :goto_0
 
-    .line 25
     :cond_4
     :try_start_0
     iget-object v7, p2, Lfpg;->b:Lfoh;
@@ -333,11 +304,9 @@
 
     goto :goto_1
 
-    .line 27
     :catch_0
     move-exception v0
 
-    .line 28
     sget-object v7, Ljvs;->a:Ljvt;
 
     invoke-virtual {v7, v0}, Ljvt;->b(Ljava/lang/Throwable;)V

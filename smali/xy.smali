@@ -19,27 +19,20 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x0
 
     iput-object v0, p0, Lxy;->a:Ljava/lang/String;
 
-    .line 3
     iput v1, p0, Lxy;->b:I
 
-    .line 4
     iput v1, p0, Lxy;->c:I
 
-    .line 5
     iput v1, p0, Lxy;->d:I
 
-    .line 6
     iput v1, p0, Lxy;->e:I
 
     return-void

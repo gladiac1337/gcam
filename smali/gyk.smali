@@ -25,16 +25,12 @@
 .method public final onDismiss()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgyk;->a:Lgyh;
 
-    .line 2
     iget-object v1, v0, Lgyh;->s:Ljava/util/List;
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v0, v0, Lgyh;->s:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -54,7 +50,6 @@
 
     check-cast v0, Landroid/util/Pair;
 
-    .line 4
     iget-object v1, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v1, Ljava/util/concurrent/Executor;
@@ -67,7 +62,6 @@
 
     goto :goto_0
 
-    .line 6
     :cond_0
     return-void
 .end method

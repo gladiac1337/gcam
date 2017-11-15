@@ -16,8 +16,6 @@
 .method public constructor <init>(Lijh;Libx;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Liji;->a:Lijh;
 
     iput-object p2, p0, Liji;->b:Libx;
@@ -32,15 +30,10 @@
 .method public final synthetic a(Ljava/util/Set;)Ljava/lang/Object;
     .locals 9
 
-    .prologue
-    .line 2
-    .line 3
     const/4 v2, 0x0
 
-    .line 4
     const v1, 0x7f7fffff    # Float.MAX_VALUE
 
-    .line 5
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -58,7 +51,6 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    .line 6
     iget-object v4, p0, Liji;->a:Lijh;
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
@@ -69,7 +61,6 @@
 
     move-result-object v4
 
-    .line 7
     if-eqz v4, :cond_2
 
     invoke-virtual {v4}, Ljava/lang/Float;->floatValue()F
@@ -80,7 +71,6 @@
 
     if-gez v5, :cond_2
 
-    .line 8
     invoke-virtual {v4}, Ljava/lang/Float;->floatValue()F
 
     move-result v1
@@ -96,18 +86,14 @@
 
     move v1, v0
 
-    .line 10
     goto :goto_0
 
-    .line 11
     :cond_0
     if-eqz v2, :cond_1
 
-    .line 14
     :goto_2
     return-object v2
 
-    .line 13
     :cond_1
     iget-object v0, p0, Liji;->b:Libx;
 
@@ -119,7 +105,6 @@
 
     move-object v2, v0
 
-    .line 14
     goto :goto_2
 
     :cond_2

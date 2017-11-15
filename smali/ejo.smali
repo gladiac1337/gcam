@@ -23,7 +23,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -34,7 +33,6 @@
 
     const/4 v3, 0x0
 
-    .line 3
     new-instance v0, Lejo;
 
     const-string v1, "CREATE_EARLY_FILMSTRIP_PREVIEW"
@@ -43,7 +41,6 @@
 
     sput-object v0, Lejo;->a:Lejo;
 
-    .line 4
     new-instance v0, Lejo;
 
     const-string v1, "COMPRESS_TO_JPEG_AND_WRITE_TO_DISK"
@@ -52,7 +49,6 @@
 
     sput-object v0, Lejo;->b:Lejo;
 
-    .line 5
     new-instance v0, Lejo;
 
     const-string v1, "COMPRESS_TO_MARKED_JPEG_AND_WRITE_TO_DISK"
@@ -61,7 +57,6 @@
 
     sput-object v0, Lejo;->c:Lejo;
 
-    .line 6
     new-instance v0, Lejo;
 
     const-string v1, "CONVERT_TO_RGB_PREVIEW"
@@ -70,7 +65,6 @@
 
     sput-object v0, Lejo;->d:Lejo;
 
-    .line 7
     new-instance v0, Lejo;
 
     const-string v1, "BLOCK_UNTIL_ALL_TASKS_RELEASE"
@@ -79,7 +73,6 @@
 
     sput-object v0, Lejo;->e:Lejo;
 
-    .line 8
     new-instance v0, Lejo;
 
     const-string v1, "CLOSE_ON_ALL_TASKS_RELEASE"
@@ -90,7 +83,6 @@
 
     sput-object v0, Lejo;->f:Lejo;
 
-    .line 9
     const/4 v0, 0x6
 
     new-array v0, v0, [Lejo;
@@ -129,8 +121,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -139,8 +129,6 @@
 .method public static values()[Lejo;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lejo;->g:[Lejo;
 
     invoke-virtual {v0}, [Lejo;->clone()Ljava/lang/Object;

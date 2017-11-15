@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lgqa;->a:Lgqa;
 
     sput-object v0, Lgeg;->a:Lgqa;

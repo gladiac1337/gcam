@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 22
     const/4 v0, 0x0
 
     invoke-static {v0}, Larq;->a(I)Ljava/util/Queue;
@@ -35,26 +33,20 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 12
     return-void
 .end method
 
 .method public static a(Ljava/lang/Object;)Laku;
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 1
     sget-object v1, Laku;->a:Ljava/util/Queue;
 
     monitor-enter v1
 
-    .line 2
     :try_start_0
     sget-object v0, Laku;->a:Ljava/util/Queue;
 
@@ -64,33 +56,25 @@
 
     check-cast v0, Laku;
 
-    .line 3
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4
     if-nez v0, :cond_0
 
-    .line 5
     new-instance v0, Laku;
 
     invoke-direct {v0}, Laku;-><init>()V
 
-    .line 7
     :cond_0
     iput-object p0, v0, Laku;->d:Ljava/lang/Object;
 
-    .line 8
     iput v2, v0, Laku;->c:I
 
-    .line 9
     iput v2, v0, Laku;->b:I
 
-    .line 10
     return-object v0
 
-    .line 3
     :catchall_0
     move-exception v0
 
@@ -107,19 +91,15 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 13
     sget-object v1, Laku;->a:Ljava/util/Queue;
 
     monitor-enter v1
 
-    .line 14
     :try_start_0
     sget-object v0, Laku;->a:Ljava/util/Queue;
 
     invoke-interface {v0, p0}, Ljava/util/Queue;->offer(Ljava/lang/Object;)Z
 
-    .line 15
     monitor-exit v1
 
     return-void
@@ -137,18 +117,14 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 16
     instance-of v1, p1, Laku;
 
     if-eqz v1, :cond_0
 
-    .line 17
     check-cast p1, Laku;
 
-    .line 18
     iget-object v1, p0, Laku;->d:Ljava/lang/Object;
 
     iget-object v2, p1, Laku;->d:Ljava/lang/Object;
@@ -161,7 +137,6 @@
 
     const/4 v0, 0x1
 
-    .line 19
     :cond_0
     return v0
 .end method
@@ -169,8 +144,6 @@
 .method public final hashCode()I
     .locals 1
 
-    .prologue
-    .line 20
     iget-object v0, p0, Laku;->d:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -179,6 +152,5 @@
 
     add-int/lit8 v0, v0, 0x0
 
-    .line 21
     return v0
 .end method

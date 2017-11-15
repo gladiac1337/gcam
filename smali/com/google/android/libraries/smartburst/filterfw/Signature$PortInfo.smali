@@ -13,40 +13,30 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/Signature$PortInfo;->flags:I
 
-    .line 3
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->any()Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/Signature$PortInfo;->type:Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
-    .line 4
     return-void
 .end method
 
 .method public constructor <init>(ILcom/google/android/libraries/smartburst/filterfw/FrameType;)V
     .locals 0
 
-    .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
     iput p1, p0, Lcom/google/android/libraries/smartburst/filterfw/Signature$PortInfo;->flags:I
 
-    .line 7
     iput-object p2, p0, Lcom/google/android/libraries/smartburst/filterfw/Signature$PortInfo;->type:Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
-    .line 8
     return-void
 .end method
 
@@ -55,8 +45,6 @@
 .method public isRequired()Z
     .locals 1
 
-    .prologue
-    .line 9
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/Signature$PortInfo;->flags:I
 
     and-int/lit8 v0, v0, 0x2
@@ -77,8 +65,6 @@
 .method public toString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 10
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -121,7 +107,6 @@
 
     move-result-object v1
 
-    .line 11
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/Signature$PortInfo;->isRequired()Z
 
     move-result v0
@@ -130,7 +115,6 @@
 
     const-string v0, "required"
 
-    .line 12
     :goto_0
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/Signature$PortInfo;->type:Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
@@ -202,7 +186,6 @@
 
     return-object v0
 
-    .line 11
     :cond_0
     const-string v0, "optional"
 

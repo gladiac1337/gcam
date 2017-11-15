@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 93
     const-string v0, "FaceDetector"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -37,32 +35,24 @@
 .method public constructor <init>(Landroid/content/Context;Lbhn;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/google/android/apps/refocus/processing/FaceDetector;->context:Landroid/content/Context;
 
-    .line 3
     iput-object p2, p0, Lcom/google/android/apps/refocus/processing/FaceDetector;->gservicesHelper:Lbhn;
 
-    .line 4
     return-void
 .end method
 
 .method private findLargestFace(Landroid/graphics/Bitmap;)Lcom/google/android/vision/face/Face;
     .locals 9
 
-    .prologue
     const/4 v7, 0x2
 
     const/4 v6, 0x0
 
     const/4 v1, 0x0
 
-    .line 35
-    .line 36
     :try_start_0
     new-instance v0, Lcom/google/android/vision/face/DetectorFactory;
 
@@ -70,7 +60,6 @@
 
     invoke-direct {v0, v2}, Lcom/google/android/vision/face/DetectorFactory;-><init>(Landroid/content/Context;)V
 
-    .line 38
     iget-object v2, v0, Lcom/google/android/vision/face/DetectorFactory;->b:Lcom/google/android/vision/face/Detector$Settings;
 
     invoke-virtual {v2}, Lcom/google/android/vision/face/Detector$Settings;->getDetectionSettings()Lcom/google/android/vision/face/Detector$DetectionSettings;
@@ -81,7 +70,6 @@
 
     invoke-virtual {v2, v3}, Lcom/google/android/vision/face/Detector$DetectionSettings;->setDetectorType(I)V
 
-    .line 41
     iget-object v2, v0, Lcom/google/android/vision/face/DetectorFactory;->b:Lcom/google/android/vision/face/Detector$Settings;
 
     invoke-virtual {v2}, Lcom/google/android/vision/face/Detector$Settings;->getDetectionSettings()Lcom/google/android/vision/face/Detector$DetectionSettings;
@@ -92,7 +80,6 @@
 
     invoke-virtual {v2, v3}, Lcom/google/android/vision/face/Detector$DetectionSettings;->setLandmarkDetectorType(I)V
 
-    .line 44
     iget-object v2, v0, Lcom/google/android/vision/face/DetectorFactory;->b:Lcom/google/android/vision/face/Detector$Settings;
 
     invoke-virtual {v2}, Lcom/google/android/vision/face/Detector$Settings;->getDetectionSettings()Lcom/google/android/vision/face/Detector$DetectionSettings;
@@ -103,7 +90,6 @@
 
     invoke-virtual {v2, v3}, Lcom/google/android/vision/face/Detector$DetectionSettings;->setProportionalMinFaceSize(F)V
 
-    .line 47
     iget-object v2, v0, Lcom/google/android/vision/face/DetectorFactory;->b:Lcom/google/android/vision/face/Detector$Settings;
 
     invoke-virtual {v2}, Lcom/google/android/vision/face/Detector$Settings;->getDetectionSettings()Lcom/google/android/vision/face/Detector$DetectionSettings;
@@ -114,61 +100,50 @@
 
     invoke-virtual {v2, v3}, Lcom/google/android/vision/face/Detector$DetectionSettings;->setMaxNumFaces(I)V
 
-    .line 49
     invoke-virtual {v0}, Lcom/google/android/vision/face/DetectorFactory;->a()Lcom/google/android/vision/face/DetectorFactory;
 
     move-result-object v0
 
-    .line 52
     iget-object v2, v0, Lcom/google/android/vision/face/DetectorFactory;->b:Lcom/google/android/vision/face/Detector$Settings;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Lcom/google/android/vision/face/Detector$Settings;->setModelFilesLocation(I)V
 
-    .line 53
     iget-object v2, v0, Lcom/google/android/vision/face/DetectorFactory;->b:Lcom/google/android/vision/face/Detector$Settings;
 
     invoke-virtual {v2}, Lcom/google/android/vision/face/Detector$Settings;->getClassificationSettings()Lcom/google/android/vision/face/Detector$ClassificationSettings;
 
     move-result-object v2
 
-    .line 54
     invoke-virtual {v2}, Lcom/google/android/vision/face/Detector$ClassificationSettings;->classifyingEyesOpen()Z
 
     move-result v3
 
-    .line 55
     invoke-virtual {v2}, Lcom/google/android/vision/face/Detector$ClassificationSettings;->classifyingSmiling()Z
 
     move-result v2
 
-    .line 56
     iget-object v4, v0, Lcom/google/android/vision/face/DetectorFactory;->b:Lcom/google/android/vision/face/Detector$Settings;
 
     invoke-virtual {v4}, Lcom/google/android/vision/face/Detector$Settings;->getDetectionSettings()Lcom/google/android/vision/face/Detector$DetectionSettings;
 
     move-result-object v4
 
-    .line 57
     invoke-virtual {v4}, Lcom/google/android/vision/face/Detector$DetectionSettings;->getLandmarkDetectorType()I
 
     move-result v5
 
-    .line 58
     if-eqz v3, :cond_2
 
     if-nez v2, :cond_2
 
-    .line 59
     if-nez v5, :cond_0
 
-    .line 60
     const/4 v2, 0x2
 
     invoke-virtual {v4, v2}, Lcom/google/android/vision/face/Detector$DetectionSettings;->setLandmarkDetectorType(I)V
 
-    .line 64
     :cond_0
     :goto_0
     iget-object v2, v0, Lcom/google/android/vision/face/DetectorFactory;->a:Landroid/content/Context;
@@ -181,7 +156,6 @@
 
     if-nez v2, :cond_5
 
-    .line 65
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v2, "APK lacks required face model files.  Execute the \'setup_project\' script from the SDK to add model files to your app."
@@ -195,13 +169,11 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 72
     :catch_0
     move-exception v0
 
     move-object v2, v1
 
-    .line 73
     :goto_1
     :try_start_1
     sget-object v3, Lcom/google/android/apps/refocus/processing/FaceDetector;->TAG:Ljava/lang/String;
@@ -212,29 +184,23 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 74
     if-eqz v2, :cond_1
 
-    .line 75
     invoke-virtual {v2}, Lcom/google/android/vision/face/Detector;->release()V
 
     :cond_1
     move-object v0, v1
 
-    .line 92
     :goto_2
     return-object v0
 
-    .line 61
     :cond_2
     if-eqz v2, :cond_0
 
-    .line 62
     if-eqz v5, :cond_3
 
     if-ne v5, v7, :cond_0
 
-    .line 63
     :cond_3
     const/4 v2, 0x1
 
@@ -248,13 +214,11 @@
 
     goto :goto_0
 
-    .line 77
     :catch_1
     move-exception v0
 
     move-object v2, v1
 
-    .line 78
     :goto_3
     :try_start_3
     sget-object v3, Lcom/google/android/apps/refocus/processing/FaceDetector;->TAG:Ljava/lang/String;
@@ -265,19 +229,15 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 79
     if-eqz v2, :cond_4
 
-    .line 80
     invoke-virtual {v2}, Lcom/google/android/vision/face/Detector;->release()V
 
     :cond_4
     move-object v0, v1
 
-    .line 81
     goto :goto_2
 
-    .line 66
     :cond_5
     :try_start_4
     new-instance v2, Lcom/google/android/vision/face/Detector;
@@ -288,12 +248,10 @@
 
     invoke-direct {v2, v3, v0}, Lcom/google/android/vision/face/Detector;-><init>(Landroid/content/Context;Lcom/google/android/vision/face/Detector$Settings;)V
 
-    .line 67
     new-instance v0, Lcom/google/android/vision/face/ImmediateDetectorFuture;
 
     invoke-direct {v0, v2}, Lcom/google/android/vision/face/ImmediateDetectorFuture;-><init>(Lcom/google/android/vision/face/Detector;)V
 
-    .line 68
     invoke-interface {v0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -305,7 +263,6 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_4 .. :try_end_4} :catch_2
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 69
     :try_start_5
     invoke-virtual {v0, p1}, Lcom/google/android/vision/face/Detector;->detectFaces(Landroid/graphics/Bitmap;)Ljava/util/List;
     :try_end_5
@@ -316,13 +273,10 @@
 
     move-result-object v2
 
-    .line 70
     if-eqz v0, :cond_6
 
-    .line 71
     invoke-virtual {v0}, Lcom/google/android/vision/face/Detector;->release()V
 
-    .line 89
     :cond_6
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
 
@@ -330,7 +284,6 @@
 
     if-eqz v0, :cond_9
 
-    .line 90
     sget-object v0, Lcom/google/android/apps/refocus/processing/FaceDetector;->TAG:Ljava/lang/String;
 
     const-string v2, "No face detected."
@@ -339,16 +292,13 @@
 
     move-object v0, v1
 
-    .line 91
     goto :goto_2
 
-    .line 82
     :catch_2
     move-exception v0
 
     move-object v2, v1
 
-    .line 83
     :goto_4
     :try_start_6
     sget-object v3, Lcom/google/android/apps/refocus/processing/FaceDetector;->TAG:Ljava/lang/String;
@@ -359,32 +309,26 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 84
     if-eqz v2, :cond_7
 
-    .line 85
     invoke-virtual {v2}, Lcom/google/android/vision/face/Detector;->release()V
 
     :cond_7
     move-object v0, v1
 
-    .line 86
     goto :goto_2
 
-    .line 87
     :catchall_0
     move-exception v0
 
     :goto_5
     if-eqz v1, :cond_8
 
-    .line 88
     invoke-virtual {v1}, Lcom/google/android/vision/face/Detector;->release()V
 
     :cond_8
     throw v0
 
-    .line 92
     :cond_9
     invoke-interface {v2, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -394,7 +338,6 @@
 
     goto :goto_2
 
-    .line 87
     :catchall_1
     move-exception v1
 
@@ -413,7 +356,6 @@
 
     goto :goto_5
 
-    .line 82
     :catch_3
     move-exception v2
 
@@ -425,7 +367,6 @@
 
     goto :goto_4
 
-    .line 77
     :catch_4
     move-exception v2
 
@@ -437,7 +378,6 @@
 
     goto :goto_3
 
-    .line 72
     :catch_5
     move-exception v2
 
@@ -453,33 +393,26 @@
 .method private scaleDown(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
     .locals 4
 
-    .prologue
-    .line 25
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
-    .line 26
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
 
-    .line 27
     invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v2
 
     if-gt v2, p2, :cond_0
 
-    .line 34
     :goto_0
     return-object p1
 
-    .line 29
     :cond_0
     if-le v0, v1, :cond_1
 
-    .line 30
     mul-int/2addr v1, p2
 
     div-int v0, v1, v0
@@ -490,7 +423,6 @@
 
     move p2, v3
 
-    .line 34
     :goto_1
     const/4 v1, 0x0
 
@@ -500,7 +432,6 @@
 
     goto :goto_0
 
-    .line 32
     :cond_1
     mul-int/2addr v0, p2
 
@@ -514,15 +445,12 @@
 .method computeFaceFocus(Lcom/google/android/apps/refocus/image/RGBZ;Lcom/google/android/apps/refocus/processing/FocusSettings;)Z
     .locals 5
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 5
     iget-object v2, p0, Lcom/google/android/apps/refocus/processing/FaceDetector;->gservicesHelper:Lbhn;
 
-    .line 6
     iget-object v3, v2, Lbhn;->a:Landroid/content/ContentResolver;
 
     const-string v4, "camera:refocus_face_enabled"
@@ -531,22 +459,18 @@
 
     move-result v2
 
-    .line 7
     if-nez v2, :cond_1
 
-    .line 8
     sget-object v1, Lcom/google/android/apps/refocus/processing/FaceDetector;->TAG:Ljava/lang/String;
 
     const-string v2, "Refocus face detection is disabled."
 
     invoke-static {v1, v2}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 24
     :cond_0
     :goto_0
     return v0
 
-    .line 10
     :cond_1
     invoke-virtual {p1}, Lcom/google/android/apps/refocus/image/RGBZ;->hasDepthmap()Z
 
@@ -554,7 +478,6 @@
 
     if-nez v2, :cond_2
 
-    .line 11
     sget-object v1, Lcom/google/android/apps/refocus/processing/FaceDetector;->TAG:Ljava/lang/String;
 
     const-string v2, "No depthmap set for supplied rgbz"
@@ -563,7 +486,6 @@
 
     goto :goto_0
 
-    .line 13
     :cond_2
     invoke-virtual {p1}, Lcom/google/android/apps/refocus/image/RGBZ;->getBitmap()Landroid/graphics/Bitmap;
 
@@ -575,20 +497,16 @@
 
     move-result-object v2
 
-    .line 14
     invoke-direct {p0, v2}, Lcom/google/android/apps/refocus/processing/FaceDetector;->findLargestFace(Landroid/graphics/Bitmap;)Lcom/google/android/vision/face/Face;
 
     move-result-object v3
 
-    .line 15
     if-eqz v3, :cond_0
 
-    .line 17
     invoke-virtual {v3}, Lcom/google/android/vision/face/Face;->getPosition()Landroid/graphics/PointF;
 
     move-result-object v0
 
-    .line 18
     iget v3, v0, Landroid/graphics/PointF;->x:F
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
@@ -601,7 +519,6 @@
 
     iput v3, p2, Lcom/google/android/apps/refocus/processing/FocusSettings;->focalPointX:F
 
-    .line 19
     iget v0, v0, Landroid/graphics/PointF;->y:F
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
@@ -614,7 +531,6 @@
 
     iput v0, p2, Lcom/google/android/apps/refocus/processing/FocusSettings;->focalPointY:F
 
-    .line 21
     invoke-virtual {p1}, Lcom/google/android/apps/refocus/image/RGBZ;->getWidth()I
 
     move-result v0
@@ -627,7 +543,6 @@
 
     float-to-int v0, v0
 
-    .line 22
     invoke-virtual {p1}, Lcom/google/android/apps/refocus/image/RGBZ;->getHeight()I
 
     move-result v2
@@ -640,7 +555,6 @@
 
     float-to-int v2, v2
 
-    .line 23
     invoke-virtual {p1, v0, v2}, Lcom/google/android/apps/refocus/image/RGBZ;->getDepth(II)F
 
     move-result v0
@@ -649,6 +563,5 @@
 
     move v0, v1
 
-    .line 24
     goto :goto_0
 .end method

@@ -14,8 +14,6 @@
 .method constructor <init>(Ldkz;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldla;->a:Ldkz;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,12 +26,8 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 3
 
-    .prologue
-    .line 2
-    .line 3
     iget-object v0, p0, Ldla;->a:Ldkz;
 
-    .line 5
     iget-object v1, v0, Ldkz;->d:Laxq;
 
     new-instance v2, Ldle;
@@ -42,6 +36,5 @@
 
     invoke-virtual {v1, v2}, Laxq;->execute(Ljava/lang/Runnable;)V
 
-    .line 6
     return-void
 .end method

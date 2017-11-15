@@ -21,8 +21,6 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     new-instance v0, Ljava/util/HashSet;
@@ -83,10 +81,8 @@
 .method public final a(Lhry;)Lhry;
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-virtual {p0}, Lhsl;->d()Z
 
     move-result v0
@@ -95,27 +91,22 @@
 
     invoke-interface {v1, p1}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
 
-    .line 5
     :goto_0
     return-object p1
 
-    .line 1
     :cond_0
     iget-object v0, v1, Lhte;->h:Lhpp;
 
     invoke-virtual {v0, p1}, Lhpp;->a(Lhsb;)V
 
-    .line 2
     iget-object v0, p1, Lhry;->e:Lhkh;
 
-    .line 3
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lhsk;
 
-    .line 4
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1, p1}, Lhkv;->a(ILhry;)Lhry;
@@ -128,10 +119,8 @@
 .method public final a()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 11
     invoke-interface {v4}, Ljava/util/concurrent/locks/Lock;->lock()V
 
     :try_start_0
@@ -143,11 +132,9 @@
 
     invoke-interface {v4}, Ljava/util/concurrent/locks/Lock;->unlock()V
 
-    .line 24
     :goto_0
     return-void
 
-    .line 11
     :cond_0
     const/4 v0, 0x1
 
@@ -172,7 +159,6 @@
 
     move-result-object v0
 
-    .line 12
     new-instance v1, Lhrv;
 
     invoke-direct {v1, v0}, Lhrv;-><init>(Ljava/lang/Iterable;)V
@@ -198,10 +184,8 @@
 
     iget-object v3, v3, Lhtm;->g:Ljava/util/Map;
 
-    .line 13
     iget-object v0, v0, Lhkv;->b:Lhru;
 
-    .line 14
     invoke-interface {v3, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -233,13 +217,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 15
     iget-object v0, v1, Lhrv;->b:Lhvp;
 
-    .line 16
     iget-object v0, v0, Lhvp;->a:Lhvt;
 
-    .line 22
     :goto_1
     new-instance v1, Lhpr;
 
@@ -249,10 +230,8 @@
 
     new-instance v2, Lhsm;
 
-    .line 23
     invoke-direct {v2, p0}, Lhsm;-><init>(Lhsl;)V
 
-    .line 24
     invoke-virtual {v0, v1, v2}, Lhvo;->a(Ljava/util/concurrent/Executor;Lhvn;)Lhvo;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -261,24 +240,20 @@
 
     goto :goto_0
 
-    .line 18
     :cond_3
     :try_start_2
     iget-object v0, v1, Lhrv;->b:Lhvp;
 
     invoke-virtual {v0}, Lhvp;->a()V
 
-    .line 20
     iget-object v0, v1, Lhrv;->b:Lhvp;
 
-    .line 21
     iget-object v0, v0, Lhvp;->a:Lhvt;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     goto :goto_1
 
-    .line 24
     :catchall_0
     move-exception v0
 
@@ -367,14 +342,10 @@
 .method public final b(Lhry;)Lhry;
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 6
-    .line 7
     iget-object v0, p1, Lhry;->e:Lhkh;
 
-    .line 8
     iget-object v1, v2, Lhte;->h:Lhpp;
 
     invoke-virtual {v1, p1}, Lhpp;->a(Lhsb;)V
@@ -385,14 +356,12 @@
 
     check-cast v0, Lhsk;
 
-    .line 9
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1, p1}, Lhkv;->a(ILhry;)Lhry;
 
     move-result-object v0
 
-    .line 10
     return-object v0
 .end method
 
@@ -504,12 +473,10 @@
 .method public final e()Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
     .locals 10
 
-    .prologue
     const/4 v3, 0x0
 
     const/4 v4, 0x0
 
-    .line 26
     new-instance v0, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
 
     new-instance v2, Ljava/util/ArrayList;
@@ -520,7 +487,6 @@
 
     iget-object v9, p0, Lhsl;->e:Ljava/util/Map;
 
-    .line 27
     const/4 v1, 0x3
 
     move v5, v4
@@ -533,6 +499,5 @@
 
     invoke-direct/range {v0 .. v9}, Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;-><init>(ILjava/util/ArrayList;Landroid/accounts/Account;ZZZLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
-    .line 28
     return-object v0
 .end method

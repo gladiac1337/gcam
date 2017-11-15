@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-static {}, Landroid/support/v8/renderscript/Element$DataKind;->values()[Landroid/support/v8/renderscript/Element$DataKind;
 
     move-result-object v0
@@ -72,7 +70,6 @@
     :try_end_2
     .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_b
 
-    .line 2
     :goto_2
     invoke-static {}, Landroid/support/v8/renderscript/Element$DataType;->values()[Landroid/support/v8/renderscript/Element$DataType;
 

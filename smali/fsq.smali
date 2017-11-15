@@ -27,31 +27,22 @@
 .method private constructor <init>(Lijl;)V
     .locals 2
 
-    .prologue
     const-wide/16 v0, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-wide v0, p0, Lfsq;->a:J
 
-    .line 3
     iput-wide v0, p0, Lfsq;->b:J
 
-    .line 4
     iput-wide v0, p0, Lfsq;->c:J
 
-    .line 5
     iput-wide v0, p0, Lfsq;->d:J
 
-    .line 6
     iput-wide v0, p0, Lfsq;->e:J
 
-    .line 7
     iput-wide v0, p0, Lfsq;->f:J
 
-    .line 8
     new-instance v0, Lfsu;
 
     new-instance v1, Lfsr;
@@ -62,20 +53,16 @@
 
     iput-object v0, p0, Lfsq;->g:Lfsu;
 
-    .line 9
     return-void
 .end method
 
 .method public static a()Lfsq;
     .locals 2
 
-    .prologue
-    .line 10
     sget-object v0, Lfsq;->h:Lfsq;
 
     if-nez v0, :cond_0
 
-    .line 11
     new-instance v0, Lfsq;
 
     new-instance v1, Lijl;
@@ -86,7 +73,6 @@
 
     sput-object v0, Lfsq;->h:Lfsq;
 
-    .line 12
     :cond_0
     sget-object v0, Lfsq;->h:Lfsq;
 

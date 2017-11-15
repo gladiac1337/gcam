@@ -37,8 +37,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 61
     const-string v0, "ActivityLifetime"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -53,21 +51,16 @@
 .method private constructor <init>(Lflp;)V
     .locals 2
 
-    .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     iput-object p1, p0, Lflk;->c:Lflp;
 
-    .line 6
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lflk;->b:Ljava/lang/Object;
 
-    .line 7
     iget-object v0, p0, Lflk;->c:Lflp;
 
     invoke-interface {v0}, Lflp;->d()Lhzr;
@@ -76,7 +69,6 @@
 
     iput-object v0, p0, Lflk;->f:Lhzr;
 
-    .line 8
     iget-object v0, p0, Lflk;->c:Lflp;
 
     iget-object v1, p0, Lflk;->f:Lhzr;
@@ -87,7 +79,6 @@
 
     iput-object v0, p0, Lflk;->e:Lhzr;
 
-    .line 9
     iget-object v0, p0, Lflk;->c:Lflp;
 
     iget-object v1, p0, Lflk;->e:Lhzr;
@@ -98,7 +89,6 @@
 
     iput-object v0, p0, Lflk;->d:Lhzr;
 
-    .line 10
     iget-object v0, p0, Lflk;->f:Lhzr;
 
     new-instance v1, Laxg;
@@ -113,7 +103,6 @@
 
     iput-object v0, p0, Lflk;->i:Laxg;
 
-    .line 11
     iget-object v0, p0, Lflk;->e:Lhzr;
 
     new-instance v1, Laxg;
@@ -128,7 +117,6 @@
 
     iput-object v0, p0, Lflk;->h:Laxg;
 
-    .line 12
     iget-object v0, p0, Lflk;->d:Lhzr;
 
     new-instance v1, Laxg;
@@ -143,23 +131,18 @@
 
     iput-object v0, p0, Lflk;->g:Laxg;
 
-    .line 13
     return-void
 .end method
 
 .method public static a(Lihi;)Lflk;
     .locals 1
 
-    .prologue
-    .line 1
     invoke-static {p0}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2
     instance-of v0, p0, Lflp;
 
     invoke-static {v0}, Liya;->a(Z)V
 
-    .line 3
     new-instance v0, Lflk;
 
     check-cast p0, Lflp;
@@ -174,13 +157,10 @@
 .method public final H()V
     .locals 3
 
-    .prologue
-    .line 43
     iget-object v1, p0, Lflk;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 44
     :try_start_0
     sget-object v0, Lflk;->a:Ljava/lang/String;
 
@@ -188,14 +168,12 @@
 
     invoke-static {v0, v2}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 45
     invoke-virtual {p0}, Lflk;->f()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 46
     iget-object v0, p0, Lflk;->c:Lflp;
 
     iget-object v2, p0, Lflk;->e:Lhzr;
@@ -206,7 +184,6 @@
 
     iput-object v0, p0, Lflk;->d:Lhzr;
 
-    .line 47
     iget-object v0, p0, Lflk;->d:Lhzr;
 
     new-instance v2, Laxg;
@@ -221,7 +198,6 @@
 
     iput-object v0, p0, Lflk;->g:Laxg;
 
-    .line 48
     :cond_0
     monitor-exit v1
 
@@ -240,13 +216,10 @@
 .method public final I()V
     .locals 3
 
-    .prologue
-    .line 49
     iget-object v1, p0, Lflk;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 50
     :try_start_0
     sget-object v0, Lflk;->a:Ljava/lang/String;
 
@@ -254,12 +227,10 @@
 
     invoke-static {v0, v2}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 51
     iget-object v0, p0, Lflk;->d:Lhzr;
 
     invoke-virtual {v0}, Lhzr;->close()V
 
-    .line 52
     monitor-exit v1
 
     return-void
@@ -277,13 +248,10 @@
 .method public final a()V
     .locals 3
 
-    .prologue
-    .line 57
     iget-object v1, p0, Lflk;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 58
     :try_start_0
     sget-object v0, Lflk;->a:Ljava/lang/String;
 
@@ -291,12 +259,10 @@
 
     invoke-static {v0, v2}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 59
     iget-object v0, p0, Lflk;->f:Lhzr;
 
     invoke-virtual {v0}, Lhzr;->close()V
 
-    .line 60
     monitor-exit v1
 
     return-void
@@ -314,13 +280,10 @@
 .method public final b()Lhzb;
     .locals 2
 
-    .prologue
-    .line 14
     iget-object v1, p0, Lflk;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 15
     :try_start_0
     iget-object v0, p0, Lflk;->e:Lhzr;
 
@@ -328,7 +291,6 @@
 
     return-object v0
 
-    .line 16
     :catchall_0
     move-exception v0
 
@@ -342,13 +304,10 @@
 .method public final c()V
     .locals 3
 
-    .prologue
-    .line 35
     iget-object v1, p0, Lflk;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 36
     :try_start_0
     sget-object v0, Lflk;->a:Ljava/lang/String;
 
@@ -356,14 +315,12 @@
 
     invoke-static {v0, v2}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 37
     invoke-virtual {p0}, Lflk;->g()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 38
     iget-object v0, p0, Lflk;->c:Lflp;
 
     iget-object v2, p0, Lflk;->f:Lhzr;
@@ -374,7 +331,6 @@
 
     iput-object v0, p0, Lflk;->e:Lhzr;
 
-    .line 39
     iget-object v0, p0, Lflk;->e:Lhzr;
 
     new-instance v2, Laxg;
@@ -389,7 +345,6 @@
 
     iput-object v0, p0, Lflk;->h:Laxg;
 
-    .line 40
     iget-object v0, p0, Lflk;->c:Lflp;
 
     iget-object v2, p0, Lflk;->e:Lhzr;
@@ -400,7 +355,6 @@
 
     iput-object v0, p0, Lflk;->d:Lhzr;
 
-    .line 41
     iget-object v0, p0, Lflk;->d:Lhzr;
 
     new-instance v2, Laxg;
@@ -415,7 +369,6 @@
 
     iput-object v0, p0, Lflk;->g:Laxg;
 
-    .line 42
     :cond_0
     monitor-exit v1
 
@@ -434,13 +387,10 @@
 .method public final d()V
     .locals 3
 
-    .prologue
-    .line 53
     iget-object v1, p0, Lflk;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 54
     :try_start_0
     sget-object v0, Lflk;->a:Ljava/lang/String;
 
@@ -448,12 +398,10 @@
 
     invoke-static {v0, v2}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 55
     iget-object v0, p0, Lflk;->e:Lhzr;
 
     invoke-virtual {v0}, Lhzr;->close()V
 
-    .line 56
     monitor-exit v1
 
     return-void
@@ -471,13 +419,10 @@
 .method public final e()Lhzb;
     .locals 2
 
-    .prologue
-    .line 17
     iget-object v1, p0, Lflk;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 18
     :try_start_0
     iget-object v0, p0, Lflk;->f:Lhzr;
 
@@ -485,7 +430,6 @@
 
     return-object v0
 
-    .line 19
     :catchall_0
     move-exception v0
 
@@ -499,29 +443,23 @@
 .method public final f()Z
     .locals 2
 
-    .prologue
-    .line 20
     iget-object v1, p0, Lflk;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 21
     :try_start_0
     iget-object v0, p0, Lflk;->g:Laxg;
 
-    .line 22
     iget-object v0, v0, Laxg;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result v0
 
-    .line 23
     monitor-exit v1
 
     return v0
 
-    .line 24
     :catchall_0
     move-exception v0
 
@@ -535,29 +473,23 @@
 .method public final g()Z
     .locals 2
 
-    .prologue
-    .line 25
     iget-object v1, p0, Lflk;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 26
     :try_start_0
     iget-object v0, p0, Lflk;->h:Laxg;
 
-    .line 27
     iget-object v0, v0, Laxg;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result v0
 
-    .line 28
     monitor-exit v1
 
     return v0
 
-    .line 29
     :catchall_0
     move-exception v0
 
@@ -571,29 +503,23 @@
 .method public final h()Z
     .locals 2
 
-    .prologue
-    .line 30
     iget-object v1, p0, Lflk;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 31
     :try_start_0
     iget-object v0, p0, Lflk;->i:Laxg;
 
-    .line 32
     iget-object v0, v0, Laxg;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result v0
 
-    .line 33
     monitor-exit v1
 
     return v0
 
-    .line 34
     :catchall_0
     move-exception v0
 

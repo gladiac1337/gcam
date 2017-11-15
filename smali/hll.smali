@@ -65,14 +65,12 @@
 .method public final handleMessage(Landroid/os/Message;)V
     .locals 6
 
-    .prologue
     const/4 v0, 0x0
 
     const/4 v5, 0x4
 
     const/4 v4, 0x1
 
-    .line 1
     iget-object v1, p0, Lhll;->a:Lhlh;
 
     iget-object v1, v1, Lhlh;->f:Ljava/util/concurrent/atomic/AtomicInteger;
@@ -93,12 +91,10 @@
 
     invoke-static {p1}, Lhll;->a(Landroid/os/Message;)V
 
-    .line 7
     :cond_0
     :goto_0
     return-void
 
-    .line 1
     :cond_1
     iget v1, p1, Landroid/os/Message;->what:I
 
@@ -184,18 +180,15 @@
 
     iget v2, p1, Landroid/os/Message;->arg2:I
 
-    .line 2
     iget-object v1, v1, Lhlj;->a:Lhkn;
 
     invoke-interface {v1, v2}, Lhkn;->a(I)V
 
-    .line 3
     :cond_6
     iget-object v1, p0, Lhll;->a:Lhlh;
 
     iget v2, p1, Landroid/os/Message;->arg2:I
 
-    .line 4
     iput v2, v1, Lhlh;->a:I
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -204,7 +197,6 @@
 
     iput-wide v2, v1, Lhlh;->b:J
 
-    .line 5
     iget-object v1, p0, Lhll;->a:Lhlh;
 
     invoke-static {v1, v5, v4, v0}, Lhlh;->a(Lhlh;IILandroid/os/IInterface;)Z
@@ -241,7 +233,6 @@
 
     check-cast v0, Lhlm;
 
-    .line 6
     monitor-enter v0
 
     :try_start_0
@@ -346,7 +337,6 @@
 
     throw v1
 
-    .line 7
     :cond_b
     const-string v0, "GmsClient"
 

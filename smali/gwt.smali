@@ -16,8 +16,6 @@
 .method constructor <init>(Lgws;Landroid/view/Window;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgwt;->b:Lgws;
 
     iput-object p2, p0, Lgwt;->a:Landroid/view/Window;
@@ -32,8 +30,6 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgwt;->a:Landroid/view/Window;
 
     invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
@@ -42,12 +38,9 @@
 
     iget-object v1, p0, Lgwt;->b:Lgws;
 
-    .line 3
     iget-object v1, v1, Lgws;->e:Landroid/view/View$OnSystemUiVisibilityChangeListener;
 
-    .line 4
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnSystemUiVisibilityChangeListener(Landroid/view/View$OnSystemUiVisibilityChangeListener;)V
 
-    .line 5
     return-void
 .end method

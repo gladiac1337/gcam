@@ -22,28 +22,20 @@
 .method constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljoq;->a:Ljava/lang/String;
 
-    .line 3
     iput p2, p0, Ljoq;->b:I
 
-    .line 4
     iput-object p3, p0, Ljoq;->c:Ljava/lang/String;
 
-    .line 5
     return-void
 .end method
 
 .method private final readResolve()Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 6
     new-instance v0, Ljoo;
 
     iget-object v1, p0, Ljoq;->a:Ljava/lang/String;

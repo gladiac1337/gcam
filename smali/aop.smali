@@ -16,35 +16,28 @@
 .method public constructor <init>(Landroid/content/res/Resources;Lahs;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     const-string v0, "Argument must not be null"
 
     invoke-static {p1, v0}, Lapb;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 4
     check-cast v0, Landroid/content/res/Resources;
 
     iput-object v0, p0, Laop;->a:Landroid/content/res/Resources;
 
-    .line 6
     const-string v0, "Argument must not be null"
 
     invoke-static {p2, v0}, Lapb;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 7
     check-cast v0, Lahs;
 
     iput-object v0, p0, Laop;->b:Lahs;
 
-    .line 8
     return-void
 .end method
 
@@ -53,8 +46,6 @@
 .method public final a(Lahg;)Lahg;
     .locals 3
 
-    .prologue
-    .line 9
     iget-object v1, p0, Laop;->a:Landroid/content/res/Resources;
 
     iget-object v2, p0, Laop;->b:Lahs;

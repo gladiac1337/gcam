@@ -20,8 +20,6 @@
 .method constructor <init>(Lbck;Ljuw;Ljvi;Ljava/lang/Runnable;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbcn;->d:Lbck;
 
     iput-object p2, p0, Lbcn;->a:Ljuw;
@@ -40,8 +38,6 @@
 .method public final a()Ljuw;
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbcn;->a:Ljuw;
 
     return-object v0
@@ -50,8 +46,6 @@
 .method public final b()Ljuw;
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lbcn;->b:Ljvi;
 
     return-object v0
@@ -60,28 +54,22 @@
 .method public final c()V
     .locals 0
 
-    .prologue
-    .line 4
     return-void
 .end method
 
 .method public final d()V
     .locals 4
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lbcn;->d:Lbck;
 
     iget-object v1, p0, Lbcn;->c:Ljava/lang/Runnable;
 
-    .line 7
     sget-object v2, Lbck;->a:Ljava/lang/String;
 
     const-string v3, "Execute AF reset runnable"
 
     invoke-static {v2, v3}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8
     iget-object v2, v0, Lbck;->c:Licn;
 
     invoke-static {}, Lgew;->a()Lgey;
@@ -90,7 +78,6 @@
 
     invoke-interface {v2, v3}, Licn;->a(Ljava/lang/Object;)V
 
-    .line 9
     iget-object v0, v0, Lbck;->d:Licn;
 
     invoke-static {}, Lgew;->a()Lgey;
@@ -99,9 +86,7 @@
 
     invoke-interface {v0, v2}, Licn;->a(Ljava/lang/Object;)V
 
-    .line 10
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    .line 11
     return-void
 .end method

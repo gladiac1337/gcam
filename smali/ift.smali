@@ -23,31 +23,24 @@
 .method constructor <init>(Landroid/hardware/camera2/CameraManager;Lifv;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lift;->c:Landroid/hardware/camera2/CameraManager;
 
-    .line 3
     iput-object p2, p0, Lift;->d:Lifv;
 
-    .line 4
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lift;->b:Ljava/util/Map;
 
-    .line 5
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lift;->a:Ljava/lang/Object;
 
-    .line 6
     return-void
 .end method
 
@@ -56,8 +49,6 @@
 .method public final a(Ligc;)Lify;
     .locals 9
 
-    .prologue
-    .line 7
     :try_start_0
     iget-object v7, p0, Lift;->a:Ljava/lang/Object;
 
@@ -65,7 +56,6 @@
     :try_end_0
     .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8
     :try_start_1
     iget-object v0, p0, Lift;->b:Ljava/util/Map;
 
@@ -75,24 +65,18 @@
 
     check-cast v0, Lify;
 
-    .line 9
     if-nez v0, :cond_0
 
-    .line 10
     iget-object v0, p0, Lift;->c:Landroid/hardware/camera2/CameraManager;
 
-    .line 11
     iget-object v1, p1, Ligc;->b:Ljava/lang/String;
 
-    .line 12
     invoke-virtual {v0, v1}, Landroid/hardware/camera2/CameraManager;->getCameraCharacteristics(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
 
     move-result-object v2
 
-    .line 13
     iget-object v8, p0, Lift;->d:Lifv;
 
-    .line 14
     new-instance v6, Lifx;
 
     new-instance v0, Lifw;
@@ -111,20 +95,17 @@
 
     invoke-direct {v6, v0, v1}, Lifx;-><init>(Lify;Lihk;)V
 
-    .line 16
     iget-object v0, p0, Lift;->b:Ljava/util/Map;
 
     invoke-interface {v0, p1, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v0, v6
 
-    .line 17
     :cond_0
     monitor-exit v7
 
     return-object v0
 
-    .line 18
     :catchall_0
     move-exception v0
 
@@ -137,11 +118,9 @@
     :try_end_2
     .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 19
     :catch_0
     move-exception v0
 
-    .line 20
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Unable to get camera characteristics."

@@ -269,8 +269,6 @@
 .method public final a(Ljava/lang/String;I)Z
     .locals 10
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     if-eqz p1, :cond_0
@@ -286,11 +284,9 @@
 
     const/4 v0, 0x1
 
-    .line 13
     :goto_1
     return v0
 
-    .line 1
     :cond_0
     if-ltz p2, :cond_c
 
@@ -303,25 +299,21 @@
     :cond_1
     iget-object v0, p0, Lhjp;->c:Lhjq;
 
-    .line 2
     iget-object v1, v0, Lhjq;->a:Landroid/content/ContentResolver;
 
     if-nez v1, :cond_2
 
     const-wide/16 v0, 0x0
 
-    .line 3
     :goto_2
     iget-object v2, p0, Lhjp;->c:Lhjq;
 
-    .line 4
     iget-object v3, v2, Lhjq;->a:Landroid/content/ContentResolver;
 
     if-nez v3, :cond_3
 
     const/4 v2, 0x0
 
-    .line 5
     :goto_3
     invoke-static {v2}, Lhjp;->a(Ljava/lang/String;)Lhjr;
 
@@ -333,7 +325,6 @@
 
     goto :goto_1
 
-    .line 2
     :cond_2
     iget-object v0, v0, Lhjq;->a:Landroid/content/ContentResolver;
 
@@ -345,7 +336,6 @@
 
     goto :goto_2
 
-    .line 4
     :cond_3
     iget-object v3, v2, Lhjq;->a:Landroid/content/ContentResolver;
 
@@ -383,11 +373,9 @@
 
     goto :goto_4
 
-    .line 5
     :cond_5
     iget-object v3, v2, Lhjr;->a:Ljava/lang/String;
 
-    .line 6
     if-eqz v3, :cond_6
 
     invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
@@ -396,7 +384,6 @@
 
     if-eqz v4, :cond_8
 
-    .line 7
     :cond_6
     const/16 v3, 0x8
 
@@ -416,13 +403,11 @@
 
     move-result-wide v0
 
-    .line 9
     :goto_5
     iget-wide v4, v2, Lhjr;->b:J
 
     iget-wide v2, v2, Lhjr;->c:J
 
-    .line 10
     const-wide/16 v6, 0x0
 
     cmp-long v6, v4, v6
@@ -472,7 +457,6 @@
 
     throw v0
 
-    .line 8
     :cond_8
     sget-object v4, Lhjp;->b:Ljava/nio/charset/Charset;
 
@@ -502,7 +486,6 @@
 
     goto :goto_5
 
-    .line 10
     :cond_9
     const-wide/16 v6, 0x0
 
@@ -510,7 +493,6 @@
 
     if-lez v6, :cond_b
 
-    .line 11
     const-wide/16 v6, 0x0
 
     cmp-long v6, v0, v6
@@ -519,7 +501,6 @@
 
     rem-long/2addr v0, v2
 
-    .line 12
     :goto_6
     cmp-long v0, v0, v4
 
@@ -529,7 +510,6 @@
 
     goto/16 :goto_1
 
-    .line 11
     :cond_a
     const-wide v6, 0x7fffffffffffffffL
 
@@ -551,11 +531,9 @@
 
     goto :goto_6
 
-    .line 12
     :cond_b
     const/4 v0, 0x0
 
-    .line 13
     goto/16 :goto_1
 
     :cond_c

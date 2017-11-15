@@ -13,8 +13,6 @@
 .method constructor <init>(Lils;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lilt;->b:Lils;
 
     iput p2, p0, Lilt;->a:I
@@ -29,22 +27,16 @@
 .method public final a_(Ljava/lang/Object;)V
     .locals 6
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lilt;->b:Lils;
 
-    .line 3
     iget-object v0, v0, Lils;->b:[Ljava/lang/Object;
 
-    .line 4
     iget v1, p0, Lilt;->a:I
 
     aput-object p1, v0, v1
 
-    .line 5
     iget-object v3, p0, Lilt;->b:Lils;
 
-    .line 7
     iget-object v0, v3, Lils;->d:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
@@ -53,15 +45,12 @@
 
     if-nez v0, :cond_3
 
-    .line 8
     iget-boolean v0, v3, Lils;->e:Z
 
     if-eqz v0, :cond_5
 
-    .line 9
     const/4 v1, 0x0
 
-    .line 10
     iget-object v4, v3, Lils;->c:[Lilh;
 
     array-length v5, v4
@@ -75,13 +64,10 @@
 
     aget-object v0, v4, v2
 
-    .line 11
     if-eqz v0, :cond_1
 
-    .line 12
     if-nez v1, :cond_0
 
-    .line 15
     :goto_1
     add-int/lit8 v1, v2, 0x1
 
@@ -91,7 +77,6 @@
 
     goto :goto_0
 
-    .line 14
     :cond_0
     invoke-static {v1, v0}, Ljvs;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
 
@@ -100,21 +85,17 @@
 
     goto :goto_1
 
-    .line 16
     :cond_2
     if-eqz v1, :cond_4
 
-    .line 17
     iget-object v0, v3, Lils;->a:Lilv;
 
     invoke-virtual {v0, v1}, Lilv;->a(Lilh;)Z
 
-    .line 23
     :cond_3
     :goto_2
     return-void
 
-    .line 18
     :cond_4
     iget-object v0, v3, Lils;->a:Lilv;
 
@@ -124,17 +105,14 @@
 
     invoke-direct {v1, v2}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
-    .line 19
     invoke-static {v1}, Lilh;->a(Ljava/lang/Throwable;)Lilh;
 
     move-result-object v1
 
-    .line 20
     invoke-virtual {v0, v1}, Lilv;->a(Lilh;)Z
 
     goto :goto_2
 
-    .line 22
     :cond_5
     iget-object v0, v3, Lils;->a:Lilv;
 

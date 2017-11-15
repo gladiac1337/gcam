@@ -29,18 +29,14 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lelr;->a:Lelq;
 
     iget-object v2, p0, Lelr;->b:Lgry;
 
-    .line 2
     iget-object v0, v1, Lelq;->o:Ljuw;
 
     invoke-static {v0}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iget-object v0, v1, Lelq;->o:Ljuw;
 
     invoke-static {v0}, Ljuh;->b(Ljava/util/concurrent/Future;)Ljava/lang/Object;
@@ -51,7 +47,6 @@
 
     iput-object v0, v1, Lelq;->s:Lftv;
 
-    .line 4
     iget-object v0, v1, Lelq;->g:Leon;
 
     iget-object v3, v1, Lelq;->l:Landroid/net/Uri;
@@ -60,11 +55,9 @@
 
     invoke-virtual {v0, v3, v2, v4}, Leon;->a(Landroid/net/Uri;Lgry;Lftv;)V
 
-    .line 5
     iget-object v0, v1, Lelq;->f:Lemy;
 
     invoke-virtual {v0, v2}, Lemy;->onCaptureStarted(Lgry;)V
 
-    .line 6
     return-void
 .end method

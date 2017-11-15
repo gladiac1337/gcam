@@ -24,26 +24,20 @@
 .method public constructor <init>(Lahg;Z)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     const-string v0, "Argument must not be null"
 
     invoke-static {p1, v0}, Lapb;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 4
     check-cast v0, Lahg;
 
     iput-object v0, p0, Lagy;->f:Lahg;
 
-    .line 5
     iput-boolean p2, p0, Lagy;->a:Z
 
-    .line 6
     return-void
 .end method
 
@@ -52,8 +46,6 @@
 .method public final a()Ljava/lang/Class;
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lagy;->f:Lahg;
 
     invoke-interface {v0}, Lahg;->a()Ljava/lang/Class;
@@ -66,8 +58,6 @@
 .method public final b()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lagy;->f:Lahg;
 
     invoke-interface {v0}, Lahg;->b()Ljava/lang/Object;
@@ -80,8 +70,6 @@
 .method public final c()I
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lagy;->f:Lahg;
 
     invoke-interface {v0}, Lahg;->c()I
@@ -94,13 +82,10 @@
 .method public final d()V
     .locals 2
 
-    .prologue
-    .line 10
     iget v0, p0, Lagy;->d:I
 
     if-lez v0, :cond_0
 
-    .line 11
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Cannot recycle a resource while it is still acquired"
@@ -109,13 +94,11 @@
 
     throw v0
 
-    .line 12
     :cond_0
     iget-boolean v0, p0, Lagy;->e:Z
 
     if-eqz v0, :cond_1
 
-    .line 13
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Cannot recycle a resource that has already been recycled"
@@ -124,31 +107,25 @@
 
     throw v0
 
-    .line 14
     :cond_1
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lagy;->e:Z
 
-    .line 15
     iget-object v0, p0, Lagy;->f:Lahg;
 
     invoke-interface {v0}, Lahg;->d()V
 
-    .line 16
     return-void
 .end method
 
 .method public final e()V
     .locals 2
 
-    .prologue
-    .line 17
     iget-boolean v0, p0, Lagy;->e:Z
 
     if-eqz v0, :cond_0
 
-    .line 18
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Cannot acquire a recycled resource"
@@ -157,7 +134,6 @@
 
     throw v0
 
-    .line 19
     :cond_0
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -173,7 +149,6 @@
 
     if-nez v0, :cond_1
 
-    .line 20
     new-instance v0, Ljava/lang/IllegalThreadStateException;
 
     const-string v1, "Must call acquire on the main thread"
@@ -182,7 +157,6 @@
 
     throw v0
 
-    .line 21
     :cond_1
     iget v0, p0, Lagy;->d:I
 
@@ -190,20 +164,16 @@
 
     iput v0, p0, Lagy;->d:I
 
-    .line 22
     return-void
 .end method
 
 .method public final f()V
     .locals 2
 
-    .prologue
-    .line 23
     iget v0, p0, Lagy;->d:I
 
     if-gtz v0, :cond_0
 
-    .line 24
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Cannot release a recycled or not yet acquired resource"
@@ -212,7 +182,6 @@
 
     throw v0
 
-    .line 25
     :cond_0
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
@@ -228,7 +197,6 @@
 
     if-nez v0, :cond_1
 
-    .line 26
     new-instance v0, Ljava/lang/IllegalThreadStateException;
 
     const-string v1, "Must call release on the main thread"
@@ -237,7 +205,6 @@
 
     throw v0
 
-    .line 27
     :cond_1
     iget v0, p0, Lagy;->d:I
 
@@ -247,14 +214,12 @@
 
     if-nez v0, :cond_2
 
-    .line 28
     iget-object v0, p0, Lagy;->b:Lagz;
 
     iget-object v1, p0, Lagy;->c:Laek;
 
     invoke-interface {v0, v1, p0}, Lagz;->b(Laek;Lagy;)V
 
-    .line 29
     :cond_2
     return-void
 .end method
@@ -262,8 +227,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 8
 
-    .prologue
-    .line 30
     iget-boolean v0, p0, Lagy;->a:Z
 
     iget-object v1, p0, Lagy;->b:Lagz;

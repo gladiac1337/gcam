@@ -132,8 +132,6 @@
 .method private static a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 4
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -178,7 +176,6 @@
 
     if-eqz p0, :cond_2
 
-    .line 5
     :try_start_0
     sget-object v1, Lhpv;->a:Lhpv;
 
@@ -186,7 +183,6 @@
 
     move-result-object v1
 
-    .line 6
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -250,9 +246,6 @@
 .method public static b(Landroid/content/Context;)V
     .locals 2
 
-    .prologue
-    .line 1
-    .line 2
     sget-object v0, Lhjz;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -280,7 +273,6 @@
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3
     :cond_0
     :goto_0
     return-void

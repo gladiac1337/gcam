@@ -14,14 +14,10 @@
 .method public constructor <init>(Lijd;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcig;->a:Lijd;
 
-    .line 3
     return-void
 .end method
 
@@ -30,8 +26,6 @@
 .method public final a(Ljava/util/List;)V
     .locals 8
 
-    .prologue
-    .line 4
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -49,7 +43,6 @@
 
     check-cast v0, Lbpq;
 
-    .line 5
     iget-object v1, p0, Lcig;->a:Lijd;
 
     iget-wide v2, v0, Lbpq;->e:J
@@ -64,7 +57,6 @@
 
     goto :goto_0
 
-    .line 7
     :cond_0
     return-void
 .end method

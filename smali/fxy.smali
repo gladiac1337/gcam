@@ -25,11 +25,8 @@
 .method public final a()Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 1
     iget-wide v0, p0, Lfxy;->a:J
 
-    .line 2
     const/16 v2, 0x24
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -56,6 +53,5 @@
 
     move-result-object v0
 
-    .line 3
     return-object v0
 .end method

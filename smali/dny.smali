@@ -29,17 +29,13 @@
 .method public final a()Ljuw;
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Ldny;->a:Ldlv;
 
     iget-object v1, p0, Ldny;->b:Ldnz;
 
-    .line 2
     invoke-virtual {v0, v1}, Ldlv;->a(Ldlu;)Ljuw;
 
     move-result-object v0
 
-    .line 3
     return-object v0
 .end method

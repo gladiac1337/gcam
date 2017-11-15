@@ -28,16 +28,12 @@
 .method private static a(Lhty;)V
     .locals 1
 
-    .prologue
-    .line 4
     if-eqz p0, :cond_0
 
-    .line 5
     const/4 v0, 0x0
 
     iput-object v0, p0, Lhty;->a:Ljava/lang/Object;
 
-    .line 6
     :cond_0
     return-void
 .end method
@@ -83,20 +79,16 @@
 .method public final a(Lcom/google/android/gms/wearable/internal/zzbz;)V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhyi;->a:Lhty;
 
     if-eqz v0, :cond_0
 
     iget-object v0, p0, Lhyi;->a:Lhty;
 
-    .line 2
     new-instance v1, Lhyj;
 
     invoke-direct {v1, p1}, Lhyj;-><init>(Lcom/google/android/gms/wearable/internal/zzbz;)V
 
-    .line 3
     invoke-virtual {v0, v1}, Lhty;->a(Lhub;)V
 
     :cond_0

@@ -19,29 +19,22 @@
 .method public constructor <init>()V
     .locals 4
 
-    .prologue
     const-wide/16 v2, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const-wide v0, 0x7fefffffffffffffL    # Double.MAX_VALUE
 
     iput-wide v0, p0, Ljgk;->a:D
 
-    .line 3
     const-wide/16 v0, 0x1
 
     iput-wide v0, p0, Ljgk;->b:D
 
-    .line 4
     iput-wide v2, p0, Ljgk;->c:D
 
-    .line 5
     iput-wide v2, p0, Ljgk;->d:D
 
-    .line 6
     const/4 v0, 0x0
 
     iput v0, p0, Ljgk;->e:I
@@ -54,15 +47,12 @@
 .method public final a()Ljgj;
     .locals 10
 
-    .prologue
-    .line 16
     iget v0, p0, Ljgk;->e:I
 
     if-nez v0, :cond_0
 
     const-wide/high16 v8, 0x7ff8000000000000L    # NaN
 
-    .line 17
     :goto_0
     new-instance v0, Ljgj;
 
@@ -78,7 +68,6 @@
 
     return-object v0
 
-    .line 16
     :cond_0
     iget-wide v0, p0, Ljgk;->d:D
 
@@ -94,18 +83,14 @@
 .method public final a(D)Ljgk;
     .locals 7
 
-    .prologue
-    .line 7
     iget-wide v0, p0, Ljgk;->b:D
 
     cmpl-double v0, p1, v0
 
     if-lez v0, :cond_0
 
-    .line 8
     iput-wide p1, p0, Ljgk;->b:D
 
-    .line 9
     :cond_0
     iget-wide v0, p0, Ljgk;->a:D
 
@@ -113,10 +98,8 @@
 
     if-gez v0, :cond_1
 
-    .line 10
     iput-wide p1, p0, Ljgk;->a:D
 
-    .line 11
     :cond_1
     iget v0, p0, Ljgk;->e:I
 
@@ -124,12 +107,10 @@
 
     iput v0, p0, Ljgk;->e:I
 
-    .line 12
     iget-wide v0, p0, Ljgk;->c:D
 
     sub-double v0, p1, v0
 
-    .line 13
     iget-wide v2, p0, Ljgk;->c:D
 
     iget v4, p0, Ljgk;->e:I
@@ -142,7 +123,6 @@
 
     iput-wide v2, p0, Ljgk;->c:D
 
-    .line 14
     iget-wide v2, p0, Ljgk;->d:D
 
     iget-wide v4, p0, Ljgk;->c:D
@@ -155,6 +135,5 @@
 
     iput-wide v0, p0, Ljgk;->d:D
 
-    .line 15
     return-object p0
 .end method

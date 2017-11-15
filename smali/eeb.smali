@@ -25,13 +25,10 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Leeb;->a:Licu;
 
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 2
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -66,6 +63,5 @@
 
     invoke-interface {v0, v1}, Licu;->b(Ljava/lang/String;)V
 
-    .line 3
     return-void
 .end method

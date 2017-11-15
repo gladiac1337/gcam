@@ -11,26 +11,20 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/16 v0, 0x9
 
     new-array v0, v0, [D
 
     iput-object v0, p0, Lfnw;->a:[D
 
-    .line 3
     return-void
 .end method
 
 .method public static a(Lfnw;Lfnw;Lfnw;)V
     .locals 24
 
-    .prologue
-    .line 51
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lfnw;->a:[D
@@ -591,15 +585,12 @@
 
     invoke-virtual/range {v3 .. v21}, Lfnw;->a(DDDDDDDDD)V
 
-    .line 52
     return-void
 .end method
 
 .method public static a(Lfnw;Lfnz;Lfnz;)V
     .locals 10
 
-    .prologue
-    .line 53
     iget-object v0, p0, Lfnw;->a:[D
 
     const/4 v1, 0x0
@@ -634,7 +625,6 @@
 
     add-double/2addr v0, v2
 
-    .line 54
     iget-object v2, p0, Lfnw;->a:[D
 
     const/4 v3, 0x3
@@ -669,7 +659,6 @@
 
     add-double/2addr v2, v4
 
-    .line 55
     iget-object v4, p0, Lfnw;->a:[D
 
     const/4 v5, 0x6
@@ -704,16 +693,12 @@
 
     add-double/2addr v4, v6
 
-    .line 56
     iput-wide v0, p2, Lfnz;->a:D
 
-    .line 57
     iput-wide v2, p2, Lfnz;->b:D
 
-    .line 58
     iput-wide v4, p2, Lfnz;->c:D
 
-    .line 59
     return-void
 .end method
 
@@ -722,8 +707,6 @@
 .method public final a(II)D
     .locals 2
 
-    .prologue
-    .line 31
     iget-object v0, p0, Lfnw;->a:[D
 
     mul-int/lit8 v1, p1, 0x3
@@ -738,8 +721,6 @@
 .method public final a()V
     .locals 22
 
-    .prologue
-    .line 24
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lfnw;->a:[D
@@ -818,15 +799,12 @@
 
     aput-wide v20, v2, v3
 
-    .line 25
     return-void
 .end method
 
 .method public final a(D)V
     .locals 7
 
-    .prologue
-    .line 29
     iget-object v0, p0, Lfnw;->a:[D
 
     const/4 v1, 0x0
@@ -845,86 +823,72 @@
 
     aput-wide p1, v0, v1
 
-    .line 30
     return-void
 .end method
 
 .method public final a(DDDDDDDDD)V
     .locals 3
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lfnw;->a:[D
 
     const/4 v1, 0x0
 
     aput-wide p1, v0, v1
 
-    .line 5
     iget-object v0, p0, Lfnw;->a:[D
 
     const/4 v1, 0x1
 
     aput-wide p3, v0, v1
 
-    .line 6
     iget-object v0, p0, Lfnw;->a:[D
 
     const/4 v1, 0x2
 
     aput-wide p5, v0, v1
 
-    .line 7
     iget-object v0, p0, Lfnw;->a:[D
 
     const/4 v1, 0x3
 
     aput-wide p7, v0, v1
 
-    .line 8
     iget-object v0, p0, Lfnw;->a:[D
 
     const/4 v1, 0x4
 
     aput-wide p9, v0, v1
 
-    .line 9
     iget-object v0, p0, Lfnw;->a:[D
 
     const/4 v1, 0x5
 
     aput-wide p11, v0, v1
 
-    .line 10
     iget-object v0, p0, Lfnw;->a:[D
 
     const/4 v1, 0x6
 
     aput-wide p13, v0, v1
 
-    .line 11
     iget-object v0, p0, Lfnw;->a:[D
 
     const/4 v1, 0x7
 
     aput-wide p15, v0, v1
 
-    .line 12
     iget-object v0, p0, Lfnw;->a:[D
 
     const/16 v1, 0x8
 
     aput-wide p17, v0, v1
 
-    .line 13
     return-void
 .end method
 
 .method public final a(IID)V
     .locals 3
 
-    .prologue
-    .line 32
     iget-object v0, p0, Lfnw;->a:[D
 
     mul-int/lit8 v1, p1, 0x3
@@ -933,22 +897,18 @@
 
     aput-wide p3, v0, v1
 
-    .line 33
     return-void
 .end method
 
 .method public final a(ILfnz;)V
     .locals 4
 
-    .prologue
-    .line 34
     iget-object v0, p0, Lfnw;->a:[D
 
     iget-wide v2, p2, Lfnz;->a:D
 
     aput-wide v2, v0, p1
 
-    .line 35
     iget-object v0, p0, Lfnw;->a:[D
 
     add-int/lit8 v1, p1, 0x3
@@ -957,7 +917,6 @@
 
     aput-wide v2, v0, v1
 
-    .line 36
     iget-object v0, p0, Lfnw;->a:[D
 
     add-int/lit8 v1, p1, 0x6
@@ -966,14 +925,12 @@
 
     aput-wide v2, v0, v1
 
-    .line 37
     return-void
 .end method
 
 .method public final a(Lfnw;)V
     .locals 9
 
-    .prologue
     const/4 v8, 0x4
 
     const/4 v7, 0x3
@@ -984,7 +941,6 @@
 
     const/4 v4, 0x0
 
-    .line 14
     iget-object v0, p0, Lfnw;->a:[D
 
     iget-object v1, p1, Lfnw;->a:[D
@@ -993,7 +949,6 @@
 
     aput-wide v2, v0, v4
 
-    .line 15
     iget-object v0, p0, Lfnw;->a:[D
 
     iget-object v1, p1, Lfnw;->a:[D
@@ -1002,7 +957,6 @@
 
     aput-wide v2, v0, v5
 
-    .line 16
     iget-object v0, p0, Lfnw;->a:[D
 
     iget-object v1, p1, Lfnw;->a:[D
@@ -1011,7 +965,6 @@
 
     aput-wide v2, v0, v6
 
-    .line 17
     iget-object v0, p0, Lfnw;->a:[D
 
     iget-object v1, p1, Lfnw;->a:[D
@@ -1020,7 +973,6 @@
 
     aput-wide v2, v0, v7
 
-    .line 18
     iget-object v0, p0, Lfnw;->a:[D
 
     iget-object v1, p1, Lfnw;->a:[D
@@ -1029,7 +981,6 @@
 
     aput-wide v2, v0, v8
 
-    .line 19
     iget-object v0, p0, Lfnw;->a:[D
 
     const/4 v1, 0x5
@@ -1042,7 +993,6 @@
 
     aput-wide v2, v0, v1
 
-    .line 20
     iget-object v0, p0, Lfnw;->a:[D
 
     const/4 v1, 0x6
@@ -1055,7 +1005,6 @@
 
     aput-wide v2, v0, v1
 
-    .line 21
     iget-object v0, p0, Lfnw;->a:[D
 
     const/4 v1, 0x7
@@ -1068,7 +1017,6 @@
 
     aput-wide v2, v0, v1
 
-    .line 22
     iget-object v0, p0, Lfnw;->a:[D
 
     const/16 v1, 0x8
@@ -1081,15 +1029,12 @@
 
     aput-wide v2, v0, v1
 
-    .line 23
     return-void
 .end method
 
 .method public final b()V
     .locals 14
 
-    .prologue
-    .line 26
     iget-object v0, p0, Lfnw;->a:[D
 
     const/4 v1, 0x1
@@ -1128,7 +1073,6 @@
 
     aput-wide v12, v0, v1
 
-    .line 27
     iget-object v0, p0, Lfnw;->a:[D
 
     const/4 v1, 0x0
@@ -1149,36 +1093,30 @@
 
     aput-wide v6, v0, v1
 
-    .line 28
     return-void
 .end method
 
 .method public final b(Lfnw;)V
     .locals 10
 
-    .prologue
-    .line 38
     iget-object v0, p0, Lfnw;->a:[D
 
     const/4 v1, 0x1
 
     aget-wide v0, v0, v1
 
-    .line 39
     iget-object v2, p0, Lfnw;->a:[D
 
     const/4 v3, 0x2
 
     aget-wide v2, v2, v3
 
-    .line 40
     iget-object v4, p0, Lfnw;->a:[D
 
     const/4 v5, 0x5
 
     aget-wide v4, v4, v5
 
-    .line 41
     iget-object v6, p1, Lfnw;->a:[D
 
     const/4 v7, 0x0
@@ -1191,7 +1129,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 42
     iget-object v6, p1, Lfnw;->a:[D
 
     const/4 v7, 0x1
@@ -1204,7 +1141,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 43
     iget-object v6, p1, Lfnw;->a:[D
 
     const/4 v7, 0x2
@@ -1217,14 +1153,12 @@
 
     aput-wide v8, v6, v7
 
-    .line 44
     iget-object v6, p1, Lfnw;->a:[D
 
     const/4 v7, 0x3
 
     aput-wide v0, v6, v7
 
-    .line 45
     iget-object v0, p1, Lfnw;->a:[D
 
     const/4 v1, 0x4
@@ -1237,7 +1171,6 @@
 
     aput-wide v6, v0, v1
 
-    .line 46
     iget-object v0, p1, Lfnw;->a:[D
 
     const/4 v1, 0x5
@@ -1250,21 +1183,18 @@
 
     aput-wide v6, v0, v1
 
-    .line 47
     iget-object v0, p1, Lfnw;->a:[D
 
     const/4 v1, 0x6
 
     aput-wide v2, v0, v1
 
-    .line 48
     iget-object v0, p1, Lfnw;->a:[D
 
     const/4 v1, 0x7
 
     aput-wide v4, v0, v1
 
-    .line 49
     iget-object v0, p1, Lfnw;->a:[D
 
     const/16 v1, 0x8
@@ -1277,6 +1207,5 @@
 
     aput-wide v2, v0, v1
 
-    .line 50
     return-void
 .end method

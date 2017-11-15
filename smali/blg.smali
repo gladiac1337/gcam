@@ -17,20 +17,14 @@
 .method public constructor <init>(Lbkv;Lblj;Landroid/content/SharedPreferences;Licv;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lblg;->a:Lbkv;
 
-    .line 3
     iput-object p2, p0, Lblg;->b:Lblj;
 
-    .line 4
     iput-object p3, p0, Lblg;->c:Landroid/content/SharedPreferences;
 
-    .line 5
     const-string v0, "Flagutils"
 
     invoke-interface {p4, v0}, Licv;->a(Ljava/lang/String;)Licu;
@@ -39,6 +33,5 @@
 
     iput-object v0, p0, Lblg;->d:Licu;
 
-    .line 6
     return-void
 .end method

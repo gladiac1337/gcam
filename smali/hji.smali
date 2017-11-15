@@ -25,23 +25,17 @@
 .method public final a(Lcom/google/android/gms/clearcut/LogEventParcelable;)Lhkp;
     .locals 2
 
-    .prologue
-    .line 1
     new-instance v0, Lhjj;
 
-    .line 2
     iget-object v1, p0, Lhkv;->e:Lhkl;
 
-    .line 3
     invoke-direct {v0, p1, v1}, Lhjj;-><init>(Lcom/google/android/gms/clearcut/LogEventParcelable;Lhkl;)V
 
-    .line 4
     const/4 v1, 0x2
 
     invoke-super {p0, v1, v0}, Lhkv;->a(ILhry;)Lhry;
 
     move-result-object v0
 
-    .line 5
     return-object v0
 .end method

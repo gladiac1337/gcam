@@ -22,8 +22,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 22
     const-string v0, "ActvCamDevTrckr"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -38,18 +36,14 @@
 .method constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcgv;->b:Ljava/lang/Object;
 
-    .line 4
     return-void
 .end method
 
@@ -58,8 +52,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 1
     sget-object v0, Lcgw;->a:Lida;
 
     return-object v0
@@ -70,13 +62,10 @@
 .method public final a(Ligc;)V
     .locals 5
 
-    .prologue
-    .line 11
     iget-object v1, p0, Lcgv;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 12
     :try_start_0
     iget-object v0, p0, Lcgv;->c:Ligc;
 
@@ -90,12 +79,10 @@
 
     if-nez v0, :cond_0
 
-    .line 13
     iget-object v0, p0, Lcgv;->c:Ligc;
 
     iput-object v0, p0, Lcgv;->d:Ligc;
 
-    .line 14
     :cond_0
     sget-object v0, Lcgv;->a:Ljava/lang/String;
 
@@ -135,10 +122,8 @@
 
     invoke-static {v0, v2}, Lbhz;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 15
     iput-object p1, p0, Lcgv;->c:Ligc;
 
-    .line 16
     monitor-exit v1
 
     return-void
@@ -156,28 +141,22 @@
 .method public final b()Ligc;
     .locals 5
 
-    .prologue
-    .line 5
     iget-object v1, p0, Lcgv;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 6
     :try_start_0
     iget-object v0, p0, Lcgv;->c:Ligc;
 
     if-eqz v0, :cond_0
 
-    .line 7
     iget-object v0, p0, Lcgv;->c:Ligc;
 
     monitor-exit v1
 
-    .line 9
     :goto_0
     return-object v0
 
-    .line 8
     :cond_0
     sget-object v0, Lcgv;->a:Ljava/lang/String;
 
@@ -217,14 +196,12 @@
 
     invoke-static {v0, v2}, Lbhz;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 9
     iget-object v0, p0, Lcgv;->d:Ligc;
 
     monitor-exit v1
 
     goto :goto_0
 
-    .line 10
     :catchall_0
     move-exception v0
 
@@ -238,13 +215,10 @@
 .method public final b(Ligc;)V
     .locals 2
 
-    .prologue
-    .line 17
     iget-object v1, p0, Lcgv;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 18
     :try_start_0
     iget-object v0, p0, Lcgv;->c:Ligc;
 
@@ -258,17 +232,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 19
     iget-object v0, p0, Lcgv;->c:Ligc;
 
     iput-object v0, p0, Lcgv;->d:Ligc;
 
-    .line 20
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcgv;->c:Ligc;
 
-    .line 21
     :cond_0
     monitor-exit v1
 

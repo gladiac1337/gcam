@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lyd;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method protected final c()I
     .locals 1
 
-    .prologue
-    .line 2
     const/16 v0, 0x1700
 
     return v0

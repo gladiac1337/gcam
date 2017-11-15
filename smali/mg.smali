@@ -11,21 +11,16 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 11
     const/4 v0, -0x1
 
     sput v0, Lmg;->a:I
 
-    .line 12
     return-void
 .end method
 
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,24 +29,19 @@
 .method static a(Landroid/content/Context;Landroid/view/Window;Lmf;)Lmg;
     .locals 2
 
-    .prologue
-    .line 1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x18
 
     if-lt v0, v1, :cond_0
 
-    .line 2
     new-instance v0, Lmk;
 
     invoke-direct {v0, p0, p1, p2}, Lmk;-><init>(Landroid/content/Context;Landroid/view/Window;Lmf;)V
 
-    .line 9
     :goto_0
     return-object v0
 
-    .line 3
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -59,14 +49,12 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 4
     new-instance v0, Lmr;
 
     invoke-direct {v0, p0, p1, p2}, Lmr;-><init>(Landroid/content/Context;Landroid/view/Window;Lmf;)V
 
     goto :goto_0
 
-    .line 5
     :cond_1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -74,14 +62,12 @@
 
     if-lt v0, v1, :cond_2
 
-    .line 6
     new-instance v0, Lmn;
 
     invoke-direct {v0, p0, p1, p2}, Lmn;-><init>(Landroid/content/Context;Landroid/view/Window;Lmf;)V
 
     goto :goto_0
 
-    .line 7
     :cond_2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -89,14 +75,12 @@
 
     if-lt v0, v1, :cond_3
 
-    .line 8
     new-instance v0, Lmm;
 
     invoke-direct {v0, p0, p1, p2}, Lmm;-><init>(Landroid/content/Context;Landroid/view/Window;Lmf;)V
 
     goto :goto_0
 
-    .line 9
     :cond_3
     new-instance v0, Lmt;
 

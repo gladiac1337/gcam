@@ -20,8 +20,6 @@
 .method constructor <init>(Lilv;Ljava/lang/Runnable;Lilv;Liml;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Limc;->d:Lilv;
 
     iput-object p2, p0, Limc;->a:Ljava/lang/Runnable;
@@ -40,41 +38,30 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Limc;->d:Lilv;
 
-    .line 3
     iget-object v0, v0, Lilv;->a:Ljava/lang/Object;
 
-    .line 5
     if-eqz v0, :cond_0
 
-    .line 6
     iget-object v1, p0, Limc;->a:Ljava/lang/Runnable;
 
     iget-object v2, p0, Limc;->b:Lilv;
 
-    .line 7
     invoke-static {v0, v1, v2}, Lilv;->a(Ljava/lang/Object;Ljava/lang/Runnable;Lilv;)V
 
-    .line 13
     :goto_0
     return-void
 
-    .line 9
     :cond_0
     iget-object v0, p0, Limc;->d:Lilv;
 
-    .line 10
     iget-object v0, v0, Lilv;->b:Lilh;
 
-    .line 11
     iget-object v1, p0, Limc;->a:Ljava/lang/Runnable;
 
     iget-object v2, p0, Limc;->b:Lilv;
 
-    .line 12
     invoke-static {v0, v1, v2}, Lilv;->a(Lilh;Ljava/lang/Runnable;Lilv;)V
 
     goto :goto_0
@@ -83,8 +70,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 14
     iget-object v0, p0, Limc;->d:Lilv;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

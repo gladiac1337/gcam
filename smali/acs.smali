@@ -11,10 +11,8 @@
 .method static constructor <clinit>()V
     .locals 5
 
-    .prologue
     const/4 v4, -0x1
 
-    .line 1
     :try_start_0
     const-string v0, "android.hardware.camera2.CameraCharacteristics"
 
@@ -37,18 +35,14 @@
 
     move-result v0
 
-    .line 2
     sput v0, Lacs;->a:I
 
-    .line 7
     :goto_0
     return-void
 
-    .line 4
     :catch_0
     move-exception v0
 
-    .line 5
     :try_start_1
     const-string v1, "LegacyVendorTags"
 
@@ -70,12 +64,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 6
     sput v4, Lacs;->a:I
 
     goto :goto_0
 
-    .line 8
     :catchall_0
     move-exception v0
 

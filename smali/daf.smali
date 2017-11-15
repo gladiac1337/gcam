@@ -32,8 +32,6 @@
 .method constructor <init>(Ldae;Ljht;Liag;Lige;Ldcz;Lbbw;Libp;Lfhu;Ligc;Ljht;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldaf;->j:Ldae;
 
     iput-object p2, p0, Ldaf;->a:Ljht;
@@ -64,29 +62,22 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 18
 
-    .prologue
-    .line 2
     move-object/from16 v3, p1
 
     check-cast v3, Lazv;
 
-    .line 3
     invoke-static {v3}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     move-object/from16 v0, p0
 
     iget-object v1, v0, Ldaf;->j:Ldae;
 
-    .line 5
     iget-object v1, v1, Ldae;->d:Ldbm;
 
-    .line 6
     move-object/from16 v0, p0
 
     iget-object v2, v0, Ldaf;->a:Ljht;
 
-    .line 7
     invoke-virtual {v2}, Ljht;->b()Ljava/lang/Object;
 
     move-result-object v2
@@ -105,10 +96,8 @@
 
     iget-object v6, v0, Ldaf;->j:Ldae;
 
-    .line 8
     iget-object v6, v6, Ldae;->b:Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;
 
-    .line 9
     move-object/from16 v0, p0
 
     iget-object v7, v0, Ldaf;->d:Ldcz;
@@ -125,13 +114,10 @@
 
     iget-object v10, v0, Ldaf;->j:Ldae;
 
-    .line 10
     iget-object v10, v10, Ldae;->c:Lasl;
 
-    .line 11
     sget-object v11, Ljhi;->a:Ljhi;
 
-    .line 12
     move-object/from16 v0, p0
 
     iget-object v12, v0, Ldaf;->g:Lfhu;
@@ -140,10 +126,8 @@
 
     iget-object v13, v0, Ldaf;->j:Ldae;
 
-    .line 13
     iget-object v13, v13, Ldae;->a:Lbai;
 
-    .line 14
     invoke-interface {v13}, Lbai;->b()Lhzn;
 
     move-result-object v13
@@ -156,7 +140,6 @@
 
     iget-object v15, v0, Ldaf;->j:Ldae;
 
-    .line 15
     invoke-static {v15}, Ldae;->a(Ldae;)Lbew;
 
     move-result-object v15
@@ -167,7 +150,6 @@
 
     move-object/from16 v16, v0
 
-    .line 16
     invoke-static/range {v16 .. v16}, Ldae;->b(Ldae;)Liau;
 
     move-result-object v16
@@ -178,11 +160,9 @@
 
     move-object/from16 v17, v0
 
-    .line 17
     invoke-virtual/range {v1 .. v17}, Ldbm;->a(Lazq;Lazv;Liag;Lige;Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;Ldcz;Lbbw;Libp;Lasl;Ljht;Lfhu;Lhzn;Ligc;Lbew;Liau;Ljht;)Ldbl;
 
     move-result-object v1
 
-    .line 18
     return-object v1
 .end method

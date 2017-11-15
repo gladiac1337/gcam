@@ -20,8 +20,6 @@
 .method constructor <init>(Landroid/content/Context;Lfo;ILjava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfq;->a:Landroid/content/Context;
 
     iput-object p2, p0, Lfq;->b:Lfo;
@@ -40,32 +38,24 @@
 .method public final synthetic call()Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 2
-    .line 3
     iget-object v0, p0, Lfq;->a:Landroid/content/Context;
 
     iget-object v1, p0, Lfq;->b:Lfo;
 
     iget v2, p0, Lfq;->c:I
 
-    .line 4
     invoke-static {v0, v1, v2}, Lfp;->a(Landroid/content/Context;Lfo;I)Landroid/graphics/Typeface;
 
     move-result-object v0
 
-    .line 6
     if-eqz v0, :cond_0
 
-    .line 7
     sget-object v1, Lfp;->a:Lgt;
 
-    .line 8
     iget-object v2, p0, Lfq;->d:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v0}, Lgt;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10
     :cond_0
     return-object v0
 .end method

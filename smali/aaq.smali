@@ -20,8 +20,6 @@
 .method public constructor <init>(Laap;ILandroid/os/Handler;Laav;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Laaq;->d:Laap;
 
     iput p2, p0, Laaq;->a:I
@@ -40,8 +38,6 @@
 .method public final run()V
     .locals 6
 
-    .prologue
-    .line 2
     iget-object v0, p0, Laaq;->d:Laap;
 
     invoke-virtual {v0}, Laap;->c()Landroid/os/Handler;
@@ -68,6 +64,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 3
     return-void
 .end method

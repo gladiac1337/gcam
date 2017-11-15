@@ -19,27 +19,20 @@
 .method public constructor <init>(Ljava/io/File;Ljava/lang/String;Licu;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbik;->a:Ljava/io/File;
 
-    .line 3
     iput-object p2, p0, Lbik;->b:Ljava/lang/String;
 
-    .line 4
     iput-object p3, p0, Lbik;->c:Licu;
 
-    .line 5
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lbik;->d:J
 
-    .line 6
     return-void
 .end method
 
@@ -48,10 +41,8 @@
 .method final declared-synchronized a()V
     .locals 2
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 7
     monitor-enter p0
 
     :try_start_0
@@ -59,12 +50,10 @@
 
     if-nez v1, :cond_1
 
-    .line 8
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lbik;->e:Z
 
-    .line 9
     iget-object v1, p0, Lbik;->a:Ljava/io/File;
 
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
@@ -87,19 +76,16 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 9
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 7
     :catchall_0
     move-exception v0
 
@@ -111,28 +97,23 @@
 .method final declared-synchronized a(Ljava/lang/String;)V
     .locals 11
 
-    .prologue
     const/4 v0, 0x0
 
     const/4 v2, 0x0
 
     const/4 v1, 0x1
 
-    .line 11
     monitor-enter p0
 
-    .line 12
     :try_start_0
     iget-boolean v3, p0, Lbik;->e:Z
 
     if-nez v3, :cond_2
 
-    .line 13
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 14
     iget-object v3, p0, Lbik;->a:Ljava/io/File;
 
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
@@ -155,7 +136,6 @@
     :cond_1
     invoke-static {v0}, Liui;->a(Z)V
 
-    .line 15
     new-instance v3, Ljava/io/FileOutputStream;
 
     iget-object v0, p0, Lbik;->a:Ljava/io/File;
@@ -167,7 +147,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 16
     :try_start_1
     new-instance v6, Ljava/io/OutputStreamWriter;
 
@@ -176,7 +155,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
-    .line 18
     :try_start_2
     const-string v0, "t+%-6s%s\n"
 
@@ -200,44 +178,37 @@
 
     aput-object p1, v1, v4
 
-    .line 19
     const/4 v4, 0x0
 
     invoke-static {v4, v0, v1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 20
     invoke-virtual {v6, v0}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 21
     invoke-virtual {v6}, Ljava/io/OutputStreamWriter;->flush()V
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_4
 
-    .line 22
     :try_start_3
     invoke-virtual {v6}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
-    .line 24
     :try_start_4
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 30
     :cond_2
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 23
     :catch_0
     move-exception v0
 
@@ -246,7 +217,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 24
     :catchall_0
     move-exception v1
 
@@ -272,7 +242,6 @@
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_1
     .catchall {:try_start_7 .. :try_end_7} :catchall_3
 
-    .line 25
     :catch_1
     move-exception v0
 
@@ -281,7 +250,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 26
     :catchall_1
     move-exception v1
 
@@ -306,11 +274,9 @@
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_2
     .catchall {:try_start_a .. :try_end_a} :catchall_2
 
-    .line 28
     :catch_2
     move-exception v0
 
-    .line 29
     :try_start_b
     iget-object v1, p0, Lbik;->c:Licu;
 
@@ -370,7 +336,6 @@
 
     goto :goto_0
 
-    .line 11
     :catchall_2
     move-exception v0
 
@@ -378,7 +343,6 @@
 
     throw v0
 
-    .line 24
     :catch_3
     move-exception v4
 
@@ -387,13 +351,11 @@
 
     goto :goto_2
 
-    .line 26
     :catchall_3
     move-exception v0
 
     goto :goto_3
 
-    .line 24
     :cond_3
     invoke-virtual {v6}, Ljava/io/OutputStreamWriter;->close()V
     :try_end_c
@@ -402,7 +364,6 @@
 
     goto :goto_2
 
-    .line 26
     :catch_4
     move-exception v1
 
@@ -419,7 +380,6 @@
 
     goto :goto_4
 
-    .line 24
     :catchall_4
     move-exception v0
 

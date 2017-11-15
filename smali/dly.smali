@@ -25,33 +25,26 @@
 .method public final close()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Ldly;->a:Ldlv;
 
-    .line 2
     iget-object v1, v0, Ldlv;->c:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 3
     :try_start_0
     iget-object v2, v0, Ldlv;->d:Ljuy;
 
     if-eqz v2, :cond_0
 
-    .line 4
     iget-object v2, v0, Ldlv;->d:Ljuy;
 
     invoke-interface {v2}, Ljuy;->shutdown()V
 
-    .line 5
     :cond_0
     const/4 v2, 0x1
 
     iput-boolean v2, v0, Ldlv;->e:Z
 
-    .line 6
     monitor-exit v1
 
     return-void

@@ -14,8 +14,6 @@
 .method constructor <init>(Lcqy;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcrc;->a:Lcqy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,14 +26,10 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 7
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 2
-    .line 3
     iget-object v3, p0, Lcrc;->a:Lcqy;
 
-    .line 5
     iget-object v0, v3, Lcqy;->d:Liau;
 
     if-eqz v0, :cond_1
@@ -54,7 +48,6 @@
 
     move v1, v0
 
-    .line 6
     :goto_0
     iget-object v0, v3, Lcqy;->e:Liau;
 
@@ -72,7 +65,6 @@
 
     move-result v0
 
-    .line 7
     :goto_1
     sget-object v4, Lcqy;->a:Ljava/lang/String;
 
@@ -108,7 +100,6 @@
 
     invoke-static {v4, v5}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8
     iget-object v3, v3, Lcqy;->b:Liag;
 
     if-eqz v1, :cond_0
@@ -124,18 +115,15 @@
 
     invoke-virtual {v3, v0}, Liag;->a(Ljava/lang/Object;)V
 
-    .line 9
     return-void
 
     :cond_1
     move v1, v2
 
-    .line 5
     goto :goto_0
 
     :cond_2
     move v0, v2
 
-    .line 6
     goto :goto_1
 .end method

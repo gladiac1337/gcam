@@ -16,8 +16,6 @@
 .method constructor <init>(Lgnf;Licf;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgng;->b:Lgnf;
 
     iput-object p2, p0, Lgng;->a:Licf;
@@ -32,8 +30,6 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgng;->b:Lgnf;
 
     iget-object v0, v0, Lgnf;->a:Licn;
@@ -42,6 +38,5 @@
 
     invoke-interface {v0, v1}, Licn;->a(Ljava/lang/Object;)V
 
-    .line 3
     return-void
 .end method

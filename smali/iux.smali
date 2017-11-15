@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,38 +20,30 @@
 .method public final synthetic a(Litk;)Ljava/lang/Object;
     .locals 9
 
-    .prologue
     const/4 v8, 0x2
 
     const/4 v7, 0x0
 
-    .line 2
-    .line 3
     const-class v0, Ljee;
 
-    .line 4
     const-string v1, "default"
 
     invoke-virtual {p1, v0, v1}, Litk;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 5
     check-cast v0, Ljee;
 
-    .line 6
     const-class v1, Ljdi;
 
     const-string v2, "chroma_histogram_frame_distance_metric"
 
-    .line 7
     invoke-virtual {p1, v1, v2}, Litk;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljdi;
 
-    .line 8
     const-class v2, Ljan;
 
     const-string v3, "post_proc_quality_metric"
@@ -64,7 +54,6 @@
 
     check-cast v2, Ljan;
 
-    .line 9
     const/4 v3, 0x4
 
     new-array v4, v3, [Ljbc;
@@ -73,7 +62,6 @@
 
     const-string v5, "image_sharpness_filter"
 
-    .line 10
     invoke-virtual {p1, v3, v5}, Litk;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
@@ -88,7 +76,6 @@
 
     const-string v6, "face_quality_filter"
 
-    .line 11
     invoke-virtual {p1, v3, v6}, Litk;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
@@ -111,11 +98,9 @@
 
     aput-object v1, v4, v0
 
-    .line 12
     invoke-static {v4}, Ljax;->a([Ljbc;)Ljax;
 
     move-result-object v0
 
-    .line 13
     return-object v0
 .end method

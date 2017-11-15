@@ -31,59 +31,45 @@
 .method constructor <init>(Leou;Ljava/util/UUID;JLicf;Lcif;Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;Lici;)V
     .locals 3
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
     iput-object v0, p0, Lchp;->e:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 3
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
     iput-object v0, p0, Lchp;->f:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 4
     new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
     iput-object v0, p0, Lchp;->g:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 5
     const/4 v0, 0x0
 
     iput-object v0, p0, Lchp;->k:Landroid/graphics/Bitmap;
 
-    .line 6
     iput-object p1, p0, Lchp;->a:Leou;
 
-    .line 7
     iput-object p2, p0, Lchp;->b:Ljava/util/UUID;
 
-    .line 8
     iput-wide p3, p0, Lchp;->c:J
 
-    .line 9
     iput-object p5, p0, Lchp;->d:Licf;
 
-    .line 10
     iput-object p6, p0, Lchp;->h:Lcif;
 
-    .line 11
     iput-object p7, p0, Lchp;->i:Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;
 
-    .line 12
     iput-object p8, p0, Lchp;->j:Lici;
 
-    .line 13
     return-void
 .end method

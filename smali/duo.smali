@@ -18,36 +18,28 @@
 .method constructor <init>(Ldvj;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lduo;->a:Ldvj;
 
-    .line 3
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lduo;->b:Ljava/util/Map;
 
-    .line 4
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lduo;->c:Ljava/util/Map;
 
-    .line 5
     return-void
 .end method
 
 .method private final a()V
     .locals 2
 
-    .prologue
-    .line 61
     iget-object v0, p0, Lduo;->b:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -71,12 +63,10 @@
 
     check-cast v0, Liil;
 
-    .line 62
     invoke-interface {v0}, Liil;->close()V
 
     goto :goto_0
 
-    .line 64
     :cond_0
     iget-object v0, p0, Lduo;->c:Ljava/util/Map;
 
@@ -101,12 +91,10 @@
 
     check-cast v0, Liil;
 
-    .line 65
     invoke-interface {v0}, Liil;->close()V
 
     goto :goto_1
 
-    .line 67
     :cond_1
     return-void
 .end method
@@ -114,13 +102,10 @@
 .method private static a(JLjava/util/Map;)V
     .locals 6
 
-    .prologue
-    .line 68
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 69
     invoke-interface {p2}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v0
@@ -147,12 +132,10 @@
 
     move-result-wide v4
 
-    .line 70
     cmp-long v0, v4, p0
 
     if-gez v0, :cond_0
 
-    .line 71
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -165,7 +148,6 @@
 
     invoke-interface {v0}, Liil;->close()V
 
-    .line 72
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
@@ -177,7 +159,6 @@
     :cond_1
     move-object v0, v1
 
-    .line 74
     check-cast v0, Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -199,12 +180,10 @@
 
     check-cast v1, Ljava/lang/Long;
 
-    .line 75
     invoke-interface {p2, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
-    .line 77
     :cond_2
     return-void
 .end method
@@ -214,11 +193,8 @@
 .method public final a(Liil;Ljuw;)V
     .locals 9
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lduo;->c:Ljava/util/Map;
 
-    .line 7
     invoke-interface {p1}, Liil;->e()J
 
     move-result-wide v2
@@ -227,7 +203,6 @@
 
     move-result-object v1
 
-    .line 8
     invoke-static {p1}, Lgih;->a(Liil;)Lgih;
 
     move-result-object v2
@@ -238,10 +213,8 @@
 
     move-result-object v2
 
-    .line 9
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 12
     iget-object v0, p0, Lduo;->c:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
@@ -250,12 +223,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 13
     sget-object v0, Ljhi;->a:Ljhi;
 
     move-object v1, v0
 
-    .line 28
     :goto_0
     invoke-virtual {v1}, Ljht;->a()Z
 
@@ -263,7 +234,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 29
     invoke-virtual {v1}, Ljht;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -278,7 +248,6 @@
 
     invoke-static {v2, v3, v0}, Lduo;->a(JLjava/util/Map;)V
 
-    .line 30
     invoke-virtual {v1}, Ljht;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -293,18 +262,14 @@
 
     invoke-static {v0, v1, v2}, Lduo;->a(JLjava/util/Map;)V
 
-    .line 31
     :cond_0
     return-void
 
-    .line 15
     :cond_1
     const/4 v2, 0x0
 
-    .line 16
     const-wide/16 v0, 0x0
 
-    .line 17
     iget-object v3, p0, Lduo;->c:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->values()Ljava/util/Collection;
@@ -334,19 +299,16 @@
 
     check-cast v0, Liil;
 
-    .line 18
     invoke-interface {v0}, Liil;->e()J
 
     move-result-wide v4
 
-    .line 19
     if-eqz v1, :cond_2
 
     cmp-long v0, v4, v2
 
     if-lez v0, :cond_5
 
-    .line 21
     :cond_2
     const/4 v2, 0x1
 
@@ -359,22 +321,17 @@
 
     move-wide v2, v7
 
-    .line 22
     goto :goto_1
 
-    .line 23
     :cond_3
     if-nez v1, :cond_4
 
-    .line 24
     sget-object v0, Ljhi;->a:Ljhi;
 
     move-object v1, v0
 
-    .line 25
     goto :goto_0
 
-    .line 26
     :cond_4
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -401,21 +358,17 @@
 .method public final close()V
     .locals 10
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 32
     :try_start_0
     new-instance v0, Lief;
 
     invoke-direct {v0}, Lief;-><init>()V
 
-    .line 33
     invoke-static {v0}, Ljuh;->a(Ljava/lang/Throwable;)Ljuw;
 
     move-result-object v3
 
-    .line 35
     iget-object v0, p0, Lduo;->c:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
@@ -426,11 +379,9 @@
 
     move-object v4, v2
 
-    .line 44
     :goto_0
     if-eqz v4, :cond_5
 
-    .line 45
     iget-object v0, p0, Lduo;->c:Ljava/util/Map;
 
     invoke-virtual {v4}, Lgih;->e()J
@@ -443,23 +394,19 @@
 
     invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
     invoke-virtual {v4}, Lgih;->h()Ljuw;
 
     move-result-object v0
 
     move-object v1, v0
 
-    .line 48
     :goto_1
     if-eqz v4, :cond_4
 
-    .line 49
     invoke-virtual {v4}, Lgih;->e()J
 
     move-result-wide v2
 
-    .line 50
     iget-object v0, p0, Lduo;->b:Ljava/util/Map;
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -472,10 +419,8 @@
 
     check-cast v0, Liil;
 
-    .line 52
     if-eqz v0, :cond_0
 
-    .line 53
     iget-object v2, p0, Lduo;->b:Ljava/util/Map;
 
     invoke-interface {v0}, Liil;->e()J
@@ -488,33 +433,26 @@
 
     invoke-interface {v2, v3}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 54
     :cond_0
     :goto_2
     iget-object v2, p0, Lduo;->a:Ldvj;
 
-    .line 55
     invoke-static {v4}, Ljht;->c(Ljava/lang/Object;)Ljht;
 
     move-result-object v3
 
-    .line 56
     invoke-static {v0}, Ljht;->c(Ljava/lang/Object;)Ljht;
 
     move-result-object v0
 
-    .line 57
     invoke-interface {v2, v3, v0, v1}, Ldvj;->a(Ljht;Ljht;Ljuw;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 58
     invoke-direct {p0}, Lduo;->a()V
 
-    .line 59
     return-void
 
-    .line 38
     :cond_1
     :try_start_1
     iget-object v0, p0, Lduo;->c:Ljava/util/Map;
@@ -542,7 +480,6 @@
 
     check-cast v0, Lgih;
 
-    .line 39
     if-eqz v1, :cond_2
 
     invoke-virtual {v0}, Lgih;->e()J
@@ -563,16 +500,13 @@
     :goto_4
     move-object v1, v0
 
-    .line 41
     goto :goto_3
 
     :cond_3
     move-object v4, v1
 
-    .line 42
     goto :goto_0
 
-    .line 60
     :catchall_0
     move-exception v0
 

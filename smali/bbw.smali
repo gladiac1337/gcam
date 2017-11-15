@@ -25,7 +25,6 @@
 .method static constructor <clinit>()V
     .locals 9
 
-    .prologue
     const/4 v8, 0x3
 
     const/4 v7, 0x2
@@ -36,7 +35,6 @@
 
     const/16 v4, 0x1e
 
-    .line 24
     new-instance v0, Lbbw;
 
     const-string v1, "FPS_30"
@@ -45,7 +43,6 @@
 
     sput-object v0, Lbbw;->a:Lbbw;
 
-    .line 25
     new-instance v0, Lbbw;
 
     const-string v1, "FPS_60"
@@ -58,7 +55,6 @@
 
     sput-object v0, Lbbw;->b:Lbbw;
 
-    .line 26
     new-instance v0, Lbbw;
 
     const-string v1, "FPS_120"
@@ -69,7 +65,6 @@
 
     sput-object v0, Lbbw;->c:Lbbw;
 
-    .line 27
     new-instance v0, Lbbw;
 
     const-string v1, "FPS_240"
@@ -80,7 +75,6 @@
 
     sput-object v0, Lbbw;->d:Lbbw;
 
-    .line 28
     const/4 v0, 0x4
 
     new-array v0, v0, [Lbbw;
@@ -109,75 +103,58 @@
 .method private constructor <init>(Ljava/lang/String;III)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput p3, p0, Lbbw;->e:I
 
-    .line 4
     iput p4, p0, Lbbw;->f:I
 
-    .line 5
     return-void
 .end method
 
 .method public static a(II)Lbbw;
     .locals 3
 
-    .prologue
     const/16 v1, 0x3c
 
     const/16 v0, 0x1e
 
-    .line 12
     if-ne p1, v1, :cond_0
 
     if-ne p0, v1, :cond_0
 
-    .line 13
     sget-object v0, Lbbw;->b:Lbbw;
 
-    .line 20
     :goto_0
     return-object v0
 
-    .line 14
     :cond_0
     if-ne p1, v0, :cond_3
 
-    .line 15
     if-ne p0, v0, :cond_1
 
-    .line 16
     sget-object v0, Lbbw;->a:Lbbw;
 
     goto :goto_0
 
-    .line 17
     :cond_1
     const/16 v0, 0x78
 
     if-ne p0, v0, :cond_2
 
-    .line 18
     sget-object v0, Lbbw;->c:Lbbw;
 
     goto :goto_0
 
-    .line 19
     :cond_2
     const/16 v0, 0xf0
 
     if-ne p0, v0, :cond_3
 
-    .line 20
     sget-object v0, Lbbw;->d:Lbbw;
 
     goto :goto_0
 
-    .line 21
     :cond_3
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -219,13 +196,10 @@
 .method public static a()Ljava/util/Collection;
     .locals 6
 
-    .prologue
-    .line 6
     new-instance v1, Ljava/util/LinkedList;
 
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
-    .line 7
     invoke-static {}, Lbbw;->values()[Lbbw;
 
     move-result-object v2
@@ -239,23 +213,19 @@
 
     aget-object v4, v2, v0
 
-    .line 8
     invoke-virtual {v4}, Lbbw;->c()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 9
     invoke-virtual {v1, v4}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 10
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 11
     :cond_1
     return-object v1
 .end method
@@ -263,8 +233,6 @@
 .method public static values()[Lbbw;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lbbw;->g:[Lbbw;
 
     invoke-virtual {v0}, [Lbbw;->clone()Ljava/lang/Object;
@@ -281,8 +249,6 @@
 .method public final b()Z
     .locals 2
 
-    .prologue
-    .line 22
     iget v0, p0, Lbbw;->e:I
 
     iget v1, p0, Lbbw;->f:I
@@ -303,8 +269,6 @@
 .method public final c()Z
     .locals 2
 
-    .prologue
-    .line 23
     iget v0, p0, Lbbw;->e:I
 
     iget v1, p0, Lbbw;->f:I

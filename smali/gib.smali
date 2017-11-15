@@ -35,21 +35,15 @@
 .method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 4
 
-    .prologue
-    .line 1
     check-cast p1, Lgfz;
 
     check-cast p2, Lgfz;
 
-    .line 2
     iget-wide v0, p1, Lgfz;->b:J
 
-    .line 4
     iget-wide v2, p2, Lgfz;->b:J
 
-    .line 5
     cmp-long v0, v0, v2
 
-    .line 6
     return v0
 .end method

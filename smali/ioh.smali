@@ -29,20 +29,16 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lioh;->a:Liof;
 
     iget-object v0, p0, Lioh;->b:Ljuw;
 
-    .line 2
     invoke-interface {v0}, Ljuw;->isCancelled()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 3
     iget-object v0, v1, Liof;->f:Ljvi;
 
     invoke-static {v0}, Ljuh;->b(Ljava/util/concurrent/Future;)Ljava/lang/Object;
@@ -51,10 +47,8 @@
 
     check-cast v0, Landroid/media/MediaMuxer;
 
-    .line 4
     invoke-virtual {v0}, Landroid/media/MediaMuxer;->start()V
 
-    .line 5
     iget-object v0, v1, Liof;->g:Ljvi;
 
     const/4 v1, 0x1
@@ -65,7 +59,6 @@
 
     invoke-virtual {v0, v1}, Ljsw;->a(Ljava/lang/Object;)Z
 
-    .line 6
     :cond_0
     return-void
 .end method

@@ -29,32 +29,26 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lchm;->a:Lchp;
 
     iget-object v1, p0, Lchm;->b:Lchs;
 
-    .line 2
     invoke-virtual {v1}, Lchs;->f()Landroid/graphics/Bitmap;
 
     move-result-object v2
 
     iput-object v2, v0, Lchp;->k:Landroid/graphics/Bitmap;
 
-    .line 3
     iget-object v2, v0, Lchp;->k:Landroid/graphics/Bitmap;
 
     if-eqz v2, :cond_0
 
-    .line 4
     iget-object v1, v0, Lchp;->a:Leou;
 
     iget-object v2, v0, Lchp;->k:Landroid/graphics/Bitmap;
 
     invoke-interface {v1, v2}, Leou;->a(Landroid/graphics/Bitmap;)V
 
-    .line 8
     :goto_0
     iget-object v0, v0, Lchp;->a:Leou;
 
@@ -70,17 +64,13 @@
 
     invoke-interface {v0, v1}, Leou;->a(Lgyr;)V
 
-    .line 9
     return-void
 
-    .line 5
     :cond_0
     const-string v2, "BurstController"
 
-    .line 6
     iget-object v1, v1, Lchs;->b:Ljava/io/File;
 
-    .line 7
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1

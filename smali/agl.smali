@@ -15,11 +15,8 @@
 .method constructor <init>(Lafy;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lagm;
 
     invoke-direct {v0, p0}, Lagm;-><init>(Lagl;)V
@@ -30,9 +27,7 @@
 
     iput-object v0, p0, Lagl;->b:Lha;
 
-    .line 3
     iput-object p1, p0, Lagl;->a:Lafy;
 
-    .line 4
     return-void
 .end method

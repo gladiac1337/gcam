@@ -29,21 +29,15 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Liat;->a:Lias;
 
     iget-object v1, p0, Liat;->b:Ljkv;
 
-    .line 2
     iget-object v0, v0, Lias;->a:Liar;
 
-    .line 3
     iget-object v0, v0, Liar;->c:Licn;
 
-    .line 4
     invoke-interface {v0, v1}, Licn;->a(Ljava/lang/Object;)V
 
-    .line 5
     return-void
 .end method

@@ -14,14 +14,10 @@
 .method public constructor <init>(Lhzt;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lhzv;->a:Lhzt;
 
-    .line 3
     return-void
 .end method
 
@@ -30,28 +26,22 @@
 .method public final execute(Ljava/lang/Runnable;)V
     .locals 3
 
-    .prologue
-    .line 4
     invoke-static {}, Lhzt;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 5
     invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    .line 11
     :goto_0
     return-void
 
-    .line 7
     :cond_0
     new-instance v0, Ljvi;
 
     invoke-direct {v0}, Ljvi;-><init>()V
 
-    .line 9
     iget-object v1, p0, Lhzv;->a:Lhzt;
 
     new-instance v2, Lhzw;
@@ -60,7 +50,6 @@
 
     invoke-virtual {v1, v2}, Lhzt;->execute(Ljava/lang/Runnable;)V
 
-    .line 10
     :try_start_0
     invoke-virtual {v0}, Ljsw;->get()Ljava/lang/Object;
     :try_end_0
@@ -69,29 +58,24 @@
 
     goto :goto_0
 
-    .line 12
     :catch_0
     move-exception v0
 
-    .line 13
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v1
 
     invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
 
-    .line 14
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 15
     :catch_1
     move-exception v0
 
-    .line 16
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

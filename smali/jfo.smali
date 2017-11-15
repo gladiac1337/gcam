@@ -14,8 +14,6 @@
 .method public constructor <init>(Ljee;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljfo;->a:Ljee;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,20 +26,14 @@
 .method public final a(Ljava/io/Writer;)V
     .locals 8
 
-    .prologue
-    .line 2
     iget-object v1, p0, Ljfo;->a:Ljee;
 
-    .line 3
     invoke-static {v1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     const/4 v0, 0x0
 
-    .line 6
     invoke-virtual {v1}, Ljee;->a()Ljava/util/List;
 
     move-result-object v1
@@ -65,7 +57,6 @@
 
     check-cast v0, Ljds;
 
-    .line 7
     add-int/lit8 v2, v1, 0x1
 
     const/16 v4, 0x1f
@@ -96,14 +87,12 @@
 
     invoke-virtual {p1, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 9
     iget-object v1, v0, Ljds;->w:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v1
 
-    .line 10
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -121,12 +110,10 @@
 
     check-cast v1, Ljea;
 
-    .line 11
     invoke-virtual {v0, v1}, Ljds;->a(Ljea;)Ljava/lang/Object;
 
     move-result-object v5
 
-    .line 12
     invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -193,7 +180,6 @@
 
     goto :goto_1
 
-    .line 14
     :cond_0
     const-string v0, "==================\n\n"
 
@@ -201,10 +187,8 @@
 
     move v1, v2
 
-    .line 15
     goto/16 :goto_0
 
-    .line 16
     :cond_1
     return-void
 .end method

@@ -20,8 +20,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 20
     const-string v0, "SpecTypeManager"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -36,17 +34,12 @@
 .method constructor <init>(Lbnw;Lbog;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lboe;->b:Lbnw;
 
-    .line 3
     iput-object p2, p0, Lboe;->c:Lbog;
 
-    .line 4
     return-void
 .end method
 
@@ -55,8 +48,6 @@
 .method public final a(J)Ljht;
     .locals 3
 
-    .prologue
-    .line 13
     sget-object v0, Lboe;->a:Ljava/lang/String;
 
     const/16 v1, 0x20
@@ -81,35 +72,30 @@
 
     invoke-static {v0, v1}, Lbhz;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 14
     iget-object v0, p0, Lboe;->b:Lbnw;
 
     invoke-virtual {v0, p1, p2}, Lbnw;->a(J)Ljht;
 
     move-result-object v0
 
-    .line 15
     invoke-virtual {v0}, Ljht;->a()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 16
     iget-object v0, p0, Lboe;->c:Lbog;
 
     invoke-virtual {v0, p1, p2}, Lbog;->a(J)Ljht;
 
     move-result-object v1
 
-    .line 17
     invoke-virtual {v1}, Ljht;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 18
     invoke-virtual {v1}, Ljht;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -121,7 +107,6 @@
     :cond_0
     move-object v0, v1
 
-    .line 19
     :cond_1
     return-object v0
 .end method
@@ -129,8 +114,6 @@
 .method public final a(JLbnv;)V
     .locals 7
 
-    .prologue
-    .line 5
     sget-object v0, Lboe;->a:Ljava/lang/String;
 
     invoke-static {p3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -177,15 +160,12 @@
 
     invoke-static {v0, v1}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6
     iget-object v0, p0, Lboe;->b:Lbnw;
 
-    .line 7
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 8
     const-string v2, "media_store_id"
 
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -194,7 +174,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 9
     const-string v2, "special_type_id"
 
     invoke-virtual {p3}, Lbnv;->name()Ljava/lang/String;
@@ -203,7 +182,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     sget-object v2, Lbnw;->a:Ljava/lang/String;
 
     invoke-static {p3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -250,7 +228,6 @@
 
     invoke-static {v2, v3}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 11
     iget-object v2, v0, Lbnw;->c:Ljvi;
 
     new-instance v3, Lbnz;
@@ -261,6 +238,5 @@
 
     invoke-static {v2, v3, v0}, Ljuh;->a(Ljuw;Ljhj;Ljava/util/concurrent/Executor;)Ljuw;
 
-    .line 12
     return-void
 .end method

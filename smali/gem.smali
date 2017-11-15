@@ -18,16 +18,12 @@
 .method public constructor <init>()V
     .locals 4
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Liag;
 
     new-instance v1, Lgep;
 
-    .line 3
     invoke-static {}, Lgel;->a()Lgel;
 
     move-result-object v2
@@ -42,14 +38,12 @@
 
     iput-object v0, p0, Lgem;->a:Liag;
 
-    .line 4
     invoke-static {}, Lgel;->a()Lgel;
 
     move-result-object v0
 
     iput-object v0, p0, Lgem;->c:Lgel;
 
-    .line 5
     return-void
 .end method
 
@@ -58,11 +52,8 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 3
 
-    .prologue
-    .line 6
     check-cast p1, Lgel;
 
-    .line 7
     iget-boolean v0, p1, Lgel;->d:Z
 
     iget-object v1, p0, Lgem;->c:Lgel;
@@ -75,17 +66,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 8
     iget-object v0, p0, Lgem;->b:Lgen;
 
     if-eqz v0, :cond_0
 
-    .line 9
     iget-object v0, p0, Lgem;->b:Lgen;
 
     invoke-interface {v0}, Lgen;->a()V
 
-    .line 10
     :cond_0
     iget-object v0, p0, Lgem;->c:Lgel;
 
@@ -95,7 +83,6 @@
 
     if-nez v0, :cond_1
 
-    .line 11
     iget-object v0, p0, Lgem;->a:Liag;
 
     new-instance v1, Lgep;
@@ -106,10 +93,8 @@
 
     invoke-virtual {v0, v1}, Liag;->a(Ljava/lang/Object;)V
 
-    .line 12
     iput-object p1, p0, Lgem;->c:Lgel;
 
-    .line 13
     :cond_1
     return-void
 .end method

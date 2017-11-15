@@ -14,8 +14,6 @@
 .method constructor <init>(Lcyt;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcyu;->a:Lcyt;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,9 +26,6 @@
 .method public final synthetic a(Ljava/lang/Object;)Lcng;
     .locals 3
 
-    .prologue
-    .line 2
-    .line 3
     new-instance v0, Lcwi;
 
     iget-object v1, p0, Lcyu;->a:Lcyt;
@@ -39,6 +34,5 @@
 
     invoke-direct {v0, v1, v2}, Lcwi;-><init>(Lcwi;B)V
 
-    .line 4
     return-object v0
 .end method

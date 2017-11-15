@@ -14,8 +14,6 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 5
     new-instance v0, Laia;
 
     const/high16 v1, 0x3200000
@@ -24,24 +22,18 @@
 
     invoke-direct {p0, v0}, Lixv;-><init>(Lahs;)V
 
-    .line 6
     return-void
 .end method
 
 .method public constructor <init>(Lahs;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Lixv;->a:Lahs;
 
-    .line 4
     return-void
 .end method
 
@@ -50,23 +42,18 @@
 .method public final a(Ljava/lang/String;IILandroid/graphics/Bitmap$Config;)Lixj;
     .locals 3
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lixv;->a:Lahs;
 
     invoke-interface {v0, p2, p3, p4}, Lahs;->a(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 9
     if-nez v0, :cond_0
 
-    .line 10
     invoke-static {p2, p3, p4}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 11
     :cond_0
     new-instance v1, Lixw;
 
@@ -80,8 +67,6 @@
 .method public final a(Ljava/lang/String;Landroid/graphics/Bitmap;)Lixj;
     .locals 2
 
-    .prologue
-    .line 7
     new-instance v0, Lixw;
 
     iget-object v1, p0, Lixv;->a:Lahs;
@@ -94,8 +79,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 12
     const-string v0, "PoolBitmapAllocator[pool="
 
     iget-object v1, p0, Lixv;->a:Lahs;

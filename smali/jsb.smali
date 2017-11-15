@@ -14,18 +14,14 @@
 .method protected constructor <init>()V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljwf;-><init>()V
 
-    .line 2
     invoke-virtual {p0}, Ljwf;->a()Ljava/lang/reflect/Type;
 
     move-result-object v0
 
     iput-object v0, p0, Ljsb;->a:Ljava/lang/reflect/Type;
 
-    .line 3
     iget-object v0, p0, Ljsb;->a:Ljava/lang/reflect/Type;
 
     instance-of v0, v0, Ljava/lang/reflect/TypeVariable;
@@ -41,10 +37,8 @@
 
     invoke-static {v0, v1, v2}, Liya;->b(ZLjava/lang/String;Ljava/lang/Object;)V
 
-    .line 4
     return-void
 
-    .line 3
     :cond_0
     const/4 v0, 0x0
 
@@ -54,11 +48,8 @@
 .method private constructor <init>(Ljava/lang/reflect/Type;)V
     .locals 1
 
-    .prologue
-    .line 5
     invoke-direct {p0}, Ljwf;-><init>()V
 
-    .line 6
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -67,15 +58,12 @@
 
     iput-object v0, p0, Ljsb;->a:Ljava/lang/reflect/Type;
 
-    .line 7
     return-void
 .end method
 
 .method synthetic constructor <init>(Ljava/lang/reflect/Type;B)V
     .locals 0
 
-    .prologue
-    .line 18
     invoke-direct {p0, p1}, Ljsb;-><init>(Ljava/lang/reflect/Type;)V
 
     return-void
@@ -84,8 +72,6 @@
 .method public static a(Ljava/lang/Class;)Ljsb;
     .locals 1
 
-    .prologue
-    .line 8
     new-instance v0, Ljsc;
 
     invoke-direct {v0, p0}, Ljsc;-><init>(Ljava/lang/reflect/Type;)V
@@ -98,16 +84,12 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 9
     instance-of v0, p1, Ljsb;
 
     if-eqz v0, :cond_0
 
-    .line 10
     check-cast p1, Ljsb;
 
-    .line 11
     iget-object v0, p0, Ljsb;->a:Ljava/lang/reflect/Type;
 
     iget-object v1, p1, Ljsb;->a:Ljava/lang/reflect/Type;
@@ -116,7 +98,6 @@
 
     move-result v0
 
-    .line 12
     :goto_0
     return v0
 
@@ -129,8 +110,6 @@
 .method public hashCode()I
     .locals 1
 
-    .prologue
-    .line 13
     iget-object v0, p0, Ljsb;->a:Ljava/lang/reflect/Type;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -143,8 +122,6 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 14
     iget-object v0, p0, Ljsb;->a:Ljava/lang/reflect/Type;
 
     invoke-static {v0}, Ljsd;->b(Ljava/lang/reflect/Type;)Ljava/lang/String;
@@ -157,8 +134,6 @@
 .method protected writeReplace()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 15
     new-instance v0, Ljwg;
 
     invoke-direct {v0}, Ljwg;-><init>()V
@@ -169,11 +144,9 @@
 
     move-result-object v0
 
-    .line 16
     new-instance v1, Ljsc;
 
     invoke-direct {v1, v0}, Ljsc;-><init>(Ljava/lang/reflect/Type;)V
 
-    .line 17
     return-object v1
 .end method

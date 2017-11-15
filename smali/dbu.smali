@@ -70,128 +70,96 @@
 .method public constructor <init>(Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldbu;->a:Ljxn;
 
-    .line 3
     iput-object p2, p0, Ldbu;->b:Ljxn;
 
-    .line 4
     iput-object p3, p0, Ldbu;->c:Ljxn;
 
-    .line 5
     iput-object p4, p0, Ldbu;->d:Ljxn;
 
-    .line 6
     iput-object p5, p0, Ldbu;->e:Ljxn;
 
-    .line 7
     iput-object p6, p0, Ldbu;->f:Ljxn;
 
-    .line 8
     iput-object p7, p0, Ldbu;->g:Ljxn;
 
-    .line 9
     iput-object p8, p0, Ldbu;->h:Ljxn;
 
-    .line 10
     iput-object p9, p0, Ldbu;->i:Ljxn;
 
-    .line 11
     iput-object p10, p0, Ldbu;->j:Ljxn;
 
-    .line 12
     iput-object p11, p0, Ldbu;->k:Ljxn;
 
-    .line 13
     iput-object p12, p0, Ldbu;->l:Ljxn;
 
-    .line 14
     iput-object p13, p0, Ldbu;->m:Ljxn;
 
-    .line 15
     iput-object p14, p0, Ldbu;->n:Ljxn;
 
-    .line 16
     move-object/from16 v0, p15
 
     iput-object v0, p0, Ldbu;->o:Ljxn;
 
-    .line 17
     move-object/from16 v0, p16
 
     iput-object v0, p0, Ldbu;->p:Ljxn;
 
-    .line 18
     move-object/from16 v0, p17
 
     iput-object v0, p0, Ldbu;->q:Ljxn;
 
-    .line 19
     move-object/from16 v0, p18
 
     iput-object v0, p0, Ldbu;->r:Ljxn;
 
-    .line 20
     move-object/from16 v0, p19
 
     iput-object v0, p0, Ldbu;->s:Ljxn;
 
-    .line 21
     move-object/from16 v0, p20
 
     iput-object v0, p0, Ldbu;->t:Ljxn;
 
-    .line 22
     move-object/from16 v0, p21
 
     iput-object v0, p0, Ldbu;->u:Ljxn;
 
-    .line 23
     move-object/from16 v0, p22
 
     iput-object v0, p0, Ldbu;->v:Ljxn;
 
-    .line 24
     move-object/from16 v0, p23
 
     iput-object v0, p0, Ldbu;->w:Ljxn;
 
-    .line 25
     move-object/from16 v0, p24
 
     iput-object v0, p0, Ldbu;->x:Ljxn;
 
-    .line 26
     move-object/from16 v0, p25
 
     iput-object v0, p0, Ldbu;->y:Ljxn;
 
-    .line 27
     move-object/from16 v0, p26
 
     iput-object v0, p0, Ldbu;->z:Ljxn;
 
-    .line 28
     move-object/from16 v0, p27
 
     iput-object v0, p0, Ldbu;->A:Ljxn;
 
-    .line 29
     move-object/from16 v0, p28
 
     iput-object v0, p0, Ldbu;->B:Ljxn;
 
-    .line 30
     move-object/from16 v0, p29
 
     iput-object v0, p0, Ldbu;->C:Ljxn;
 
-    .line 31
     return-void
 .end method
 
@@ -200,9 +168,6 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 31
 
-    .prologue
-    .line 32
-    .line 33
     new-instance v1, Ldbm;
 
     move-object/from16 v0, p0
@@ -353,6 +318,5 @@
 
     invoke-direct/range {v1 .. v30}, Ldbm;-><init>(Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;)V
 
-    .line 34
     return-object v1
 .end method

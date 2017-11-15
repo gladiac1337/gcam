@@ -15,11 +15,8 @@
 .method constructor <init>(Ljxn;Ljxn;Ljxn;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x1
 
     invoke-static {p1, v0}, Lecz;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -30,7 +27,6 @@
 
     iput-object v0, p0, Lecz;->a:Ljxn;
 
-    .line 3
     const/4 v0, 0x2
 
     invoke-static {p2, v0}, Lecz;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -41,7 +37,6 @@
 
     iput-object v0, p0, Lecz;->b:Ljxn;
 
-    .line 4
     const/4 v0, 0x3
 
     invoke-static {p3, v0}, Lecz;->a(Ljava/lang/Object;I)Ljava/lang/Object;
@@ -52,18 +47,14 @@
 
     iput-object v0, p0, Lecz;->c:Ljxn;
 
-    .line 5
     return-void
 .end method
 
 .method private static a(Ljava/lang/Object;I)Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 12
     if-nez p0, :cond_0
 
-    .line 13
     new-instance v0, Ljava/lang/NullPointerException;
 
     const/16 v1, 0x5d
@@ -90,7 +81,6 @@
 
     throw v0
 
-    .line 14
     :cond_0
     return-object p0
 .end method
@@ -100,13 +90,10 @@
 .method public final a(Leai;)Lecy;
     .locals 6
 
-    .prologue
-    .line 6
     new-instance v4, Lecy;
 
     const/4 v0, 0x1
 
-    .line 7
     invoke-static {p1, v0}, Lecz;->a(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v0
@@ -115,7 +102,6 @@
 
     iget-object v1, p0, Lecz;->a:Ljxn;
 
-    .line 8
     invoke-interface {v1}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -132,7 +118,6 @@
 
     iget-object v2, p0, Lecz;->b:Ljxn;
 
-    .line 9
     invoke-interface {v2}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -149,7 +134,6 @@
 
     iget-object v3, p0, Lecz;->c:Ljxn;
 
-    .line 10
     invoke-interface {v3}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -166,6 +150,5 @@
 
     invoke-direct {v4, v0, v1, v2, v3}, Lecy;-><init>(Leai;Lgdq;Ljht;Ljht;)V
 
-    .line 11
     return-object v4
 .end method

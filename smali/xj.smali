@@ -15,24 +15,18 @@
 .method public constructor <init>(Ljava/io/Reader;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     const/16 v0, 0x8
 
     invoke-direct {p0, p1, v0}, Ljava/io/PushbackReader;-><init>(Ljava/io/Reader;I)V
 
-    .line 2
     iput v1, p0, Lxj;->a:I
 
-    .line 3
     iput v1, p0, Lxj;->b:I
 
-    .line 4
     iput v1, p0, Lxj;->c:I
 
-    .line 5
     return-void
 .end method
 
@@ -41,7 +35,6 @@
 .method public final read([CII)I
     .locals 12
 
-    .prologue
     const/16 v11, 0x30
 
     const/4 v10, 0x4
@@ -52,8 +45,6 @@
 
     const/4 v4, 0x0
 
-    .line 6
-    .line 9
     const/16 v0, 0x8
 
     new-array v6, v0, [C
@@ -64,14 +55,12 @@
 
     move v5, v4
 
-    .line 11
     :cond_0
     :goto_0
     if-eqz v2, :cond_13
 
     if-ge v1, p3, :cond_13
 
-    .line 12
     invoke-super {p0, v6, v5, v3}, Ljava/io/PushbackReader;->read([CII)I
 
     move-result v0
@@ -80,42 +69,34 @@
 
     move v2, v3
 
-    .line 13
     :goto_1
     if-eqz v2, :cond_12
 
-    .line 14
     aget-char v0, v6, v5
 
-    .line 15
     iget v7, p0, Lxj;->a:I
 
     packed-switch v7, :pswitch_data_0
 
-    .line 58
     :cond_1
     :goto_2
     iget v7, p0, Lxj;->a:I
 
     if-nez v7, :cond_10
 
-    .line 59
     invoke-static {v0}, Lxm;->a(C)Z
 
     move-result v5
 
     if-eqz v5, :cond_2
 
-    .line 60
     const/16 v0, 0x20
 
-    .line 61
     :cond_2
     add-int/lit8 v5, p2, 0x1
 
     aput-char v0, p1, p2
 
-    .line 63
     add-int/lit8 v1, v1, 0x1
 
     move p2, v5
@@ -127,59 +108,48 @@
     :cond_3
     move v2, v4
 
-    .line 12
     goto :goto_1
 
-    .line 16
     :pswitch_0
     const/16 v7, 0x26
 
     if-ne v0, v7, :cond_1
 
-    .line 17
     iput v3, p0, Lxj;->a:I
 
     goto :goto_2
 
-    .line 19
     :pswitch_1
     const/16 v7, 0x23
 
     if-ne v0, v7, :cond_4
 
-    .line 20
     const/4 v7, 0x2
 
     iput v7, p0, Lxj;->a:I
 
     goto :goto_2
 
-    .line 21
     :cond_4
     iput v9, p0, Lxj;->a:I
 
     goto :goto_2
 
-    .line 23
     :pswitch_2
     const/16 v7, 0x78
 
     if-ne v0, v7, :cond_5
 
-    .line 24
     iput v4, p0, Lxj;->b:I
 
-    .line 25
     iput v4, p0, Lxj;->c:I
 
-    .line 26
     const/4 v7, 0x3
 
     iput v7, p0, Lxj;->a:I
 
     goto :goto_2
 
-    .line 27
     :cond_5
     if-gt v11, v0, :cond_6
 
@@ -187,7 +157,6 @@
 
     if-gt v0, v7, :cond_6
 
-    .line 28
     const/16 v7, 0xa
 
     invoke-static {v0, v7}, Ljava/lang/Character;->digit(CI)I
@@ -196,21 +165,17 @@
 
     iput v7, p0, Lxj;->b:I
 
-    .line 29
     iput v3, p0, Lxj;->c:I
 
-    .line 30
     iput v10, p0, Lxj;->a:I
 
     goto :goto_2
 
-    .line 31
     :cond_6
     iput v9, p0, Lxj;->a:I
 
     goto :goto_2
 
-    .line 33
     :pswitch_3
     if-gt v11, v0, :cond_8
 
@@ -218,7 +183,6 @@
 
     if-gt v0, v7, :cond_8
 
-    .line 34
     iget v7, p0, Lxj;->b:I
 
     mul-int/lit8 v7, v7, 0xa
@@ -233,30 +197,25 @@
 
     iput v7, p0, Lxj;->b:I
 
-    .line 35
     iget v7, p0, Lxj;->c:I
 
     add-int/lit8 v7, v7, 0x1
 
     iput v7, p0, Lxj;->c:I
 
-    .line 36
     iget v7, p0, Lxj;->c:I
 
     if-gt v7, v9, :cond_7
 
-    .line 37
     iput v10, p0, Lxj;->a:I
 
     goto :goto_2
 
-    .line 38
     :cond_7
     iput v9, p0, Lxj;->a:I
 
     goto :goto_2
 
-    .line 39
     :cond_8
     const/16 v7, 0x3b
 
@@ -272,23 +231,19 @@
 
     if-eqz v7, :cond_9
 
-    .line 40
     iput v4, p0, Lxj;->a:I
 
-    .line 41
     iget v0, p0, Lxj;->b:I
 
     int-to-char v0, v0
 
     goto :goto_2
 
-    .line 42
     :cond_9
     iput v9, p0, Lxj;->a:I
 
     goto/16 :goto_2
 
-    .line 44
     :pswitch_4
     if-gt v11, v0, :cond_a
 
@@ -314,7 +269,6 @@
 
     if-gt v0, v7, :cond_e
 
-    .line 45
     :cond_c
     iget v7, p0, Lxj;->b:I
 
@@ -330,32 +284,27 @@
 
     iput v7, p0, Lxj;->b:I
 
-    .line 46
     iget v7, p0, Lxj;->c:I
 
     add-int/lit8 v7, v7, 0x1
 
     iput v7, p0, Lxj;->c:I
 
-    .line 47
     iget v7, p0, Lxj;->c:I
 
     if-gt v7, v10, :cond_d
 
-    .line 48
     const/4 v7, 0x3
 
     iput v7, p0, Lxj;->a:I
 
     goto/16 :goto_2
 
-    .line 49
     :cond_d
     iput v9, p0, Lxj;->a:I
 
     goto/16 :goto_2
 
-    .line 50
     :cond_e
     const/16 v7, 0x3b
 
@@ -371,71 +320,57 @@
 
     if-eqz v7, :cond_f
 
-    .line 51
     iput v4, p0, Lxj;->a:I
 
-    .line 52
     iget v0, p0, Lxj;->b:I
 
     int-to-char v0, v0
 
     goto/16 :goto_2
 
-    .line 53
     :cond_f
     iput v9, p0, Lxj;->a:I
 
     goto/16 :goto_2
 
-    .line 55
     :pswitch_5
     iput v4, p0, Lxj;->a:I
 
     goto/16 :goto_2
 
-    .line 64
     :cond_10
     iget v0, p0, Lxj;->a:I
 
     if-ne v0, v9, :cond_11
 
-    .line 65
     add-int/lit8 v0, v5, 0x1
 
     invoke-virtual {p0, v6, v4, v0}, Lxj;->unread([CII)V
 
     move v5, v4
 
-    .line 66
     goto/16 :goto_0
 
-    .line 67
     :cond_11
     add-int/lit8 v0, v5, 0x1
 
     move v5, v0
 
-    .line 68
     goto/16 :goto_0
 
-    .line 69
     :cond_12
     if-lez v5, :cond_0
 
-    .line 70
     invoke-virtual {p0, v6, v4, v5}, Lxj;->unread([CII)V
 
-    .line 71
     iput v9, p0, Lxj;->a:I
 
     move v2, v3
 
     move v5, v4
 
-    .line 73
     goto/16 :goto_0
 
-    .line 74
     :cond_13
     if-gtz v1, :cond_14
 
@@ -452,7 +387,6 @@
 
     goto :goto_3
 
-    .line 15
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

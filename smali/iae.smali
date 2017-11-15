@@ -14,8 +14,6 @@
 .method constructor <init>(Ljava/lang/Throwable;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Liae;->a:Ljava/lang/Throwable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     new-instance v0, Ljava/lang/RuntimeException;
 
     iget-object v1, p0, Liae;->a:Ljava/lang/Throwable;

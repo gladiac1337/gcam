@@ -7,11 +7,8 @@
 .method constructor <init>(Landroid/app/ActivityOptions;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Landroid/support/v4/app/ActivityOptionsCompat$ActivityOptionsCompatApi23Impl;-><init>(Landroid/app/ActivityOptions;)V
 
-    .line 2
     return-void
 .end method
 
@@ -20,8 +17,6 @@
 .method public getLaunchBounds()Landroid/graphics/Rect;
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Landroid/support/v4/app/ActivityOptionsCompat$ActivityOptionsCompatApi24Impl;->mActivityOptions:Landroid/app/ActivityOptions;
 
     invoke-virtual {v0}, Landroid/app/ActivityOptions;->getLaunchBounds()Landroid/graphics/Rect;
@@ -34,13 +29,10 @@
 .method public setLaunchBounds(Landroid/graphics/Rect;)Landroid/support/v4/app/ActivityOptionsCompat;
     .locals 2
 
-    .prologue
-    .line 3
     new-instance v0, Landroid/support/v4/app/ActivityOptionsCompat$ActivityOptionsCompatApi24Impl;
 
     iget-object v1, p0, Landroid/support/v4/app/ActivityOptionsCompat$ActivityOptionsCompatApi24Impl;->mActivityOptions:Landroid/app/ActivityOptions;
 
-    .line 4
     invoke-virtual {v1, p1}, Landroid/app/ActivityOptions;->setLaunchBounds(Landroid/graphics/Rect;)Landroid/app/ActivityOptions;
 
     move-result-object v1

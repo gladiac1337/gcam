@@ -11,11 +11,8 @@
 .method private constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/high16 v0, 0xc00000
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCache;->mCacheMaxSize:I
@@ -26,8 +23,6 @@
 .method synthetic constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/FrameManager$1;)V
     .locals 0
 
-    .prologue
-    .line 6
     invoke-direct {p0}, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCache;-><init>()V
 
     return-void
@@ -47,8 +42,6 @@
 .method public getSize()I
     .locals 1
 
-    .prologue
-    .line 5
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCache;->mCacheMaxSize:I
 
     return v0
@@ -60,10 +53,7 @@
 .method public setSize(I)V
     .locals 0
 
-    .prologue
-    .line 3
     iput p1, p0, Lcom/google/android/libraries/smartburst/filterfw/FrameManager$BackingCache;->mCacheMaxSize:I
 
-    .line 4
     return-void
 .end method

@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 14
     const-string v0, "AaaReqCalbak"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -37,25 +35,18 @@
 .method public constructor <init>(Lgef;Lgeq;Ljava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lgpy;-><init>()V
 
-    .line 2
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lbbx;->e:Z
 
-    .line 3
     iput-object p1, p0, Lbbx;->b:Lgef;
 
-    .line 4
     iput-object p2, p0, Lbbx;->c:Lgeq;
 
-    .line 5
     iput-object p3, p0, Lbbx;->d:Ljava/lang/Object;
 
-    .line 6
     return-void
 .end method
 
@@ -64,23 +55,18 @@
 .method public final a(Liib;Liic;)V
     .locals 6
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lbbx;->c:Lgeq;
 
     invoke-virtual {v0, p2}, Lgeq;->a(Liic;)V
 
-    .line 8
     iget-boolean v0, p0, Lbbx;->e:Z
 
     if-eqz v0, :cond_0
 
-    .line 9
     iget-object v0, p0, Lbbx;->b:Lgef;
 
     invoke-virtual {v0, p2}, Lgef;->a(Liic;)V
 
-    .line 10
     :cond_0
     iget-object v0, p0, Lbbx;->d:Ljava/lang/Object;
 
@@ -94,7 +80,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 11
     sget-object v0, Lbbx;->a:Ljava/lang/String;
 
     invoke-interface {p2}, Liic;->d()J
@@ -153,12 +138,10 @@
 
     invoke-static {v0, v1}, Lbhz;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lbbx;->e:Z
 
-    .line 13
     :cond_1
     return-void
 .end method

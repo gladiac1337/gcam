@@ -16,8 +16,6 @@
 .method public constructor <init>(Landroid/widget/TextView;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfqa;->a:Landroid/widget/TextView;
 
     iput p2, p0, Lfqa;->b:I
@@ -32,21 +30,17 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lfqa;->a:Landroid/widget/TextView;
 
     iget v1, p0, Lfqa;->b:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 3
     iget-object v0, p0, Lfqa;->a:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 4
     return-void
 .end method

@@ -11,8 +11,6 @@
 .method constructor <init>(Lbgu;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbgw;->a:Lbgu;
 
     invoke-direct {p0, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
@@ -25,25 +23,21 @@
 .method public final run()V
     .locals 14
 
-    .prologue
     const-wide/16 v10, 0x0
 
     const/4 v13, 0x3
 
     const/4 v2, 0x0
 
-    .line 2
     const-string v0, "AudioEncoder"
 
     const-string v1, "starting"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
     iget-object v12, p0, Lbgw;->a:Lbgu;
 
-    .line 6
     iget-object v0, v12, Lbgu;->d:Landroid/media/MediaCodec;
 
     const-wide/16 v4, 0x2710
@@ -52,17 +46,14 @@
 
     move-result v1
 
-    .line 7
     if-ltz v1, :cond_8
 
-    .line 11
     iget-object v0, v12, Lbgu;->d:Landroid/media/MediaCodec;
 
     invoke-virtual {v0, v1}, Landroid/media/MediaCodec;->getInputBuffer(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 12
     iget-object v3, v12, Lbgu;->c:Landroid/media/AudioRecord;
 
     invoke-virtual {v3}, Landroid/media/AudioRecord;->getRecordingState()I
@@ -71,24 +62,20 @@
 
     if-ne v3, v13, :cond_7
 
-    .line 13
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->limit()I
 
     move-result v4
 
-    .line 14
     iget-object v3, v12, Lbgu;->c:Landroid/media/AudioRecord;
 
     invoke-virtual {v3, v0, v4}, Landroid/media/AudioRecord;->read(Ljava/nio/ByteBuffer;I)I
 
     move-result v3
 
-    .line 15
     sget-boolean v0, Lbgu;->a:Z
 
     if-eqz v0, :cond_1
 
-    .line 16
     const-string v0, "AudioEncoder"
 
     const/16 v5, 0x65
@@ -133,7 +120,6 @@
 
     invoke-static {v0, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 17
     :cond_1
     const-wide/32 v4, 0xf4240
 
@@ -161,14 +147,11 @@
 
     move-wide v8, v4
 
-    .line 18
     :goto_0
     if-gtz v3, :cond_6
 
-    .line 19
     if-gez v3, :cond_3
 
-    .line 20
     const-string v0, "AudioEncoder"
 
     const/16 v4, 0x34
@@ -193,16 +176,13 @@
 
     invoke-static {v0, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 24
     :goto_1
     const/4 v6, 0x4
 
-    .line 25
     const/4 v0, 0x1
 
     move v7, v0
 
-    .line 26
     :goto_2
     iget-object v0, v12, Lbgu;->d:Landroid/media/MediaCodec;
 
@@ -210,12 +190,10 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/media/MediaCodec;->queueInputBuffer(IIIJI)V
 
-    .line 27
     sget-boolean v0, Lbgu;->a:Z
 
     if-eqz v0, :cond_2
 
-    .line 28
     const-string v0, "AudioEncoder"
 
     iget-wide v4, v12, Lbgu;->h:J
@@ -248,7 +226,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
     :cond_2
     iget-wide v0, v12, Lbgu;->h:J
 
@@ -256,40 +233,33 @@
 
     iput-wide v0, v12, Lbgu;->h:J
 
-    .line 30
     iget-object v0, v12, Lbgu;->e:Lbgn;
 
     const-wide/16 v4, 0x3e8
 
     div-long v4, v8, v4
 
-    .line 31
     cmp-long v1, v4, v10
 
     if-gez v1, :cond_5
 
-    .line 32
     const-string v0, "MediaMuxerProc"
 
     const-string v1, "The duration of record cannot be shorter than existing one."
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 37
     :goto_3
     if-eqz v7, :cond_0
 
-    .line 38
     const-string v0, "AudioEncoder"
 
     const-string v1, "stopping"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 39
     return-void
 
-    .line 21
     :cond_3
     iget-object v0, v12, Lbgu;->c:Landroid/media/AudioRecord;
 
@@ -299,7 +269,6 @@
 
     if-ne v0, v13, :cond_4
 
-    .line 22
     const-string v0, "AudioEncoder"
 
     const-string v4, "Read buffer from AudioRecord, but buffer size is 0."
@@ -308,7 +277,6 @@
 
     goto :goto_1
 
-    .line 23
     :cond_4
     const-string v0, "AudioEncoder"
 
@@ -318,11 +286,9 @@
 
     goto :goto_1
 
-    .line 34
     :cond_5
     iget-object v0, v0, Lbgn;->g:Lbgk;
 
-    .line 35
     iget-wide v8, v0, Lbgk;->d:J
 
     add-long/2addr v4, v8

@@ -30,31 +30,24 @@
 .method public constructor <init>(Lgkl;)V
     .locals 4
 
-    .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
     iput-object p1, p0, Lgkk;->e:Lgkl;
 
-    .line 24
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lgkk;->a:Ljava/lang/Object;
 
-    .line 25
     new-instance v0, Ljava/util/LinkedHashSet;
 
     invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
     iput-object v0, p0, Lgkk;->b:Ljava/util/LinkedHashSet;
 
-    .line 26
     new-instance v0, Licj;
 
-    .line 27
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v1
@@ -63,32 +56,26 @@
 
     iput-object v0, p0, Lgkk;->c:Licj;
 
-    .line 28
     iget-object v0, p0, Lgkk;->c:Licj;
 
     new-instance v1, Lgkt;
 
     invoke-direct {v1}, Lgkt;-><init>()V
 
-    .line 29
     invoke-static {v0, v1}, Liav;->a(Liau;Ljhj;)Liau;
 
     move-result-object v0
 
-    .line 30
     invoke-static {v0}, Liav;->a(Liau;)Liau;
 
     move-result-object v0
 
-    .line 31
     sget-object v1, Lgke;->a:Ljhj;
 
-    .line 32
     invoke-static {v0, v1}, Liav;->a(Liau;Ljhj;)Liau;
 
     move-result-object v0
 
-    .line 33
     new-instance v1, Licw;
 
     const/4 v2, 0x2
@@ -103,7 +90,6 @@
 
     iget-object v3, p0, Lgkk;->e:Lgkl;
 
-    .line 34
     invoke-interface {v3}, Lgkl;->c()Liau;
 
     move-result-object v3
@@ -114,7 +100,6 @@
 
     move-result-object v0
 
-    .line 35
     invoke-static {v0}, Liav;->b(Ljava/util/Collection;)Liau;
 
     move-result-object v0
@@ -123,15 +108,12 @@
 
     iput-object v1, p0, Lgkk;->f:Licw;
 
-    .line 36
     return-void
 .end method
 
 .method public static a(Lgkl;)Lawj;
     .locals 2
 
-    .prologue
-    .line 1
     const/4 v0, 0x1
 
     :try_start_0
@@ -149,11 +131,9 @@
 
     return-object v0
 
-    .line 2
     :catch_0
     move-exception v0
 
-    .line 3
     invoke-virtual {v0}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v1
@@ -162,14 +142,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 4
     new-instance v1, Lgkj;
 
     invoke-direct {v1, v0}, Lgkj;-><init>(Ljava/lang/Throwable;)V
 
     throw v1
 
-    .line 5
     :cond_0
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -181,43 +159,34 @@
 .method public static a(Lgkl;I)Lawj;
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 6
     new-instance v0, Lawj;
 
     invoke-direct {v0}, Lawj;-><init>()V
 
-    .line 7
     invoke-interface {p0}, Lgkl;->e()Lich;
 
     move-result-object v3
 
-    .line 8
     const/4 v2, 0x0
 
     :goto_0
     if-ge v2, p1, :cond_5
 
-    .line 9
     :try_start_0
     invoke-interface {p0}, Lgkl;->d()Lgki;
 
     move-result-object v4
 
-    .line 10
     if-eqz v4, :cond_0
 
-    .line 11
     invoke-virtual {v0, v4}, Lawj;->add(Ljava/lang/Object;)Z
 
-    .line 17
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 12
     :cond_0
     invoke-virtual {v0}, Lawj;->iterator()Ljava/util/Iterator;
 
@@ -236,7 +205,6 @@
 
     check-cast v0, Lgki;
 
-    .line 13
     invoke-interface {v0}, Lgki;->close()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
@@ -244,7 +212,6 @@
 
     goto :goto_1
 
-    .line 19
     :catch_0
     move-exception v0
 
@@ -253,7 +220,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 20
     :catchall_0
     move-exception v1
 
@@ -277,7 +243,6 @@
     :goto_3
     throw v0
 
-    .line 15
     :cond_2
     if-eqz v3, :cond_3
 
@@ -286,12 +251,10 @@
     :cond_3
     move-object v0, v1
 
-    .line 21
     :cond_4
     :goto_4
     return-object v0
 
-    .line 18
     :cond_5
     if-eqz v3, :cond_4
 
@@ -299,7 +262,6 @@
 
     goto :goto_4
 
-    .line 20
     :catch_1
     move-exception v2
 
@@ -323,24 +285,19 @@
 .method public final a(I)Lawd;
     .locals 6
 
-    .prologue
-    .line 37
     invoke-virtual {p0}, Lgkk;->e()Lich;
 
     move-result-object v2
 
     const/4 v1, 0x0
 
-    .line 38
     :try_start_0
     iget-object v0, p0, Lgkk;->e:Lgkl;
 
-    .line 39
     invoke-interface {v0, p1}, Lgkl;->a(I)Lawd;
 
     move-result-object v0
 
-    .line 40
     invoke-interface {v0}, Lawd;->a()Z
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
@@ -350,14 +307,11 @@
 
     if-eqz v3, :cond_0
 
-    .line 42
     invoke-interface {v2}, Lich;->close()V
 
-    .line 54
     :goto_0
     return-object v0
 
-    .line 44
     :cond_0
     :try_start_1
     iget-object v3, p0, Lgkk;->a:Ljava/lang/Object;
@@ -367,7 +321,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 45
     :try_start_2
     iget v4, p0, Lgkk;->d:I
 
@@ -375,38 +328,30 @@
 
     iput v4, p0, Lgkk;->d:I
 
-    .line 46
     monitor-exit v3
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 47
     :try_start_3
     new-instance v3, Lgkf;
 
     invoke-direct {v3, p0}, Lgkf;-><init>(Lgkk;)V
 
-    .line 48
     new-instance v4, Ljvd;
 
-    .line 49
     invoke-direct {v4}, Ljvd;-><init>()V
 
-    .line 50
     invoke-interface {v0, v3, v4}, Lawd;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    .line 51
     invoke-virtual {p0}, Lgkk;->a()V
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 53
     invoke-interface {v2}, Lich;->close()V
 
     goto :goto_0
 
-    .line 46
     :catchall_0
     move-exception v0
 
@@ -421,7 +366,6 @@
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 55
     :catch_0
     move-exception v0
 
@@ -430,7 +374,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 56
     :catchall_1
     move-exception v1
 
@@ -472,13 +415,10 @@
 .method public final a(Lgkd;)Lich;
     .locals 4
 
-    .prologue
-    .line 83
     iget-object v1, p0, Lgkk;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 84
     :try_start_0
     iget-object v0, p0, Lgkk;->b:Ljava/util/LinkedHashSet;
 
@@ -493,12 +433,10 @@
     :goto_0
     invoke-static {v0}, Liya;->b(Z)V
 
-    .line 85
     iget-object v0, p0, Lgkk;->b:Ljava/util/LinkedHashSet;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedHashSet;->add(Ljava/lang/Object;)Z
 
-    .line 86
     iget-object v0, p0, Lgkk;->c:Licj;
 
     new-instance v2, Ljava/util/ArrayList;
@@ -507,29 +445,22 @@
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 87
     iput-object v2, v0, Licj;->b:Ljava/lang/Object;
 
-    .line 88
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 89
     iget-object v0, p0, Lgkk;->c:Licj;
 
-    .line 90
     iget-object v0, v0, Licj;->a:Licb;
 
     invoke-virtual {v0}, Licb;->a()V
 
-    .line 91
     new-instance v0, Lgkg;
 
-    .line 92
     invoke-direct {v0, p0}, Lgkg;-><init>(Lgkk;)V
 
-    .line 95
     invoke-interface {p1}, Lgkd;->e()Liau;
 
     move-result-object v1
@@ -538,7 +469,6 @@
 
     move-result-object v1
 
-    .line 96
     invoke-interface {p1}, Lgkd;->e()Liau;
 
     move-result-object v2
@@ -547,33 +477,25 @@
 
     invoke-virtual {v0}, Lgkg;->a()V
 
-    .line 97
     new-instance v0, Lawj;
 
     invoke-direct {v0}, Lawj;-><init>()V
 
-    .line 98
     new-instance v2, Lgkh;
 
-    .line 99
     invoke-direct {v2, p0, p1}, Lgkh;-><init>(Lgkk;Lgkd;)V
 
-    .line 100
     invoke-virtual {v0, v2}, Lawj;->add(Ljava/lang/Object;)Z
 
-    .line 101
     invoke-virtual {v0, v1}, Lawj;->add(Ljava/lang/Object;)Z
 
-    .line 102
     return-object v0
 
-    .line 84
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 88
     :catchall_0
     move-exception v0
 
@@ -588,38 +510,30 @@
 .method final a()V
     .locals 6
 
-    .prologue
-    .line 103
     iget-object v1, p0, Lgkk;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 104
     :try_start_0
     iget v0, p0, Lgkk;->d:I
 
     if-nez v0, :cond_1
 
-    .line 105
     monitor-exit v1
 
-    .line 117
     :cond_0
     :goto_0
     return-void
 
-    .line 106
     :cond_1
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 107
     iget-object v1, p0, Lgkk;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 108
     :try_start_1
     new-instance v0, Ljava/util/ArrayList;
 
@@ -627,12 +541,10 @@
 
     invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 109
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 110
     check-cast v0, Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -654,7 +566,6 @@
 
     check-cast v1, Lgkd;
 
-    .line 111
     :goto_1
     invoke-interface {v1}, Lgkd;->f()Z
 
@@ -662,23 +573,19 @@
 
     if-eqz v4, :cond_2
 
-    .line 112
     iget-object v4, p0, Lgkk;->a:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 113
     :try_start_2
     iget v5, p0, Lgkk;->d:I
 
     if-nez v5, :cond_3
 
-    .line 114
     monitor-exit v4
 
     goto :goto_0
 
-    .line 115
     :catchall_0
     move-exception v0
 
@@ -688,7 +595,6 @@
 
     throw v0
 
-    .line 106
     :catchall_1
     move-exception v0
 
@@ -699,7 +605,6 @@
 
     throw v0
 
-    .line 109
     :catchall_2
     move-exception v0
 
@@ -710,7 +615,6 @@
 
     throw v0
 
-    .line 115
     :cond_3
     :try_start_5
     monitor-exit v4
@@ -723,8 +627,6 @@
 .method public final c()Liau;
     .locals 1
 
-    .prologue
-    .line 57
     iget-object v0, p0, Lgkk;->f:Licw;
 
     return-object v0
@@ -733,30 +635,24 @@
 .method public final d()Lgki;
     .locals 6
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 58
     iget-object v0, p0, Lgkk;->e:Lgkl;
 
     invoke-interface {v0}, Lgkl;->d()Lgki;
 
     move-result-object v0
 
-    .line 59
     if-eqz v0, :cond_0
 
-    .line 76
     :goto_0
     return-object v0
 
-    .line 61
     :cond_0
     invoke-virtual {p0}, Lgkk;->e()Lich;
 
     move-result-object v4
 
-    .line 62
     :try_start_0
     iget-object v1, p0, Lgkk;->a:Ljava/lang/Object;
 
@@ -765,7 +661,6 @@
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 63
     :try_start_1
     new-instance v0, Ljava/util/ArrayList;
 
@@ -773,12 +668,10 @@
 
     invoke-direct {v0, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 64
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 65
     :try_start_2
     check-cast v0, Ljava/util/ArrayList;
 
@@ -801,10 +694,8 @@
 
     check-cast v1, Lgkd;
 
-    .line 66
     invoke-interface {v1}, Lgkd;->f()Z
 
-    .line 67
     iget-object v1, p0, Lgkk;->e:Lgkl;
 
     invoke-interface {v1}, Lgkl;->d()Lgki;
@@ -814,18 +705,14 @@
 
     move-result-object v1
 
-    .line 68
     if-eqz v1, :cond_1
 
-    .line 70
     invoke-interface {v4}, Lich;->close()V
 
     move-object v0, v1
 
-    .line 71
     goto :goto_0
 
-    .line 64
     :catchall_0
     move-exception v0
 
@@ -840,7 +727,6 @@
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 74
     :catch_0
     move-exception v0
 
@@ -849,7 +735,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 75
     :catchall_1
     move-exception v1
 
@@ -868,16 +753,13 @@
     :goto_2
     throw v0
 
-    .line 73
     :cond_2
     invoke-interface {v4}, Lich;->close()V
 
     move-object v0, v2
 
-    .line 76
     goto :goto_0
 
-    .line 75
     :catch_1
     move-exception v1
 
@@ -899,32 +781,25 @@
 .method public final e()Lich;
     .locals 3
 
-    .prologue
-    .line 77
     iget-object v0, p0, Lgkk;->e:Lgkl;
 
     invoke-interface {v0}, Lgkl;->e()Lich;
 
     move-result-object v0
 
-    .line 78
     iget-object v1, p0, Lgkk;->f:Licw;
 
     invoke-virtual {v1}, Licw;->c()Lich;
 
     move-result-object v1
 
-    .line 79
     new-instance v2, Lawj;
 
     invoke-direct {v2}, Lawj;-><init>()V
 
-    .line 80
     invoke-virtual {v2, v0}, Lawj;->add(Ljava/lang/Object;)Z
 
-    .line 81
     invoke-virtual {v2, v1}, Lawj;->add(Ljava/lang/Object;)Z
 
-    .line 82
     return-object v2
 .end method

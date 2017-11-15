@@ -10,8 +10,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,10 +20,7 @@
 .method public final a(Liil;Ljava/io/OutputStream;)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-interface {p1}, Liil;->close()V
 
-    .line 3
     return-void
 .end method

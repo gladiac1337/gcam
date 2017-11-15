@@ -37,11 +37,8 @@
 .method private constructor <init>(I)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     shl-int/lit8 v0, p1, 0x2
 
     invoke-static {v0}, Lhrf;->a(I)I
@@ -50,7 +47,6 @@
 
     div-int/lit8 v0, v0, 0x4
 
-    .line 3
     new-array v1, v0, [I
 
     iput-object v1, p0, Lhrf;->c:[I
@@ -102,12 +98,8 @@
 .method public final a()Z
     .locals 1
 
-    .prologue
-    .line 4
-    .line 5
     iget v0, p0, Lhrf;->b:I
 
-    .line 6
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
@@ -124,14 +116,10 @@
 .method public final synthetic clone()Ljava/lang/Object;
     .locals 5
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 16
-    .line 18
     iget v2, p0, Lhrf;->b:I
 
-    .line 19
     new-instance v3, Lhrf;
 
     invoke-direct {v3, v2}, Lhrf;-><init>(I)V
@@ -177,27 +165,22 @@
     :cond_1
     iput v2, v3, Lhrf;->b:I
 
-    .line 20
     return-object v3
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
     .locals 8
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 7
     if-ne p1, p0, :cond_1
 
-    .line 15
     :cond_0
     :goto_0
     return v0
 
-    .line 7
     :cond_1
     instance-of v2, p1, Lhrf;
 
@@ -210,13 +193,10 @@
     :cond_2
     check-cast p1, Lhrf;
 
-    .line 8
     iget v2, p0, Lhrf;->b:I
 
-    .line 10
     iget v3, p1, Lhrf;->b:I
 
-    .line 11
     if-eq v2, v3, :cond_3
 
     move v0, v1
@@ -232,7 +212,6 @@
 
     move v2, v1
 
-    .line 12
     :goto_1
     if-ge v2, v5, :cond_6
 
@@ -244,7 +223,6 @@
 
     move v2, v1
 
-    .line 13
     :goto_2
     if-eqz v2, :cond_4
 
@@ -256,7 +234,6 @@
 
     move v2, v1
 
-    .line 14
     :goto_3
     if-ge v2, v5, :cond_8
 
@@ -272,7 +249,6 @@
 
     move v2, v1
 
-    .line 15
     :goto_4
     if-nez v2, :cond_0
 
@@ -281,7 +257,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_5
     add-int/lit8 v2, v2, 0x1
 
@@ -292,7 +267,6 @@
 
     goto :goto_2
 
-    .line 14
     :cond_7
     add-int/lit8 v2, v2, 0x1
 

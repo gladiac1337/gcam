@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/google/android/apps/camera/bottombar/BottomBarController;Z)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$3;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     iput-boolean p2, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$3;->val$clickable:Z
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$3;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/bottombar/BottomBarController;->access$200(Lcom/google/android/apps/camera/bottombar/BottomBarController;)Lcom/google/android/apps/camera/bottombar/BottomBar;
@@ -44,6 +40,5 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/bottombar/BottomBar;->setSideButtonsClickable(Z)V
 
-    .line 3
     return-void
 .end method

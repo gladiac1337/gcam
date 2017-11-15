@@ -17,8 +17,6 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
-    .line 14
     invoke-static {}, Lcom/google/googlex/gcam/GcamModuleJNI;->new_SpatialGainMap__SWIG_0()J
 
     move-result-wide v0
@@ -27,15 +25,12 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/SpatialGainMap;-><init>(JZ)V
 
-    .line 15
     return-void
 .end method
 
 .method public constructor <init>(II)V
     .locals 3
 
-    .prologue
-    .line 20
     invoke-static {p1, p2}, Lcom/google/googlex/gcam/GcamModuleJNI;->new_SpatialGainMap__SWIG_3(II)J
 
     move-result-wide v0
@@ -44,15 +39,12 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/SpatialGainMap;-><init>(JZ)V
 
-    .line 21
     return-void
 .end method
 
 .method public constructor <init>(IIZ)V
     .locals 3
 
-    .prologue
-    .line 18
     invoke-static {p1, p2, p3}, Lcom/google/googlex/gcam/GcamModuleJNI;->new_SpatialGainMap__SWIG_2(IIZ)J
 
     move-result-wide v0
@@ -61,15 +53,12 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/SpatialGainMap;-><init>(JZ)V
 
-    .line 19
     return-void
 .end method
 
 .method public constructor <init>(IIZZ)V
     .locals 3
 
-    .prologue
-    .line 16
     invoke-static {p1, p2, p3, p4}, Lcom/google/googlex/gcam/GcamModuleJNI;->new_SpatialGainMap__SWIG_1(IIZZ)J
 
     move-result-wide v0
@@ -78,32 +67,24 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/SpatialGainMap;-><init>(JZ)V
 
-    .line 17
     return-void
 .end method
 
 .method protected constructor <init>(JZ)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-boolean p3, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCMemOwn:Z
 
-    .line 3
     iput-wide p1, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
 
-    .line 4
     return-void
 .end method
 
 .method public constructor <init>(Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__ReadOnlyTImageViewT_float_gcam__kPixelContiguous_t;)V
     .locals 3
 
-    .prologue
-    .line 22
     invoke-static {p1}, Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__ReadOnlyTImageViewT_float_gcam__kPixelContiguous_t;->getCPtr(Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__ReadOnlyTImageViewT_float_gcam__kPixelContiguous_t;)J
 
     move-result-wide v0
@@ -116,15 +97,12 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/SpatialGainMap;-><init>(JZ)V
 
-    .line 23
     return-void
 .end method
 
 .method public constructor <init>(Lcom/google/googlex/gcam/SpatialGainMap;)V
     .locals 3
 
-    .prologue
-    .line 24
     invoke-static {p1}, Lcom/google/googlex/gcam/SpatialGainMap;->getCPtr(Lcom/google/googlex/gcam/SpatialGainMap;)J
 
     move-result-wide v0
@@ -137,15 +115,12 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/SpatialGainMap;-><init>(JZ)V
 
-    .line 25
     return-void
 .end method
 
 .method public static CreateFromBuffer(Lcom/google/googlex/gcam/SWIGTYPE_p_std__vectorT_unsigned_char_t;)Lcom/google/googlex/gcam/SpatialGainMap;
     .locals 4
 
-    .prologue
-    .line 42
     new-instance v0, Lcom/google/googlex/gcam/SpatialGainMap;
 
     invoke-static {p0}, Lcom/google/googlex/gcam/SWIGTYPE_p_std__vectorT_unsigned_char_t;->getCPtr(Lcom/google/googlex/gcam/SWIGTYPE_p_std__vectorT_unsigned_char_t;)J
@@ -166,8 +141,6 @@
 .method protected static getCPtr(Lcom/google/googlex/gcam/SpatialGainMap;)J
     .locals 2
 
-    .prologue
-    .line 5
     if-nez p0, :cond_0
 
     const-wide/16 v0, 0x0
@@ -186,8 +159,6 @@
 .method public Check(Lcom/google/googlex/gcam/SWIGTYPE_p_std__string;)Z
     .locals 4
 
-    .prologue
-    .line 33
     iget-wide v0, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/SWIGTYPE_p_std__string;->getCPtr(Lcom/google/googlex/gcam/SWIGTYPE_p_std__string;)J
@@ -204,8 +175,6 @@
 .method public ForceScaleBy(Lcom/google/googlex/gcam/SpatialGainMap;)V
     .locals 6
 
-    .prologue
-    .line 46
     iget-wide v0, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/SpatialGainMap;->getCPtr(Lcom/google/googlex/gcam/SpatialGainMap;)J
@@ -218,15 +187,12 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->SpatialGainMap_ForceScaleBy(JLcom/google/googlex/gcam/SpatialGainMap;JLcom/google/googlex/gcam/SpatialGainMap;)V
 
-    .line 47
     return-void
 .end method
 
 .method public InterpolatedReadRgb(FFI)F
     .locals 6
 
-    .prologue
-    .line 31
     iget-wide v0, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
 
     move-object v2, p0
@@ -247,8 +213,6 @@
 .method public InterpolatedReadRggb(FFI)F
     .locals 6
 
-    .prologue
-    .line 30
     iget-wide v0, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
 
     move-object v2, p0
@@ -269,21 +233,16 @@
 .method public Print()V
     .locals 2
 
-    .prologue
-    .line 34
     iget-wide v0, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->SpatialGainMap_Print(JLcom/google/googlex/gcam/SpatialGainMap;)V
 
-    .line 35
     return-void
 .end method
 
 .method public ReadRgb(III)F
     .locals 6
 
-    .prologue
-    .line 29
     iget-wide v0, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
 
     move-object v2, p0
@@ -304,8 +263,6 @@
 .method public ReadRggb(III)F
     .locals 6
 
-    .prologue
-    .line 28
     iget-wide v0, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
 
     move-object v2, p0
@@ -326,8 +283,6 @@
 .method public ResizeAndCrop(IILcom/google/googlex/gcam/NormalizedRect;Z)Lcom/google/googlex/gcam/SpatialGainMap;
     .locals 10
 
-    .prologue
-    .line 32
     new-instance v9, Lcom/google/googlex/gcam/SpatialGainMap;
 
     iget-wide v0, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
@@ -360,8 +315,6 @@
 .method public ScaleBy(Lcom/google/googlex/gcam/SpatialGainMap;)V
     .locals 6
 
-    .prologue
-    .line 44
     iget-wide v0, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/SpatialGainMap;->getCPtr(Lcom/google/googlex/gcam/SpatialGainMap;)J
@@ -374,15 +327,12 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->SpatialGainMap_ScaleBy(JLcom/google/googlex/gcam/SpatialGainMap;JLcom/google/googlex/gcam/SpatialGainMap;)V
 
-    .line 45
     return-void
 .end method
 
 .method public SerializeToBuffer()Lcom/google/googlex/gcam/SWIGTYPE_p_std__vectorT_unsigned_char_t;
     .locals 4
 
-    .prologue
-    .line 41
     new-instance v0, Lcom/google/googlex/gcam/SWIGTYPE_p_std__vectorT_unsigned_char_t;
 
     iget-wide v2, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
@@ -401,8 +351,6 @@
 .method public WriteRggb(IIIF)V
     .locals 7
 
-    .prologue
-    .line 26
     iget-wide v0, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
 
     move-object v2, p0
@@ -417,17 +365,14 @@
 
     invoke-static/range {v0 .. v6}, Lcom/google/googlex/gcam/GcamModuleJNI;->SpatialGainMap_WriteRggb(JLcom/google/googlex/gcam/SpatialGainMap;IIIF)V
 
-    .line 27
     return-void
 .end method
 
 .method public declared-synchronized delete()V
     .locals 4
 
-    .prologue
     const-wide/16 v2, 0x0
 
-    .line 8
     monitor-enter p0
 
     :try_start_0
@@ -437,22 +382,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 9
     iget-boolean v0, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCMemOwn:Z
 
     if-eqz v0, :cond_0
 
-    .line 10
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCMemOwn:Z
 
-    .line 11
     iget-wide v0, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
 
     invoke-static {v0, v1}, Lcom/google/googlex/gcam/GcamModuleJNI;->delete_SpatialGainMap(J)V
 
-    .line 12
     :cond_0
     const-wide/16 v0, 0x0
 
@@ -460,13 +401,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 13
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 8
     :catchall_0
     move-exception v0
 
@@ -478,19 +417,14 @@
 .method protected finalize()V
     .locals 0
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Lcom/google/googlex/gcam/SpatialGainMap;->delete()V
 
-    .line 7
     return-void
 .end method
 
 .method public gain_map()Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__TImageT_float_gcam__kPixelContiguous_t;
     .locals 4
 
-    .prologue
-    .line 39
     new-instance v0, Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__TImageT_float_gcam__kPixelContiguous_t;
 
     iget-wide v2, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
@@ -509,8 +443,6 @@
 .method public has_extra_vignetting_applied()Z
     .locals 2
 
-    .prologue
-    .line 43
     iget-wide v0, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->SpatialGainMap_has_extra_vignetting_applied(JLcom/google/googlex/gcam/SpatialGainMap;)Z
@@ -523,8 +455,6 @@
 .method public height()I
     .locals 2
 
-    .prologue
-    .line 37
     iget-wide v0, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->SpatialGainMap_height(JLcom/google/googlex/gcam/SpatialGainMap;)I
@@ -537,8 +467,6 @@
 .method public is_precise()Z
     .locals 2
 
-    .prologue
-    .line 40
     iget-wide v0, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->SpatialGainMap_is_precise(JLcom/google/googlex/gcam/SpatialGainMap;)Z
@@ -551,8 +479,6 @@
 .method public num_channels()I
     .locals 2
 
-    .prologue
-    .line 38
     iget-wide v0, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->SpatialGainMap_num_channels(JLcom/google/googlex/gcam/SpatialGainMap;)I
@@ -565,8 +491,6 @@
 .method public width()I
     .locals 2
 
-    .prologue
-    .line 36
     iget-wide v0, p0, Lcom/google/googlex/gcam/SpatialGainMap;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->SpatialGainMap_width(JLcom/google/googlex/gcam/SpatialGainMap;)I

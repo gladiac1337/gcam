@@ -15,25 +15,18 @@
 .method constructor <init>(Ljava/security/MessageDigest;I)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljoh;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljop;->a:Ljava/security/MessageDigest;
 
-    .line 3
     iput p2, p0, Ljop;->b:I
 
-    .line 4
     return-void
 .end method
 
 .method private final b()V
     .locals 2
 
-    .prologue
-    .line 11
     iget-boolean v0, p0, Ljop;->c:Z
 
     if-nez v0, :cond_0
@@ -45,10 +38,8 @@
 
     invoke-static {v0, v1}, Liya;->b(ZLjava/lang/Object;)V
 
-    .line 12
     return-void
 
-    .line 11
     :cond_0
     const/4 v0, 0x0
 
@@ -60,16 +51,12 @@
 .method public final a()Ljoi;
     .locals 2
 
-    .prologue
-    .line 13
     invoke-direct {p0}, Ljop;->b()V
 
-    .line 14
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Ljop;->c:Z
 
-    .line 15
     iget v0, p0, Ljop;->b:I
 
     iget-object v1, p0, Ljop;->a:Ljava/security/MessageDigest;
@@ -80,7 +67,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 16
     iget-object v0, p0, Ljop;->a:Ljava/security/MessageDigest;
 
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
@@ -91,11 +77,9 @@
 
     move-result-object v0
 
-    .line 18
     :goto_0
     return-object v0
 
-    .line 17
     :cond_0
     iget-object v0, p0, Ljop;->a:Ljava/security/MessageDigest;
 
@@ -119,27 +103,20 @@
 .method protected final a(B)V
     .locals 1
 
-    .prologue
-    .line 5
     invoke-direct {p0}, Ljop;->b()V
 
-    .line 6
     iget-object v0, p0, Ljop;->a:Ljava/security/MessageDigest;
 
     invoke-virtual {v0, p1}, Ljava/security/MessageDigest;->update(B)V
 
-    .line 7
     return-void
 .end method
 
 .method protected final a([B)V
     .locals 3
 
-    .prologue
-    .line 8
     invoke-direct {p0}, Ljop;->b()V
 
-    .line 9
     iget-object v0, p0, Ljop;->a:Ljava/security/MessageDigest;
 
     const/4 v1, 0x0
@@ -148,6 +125,5 @@
 
     invoke-virtual {v0, p1, v1, v2}, Ljava/security/MessageDigest;->update([BII)V
 
-    .line 10
     return-void
 .end method

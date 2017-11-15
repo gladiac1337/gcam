@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 12
     const-string v0, "VidMod"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -31,9 +29,6 @@
 .method public constructor <init>(Lfic;Lbsa;Lbvl;Liee;Lhzt;Landroid/content/res/Resources;Ljxn;Liau;Lffs;Lerh;Lbje;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lguc;Leqd;Lexu;Ldbw;Ldav;Lbfe;Lhem;)V
     .locals 21
 
-    .prologue
-    .line 1
-    .line 2
     move-object/from16 v0, p11
 
     iget-object v13, v0, Lbje;->a:Liau;
@@ -74,10 +69,8 @@
 
     move-object/from16 v20, p19
 
-    .line 4
     invoke-direct/range {v2 .. v20}, Ldba;-><init>(Liau;Lfic;Lbsa;Lbvl;Liee;Lhzt;Landroid/content/res/Resources;Ljxn;Liau;Lffs;Liau;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lguc;Leqd;Lexu;Ldav;Lbfe;Lhem;)V
 
-    .line 5
     new-instance v2, Lddq;
 
     move-object/from16 v0, p0
@@ -88,10 +81,8 @@
 
     iput-object v2, v0, Lddp;->q:Licn;
 
-    .line 6
     if-eqz p10, :cond_0
 
-    .line 7
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lddp;->g:Lhzr;
@@ -100,7 +91,6 @@
 
     iget-object v3, v0, Lddp;->q:Licn;
 
-    .line 8
     move-object/from16 v0, p10
 
     move-object/from16 v1, p5
@@ -109,10 +99,8 @@
 
     move-result-object v3
 
-    .line 9
     invoke-virtual {v2, v3}, Lhzr;->a(Lich;)Lich;
 
-    .line 10
     :cond_0
     return-void
 .end method
@@ -122,8 +110,6 @@
 .method protected final a(Lcom/google/android/apps/camera/bottombar/BottomBarController;Lguc;)Lcom/google/android/apps/camera/bottombar/BottomBarListener;
     .locals 1
 
-    .prologue
-    .line 11
     new-instance v0, Lddr;
 
     invoke-direct {v0, p0, p1, p2}, Lddr;-><init>(Lddp;Lcom/google/android/apps/camera/bottombar/BottomBarController;Lguc;)V

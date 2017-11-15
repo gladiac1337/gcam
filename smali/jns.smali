@@ -14,12 +14,8 @@
 .method public constructor <init>(Ljava/util/Set;Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 1
-    .line 2
     invoke-direct {p0, p1, p2}, Ljnm;-><init>(Ljava/util/Collection;Ljava/lang/Object;)V
 
-    .line 3
     return-void
 .end method
 
@@ -28,8 +24,6 @@
 .method synthetic a()Ljava/util/Collection;
     .locals 1
 
-    .prologue
-    .line 13
     invoke-virtual {p0}, Ljns;->d()Ljava/util/Set;
 
     move-result-object v0
@@ -40,8 +34,6 @@
 .method synthetic b()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 14
     invoke-virtual {p0}, Ljns;->d()Ljava/util/Set;
 
     move-result-object v0
@@ -52,8 +44,6 @@
 .method d()Ljava/util/Set;
     .locals 1
 
-    .prologue
-    .line 4
     invoke-super {p0}, Ljnm;->a()Ljava/util/Collection;
 
     move-result-object v0
@@ -66,24 +56,18 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 5
     if-ne p1, p0, :cond_0
 
-    .line 6
     const/4 v0, 0x1
 
-    .line 8
     :goto_0
     return v0
 
-    .line 7
     :cond_0
     iget-object v1, p0, Ljns;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 8
     :try_start_0
     invoke-virtual {p0}, Ljns;->d()Ljava/util/Set;
 
@@ -97,7 +81,6 @@
 
     goto :goto_0
 
-    .line 9
     :catchall_0
     move-exception v0
 
@@ -111,13 +94,10 @@
 .method public hashCode()I
     .locals 2
 
-    .prologue
-    .line 10
     iget-object v1, p0, Ljns;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 11
     :try_start_0
     invoke-virtual {p0}, Ljns;->d()Ljava/util/Set;
 
@@ -131,7 +111,6 @@
 
     return v0
 
-    .line 12
     :catchall_0
     move-exception v0
 

@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,16 +18,12 @@
 .method private static a(Ljava/util/List;)Lipp;
     .locals 3
 
-    .prologue
-    .line 2
     invoke-static {p0}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     new-instance v1, Lipp;
 
     invoke-direct {v1}, Lipp;-><init>()V
 
-    .line 4
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -47,12 +41,10 @@
 
     check-cast v0, Lipm;
 
-    .line 5
     invoke-virtual {v1, v0}, Lipp;->a(Lipv;)V
 
     goto :goto_0
 
-    .line 7
     :cond_0
     return-object v1
 .end method
@@ -62,8 +54,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 8
     check-cast p1, Ljava/util/List;
 
     invoke-static {p1}, Liyv;->a(Ljava/util/List;)Lipp;

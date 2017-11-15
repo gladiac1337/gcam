@@ -11,14 +11,10 @@
 .method constructor <init>(Ljava/io/File;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Likm;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lccu;->a:Ljava/io/File;
 
-    .line 3
     return-void
 .end method
 
@@ -27,25 +23,20 @@
 .method public final synthetic b(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 5
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 4
     check-cast p1, Lcom/google/android/libraries/smartburst/buffers/FeatureTable;
 
     check-cast p2, Ljee;
 
-    .line 5
     iget-object v0, p0, Lccu;->a:Ljava/io/File;
 
-    .line 6
     new-instance v2, Ljava/io/File;
 
     const-string v3, "feature_table.bin"
 
     invoke-direct {v2, v0, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 7
     :try_start_0
     invoke-static {v2}, Liui;->b(Ljava/io/File;)Ljava/io/OutputStream;
     :try_end_0
@@ -53,7 +44,6 @@
 
     move-result-object v2
 
-    .line 9
     :try_start_1
     new-instance v0, Ljava/io/DataOutputStream;
 
@@ -64,27 +54,22 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 10
     :try_start_2
     invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 15
     iget-object v0, p0, Lccu;->a:Ljava/io/File;
 
-    .line 16
     new-instance v2, Ljava/io/File;
 
     const-string v3, "metadatastore.bin"
 
     invoke-direct {v2, v0, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 17
     :try_start_3
     new-instance v3, Ljava/io/DataOutputStream;
 
-    .line 18
     invoke-static {v2}, Liui;->b(Ljava/io/File;)Ljava/io/OutputStream;
 
     move-result-object v0
@@ -93,14 +78,12 @@
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_4
 
-    .line 20
     :try_start_4
     invoke-static {p2, v3}, Licy;->a(Ljee;Ljava/io/DataOutputStream;)V
     :try_end_4
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_3
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 21
     :try_start_5
     invoke-virtual {v3}, Ljava/io/DataOutputStream;->close()V
     :try_end_5
@@ -108,7 +91,6 @@
 
     return-void
 
-    .line 11
     :catch_0
     move-exception v0
 
@@ -117,7 +99,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 12
     :catchall_0
     move-exception v1
 
@@ -142,11 +123,9 @@
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_1
 
-    .line 13
     :catch_1
     move-exception v0
 
-    .line 14
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Could not write feature table"
@@ -155,7 +134,6 @@
 
     throw v1
 
-    .line 12
     :catch_2
     move-exception v2
 
@@ -171,7 +149,6 @@
 
     goto :goto_1
 
-    .line 22
     :catch_3
     move-exception v1
 
@@ -180,7 +157,6 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_1
 
-    .line 23
     :catchall_1
     move-exception v0
 
@@ -198,11 +174,9 @@
     :try_end_c
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_4
 
-    .line 24
     :catch_4
     move-exception v0
 
-    .line 25
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Could not save MetadataStore"
@@ -211,7 +185,6 @@
 
     throw v1
 
-    .line 23
     :catch_5
     move-exception v2
 
@@ -227,7 +200,6 @@
 
     goto :goto_2
 
-    .line 12
     :catchall_2
     move-exception v0
 

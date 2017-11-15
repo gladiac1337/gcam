@@ -13,16 +13,12 @@
 .method constructor <init>(Ljhm;Ljhm;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljhn;->c:Ljhm;
 
     iput-object p3, p0, Ljhn;->b:Ljava/lang/String;
 
-    .line 2
     invoke-direct {p0, p2}, Ljhm;-><init>(Ljhm;)V
 
-    .line 3
     return-void
 .end method
 
@@ -31,8 +27,6 @@
 .method final a(Ljava/lang/Object;)Ljava/lang/CharSequence;
     .locals 1
 
-    .prologue
-    .line 4
     if-nez p1, :cond_0
 
     iget-object v0, p0, Ljhn;->b:Ljava/lang/String;
@@ -53,8 +47,6 @@
 .method public final a()Ljhm;
     .locals 2
 
-    .prologue
-    .line 6
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "already specified useForNull"
@@ -67,8 +59,6 @@
 .method public final b(Ljava/lang/String;)Ljhm;
     .locals 2
 
-    .prologue
-    .line 5
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     const-string v1, "already specified useForNull"

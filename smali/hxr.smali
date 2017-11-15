@@ -34,8 +34,6 @@
 .method public final a(Lcom/google/android/gms/common/api/Status;)V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhxr;->a:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -50,10 +48,8 @@
 
     move-result-object v1
 
-    .line 2
     iget v2, p1, Lcom/google/android/gms/common/api/Status;->e:I
 
-    .line 3
     const/16 v3, 0xfa2
 
     if-ne v2, v3, :cond_1

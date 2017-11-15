@@ -18,8 +18,6 @@
 .method constructor <init>(Lcxn;[BI)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcxp;->c:Lcxn;
 
     iput-object p2, p0, Lcxp;->a:[B
@@ -36,16 +34,12 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcxp;->c:Lcxn;
 
     iget-object v0, v0, Lcxn;->a:Lcxc;
 
-    .line 3
     iget-object v0, v0, Lcng;->a:Lcnh;
 
-    .line 4
     new-instance v1, Lcvn;
 
     iget-object v2, p0, Lcxp;->a:[B
@@ -54,9 +48,7 @@
 
     invoke-direct {v1, v2, v3}, Lcvn;-><init>([BI)V
 
-    .line 5
     invoke-interface {v0, v1}, Lcnh;->a(Ljava/lang/Object;)V
 
-    .line 6
     return-void
 .end method

@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Lcgi;
 
     invoke-direct {v0}, Lcgi;-><init>()V

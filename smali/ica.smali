@@ -35,9 +35,6 @@
 .method public final a(Ljava/util/Set;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -46,6 +43,5 @@
 
     move-result-object v0
 
-    .line 3
     return-object v0
 .end method

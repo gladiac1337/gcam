@@ -11,13 +11,10 @@
 .method private constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;)V
     .locals 1
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$LfuScheduler;-><init>(Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$1;)V
 
-    .line 2
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$OneShotScheduler;->mCurCount:I
@@ -28,8 +25,6 @@
 .method synthetic constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$1;)V
     .locals 0
 
-    .prologue
-    .line 8
     invoke-direct {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$OneShotScheduler;-><init>(Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;)V
 
     return-void
@@ -40,16 +35,12 @@
 .method public cleanUp()V
     .locals 0
 
-    .prologue
-    .line 7
     return-void
 .end method
 
 .method public getStrategy()I
     .locals 1
 
-    .prologue
-    .line 3
     const/4 v0, 0x4
 
     return v0
@@ -58,8 +49,6 @@
 .method protected priorityForFilter(Lcom/google/android/libraries/smartburst/filterfw/Filter;)J
     .locals 2
 
-    .prologue
-    .line 4
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/Filter;->getScheduleCount()I
 
     move-result v0
@@ -72,11 +61,9 @@
 
     move-result-wide v0
 
-    .line 6
     :goto_0
     return-wide v0
 
-    .line 5
     :cond_0
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;->access$1300()I
 
@@ -84,6 +71,5 @@
 
     int-to-long v0, v0
 
-    .line 6
     goto :goto_0
 .end method

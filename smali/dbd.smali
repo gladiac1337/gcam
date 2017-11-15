@@ -11,8 +11,6 @@
 .method constructor <init>(Ldba;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldbd;->a:Ldba;
 
     invoke-direct {p0}, Lguh;-><init>()V
@@ -25,15 +23,12 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ldbd;->a:Ldba;
 
     iget-object v1, v0, Ldba;->k:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Ldbd;->a:Ldba;
 
@@ -41,34 +36,27 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Ldbd;->a:Ldba;
 
     iget-object v0, v0, Ldba;->o:Ldbl;
 
     invoke-interface {v0}, Ldbl;->a()V
 
-    .line 5
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6
     iget-object v0, p0, Ldbd;->a:Ldba;
 
-    .line 7
     iget-object v0, v0, Ldba;->l:Leug;
 
-    .line 8
     iget-object v0, v0, Leug;->y:Lfhe;
 
     invoke-virtual {v0}, Lfhe;->a()V
 
-    .line 9
     return-void
 
-    .line 5
     :catchall_0
     move-exception v0
 

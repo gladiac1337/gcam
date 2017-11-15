@@ -15,28 +15,20 @@
 .method private constructor <init>(III)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput p1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$PyramidLevel;->mLevel:I
 
-    .line 3
     iput p2, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$PyramidLevel;->mWidth:I
 
-    .line 4
     iput p3, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$PyramidLevel;->mHeight:I
 
-    .line 5
     return-void
 .end method
 
 .method synthetic constructor <init>(IIILcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$1;)V
     .locals 0
 
-    .prologue
-    .line 10
     invoke-direct {p0, p1, p2, p3}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$PyramidLevel;-><init>(III)V
 
     return-void
@@ -47,8 +39,6 @@
 .method getDimensions()[I
     .locals 3
 
-    .prologue
-    .line 9
     const/4 v0, 0x2
 
     new-array v0, v0, [I
@@ -71,8 +61,6 @@
 .method getHeight()I
     .locals 1
 
-    .prologue
-    .line 8
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$PyramidLevel;->mHeight:I
 
     return v0
@@ -81,8 +69,6 @@
 .method getLevel()I
     .locals 1
 
-    .prologue
-    .line 6
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$PyramidLevel;->mLevel:I
 
     return v0
@@ -91,8 +77,6 @@
 .method getWidth()I
     .locals 1
 
-    .prologue
-    .line 7
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/reduce/ImageReduceFilter$PyramidLevel;->mWidth:I
 
     return v0

@@ -16,8 +16,6 @@
 .method constructor <init>(Lhio;Landroid/graphics/Bitmap;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhip;->b:Lhio;
 
     iput-object p2, p0, Lhip;->a:Landroid/graphics/Bitmap;
@@ -32,18 +30,13 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lhip;->b:Lhio;
 
-    .line 3
     iget-object v0, v0, Lhio;->a:Lhiq;
 
-    .line 4
     iget-object v1, p0, Lhip;->a:Landroid/graphics/Bitmap;
 
     invoke-interface {v0, v1}, Lhiq;->a(Landroid/graphics/Bitmap;)V
 
-    .line 5
     return-void
 .end method

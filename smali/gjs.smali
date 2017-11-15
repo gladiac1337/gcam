@@ -16,14 +16,10 @@
 .method constructor <init>(Ljava/util/List;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lgjs;->b:Ljava/util/List;
 
-    .line 3
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -32,7 +28,6 @@
 
     iput-object v0, p0, Lgjs;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 4
     return-void
 .end method
 
@@ -41,8 +36,6 @@
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lgjs;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -53,11 +46,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 10
     :cond_0
     return-void
 
-    .line 7
     :cond_1
     iget-object v0, p0, Lgjs;->b:Ljava/util/List;
 
@@ -78,7 +69,6 @@
 
     check-cast v0, Lgki;
 
-    .line 8
     invoke-interface {v0}, Lgki;->close()V
 
     goto :goto_0

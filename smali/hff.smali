@@ -11,8 +11,6 @@
 .method constructor <init>(Lhev;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhff;->a:Lhev;
 
     invoke-direct {p0}, Lheu;-><init>()V
@@ -25,14 +23,10 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lhff;->a:Lhev;
 
-    .line 3
     iget v0, v0, Lhev;->t:F
 
-    .line 4
     const/4 v1, 0x0
 
     cmpl-float v0, v0, v1
@@ -46,10 +40,8 @@
 
     invoke-static {v0, v1}, Liya;->a(ZLjava/lang/Object;)V
 
-    .line 5
     return-void
 
-    .line 4
     :cond_0
     const/4 v0, 0x0
 
@@ -59,46 +51,32 @@
 .method public e()V
     .locals 1
 
-    .prologue
-    .line 15
     iget-object v0, p0, Lhff;->a:Lhev;
 
-    .line 16
     iget-object v0, v0, Lhev;->s:Landroid/animation/ValueAnimator;
 
-    .line 17
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->reverse()V
 
-    .line 18
     iget-object v0, p0, Lhff;->a:Lhev;
 
-    .line 19
     iget-object v0, v0, Lhev;->n:Landroid/animation/ObjectAnimator;
 
-    .line 20
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->reverse()V
 
-    .line 21
     return-void
 .end method
 
 .method public h()V
     .locals 6
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lhff;->a:Lhev;
 
-    .line 7
     iget-object v0, v0, Lhev;->s:Landroid/animation/ValueAnimator;
 
-    .line 8
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->reverse()V
 
-    .line 9
     iget-object v0, p0, Lhff;->a:Lhev;
 
-    .line 11
     iget-object v1, v0, Lhev;->h:Lcom/google/android/apps/camera/zoomui/ZoomUi;
 
     invoke-virtual {v1}, Lcom/google/android/apps/camera/zoomui/ZoomUi;->getContext()Landroid/content/Context;
@@ -115,7 +93,6 @@
 
     iget-object v5, v0, Lhev;->k:Liau;
 
-    .line 12
     invoke-interface {v5}, Liau;->b()Ljava/lang/Object;
 
     move-result-object v5
@@ -126,11 +103,9 @@
 
     move-result-object v1
 
-    .line 13
     iget-object v0, v0, Lhev;->h:Lcom/google/android/apps/camera/zoomui/ZoomUi;
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/zoomui/ZoomUi;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
-    .line 14
     return-void
 .end method

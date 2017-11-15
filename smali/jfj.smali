@@ -13,21 +13,14 @@
 .method public constructor <init>(Ljaf;Ljfq;)V
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     iget-object v0, p1, Ljaf;->a:Lcom/google/android/libraries/smartburst/buffers/FeatureTable;
 
-    .line 3
     invoke-direct {p0, v0}, Ljaf;-><init>(Lcom/google/android/libraries/smartburst/buffers/FeatureTable;)V
 
-    .line 4
     iput-object p1, p0, Ljfj;->b:Ljaf;
 
-    .line 5
     iput-object p2, p0, Ljfj;->c:Ljfq;
 
-    .line 6
     return-void
 .end method
 
@@ -36,10 +29,8 @@
 .method public final a(JLirs;)Ljfx;
     .locals 11
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 7
     invoke-virtual {p3}, Lirs;->a()[Lcom/google/android/libraries/smartburst/utils/Feature;
 
     move-result-object v3
@@ -53,20 +44,17 @@
 
     aget-object v5, v3, v2
 
-    .line 8
     invoke-virtual {v5}, Lcom/google/android/libraries/smartburst/utils/Feature;->getValues()[F
 
     move-result-object v6
 
     move v0, v1
 
-    .line 9
     :goto_1
     array-length v7, v6
 
     if-ge v0, v7, :cond_0
 
-    .line 10
     invoke-virtual {v5}, Lcom/google/android/libraries/smartburst/utils/Feature;->getType()Ljfs;
 
     move-result-object v7
@@ -113,19 +101,16 @@
 
     move-result-object v7
 
-    .line 11
     iget-object v8, p0, Ljfj;->c:Ljfq;
 
     aget v9, v6, v0
 
     invoke-virtual {v8, v7, p1, p2, v9}, Ljfq;->a(Ljava/lang/String;JF)V
 
-    .line 12
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 13
     :cond_0
     add-int/lit8 v0, v2, 0x1
 
@@ -133,7 +118,6 @@
 
     goto :goto_0
 
-    .line 14
     :cond_1
     iget-object v0, p0, Ljfj;->b:Ljaf;
 
@@ -147,8 +131,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 15
     iget-object v0, p0, Ljfj;->b:Ljaf;
 
     invoke-virtual {v0}, Ljaf;->toString()Ljava/lang/String;

@@ -43,7 +43,6 @@
 .method static constructor <clinit>()V
     .locals 14
 
-    .prologue
     const/4 v13, 0x4
 
     const/4 v12, 0x3
@@ -54,7 +53,6 @@
 
     const/4 v2, 0x0
 
-    .line 10
     new-instance v0, Lfkf;
 
     const-string v1, "PHOTO"
@@ -71,7 +69,6 @@
 
     sput-object v0, Lfkf;->a:Lfkf;
 
-    .line 11
     new-instance v3, Lfkf;
 
     const-string v4, "VIDEO"
@@ -90,7 +87,6 @@
 
     sput-object v3, Lfkf;->b:Lfkf;
 
-    .line 12
     new-instance v3, Lfkf;
 
     const-string v4, "REFOCUS"
@@ -109,7 +105,6 @@
 
     sput-object v3, Lfkf;->c:Lfkf;
 
-    .line 13
     new-instance v3, Lfkf;
 
     const-string v4, "PHOTOSPHERE"
@@ -128,7 +123,6 @@
 
     sput-object v3, Lfkf;->d:Lfkf;
 
-    .line 14
     new-instance v3, Lfkf;
 
     const-string v4, "PANORAMA"
@@ -147,7 +141,6 @@
 
     sput-object v3, Lfkf;->e:Lfkf;
 
-    .line 15
     new-instance v3, Lfkf;
 
     const-string v4, "VIDEO_HFR"
@@ -166,7 +159,6 @@
 
     sput-object v3, Lfkf;->f:Lfkf;
 
-    .line 16
     new-instance v3, Lfkf;
 
     const-string v4, "PORTRAIT"
@@ -185,7 +177,6 @@
 
     sput-object v3, Lfkf;->g:Lfkf;
 
-    .line 17
     new-instance v3, Lfkf;
 
     const-string v4, "CAPTURE_INTENT"
@@ -204,7 +195,6 @@
 
     sput-object v3, Lfkf;->h:Lfkf;
 
-    .line 18
     new-instance v3, Lfkf;
 
     const-string v4, "VIDEO_INTENT"
@@ -223,7 +213,6 @@
 
     sput-object v3, Lfkf;->i:Lfkf;
 
-    .line 19
     new-instance v3, Lfkf;
 
     const-string v4, "SETTINGS"
@@ -242,7 +231,6 @@
 
     sput-object v3, Lfkf;->j:Lfkf;
 
-    .line 20
     new-instance v3, Lfkf;
 
     const-string v4, "ORNAMENT"
@@ -261,7 +249,6 @@
 
     sput-object v3, Lfkf;->k:Lfkf;
 
-    .line 21
     const/16 v0, 0xb
 
     new-array v0, v0, [Lfkf;
@@ -330,31 +317,22 @@
 .method private constructor <init>(Ljava/lang/String;IIIII)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     iput p3, p0, Lfkf;->n:I
 
-    .line 4
     iput p4, p0, Lfkf;->l:I
 
-    .line 5
     iput p5, p0, Lfkf;->m:I
 
-    .line 6
     iput p6, p0, Lfkf;->o:I
 
-    .line 7
     return-void
 .end method
 
 .method public static values()[Lfkf;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lfkf;->p:[Lfkf;
 
     invoke-virtual {v0}, [Lfkf;->clone()Ljava/lang/Object;
@@ -371,8 +349,6 @@
 .method public final a(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    .prologue
-    .line 8
     iget v0, p0, Lfkf;->o:I
 
     const/4 v1, 0x0
@@ -389,8 +365,6 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 9
     iget v0, p0, Lfkf;->n:I
 
     invoke-virtual {p1, v0}, Landroid/content/res/Resources;->getInteger(I)I

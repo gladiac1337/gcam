@@ -35,12 +35,9 @@
 .method public final call()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
     invoke-static {}, Lxc;->a()Lxb;
 
     move-result-object v0
 
-    .line 2
     return-object v0
 .end method

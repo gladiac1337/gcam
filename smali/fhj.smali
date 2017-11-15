@@ -29,25 +29,19 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lfhj;->a:Lcom/google/android/apps/camera/legacy/app/ui/toyboxmenu/ToyboxMenuButton;
 
     iget-boolean v1, p0, Lfhj;->b:Z
 
-    .line 2
     if-eqz v1, :cond_0
 
-    .line 3
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/legacy/app/ui/toyboxmenu/ToyboxMenuButton;->setClickable(Z)V
 
-    .line 5
     :goto_0
     return-void
 
-    .line 4
     :cond_0
     const/16 v1, 0x8
 

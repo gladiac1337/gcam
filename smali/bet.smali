@@ -14,8 +14,6 @@
 .method constructor <init>(Lber;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbet;->a:Lber;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,19 +26,14 @@
 .method public final onError(Landroid/media/MediaRecorder;II)V
     .locals 4
 
-    .prologue
     const/16 v3, 0x39
 
     const/4 v0, 0x1
 
-    .line 2
-    .line 3
     if-ne p2, v0, :cond_1
 
-    .line 4
     sget-object v1, Lber;->a:Ljava/lang/String;
 
-    .line 5
     const/16 v2, 0x2f
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -63,33 +56,25 @@
 
     invoke-static {v1, v2}, Lbhz;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 15
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 16
     iget-object v0, p0, Lbet;->a:Lber;
 
-    .line 17
     iget-object v0, v0, Lber;->b:Lbew;
 
-    .line 18
     invoke-interface {v0}, Lbew;->a()V
 
-    .line 19
     :cond_0
     return-void
 
-    .line 6
     :cond_1
     const/16 v1, 0x64
 
     if-ne p2, v1, :cond_2
 
-    .line 7
     sget-object v1, Lber;->a:Ljava/lang/String;
 
-    .line 8
     const/16 v2, 0x2a
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -114,16 +99,13 @@
 
     goto :goto_0
 
-    .line 9
     :cond_2
     const/16 v1, -0x3ef
 
     if-ne p3, v1, :cond_3
 
-    .line 10
     sget-object v0, Lber;->a:Ljava/lang/String;
 
-    .line 11
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(I)V
@@ -154,16 +136,13 @@
 
     invoke-static {v0, v1}, Lbhz;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 13
     :cond_3
     sget-object v1, Lber;->a:Ljava/lang/String;
 
-    .line 14
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V

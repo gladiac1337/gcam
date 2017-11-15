@@ -11,8 +11,6 @@
 .method constructor <init>(Lbua;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbup;->a:Lbua;
 
     invoke-direct {p0}, Lcom/google/android/apps/camera/bottombar/BottomBarListener;-><init>()V
@@ -25,23 +23,16 @@
 .method public final onCameraSwitch(I)V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbup;->a:Lbua;
 
-    .line 3
     iget-object v0, v0, Lbua;->M:Lexu;
 
-    .line 4
     invoke-virtual {v0}, Lgvh;->o()V
 
-    .line 5
     iget-object v0, p0, Lbup;->a:Lbua;
 
-    .line 6
     iget-object v0, v0, Lbua;->l:Lgsm;
 
-    .line 7
     iget-object v1, p0, Lbup;->a:Lbua;
 
     invoke-virtual {v1}, Lbua;->L()Ljava/lang/String;
@@ -52,6 +43,5 @@
 
     invoke-virtual {v0, v1, v2, p1}, Lgsm;->b(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 8
     return-void
 .end method

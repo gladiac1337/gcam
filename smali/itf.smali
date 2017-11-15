@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Litf;->a:Lcom/google/android/libraries/smartburst/filterfw/MffContext;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,30 +26,24 @@
 .method public final synthetic a(Litk;)Ljava/lang/Object;
     .locals 7
 
-    .prologue
-    .line 2
-    .line 3
     new-instance v0, Liza;
 
     iget-object v1, p0, Litf;->a:Lcom/google/android/libraries/smartburst/filterfw/MffContext;
 
     const-class v2, Lcom/google/android/libraries/smartburst/filterfw/VideoFrameProvider;
 
-    .line 4
     const-string v3, "default"
 
     invoke-virtual {p1, v2, v3}, Litk;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 5
     check-cast v2, Lcom/google/android/libraries/smartburst/filterfw/VideoFrameProvider;
 
     const-class v3, Liru;
 
     const-string v4, "med-res-acquisition-pipeline"
 
-    .line 6
     invoke-virtual {p1, v3, v4}, Litk;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
@@ -62,7 +54,6 @@
 
     const-string v5, "med-res-acquisition-pipeline"
 
-    .line 7
     invoke-virtual {p1, v4, v5}, Litk;->a(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v4
@@ -77,6 +68,5 @@
 
     invoke-direct/range {v0 .. v6}, Liza;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Lcom/google/android/libraries/smartburst/filterfw/VideoFrameProvider;Liru;Liyb;Lcom/google/android/libraries/smartburst/filterfw/GraphFactory;Ljava/lang/String;)V
 
-    .line 8
     return-object v0
 .end method

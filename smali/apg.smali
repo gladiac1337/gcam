@@ -14,8 +14,6 @@
 .method constructor <init>(Lapf;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lapg;->a:Lapf;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 2
     invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0

@@ -14,17 +14,12 @@
 .method public constructor <init>(Ljee;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Ljaq;->a:Ljee;
 
-    .line 4
     return-void
 .end method
 
@@ -33,21 +28,16 @@
 .method public final a(Ljava/lang/String;)Ljan;
     .locals 4
 
-    .prologue
-    .line 5
     invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 6
     invoke-static {v0}, Ljds;->a(Ljava/lang/String;)Ljea;
 
     move-result-object v1
 
-    .line 7
     if-eqz v1, :cond_0
 
-    .line 8
     new-instance v0, Ljar;
 
     iget-object v2, p0, Ljaq;->a:Ljee;
@@ -56,7 +46,6 @@
 
     invoke-direct {v0, v2, v1, v3}, Ljar;-><init>(Ljee;Ljea;F)V
 
-    .line 9
     :goto_0
     return-object v0
 
@@ -69,8 +58,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 10
     const-string v0, "MetadataFeatureScorerProvider[metadataStore = "
 
     iget-object v1, p0, Ljaq;->a:Ljee;

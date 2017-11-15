@@ -56,11 +56,8 @@
 .method static synthetic a(Lhoh;Lcom/google/android/gms/googlehelp/GoogleHelp;J)V
     .locals 10
 
-    .prologue
     const/4 v8, 0x1
 
-    .line 8
-    .line 9
     iget-object v0, p0, Lhoh;->j:Ljava/util/List;
 
     iget-object v1, p0, Lhoh;->k:Ljava/lang/ref/WeakReference;
@@ -85,7 +82,6 @@
 
     invoke-static/range {v1 .. v7}, Lhog;->a(Lhkl;Lcom/google/android/gms/googlehelp/GoogleHelp;Lhjg;Lhjg;Ljava/io/File;J)V
 
-    .line 10
     :goto_0
     invoke-static {v0}, Lhjg;->a(Ljava/util/List;)Landroid/os/Bundle;
 
@@ -93,28 +89,22 @@
 
     iput-object v0, p1, Lcom/google/android/gms/googlehelp/GoogleHelp;->a:Landroid/os/Bundle;
 
-    .line 11
     iget-object v0, p0, Lhoh;->b:Lhjg;
 
     if-eqz v0, :cond_0
 
-    .line 12
     iput-boolean v8, p1, Lcom/google/android/gms/googlehelp/GoogleHelp;->e:Z
 
-    .line 13
     :cond_0
     iget-object v0, p0, Lhoh;->c:Lhjg;
 
     if-eqz v0, :cond_1
 
-    .line 14
     iput-boolean v8, p1, Lcom/google/android/gms/googlehelp/GoogleHelp;->f:Z
 
-    .line 15
     :cond_1
     return-void
 
-    .line 9
     :cond_2
     const-string v1, "gms:googlehelp:async_help_psd_failure"
 
@@ -163,8 +153,6 @@
 .method protected final a(Lhor;)V
     .locals 6
 
-    .prologue
-    .line 1
     :try_start_0
     iget-object v0, p0, Lhoh;->a:Landroid/content/Intent;
 
@@ -178,12 +166,10 @@
 
     iget-object v1, p0, Lhoh;->i:Landroid/graphics/Bitmap;
 
-    .line 2
     new-instance v2, Lhoi;
 
     invoke-direct {v2, p0}, Lhoi;-><init>(Lhoh;)V
 
-    .line 4
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v3
@@ -246,11 +232,9 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 7
     :goto_2
     return-void
 
-    .line 4
     :cond_0
     const/4 v0, 0x0
 
@@ -273,7 +257,6 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 5
     :catch_0
     move-exception v0
 
@@ -283,15 +266,12 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 6
     sget-object v0, Lhog;->a:Lcom/google/android/gms/common/api/Status;
 
-    .line 7
     invoke-virtual {p0, v0}, Lhoh;->c(Lcom/google/android/gms/common/api/Status;)V
 
     goto :goto_2
 
-    .line 4
     :cond_1
     const/4 v0, 0x0
 

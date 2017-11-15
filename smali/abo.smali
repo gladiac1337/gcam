@@ -16,8 +16,6 @@
 .method constructor <init>(Labe;Labt;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Labo;->b:Labe;
 
     iput-object p2, p0, Labo;->a:Labt;
@@ -32,8 +30,6 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Labo;->b:Labe;
 
     invoke-virtual {v0}, Labe;->h()Landroid/os/Handler;
@@ -50,6 +46,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 3
     return-void
 .end method

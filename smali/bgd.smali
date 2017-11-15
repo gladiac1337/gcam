@@ -22,8 +22,6 @@
 .method constructor <init>(Lbga;Liht;Ljvi;Ljvi;Ljvi;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbgd;->d:Lbga;
 
     iput-object p2, p0, Lbgd;->e:Liht;
@@ -44,47 +42,37 @@
 .method public final run()V
     .locals 7
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 2
     :try_start_0
     iget-object v0, p0, Lbgd;->d:Lbga;
 
-    .line 3
     iget-object v0, v0, Lbga;->c:Lbco;
 
-    .line 4
     iget-object v2, p0, Lbgd;->e:Liht;
 
-    .line 6
     invoke-interface {v2}, Liht;->b()Lihy;
 
     move-result-object v2
 
     const/4 v3, 0x4
 
-    .line 7
     invoke-interface {v2, v3}, Lihy;->a(I)Liia;
 
     move-result-object v2
 
-    .line 8
     invoke-virtual {v0, v2}, Lbco;->a(Liia;)V
 
-    .line 9
     iget-object v3, v0, Lbco;->b:Lbby;
 
     invoke-interface {v3}, Lbby;->b()Landroid/util/Range;
 
     move-result-object v3
 
-    .line 10
     sget-object v4, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_TARGET_FPS_RANGE:Landroid/hardware/camera2/CaptureRequest$Key;
 
     invoke-virtual {v2, v4, v3}, Liia;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 11
     sget-object v4, Lbco;->a:Ljava/lang/String;
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -121,7 +109,6 @@
 
     invoke-static {v4, v3}, Lbhz;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 12
     iget-object v3, v0, Lbco;->d:Lbbt;
 
     invoke-virtual {v3}, Lbbt;->a()Z
@@ -132,7 +119,6 @@
 
     iget-object v0, v0, Lbco;->c:Liau;
 
-    .line 13
     invoke-interface {v0}, Liau;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -147,14 +133,11 @@
 
     move v0, v1
 
-    .line 14
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 15
     const/4 v0, 0x3
 
-    .line 17
     :goto_1
     sget-object v1, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AF_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
@@ -164,7 +147,6 @@
 
     invoke-virtual {v2, v1, v3}, Liia;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 18
     sget-object v1, Lbco;->a:Ljava/lang/String;
 
     const/16 v3, 0x1b
@@ -189,60 +171,46 @@
 
     invoke-static {v1, v0}, Lbhz;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 21
     iget-object v0, p0, Lbgd;->d:Lbga;
 
-    .line 22
     iget-object v0, v0, Lbga;->f:Liin;
 
-    .line 23
     invoke-interface {v0}, Liin;->e()Landroid/view/Surface;
 
     move-result-object v0
 
     invoke-virtual {v2, v0}, Liia;->a(Landroid/view/Surface;)V
 
-    .line 24
     sget-object v0, Landroid/hardware/camera2/CaptureRequest;->JPEG_QUALITY:Landroid/hardware/camera2/CaptureRequest$Key;
 
     iget-object v1, p0, Lbgd;->d:Lbga;
 
-    .line 25
     iget-object v1, v1, Lbga;->b:Ljava/lang/Byte;
 
-    .line 26
     invoke-virtual {v2, v0, v1}, Liia;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 27
     sget-object v1, Landroid/hardware/camera2/CaptureRequest;->JPEG_ORIENTATION:Landroid/hardware/camera2/CaptureRequest$Key;
 
     iget-object v0, p0, Lbgd;->d:Lbga;
 
-    .line 28
     iget-object v0, v0, Lbga;->h:Liau;
 
-    .line 29
     invoke-interface {v0}, Liau;->b()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Licf;
 
-    .line 30
     iget v0, v0, Licf;->e:I
 
-    .line 31
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 32
     invoke-virtual {v2, v1, v0}, Liia;->a(Landroid/hardware/camera2/CaptureRequest$Key;Ljava/lang/Object;)V
 
-    .line 33
     iget-object v0, p0, Lbgd;->e:Liht;
 
-    .line 34
     invoke-virtual {v2}, Liia;->a()Liib;
 
     move-result-object v1
@@ -253,17 +221,14 @@
 
     const/4 v3, 0x0
 
-    .line 35
     invoke-interface {v0, v1, v2, v3}, Liht;->a(Liib;Lihu;Landroid/os/Handler;)I
     :try_end_0
     .catch Lief; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 39
     :goto_2
     return-void
 
-    .line 13
     :cond_0
     const/4 v0, 0x0
 
@@ -272,14 +237,11 @@
     :cond_1
     move v0, v1
 
-    .line 16
     goto :goto_1
 
-    .line 37
     :catch_0
     move-exception v0
 
-    .line 38
     :goto_3
     iget-object v1, p0, Lbgd;->b:Ljvi;
 
@@ -287,7 +249,6 @@
 
     goto :goto_2
 
-    .line 37
     :catch_1
     move-exception v0
 

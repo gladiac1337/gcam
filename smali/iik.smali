@@ -14,11 +14,8 @@
 .method public constructor <init>(Liiq;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -27,7 +24,6 @@
 
     iput-object v0, p0, Liik;->a:Liiq;
 
-    .line 3
     return-void
 .end method
 
@@ -36,8 +32,6 @@
 .method public final a()I
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Liik;->a:Liiq;
 
     invoke-interface {v0}, Liiq;->a()I
@@ -50,8 +44,6 @@
 .method public a(J)Liih;
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Liik;->a:Liiq;
 
     invoke-interface {v0, p1, p2}, Liiq;->a(J)Liih;
@@ -64,38 +56,29 @@
 .method public a(Liih;)V
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Liik;->a:Liiq;
 
     invoke-interface {v0, p1}, Liiq;->a(Liih;)V
 
-    .line 7
     return-void
 .end method
 
 .method public a(Liis;Landroid/os/Handler;)V
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Liik;->a:Liiq;
 
     invoke-interface {v0, p1, p2}, Liiq;->a(Liis;Landroid/os/Handler;)V
 
-    .line 11
     return-void
 .end method
 
 .method public close()V
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Liik;->a:Liiq;
 
     invoke-interface {v0}, Liiq;->close()V
 
-    .line 9
     return-void
 .end method

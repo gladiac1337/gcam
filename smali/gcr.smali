@@ -25,11 +25,8 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgcr;->a:Lgdj;
 
-    .line 2
     iget-object v0, v0, Lgdj;->d:Liag;
 
     const/4 v1, 0x1
@@ -40,6 +37,5 @@
 
     invoke-virtual {v0, v1}, Liag;->a(Ljava/lang/Object;)V
 
-    .line 3
     return-void
 .end method

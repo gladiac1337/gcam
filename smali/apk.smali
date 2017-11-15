@@ -15,23 +15,18 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
-    .line 3
     invoke-static {v0}, Ljava/util/Collections;->newSetFromMap(Ljava/util/Map;)Ljava/util/Set;
 
     move-result-object v0
 
     iput-object v0, p0, Lapk;->a:Ljava/util/Set;
 
-    .line 4
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -46,8 +41,6 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 13
     iget-object v0, p0, Lapk;->a:Ljava/util/Set;
 
     invoke-static {v0}, Larq;->a(Ljava/util/Collection;)Ljava/util/List;
@@ -71,36 +64,29 @@
 
     check-cast v0, Laqb;
 
-    .line 14
     invoke-virtual {p0, v0}, Lapk;->a(Laqb;)Z
 
     goto :goto_0
 
-    .line 16
     :cond_0
     iget-object v0, p0, Lapk;->b:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 17
     return-void
 .end method
 
 .method public final a(Laqb;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 5
     if-nez p1, :cond_1
 
-    .line 12
     :cond_0
     :goto_0
     return v0
 
-    .line 7
     :cond_1
     iget-object v1, p0, Lapk;->a:Ljava/util/Set;
 
@@ -108,7 +94,6 @@
 
     move-result v1
 
-    .line 8
     iget-object v2, p0, Lapk;->b:Ljava/util/List;
 
     invoke-interface {v2, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
@@ -122,14 +107,11 @@
     :cond_2
     const/4 v0, 0x1
 
-    .line 9
     :cond_3
     if-eqz v0, :cond_0
 
-    .line 10
     invoke-interface {p1}, Laqb;->d()V
 
-    .line 11
     invoke-interface {p1}, Laqb;->i()V
 
     goto :goto_0
@@ -138,8 +120,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 18
     invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0

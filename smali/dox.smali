@@ -16,8 +16,6 @@
 .method public constructor <init>(Lhzr;Lggo;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldox;->a:Lhzr;
 
     iput-object p2, p0, Ldox;->b:Lggo;
@@ -32,11 +30,8 @@
 .method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 2
     check-cast p1, Liht;
 
-    .line 3
     iget-object v0, p0, Ldox;->a:Lhzr;
 
     const-string v1, "CameraMetadataHandler"
@@ -45,13 +40,11 @@
 
     move-result-object v0
 
-    .line 4
     iget-object v1, p0, Ldox;->b:Lggo;
 
     invoke-virtual {v1, p1, v0}, Lggo;->a(Liht;Landroid/os/Handler;)Lggn;
 
     move-result-object v0
 
-    .line 5
     return-object v0
 .end method

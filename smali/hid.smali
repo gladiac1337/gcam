@@ -13,13 +13,10 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 13
     const/16 v0, 0x4aec
 
     sput v0, Lhid;->a:I
 
-    .line 14
     const/16 v0, 0x4c1c
 
     sput v0, Lhid;->b:I
@@ -30,18 +27,14 @@
 .method static a()[B
     .locals 1
 
-    .prologue
-    .line 1
     const/16 v0, 0x2000
 
     new-array v0, v0, [B
 
     fill-array-data v0, :array_0
 
-    .line 2
     return-object v0
 
-    .line 1
     :array_0
     .array-data 1
         -0x22t
@@ -8242,18 +8235,14 @@
 .method static b()[B
     .locals 1
 
-    .prologue
-    .line 3
     const/16 v0, 0x2000
 
     new-array v0, v0, [B
 
     fill-array-data v0, :array_0
 
-    .line 4
     return-object v0
 
-    .line 3
     :array_0
     .array-data 1
         -0x70t
@@ -16454,18 +16443,14 @@
 .method static c()[B
     .locals 1
 
-    .prologue
-    .line 5
     const/16 v0, 0xaec
 
     new-array v0, v0, [B
 
     fill-array-data v0, :array_0
 
-    .line 6
     return-object v0
 
-    .line 5
     :array_0
     .array-data 1
         -0x7bt
@@ -19270,18 +19255,14 @@
 .method static d()[B
     .locals 1
 
-    .prologue
-    .line 7
     const/16 v0, 0x2000
 
     new-array v0, v0, [B
 
     fill-array-data v0, :array_0
 
-    .line 8
     return-object v0
 
-    .line 7
     :array_0
     .array-data 1
         -0x22t
@@ -27482,18 +27463,14 @@
 .method static e()[B
     .locals 1
 
-    .prologue
-    .line 9
     const/16 v0, 0x2000
 
     new-array v0, v0, [B
 
     fill-array-data v0, :array_0
 
-    .line 10
     return-object v0
 
-    .line 9
     :array_0
     .array-data 1
         -0x7dt
@@ -35694,18 +35671,14 @@
 .method static f()[B
     .locals 1
 
-    .prologue
-    .line 11
     const/16 v0, 0xc1c
 
     new-array v0, v0, [B
 
     fill-array-data v0, :array_0
 
-    .line 12
     return-object v0
 
-    .line 11
     :array_0
     .array-data 1
         0x10t

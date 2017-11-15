@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,13 +20,10 @@
 .method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 4
 
-    .prologue
-    .line 2
     check-cast p1, Lipv;
 
     check-cast p2, Lipv;
 
-    .line 3
     invoke-interface {p1}, Lipv;->b()J
 
     move-result-wide v0
@@ -39,10 +34,8 @@
 
     cmp-long v0, v0, v2
 
-    .line 4
     if-nez v0, :cond_0
 
-    .line 5
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
@@ -55,7 +48,6 @@
 
     move-result v0
 
-    .line 7
     :cond_0
     return v0
 .end method

@@ -25,21 +25,16 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lenp;->a:Lenn;
 
     check-cast p1, Lfty;
 
-    .line 2
     if-eqz p1, :cond_0
 
-    .line 3
     invoke-virtual {p1}, Lfty;->e()Z
 
     move-result v1
 
-    .line 4
     const/16 v2, 0x21
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -62,7 +57,6 @@
 
     invoke-virtual {v0, v1}, Lenn;->a(Ljava/lang/String;)V
 
-    .line 5
     :cond_0
     return-void
 .end method

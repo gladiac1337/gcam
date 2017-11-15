@@ -31,48 +31,34 @@
 .method public constructor <init>(Licz;Licv;Lghe;Ldol;Ljuw;Ldjm;Ldvc;Leam;Lgra;Lgdq;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ledh;->b:Licz;
 
-    .line 3
     iput-object p2, p0, Ledh;->c:Licv;
 
-    .line 4
     iput-object p3, p0, Ledh;->e:Lghe;
 
-    .line 5
     iput-object p4, p0, Ledh;->f:Ldol;
 
-    .line 6
     iput-object p5, p0, Ledh;->g:Ljuw;
 
-    .line 7
     iput-object p6, p0, Ledh;->h:Ldjm;
 
-    .line 8
     iput-object p9, p0, Ledh;->j:Lgra;
 
-    .line 9
     new-instance v0, Lgez;
 
     invoke-direct {v0}, Lgez;-><init>()V
 
     iput-object v0, p0, Ledh;->k:Lgez;
 
-    .line 10
     iput-object p10, p0, Ledh;->a:Lgdq;
 
-    .line 11
     iput-object p7, p0, Ledh;->d:Ldvc;
 
-    .line 12
     iput-object p8, p0, Ledh;->i:Leam;
 
-    .line 13
     return-void
 .end method
 
@@ -81,10 +67,8 @@
 .method public final a()Leai;
     .locals 14
 
-    .prologue
     const/4 v12, 0x1
 
-    .line 14
     iget-object v0, p0, Ledh;->a:Lgdq;
 
     invoke-interface {v0}, Lgdq;->b()Lige;
@@ -97,7 +81,6 @@
 
     move v11, v12
 
-    .line 15
     :goto_0
     iget-object v0, p0, Ledh;->g:Ljuw;
 
@@ -105,34 +88,28 @@
 
     invoke-direct {v1, p0, v11}, Ledi;-><init>(Ledh;Z)V
 
-    .line 16
     sget-object v2, Ljvc;->a:Ljvc;
 
-    .line 17
     invoke-static {v0, v1, v2}, Ljuh;->a(Ljuw;Ljhj;Ljava/util/concurrent/Executor;)Ljuw;
 
     move-result-object v7
 
-    .line 18
     invoke-static {}, Ldjo;->a()Ldjo;
 
     move-result-object v0
 
     sget-object v1, Ldjp;->c:Ldjp;
 
-    .line 19
     invoke-virtual {v0, v1}, Ldjo;->a(Ldjp;)Ldjo;
 
     move-result-object v0
 
     sget-object v1, Ldjp;->b:Ldjp;
 
-    .line 20
     invoke-virtual {v0, v1}, Ldjo;->b(Ldjp;)Ldjo;
 
     move-result-object v8
 
-    .line 21
     new-instance v13, Ledq;
 
     new-instance v0, Leco;
@@ -153,7 +130,6 @@
 
     iget-object v10, p0, Ledh;->d:Ldvc;
 
-    .line 22
     if-eqz v11, :cond_1
 
     iget-object v11, p0, Ledh;->j:Lgra;
@@ -165,10 +141,8 @@
 
     invoke-direct {v13, v0, v1, v12}, Ledq;-><init>(Leai;IZ)V
 
-    .line 23
     return-object v13
 
-    .line 14
     :cond_0
     const/4 v0, 0x0
 
@@ -176,7 +150,6 @@
 
     goto :goto_0
 
-    .line 22
     :cond_1
     iget-object v11, p0, Ledh;->k:Lgez;
 

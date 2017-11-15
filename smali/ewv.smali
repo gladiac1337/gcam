@@ -14,8 +14,6 @@
 .method constructor <init>(Lewu;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lewv;->a:Lewu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,14 +26,10 @@
 .method public final onHitStateFinished()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lewv;->a:Lewu;
 
-    .line 3
     iget-object v0, v0, Lewu;->b:Ljava/util/List;
 
-    .line 4
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -53,12 +47,10 @@
 
     check-cast v0, Lewt;
 
-    .line 5
     invoke-interface {v0}, Lewt;->a()V
 
     goto :goto_0
 
-    .line 7
     :cond_0
     return-void
 .end method

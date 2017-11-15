@@ -16,8 +16,6 @@
 .method public constructor <init>(Lipd;Ljava/util/Set;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lipe;->b:Lipd;
 
     iput-object p2, p0, Lipe;->a:Ljava/util/Set;
@@ -32,15 +30,12 @@
 .method public final a(Ljava/io/Writer;)V
     .locals 9
 
-    .prologue
     const/16 v8, 0x20
 
-    .line 2
     iget-object v1, p0, Lipe;->b:Lipd;
 
     iget-object v0, p0, Lipe;->a:Ljava/util/Set;
 
-    .line 3
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -59,25 +54,20 @@
 
     check-cast v0, Ljfs;
 
-    .line 4
     invoke-virtual {v1, v0}, Lipd;->a(Ljfs;)Ljgj;
 
     move-result-object v3
 
-    .line 6
     iget v4, v3, Ljgj;->e:I
 
-    .line 7
     if-eqz v4, :cond_0
 
-    .line 8
     iget-object v4, v1, Lipd;->a:Lcom/google/android/libraries/smartburst/buffers/FeatureTable;
 
     invoke-interface {v4, v0}, Lcom/google/android/libraries/smartburst/buffers/FeatureTable;->getAssignmentCount(Ljfs;)I
 
     move-result v4
 
-    .line 9
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v5
@@ -112,10 +102,8 @@
 
     invoke-virtual {p1, v5}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 11
     iget v0, v0, Ljfs;->A:I
 
-    .line 12
     const/16 v5, 0x1a
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -144,10 +132,8 @@
 
     invoke-virtual {p1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 14
     iget v0, v3, Ljgj;->e:I
 
-    .line 15
     const/16 v5, 0x15
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -176,7 +162,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 16
     const/16 v0, 0x1b
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -205,10 +190,8 @@
 
     invoke-virtual {p1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 18
     iget-wide v4, v3, Ljgj;->a:D
 
-    .line 19
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0, v8}, Ljava/lang/StringBuilder;-><init>(I)V
@@ -235,10 +218,8 @@
 
     invoke-virtual {p1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 21
     iget-wide v4, v3, Ljgj;->b:D
 
-    .line 22
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0, v8}, Ljava/lang/StringBuilder;-><init>(I)V
@@ -265,10 +246,8 @@
 
     invoke-virtual {p1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 24
     iget-wide v4, v3, Ljgj;->c:D
 
-    .line 25
     const/16 v0, 0x21
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -297,15 +276,12 @@
 
     invoke-virtual {p1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 27
     iget-wide v4, v3, Ljgj;->d:D
 
-    .line 28
     invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v4
 
-    .line 29
     const/16 v0, 0x24
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -336,7 +312,6 @@
 
     goto/16 :goto_0
 
-    .line 31
     :cond_1
     return-void
 .end method

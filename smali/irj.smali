@@ -16,8 +16,6 @@
 .method public constructor <init>(Ljeg;Ljdp;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lirj;->a:Ljeg;
 
     iput-object p2, p0, Lirj;->b:Ljdp;
@@ -30,11 +28,8 @@
 .method private final a(Lixj;)Ljdp;
     .locals 6
 
-    .prologue
-    .line 2
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     :try_start_0
     invoke-interface {p1}, Lixj;->e()Ljava/lang/Object;
 
@@ -44,7 +39,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 4
     :try_start_1
     iget-object v1, p0, Lirj;->a:Ljeg;
 
@@ -59,7 +53,6 @@
 
     const/4 v1, 0x0
 
-    .line 5
     :try_start_2
     sget-object v3, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -67,13 +60,11 @@
 
     invoke-virtual {v0, v3, v4, v2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 6
     iget-object v0, p0, Lirj;->b:Ljdp;
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 7
     if-eqz v2, :cond_0
 
     :try_start_3
@@ -82,14 +73,11 @@
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 8
     :cond_0
     invoke-interface {p1}, Lixj;->close()V
 
-    .line 9
     return-object v0
 
-    .line 10
     :catch_0
     move-exception v0
 
@@ -98,7 +86,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 11
     :catchall_0
     move-exception v1
 
@@ -131,7 +118,6 @@
     :catch_1
     move-exception v0
 
-    .line 12
     :try_start_7
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -143,7 +129,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 13
     :catchall_1
     move-exception v0
 
@@ -151,7 +136,6 @@
 
     throw v0
 
-    .line 11
     :catch_2
     move-exception v2
 
@@ -179,8 +163,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 14
     check-cast p1, Lixj;
 
     invoke-direct {p0, p1}, Lirj;->a(Lixj;)Ljdp;

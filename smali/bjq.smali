@@ -11,8 +11,6 @@
 .method constructor <init>(Lbjn;)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbjq;->a:Lbjn;
 
     const/4 v0, 0x0
@@ -27,68 +25,50 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbjq;->a:Lbjn;
 
-    .line 3
     iget-object v0, v0, Lbjn;->a:Lcom/google/android/apps/camera/evcomp/EvCompView;
 
-    .line 4
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/evcomp/EvCompView;->b(Z)V
 
-    .line 5
     iget-object v0, p0, Lbjq;->a:Lbjn;
 
-    .line 6
     iget-object v0, v0, Lbjn;->a:Lcom/google/android/apps/camera/evcomp/EvCompView;
 
-    .line 7
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/evcomp/EvCompView;->a(Z)V
 
-    .line 8
     iget-object v0, p0, Lbjq;->a:Lbjn;
 
-    .line 9
     iget-object v0, v0, Lbjn;->a:Lcom/google/android/apps/camera/evcomp/EvCompView;
 
-    .line 10
     invoke-virtual {v0}, Lcom/google/android/apps/camera/evcomp/EvCompView;->a()V
 
-    .line 11
     iget-object v0, p0, Lbjq;->a:Lbjn;
 
-    .line 12
     iget-object v0, v0, Lbjn;->c:Landroid/animation/ValueAnimator;
 
-    .line 13
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->reverse()V
 
-    .line 14
     return-void
 .end method
 
 .method public a(F)V
     .locals 6
 
-    .prologue
     const/high16 v5, 0x3f800000    # 1.0f
 
     const/4 v4, 0x0
 
-    .line 15
     iget-object v0, p0, Lbjq;->a:Lbjn;
 
-    .line 17
     iget v1, v0, Lbjn;->e:F
 
     iget-object v2, v0, Lbjn;->a:Lcom/google/android/apps/camera/evcomp/EvCompView;
 
-    .line 18
     iget-object v3, v2, Lcom/google/android/apps/camera/evcomp/EvCompView;->a:Lbjd;
 
     invoke-virtual {v2}, Lcom/google/android/apps/camera/evcomp/EvCompView;->getHeight()I
@@ -99,7 +79,6 @@
 
     move-result v2
 
-    .line 19
     int-to-float v2, v2
 
     div-float v2, p1, v2
@@ -112,17 +91,14 @@
 
     iput v1, v0, Lbjn;->e:F
 
-    .line 20
     iget v1, v0, Lbjn;->e:F
 
     cmpl-float v1, v1, v5
 
     if-lez v1, :cond_0
 
-    .line 21
     iput v5, v0, Lbjn;->e:F
 
-    .line 22
     :cond_0
     iget v1, v0, Lbjn;->e:F
 
@@ -130,13 +106,10 @@
 
     if-gtz v1, :cond_1
 
-    .line 23
     iput v4, v0, Lbjn;->e:F
 
-    .line 24
     :cond_1
     invoke-virtual {v0}, Lbjn;->e_()V
 
-    .line 25
     return-void
 .end method

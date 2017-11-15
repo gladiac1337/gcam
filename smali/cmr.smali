@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public final getInterpolation(F)F
     .locals 6
 
-    .prologue
-    .line 2
     const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
     const/high16 v2, 0x3f800000    # 1.0f

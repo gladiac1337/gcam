@@ -10,11 +10,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lhrd;-><init>()V
 
-    .line 2
     invoke-static {}, Lhqx;->b()[Lhqx;
 
     move-result-object v0
@@ -29,7 +26,6 @@
 
     iput v0, p0, Lhqw;->p:I
 
-    .line 3
     return-void
 .end method
 

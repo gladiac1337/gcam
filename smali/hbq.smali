@@ -11,8 +11,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/videoplayer/VideoPlayerActivity;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhbq;->a:Lcom/google/android/apps/camera/videoplayer/VideoPlayerActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,12 +23,9 @@
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lhbq;->a:Lcom/google/android/apps/camera/videoplayer/VideoPlayerActivity;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/videoplayer/VideoPlayerActivity;->finish()V
 
-    .line 3
     return-void
 .end method

@@ -14,8 +14,6 @@
 .method constructor <init>(Lcag;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcan;->a:Lcag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,17 +26,12 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 3
 
-    .prologue
-    .line 3
     check-cast p1, Ljava/util/List;
 
-    .line 4
     iget-object v0, p0, Lcan;->a:Lcag;
 
-    .line 5
     iget-object v0, v0, Lcag;->i:Ljava/util/Map;
 
-    .line 6
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -60,7 +53,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 7
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -71,7 +63,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 8
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -84,7 +75,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_0
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -98,7 +88,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_1
     iget-object v0, p0, Lcan;->a:Lcag;
 
@@ -106,24 +95,18 @@
 
     move-result v1
 
-    .line 12
     iput-boolean v1, v0, Lcag;->h:Z
 
-    .line 13
     iget-object v0, p0, Lcan;->a:Lcag;
 
-    .line 14
     iget-boolean v0, v0, Lcag;->h:Z
 
-    .line 15
     if-eqz v0, :cond_2
 
-    .line 16
     iget-object v0, p0, Lcan;->a:Lcag;
 
     invoke-virtual {v0}, Lcag;->a()V
 
-    .line 17
     :cond_2
     return-void
 .end method
@@ -131,8 +114,6 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Ljava/lang/RuntimeException;
 
     invoke-direct {v0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

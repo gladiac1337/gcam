@@ -29,7 +29,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x3
 
     const/4 v6, 0x2
@@ -38,7 +37,6 @@
 
     const/4 v0, 0x0
 
-    .line 7
     new-instance v1, Lbee;
 
     const-string v2, "QUALITY_480P"
@@ -51,7 +49,6 @@
 
     sput-object v1, Lbee;->b:Lbee;
 
-    .line 8
     new-instance v1, Lbee;
 
     const-string v2, "QUALITY_720P"
@@ -64,7 +61,6 @@
 
     sput-object v1, Lbee;->c:Lbee;
 
-    .line 9
     new-instance v1, Lbee;
 
     const-string v2, "QUALITY_1080P"
@@ -77,7 +73,6 @@
 
     sput-object v1, Lbee;->d:Lbee;
 
-    .line 10
     new-instance v1, Lbee;
 
     const-string v2, "QUALITY_2160P"
@@ -90,7 +85,6 @@
 
     sput-object v1, Lbee;->e:Lbee;
 
-    .line 11
     const/4 v1, 0x4
 
     new-array v1, v1, [Lbee;
@@ -113,21 +107,18 @@
 
     sput-object v1, Lbee;->i:[Lbee;
 
-    .line 12
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     sput-object v1, Lbee;->f:Ljava/util/Map;
 
-    .line 13
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     sput-object v1, Lbee;->g:Ljava/util/Map;
 
-    .line 14
     invoke-static {}, Lbee;->values()[Lbee;
 
     move-result-object v1
@@ -139,14 +130,12 @@
 
     aget-object v3, v1, v0
 
-    .line 15
     sget-object v4, Lbee;->f:Ljava/util/Map;
 
     iget-object v5, v3, Lbee;->h:Libp;
 
     invoke-interface {v4, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 16
     sget-object v4, Lbee;->g:Ljava/util/Map;
 
     iget v5, v3, Lbee;->a:I
@@ -157,12 +146,10 @@
 
     invoke-interface {v4, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 17
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 18
     :cond_0
     return-void
 .end method
@@ -170,25 +157,18 @@
 .method private constructor <init>(Ljava/lang/String;IILibp;)V
     .locals 0
 
-    .prologue
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 4
     iput p3, p0, Lbee;->a:I
 
-    .line 5
     iput-object p4, p0, Lbee;->h:Libp;
 
-    .line 6
     return-void
 .end method
 
 .method public static a(Libp;)Lbee;
     .locals 1
 
-    .prologue
-    .line 2
     sget-object v0, Lbee;->f:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -203,8 +183,6 @@
 .method public static values()[Lbee;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lbee;->i:[Lbee;
 
     invoke-virtual {v0}, [Lbee;->clone()Ljava/lang/Object;

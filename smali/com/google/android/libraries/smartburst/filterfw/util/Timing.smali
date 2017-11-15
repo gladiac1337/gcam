@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 38
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -29,14 +27,10 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing;->mName:Ljava/lang/String;
 
-    .line 3
     return-void
 .end method
 
@@ -45,8 +39,6 @@
 .method public begin()V
     .locals 4
 
-    .prologue
-    .line 4
     sget-object v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing;->timings:Ljava/util/HashMap;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing;->mName:Ljava/lang/String;
@@ -57,22 +49,18 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;
 
-    .line 5
     if-nez v0, :cond_0
 
-    .line 6
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;
 
     invoke-direct {v0}, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;-><init>()V
 
-    .line 7
     sget-object v1, Lcom/google/android/libraries/smartburst/filterfw/util/Timing;->timings:Ljava/util/HashMap;
 
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing;->mName:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -80,35 +68,28 @@
 
     iput-wide v2, v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->start_time:J
 
-    .line 9
     return-void
 .end method
 
 .method public clear()V
     .locals 3
 
-    .prologue
-    .line 10
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;
 
     invoke-direct {v0}, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;-><init>()V
 
-    .line 11
     sget-object v1, Lcom/google/android/libraries/smartburst/filterfw/util/Timing;->timings:Ljava/util/HashMap;
 
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing;->mName:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 12
     return-void
 .end method
 
 .method public end()V
     .locals 6
 
-    .prologue
-    .line 13
     sget-object v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing;->timings:Ljava/util/HashMap;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing;->mName:Ljava/lang/String;
@@ -119,7 +100,6 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;
 
-    .line 14
     if-eqz v0, :cond_0
 
     iget-wide v2, v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->start_time:J
@@ -130,7 +110,6 @@
 
     if-gez v1, :cond_1
 
-    .line 15
     :cond_0
     const-string v0, "Timing"
 
@@ -138,11 +117,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 29
     :goto_0
     return-void
 
-    .line 17
     :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -152,31 +129,24 @@
 
     sub-long/2addr v2, v4
 
-    .line 18
     iget v1, v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->count:I
 
     if-nez v1, :cond_2
 
-    .line 19
     iput-wide v2, v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->min:J
 
-    .line 20
     iput-wide v2, v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->max:J
 
-    .line 21
     iput-wide v2, v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->sum:J
 
-    .line 22
     iput-wide v2, v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->latest:J
 
-    .line 23
     const/4 v1, 0x1
 
     iput v1, v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->count:I
 
     goto :goto_0
 
-    .line 24
     :cond_2
     iget v1, v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->count:I
 
@@ -184,14 +154,12 @@
 
     iput v1, v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->count:I
 
-    .line 25
     iget-wide v4, v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->sum:J
 
     add-long/2addr v4, v2
 
     iput-wide v4, v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->sum:J
 
-    .line 26
     iget-wide v4, v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->min:J
 
     invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->min(JJ)J
@@ -200,7 +168,6 @@
 
     iput-wide v4, v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->min:J
 
-    .line 27
     iget-wide v4, v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->max:J
 
     invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->max(JJ)J
@@ -209,7 +176,6 @@
 
     iput-wide v4, v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->max:J
 
-    .line 28
     iput-wide v2, v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->latest:J
 
     goto :goto_0
@@ -218,8 +184,6 @@
 .method public log()V
     .locals 9
 
-    .prologue
-    .line 30
     sget-object v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing;->timings:Ljava/util/HashMap;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing;->mName:Ljava/lang/String;
@@ -230,14 +194,11 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;
 
-    .line 31
     if-nez v0, :cond_0
 
-    .line 37
     :goto_0
     return-void
 
-    .line 33
     :cond_0
     const-string v2, "Timing: "
 
@@ -280,14 +241,12 @@
 
     move-result-object v2
 
-    .line 34
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->getMax()J
 
     move-result-wide v4
 
     iget-wide v6, v0, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->latest:J
 
-    .line 35
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/util/Timing$Stats;->getCount()I
 
     move-result v0
@@ -350,12 +309,10 @@
 
     move-result-object v0
 
-    .line 36
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
 
-    .line 33
     :cond_1
     new-instance v1, Ljava/lang/String;
 

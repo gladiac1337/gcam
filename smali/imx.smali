@@ -18,8 +18,6 @@
 .method constructor <init>(Limu;Landroid/media/MediaCodec;Landroid/media/MediaCodec$CodecException;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Limx;->c:Limu;
 
     iput-object p2, p0, Limx;->a:Landroid/media/MediaCodec;
@@ -36,20 +34,15 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Limx;->c:Limu;
 
-    .line 3
     iget-object v0, v0, Limu;->a:Landroid/media/MediaCodec$Callback;
 
-    .line 4
     iget-object v1, p0, Limx;->a:Landroid/media/MediaCodec;
 
     iget-object v2, p0, Limx;->b:Landroid/media/MediaCodec$CodecException;
 
     invoke-virtual {v0, v1, v2}, Landroid/media/MediaCodec$Callback;->onError(Landroid/media/MediaCodec;Landroid/media/MediaCodec$CodecException;)V
 
-    .line 5
     return-void
 .end method

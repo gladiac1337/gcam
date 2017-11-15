@@ -14,8 +14,6 @@
 .method constructor <init>(Lagl;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lagm;->a:Lagl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,9 +26,6 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 2
-    .line 3
     new-instance v0, Lafv;
 
     iget-object v1, p0, Lagm;->a:Lagl;
@@ -43,6 +38,5 @@
 
     invoke-direct {v0, v1, v2}, Lafv;-><init>(Lafy;Lha;)V
 
-    .line 4
     return-object v0
 .end method

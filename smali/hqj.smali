@@ -16,9 +16,6 @@
 .method public final synthetic a(Landroid/content/Context;Landroid/os/Looper;Lhls;Ljava/lang/Object;Lhkn;Lhko;)Lhkj;
     .locals 6
 
-    .prologue
-    .line 1
-    .line 2
     new-instance v0, Lhqs;
 
     move-object v1, p1
@@ -33,6 +30,5 @@
 
     invoke-direct/range {v0 .. v5}, Lhqs;-><init>(Landroid/content/Context;Landroid/os/Looper;Lhls;Lhkn;Lhko;)V
 
-    .line 3
     return-object v0
 .end method

@@ -16,8 +16,6 @@
 .method constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/text/TextViewTarget;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/text/TextViewTarget$1;->this$0:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/text/TextViewTarget;
 
     iput-object p2, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/text/TextViewTarget$1;->val$text:Ljava/lang/String;
@@ -32,8 +30,6 @@
 .method public run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/text/TextViewTarget$1;->this$0:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/text/TextViewTarget;
 
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/text/TextViewTarget;->access$000(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/text/TextViewTarget;)Landroid/widget/TextView;
@@ -44,6 +40,5 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 3
     return-void
 .end method

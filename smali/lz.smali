@@ -16,8 +16,6 @@
 .method public constructor <init>(Lly;Landroid/support/v7/app/AlertController;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Llz;->b:Lly;
 
     iput-object p2, p0, Llz;->a:Landroid/support/v7/app/AlertController;
@@ -32,8 +30,6 @@
 .method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Llz;->b:Lly;
 
     iget-object v0, v0, Lly;->i:Landroid/content/DialogInterface$OnClickListener;
@@ -44,13 +40,11 @@
 
     invoke-interface {v0, v1, p3}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 3
     iget-object v0, p0, Llz;->a:Landroid/support/v7/app/AlertController;
 
     iget-object v0, v0, Landroid/support/v7/app/AlertController;->b:Lnf;
 
     invoke-virtual {v0}, Lnf;->dismiss()V
 
-    .line 4
     return-void
 .end method

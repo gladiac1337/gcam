@@ -73,8 +73,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 86
     const-string v0, "HdrPlusState"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -89,34 +87,28 @@
 .method public constructor <init>(Lbhn;Lfun;Landroid/util/DisplayMetrics;Lhab;Lcnu;Lavp;Ldig;Lbhl;Lbiv;Lfxe;)V
     .locals 4
 
-    .prologue
     const-wide/16 v2, 0x0
 
-    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcpb;->b:Ljava/lang/Object;
 
-    .line 14
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcpb;->d:Ljava/util/HashMap;
 
-    .line 15
     new-instance v0, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;
 
     invoke-direct {v0}, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;-><init>()V
 
     iput-object v0, p0, Lcpb;->e:Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;
 
-    .line 16
     new-instance v0, Liag;
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -127,7 +119,6 @@
 
     iput-object v0, p0, Lcpb;->f:Liag;
 
-    .line 17
     new-instance v0, Liag;
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -138,31 +129,26 @@
 
     iput-object v0, p0, Lcpb;->g:Liag;
 
-    .line 18
     iput-wide v2, p0, Lcpb;->h:J
 
-    .line 19
     new-instance v0, Lcpc;
 
     invoke-direct {v0, p0}, Lcpc;-><init>(Lcpb;)V
 
     iput-object v0, p0, Lcpb;->x:Lcom/google/googlex/gcam/MemoryStateCallback;
 
-    .line 20
     new-instance v0, Lcph;
 
     invoke-direct {v0, p0}, Lcph;-><init>(Lcpb;)V
 
     iput-object v0, p0, Lcpb;->y:Lcom/google/googlex/gcam/SimpleCallback;
 
-    .line 21
     new-instance v0, Lcpi;
 
     invoke-direct {v0}, Lcpi;-><init>()V
 
     iput-object v0, p0, Lcpb;->i:Lcom/google/googlex/gcam/ShotErrorCallback;
 
-    .line 22
     new-instance v0, Liag;
 
     new-instance v1, Lcom/google/googlex/gcam/AeResults;
@@ -173,108 +159,86 @@
 
     iput-object v0, p0, Lcpb;->j:Liag;
 
-    .line 23
     new-instance v0, Lcpj;
 
     invoke-direct {v0, p0}, Lcpj;-><init>(Lcpb;)V
 
     iput-object v0, p0, Lcpb;->z:Lcom/google/googlex/gcam/BackgroundAeResultsCallback;
 
-    .line 24
     new-instance v0, Lcpk;
 
     invoke-direct {v0, p0}, Lcpk;-><init>(Lcpb;)V
 
     iput-object v0, p0, Lcpb;->k:Lcom/google/googlex/gcam/BaseFrameCallback;
 
-    .line 25
     new-instance v0, Lcpl;
 
     invoke-direct {v0, p0}, Lcpl;-><init>(Lcpb;)V
 
     iput-object v0, p0, Lcpb;->l:Lcom/google/googlex/gcam/EncodedBlobCallback;
 
-    .line 26
     new-instance v0, Lcpn;
 
     invoke-direct {v0, p0}, Lcpn;-><init>(Lcpb;)V
 
     iput-object v0, p0, Lcpb;->m:Lcom/google/googlex/gcam/BurstCallback;
 
-    .line 27
     new-instance v0, Lcpo;
 
     invoke-direct {v0, p0}, Lcpo;-><init>(Lcpb;)V
 
     iput-object v0, p0, Lcpb;->n:Lcom/google/googlex/gcam/ProgressCallback;
 
-    .line 28
     new-instance v0, Lcpp;
 
     invoke-direct {v0, p0}, Lcpp;-><init>(Lcpb;)V
 
     iput-object v0, p0, Lcpb;->o:Lcom/google/googlex/gcam/PostviewCallback;
 
-    .line 29
     new-instance v0, Lcpd;
 
     invoke-direct {v0, p0}, Lcpd;-><init>(Lcpb;)V
 
     iput-object v0, p0, Lcpb;->p:Lcom/google/googlex/gcam/PdImageCallback;
 
-    .line 30
     new-instance v0, Lcpe;
 
     invoke-direct {v0, p0}, Lcpe;-><init>(Lcpb;)V
 
     iput-object v0, p0, Lcpb;->q:Lcom/google/googlex/gcam/FinalImageCallback;
 
-    .line 31
     new-instance v0, Lcpg;
 
     invoke-direct {v0, p0}, Lcpg;-><init>(Lcpb;)V
 
     iput-object v0, p0, Lcpb;->r:Lcom/google/googlex/gcam/EncodedBlobCallback;
 
-    .line 32
     iput-object p1, p0, Lcpb;->B:Lbhn;
 
-    .line 33
     iput-object p2, p0, Lcpb;->A:Lfun;
 
-    .line 34
     iput-object p3, p0, Lcpb;->s:Landroid/util/DisplayMetrics;
 
-    .line 35
     iput-object p4, p0, Lcpb;->C:Lhab;
 
-    .line 36
     iput-object p5, p0, Lcpb;->D:Lcnu;
 
-    .line 37
     iput-object p6, p0, Lcpb;->t:Lavp;
 
-    .line 38
     iput-object p7, p0, Lcpb;->E:Ldig;
 
-    .line 39
     iput-object p8, p0, Lcpb;->u:Lbhl;
 
-    .line 40
     iput-object p9, p0, Lcpb;->v:Lbiv;
 
-    .line 41
     iput-object p10, p0, Lcpb;->w:Lfxe;
 
-    .line 42
     return-void
 .end method
 
 .method static synthetic a(Lcpb;[BLici;ILcom/google/android/libraries/camera/exif/ExifInterface;Lcps;)V
     .locals 0
 
-    .prologue
-    .line 85
     invoke-direct/range {p0 .. p5}, Lcpb;->a([BLici;ILcom/google/android/libraries/camera/exif/ExifInterface;Lcps;)V
 
     return-void
@@ -283,15 +247,12 @@
 .method private final a([BLici;ILcom/google/android/libraries/camera/exif/ExifInterface;Lcps;)V
     .locals 6
 
-    .prologue
-    .line 1
     sget-object v0, Lcpb;->a:Ljava/lang/String;
 
     const-string v1, "Sending jpeg to saving"
 
     invoke-static {v0, v1}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2
     new-instance v0, Leas;
 
     iget-object v5, p0, Lcpb;->C:Lhab;
@@ -306,25 +267,18 @@
 
     invoke-direct/range {v0 .. v5}, Leas;-><init>([BLici;ILcom/google/android/libraries/camera/exif/ExifInterface;Lhab;)V
 
-    .line 4
     iget-object v1, p5, Lcps;->a:Leaq;
 
-    .line 5
     iget-object v1, v1, Leaq;->d:Lear;
 
-    .line 6
     invoke-interface {v1, v0}, Lear;->a(Leas;)V
 
-    .line 8
     iget-object v0, p5, Lcps;->a:Leaq;
 
-    .line 9
     iget-object v0, v0, Leaq;->d:Lear;
 
-    .line 10
     invoke-interface {v0}, Lear;->close()V
 
-    .line 11
     return-void
 .end method
 
@@ -333,37 +287,29 @@
 .method public final a()Lcom/google/googlex/gcam/InitParams;
     .locals 7
 
-    .prologue
-    .line 43
     iget-object v1, p0, Lcpb;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 44
     :try_start_0
     iget-object v0, p0, Lcpb;->c:Lcom/google/googlex/gcam/InitParams;
 
-    .line 45
     iget-object v2, p0, Lcpb;->c:Lcom/google/googlex/gcam/InitParams;
 
     if-nez v2, :cond_2
 
-    .line 46
     sget-object v0, Lcpb;->a:Ljava/lang/String;
 
     const-string v2, "Creating Gcam init params"
 
     invoke-static {v0, v2}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 47
     iget-object v0, p0, Lcpb;->B:Lbhn;
 
-    .line 48
     invoke-static {}, Lgkt;->a()I
 
     move-result v2
 
-    .line 49
     iget-object v0, v0, Lbhn;->a:Landroid/content/ContentResolver;
 
     const-string v3, "camera:gcam_thread_count"
@@ -372,110 +318,88 @@
 
     move-result v2
 
-    .line 51
     if-gtz v2, :cond_0
 
-    .line 52
     sget-object v0, Lcpb;->a:Ljava/lang/String;
 
     const-string v2, "Could not create InitParams: threadCount not sane."
 
     invoke-static {v0, v2}, Lbhz;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 53
     const/4 v0, 0x0
 
     monitor-exit v1
 
-    .line 84
     :goto_0
     return-object v0
 
-    .line 54
     :cond_0
     new-instance v0, Lcom/google/googlex/gcam/InitParams;
 
     invoke-direct {v0}, Lcom/google/googlex/gcam/InitParams;-><init>()V
 
-    .line 55
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setThread_count(I)V
 
-    .line 56
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setTuning_locked(Z)V
 
-    .line 57
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setPlanning_to_provide_both_yuv_and_raw_for_metering(Z)V
 
-    .line 58
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setPlanning_to_provide_both_yuv_and_raw_for_payload(Z)V
 
-    .line 59
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setPlanning_to_process_bayer_for_metering(Z)V
 
-    .line 60
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setPlanning_to_process_bayer_for_payload(Z)V
 
-    .line 61
     iget-object v2, p0, Lcpb;->E:Ldig;
 
     iget-object v3, p0, Lcpb;->B:Lbhn;
 
-    .line 62
     invoke-static {v2, v3}, Lcns;->a(Ldig;Lbhn;)I
 
     move-result v2
 
-    .line 63
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setMax_full_metering_sweep_frames(I)V
 
-    .line 64
     invoke-static {}, Lcnu;->a()I
 
     move-result v2
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setMin_payload_frames(I)V
 
-    .line 65
     iget-object v2, p0, Lcpb;->D:Lcnu;
 
-    .line 66
     iget-object v3, v2, Lcnu;->e:Lbhn;
 
     invoke-virtual {v3}, Lbhn;->f()I
 
     move-result v3
 
-    .line 67
     const/4 v4, 0x3
 
     iget-object v2, v2, Lcnu;->f:Lihp;
 
     const-string v5, "persist.gcam.max_burst_size"
 
-    .line 68
     invoke-virtual {v2, v5, v3}, Lihp;->a(Ljava/lang/String;I)I
 
     move-result v2
 
-    .line 69
     invoke-static {v4, v2}, Ljava/lang/Math;->max(II)I
 
     move-result v2
 
-    .line 70
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setMax_payload_frames(I)V
 
-    .line 71
     iget-object v2, p0, Lcpb;->D:Lcnu;
 
     invoke-virtual {v2}, Lcnu;->b()I
@@ -484,10 +408,8 @@
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setMax_zsl_frames(I)V
 
-    .line 72
     iget-object v2, p0, Lcpb;->E:Ldig;
 
-    .line 73
     const-string v3, "persist.gcam.hexagon.disabled"
 
     const/4 v4, 0x0
@@ -496,44 +418,35 @@
 
     move-result v2
 
-    .line 74
     if-eqz v2, :cond_1
 
-    .line 75
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setUse_hexagon(Z)V
 
-    .line 76
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setSimultaneous_merge_and_finish(Z)V
 
-    .line 77
     :cond_1
     iget-object v2, p0, Lcpb;->x:Lcom/google/googlex/gcam/MemoryStateCallback;
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setMemory_callback(Lcom/google/googlex/gcam/MemoryStateCallback;)V
 
-    .line 78
     iget-object v2, p0, Lcpb;->y:Lcom/google/googlex/gcam/SimpleCallback;
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setFinish_queue_empty_callback(Lcom/google/googlex/gcam/SimpleCallback;)V
 
-    .line 79
     iget-object v2, p0, Lcpb;->z:Lcom/google/googlex/gcam/BackgroundAeResultsCallback;
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setBackground_ae_results_callback(Lcom/google/googlex/gcam/BackgroundAeResultsCallback;)V
 
-    .line 80
     iget-object v2, p0, Lcpb;->e:Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setImage_release_callback(Lcom/google/googlex/gcam/ImageReleaseCallback;)V
 
-    .line 81
     iput-object v0, p0, Lcpb;->c:Lcom/google/googlex/gcam/InitParams;
 
-    .line 82
     iget-object v2, p0, Lcpb;->A:Lfun;
 
     new-instance v3, Lfuk;
@@ -548,7 +461,6 @@
 
     invoke-virtual {v2, v3}, Lfun;->a(Lfuj;)Z
 
-    .line 83
     :cond_2
     monitor-exit v1
 

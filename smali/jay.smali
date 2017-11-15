@@ -14,17 +14,12 @@
 .method public constructor <init>([Ljbc;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     iput-object p1, p0, Ljay;->a:[Ljbc;
 
-    .line 4
     return-void
 .end method
 
@@ -33,8 +28,6 @@
 .method public final a(Ljava/util/List;)Ljava/util/List;
     .locals 5
 
-    .prologue
-    .line 5
     iget-object v2, p0, Ljay;->a:[Ljbc;
 
     array-length v3, v2
@@ -48,23 +41,19 @@
 
     aget-object v0, v2, v1
 
-    .line 6
     invoke-interface {v0, p1}, Ljbc;->a(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 7
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 10
     :goto_1
     return-object v0
 
-    .line 9
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -72,7 +61,6 @@
 
     goto :goto_0
 
-    .line 10
     :cond_1
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
@@ -84,8 +72,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 11
     const-string v0, "FirstNonEmptySelector[segmenters="
 
     iget-object v1, p0, Ljay;->a:[Ljbc;

@@ -13,36 +13,27 @@
 .method public constructor <init>(Ljava/io/InputStream;J)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Ljava/io/FilterInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 2
     iput-wide p2, p0, Lark;->a:J
 
-    .line 3
     return-void
 .end method
 
 .method private final a(I)I
     .locals 6
 
-    .prologue
-    .line 10
     if-ltz p1, :cond_1
 
-    .line 11
     iget v0, p0, Lark;->b:I
 
     add-int/2addr v0, p1
 
     iput v0, p0, Lark;->b:I
 
-    .line 14
     :cond_0
     return p1
 
-    .line 12
     :cond_1
     iget-wide v0, p0, Lark;->a:J
 
@@ -58,7 +49,6 @@
 
     if-lez v0, :cond_0
 
-    .line 13
     new-instance v0, Ljava/io/IOException;
 
     iget-wide v2, p0, Lark;->a:J
@@ -105,8 +95,6 @@
 .method public final declared-synchronized available()I
     .locals 4
 
-    .prologue
-    .line 4
     monitor-enter p0
 
     :try_start_0
@@ -149,8 +137,6 @@
 .method public final declared-synchronized read()I
     .locals 2
 
-    .prologue
-    .line 5
     monitor-enter p0
 
     :try_start_0
@@ -158,7 +144,6 @@
 
     move-result v1
 
-    .line 6
     if-ltz v1, :cond_0
 
     const/4 v0, 0x1
@@ -168,18 +153,15 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7
     monitor-exit p0
 
     return v1
 
-    .line 6
     :cond_0
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 5
     :catchall_0
     move-exception v0
 
@@ -191,8 +173,6 @@
 .method public final read([B)I
     .locals 2
 
-    .prologue
-    .line 8
     const/4 v0, 0x0
 
     array-length v1, p1
@@ -207,8 +187,6 @@
 .method public final declared-synchronized read([BII)I
     .locals 1
 
-    .prologue
-    .line 9
     monitor-enter p0
 
     :try_start_0

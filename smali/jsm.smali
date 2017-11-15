@@ -7,14 +7,10 @@
 .method constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 1
-    .line 2
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Ljsk;-><init>(Ljava/lang/String;I)V
 
-    .line 3
     return-void
 .end method
 
@@ -23,20 +19,16 @@
 .method final a(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
     .locals 1
 
-    .prologue
-    .line 4
     instance-of v0, p1, Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
-    .line 5
     check-cast p1, Ljava/lang/Class;
 
     invoke-static {p1}, Ljsd;->a(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 6
     :goto_0
     return-object v0
 
@@ -51,8 +43,6 @@
 .method final b(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
     .locals 1
 
-    .prologue
-    .line 7
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0

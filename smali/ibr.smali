@@ -16,8 +16,6 @@
 .method public constructor <init>(Ljava/util/concurrent/atomic/AtomicBoolean;Lhzr;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Libr;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -32,8 +30,6 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Libr;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     iget-object v1, p0, Libr;->b:Lhzr;

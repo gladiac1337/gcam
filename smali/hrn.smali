@@ -45,15 +45,12 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
     const-wide/16 v0, 0x0
 
     const/4 v2, 0x0
 
-    .line 1
     invoke-direct {p0}, Lhrd;-><init>()V
 
-    .line 2
     iput-wide v0, p0, Lhrn;->a:J
 
     iput-wide v0, p0, Lhrn;->b:J
@@ -118,7 +115,6 @@
 
     iput v0, p0, Lhrn;->p:I
 
-    .line 3
     return-void
 .end method
 
@@ -289,12 +285,10 @@
 .method protected final a()I
     .locals 8
 
-    .prologue
     const/4 v1, 0x0
 
     const-wide/16 v6, 0x0
 
-    .line 8
     invoke-super {p0}, Lhrd;->a()I
 
     move-result v0
@@ -542,15 +536,12 @@
 
     iget-wide v2, p0, Lhrn;->d:J
 
-    .line 11
     const/16 v4, 0x78
 
-    .line 12
     invoke-static {v4}, Lhrc;->c(I)I
 
     move-result v4
 
-    .line 14
     invoke-static {v2, v3}, Lhrc;->c(J)J
 
     move-result-wide v2
@@ -559,10 +550,8 @@
 
     move-result v2
 
-    .line 15
     add-int/2addr v2, v4
 
-    .line 16
     add-int/2addr v0, v2
 
     :cond_c
@@ -736,12 +725,10 @@
 .method public final a(Lhrc;)V
     .locals 8
 
-    .prologue
     const/4 v1, 0x0
 
     const-wide/16 v6, 0x0
 
-    .line 4
     iget-wide v2, p0, Lhrn;->a:J
 
     cmp-long v0, v2, v6
@@ -940,19 +927,16 @@
 
     iget-wide v2, p0, Lhrn;->d:J
 
-    .line 5
     const/16 v0, 0xf
 
     invoke-virtual {p1, v0, v1}, Lhrc;->c(II)V
 
-    .line 6
     invoke-static {v2, v3}, Lhrc;->c(J)J
 
     move-result-wide v2
 
     invoke-virtual {p1, v2, v3}, Lhrc;->a(J)V
 
-    .line 7
     :cond_b
     iget-object v0, p0, Lhrn;->n:Lhrm;
 

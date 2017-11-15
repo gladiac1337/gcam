@@ -25,11 +25,8 @@
 .method public final e()Lggb;
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgaf;->a:Ljxn;
 
-    .line 2
     invoke-interface {v0}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -44,6 +41,5 @@
 
     move-result-object v0
 
-    .line 3
     return-object v0
 .end method

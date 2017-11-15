@@ -7,11 +7,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lcom/google/android/vision/face/CameraSource$Settings;
 
     invoke-direct {v0}, Lcom/google/android/vision/face/CameraSource$Settings;-><init>()V

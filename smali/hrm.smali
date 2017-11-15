@@ -17,11 +17,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lhrd;-><init>()V
 
-    .line 2
     sget-object v0, Lhrj;->f:[B
 
     iput-object v0, p0, Lhrm;->a:[B
@@ -42,7 +39,6 @@
 
     iput v0, p0, Lhrm;->p:I
 
-    .line 3
     return-void
 .end method
 

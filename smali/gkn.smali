@@ -22,32 +22,24 @@
 .method public constructor <init>(J)V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lgkn;->e:Z
 
-    .line 3
     iput-wide p1, p0, Lgkn;->b:J
 
-    .line 4
     const-wide/16 v0, 0xa
 
     iput-wide v0, p0, Lgkn;->c:J
 
-    .line 6
     new-instance v0, Ljvi;
 
     invoke-direct {v0}, Ljvi;-><init>()V
 
-    .line 7
     iput-object v0, p0, Lgkn;->a:Ljvi;
 
-    .line 8
     return-void
 .end method
 
@@ -56,23 +48,18 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 9
 
-    .prologue
     const/4 v8, 0x1
 
-    .line 9
     check-cast p1, Liic;
 
-    .line 10
     iget-boolean v0, p0, Lgkn;->e:Z
 
     if-nez v0, :cond_1
 
-    .line 11
     iget-object v0, p0, Lgkn;->d:Ljava/lang/Long;
 
     if-nez v0, :cond_0
 
-    .line 12
     invoke-interface {p1}, Liic;->d()J
 
     move-result-wide v0
@@ -83,7 +70,6 @@
 
     iput-object v0, p0, Lgkn;->d:Ljava/lang/Long;
 
-    .line 13
     :cond_0
     invoke-interface {p1}, Liic;->d()J
 
@@ -103,7 +89,6 @@
 
     sub-long/2addr v2, v0
 
-    .line 14
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->SENSOR_TIMESTAMP:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p1, v0}, Liic;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -112,7 +97,6 @@
 
     check-cast v0, Ljava/lang/Long;
 
-    .line 15
     if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
@@ -125,10 +109,8 @@
 
     if-lez v1, :cond_2
 
-    .line 16
     iput-boolean v8, p0, Lgkn;->e:Z
 
-    .line 17
     iget-object v0, p0, Lgkn;->a:Ljvi;
 
     invoke-static {v8}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -137,12 +119,10 @@
 
     invoke-virtual {v0, v1}, Ljsw;->a(Ljava/lang/Object;)Z
 
-    .line 23
     :cond_1
     :goto_0
     return-void
 
-    .line 18
     :cond_2
     iget-wide v4, p0, Lgkn;->c:J
 
@@ -150,10 +130,8 @@
 
     if-ltz v1, :cond_1
 
-    .line 19
     sget-object v1, Lgkm;->a:Ljava/lang/String;
 
-    .line 20
     iget-wide v4, p0, Lgkn;->b:J
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -216,10 +194,8 @@
 
     invoke-static {v1, v0}, Lbhz;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 21
     iput-boolean v8, p0, Lgkn;->e:Z
 
-    .line 22
     iget-object v0, p0, Lgkn;->a:Ljvi;
 
     const/4 v1, 0x0

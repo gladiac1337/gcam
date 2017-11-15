@@ -18,40 +18,30 @@
 .method public constructor <init>(Lixg;Ljeg;Ljeh;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lirm;->a:Lixg;
 
-    .line 3
     iput-object p2, p0, Lirm;->b:Ljeg;
 
-    .line 4
     iput-object p3, p0, Lirm;->c:Ljeh;
 
-    .line 5
     return-void
 .end method
 
 .method private final a(Lixk;)Ljeh;
     .locals 7
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 6
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7
     iget-object v0, p0, Lirm;->a:Lixg;
 
     invoke-interface {p1, v0}, Lixk;->a(Lixg;)Lixj;
 
     move-result-object v3
 
-    .line 8
     :try_start_0
     invoke-interface {v3}, Lixj;->e()Ljava/lang/Object;
 
@@ -62,7 +52,6 @@
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 9
     :try_start_1
     iget-object v1, p0, Lirm;->b:Ljeg;
 
@@ -76,7 +65,6 @@
 
     move-result-object v4
 
-    .line 10
     :try_start_2
     sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -87,7 +75,6 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_3
 
-    .line 11
     if-eqz v4, :cond_0
 
     :try_start_3
@@ -97,19 +84,16 @@
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_2
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 17
     :cond_0
     if-eqz v3, :cond_1
 
     invoke-interface {v3}, Lixj;->close()V
 
-    .line 20
     :cond_1
     iget-object v0, p0, Lirm;->c:Ljeh;
 
     return-object v0
 
-    .line 12
     :catch_0
     move-exception v0
 
@@ -118,7 +102,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 13
     :catchall_0
     move-exception v1
 
@@ -149,11 +132,9 @@
     .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_2
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 15
     :catch_1
     move-exception v0
 
-    .line 16
     :try_start_7
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -166,7 +147,6 @@
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_2
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 18
     :catch_2
     move-exception v0
 
@@ -175,7 +155,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 19
     :catchall_1
     move-exception v1
 
@@ -197,7 +176,6 @@
     :goto_3
     throw v0
 
-    .line 13
     :catch_3
     move-exception v4
 
@@ -206,13 +184,11 @@
 
     goto :goto_1
 
-    .line 19
     :catchall_2
     move-exception v0
 
     goto :goto_2
 
-    .line 13
     :cond_4
     invoke-virtual {v4}, Ljava/io/OutputStream;->close()V
     :try_end_a
@@ -222,7 +198,6 @@
 
     goto :goto_1
 
-    .line 19
     :catch_4
     move-exception v1
 
@@ -235,7 +210,6 @@
 
     goto :goto_3
 
-    .line 13
     :catchall_3
     move-exception v0
 
@@ -249,8 +223,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 21
     check-cast p1, Lixk;
 
     invoke-direct {p0, p1}, Lirm;->a(Lixk;)Ljeh;

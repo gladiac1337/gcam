@@ -25,25 +25,19 @@
 .method public final a(Licf;)V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgyj;->a:Lgyh;
 
-    .line 2
     iget-object v1, v0, Lgyh;->n:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 3
     const/4 v2, 0x1
 
     :try_start_0
     iput-boolean v2, v0, Lgyh;->m:Z
 
-    .line 4
     invoke-virtual {v0}, Lgyh;->a()V
 
-    .line 5
     monitor-exit v1
 
     return-void

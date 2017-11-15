@@ -13,13 +13,10 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 1
     sget-object v0, Landroid/provider/MediaStore$Video$Media;->EXTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     sput-object v0, Lcfu;->a:Landroid/net/Uri;
 
-    .line 2
     const/16 v0, 0xc
 
     new-array v0, v0, [Ljava/lang/String;

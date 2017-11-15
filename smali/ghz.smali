@@ -16,8 +16,6 @@
 .method constructor <init>(Lgia;Lgho;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lghz;->a:Lgia;
 
     iput-object p2, p0, Lghz;->b:Lgho;
@@ -32,8 +30,6 @@
 .method public final a(Lgih;)Ljuw;
     .locals 6
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lghz;->a:Lgia;
 
     invoke-virtual {p1}, Lgih;->e()J
@@ -48,13 +44,10 @@
 
     move-result-object v1
 
-    .line 3
     invoke-static {v1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     iget-wide v2, v1, Lgfz;->a:J
 
-    .line 6
     invoke-virtual {p1}, Lgih;->e()J
 
     move-result-wide v4
@@ -68,17 +61,14 @@
     :goto_0
     invoke-static {v0}, Liya;->b(Z)V
 
-    .line 7
     iget-object v0, p0, Lghz;->a:Lgia;
 
     invoke-virtual {v0, v1}, Lgia;->a(Lgfz;)Z
 
-    .line 8
     sget-object v0, Lgij;->b:Lgii;
 
     invoke-virtual {p1, v0, v1}, Lgih;->a(Lgii;Ljava/lang/Object;)Lgih;
 
-    .line 9
     iget-object v0, p0, Lghz;->b:Lgho;
 
     invoke-interface {v0, p1}, Lgho;->a(Lgih;)Ljuw;
@@ -87,7 +77,6 @@
 
     return-object v0
 
-    .line 6
     :cond_0
     const/4 v0, 0x0
 
@@ -97,8 +86,6 @@
 .method public final a()Z
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lghz;->b:Lgho;
 
     invoke-interface {v0}, Lgho;->a()Z

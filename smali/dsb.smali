@@ -15,15 +15,12 @@
 .method constructor <init>(Liil;Ljava/util/concurrent/atomic/AtomicInteger;Lgki;)V
     .locals 2
 
-    .prologue
-    .line 1
     iput-object p2, p0, Ldsb;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
     iput-object p3, p0, Ldsb;->c:Lgki;
 
     invoke-direct {p0, p1}, Liii;-><init>(Liil;)V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -40,8 +37,6 @@
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 3
     iget-object v0, p0, Ldsb;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -52,16 +47,13 @@
 
     if-eqz v0, :cond_1
 
-    .line 8
     :cond_0
     :goto_0
     return-void
 
-    .line 5
     :cond_1
     invoke-super {p0}, Liii;->close()V
 
-    .line 6
     iget-object v0, p0, Ldsb;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
@@ -70,7 +62,6 @@
 
     if-nez v0, :cond_0
 
-    .line 7
     iget-object v0, p0, Ldsb;->c:Lgki;
 
     invoke-interface {v0}, Lgki;->close()V

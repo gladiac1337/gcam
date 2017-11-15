@@ -50,8 +50,6 @@
 .method constructor <init>(Lbaj;Liau;Lgdq;Lbea;Lbco;Ligc;Liag;Liag;Liag;Lbgs;Liau;Liau;Liau;Liag;Liau;Liau;Liau;Lgkv;Ljht;Ljht;Lgfj;Lbbt;)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbaq;->s:Lbaj;
 
     iput-object p2, p0, Lbaq;->a:Liau;
@@ -108,38 +106,29 @@
 .method private final a(Lihy;Lbgq;)Ljuw;
     .locals 26
 
-    .prologue
-    .line 2
     sget-object v1, Lbaj;->a:Ljava/lang/String;
 
-    .line 3
     const-string v2, "CameraDeviceProxy and PreparedMediaRecorder are ready."
 
     invoke-static {v1, v2}, Lbhz;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lbaq;->s:Lbaj;
 
-    .line 5
     iget-object v0, v1, Lbaj;->f:Ljava/lang/Object;
 
     move-object/from16 v25, v0
 
-    .line 6
     monitor-enter v25
 
-    .line 7
     :try_start_0
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lbaq;->s:Lbaj;
 
-    .line 8
     iget-object v1, v1, Lbaj;->g:Lbas;
 
-    .line 9
     sget-object v2, Lbas;->a:Lbas;
 
     invoke-virtual {v1, v2}, Lbas;->equals(Ljava/lang/Object;)Z
@@ -148,7 +137,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 10
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "CamcorderManager has been closed."
@@ -161,20 +149,16 @@
 
     monitor-exit v25
 
-    .line 30
     :goto_0
     return-object v1
 
-    .line 11
     :cond_0
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lbaq;->s:Lbaj;
 
-    .line 12
     iget-object v1, v1, Lbaj;->g:Lbas;
 
-    .line 13
     sget-object v2, Lbas;->c:Lbas;
 
     invoke-virtual {v1, v2}, Lbas;->equals(Ljava/lang/Object;)Z
@@ -183,47 +167,38 @@
 
     invoke-static {v1}, Liya;->a(Z)V
 
-    .line 14
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lbaq;->s:Lbaj;
 
     sget-object v2, Lbas;->b:Lbas;
 
-    .line 15
     iput-object v2, v1, Lbaj;->g:Lbas;
 
-    .line 16
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lbaq;->a:Liau;
 
-    .line 17
     invoke-static {v1}, Liav;->b(Liau;)Liau;
 
     move-result-object v19
 
-    .line 18
     new-instance v4, Lbcs;
 
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lbaq;->s:Lbaj;
 
-    .line 19
     iget-object v1, v1, Lbaj;->j:Lhzn;
 
-    .line 20
     move-object/from16 v0, p1
 
     invoke-direct {v4, v0, v1}, Lbcs;-><init>(Lihy;Lhzn;)V
 
-    .line 21
     new-instance v8, Lbcz;
 
     invoke-direct {v8}, Lbcz;-><init>()V
 
-    .line 22
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lbaq;->s:Lbaj;
@@ -318,20 +293,16 @@
 
     move-object/from16 v22, p2
 
-    .line 23
     invoke-static/range {v1 .. v24}, Lbaj;->a(Lbaj;Lify;Lbea;Lbcp;Lbco;Lihy;Ligc;Lbcx;Liag;Liag;Liag;Lbgs;Liau;Liau;Liau;Liau;Liau;Liau;Liau;Liau;Lgdq;Lbgq;Lgfj;Lbbt;)Lbaa;
 
     move-result-object v2
 
-    .line 24
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lbaq;->s:Lbaj;
 
-    .line 25
     iget-object v1, v1, Lbaj;->h:Ljava/util/Map;
 
-    .line 26
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lbaq;->e:Ligc;
@@ -347,22 +318,18 @@
     :goto_1
     invoke-static {v1}, Liya;->a(Z)V
 
-    .line 27
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lbaq;->s:Lbaj;
 
-    .line 28
     iget-object v1, v1, Lbaj;->h:Ljava/util/Map;
 
-    .line 29
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lbaq;->e:Ligc;
 
     invoke-interface {v1, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 30
     invoke-static {v2}, Ljuh;->a(Ljava/lang/Object;)Ljuw;
 
     move-result-object v1
@@ -371,7 +338,6 @@
 
     goto/16 :goto_0
 
-    .line 31
     :catchall_0
     move-exception v1
 
@@ -381,7 +347,6 @@
 
     throw v1
 
-    .line 26
     :cond_1
     const/4 v1, 0x0
 
@@ -393,8 +358,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;Ljava/lang/Object;)Ljuw;
     .locals 1
 
-    .prologue
-    .line 32
     check-cast p1, Lihy;
 
     check-cast p2, Lbgq;

@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 11
     const-string v0, "CamTimeWaiter"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -27,8 +25,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,25 +33,20 @@
 .method public static a(JLggk;Lggn;)Z
     .locals 4
 
-    .prologue
-    .line 2
     new-instance v0, Lgkn;
 
     invoke-direct {v0, p0, p1}, Lgkn;-><init>(J)V
 
-    .line 3
     new-instance v1, Lggm;
 
     invoke-direct {v1, p2}, Lggm;-><init>(Lggk;)V
 
-    .line 4
     invoke-static {v0}, Lfsp;->b(Licn;)Lggu;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Lggm;->a(Lggu;)Lggm;
 
-    .line 5
     const/4 v2, 0x1
 
     new-array v2, v2, [Lggk;
@@ -76,11 +67,9 @@
 
     invoke-interface {p3, v1, v2}, Lggn;->a(Ljava/util/List;Lggt;)V
 
-    .line 7
     :try_start_0
     iget-object v0, v0, Lgkn;->a:Ljvi;
 
-    .line 8
     invoke-interface {v0}, Ljuw;->get()Ljava/lang/Object;
 
     move-result-object v0
@@ -95,11 +84,9 @@
 
     return v0
 
-    .line 9
     :catch_0
     move-exception v0
 
-    .line 10
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V

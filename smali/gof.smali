@@ -25,15 +25,11 @@
 .method public final run()V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgof;->a:Lgoe;
 
-    .line 2
     iget-object v0, v0, Lgoe;->c:Lgoj;
 
     invoke-interface {v0}, Lgoj;->c()V
 
-    .line 3
     return-void
 .end method

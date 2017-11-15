@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method public static a()Lgek;
     .locals 2
 
-    .prologue
-    .line 2
     new-instance v0, Lgek;
 
     const/4 v1, 0x0
@@ -27,12 +23,10 @@
 
     const/4 v1, -0x1
 
-    .line 3
     invoke-virtual {v0, v1}, Lgek;->a(I)Lgek;
 
     move-result-object v0
 
-    .line 4
     return-object v0
 .end method
 

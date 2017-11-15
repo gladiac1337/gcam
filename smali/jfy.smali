@@ -15,32 +15,26 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Ljfz;
 
     invoke-direct {v0}, Ljfz;-><init>()V
 
     sput-object v0, Ljfy;->a:Ljfy;
 
-    .line 3
     new-instance v0, Ljga;
 
     invoke-direct {v0}, Ljga;-><init>()V
 
-    .line 4
     new-instance v0, Ljgb;
 
     invoke-direct {v0}, Ljgb;-><init>()V
 
-    .line 5
     new-instance v0, Ljgc;
 
     invoke-direct {v0}, Ljgc;-><init>()V
 
     sput-object v0, Ljfy;->b:Ljfy;
 
-    .line 6
     new-instance v0, Ljgd;
 
     invoke-direct {v0}, Ljgd;-><init>()V
@@ -53,8 +47,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

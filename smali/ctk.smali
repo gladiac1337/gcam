@@ -18,8 +18,6 @@
 .method constructor <init>(Lcsk;Laxg;Lhzr;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lctk;->c:Lcsk;
 
     iput-object p2, p0, Lctk;->a:Laxg;
@@ -36,55 +34,42 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 12
 
-    .prologue
     const/4 v3, 0x0
 
     const/4 v11, 0x1
 
-    .line 15
     check-cast p1, Ldhi;
 
-    .line 16
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 17
     sget-object v0, Lcsk;->c:Ljava/lang/String;
 
-    .line 18
     const-string v1, "OneCamera started!"
 
     invoke-static {v0, v1}, Lbhz;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 19
     iget-object v0, p0, Lctk;->a:Laxg;
 
-    .line 20
     iget-object v0, v0, Laxg;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result v0
 
-    .line 21
     if-nez v0, :cond_3
 
-    .line 22
     sget-object v0, Lcsk;->c:Ljava/lang/String;
 
-    .line 23
     const-string v1, "OneCamera started, updating UI!"
 
     invoke-static {v0, v1}, Lbhz;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 24
     iget-object v9, p0, Lctk;->c:Lcsk;
 
     iget-object v10, p0, Lctk;->b:Lhzr;
 
-    .line 26
     invoke-virtual {v9}, Lcsk;->y()V
 
-    .line 27
     iget-object v0, v9, Lcsk;->d:Ldhh;
 
     invoke-virtual {v0}, Ldhh;->b()Ljava/lang/Object;
@@ -95,10 +80,8 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 28
     invoke-virtual {v9}, Lcsk;->m()V
 
-    .line 29
     :cond_0
     iget-object v0, v9, Lcsk;->A:Ldhi;
 
@@ -112,22 +95,17 @@
 
     if-eqz v0, :cond_3
 
-    .line 30
     :cond_1
     iput-boolean v3, v9, Lcsk;->K:Z
 
-    .line 31
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 32
     iput-object p1, v9, Lcsk;->A:Ldhi;
 
-    .line 33
     iget-object v0, v9, Lcsk;->A:Ldhi;
 
     invoke-static {v0}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 34
     iget-object v0, v9, Lcsk;->u:Ljht;
 
     invoke-virtual {v0}, Ljht;->a()Z
@@ -136,7 +114,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 35
     iget-object v0, v9, Lcsk;->u:Ljht;
 
     invoke-virtual {v0}, Ljht;->b()Ljava/lang/Object;
@@ -147,51 +124,39 @@
 
     iget-object v1, v9, Lcsk;->A:Ldhi;
 
-    .line 36
     invoke-interface {v1}, Ldhi;->b()Ldhv;
 
     move-result-object v1
 
-    .line 37
     iget-object v1, v1, Ldhv;->h:Ldhg;
 
-    .line 38
     invoke-virtual {v0, v1}, Lgdj;->a(Liau;)V
 
-    .line 39
     :cond_2
     const/4 v0, 0x0
 
     iput-object v0, v9, Lcsk;->z:Ljuw;
 
-    .line 40
     iget-object v0, v9, Lcsk;->A:Ldhi;
 
     invoke-virtual {v10, v0}, Lhzr;->a(Lich;)Lich;
 
-    .line 41
     iget-object v0, v9, Lcsk;->A:Ldhi;
 
-    .line 42
     invoke-interface {v0}, Ldhi;->b()Ldhv;
 
     move-result-object v0
 
-    .line 43
     const/4 v1, 0x3
 
     new-array v1, v1, [Liau;
 
-    .line 44
     iget-object v2, v0, Ldhv;->i:Liau;
 
-    .line 45
     aput-object v2, v1, v3
 
-    .line 46
     iget-object v0, v0, Ldhv;->a:Liau;
 
-    .line 47
     aput-object v0, v1, v11
 
     const/4 v0, 0x2
@@ -200,7 +165,6 @@
 
     aput-object v2, v1, v0
 
-    .line 48
     invoke-static {v1}, Liav;->b([Liau;)Liau;
 
     move-result-object v0
@@ -209,12 +173,10 @@
 
     invoke-direct {v1, v9}, Lcte;-><init>(Lcsk;)V
 
-    .line 49
     invoke-static {v0, v1}, Liav;->a(Liau;Ljhj;)Liau;
 
     move-result-object v5
 
-    .line 51
     iget-object v0, v9, Lcsk;->af:Lasl;
 
     iget-object v1, v9, Lcsk;->A:Ldhi;
@@ -223,49 +185,38 @@
 
     iget-object v3, v9, Lcsk;->A:Ldhi;
 
-    .line 52
     invoke-interface {v3}, Ldhi;->b()Ldhv;
 
     move-result-object v3
 
-    .line 53
     iget-object v3, v3, Ldhv;->c:Liau;
 
-    .line 54
     iget-object v4, v9, Lcsk;->A:Ldhi;
 
-    .line 55
     invoke-interface {v4}, Ldhi;->b()Ldhv;
 
     move-result-object v4
 
-    .line 56
     iget-object v4, v4, Ldhv;->e:Liau;
 
-    .line 57
     invoke-static {v4}, Ljht;->b(Ljava/lang/Object;)Ljht;
 
     move-result-object v4
 
-    .line 58
     invoke-interface/range {v0 .. v5}, Lasl;->a(Lase;Lgdq;Liau;Ljht;Liau;)Lask;
 
     move-result-object v0
 
-    .line 59
     invoke-virtual {v10, v0}, Lhzr;->a(Lich;)Lich;
 
-    .line 60
     sget-object v0, Lcsk;->c:Ljava/lang/String;
 
     const-string v1, "OneCamera created, preparing to start OneCamera"
 
     invoke-static {v0, v1}, Lbhz;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 61
     invoke-static {}, Leug;->k()V
 
-    .line 62
     iget-object v0, v9, Lcsk;->w:Lbtx;
 
     invoke-interface {v0}, Lbtx;->t()Leug;
@@ -274,7 +225,6 @@
 
     invoke-virtual {v0}, Leug;->r()V
 
-    .line 63
     iget-object v0, v9, Lcsk;->w:Lbtx;
 
     invoke-interface {v0}, Lbtx;->t()Leug;
@@ -283,7 +233,6 @@
 
     invoke-virtual {v0, v11}, Leug;->a(Z)V
 
-    .line 64
     iget-object v0, v9, Lcsk;->w:Lbtx;
 
     invoke-interface {v0}, Lbtx;->t()Leug;
@@ -292,7 +241,6 @@
 
     invoke-virtual {v0}, Leug;->l()V
 
-    .line 65
     iget-object v0, v9, Lcsk;->w:Lbtx;
 
     invoke-interface {v0}, Lbtx;->t()Leug;
@@ -301,103 +249,80 @@
 
     invoke-virtual {v0}, Leug;->j()V
 
-    .line 66
     iget-object v0, v9, Lcsk;->I:Ljxn;
 
     invoke-interface {v0}, Ljxn;->a()Ljava/lang/Object;
 
-    .line 67
     iget-object v0, v9, Lcsk;->N:Lhzr;
 
     iget-object v1, v9, Lcsk;->D:Lctv;
 
-    .line 68
     iget-object v2, v1, Lctv;->b:Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;
 
     iget-object v3, v1, Lctv;->e:Lewd;
 
-    .line 69
     invoke-virtual {v2, v3}, Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;->a(Lewd;)Lich;
 
     move-result-object v2
 
-    .line 71
     iget-object v1, v1, Lctv;->b:Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;
 
     invoke-virtual {v1}, Lcom/google/android/apps/camera/legacy/app/ui/PreviewOverlay;->invalidate()V
 
-    .line 73
     invoke-virtual {v0, v2}, Lhzr;->a(Lich;)Lich;
 
-    .line 74
     iget-object v0, v9, Lcsk;->A:Ldhi;
 
-    .line 75
     invoke-interface {v0}, Ldhi;->b()Ldhv;
 
     move-result-object v0
 
-    .line 77
     iget-object v1, v9, Lcsk;->O:Lcqy;
 
-    .line 78
     iget-object v2, v0, Ldhv;->a:Liau;
 
-    .line 79
     invoke-virtual {v1, v2}, Lcqy;->a(Liau;)V
 
-    .line 80
     new-instance v1, Lctf;
 
     invoke-direct {v1, v9}, Lctf;-><init>(Lcsk;)V
 
     iget-object v2, v9, Lcsk;->f:Lhzt;
 
-    .line 81
     invoke-interface {v5, v1, v2}, Liau;->a(Licn;Ljava/util/concurrent/Executor;)Lich;
 
     move-result-object v1
 
-    .line 82
     invoke-virtual {v10, v1}, Lhzr;->a(Lich;)Lich;
 
-    .line 84
     iget-object v1, v0, Ldhv;->d:Liau;
 
-    .line 86
     new-instance v2, Lctg;
 
     invoke-direct {v2, v9}, Lctg;-><init>(Lcsk;)V
 
     iget-object v3, v9, Lcsk;->f:Lhzt;
 
-    .line 87
     invoke-interface {v1, v2, v3}, Liau;->a(Licn;Ljava/util/concurrent/Executor;)Lich;
 
     move-result-object v1
 
-    .line 88
     invoke-virtual {v10, v1}, Lhzr;->a(Lich;)Lich;
 
-    .line 90
     iget-object v0, v0, Ldhv;->b:Liau;
 
-    .line 92
     new-instance v1, Lcth;
 
     invoke-direct {v1, v9}, Lcth;-><init>(Lcsk;)V
 
     iget-object v2, v9, Lcsk;->f:Lhzt;
 
-    .line 93
     invoke-interface {v0, v1, v2}, Liau;->a(Licn;Ljava/util/concurrent/Executor;)Lich;
 
     move-result-object v0
 
-    .line 94
     invoke-virtual {v10, v0}, Lhzr;->a(Lich;)Lich;
 
-    .line 95
     new-instance v0, Lcuh;
 
     iget-object v1, v9, Lcsk;->H:Landroid/view/accessibility/AccessibilityManager;
@@ -412,25 +337,20 @@
 
     iget-object v6, v9, Lcsk;->w:Lbtx;
 
-    .line 96
     invoke-interface {v6}, Lbtx;->t()Leug;
 
     move-result-object v6
 
-    .line 97
     iget-object v6, v6, Leug;->o:Lbkp;
 
-    .line 98
     iget-object v7, v9, Lcsk;->s:Lbip;
 
-    .line 99
     invoke-virtual {v7}, Lbip;->c()Z
 
     move-result v7
 
     iget-object v8, v9, Lcsk;->B:Lgdq;
 
-    .line 100
     invoke-interface {v8}, Lgdq;->d()I
 
     move-result v8
@@ -439,31 +359,24 @@
 
     iput-object v0, v9, Lcsk;->G:Lcuh;
 
-    .line 101
     iget-object v0, v9, Lcsk;->A:Ldhi;
 
-    .line 102
     invoke-interface {v0}, Ldhi;->b()Ldhv;
 
     move-result-object v0
 
-    .line 103
     iget-object v0, v0, Ldhv;->e:Liau;
 
-    .line 104
     iget-object v1, v9, Lcsk;->G:Lcuh;
 
     iget-object v2, v9, Lcsk;->f:Lhzt;
 
-    .line 105
     invoke-interface {v0, v1, v2}, Liau;->a(Licn;Ljava/util/concurrent/Executor;)Lich;
 
     move-result-object v0
 
-    .line 106
     invoke-virtual {v10, v0}, Lhzr;->a(Lich;)Lich;
 
-    .line 107
     iget-object v0, v9, Lcsk;->G:Lcuh;
 
     iget-object v1, v9, Lcsk;->y:Lcqr;
@@ -474,16 +387,12 @@
 
     invoke-virtual {v0, v1}, Lcuh;->a(Lici;)V
 
-    .line 108
     invoke-virtual {v9}, Lcsk;->z()V
 
-    .line 109
     iget-object v0, v9, Lcsk;->ad:Liag;
 
-    .line 110
     iget-object v0, v0, Liag;->c:Ljava/lang/Object;
 
-    .line 111
     check-cast v0, Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -492,7 +401,6 @@
 
     if-nez v0, :cond_3
 
-    .line 112
     iget-object v0, v9, Lcsk;->ad:Liag;
 
     invoke-static {v11}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -501,7 +409,6 @@
 
     invoke-virtual {v0, v1}, Liag;->a(Ljava/lang/Object;)V
 
-    .line 113
     :cond_3
     return-void
 .end method
@@ -509,46 +416,35 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 2
 
-    .prologue
-    .line 2
     instance-of v0, p1, Ljava/util/concurrent/CancellationException;
 
     if-eqz v0, :cond_1
 
-    .line 3
     sget-object v0, Lcsk;->c:Ljava/lang/String;
 
-    .line 4
     const-string v1, "OneCamera open sequence was canceled, shutting down lifetime."
 
     invoke-static {v0, v1}, Lbhz;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7
     :goto_0
     iget-object v0, p0, Lctk;->b:Lhzr;
 
     invoke-virtual {v0}, Lhzr;->close()V
 
-    .line 8
     iget-object v0, p0, Lctk;->c:Lcsk;
 
-    .line 9
     iget-object v0, v0, Lcsk;->u:Ljht;
 
-    .line 10
     invoke-virtual {v0}, Ljht;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 11
     iget-object v0, p0, Lctk;->c:Lcsk;
 
-    .line 12
     iget-object v0, v0, Lcsk;->u:Ljht;
 
-    .line 13
     invoke-virtual {v0}, Ljht;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -557,15 +453,12 @@
 
     invoke-virtual {v0}, Lgdj;->a()V
 
-    .line 14
     :cond_0
     return-void
 
-    .line 5
     :cond_1
     sget-object v0, Lcsk;->c:Ljava/lang/String;
 
-    .line 6
     const-string v1, "OneCamera failed to open, closing lifetime."
 
     invoke-static {v0, v1, p1}, Lbhz;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V

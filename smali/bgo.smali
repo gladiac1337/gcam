@@ -15,24 +15,18 @@
 .method public constructor <init>(Z)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-boolean p1, p0, Lbgo;->a:Z
 
-    .line 3
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lbgo;->b:Z
 
-    .line 4
     const/4 v0, -0x1
 
     iput v0, p0, Lbgo;->c:I
 
-    .line 5
     return-void
 .end method
 
@@ -41,13 +35,10 @@
 .method public final a()I
     .locals 2
 
-    .prologue
-    .line 13
     iget-boolean v0, p0, Lbgo;->b:Z
 
     if-nez v0, :cond_0
 
-    .line 14
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Track is not yet added"
@@ -56,7 +47,6 @@
 
     throw v0
 
-    .line 15
     :cond_0
     iget v0, p0, Lbgo;->c:I
 
@@ -66,13 +56,10 @@
 .method public final a(I)V
     .locals 3
 
-    .prologue
-    .line 6
     iget-boolean v0, p0, Lbgo;->a:Z
 
     if-nez v0, :cond_0
 
-    .line 7
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "This track is not required."
@@ -81,13 +68,11 @@
 
     throw v0
 
-    .line 8
     :cond_0
     iget-boolean v0, p0, Lbgo;->b:Z
 
     if-eqz v0, :cond_1
 
-    .line 9
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const/16 v1, 0x2f
@@ -114,15 +99,12 @@
 
     throw v0
 
-    .line 10
     :cond_1
     iput p1, p0, Lbgo;->c:I
 
-    .line 11
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lbgo;->b:Z
 
-    .line 12
     return-void
 .end method

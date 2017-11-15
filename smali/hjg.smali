@@ -22,8 +22,6 @@
 .method private constructor <init>([Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 140
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     invoke-static {p1}, Lhjg;->b(Ljava/lang/Object;)Ljava/lang/Object;
@@ -42,26 +40,18 @@
 .method public constructor <init>([Ljava/lang/String;B)V
     .locals 0
 
-    .prologue
-    .line 141
-    .line 142
     invoke-direct {p0, p1}, Lhjg;-><init>([Ljava/lang/String;)V
 
-    .line 143
     return-void
 .end method
 
 .method public static a(Landroid/os/Parcel;)I
     .locals 5
 
-    .prologue
-    .line 30
-    .line 31
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 32
     invoke-static {p0, v0}, Lhjg;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -70,12 +60,10 @@
 
     move-result v2
 
-    .line 33
     const v3, 0xffff
 
     and-int/2addr v3, v0
 
-    .line 34
     const/16 v4, 0x4f45
 
     if-eq v3, v4, :cond_1
@@ -169,10 +157,8 @@
 .method public static a(Landroid/os/Parcel;I)I
     .locals 2
 
-    .prologue
     const/high16 v1, -0x10000
 
-    .line 27
     and-int v0, p1, v1
 
     if-eq v0, v1, :cond_0
@@ -197,12 +183,10 @@
 .method private static a(JJ)J
     .locals 8
 
-    .prologue
     const/16 v6, 0x2f
 
     const-wide v4, -0x395b586ca42e166bL    # -2.0946245025644615E32
 
-    .line 25
     xor-long v0, p2, p0
 
     mul-long/2addr v0, v4
@@ -227,8 +211,6 @@
 .method public static a([B)J
     .locals 23
 
-    .prologue
-    .line 1
     move-object/from16 v0, p0
 
     array-length v2, v0
@@ -237,7 +219,6 @@
 
     if-gt v2, v3, :cond_5
 
-    .line 2
     move-object/from16 v0, p0
 
     array-length v2, v0
@@ -285,14 +266,12 @@
 
     mul-long/2addr v6, v10
 
-    .line 3
     const/16 v5, 0x2f
 
     ushr-long v10, v6, v5
 
     xor-long/2addr v6, v10
 
-    .line 4
     const-wide v10, -0x395b586ca42e166bL    # -2.0946245025644615E32
 
     mul-long/2addr v6, v10
@@ -314,7 +293,6 @@
     :cond_0
     if-eqz v9, :cond_2
 
-    .line 5
     const-wide/16 v6, 0x0
 
     const/16 v4, 0x8
@@ -348,7 +326,6 @@
 
     goto :goto_1
 
-    .line 6
     :cond_1
     xor-long/2addr v2, v6
 
@@ -356,7 +333,6 @@
 
     mul-long/2addr v2, v4
 
-    .line 7
     :cond_2
     const/16 v4, 0x2f
 
@@ -364,19 +340,16 @@
 
     xor-long/2addr v2, v4
 
-    .line 8
     const-wide v4, -0x395b586ca42e166bL    # -2.0946245025644615E32
 
     mul-long/2addr v2, v4
 
-    .line 9
     const/16 v4, 0x2f
 
     ushr-long v4, v2, v4
 
     xor-long/2addr v2, v4
 
-    .line 22
     :goto_2
     move-object/from16 v0, p0
 
@@ -442,7 +415,6 @@
     :cond_4
     return-wide v2
 
-    .line 10
     :cond_5
     move-object/from16 v0, p0
 
@@ -452,7 +424,6 @@
 
     if-gt v2, v3, :cond_6
 
-    .line 11
     move-object/from16 v0, p0
 
     array-length v2, v0
@@ -639,36 +610,30 @@
 
     add-long/2addr v2, v4
 
-    .line 12
     const/16 v4, 0x2f
 
     ushr-long v4, v2, v4
 
     xor-long/2addr v2, v4
 
-    .line 13
     const-wide v4, -0x5a47a3a1e67127b7L    # -5.623071142144676E-127
 
     mul-long/2addr v2, v4
 
     add-long/2addr v2, v6
 
-    .line 14
     const/16 v4, 0x2f
 
     ushr-long v4, v2, v4
 
     xor-long/2addr v2, v4
 
-    .line 15
     const-wide v4, -0x3b849161c568f12dL    # -8.096527404817815E21
 
     mul-long/2addr v2, v4
 
-    .line 16
     goto/16 :goto_2
 
-    .line 17
     :cond_6
     move-object/from16 v0, p0
 
@@ -742,14 +707,12 @@
 
     aget-wide v2, v8, v2
 
-    .line 18
     const/16 v4, 0x2f
 
     ushr-long v4, v2, v4
 
     xor-long/2addr v2, v4
 
-    .line 19
     const-wide v4, -0x72a753d9501ed1b9L
 
     mul-long/2addr v2, v4
@@ -915,14 +878,12 @@
 
     move-result-wide v2
 
-    .line 20
     const/16 v4, 0x2f
 
     ushr-long v4, v14, v4
 
     xor-long/2addr v4, v14
 
-    .line 21
     const-wide v6, -0x72a753d9501ed1b9L
 
     mul-long/2addr v4, v6
@@ -951,7 +912,6 @@
 
     goto/16 :goto_2
 
-    .line 22
     :cond_7
     const-wide v4, -0x5a47a3a1e67127b7L    # -5.623071142144676E-127
 
@@ -975,8 +935,6 @@
 .method private static a([BI)J
     .locals 2
 
-    .prologue
-    .line 24
     const/16 v0, 0x8
 
     invoke-static {p0, p1, v0}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
@@ -997,8 +955,6 @@
 .method public static a(Ljava/util/List;)Landroid/os/Bundle;
     .locals 5
 
-    .prologue
-    .line 89
     if-nez p0, :cond_0
 
     const/4 v0, 0x0
@@ -1053,8 +1009,6 @@
 .method public static a(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
     .locals 3
 
-    .prologue
-    .line 41
     invoke-static {p0, p1}, Lhjg;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -1087,21 +1041,16 @@
 .method public static a(Ljava/lang/Object;)Lhld;
     .locals 1
 
-    .prologue
-    .line 66
     new-instance v0, Lhld;
 
-    .line 67
     invoke-direct {v0, p0}, Lhld;-><init>(Ljava/lang/Object;)V
 
-    .line 68
     return-object v0
 .end method
 
 .method private static a(Ljava/util/List;Ljava/lang/Object;)Lhqy;
     .locals 13
 
-    .prologue
     const/16 v12, 0x9
 
     const/4 v11, 0x6
@@ -1112,7 +1061,6 @@
 
     const/16 v5, 0xe
 
-    .line 94
     new-instance v3, Lhqy;
 
     invoke-direct {v3}, Lhqy;-><init>()V
@@ -1123,11 +1071,9 @@
 
     move-object v0, v3
 
-    .line 98
     :goto_0
     return-object v0
 
-    .line 94
     :cond_0
     new-instance v1, Lhqz;
 
@@ -1150,10 +1096,8 @@
     :goto_1
     move-object v0, v3
 
-    .line 98
     goto :goto_0
 
-    .line 94
     :cond_1
     instance-of v1, p1, Ljava/lang/Integer;
 
@@ -1359,7 +1303,6 @@
 
     check-cast p1, Lcom/google/android/gms/wearable/Asset;
 
-    .line 95
     invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     invoke-interface {p0}, Ljava/util/List;->size()I
@@ -1368,7 +1311,6 @@
 
     add-int/lit8 v1, v1, -0x1
 
-    .line 96
     int-to-long v4, v1
 
     iput-wide v4, v0, Lhqz;->n:J
@@ -1386,14 +1328,12 @@
 
     new-instance v1, Ljava/util/TreeSet;
 
-    .line 97
     iget-object v2, p1, Lhwc;->a:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v2
 
-    .line 98
     invoke-direct {v1, v2}, Ljava/util/TreeSet;-><init>(Ljava/util/Collection;)V
 
     invoke-virtual {v1}, Ljava/util/TreeSet;->size()I
@@ -1706,8 +1646,6 @@
 .method public static a(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 90
     invoke-static {}, Landroid/os/StrictMode;->getThreadPolicy()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v1
@@ -1749,10 +1687,8 @@
 .method public static a(Ljuw;)Ljava/lang/Object;
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 119
     invoke-interface {p0}, Ljuw;->isDone()Z
 
     move-result v1
@@ -1765,10 +1701,8 @@
 
     if-nez v1, :cond_0
 
-    .line 120
     const/4 v1, 0x0
 
-    .line 121
     :goto_0
     :try_start_0
     invoke-interface {p0}, Ljuw;->get()Ljava/lang/Object;
@@ -1779,37 +1713,30 @@
 
     move-result-object v0
 
-    .line 122
     if-eqz v1, :cond_0
 
-    .line 123
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v1
 
     invoke-virtual {v1}, Ljava/lang/Thread;->interrupt()V
 
-    .line 134
     :cond_0
     :goto_1
     return-object v0
 
-    .line 126
     :catch_0
     move-exception v1
 
     const/4 v1, 0x1
 
-    .line 127
     goto :goto_0
 
-    .line 129
     :catch_1
     move-exception v2
 
     if-eqz v1, :cond_0
 
-    .line 130
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v1
@@ -1818,13 +1745,11 @@
 
     goto :goto_1
 
-    .line 132
     :catchall_0
     move-exception v0
 
     if-eqz v1, :cond_1
 
-    .line 133
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v1
@@ -1838,8 +1763,6 @@
 .method public static a(I)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 26
     packed-switch p0, :pswitch_data_0
 
     :pswitch_0
@@ -1976,8 +1899,6 @@
 .method public static a(Lhri;)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 99
     if-nez p0, :cond_0
 
     const-string v0, ""
@@ -2076,8 +1997,6 @@
 .method public static a(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 70
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -2099,8 +2018,6 @@
 .method public static a(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 71
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -2124,34 +2041,26 @@
 .method public static a(Ljuw;Ljuw;Lhzk;)Ljuw;
     .locals 3
 
-    .prologue
-    .line 106
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x2
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 107
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 108
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 109
     invoke-static {v0}, Ljuh;->a(Ljava/lang/Iterable;)Ljuw;
 
     move-result-object v0
 
-    .line 110
     new-instance v1, Lhzg;
 
     invoke-direct {v1, p2}, Lhzg;-><init>(Lhzk;)V
 
-    .line 111
     sget-object v2, Ljvc;->a:Ljvc;
 
-    .line 112
     invoke-static {v0, v1, v2}, Ljuh;->a(Ljuw;Ljtu;Ljava/util/concurrent/Executor;)Ljuw;
 
     move-result-object v0
@@ -2162,26 +2071,20 @@
 .method public static a(Ljuw;Ljuw;Lhzk;Ljava/util/concurrent/Executor;)Ljuw;
     .locals 2
 
-    .prologue
-    .line 113
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x2
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 114
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 115
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 116
     invoke-static {v0}, Ljuh;->a(Ljava/lang/Iterable;)Ljuw;
 
     move-result-object v0
 
-    .line 117
     new-instance v1, Lhzh;
 
     invoke-direct {v1, p2}, Lhzh;-><init>(Lhzk;)V
@@ -2196,8 +2099,6 @@
 .method public static a(Ljuw;Ljuw;Lhzl;)Ljuw;
     .locals 1
 
-    .prologue
-    .line 118
     new-instance v0, Lhzm;
 
     invoke-direct {v0, p2}, Lhzm;-><init>(Lhzl;)V
@@ -2212,8 +2113,6 @@
 .method public static a(Landroid/os/Handler;)V
     .locals 2
 
-    .prologue
-    .line 77
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -2239,8 +2138,6 @@
 .method public static a(Landroid/os/Parcel;IB)V
     .locals 1
 
-    .prologue
-    .line 52
     const/4 v0, 0x4
 
     invoke-static {p0, p1, v0}, Lhjg;->b(Landroid/os/Parcel;II)V
@@ -2253,8 +2150,6 @@
 .method public static a(Landroid/os/Parcel;II)V
     .locals 5
 
-    .prologue
-    .line 29
     invoke-static {p0, p1}, Lhjg;->a(Landroid/os/Parcel;I)I
 
     move-result v0
@@ -2336,8 +2231,6 @@
 .method public static a(Landroid/os/Parcel;IJ)V
     .locals 2
 
-    .prologue
-    .line 54
     const/16 v0, 0x8
 
     invoke-static {p0, p1, v0}, Lhjg;->b(Landroid/os/Parcel;II)V
@@ -2350,8 +2243,6 @@
 .method public static a(Landroid/os/Parcel;ILandroid/os/Bundle;)V
     .locals 1
 
-    .prologue
-    .line 58
     if-nez p2, :cond_0
 
     :goto_0
@@ -2372,8 +2263,6 @@
 .method public static a(Landroid/os/Parcel;ILandroid/os/IBinder;)V
     .locals 1
 
-    .prologue
-    .line 56
     if-nez p2, :cond_0
 
     :goto_0
@@ -2394,8 +2283,6 @@
 .method public static a(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
     .locals 1
 
-    .prologue
-    .line 57
     if-nez p2, :cond_0
 
     :goto_0
@@ -2416,8 +2303,6 @@
 .method public static a(Landroid/os/Parcel;ILjava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 55
     if-nez p2, :cond_0
 
     :goto_0
@@ -2438,10 +2323,8 @@
 .method public static a(Landroid/os/Parcel;ILjava/util/List;)V
     .locals 5
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 63
     if-nez p2, :cond_0
 
     :goto_0
@@ -2494,8 +2377,6 @@
 .method public static a(Landroid/os/Parcel;IZ)V
     .locals 1
 
-    .prologue
-    .line 51
     const/4 v0, 0x4
 
     invoke-static {p0, p1, v0}, Lhjg;->b(Landroid/os/Parcel;II)V
@@ -2518,8 +2399,6 @@
 .method public static a(Landroid/os/Parcel;I[B)V
     .locals 1
 
-    .prologue
-    .line 59
     if-nez p2, :cond_0
 
     :goto_0
@@ -2540,8 +2419,6 @@
 .method public static a(Landroid/os/Parcel;I[I)V
     .locals 1
 
-    .prologue
-    .line 60
     if-nez p2, :cond_0
 
     :goto_0
@@ -2562,10 +2439,8 @@
 .method public static a(Landroid/os/Parcel;I[Landroid/os/Parcelable;I)V
     .locals 5
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 62
     if-nez p2, :cond_0
 
     :goto_0
@@ -2610,8 +2485,6 @@
 .method public static a(Landroid/os/Parcel;I[Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 61
     if-nez p2, :cond_0
 
     :goto_0
@@ -2632,8 +2505,6 @@
 .method private static a(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
     .locals 3
 
-    .prologue
-    .line 64
     invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v0
@@ -2666,12 +2537,10 @@
 .method private static a(Ljava/lang/String;Ljava/lang/Object;Ljava/lang/StringBuffer;Ljava/lang/StringBuffer;)V
     .locals 11
 
-    .prologue
     const/16 v3, 0xc8
 
     const/4 v1, 0x0
 
-    .line 100
     if-eqz p1, :cond_9
 
     instance-of v0, p1, Lhri;
@@ -2986,12 +2855,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 102
     :cond_9
     :goto_7
     return-void
 
-    .line 100
     :cond_a
     invoke-static {p0}, Lhjg;->b(Ljava/lang/String;)Ljava/lang/String;
 
@@ -3015,7 +2882,6 @@
 
     check-cast p1, Ljava/lang/String;
 
-    .line 101
     const-string v0, "http"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -3049,7 +2915,6 @@
 
     move-result-object v0
 
-    .line 102
     const-string v1, "\""
 
     invoke-virtual {p3, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
@@ -3091,23 +2956,18 @@
 .method public static a(Ljuw;Libu;Ljava/util/concurrent/Executor;)V
     .locals 1
 
-    .prologue
-    .line 135
     new-instance v0, Lhzj;
 
     invoke-direct {v0, p1}, Lhzj;-><init>(Libu;)V
 
     invoke-static {p0, v0, p2}, Ljuh;->a(Ljuw;Ljug;Ljava/util/concurrent/Executor;)V
 
-    .line 136
     return-void
 .end method
 
 .method public static a(Z)V
     .locals 1
 
-    .prologue
-    .line 73
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -3123,8 +2983,6 @@
 .method public static a(ZLjava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 74
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/IllegalStateException;
@@ -3144,8 +3002,6 @@
 .method private static a([BIJJ[J)V
     .locals 12
 
-    .prologue
-    .line 23
     invoke-static {p0, p1}, Lhjg;->a([BI)J
 
     move-result-wide v0
@@ -3210,14 +3066,12 @@
 .method private static a([BLjava/lang/StringBuffer;)V
     .locals 7
 
-    .prologue
     const/16 v6, 0x5c
 
     const/4 v1, 0x0
 
     const/16 v5, 0x22
 
-    .line 105
     if-nez p0, :cond_0
 
     const-string v0, "\"\""
@@ -3304,8 +3158,6 @@
 .method public static a()Z
     .locals 2
 
-    .prologue
-    .line 87
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x14
@@ -3329,19 +3181,16 @@
         value = 0x18
     .end annotation
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 81
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x18
 
     if-lt v0, v3, :cond_1
 
-    .line 83
     sget-object v0, Lhjg;->c:Ljava/lang/Boolean;
 
     if-nez v0, :cond_0
@@ -3380,10 +3229,8 @@
 
     move-result v0
 
-    .line 84
     if-eqz v0, :cond_5
 
-    .line 85
     :cond_1
     sget-object v0, Lhjg;->b:Ljava/lang/Boolean;
 
@@ -3423,7 +3270,6 @@
 
     move-result v0
 
-    .line 86
     if-eqz v0, :cond_5
 
     :goto_2
@@ -3432,34 +3278,28 @@
     :cond_3
     move v0, v2
 
-    .line 83
     goto :goto_0
 
     :cond_4
     move v0, v2
 
-    .line 85
     goto :goto_1
 
     :cond_5
     move v1, v2
 
-    .line 86
     goto :goto_2
 .end method
 
 .method public static a(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 78
     const-string v1, "com.google.android.gms"
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 79
     :try_start_0
     sget-object v1, Lhpv;->a:Lhpv;
 
@@ -3467,7 +3307,6 @@
 
     move-result-object v1
 
-    .line 80
     const/4 v2, 0x0
 
     invoke-virtual {v1, p1, v2}, Lhpu;->a(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
@@ -3499,8 +3338,6 @@
 .method public static a(Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 65
     if-eq p0, p1, :cond_0
 
     if-eqz p0, :cond_1
@@ -3526,18 +3363,14 @@
 .method public static a(Lhwc;Ljava/util/List;)[Lhqx;
     .locals 6
 
-    .prologue
-    .line 91
     new-instance v1, Ljava/util/TreeSet;
 
-    .line 92
     iget-object v0, p0, Lhwc;->a:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 93
     invoke-direct {v1, v0}, Ljava/util/TreeSet;-><init>(Ljava/util/Collection;)V
 
     invoke-virtual {v1}, Ljava/util/TreeSet;->size()I
@@ -3602,8 +3435,6 @@
 .method public static b(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 69
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/NullPointerException;
@@ -3621,8 +3452,6 @@
 .method public static b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 72
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/NullPointerException;
@@ -3642,8 +3471,6 @@
 .method private static b(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 103
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
@@ -3711,8 +3538,6 @@
 .method public static b(Landroid/os/Parcel;I)V
     .locals 2
 
-    .prologue
-    .line 28
     invoke-static {p0, p1}, Lhjg;->a(Landroid/os/Parcel;I)I
 
     move-result v0
@@ -3731,8 +3556,6 @@
 .method public static b(Landroid/os/Parcel;II)V
     .locals 1
 
-    .prologue
-    .line 48
     const v0, 0xffff
 
     if-lt p2, v0, :cond_0
@@ -3761,8 +3584,6 @@
 .method public static b(Z)V
     .locals 1
 
-    .prologue
-    .line 76
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -3778,8 +3599,6 @@
 .method public static b(ZLjava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 75
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/lang/IllegalArgumentException;
@@ -3799,8 +3618,6 @@
 .method public static b()Z
     .locals 2
 
-    .prologue
-    .line 88
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
@@ -3821,8 +3638,6 @@
 .method public static b(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)[Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 46
     invoke-static {p0, p1}, Lhjg;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -3853,10 +3668,8 @@
 .method private static c(Ljava/lang/String;)Ljava/lang/String;
     .locals 7
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 104
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -3929,8 +3742,6 @@
 .method public static c(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
     .locals 3
 
-    .prologue
-    .line 47
     invoke-static {p0, p1}, Lhjg;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -3961,26 +3772,20 @@
 .method public static c()Ljava/util/concurrent/Executor;
     .locals 2
 
-    .prologue
-    .line 137
     new-instance v0, Lhzt;
 
     invoke-direct {v0}, Lhzt;-><init>()V
 
-    .line 138
     new-instance v1, Lhzv;
 
     invoke-direct {v1, v0}, Lhzv;-><init>(Lhzt;)V
 
-    .line 139
     return-object v1
 .end method
 
 .method public static c(Landroid/os/Parcel;II)V
     .locals 1
 
-    .prologue
-    .line 53
     const/4 v0, 0x4
 
     invoke-static {p0, p1, v0}, Lhjg;->b(Landroid/os/Parcel;II)V
@@ -3993,8 +3798,6 @@
 .method public static c(Landroid/os/Parcel;I)Z
     .locals 1
 
-    .prologue
-    .line 35
     const/4 v0, 0x4
 
     invoke-static {p0, p1, v0}, Lhjg;->a(Landroid/os/Parcel;II)V
@@ -4019,8 +3822,6 @@
 .method public static d(Landroid/os/Parcel;I)B
     .locals 1
 
-    .prologue
-    .line 36
     const/4 v0, 0x4
 
     invoke-static {p0, p1, v0}, Lhjg;->a(Landroid/os/Parcel;II)V
@@ -4037,8 +3838,6 @@
 .method public static e(Landroid/os/Parcel;I)I
     .locals 1
 
-    .prologue
-    .line 37
     const/4 v0, 0x4
 
     invoke-static {p0, p1, v0}, Lhjg;->a(Landroid/os/Parcel;II)V
@@ -4053,8 +3852,6 @@
 .method public static f(Landroid/os/Parcel;I)J
     .locals 2
 
-    .prologue
-    .line 38
     const/16 v0, 0x8
 
     invoke-static {p0, p1, v0}, Lhjg;->a(Landroid/os/Parcel;II)V
@@ -4069,8 +3866,6 @@
 .method public static g(Landroid/os/Parcel;I)Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 39
     invoke-static {p0, p1}, Lhjg;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -4101,8 +3896,6 @@
 .method public static h(Landroid/os/Parcel;I)Landroid/os/IBinder;
     .locals 3
 
-    .prologue
-    .line 40
     invoke-static {p0, p1}, Lhjg;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -4133,8 +3926,6 @@
 .method public static i(Landroid/os/Parcel;I)Landroid/os/Bundle;
     .locals 3
 
-    .prologue
-    .line 42
     invoke-static {p0, p1}, Lhjg;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -4165,8 +3956,6 @@
 .method public static j(Landroid/os/Parcel;I)[B
     .locals 3
 
-    .prologue
-    .line 43
     invoke-static {p0, p1}, Lhjg;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -4197,8 +3986,6 @@
 .method public static k(Landroid/os/Parcel;I)[I
     .locals 3
 
-    .prologue
-    .line 44
     invoke-static {p0, p1}, Lhjg;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -4229,8 +4016,6 @@
 .method public static l(Landroid/os/Parcel;I)[Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 45
     invoke-static {p0, p1}, Lhjg;->a(Landroid/os/Parcel;I)I
 
     move-result v1
@@ -4261,8 +4046,6 @@
 .method public static m(Landroid/os/Parcel;I)I
     .locals 1
 
-    .prologue
-    .line 49
     const/high16 v0, -0x10000
 
     or-int/2addr v0, p1
@@ -4283,8 +4066,6 @@
 .method public static n(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 50
     invoke-virtual {p0}, Landroid/os/Parcel;->dataPosition()I
 
     move-result v0

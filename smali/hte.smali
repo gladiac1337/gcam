@@ -515,18 +515,13 @@
 .method static synthetic a(Lhte;)V
     .locals 2
 
-    .prologue
-    .line 75
-    .line 76
     iget-object v0, p0, Lhte;->b:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
 
-    .line 77
     :try_start_0
     iget-boolean v0, p0, Lhte;->m:Z
 
-    .line 78
     if-eqz v0, :cond_0
 
     invoke-direct {p0}, Lhte;->h()V
@@ -588,9 +583,6 @@
 .method static synthetic b(Lhte;)V
     .locals 2
 
-    .prologue
-    .line 79
-    .line 80
     iget-object v0, p0, Lhte;->b:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -626,16 +618,12 @@
 .method private final h()V
     .locals 2
 
-    .prologue
-    .line 42
     iget-object v0, p0, Lhte;->i:Lhly;
 
-    .line 43
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lhly;->e:Z
 
-    .line 44
     iget-object v0, p0, Lhte;->j:Lhtv;
 
     invoke-interface {v0}, Lhtv;->a()V
@@ -674,12 +662,8 @@
 .method public final a(Lhry;)Lhry;
     .locals 4
 
-    .prologue
-    .line 1
-    .line 2
     iget-object v0, p1, Lhry;->e:Lhkh;
 
-    .line 3
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
@@ -691,27 +675,20 @@
 
     iget-object v0, p0, Lhte;->e:Ljava/util/Map;
 
-    .line 4
     iget-object v1, p1, Lhry;->e:Lhkh;
 
-    .line 5
     invoke-interface {v0, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
-    .line 6
     iget-object v0, p1, Lhry;->f:Lhkc;
 
-    .line 7
     if-eqz v0, :cond_1
 
-    .line 8
     iget-object v0, p1, Lhry;->f:Lhkc;
 
-    .line 9
     iget-object v0, v0, Lhkc;->a:Ljava/lang/String;
 
-    .line 10
     :goto_1
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -771,13 +748,11 @@
     :goto_2
     return-object p1
 
-    .line 3
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 10
     :cond_1
     const-string v0, "the API"
 
@@ -812,8 +787,6 @@
 .method public final a(Ljava/lang/Object;)Lhty;
     .locals 3
 
-    .prologue
-    .line 23
     iget-object v0, p0, Lhte;->b:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -823,10 +796,8 @@
 
     iget-object v1, p0, Lhte;->c:Landroid/os/Looper;
 
-    .line 24
     const-string v2, "NO_TYPE"
 
-    .line 25
     invoke-static {p1, v1, v2}, Lhuc;->a(Ljava/lang/Object;Landroid/os/Looper;Ljava/lang/String;)Lhty;
 
     move-result-object v1
@@ -837,7 +808,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 26
     iget-object v0, p0, Lhte;->b:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
@@ -857,22 +827,18 @@
 .method public final a(IZ)V
     .locals 9
 
-    .prologue
     const/4 v8, 0x2
 
     const/4 v2, 0x0
 
     const/4 v1, 0x1
 
-    .line 61
     if-ne p1, v1, :cond_1
 
     if-nez p2, :cond_1
 
-    .line 63
     iget-boolean v0, p0, Lhte;->m:Z
 
-    .line 64
     if-nez v0, :cond_1
 
     iput-boolean v1, p0, Lhte;->m:Z
@@ -922,11 +888,9 @@
 
     invoke-virtual {v0, v3, v4, v5}, Lhtg;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 65
     :cond_1
     iget-object v0, p0, Lhte;->h:Lhpp;
 
-    .line 66
     iget-object v0, v0, Lhpp;->c:Ljava/util/Set;
 
     sget-object v3, Lhpp;->b:[Lhsb;
@@ -954,11 +918,9 @@
 
     goto :goto_0
 
-    .line 67
     :cond_2
     iget-object v3, p0, Lhte;->i:Lhly;
 
-    .line 68
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -1073,7 +1035,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 69
     iget-object v0, p0, Lhte;->i:Lhly;
 
     invoke-virtual {v0}, Lhly;->a()V
@@ -1089,12 +1050,10 @@
 .method public final a(Landroid/os/Bundle;)V
     .locals 8
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 52
     :goto_0
     iget-object v0, p0, Lhte;->d:Ljava/util/Queue;
 
@@ -1119,7 +1078,6 @@
     :cond_0
     iget-object v3, p0, Lhte;->i:Lhly;
 
-    .line 53
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -1280,18 +1238,14 @@
 .method public final a(Lcom/google/android/gms/common/ConnectionResult;)V
     .locals 8
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 54
     iget-object v0, p0, Lhte;->l:Landroid/content/Context;
 
-    .line 55
     iget v3, p1, Lcom/google/android/gms/common/ConnectionResult;->b:I
 
-    .line 56
     invoke-static {v0, v3}, Lhjx;->a(Landroid/content/Context;I)Z
 
     move-result v0
@@ -1300,16 +1254,13 @@
 
     invoke-virtual {p0}, Lhte;->f()Z
 
-    .line 57
     :cond_0
     iget-boolean v0, p0, Lhte;->m:Z
 
-    .line 58
     if-nez v0, :cond_3
 
     iget-object v3, p0, Lhte;->i:Lhly;
 
-    .line 59
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -1385,7 +1336,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 60
     :goto_2
     iget-object v0, p0, Lhte;->i:Lhly;
 
@@ -1397,7 +1347,6 @@
     :cond_4
     move v0, v2
 
-    .line 59
     goto :goto_0
 
     :cond_5
@@ -1455,12 +1404,8 @@
 .method public final b(Lhry;)Lhry;
     .locals 4
 
-    .prologue
-    .line 11
-    .line 12
     iget-object v0, p1, Lhry;->e:Lhkh;
 
-    .line 13
     if-eqz v0, :cond_0
 
     const/4 v0, 0x1
@@ -1472,27 +1417,20 @@
 
     iget-object v0, p0, Lhte;->e:Ljava/util/Map;
 
-    .line 14
     iget-object v1, p1, Lhry;->e:Lhkh;
 
-    .line 15
     invoke-interface {v0, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v1
 
-    .line 16
     iget-object v0, p1, Lhry;->f:Lhkc;
 
-    .line 17
     if-eqz v0, :cond_1
 
-    .line 18
     iget-object v0, p1, Lhry;->f:Lhkc;
 
-    .line 19
     iget-object v0, v0, Lhkc;->a:Ljava/lang/String;
 
-    .line 20
     :goto_1
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1549,7 +1487,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 22
     :catchall_0
     move-exception v0
 
@@ -1559,24 +1496,20 @@
 
     throw v0
 
-    .line 13
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 20
     :cond_1
     const-string v0, "the API"
 
     goto :goto_1
 
-    .line 21
     :cond_2
     :try_start_1
     iget-boolean v0, p0, Lhte;->m:Z
 
-    .line 22
     if-eqz v0, :cond_4
 
     iget-object v0, p0, Lhte;->d:Ljava/util/Queue;
@@ -1640,14 +1573,12 @@
 .method public final b()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x2
 
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
-    .line 27
     iget-object v2, p0, Lhte;->b:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v2}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -1676,7 +1607,6 @@
 
     move-result v2
 
-    .line 28
     iget-object v3, p0, Lhte;->b:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v3}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -1731,7 +1661,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 29
     iget-object v0, p0, Lhte;->b:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
@@ -1741,7 +1670,6 @@
     :cond_3
     move v2, v0
 
-    .line 27
     goto :goto_0
 
     :cond_4
@@ -1770,7 +1698,6 @@
 
     goto :goto_1
 
-    .line 29
     :catchall_0
     move-exception v0
 
@@ -1780,7 +1707,6 @@
 
     throw v0
 
-    .line 27
     :cond_5
     :try_start_4
     iget-object v2, p0, Lhte;->x:Ljava/lang/Integer;
@@ -1799,7 +1725,6 @@
 
     throw v0
 
-    .line 28
     :catchall_1
     move-exception v0
 
@@ -1815,11 +1740,8 @@
 .method public final b(Lhkn;)V
     .locals 5
 
-    .prologue
-    .line 48
     iget-object v0, p0, Lhte;->i:Lhly;
 
-    .line 49
     invoke-static {p1}, Lhjg;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v1, v0, Lhly;->i:Ljava/lang/Object;
@@ -1907,11 +1829,8 @@
 .method public final b(Lhko;)V
     .locals 5
 
-    .prologue
-    .line 50
     iget-object v0, p0, Lhte;->i:Lhly;
 
-    .line 51
     invoke-static {p1}, Lhjg;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     iget-object v1, v0, Lhly;->i:Ljava/lang/Object;
@@ -1987,12 +1906,10 @@
 .method public final c()Lcom/google/android/gms/common/ConnectionResult;
     .locals 4
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v1, 0x1
 
-    .line 30
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -2040,12 +1957,10 @@
 
     iget-object v0, p0, Lhte;->i:Lhly;
 
-    .line 31
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lhly;->e:Z
 
-    .line 32
     iget-object v0, p0, Lhte;->j:Lhtv;
 
     invoke-interface {v0}, Lhtv;->b()Lcom/google/android/gms/common/ConnectionResult;
@@ -2063,7 +1978,6 @@
     :cond_1
     move v0, v2
 
-    .line 30
     goto :goto_0
 
     :cond_2
@@ -2097,7 +2011,6 @@
 
     goto :goto_2
 
-    .line 32
     :catchall_0
     move-exception v0
 
@@ -2107,7 +2020,6 @@
 
     throw v0
 
-    .line 30
     :cond_4
     :try_start_2
     iget-object v0, p0, Lhte;->x:Ljava/lang/Integer;
@@ -2134,8 +2046,6 @@
 .method public final d()V
     .locals 6
 
-    .prologue
-    .line 33
     iget-object v0, p0, Lhte;->b:Ljava/util/concurrent/locks/Lock;
 
     invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
@@ -2143,7 +2053,6 @@
     :try_start_0
     iget-object v2, p0, Lhte;->h:Lhpp;
 
-    .line 34
     iget-object v0, v2, Lhpp;->c:Ljava/util/Set;
 
     sget-object v1, Lhpp;->b:[Lhsb;
@@ -2167,7 +2076,6 @@
 
     invoke-virtual {v4, v5}, Lhsb;->a(Lhpq;)V
 
-    .line 35
     invoke-virtual {v4}, Lhsb;->c()Z
 
     move-result v5
@@ -2178,13 +2086,11 @@
 
     invoke-interface {v5, v4}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 36
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 37
     :cond_1
     iget-object v0, p0, Lhte;->j:Lhtv;
 
@@ -2197,7 +2103,6 @@
     :cond_2
     iget-object v1, p0, Lhte;->v:Lhuc;
 
-    .line 38
     iget-object v0, v1, Lhuc;->a:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -2217,7 +2122,6 @@
 
     check-cast v0, Lhty;
 
-    .line 39
     const/4 v3, 0x0
 
     iput-object v3, v0, Lhty;->a:Ljava/lang/Object;
@@ -2226,7 +2130,6 @@
 
     goto :goto_1
 
-    .line 41
     :catchall_0
     move-exception v0
 
@@ -2236,14 +2139,12 @@
 
     throw v0
 
-    .line 40
     :cond_3
     :try_start_1
     iget-object v0, v1, Lhuc;->a:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
-    .line 41
     iget-object v0, p0, Lhte;->d:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->iterator()Ljava/util/Iterator;
@@ -2335,16 +2236,12 @@
 .method final f()Z
     .locals 3
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 45
-    .line 46
     iget-boolean v2, p0, Lhte;->m:Z
 
-    .line 47
     if-nez v2, :cond_0
 
     :goto_0
@@ -2384,10 +2281,8 @@
 .method final g()Ljava/lang/String;
     .locals 6
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 70
     new-instance v0, Ljava/io/StringWriter;
 
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
@@ -2398,7 +2293,6 @@
 
     invoke-direct {v2, v0}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
-    .line 71
     invoke-virtual {v2, v1}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
 
     move-result-object v3
@@ -2443,7 +2337,6 @@
 
     iget-object v3, p0, Lhte;->h:Lhpp;
 
-    .line 72
     const-string v4, " mUnconsumedApiCalls.size()="
 
     invoke-virtual {v2, v4}, Ljava/io/PrintWriter;->append(Ljava/lang/CharSequence;)Ljava/io/PrintWriter;
@@ -2458,7 +2351,6 @@
 
     invoke-virtual {v4, v3}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 73
     iget-object v3, p0, Lhte;->j:Lhtv;
 
     if-eqz v3, :cond_0
@@ -2467,7 +2359,6 @@
 
     invoke-interface {v3, v1, v5, v2, v5}, Lhtv;->a(Ljava/lang/String;Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 74
     :cond_0
     invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 

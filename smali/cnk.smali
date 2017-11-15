@@ -37,8 +37,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 28
     const-string v0, "SurfTexRenderer"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -47,7 +45,6 @@
 
     sput-object v0, Lcnk;->a:Ljava/lang/String;
 
-    .line 29
     const/16 v0, 0xf
 
     new-array v0, v0, [I
@@ -81,36 +78,28 @@
 .method public constructor <init>(Landroid/graphics/SurfaceTexture;Landroid/os/Handler;Lcnp;)V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcnk;->h:Z
 
-    .line 3
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcnk;->k:Ljava/lang/Object;
 
-    .line 4
     new-instance v0, Lcnl;
 
     invoke-direct {v0, p0}, Lcnl;-><init>(Lcnk;)V
 
     iput-object v0, p0, Lcnk;->l:Ljava/lang/Runnable;
 
-    .line 5
     iput-object p2, p0, Lcnk;->i:Landroid/os/Handler;
 
-    .line 6
     iput-object p3, p0, Lcnk;->j:Lcnp;
 
-    .line 8
     iget-object v0, p0, Lcnk;->i:Landroid/os/Handler;
 
     new-instance v1, Lcnn;
@@ -119,15 +108,12 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 10
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    .line 11
     monitor-enter v1
 
-    .line 12
     :try_start_0
     iget-object v0, p0, Lcnk;->i:Landroid/os/Handler;
 
@@ -139,21 +125,18 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 13
     :try_start_1
     invoke-virtual {v1}, Ljava/lang/Object;->wait()V
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 17
     :goto_0
     :try_start_2
     monitor-exit v1
 
     return-void
 
-    .line 16
     :catch_0
     move-exception v0
 
@@ -165,7 +148,6 @@
 
     goto :goto_0
 
-    .line 17
     :catchall_0
     move-exception v0
 
@@ -179,15 +161,12 @@
 .method static a(Ljavax/microedition/khronos/egl/EGL10;Ljavax/microedition/khronos/egl/EGLDisplay;)Ljavax/microedition/khronos/egl/EGLConfig;
     .locals 12
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 18
     const/4 v0, 0x1
 
     new-array v5, v0, [I
 
-    .line 19
     sget-object v2, Lcnk;->m:[I
 
     const/4 v3, 0x0
@@ -202,7 +181,6 @@
 
     if-nez v0, :cond_0
 
-    .line 20
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "eglChooseConfig failed"
@@ -211,14 +189,11 @@
 
     throw v0
 
-    .line 21
     :cond_0
     aget v10, v5, v4
 
-    .line 22
     if-gtz v10, :cond_1
 
-    .line 23
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "No configs match configSpec"
@@ -227,11 +202,9 @@
 
     throw v0
 
-    .line 24
     :cond_1
     new-array v9, v10, [Ljavax/microedition/khronos/egl/EGLConfig;
 
-    .line 25
     sget-object v8, Lcnk;->m:[I
 
     move-object v6, p0
@@ -246,7 +219,6 @@
 
     if-nez v0, :cond_2
 
-    .line 26
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "eglChooseConfig#2 failed"
@@ -255,7 +227,6 @@
 
     throw v0
 
-    .line 27
     :cond_2
     aget-object v0, v9, v4
 

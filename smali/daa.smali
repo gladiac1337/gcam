@@ -11,8 +11,6 @@
 .method constructor <init>(Lczt;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldaa;->a:Lczt;
 
     invoke-direct {p0}, Lcom/google/android/apps/camera/bottombar/BottomBarListener;-><init>()V
@@ -25,19 +23,14 @@
 .method public final onCameraSwitch(I)V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v1, p0, Ldaa;->a:Lczt;
 
-    .line 4
     iget-boolean v0, v1, Lczt;->z:Z
 
     if-nez v0, :cond_1
 
-    .line 5
     iget-object v0, v1, Lczt;->c:Leqd;
 
-    .line 6
     iget-object v2, v0, Leqd;->a:Lgsm;
 
     iget-object v3, v0, Leqd;->b:Ljava/lang/String;
@@ -46,12 +39,10 @@
 
     invoke-virtual {v2, v3, v0, p1}, Lgsm;->a(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 7
     iget-object v0, v1, Lczt;->F:Lcuh;
 
     if-eqz v0, :cond_0
 
-    .line 8
     iget-object v2, v1, Lczt;->F:Lcuh;
 
     iget-object v0, v1, Lczt;->c:Leqd;
@@ -67,7 +58,6 @@
     :goto_0
     invoke-virtual {v2, v0}, Lcuh;->a(Z)V
 
-    .line 9
     :cond_0
     sget-object v0, Lczt;->a:Ljava/lang/String;
 
@@ -75,14 +65,11 @@
 
     invoke-static {v0, v2}, Lbhz;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     invoke-virtual {v1}, Lczt;->c()V
 
-    .line 11
     :cond_1
     return-void
 
-    .line 8
     :cond_2
     const/4 v0, 0x0
 
@@ -92,7 +79,5 @@
 .method public final onThumbnailButtonClicked()V
     .locals 0
 
-    .prologue
-    .line 12
     return-void
 .end method

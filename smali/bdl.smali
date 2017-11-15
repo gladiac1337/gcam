@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,13 +15,10 @@
 .method public static a(Ljava/util/List;)Ljht;
     .locals 5
 
-    .prologue
-    .line 1
     new-instance v2, Ljava/util/LinkedList;
 
     invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
 
-    .line 2
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -42,7 +37,6 @@
 
     check-cast v0, Landroid/util/Range;
 
-    .line 3
     invoke-virtual {v0}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
 
     move-result-object v1
@@ -59,12 +53,10 @@
 
     if-nez v1, :cond_0
 
-    .line 4
     invoke-virtual {v2, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 6
     :cond_1
     invoke-virtual {v2}, Ljava/util/LinkedList;->isEmpty()Z
 
@@ -72,14 +64,11 @@
 
     if-eqz v0, :cond_2
 
-    .line 7
     sget-object v0, Ljhi;->a:Ljhi;
 
-    .line 10
     :goto_1
     return-object v0
 
-    .line 9
     :cond_2
     new-instance v0, Lbdm;
 
@@ -87,7 +76,6 @@
 
     invoke-static {v2, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 10
     invoke-virtual {v2}, Ljava/util/LinkedList;->getLast()Ljava/lang/Object;
 
     move-result-object v0

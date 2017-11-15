@@ -64,25 +64,18 @@
 .method static synthetic a(Lhpk;Lcom/google/android/gms/internal/zzbgq;)V
     .locals 5
 
-    .prologue
-    .line 1
-    .line 3
     iget-object v0, p1, Lcom/google/android/gms/internal/zzbgq;->a:Lcom/google/android/gms/common/ConnectionResult;
 
-    .line 4
     invoke-virtual {v0}, Lcom/google/android/gms/common/ConnectionResult;->b()Z
 
     move-result v1
 
     if-eqz v1, :cond_3
 
-    .line 5
     iget-object v0, p1, Lcom/google/android/gms/internal/zzbgq;->b:Lcom/google/android/gms/common/internal/zzaf;
 
-    .line 7
     iget-object v1, v0, Lcom/google/android/gms/common/internal/zzaf;->b:Lcom/google/android/gms/common/ConnectionResult;
 
-    .line 8
     invoke-virtual {v1}, Lcom/google/android/gms/common/ConnectionResult;->b()Z
 
     move-result v2
@@ -133,30 +126,24 @@
 
     invoke-virtual {v0, v1}, Lhpm;->b(Lcom/google/android/gms/common/ConnectionResult;)V
 
-    .line 12
     :goto_0
     iget-object v0, p0, Lhpk;->g:Lhql;
 
     invoke-interface {v0}, Lhql;->c()V
 
-    .line 13
     return-void
 
-    .line 8
     :cond_0
     iget-object v1, p0, Lhpk;->h:Lhpm;
 
-    .line 9
     iget-object v0, v0, Lcom/google/android/gms/common/internal/zzaf;->a:Landroid/os/IBinder;
 
     invoke-static {v0}, Lhmg;->a(Landroid/os/IBinder;)Lhmf;
 
     move-result-object v0
 
-    .line 10
     iget-object v2, p0, Lhpk;->e:Ljava/util/Set;
 
-    .line 11
     if-eqz v0, :cond_1
 
     if-nez v2, :cond_2
@@ -191,7 +178,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_3
     iget-object v1, p0, Lhpk;->h:Lhpm;
 

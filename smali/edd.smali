@@ -11,14 +11,10 @@
 .method public constructor <init>(Lecg;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ledd;->a:Lecg;
 
-    .line 3
     return-void
 .end method
 
@@ -27,8 +23,6 @@
 .method public final a()Leai;
     .locals 14
 
-    .prologue
-    .line 4
     const/4 v0, 0x2
 
     new-array v0, v0, [Lggq;
@@ -37,7 +31,6 @@
 
     const/4 v2, 0x5
 
-    .line 5
     invoke-static {v2}, Lfsp;->a(I)Lggq;
 
     move-result-object v2
@@ -58,7 +51,6 @@
 
     const/4 v6, 0x3
 
-    .line 6
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -75,7 +67,6 @@
 
     const/4 v6, 0x4
 
-    .line 7
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -92,7 +83,6 @@
 
     const/4 v6, 0x0
 
-    .line 8
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -109,7 +99,6 @@
 
     const/4 v6, 0x1
 
-    .line 9
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v6
@@ -126,7 +115,6 @@
 
     const/4 v6, 0x1
 
-    .line 10
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v6
@@ -143,7 +131,6 @@
 
     const/4 v6, 0x1
 
-    .line 11
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
@@ -152,7 +139,6 @@
 
     aput-object v4, v2, v3
 
-    .line 12
     invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v2
@@ -161,52 +147,42 @@
 
     move-result-object v2
 
-    .line 13
     aput-object v2, v0, v1
 
-    .line 14
     invoke-static {v0}, Lfsp;->a([Lggq;)Lggq;
 
     move-result-object v0
 
-    .line 15
     invoke-static {}, Ldjo;->a()Ldjo;
 
     move-result-object v1
 
     sget-object v2, Ldjp;->b:Ldjp;
 
-    .line 16
     invoke-virtual {v1, v2}, Ldjo;->a(Ldjp;)Ldjo;
 
     move-result-object v1
 
     sget-object v2, Ldjp;->b:Ldjp;
 
-    .line 17
     invoke-virtual {v1, v2}, Ldjo;->c(Ldjp;)Ldjo;
 
     move-result-object v8
 
-    .line 18
     iget-object v11, p0, Ledd;->a:Lecg;
 
-    .line 19
     iget-object v1, v11, Lecg;->e:Ljuw;
 
     new-instance v2, Lech;
 
     invoke-direct {v2, v0}, Lech;-><init>(Lggq;)V
 
-    .line 20
     sget-object v0, Ljvc;->a:Ljvc;
 
-    .line 21
     invoke-static {v1, v2, v0}, Ljuh;->a(Ljuw;Ljhj;Ljava/util/concurrent/Executor;)Ljuw;
 
     move-result-object v7
 
-    .line 22
     new-instance v13, Ledq;
 
     new-instance v0, Leco;
@@ -239,6 +215,5 @@
 
     invoke-direct {v13, v0, v1, v2}, Ledq;-><init>(Leai;IZ)V
 
-    .line 23
     return-object v13
 .end method

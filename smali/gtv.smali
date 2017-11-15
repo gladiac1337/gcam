@@ -16,8 +16,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgtv;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     iput p2, p0, Lgtv;->a:I
@@ -32,12 +30,10 @@
 .method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 6
 
-    .prologue
     const/high16 v5, 0x437f0000    # 255.0f
 
     const/high16 v4, 0x3f800000    # 1.0f
 
-    .line 2
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -48,7 +44,6 @@
 
     move-result v0
 
-    .line 3
     iget-object v1, p0, Lgtv;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     iget-object v2, p0, Lgtv;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
@@ -67,12 +62,10 @@
 
     iput v2, v1, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->photoRippleCurrentRadius:I
 
-    .line 4
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
     move-result v1
 
-    .line 5
     iget-object v2, p0, Lgtv;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-static {v2}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$1300(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Landroid/view/animation/Interpolator;
@@ -85,7 +78,6 @@
 
     sub-float v2, v4, v2
 
-    .line 6
     iget-object v3, p0, Lgtv;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-static {v3}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$1100(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Landroid/graphics/Paint;
@@ -98,7 +90,6 @@
 
     invoke-virtual {v3, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 7
     iget-object v2, p0, Lgtv;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-static {v2}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$800(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Landroid/graphics/Paint;
@@ -107,7 +98,6 @@
 
     iget-object v3, p0, Lgtv;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
-    .line 8
     invoke-static {v3}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$1400(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Landroid/view/animation/Interpolator;
 
     move-result-object v3
@@ -120,10 +110,8 @@
 
     float-to-int v1, v1
 
-    .line 9
     invoke-virtual {v2, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 10
     iget-object v1, p0, Lgtv;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-static {v1}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->access$1500(Lcom/google/android/apps/camera/shutterbutton/ShutterButton;)Landroid/animation/ValueAnimator;
@@ -132,7 +120,6 @@
 
     if-nez v1, :cond_0
 
-    .line 11
     iget-object v1, p0, Lgtv;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     sub-float v0, v4, v0
@@ -147,12 +134,10 @@
 
     invoke-virtual {v1, v0, v2, v3}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->updateElevationShadow(FII)V
 
-    .line 12
     :cond_0
     iget-object v0, p0, Lgtv;->b:Lcom/google/android/apps/camera/shutterbutton/ShutterButton;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/shutterbutton/ShutterButton;->invalidate()V
 
-    .line 13
     return-void
 .end method

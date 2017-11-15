@@ -14,8 +14,6 @@
 .method constructor <init>(Lgkk;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgkg;->a:Lgkk;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final a()V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgkg;->a:Lgkk;
 
     invoke-virtual {v0}, Lgkk;->e()Lich;
@@ -38,22 +34,18 @@
 
     const/4 v1, 0x0
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Lgkg;->a:Lgkk;
 
-    .line 4
     invoke-virtual {v0}, Lgkk;->a()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 5
     invoke-interface {v2}, Lich;->close()V
 
     return-void
 
-    .line 6
     :catch_0
     move-exception v0
 
@@ -62,7 +54,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 7
     :catchall_0
     move-exception v1
 
@@ -104,8 +95,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 8
     invoke-virtual {p0}, Lgkg;->a()V
 
     return-void

@@ -11,8 +11,6 @@
 .method public constructor <init>(Ljvi;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lihx;->a:Ljvi;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

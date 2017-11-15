@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/google/android/apps/camera/bottombar/HfrButton;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/apps/camera/bottombar/HfrButton$1;->this$0:Lcom/google/android/apps/camera/bottombar/HfrButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public onClick(Landroid/view/View;)V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/HfrButton$1;->this$0:Lcom/google/android/apps/camera/bottombar/HfrButton;
 
     iget-object v1, p0, Lcom/google/android/apps/camera/bottombar/HfrButton$1;->this$0:Lcom/google/android/apps/camera/bottombar/HfrButton;
@@ -42,6 +38,5 @@
 
     invoke-static {v0, v1, v2}, Lcom/google/android/apps/camera/bottombar/HfrButton;->access$100(Lcom/google/android/apps/camera/bottombar/HfrButton;IZ)V
 
-    .line 3
     return-void
 .end method

@@ -11,8 +11,6 @@
 .method constructor <init>(Lhev;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhfg;->a:Lhev;
 
     invoke-direct {p0}, Lheu;-><init>()V
@@ -25,18 +23,14 @@
 .method public final a()V
     .locals 4
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 2
     iget-object v0, p0, Lhfg;->a:Lhev;
 
-    .line 3
     iget v0, v0, Lhev;->t:F
 
-    .line 4
     const/4 v3, 0x0
 
     cmpl-float v0, v0, v3
@@ -50,13 +44,10 @@
 
     invoke-static {v0, v3}, Liya;->a(ZLjava/lang/Object;)V
 
-    .line 5
     iget-object v0, p0, Lhfg;->a:Lhev;
 
-    .line 6
     iget v0, v0, Lhev;->u:F
 
-    .line 7
     const/high16 v3, 0x3f800000    # 1.0f
 
     cmpl-float v0, v0, v3
@@ -68,30 +59,24 @@
 
     invoke-static {v1, v0}, Liya;->a(ZLjava/lang/Object;)V
 
-    .line 8
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 4
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 7
     goto :goto_1
 .end method
 
 .method public af()V
     .locals 6
 
-    .prologue
-    .line 15
     iget-object v0, p0, Lhfg;->a:Lhev;
 
-    .line 17
     iget-object v1, v0, Lhev;->h:Lcom/google/android/apps/camera/zoomui/ZoomUi;
 
     invoke-virtual {v1}, Lcom/google/android/apps/camera/zoomui/ZoomUi;->getContext()Landroid/content/Context;
@@ -108,7 +93,6 @@
 
     iget-object v5, v0, Lhev;->k:Liau;
 
-    .line 18
     invoke-interface {v5}, Liau;->b()Ljava/lang/Object;
 
     move-result-object v5
@@ -119,22 +103,18 @@
 
     move-result-object v1
 
-    .line 19
     iget-object v0, v0, Lhev;->h:Lcom/google/android/apps/camera/zoomui/ZoomUi;
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/zoomui/ZoomUi;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
-    .line 20
     return-void
 .end method
 
 .method public b(F)V
     .locals 3
 
-    .prologue
     const v1, 0x3ea8f5c3    # 0.33f
 
-    .line 21
     iget-object v0, p0, Lhfg;->a:Lhev;
 
     invoke-static {v0}, Lhev;->a(Lhev;)Liau;
@@ -151,7 +131,6 @@
 
     move-result v0
 
-    .line 22
     add-float/2addr v0, v1
 
     mul-float/2addr v0, p1
@@ -160,20 +139,16 @@
 
     sub-float/2addr v0, v1
 
-    .line 23
     iget-object v1, p0, Lhfg;->a:Lhev;
 
-    .line 25
     iget v2, v1, Lhev;->t:F
 
     cmpl-float v2, v0, v2
 
     if-lez v2, :cond_1
 
-    .line 26
     iget v0, v1, Lhev;->t:F
 
-    .line 31
     :cond_0
     :goto_0
     iget-object v1, p0, Lhfg;->a:Lhev;
@@ -188,10 +163,8 @@
 
     invoke-interface {v1, v0}, Liau;->a(Ljava/lang/Object;)V
 
-    .line 32
     return-void
 
-    .line 27
     :cond_1
     iget v2, v1, Lhev;->u:F
 
@@ -199,7 +172,6 @@
 
     if-gez v2, :cond_0
 
-    .line 28
     iget v0, v1, Lhev;->u:F
 
     goto :goto_0
@@ -208,11 +180,8 @@
 .method public h()V
     .locals 6
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lhfg;->a:Lhev;
 
-    .line 11
     iget-object v1, v0, Lhev;->h:Lcom/google/android/apps/camera/zoomui/ZoomUi;
 
     invoke-virtual {v1}, Lcom/google/android/apps/camera/zoomui/ZoomUi;->getContext()Landroid/content/Context;
@@ -229,7 +198,6 @@
 
     iget-object v5, v0, Lhev;->k:Liau;
 
-    .line 12
     invoke-interface {v5}, Liau;->b()Ljava/lang/Object;
 
     move-result-object v5
@@ -240,11 +208,9 @@
 
     move-result-object v1
 
-    .line 13
     iget-object v0, v0, Lhev;->h:Lcom/google/android/apps/camera/zoomui/ZoomUi;
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/zoomui/ZoomUi;->announceForAccessibility(Ljava/lang/CharSequence;)V
 
-    .line 14
     return-void
 .end method

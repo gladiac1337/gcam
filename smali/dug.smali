@@ -21,44 +21,31 @@
 .method private constructor <init>(J[BLici;ILcom/google/android/libraries/camera/exif/ExifInterface;Lhab;Z)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-wide p1, p0, Ldug;->a:J
 
-    .line 3
     iput-object p3, p0, Ldug;->b:[B
 
-    .line 4
     iput p5, p0, Ldug;->c:I
 
-    .line 5
     iput-object p4, p0, Ldug;->e:Lici;
 
-    .line 6
     if-eqz p7, :cond_0
 
-    .line 7
     invoke-static {}, Lgzz;->f()Z
 
-    .line 8
     :cond_0
     iput-object p6, p0, Ldug;->d:Lcom/google/android/libraries/camera/exif/ExifInterface;
 
-    .line 9
     iput-boolean p8, p0, Ldug;->f:Z
 
-    .line 10
     return-void
 .end method
 
 .method public static a(J[BLici;ILcom/google/android/libraries/camera/exif/ExifInterface;Lhab;Z)Ldug;
     .locals 10
 
-    .prologue
-    .line 11
     new-instance v1, Ldug;
 
     move-wide v2, p0

@@ -25,8 +25,6 @@
 .method public constructor <init>(Lhrz;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lhur;-><init>()V
 
     iput-object p1, p0, Lhur;->a:Lhrz;
@@ -39,14 +37,10 @@
 .method public final a(Lcom/google/android/gms/location/internal/zzf;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lhur;->a:Lhrz;
 
-    .line 3
     iget-object v1, p1, Lcom/google/android/gms/location/internal/zzf;->a:Lcom/google/android/gms/common/api/Status;
 
-    .line 4
     invoke-interface {v0, v1}, Lhrz;->a(Ljava/lang/Object;)V
 
     return-void

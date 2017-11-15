@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
-    .line 11
     :try_start_0
     invoke-static {}, Lsun/misc/Unsafe;->getUnsafe()Lsun/misc/Unsafe;
     :try_end_0
@@ -30,12 +28,10 @@
 
     move-result-object v0
 
-    .line 19
     :goto_0
     :try_start_1
     const-class v1, Ljsw;
 
-    .line 20
     const-string v2, "waiters"
 
     invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
@@ -48,7 +44,6 @@
 
     sput-wide v2, Ljtg;->c:J
 
-    .line 21
     const-string v2, "listeners"
 
     invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
@@ -61,7 +56,6 @@
 
     sput-wide v2, Ljtg;->b:J
 
-    .line 22
     const-string v2, "value"
 
     invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
@@ -74,7 +68,6 @@
 
     sput-wide v2, Ljtg;->d:J
 
-    .line 23
     const-class v1, Ljti;
 
     const-string v2, "thread"
@@ -89,7 +82,6 @@
 
     sput-wide v2, Ljtg;->e:J
 
-    .line 24
     const-class v1, Ljti;
 
     const-string v2, "next"
@@ -104,24 +96,20 @@
 
     sput-wide v2, Ljtg;->f:J
 
-    .line 25
     sput-object v0, Ljtg;->a:Lsun/misc/Unsafe;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 26
     return-void
 
     :catch_0
     move-exception v0
 
-    .line 14
     :try_start_2
     new-instance v0, Ljth;
 
     invoke-direct {v0}, Ljth;-><init>()V
 
-    .line 15
     invoke-static {v0}, Ljava/security/AccessController;->doPrivileged(Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;
 
     move-result-object v0
@@ -132,11 +120,9 @@
 
     goto :goto_0
 
-    .line 17
     :catch_1
     move-exception v0
 
-    .line 18
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "Could not initialize intrinsics"
@@ -149,14 +135,11 @@
 
     throw v1
 
-    .line 27
     :catch_2
     move-exception v0
 
-    .line 28
     invoke-static {v0}, Ljik;->a(Ljava/lang/Throwable;)V
 
-    .line 29
     new-instance v1, Ljava/lang/RuntimeException;
 
     invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
@@ -167,12 +150,8 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
-    .line 2
     invoke-direct {p0}, Ljsx;-><init>()V
 
-    .line 3
     return-void
 .end method
 
@@ -181,38 +160,30 @@
 .method final a(Ljti;Ljava/lang/Thread;)V
     .locals 4
 
-    .prologue
-    .line 4
     sget-object v0, Ljtg;->a:Lsun/misc/Unsafe;
 
     sget-wide v2, Ljtg;->e:J
 
     invoke-virtual {v0, p1, v2, v3, p2}, Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V
 
-    .line 5
     return-void
 .end method
 
 .method final a(Ljti;Ljti;)V
     .locals 4
 
-    .prologue
-    .line 6
     sget-object v0, Ljtg;->a:Lsun/misc/Unsafe;
 
     sget-wide v2, Ljtg;->f:J
 
     invoke-virtual {v0, p1, v2, v3, p2}, Lsun/misc/Unsafe;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V
 
-    .line 7
     return-void
 .end method
 
 .method final a(Ljsw;Ljava/lang/Object;Ljava/lang/Object;)Z
     .locals 6
 
-    .prologue
-    .line 10
     sget-object v0, Ljtg;->a:Lsun/misc/Unsafe;
 
     sget-wide v2, Ljtg;->d:J
@@ -233,8 +204,6 @@
 .method final a(Ljsw;Ljtb;Ljtb;)Z
     .locals 6
 
-    .prologue
-    .line 9
     sget-object v0, Ljtg;->a:Lsun/misc/Unsafe;
 
     sget-wide v2, Ljtg;->b:J
@@ -255,8 +224,6 @@
 .method final a(Ljsw;Ljti;Ljti;)Z
     .locals 6
 
-    .prologue
-    .line 8
     sget-object v0, Ljtg;->a:Lsun/misc/Unsafe;
 
     sget-wide v2, Ljtg;->c:J

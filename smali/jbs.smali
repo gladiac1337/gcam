@@ -13,23 +13,16 @@
 .method public constructor <init>(Ljdi;Ljck;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljbe;-><init>()V
 
-    .line 2
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     invoke-static {p2}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     iput-object p1, p0, Ljbs;->a:Ljdi;
 
-    .line 5
     iput-object p2, p0, Ljbs;->b:Ljck;
 
-    .line 6
     return-void
 .end method
 
@@ -38,25 +31,20 @@
 .method public final a(Ljaz;)Ljaz;
     .locals 10
 
-    .prologue
     const-wide/16 v4, -0x1
 
-    .line 7
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 11
     invoke-virtual {p1}, Ljaz;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
 
     move-wide v2, v4
 
-    .line 12
     :goto_0
     invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
 
@@ -64,7 +52,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 13
     invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -75,22 +62,18 @@
 
     move-result-wide v0
 
-    .line 14
     const/4 v6, 0x0
 
-    .line 15
     cmp-long v9, v2, v4
 
     if-eqz v9, :cond_2
 
-    .line 16
     iget-object v6, p0, Ljbs;->a:Ljdi;
 
     invoke-virtual {v6, v2, v3, v0, v1}, Ljdi;->a(JJ)F
 
     move-result v2
 
-    .line 17
     :goto_1
     iget-object v3, p0, Ljbs;->b:Ljck;
 
@@ -98,12 +81,10 @@
 
     move-result v3
 
-    .line 18
     cmpg-float v2, v2, v3
 
     if-gez v2, :cond_0
 
-    .line 19
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
@@ -113,10 +94,8 @@
     :cond_0
     move-wide v2, v0
 
-    .line 21
     goto :goto_0
 
-    .line 22
     :cond_1
     new-instance v0, Ljaz;
 
@@ -133,8 +112,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 23
     const-string v0, "MaxSequentialDistanceSegmentFilter[distance metric="
 
     iget-object v1, p0, Ljbs;->a:Ljdi;

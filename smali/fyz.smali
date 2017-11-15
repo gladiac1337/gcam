@@ -49,8 +49,6 @@
 .method public final run()V
     .locals 8
 
-    .prologue
-    .line 1
     iget-object v2, p0, Lfyz;->a:Licz;
 
     iget-object v0, p0, Lfyz;->b:Ljxn;
@@ -65,12 +63,10 @@
 
     iget-object v6, p0, Lfyz;->g:Ljxn;
 
-    .line 2
     const-string v7, "MICRO_EncoderModule#runEncoderStartupTask"
 
     invoke-interface {v2, v7}, Licz;->a(Ljava/lang/String;)V
 
-    .line 3
     invoke-interface {v0}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -79,7 +75,6 @@
 
     invoke-interface {v0}, Lfxg;->a()V
 
-    .line 4
     invoke-interface {v1}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -94,14 +89,12 @@
 
     invoke-interface {v0, v1}, Lfwy;->a(Lfwr;)V
 
-    .line 6
     invoke-interface {v4}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lgad;
 
-    .line 7
     invoke-interface {v5}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -110,12 +103,10 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 8
     new-instance v3, Lfzc;
 
     invoke-direct {v3, v1}, Lfzc;-><init>(Liip;)V
 
-    .line 9
     invoke-interface {v6}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -124,9 +115,7 @@
 
     invoke-interface {v0, v3, v1}, Lgad;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
 
-    .line 10
     invoke-interface {v2}, Licz;->a()V
 
-    .line 11
     return-void
 .end method

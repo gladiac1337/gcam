@@ -16,8 +16,6 @@
 .method constructor <init>(Lcwq;Lbtx;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcwr;->b:Lcwq;
 
     iput-object p2, p0, Lcwr;->a:Lbtx;
@@ -32,29 +30,22 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcwr;->b:Lcwq;
 
-    .line 3
     iget-object v0, v0, Lcwq;->c:Ljht;
 
-    .line 4
     invoke-virtual {v0}, Ljht;->a()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 5
     iget-object v1, p0, Lcwr;->a:Lbtx;
 
     iget-object v0, p0, Lcwr;->b:Lcwq;
 
-    .line 6
     iget-object v0, v0, Lcwq;->c:Ljht;
 
-    .line 7
     invoke-virtual {v0}, Ljht;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -63,11 +54,9 @@
 
     invoke-interface {v1, v0}, Lbtx;->b(Landroid/content/Intent;)V
 
-    .line 9
     :goto_0
     return-void
 
-    .line 8
     :cond_0
     iget-object v0, p0, Lcwr;->a:Lbtx;
 

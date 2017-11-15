@@ -27,7 +27,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -38,7 +37,6 @@
 
     const/4 v3, 0x0
 
-    .line 3
     new-instance v0, Lfst;
 
     const-string v1, "INIT"
@@ -47,7 +45,6 @@
 
     sput-object v0, Lfst;->a:Lfst;
 
-    .line 4
     new-instance v0, Lfst;
 
     const-string v1, "CREATED"
@@ -56,7 +53,6 @@
 
     sput-object v0, Lfst;->b:Lfst;
 
-    .line 5
     new-instance v0, Lfst;
 
     const-string v1, "STARTED"
@@ -65,7 +61,6 @@
 
     sput-object v0, Lfst;->c:Lfst;
 
-    .line 6
     new-instance v0, Lfst;
 
     const-string v1, "STOPPED"
@@ -74,7 +69,6 @@
 
     sput-object v0, Lfst;->d:Lfst;
 
-    .line 7
     new-instance v0, Lfst;
 
     const-string v1, "SHUTTER_BUTTON_DRAWN"
@@ -83,7 +77,6 @@
 
     sput-object v0, Lfst;->e:Lfst;
 
-    .line 8
     new-instance v0, Lfst;
 
     const-string v1, "SHUTTER_BUTTON_ENABLED"
@@ -94,7 +87,6 @@
 
     sput-object v0, Lfst;->f:Lfst;
 
-    .line 9
     new-instance v0, Lfst;
 
     const-string v1, "ANY"
@@ -105,7 +97,6 @@
 
     sput-object v0, Lfst;->g:Lfst;
 
-    .line 10
     new-instance v0, Lfst;
 
     const-string v1, "INVALID"
@@ -116,7 +107,6 @@
 
     sput-object v0, Lfst;->h:Lfst;
 
-    .line 11
     const/16 v0, 0x8
 
     new-array v0, v0, [Lfst;
@@ -167,8 +157,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -177,8 +165,6 @@
 .method public static values()[Lfst;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lfst;->i:[Lfst;
 
     invoke-virtual {v0}, [Lfst;->clone()Ljava/lang/Object;

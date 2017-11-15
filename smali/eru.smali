@@ -19,29 +19,22 @@
 .method private constructor <init>(Lijl;Lgzz;)V
     .locals 1
 
-    .prologue
-    .line 4
     const-string v0, "CameraApp"
 
     invoke-direct {p0, p1, v0}, Lcom/google/android/apps/camera/legacy/app/stats/InstrumentationSession;-><init>(Lijl;Ljava/lang/String;)V
 
-    .line 5
     iput-object p2, p0, Leru;->a:Lgzz;
 
-    .line 6
     return-void
 .end method
 
 .method public static a()Leru;
     .locals 3
 
-    .prologue
-    .line 1
     sget-object v0, Leru;->d:Leru;
 
     if-nez v0, :cond_0
 
-    .line 2
     new-instance v0, Leru;
 
     new-instance v1, Lijl;
@@ -56,7 +49,6 @@
 
     sput-object v0, Leru;->d:Leru;
 
-    .line 3
     :cond_0
     sget-object v0, Leru;->d:Leru;
 

@@ -10,8 +10,6 @@
 .method protected constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljkg;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public add(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 7
     invoke-virtual {p0}, Ljkd;->b()Ljava/util/Collection;
 
     move-result-object v0
@@ -38,8 +34,6 @@
 .method public addAll(Ljava/util/Collection;)Z
     .locals 1
 
-    .prologue
-    .line 10
     invoke-virtual {p0}, Ljkd;->b()Ljava/util/Collection;
 
     move-result-object v0
@@ -57,8 +51,6 @@
 .method public synthetic c()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 16
     invoke-virtual {p0}, Ljkd;->b()Ljava/util/Collection;
 
     move-result-object v0
@@ -69,23 +61,18 @@
 .method public clear()V
     .locals 1
 
-    .prologue
-    .line 12
     invoke-virtual {p0}, Ljkd;->b()Ljava/util/Collection;
 
     move-result-object v0
 
     invoke-interface {v0}, Ljava/util/Collection;->clear()V
 
-    .line 13
     return-void
 .end method
 
 .method public contains(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Ljkd;->b()Ljava/util/Collection;
 
     move-result-object v0
@@ -100,8 +87,6 @@
 .method public containsAll(Ljava/util/Collection;)Z
     .locals 1
 
-    .prologue
-    .line 9
     invoke-virtual {p0}, Ljkd;->b()Ljava/util/Collection;
 
     move-result-object v0
@@ -116,8 +101,6 @@
 .method public isEmpty()Z
     .locals 1
 
-    .prologue
-    .line 5
     invoke-virtual {p0}, Ljkd;->b()Ljava/util/Collection;
 
     move-result-object v0
@@ -132,8 +115,6 @@
 .method public iterator()Ljava/util/Iterator;
     .locals 1
 
-    .prologue
-    .line 2
     invoke-virtual {p0}, Ljkd;->b()Ljava/util/Collection;
 
     move-result-object v0
@@ -148,8 +129,6 @@
 .method public remove(Ljava/lang/Object;)Z
     .locals 1
 
-    .prologue
-    .line 8
     invoke-virtual {p0}, Ljkd;->b()Ljava/util/Collection;
 
     move-result-object v0
@@ -164,8 +143,6 @@
 .method public removeAll(Ljava/util/Collection;)Z
     .locals 1
 
-    .prologue
-    .line 4
     invoke-virtual {p0}, Ljkd;->b()Ljava/util/Collection;
 
     move-result-object v0
@@ -180,8 +157,6 @@
 .method public retainAll(Ljava/util/Collection;)Z
     .locals 1
 
-    .prologue
-    .line 11
     invoke-virtual {p0}, Ljkd;->b()Ljava/util/Collection;
 
     move-result-object v0
@@ -196,8 +171,6 @@
 .method public size()I
     .locals 1
 
-    .prologue
-    .line 3
     invoke-virtual {p0}, Ljkd;->b()Ljava/util/Collection;
 
     move-result-object v0
@@ -212,8 +185,6 @@
 .method public toArray()[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 14
     invoke-virtual {p0}, Ljkd;->b()Ljava/util/Collection;
 
     move-result-object v0
@@ -228,8 +199,6 @@
 .method public toArray([Ljava/lang/Object;)[Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 15
     invoke-virtual {p0}, Ljkd;->b()Ljava/util/Collection;
 
     move-result-object v0

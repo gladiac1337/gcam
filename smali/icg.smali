@@ -13,38 +13,28 @@
 .method public constructor <init>(JJ)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-wide p1, p0, Licg;->a:J
 
-    .line 3
     iput-wide p3, p0, Licg;->b:J
 
-    .line 4
     return-void
 .end method
 
 .method public constructor <init>(Licg;)V
     .locals 2
 
-    .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
     iget-wide v0, p1, Licg;->a:J
 
     iput-wide v0, p0, Licg;->a:J
 
-    .line 7
     iget-wide v0, p1, Licg;->b:J
 
     iput-wide v0, p0, Licg;->b:J
 
-    .line 8
     return-void
 .end method
 
@@ -53,8 +43,6 @@
 .method public final a()D
     .locals 4
 
-    .prologue
-    .line 9
     iget-wide v0, p0, Licg;->a:J
 
     long-to-double v0, v0
@@ -71,38 +59,30 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 6
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 10
     if-nez p1, :cond_1
 
-    .line 17
     :cond_0
     :goto_0
     return v0
 
-    .line 12
     :cond_1
     if-ne p0, p1, :cond_2
 
     move v0, v1
 
-    .line 13
     goto :goto_0
 
-    .line 14
     :cond_2
     instance-of v2, p1, Licg;
 
     if-eqz v2, :cond_0
 
-    .line 15
     check-cast p1, Licg;
 
-    .line 16
     iget-wide v2, p0, Licg;->a:J
 
     iget-wide v4, p1, Licg;->a:J
@@ -127,8 +107,6 @@
 .method public final hashCode()I
     .locals 4
 
-    .prologue
-    .line 18
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -153,20 +131,16 @@
 
     aput-object v2, v0, v1
 
-    .line 19
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 20
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 6
 
-    .prologue
-    .line 21
     iget-wide v0, p0, Licg;->a:J
 
     iget-wide v2, p0, Licg;->b:J

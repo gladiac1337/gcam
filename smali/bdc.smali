@@ -22,8 +22,6 @@
 .method constructor <init>(Lbdb;Liht;Landroid/view/Surface;Lbcv;Ljvi;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbdc;->e:Lbdb;
 
     iput-object p2, p0, Lbdc;->a:Liht;
@@ -44,77 +42,58 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbdc;->e:Lbdb;
 
-    .line 3
     iget-object v1, v0, Lbdb;->d:Ljava/lang/Object;
 
-    .line 4
     monitor-enter v1
 
-    .line 5
     :try_start_0
     iget-object v0, p0, Lbdc;->e:Lbdb;
 
-    .line 6
     iget-boolean v0, v0, Lbdb;->e:Z
 
-    .line 7
     if-eqz v0, :cond_0
 
-    .line 8
     monitor-exit v1
 
-    .line 27
     :goto_0
     return-void
 
-    .line 9
     :cond_0
     sget-object v0, Lbdb;->a:Ljava/lang/String;
 
-    .line 10
     const-string v2, "Send preview command"
 
     invoke-static {v0, v2}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 11
     :try_start_1
     iget-object v0, p0, Lbdc;->e:Lbdb;
 
-    .line 12
     iget-object v0, v0, Lbdb;->b:Lbco;
 
-    .line 13
     iget-object v2, p0, Lbdc;->a:Liht;
 
     invoke-virtual {v0, v2}, Lbco;->a(Liht;)Liia;
 
     move-result-object v0
 
-    .line 14
     iget-object v2, p0, Lbdc;->c:Landroid/view/Surface;
 
     invoke-virtual {v0, v2}, Liia;->a(Landroid/view/Surface;)V
 
-    .line 15
     iget-object v2, p0, Lbdc;->e:Lbdb;
 
-    .line 16
     iget-object v2, v2, Lbdb;->c:Lbcx;
 
-    .line 17
     iget-object v3, p0, Lbdc;->a:Liht;
 
     invoke-interface {v2, v3, v0}, Lbcx;->a(Liht;Liia;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 18
     iget-object v2, p0, Lbdc;->a:Liht;
 
     iget-object v3, p0, Lbdc;->d:Lbcv;
@@ -123,28 +102,22 @@
 
     invoke-interface {v2, v0, v3, v4}, Liht;->b(Ljava/util/List;Lihu;Landroid/os/Handler;)I
 
-    .line 19
     iget-object v0, p0, Lbdc;->d:Lbcv;
 
-    .line 20
     iget-object v0, v0, Lbcv;->a:Ljvi;
 
-    .line 21
     new-instance v2, Lbdd;
 
     invoke-direct {v2, p0}, Lbdd;-><init>(Lbdc;)V
 
-    .line 22
     sget-object v3, Ljvc;->a:Ljvc;
 
-    .line 23
     invoke-static {v0, v2, v3}, Ljuh;->a(Ljuw;Ljug;Ljava/util/concurrent/Executor;)V
     :try_end_1
     .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Lief; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 27
     :goto_1
     :try_start_2
     monitor-exit v1
@@ -160,11 +133,9 @@
 
     throw v0
 
-    .line 25
     :catch_0
     move-exception v0
 
-    .line 26
     :goto_2
     :try_start_3
     iget-object v2, p0, Lbdc;->b:Ljvi;
@@ -175,7 +146,6 @@
 
     goto :goto_1
 
-    .line 25
     :catch_1
     move-exception v0
 

@@ -13,16 +13,12 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-boolean v0, p0, Lcom/google/android/vision/face/Detector$ClassificationSettings;->mClassifyEyesOpen:Z
 
-    .line 3
     iput-boolean v0, p0, Lcom/google/android/vision/face/Detector$ClassificationSettings;->mClassifySmiling:Z
 
     return-void
@@ -33,8 +29,6 @@
 .method public classifyingEyesOpen()Z
     .locals 1
 
-    .prologue
-    .line 6
     iget-boolean v0, p0, Lcom/google/android/vision/face/Detector$ClassificationSettings;->mClassifyEyesOpen:Z
 
     return v0
@@ -43,8 +37,6 @@
 .method public classifyingSmiling()Z
     .locals 1
 
-    .prologue
-    .line 9
     iget-boolean v0, p0, Lcom/google/android/vision/face/Detector$ClassificationSettings;->mClassifySmiling:Z
 
     return v0
@@ -53,21 +45,15 @@
 .method public setClassifyEyesOpen(Z)V
     .locals 0
 
-    .prologue
-    .line 4
     iput-boolean p1, p0, Lcom/google/android/vision/face/Detector$ClassificationSettings;->mClassifyEyesOpen:Z
 
-    .line 5
     return-void
 .end method
 
 .method public setClassifySmiling(Z)V
     .locals 0
 
-    .prologue
-    .line 7
     iput-boolean p1, p0, Lcom/google/android/vision/face/Detector$ClassificationSettings;->mClassifySmiling:Z
 
-    .line 8
     return-void
 .end method

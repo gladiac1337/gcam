@@ -19,11 +19,8 @@
 .method constructor <init>(Ljava/lang/reflect/Type;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget-object v0, Ljsk;->c:Ljsk;
 
     invoke-virtual {v0, p1}, Ljsk;->b(Ljava/lang/reflect/Type;)Ljava/lang/reflect/Type;
@@ -32,7 +29,6 @@
 
     iput-object v0, p0, Ljsj;->a:Ljava/lang/reflect/Type;
 
-    .line 3
     return-void
 .end method
 
@@ -41,16 +37,12 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 7
     instance-of v0, p1, Ljava/lang/reflect/GenericArrayType;
 
     if-eqz v0, :cond_0
 
-    .line 8
     check-cast p1, Ljava/lang/reflect/GenericArrayType;
 
-    .line 9
     invoke-virtual {p0}, Ljsj;->getGenericComponentType()Ljava/lang/reflect/Type;
 
     move-result-object v0
@@ -63,7 +55,6 @@
 
     move-result v0
 
-    .line 10
     :goto_0
     return v0
 
@@ -76,8 +67,6 @@
 .method public final getGenericComponentType()Ljava/lang/reflect/Type;
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Ljsj;->a:Ljava/lang/reflect/Type;
 
     return-object v0
@@ -86,8 +75,6 @@
 .method public final hashCode()I
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Ljsj;->a:Ljava/lang/reflect/Type;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
@@ -100,8 +87,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 5
     iget-object v0, p0, Ljsj;->a:Ljava/lang/reflect/Type;
 
     invoke-static {v0}, Ljsd;->b(Ljava/lang/reflect/Type;)Ljava/lang/String;

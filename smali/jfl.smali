@@ -15,30 +15,22 @@
 .method public constructor <init>(Ljava/io/File;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Ljfl;->b:Ljava/util/Map;
 
-    .line 3
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     invoke-static {p2}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     iput-object p1, p0, Ljfl;->a:Ljava/io/File;
 
-    .line 6
     iput-object p2, p0, Ljfl;->c:Ljava/lang/String;
 
-    .line 7
     return-void
 .end method
 
@@ -47,27 +39,20 @@
 .method public final a(Ljava/lang/String;)Ljfq;
     .locals 1
 
-    .prologue
-    .line 14
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 15
     new-instance v0, Ljfq;
 
     invoke-direct {v0}, Ljfq;-><init>()V
 
-    .line 16
     invoke-virtual {p0, p1, v0}, Ljfl;->a(Ljava/lang/String;Ljfn;)V
 
-    .line 17
     return-object v0
 .end method
 
 .method public final a()V
     .locals 9
 
-    .prologue
-    .line 22
     iget-object v0, p0, Ljfl;->b:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -91,10 +76,8 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 23
     const/4 v2, 0x0
 
-    .line 24
     new-instance v4, Ljava/io/File;
 
     iget-object v5, p0, Ljfl;->a:Ljava/io/File;
@@ -128,7 +111,6 @@
     :goto_1
     invoke-direct {v4, v5, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 25
     const-string v1, "LogCollectionWriter"
 
     invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -165,7 +147,6 @@
 
     invoke-static {v1, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 26
     :try_start_0
     new-instance v1, Ljava/io/FileWriter;
 
@@ -173,7 +154,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 27
     :try_start_1
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -185,7 +165,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 28
     const/4 v0, 0x1
 
     :try_start_2
@@ -195,11 +174,9 @@
 
     goto :goto_0
 
-    .line 30
     :catch_0
     move-exception v0
 
-    .line 31
     const-string v1, "LogCollectionWriter"
 
     const-string v2, "Error closing file: "
@@ -227,7 +204,6 @@
 
     goto/16 :goto_0
 
-    .line 24
     :cond_0
     new-instance v1, Ljava/lang/String;
 
@@ -235,7 +211,6 @@
 
     goto :goto_1
 
-    .line 31
     :cond_1
     new-instance v0, Ljava/lang/String;
 
@@ -243,7 +218,6 @@
 
     goto :goto_2
 
-    .line 33
     :catchall_0
     move-exception v0
 
@@ -251,7 +225,6 @@
 
     move-object v0, v2
 
-    .line 34
     :goto_3
     const/4 v2, 0x1
 
@@ -260,15 +233,12 @@
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 38
     :goto_4
     throw v1
 
-    .line 36
     :catch_1
     move-exception v0
 
-    .line 37
     const-string v2, "LogCollectionWriter"
 
     const-string v3, "Error closing file: "
@@ -303,11 +273,9 @@
 
     goto :goto_5
 
-    .line 39
     :cond_3
     return-void
 
-    .line 33
     :catchall_1
     move-exception v0
 
@@ -323,14 +291,10 @@
 .method public final a(Ljava/lang/String;Ljfn;)V
     .locals 3
 
-    .prologue
-    .line 8
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     invoke-static {p2}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10
     iget-object v0, p0, Ljfl;->b:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -339,7 +303,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 11
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -380,35 +343,28 @@
 
     throw v0
 
-    .line 12
     :cond_0
     iget-object v0, p0, Ljfl;->b:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 13
     return-void
 .end method
 
 .method public final b(Ljava/lang/String;)Ljava/io/StringWriter;
     .locals 2
 
-    .prologue
-    .line 18
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 19
     new-instance v0, Ljava/io/StringWriter;
 
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
-    .line 20
     new-instance v1, Ljfm;
 
     invoke-direct {v1, v0}, Ljfm;-><init>(Ljava/io/StringWriter;)V
 
     invoke-virtual {p0, p1, v1}, Ljfl;->a(Ljava/lang/String;Ljfn;)V
 
-    .line 21
     return-object v0
 .end method

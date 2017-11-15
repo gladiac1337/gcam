@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 10
     const-string v0, "OpenGLException"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -27,27 +25,20 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 2
     sget-object v0, Lfod;->a:Ljava/lang/String;
 
     invoke-static {v0, p1, p0}, Lbhz;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 3
     return-void
 .end method
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    .prologue
-    .line 4
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 5
     sget-object v0, Lfod;->a:Ljava/lang/String;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -94,22 +85,18 @@
 
     invoke-static {v0, v1, p0}, Lbhz;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 6
     return-void
 .end method
 
 .method public static a(Ljava/lang/String;)V
     .locals 5
 
-    .prologue
-    .line 7
     invoke-static {}, Landroid/opengl/GLES20;->glGetError()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 8
     new-instance v1, Lfod;
 
     invoke-static {v0}, Landroid/opengl/GLU;->gluErrorString(I)Ljava/lang/String;
@@ -172,7 +159,6 @@
 
     throw v1
 
-    .line 9
     :cond_0
     return-void
 .end method

@@ -22,8 +22,6 @@
 .method constructor <init>(Lbdf;Landroid/view/Surface;Liht;Lbcv;Ljvi;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbdg;->e:Lbdf;
 
     iput-object p2, p0, Lbdg;->a:Landroid/view/Surface;
@@ -44,63 +42,47 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbdg;->e:Lbdf;
 
-    .line 3
     iget-object v1, v0, Lbdf;->e:Ljava/lang/Object;
 
-    .line 4
     monitor-enter v1
 
-    .line 5
     :try_start_0
     iget-object v0, p0, Lbdg;->e:Lbdf;
 
-    .line 6
     iget-boolean v0, v0, Lbdf;->f:Z
 
-    .line 7
     if-eqz v0, :cond_0
 
-    .line 8
     monitor-exit v1
 
-    .line 37
     :goto_0
     return-void
 
-    .line 9
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10
     iget-object v0, p0, Lbdg;->e:Lbdf;
 
-    .line 11
     iget-object v0, v0, Lbdf;->d:Landroid/view/Surface;
 
-    .line 12
     invoke-virtual {v0}, Landroid/view/Surface;->isValid()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 13
     sget-object v0, Lbdf;->a:Ljava/lang/String;
 
-    .line 14
     const-string v1, "preview surface is already closed"
 
     invoke-static {v0, v1}, Lbhz;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 9
     :catchall_0
     move-exception v0
 
@@ -111,7 +93,6 @@
 
     throw v0
 
-    .line 16
     :cond_1
     iget-object v0, p0, Lbdg;->a:Landroid/view/Surface;
 
@@ -121,67 +102,52 @@
 
     if-nez v0, :cond_2
 
-    .line 17
     sget-object v0, Lbdf;->a:Ljava/lang/String;
 
-    .line 18
     const-string v1, "recording surface is already closed"
 
     invoke-static {v0, v1}, Lbhz;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 20
     :cond_2
     sget-object v0, Lbdf;->a:Ljava/lang/String;
 
-    .line 21
     const-string v1, "Send recording command"
 
     invoke-static {v0, v1}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 22
     :try_start_2
     iget-object v0, p0, Lbdg;->e:Lbdf;
 
-    .line 23
     iget-object v0, v0, Lbdf;->b:Lbco;
 
-    .line 24
     iget-object v1, p0, Lbdg;->b:Liht;
 
     invoke-virtual {v0, v1}, Lbco;->b(Liht;)Liia;
 
     move-result-object v0
 
-    .line 25
     iget-object v1, p0, Lbdg;->e:Lbdf;
 
-    .line 26
     iget-object v1, v1, Lbdf;->d:Landroid/view/Surface;
 
-    .line 27
     invoke-virtual {v0, v1}, Liia;->a(Landroid/view/Surface;)V
 
-    .line 28
     iget-object v1, p0, Lbdg;->a:Landroid/view/Surface;
 
     invoke-virtual {v0, v1}, Liia;->a(Landroid/view/Surface;)V
 
-    .line 29
     iget-object v1, p0, Lbdg;->e:Lbdf;
 
-    .line 30
     iget-object v1, v1, Lbdf;->c:Lbcx;
 
-    .line 31
     iget-object v2, p0, Lbdg;->b:Liht;
 
     invoke-interface {v1, v2, v0}, Lbcx;->a(Liht;Liia;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 32
     iget-object v1, p0, Lbdg;->b:Liht;
 
     iget-object v2, p0, Lbdg;->c:Lbcv;
@@ -190,7 +156,6 @@
 
     invoke-interface {v1, v0, v2, v3}, Liht;->b(Ljava/util/List;Lihu;Landroid/os/Handler;)I
 
-    .line 33
     iget-object v0, p0, Lbdg;->d:Ljvi;
 
     const/4 v1, 0x0
@@ -203,11 +168,9 @@
 
     goto :goto_0
 
-    .line 35
     :catch_0
     move-exception v0
 
-    .line 36
     :goto_1
     iget-object v1, p0, Lbdg;->d:Ljvi;
 
@@ -215,7 +178,6 @@
 
     goto :goto_0
 
-    .line 35
     :catch_1
     move-exception v0
 

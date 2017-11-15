@@ -14,8 +14,6 @@
 .method constructor <init>(Lbua;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lbug;->a:Lbua;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,20 +26,15 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lbug;->a:Lbua;
 
-    .line 3
     iget-object v0, v0, Lbua;->f:Lhzt;
 
-    .line 4
     new-instance v1, Lbuh;
 
     invoke-direct {v1, p0}, Lbuh;-><init>(Lbug;)V
 
     invoke-virtual {v0, v1}, Lhzt;->execute(Ljava/lang/Runnable;)V
 
-    .line 5
     return-void
 .end method

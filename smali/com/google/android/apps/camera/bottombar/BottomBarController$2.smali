@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/google/android/apps/camera/bottombar/BottomBarController;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$2;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -25,14 +23,11 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/BottomBarController$2;->this$0:Lcom/google/android/apps/camera/bottombar/BottomBarController;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lcom/google/android/apps/camera/bottombar/BottomBarController;->access$102(Lcom/google/android/apps/camera/bottombar/BottomBarController;Z)Z
 
-    .line 3
     return-void
 .end method

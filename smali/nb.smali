@@ -11,8 +11,6 @@
 .method constructor <init>(Lna;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lnb;->a:Lna;
 
     invoke-direct {p0}, Ljn;-><init>()V
@@ -25,10 +23,8 @@
 .method public final b(Landroid/view/View;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 2
     iget-object v0, p0, Lnb;->a:Lna;
 
     iget-object v0, v0, Lna;->a:Lmt;
@@ -39,7 +35,6 @@
 
     invoke-virtual {v0, v1}, Lpz;->setVisibility(I)V
 
-    .line 3
     iget-object v0, p0, Lnb;->a:Lna;
 
     iget-object v0, v0, Lna;->a:Lmt;
@@ -48,7 +43,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4
     iget-object v0, p0, Lnb;->a:Lna;
 
     iget-object v0, v0, Lna;->a:Lmt;
@@ -57,7 +51,6 @@
 
     invoke-virtual {v0}, Landroid/widget/PopupWindow;->dismiss()V
 
-    .line 8
     :cond_0
     :goto_0
     iget-object v0, p0, Lnb;->a:Lna;
@@ -68,7 +61,6 @@
 
     invoke-virtual {v0}, Landroid/support/v7/widget/ActionBarContextView;->removeAllViews()V
 
-    .line 9
     iget-object v0, p0, Lnb;->a:Lna;
 
     iget-object v0, v0, Lna;->a:Lmt;
@@ -77,17 +69,14 @@
 
     invoke-virtual {v0, v2}, Lji;->a(Ljm;)Lji;
 
-    .line 10
     iget-object v0, p0, Lnb;->a:Lna;
 
     iget-object v0, v0, Lna;->a:Lmt;
 
     iput-object v2, v0, Lmt;->t:Lji;
 
-    .line 11
     return-void
 
-    .line 5
     :cond_1
     iget-object v0, p0, Lnb;->a:Lna;
 
@@ -103,7 +92,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 6
     iget-object v0, p0, Lnb;->a:Lna;
 
     iget-object v0, v0, Lna;->a:Lmt;
@@ -116,7 +104,6 @@
 
     check-cast v0, Landroid/view/View;
 
-    .line 7
     sget-object v1, Lid;->a:Lim;
 
     invoke-virtual {v1, v0}, Lim;->h(Landroid/view/View;)V

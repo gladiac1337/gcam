@@ -16,8 +16,6 @@
 .method public constructor <init>(Lcih;Liiu;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcij;->b:Lcih;
 
     iput-object p2, p0, Lcij;->a:Liiu;
@@ -32,30 +30,24 @@
 .method public final a()Lgih;
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcij;->b:Lcih;
 
     invoke-interface {v0}, Lcih;->a()Lgih;
 
     move-result-object v1
 
-    .line 3
     if-eqz v1, :cond_0
 
-    .line 4
     new-instance v2, Lcik;
 
     invoke-direct {v2, p0, v1, v1}, Lcik;-><init>(Lcij;Liil;Lgih;)V
 
-    .line 5
     new-instance v0, Lgih;
 
     iget-object v1, v1, Lgih;->b:Ljava/util/Map;
 
     invoke-direct {v0, v2, v1}, Lgih;-><init>(Liil;Ljava/util/Map;)V
 
-    .line 6
     :goto_0
     return-object v0
 

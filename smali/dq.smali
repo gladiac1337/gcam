@@ -11,14 +11,10 @@
 .method constructor <init>(Landroid/os/IBinder;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldq;->a:Landroid/os/IBinder;
 
-    .line 3
     return-void
 .end method
 
@@ -27,8 +23,6 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 4
     instance-of v0, p1, Ldq;
 
     if-eqz v0, :cond_0
@@ -59,8 +53,6 @@
 .method public final hashCode()I
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Ldq;->a:Landroid/os/IBinder;
 
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I

@@ -14,8 +14,6 @@
 .method public constructor <init>(Lilf;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lill;->a:Lilf;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,11 +26,8 @@
 .method public final synthetic a(Ljava/lang/Object;Ljava/util/concurrent/Executor;)Lilf;
     .locals 3
 
-    .prologue
-    .line 2
     check-cast p1, Lilh;
 
-    .line 3
     iget-object v0, p0, Lill;->a:Lilf;
 
     new-instance v1, Lilm;
@@ -47,6 +42,5 @@
 
     move-result-object v0
 
-    .line 4
     return-object v0
 .end method

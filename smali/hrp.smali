@@ -13,13 +13,10 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
     const/4 v1, -0x1
 
-    .line 1
     invoke-direct {p0}, Lhrd;-><init>()V
 
-    .line 2
     iput v1, p0, Lhrp;->a:I
 
     const/4 v0, 0x0
@@ -28,7 +25,6 @@
 
     iput v1, p0, Lhrp;->p:I
 
-    .line 3
     return-void
 .end method
 

@@ -18,14 +18,10 @@
 .method public constructor <init>(Ljig;)V
     .locals 2
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     iput-object p1, p0, Licb;->a:Ljig;
 
-    .line 5
     new-instance v0, Liag;
 
     invoke-interface {p1}, Ljig;->a()Ljava/lang/Object;
@@ -36,7 +32,6 @@
 
     iput-object v0, p0, Licb;->b:Liag;
 
-    .line 6
     iget-object v0, p0, Licb;->b:Liag;
 
     invoke-static {v0}, Liav;->b(Liau;)Liau;
@@ -45,15 +40,12 @@
 
     iput-object v0, p0, Licb;->c:Liau;
 
-    .line 7
     return-void
 .end method
 
 .method public static a(Ljava/util/NavigableMap;ILibx;)Ljava/util/NavigableMap;
     .locals 1
 
-    .prologue
-    .line 1
     invoke-interface {p0}, Ljava/util/NavigableMap;->size()I
 
     move-result v0
@@ -65,14 +57,12 @@
     :goto_0
     invoke-static {v0}, Liya;->a(Z)V
 
-    .line 2
     new-instance v0, Licc;
 
     invoke-direct {v0, p0, p1, p2}, Licc;-><init>(Ljava/util/NavigableMap;ILibx;)V
 
     return-object v0
 
-    .line 1
     :cond_0
     const/4 v0, 0x0
 
@@ -84,8 +74,6 @@
 .method public final a(Licn;Ljava/util/concurrent/Executor;)Lich;
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Licb;->c:Liau;
 
     invoke-interface {v0, p1, p2}, Liau;->a(Licn;Ljava/util/concurrent/Executor;)Lich;
@@ -98,8 +86,6 @@
 .method public final a()V
     .locals 2
 
-    .prologue
-    .line 8
     iget-object v0, p0, Licb;->b:Liag;
 
     iget-object v1, p0, Licb;->a:Ljig;
@@ -110,15 +96,12 @@
 
     invoke-virtual {v0, v1}, Liag;->a(Ljava/lang/Object;)V
 
-    .line 9
     return-void
 .end method
 
 .method public final b()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 11
     iget-object v0, p0, Licb;->b:Liag;
 
     invoke-virtual {v0}, Liag;->b()Ljava/lang/Object;

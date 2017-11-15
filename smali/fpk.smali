@@ -85,311 +85,260 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/16 v0, 0x10
 
     new-array v0, v0, [D
 
     iput-object v0, p0, Lfpk;->a:[D
 
-    .line 3
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->b:Lfnw;
 
-    .line 4
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->d:Lfnw;
 
-    .line 5
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->e:Lfnw;
 
-    .line 6
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->f:Lfnw;
 
-    .line 7
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->g:Lfnw;
 
-    .line 8
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->h:Lfnw;
 
-    .line 9
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->i:Lfnw;
 
-    .line 10
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->j:Lfnw;
 
-    .line 11
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->k:Lfnw;
 
-    .line 12
     new-instance v0, Lfnz;
 
     invoke-direct {v0}, Lfnz;-><init>()V
 
     iput-object v0, p0, Lfpk;->l:Lfnz;
 
-    .line 13
     new-instance v0, Lfnz;
 
     invoke-direct {v0}, Lfnz;-><init>()V
 
     iput-object v0, p0, Lfpk;->m:Lfnz;
 
-    .line 14
     new-instance v0, Lfnz;
 
     invoke-direct {v0}, Lfnz;-><init>()V
 
     iput-object v0, p0, Lfpk;->n:Lfnz;
 
-    .line 15
     new-instance v0, Lfnz;
 
     invoke-direct {v0}, Lfnz;-><init>()V
 
     iput-object v0, p0, Lfpk;->o:Lfnz;
 
-    .line 16
     new-instance v0, Lfnz;
 
     invoke-direct {v0}, Lfnz;-><init>()V
 
     iput-object v0, p0, Lfpk;->p:Lfnz;
 
-    .line 17
     new-instance v0, Lfnz;
 
     invoke-direct {v0}, Lfnz;-><init>()V
 
     iput-object v0, p0, Lfpk;->q:Lfnz;
 
-    .line 18
     new-instance v0, Lfnz;
 
     invoke-direct {v0}, Lfnz;-><init>()V
 
     iput-object v0, p0, Lfpk;->r:Lfnz;
 
-    .line 19
     new-instance v0, Lfsi;
 
     invoke-direct {v0}, Lfsi;-><init>()V
 
     iput-object v0, p0, Lfpk;->s:Lfsi;
 
-    .line 20
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lfpk;->v:Z
 
-    .line 21
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lfpk;->x:Z
 
-    .line 22
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->y:Lfnw;
 
-    .line 23
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->z:Lfnw;
 
-    .line 24
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->A:Lfnw;
 
-    .line 25
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->B:Lfnw;
 
-    .line 26
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->C:Lfnw;
 
-    .line 27
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->D:Lfnw;
 
-    .line 28
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->E:Lfnw;
 
-    .line 29
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->F:Lfnw;
 
-    .line 30
     new-instance v0, Lfnz;
 
     invoke-direct {v0}, Lfnz;-><init>()V
 
     iput-object v0, p0, Lfpk;->G:Lfnz;
 
-    .line 31
     new-instance v0, Lfnz;
 
     invoke-direct {v0}, Lfnz;-><init>()V
 
     iput-object v0, p0, Lfpk;->H:Lfnz;
 
-    .line 32
     new-instance v0, Lfnz;
 
     invoke-direct {v0}, Lfnz;-><init>()V
 
     iput-object v0, p0, Lfpk;->I:Lfnz;
 
-    .line 33
     new-instance v0, Lfnz;
 
     invoke-direct {v0}, Lfnz;-><init>()V
 
-    .line 34
     new-instance v0, Lfnz;
 
     invoke-direct {v0}, Lfnz;-><init>()V
 
-    .line 35
     new-instance v0, Lfnz;
 
     invoke-direct {v0}, Lfnz;-><init>()V
 
-    .line 36
     new-instance v0, Lfnz;
 
     invoke-direct {v0}, Lfnz;-><init>()V
 
-    .line 37
     new-instance v0, Lfnz;
 
     invoke-direct {v0}, Lfnz;-><init>()V
 
-    .line 38
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
-    .line 39
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
-    .line 40
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
-    .line 41
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
-    .line 42
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
-    .line 43
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->J:Lfnw;
 
-    .line 44
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->K:Lfnw;
 
-    .line 45
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
     iput-object v0, p0, Lfpk;->L:Lfnw;
 
-    .line 46
     new-instance v0, Lfnw;
 
     invoke-direct {v0}, Lfnw;-><init>()V
 
-    .line 47
     invoke-virtual {p0}, Lfpk;->a()V
 
-    .line 48
     return-void
 .end method
 
 .method private final a(Lfnw;Lfnz;)V
     .locals 18
 
-    .prologue
-    .line 206
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lfpk;->q:Lfnz;
@@ -402,7 +351,6 @@
 
     invoke-static {v0, v2, v3}, Lfnw;->a(Lfnw;Lfnz;Lfnz;)V
 
-    .line 207
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lfpk;->s:Lfsi;
@@ -421,7 +369,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Lfsi;->a(Lfnz;Lfnz;Lfnw;)V
 
-    .line 208
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lfpk;->s:Lfsi;
@@ -430,7 +377,6 @@
 
     iget-object v10, v0, Lfpk;->L:Lfnw;
 
-    .line 209
     const/4 v3, 0x0
 
     const/4 v4, 0x0
@@ -467,12 +413,10 @@
 
     mul-double v12, v4, v6
 
-    .line 210
     const/4 v3, 0x2
 
     const/4 v4, 0x1
 
-    .line 211
     invoke-virtual {v10, v3, v4}, Lfnw;->a(II)D
 
     move-result-wide v4
@@ -495,7 +439,6 @@
 
     const/4 v6, 0x2
 
-    .line 212
     invoke-virtual {v10, v3, v6}, Lfnw;->a(II)D
 
     move-result-wide v6
@@ -518,7 +461,6 @@
 
     const/4 v8, 0x0
 
-    .line 213
     invoke-virtual {v10, v3, v8}, Lfnw;->a(II)D
 
     move-result-wide v8
@@ -539,29 +481,24 @@
 
     move-object/from16 v3, p2
 
-    .line 214
     invoke-virtual/range {v3 .. v9}, Lfnz;->a(DDD)V
 
-    .line 215
     invoke-virtual/range {p2 .. p2}, Lfnz;->c()D
 
     move-result-wide v4
 
-    .line 216
     const-wide v6, 0x3fe6a09e667f3bcdL    # 0.7071067811865476
 
     cmpl-double v3, v12, v6
 
     if-lez v3, :cond_1
 
-    .line 217
     const-wide/16 v2, 0x0
 
     cmpl-double v2, v4, v2
 
     if-lez v2, :cond_0
 
-    .line 218
     invoke-static {v4, v5}, Ljava/lang/Math;->asin(D)D
 
     move-result-wide v2
@@ -572,12 +509,10 @@
 
     invoke-virtual {v0, v2, v3}, Lfnz;->a(D)V
 
-    .line 238
     :cond_0
     :goto_0
     return-void
 
-    .line 219
     :cond_1
     const-wide v6, -0x40195f619980c433L    # -0.7071067811865476
 
@@ -585,12 +520,10 @@
 
     if-lez v3, :cond_2
 
-    .line 220
     invoke-static {v12, v13}, Ljava/lang/Math;->acos(D)D
 
     move-result-wide v2
 
-    .line 221
     div-double/2addr v2, v4
 
     move-object/from16 v0, p2
@@ -599,7 +532,6 @@
 
     goto :goto_0
 
-    .line 223
     :cond_2
     const-wide v6, 0x400921fb54442d18L    # Math.PI
 
@@ -609,7 +541,6 @@
 
     sub-double v14, v6, v4
 
-    .line 224
     const/4 v3, 0x0
 
     const/4 v4, 0x0
@@ -620,7 +551,6 @@
 
     sub-double/2addr v4, v12
 
-    .line 225
     const/4 v3, 0x1
 
     const/4 v6, 0x1
@@ -631,7 +561,6 @@
 
     sub-double/2addr v6, v12
 
-    .line 226
     const/4 v3, 0x2
 
     const/4 v8, 0x2
@@ -642,10 +571,8 @@
 
     sub-double/2addr v8, v12
 
-    .line 227
     iget-object v3, v2, Lfsi;->a:Lfnz;
 
-    .line 228
     mul-double v12, v4, v4
 
     mul-double v16, v6, v6
@@ -662,7 +589,6 @@
 
     if-lez v2, :cond_4
 
-    .line 229
     const/4 v2, 0x1
 
     const/4 v6, 0x0
@@ -709,7 +635,6 @@
 
     invoke-virtual/range {v3 .. v9}, Lfnz;->a(DDD)V
 
-    .line 233
     :goto_1
     move-object/from16 v0, p2
 
@@ -723,26 +648,21 @@
 
     if-gez v2, :cond_3
 
-    .line 234
     const-wide/high16 v4, -0x4010000000000000L    # -1.0
 
     invoke-virtual {v3, v4, v5}, Lfnz;->a(D)V
 
-    .line 235
     :cond_3
     invoke-virtual {v3}, Lfnz;->b()V
 
-    .line 236
     invoke-virtual {v3, v14, v15}, Lfnz;->a(D)V
 
-    .line 237
     move-object/from16 v0, p2
 
     invoke-virtual {v0, v3}, Lfnz;->a(Lfnz;)V
 
     goto/16 :goto_0
 
-    .line 230
     :cond_4
     mul-double v4, v6, v6
 
@@ -752,7 +672,6 @@
 
     if-lez v2, :cond_5
 
-    .line 231
     const/4 v2, 0x1
 
     const/4 v4, 0x0
@@ -801,7 +720,6 @@
 
     goto :goto_1
 
-    .line 232
     :cond_5
     const/4 v2, 0x0
 
@@ -855,15 +773,12 @@
 .method private final c()V
     .locals 3
 
-    .prologue
-    .line 201
     iget-object v0, p0, Lfpk;->d:Lfnw;
 
     iget-object v1, p0, Lfpk;->J:Lfnw;
 
     invoke-virtual {v0, v1}, Lfnw;->b(Lfnw;)V
 
-    .line 202
     iget-object v0, p0, Lfpk;->e:Lfnw;
 
     iget-object v1, p0, Lfpk;->J:Lfnw;
@@ -872,7 +787,6 @@
 
     invoke-static {v0, v1, v2}, Lfnw;->a(Lfnw;Lfnw;Lfnw;)V
 
-    .line 203
     iget-object v0, p0, Lfpk;->d:Lfnw;
 
     iget-object v1, p0, Lfpk;->K:Lfnw;
@@ -881,12 +795,10 @@
 
     invoke-static {v0, v1, v2}, Lfnw;->a(Lfnw;Lfnw;Lfnw;)V
 
-    .line 204
     iget-object v0, p0, Lfpk;->d:Lfnw;
 
     invoke-virtual {v0}, Lfnw;->b()V
 
-    .line 205
     return-void
 .end method
 
@@ -895,116 +807,94 @@
 .method public final a()V
     .locals 10
 
-    .prologue
     const-wide/16 v0, 0x0
 
     const-wide/high16 v8, 0x3ff0000000000000L    # 1.0
 
     const-wide/16 v2, 0x0
 
-    .line 49
     iput-wide v0, p0, Lfpk;->t:J
 
-    .line 50
     iput-wide v0, p0, Lfpk;->c:J
 
-    .line 51
     iget-object v0, p0, Lfpk;->b:Lfnw;
 
     invoke-virtual {v0}, Lfnw;->b()V
 
-    .line 52
     iget-object v0, p0, Lfpk;->d:Lfnw;
 
     invoke-virtual {v0}, Lfnw;->b()V
 
-    .line 53
     iget-object v0, p0, Lfpk;->e:Lfnw;
 
     invoke-virtual {v0}, Lfnw;->a()V
 
-    .line 54
     iget-object v0, p0, Lfpk;->e:Lfnw;
 
     const-wide/high16 v4, 0x4039000000000000L    # 25.0
 
     invoke-virtual {v0, v4, v5}, Lfnw;->a(D)V
 
-    .line 55
     iget-object v0, p0, Lfpk;->f:Lfnw;
 
     invoke-virtual {v0}, Lfnw;->a()V
 
-    .line 56
     iget-object v0, p0, Lfpk;->f:Lfnw;
 
     invoke-virtual {v0, v8, v9}, Lfnw;->a(D)V
 
-    .line 57
     iget-object v0, p0, Lfpk;->g:Lfnw;
 
     invoke-virtual {v0}, Lfnw;->a()V
 
-    .line 58
     iget-object v0, p0, Lfpk;->g:Lfnw;
 
     const-wide/high16 v4, 0x3fb0000000000000L    # 0.0625
 
     invoke-virtual {v0, v4, v5}, Lfnw;->a(D)V
 
-    .line 59
     iget-object v0, p0, Lfpk;->h:Lfnw;
 
     invoke-virtual {v0}, Lfnw;->a()V
 
-    .line 60
     iget-object v0, p0, Lfpk;->h:Lfnw;
 
     const-wide/high16 v4, 0x3fe2000000000000L    # 0.5625
 
     invoke-virtual {v0, v4, v5}, Lfnw;->a(D)V
 
-    .line 61
     iget-object v0, p0, Lfpk;->i:Lfnw;
 
     invoke-virtual {v0}, Lfnw;->a()V
 
-    .line 62
     iget-object v0, p0, Lfpk;->j:Lfnw;
 
     invoke-virtual {v0}, Lfnw;->a()V
 
-    .line 63
     iget-object v0, p0, Lfpk;->k:Lfnw;
 
     invoke-virtual {v0}, Lfnw;->a()V
 
-    .line 64
     iget-object v0, p0, Lfpk;->l:Lfnz;
 
     invoke-virtual {v0}, Lfnz;->a()V
 
-    .line 65
     iget-object v0, p0, Lfpk;->m:Lfnz;
 
     invoke-virtual {v0}, Lfnz;->a()V
 
-    .line 66
     iget-object v0, p0, Lfpk;->n:Lfnz;
 
     invoke-virtual {v0}, Lfnz;->a()V
 
-    .line 67
     iget-object v0, p0, Lfpk;->o:Lfnz;
 
     invoke-virtual {v0}, Lfnz;->a()V
 
-    .line 68
     iget-object v0, p0, Lfpk;->p:Lfnz;
 
     invoke-virtual {v0}, Lfnz;->a()V
 
-    .line 69
     iget-object v1, p0, Lfpk;->q:Lfnz;
 
     const-wide v6, 0x40239eb851eb851fL    # 9.81
@@ -1013,7 +903,6 @@
 
     invoke-virtual/range {v1 .. v7}, Lfnz;->a(DDD)V
 
-    .line 70
     iget-object v1, p0, Lfpk;->r:Lfnz;
 
     move-wide v4, v8
@@ -1022,15 +911,12 @@
 
     invoke-virtual/range {v1 .. v7}, Lfnz;->a(DDD)V
 
-    .line 71
     return-void
 .end method
 
 .method public final declared-synchronized a(D)V
     .locals 23
 
-    .prologue
-    .line 83
     monitor-enter p0
 
     :try_start_0
@@ -1038,10 +924,8 @@
 
     move-result-wide v2
 
-    .line 84
     sub-double v2, p1, v2
 
-    .line 85
     const-wide v4, 0x4066800000000000L    # 180.0
 
     div-double v4, v2, v4
@@ -1054,7 +938,6 @@
 
     move-result-wide v4
 
-    .line 86
     const-wide v6, 0x4066800000000000L    # 180.0
 
     div-double/2addr v2, v6
@@ -1067,7 +950,6 @@
 
     move-result-wide v2
 
-    .line 87
     const/4 v6, 0x3
 
     new-array v0, v6, [[D
@@ -1130,12 +1012,10 @@
 
     aput-object v3, v20, v2
 
-    .line 88
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lfpk;->y:Lfnw;
 
-    .line 89
     const/4 v2, 0x0
 
     aget-object v2, v20, v2
@@ -1210,7 +1090,6 @@
 
     invoke-virtual/range {v3 .. v21}, Lfnw;->a(DDDDDDDDD)V
 
-    .line 90
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lfpk;->b:Lfnw;
@@ -1227,12 +1106,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 91
     monitor-exit p0
 
     return-void
 
-    .line 83
     :catchall_0
     move-exception v2
 
@@ -1240,7 +1117,6 @@
 
     throw v2
 
-    .line 87
     nop
 
     :array_0
@@ -1254,8 +1130,6 @@
 .method public final declared-synchronized a([FJ)V
     .locals 8
 
-    .prologue
-    .line 92
     monitor-enter p0
 
     :try_start_0
@@ -1267,7 +1141,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 93
     iget-wide v0, p0, Lfpk;->t:J
 
     sub-long v0, p2, v0
@@ -1278,21 +1151,18 @@
 
     mul-float/2addr v0, v1
 
-    .line 94
     const v1, 0x3d23d70a    # 0.04f
 
     cmpl-float v1, v0, v1
 
     if-lez v1, :cond_3
 
-    .line 95
     iget-boolean v0, p0, Lfpk;->x:Z
 
     if-eqz v0, :cond_2
 
     iget v0, p0, Lfpk;->u:F
 
-    .line 104
     :cond_0
     :goto_0
     iget-object v1, p0, Lfpk;->o:Lfnz;
@@ -1329,21 +1199,18 @@
 
     invoke-virtual/range {v1 .. v7}, Lfnz;->a(DDD)V
 
-    .line 105
     iget-object v1, p0, Lfpk;->o:Lfnz;
 
     iget-object v2, p0, Lfpk;->d:Lfnw;
 
     invoke-static {v1, v2}, Lfsi;->a(Lfnz;Lfnw;)V
 
-    .line 106
     iget-object v1, p0, Lfpk;->z:Lfnw;
 
     iget-object v2, p0, Lfpk;->b:Lfnw;
 
     invoke-virtual {v1, v2}, Lfnw;->a(Lfnw;)V
 
-    .line 107
     iget-object v1, p0, Lfpk;->d:Lfnw;
 
     iget-object v2, p0, Lfpk;->b:Lfnw;
@@ -1352,31 +1219,26 @@
 
     invoke-static {v1, v2, v3}, Lfnw;->a(Lfnw;Lfnw;Lfnw;)V
 
-    .line 108
     iget-object v1, p0, Lfpk;->b:Lfnw;
 
     iget-object v2, p0, Lfpk;->z:Lfnw;
 
     invoke-virtual {v1, v2}, Lfnw;->a(Lfnw;)V
 
-    .line 109
     invoke-direct {p0}, Lfpk;->c()V
 
-    .line 110
     iget-object v1, p0, Lfpk;->A:Lfnw;
 
     iget-object v2, p0, Lfpk;->f:Lfnw;
 
     invoke-virtual {v1, v2}, Lfnw;->a(Lfnw;)V
 
-    .line 111
     iget-object v1, p0, Lfpk;->A:Lfnw;
 
     mul-float/2addr v0, v0
 
     float-to-double v2, v0
 
-    .line 112
     iget-object v0, v1, Lfnw;->a:[D
 
     const/4 v4, 0x0
@@ -1387,7 +1249,6 @@
 
     aput-wide v6, v0, v4
 
-    .line 113
     iget-object v0, v1, Lfnw;->a:[D
 
     const/4 v4, 0x1
@@ -1398,7 +1259,6 @@
 
     aput-wide v6, v0, v4
 
-    .line 114
     iget-object v0, v1, Lfnw;->a:[D
 
     const/4 v4, 0x2
@@ -1409,7 +1269,6 @@
 
     aput-wide v6, v0, v4
 
-    .line 115
     iget-object v0, v1, Lfnw;->a:[D
 
     const/4 v4, 0x3
@@ -1420,7 +1279,6 @@
 
     aput-wide v6, v0, v4
 
-    .line 116
     iget-object v0, v1, Lfnw;->a:[D
 
     const/4 v4, 0x4
@@ -1431,7 +1289,6 @@
 
     aput-wide v6, v0, v4
 
-    .line 117
     iget-object v0, v1, Lfnw;->a:[D
 
     const/4 v4, 0x5
@@ -1442,7 +1299,6 @@
 
     aput-wide v6, v0, v4
 
-    .line 118
     iget-object v0, v1, Lfnw;->a:[D
 
     const/4 v4, 0x6
@@ -1453,7 +1309,6 @@
 
     aput-wide v6, v0, v4
 
-    .line 119
     iget-object v0, v1, Lfnw;->a:[D
 
     const/4 v4, 0x7
@@ -1464,7 +1319,6 @@
 
     aput-wide v6, v0, v4
 
-    .line 120
     iget-object v0, v1, Lfnw;->a:[D
 
     const/16 v1, 0x8
@@ -1475,12 +1329,10 @@
 
     aput-wide v2, v0, v1
 
-    .line 121
     iget-object v0, p0, Lfpk;->e:Lfnw;
 
     iget-object v1, p0, Lfpk;->A:Lfnw;
 
-    .line 122
     iget-object v2, v0, Lfnw;->a:[D
 
     const/4 v3, 0x0
@@ -1497,7 +1349,6 @@
 
     aput-wide v4, v2, v3
 
-    .line 123
     iget-object v2, v0, Lfnw;->a:[D
 
     const/4 v3, 0x1
@@ -1514,7 +1365,6 @@
 
     aput-wide v4, v2, v3
 
-    .line 124
     iget-object v2, v0, Lfnw;->a:[D
 
     const/4 v3, 0x2
@@ -1531,7 +1381,6 @@
 
     aput-wide v4, v2, v3
 
-    .line 125
     iget-object v2, v0, Lfnw;->a:[D
 
     const/4 v3, 0x3
@@ -1548,7 +1397,6 @@
 
     aput-wide v4, v2, v3
 
-    .line 126
     iget-object v2, v0, Lfnw;->a:[D
 
     const/4 v3, 0x4
@@ -1565,7 +1413,6 @@
 
     aput-wide v4, v2, v3
 
-    .line 127
     iget-object v2, v0, Lfnw;->a:[D
 
     const/4 v3, 0x5
@@ -1582,7 +1429,6 @@
 
     aput-wide v4, v2, v3
 
-    .line 128
     iget-object v2, v0, Lfnw;->a:[D
 
     const/4 v3, 0x6
@@ -1599,7 +1445,6 @@
 
     aput-wide v4, v2, v3
 
-    .line 129
     iget-object v2, v0, Lfnw;->a:[D
 
     const/4 v3, 0x7
@@ -1616,7 +1461,6 @@
 
     aput-wide v4, v2, v3
 
-    .line 130
     iget-object v0, v0, Lfnw;->a:[D
 
     const/16 v2, 0x8
@@ -1633,39 +1477,32 @@
 
     aput-wide v4, v0, v2
 
-    .line 131
     :cond_1
     iput-wide p2, p0, Lfpk;->t:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 132
     monitor-exit p0
 
     return-void
 
-    .line 95
     :cond_2
     const v0, 0x3c23d70a    # 0.01f
 
     goto/16 :goto_0
 
-    .line 97
     :cond_3
     :try_start_1
     iget-boolean v1, p0, Lfpk;->v:Z
 
     if-nez v1, :cond_4
 
-    .line 98
     iput v0, p0, Lfpk;->u:F
 
-    .line 99
     const/4 v1, 0x1
 
     iput v1, p0, Lfpk;->w:I
 
-    .line 100
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lfpk;->v:Z
@@ -1674,7 +1511,6 @@
 
     goto/16 :goto_0
 
-    .line 92
     :catchall_0
     move-exception v0
 
@@ -1682,7 +1518,6 @@
 
     throw v0
 
-    .line 101
     :cond_4
     const v1, 0x3f733333    # 0.95f
 
@@ -1699,7 +1534,6 @@
 
     iput v1, p0, Lfpk;->u:F
 
-    .line 102
     iget v1, p0, Lfpk;->w:I
 
     add-int/lit8 v1, v1, 0x1
@@ -1714,7 +1548,6 @@
 
     if-lez v1, :cond_0
 
-    .line 103
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lfpk;->x:Z
@@ -1727,14 +1560,12 @@
 .method public final b()D
     .locals 12
 
-    .prologue
     const/4 v6, 0x2
 
     const-wide/16 v0, 0x0
 
     const-wide v10, 0x4076800000000000L    # 360.0
 
-    .line 72
     iget-object v2, p0, Lfpk;->b:Lfnw;
 
     const/4 v3, 0x0
@@ -1743,7 +1574,6 @@
 
     move-result-wide v2
 
-    .line 73
     iget-object v4, p0, Lfpk;->b:Lfnw;
 
     const/4 v5, 0x1
@@ -1752,7 +1582,6 @@
 
     move-result-wide v4
 
-    .line 74
     mul-double v6, v2, v2
 
     mul-double v8, v4, v4
@@ -1763,19 +1592,16 @@
 
     move-result-wide v6
 
-    .line 75
     const-wide v8, 0x3fb999999999999aL    # 0.1
 
     cmpg-double v6, v6, v8
 
     if-gez v6, :cond_1
 
-    .line 82
     :cond_0
     :goto_0
     return-wide v0
 
-    .line 77
     :cond_1
     const-wide v6, -0x3fa9800000000000L    # -90.0
 
@@ -1793,21 +1619,17 @@
 
     sub-double v2, v6, v2
 
-    .line 78
     cmpg-double v0, v2, v0
 
     if-gez v0, :cond_2
 
-    .line 79
     add-double v0, v2, v10
 
-    .line 80
     :goto_1
     cmpl-double v2, v0, v10
 
     if-ltz v2, :cond_0
 
-    .line 81
     sub-double/2addr v0, v10
 
     goto :goto_0
@@ -1821,8 +1643,6 @@
 .method public final declared-synchronized b([FJ)V
     .locals 30
 
-    .prologue
-    .line 133
     monitor-enter p0
 
     :try_start_0
@@ -1850,7 +1670,6 @@
 
     invoke-virtual/range {v5 .. v11}, Lfnz;->a(DDD)V
 
-    .line 134
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lfpk;->c:J
@@ -1861,7 +1680,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 135
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfpk;->b:Lfnw;
@@ -1874,7 +1692,6 @@
 
     invoke-direct {v0, v4, v5}, Lfpk;->a(Lfnw;Lfnz;)V
 
-    .line 136
     const/4 v4, 0x0
 
     :goto_0
@@ -1882,23 +1699,18 @@
 
     if-ge v4, v5, :cond_2
 
-    .line 137
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lfpk;->I:Lfnz;
 
-    .line 138
     invoke-virtual {v5}, Lfnz;->a()V
 
-    .line 140
     if-nez v4, :cond_0
 
-    .line 141
     const-wide v6, 0x3e7ad7f29abcaf48L    # 1.0E-7
 
     iput-wide v6, v5, Lfnz;->a:D
 
-    .line 145
     :goto_1
     move-object/from16 v0, p0
 
@@ -1906,7 +1718,6 @@
 
     invoke-static {v5, v6}, Lfsi;->a(Lfnz;Lfnw;)V
 
-    .line 146
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lfpk;->B:Lfnw;
@@ -1921,7 +1732,6 @@
 
     invoke-static {v5, v6, v7}, Lfnw;->a(Lfnw;Lfnw;Lfnw;)V
 
-    .line 147
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lfpk;->C:Lfnw;
@@ -1934,12 +1744,10 @@
 
     invoke-direct {v0, v5, v6}, Lfpk;->a(Lfnw;Lfnz;)V
 
-    .line 148
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lfpk;->G:Lfnz;
 
-    .line 149
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lfpk;->l:Lfnz;
@@ -1948,7 +1756,6 @@
 
     iget-object v5, v0, Lfpk;->H:Lfnz;
 
-    .line 150
     iget-wide v6, v11, Lfnz;->a:D
 
     iget-wide v8, v10, Lfnz;->a:D
@@ -1969,7 +1776,6 @@
 
     invoke-virtual/range {v5 .. v11}, Lfnz;->a(DDD)V
 
-    .line 151
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lfpk;->H:Lfnz;
@@ -1978,7 +1784,6 @@
 
     invoke-virtual {v5, v6, v7}, Lfnz;->a(D)V
 
-    .line 152
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lfpk;->j:Lfnw;
@@ -1989,18 +1794,15 @@
 
     invoke-virtual {v5, v4, v6}, Lfnw;->a(ILfnz;)V
 
-    .line 153
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 142
     :cond_0
     const/4 v6, 0x1
 
     if-ne v4, v6, :cond_1
 
-    .line 143
     const-wide v6, 0x3e7ad7f29abcaf48L    # 1.0E-7
 
     iput-wide v6, v5, Lfnz;->b:D
@@ -2009,7 +1811,6 @@
 
     goto :goto_1
 
-    .line 133
     :catchall_0
     move-exception v4
 
@@ -2017,7 +1818,6 @@
 
     throw v4
 
-    .line 144
     :cond_1
     const-wide v6, 0x3e7ad7f29abcaf48L    # 1.0E-7
 
@@ -2026,7 +1826,6 @@
 
     goto :goto_1
 
-    .line 154
     :cond_2
     move-object/from16 v0, p0
 
@@ -2038,7 +1837,6 @@
 
     invoke-virtual {v4, v5}, Lfnw;->b(Lfnw;)V
 
-    .line 155
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfpk;->e:Lfnw;
@@ -2053,7 +1851,6 @@
 
     invoke-static {v4, v5, v6}, Lfnw;->a(Lfnw;Lfnw;Lfnw;)V
 
-    .line 156
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfpk;->j:Lfnw;
@@ -2068,7 +1865,6 @@
 
     invoke-static {v4, v5, v6}, Lfnw;->a(Lfnw;Lfnw;Lfnw;)V
 
-    .line 157
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfpk;->F:Lfnw;
@@ -2081,7 +1877,6 @@
 
     iget-object v6, v0, Lfpk;->i:Lfnw;
 
-    .line 158
     iget-object v7, v6, Lfnw;->a:[D
 
     const/4 v8, 0x0
@@ -2102,7 +1897,6 @@
 
     aput-wide v10, v7, v8
 
-    .line 159
     iget-object v7, v6, Lfnw;->a:[D
 
     const/4 v8, 0x1
@@ -2123,7 +1917,6 @@
 
     aput-wide v10, v7, v8
 
-    .line 160
     iget-object v7, v6, Lfnw;->a:[D
 
     const/4 v8, 0x2
@@ -2144,7 +1937,6 @@
 
     aput-wide v10, v7, v8
 
-    .line 161
     iget-object v7, v6, Lfnw;->a:[D
 
     const/4 v8, 0x3
@@ -2165,7 +1957,6 @@
 
     aput-wide v10, v7, v8
 
-    .line 162
     iget-object v7, v6, Lfnw;->a:[D
 
     const/4 v8, 0x4
@@ -2186,7 +1977,6 @@
 
     aput-wide v10, v7, v8
 
-    .line 163
     iget-object v7, v6, Lfnw;->a:[D
 
     const/4 v8, 0x5
@@ -2207,7 +1997,6 @@
 
     aput-wide v10, v7, v8
 
-    .line 164
     iget-object v7, v6, Lfnw;->a:[D
 
     const/4 v8, 0x6
@@ -2228,7 +2017,6 @@
 
     aput-wide v10, v7, v8
 
-    .line 165
     iget-object v7, v6, Lfnw;->a:[D
 
     const/4 v8, 0x7
@@ -2249,7 +2037,6 @@
 
     aput-wide v10, v7, v8
 
-    .line 166
     iget-object v6, v6, Lfnw;->a:[D
 
     const/16 v7, 0x8
@@ -2270,7 +2057,6 @@
 
     aput-wide v4, v6, v7
 
-    .line 167
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfpk;->i:Lfnw;
@@ -2279,7 +2065,6 @@
 
     iget-object v5, v0, Lfpk;->D:Lfnw;
 
-    .line 169
     const/4 v6, 0x0
 
     const/4 v7, 0x0
@@ -2332,7 +2117,6 @@
 
     const/4 v9, 0x1
 
-    .line 170
     invoke-virtual {v4, v8, v9}, Lfnw;->a(II)D
 
     move-result-wide v8
@@ -2383,7 +2167,6 @@
 
     const/4 v9, 0x2
 
-    .line 171
     invoke-virtual {v4, v8, v9}, Lfnw;->a(II)D
 
     move-result-wide v8
@@ -2430,19 +2213,16 @@
 
     add-double/2addr v6, v8
 
-    .line 173
     const-wide/16 v8, 0x0
 
     cmpl-double v8, v6, v8
 
     if-eqz v8, :cond_3
 
-    .line 174
     const-wide/high16 v8, 0x3ff0000000000000L    # 1.0
 
     div-double v22, v8, v6
 
-    .line 175
     iget-object v6, v4, Lfnw;->a:[D
 
     const/4 v7, 0x4
@@ -2787,7 +2567,6 @@
 
     invoke-virtual/range {v5 .. v23}, Lfnw;->a(DDDDDDDDD)V
 
-    .line 176
     :cond_3
     move-object/from16 v0, p0
 
@@ -2799,7 +2578,6 @@
 
     invoke-virtual {v4, v5}, Lfnw;->b(Lfnw;)V
 
-    .line 177
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfpk;->E:Lfnw;
@@ -2814,7 +2592,6 @@
 
     invoke-static {v4, v5, v6}, Lfnw;->a(Lfnw;Lfnw;Lfnw;)V
 
-    .line 178
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfpk;->e:Lfnw;
@@ -2829,7 +2606,6 @@
 
     invoke-static {v4, v5, v6}, Lfnw;->a(Lfnw;Lfnw;Lfnw;)V
 
-    .line 179
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfpk;->k:Lfnw;
@@ -2844,7 +2620,6 @@
 
     invoke-static {v4, v5, v6}, Lfnw;->a(Lfnw;Lfnz;Lfnz;)V
 
-    .line 180
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfpk;->k:Lfnw;
@@ -2859,14 +2634,12 @@
 
     invoke-static {v4, v5, v6}, Lfnw;->a(Lfnw;Lfnw;Lfnw;)V
 
-    .line 181
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfpk;->E:Lfnw;
 
     invoke-virtual {v4}, Lfnw;->b()V
 
-    .line 182
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfpk;->E:Lfnw;
@@ -2875,7 +2648,6 @@
 
     iget-object v5, v0, Lfpk;->D:Lfnw;
 
-    .line 183
     iget-object v6, v4, Lfnw;->a:[D
 
     const/4 v7, 0x0
@@ -2892,7 +2664,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 184
     iget-object v6, v4, Lfnw;->a:[D
 
     const/4 v7, 0x1
@@ -2909,7 +2680,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 185
     iget-object v6, v4, Lfnw;->a:[D
 
     const/4 v7, 0x2
@@ -2926,7 +2696,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 186
     iget-object v6, v4, Lfnw;->a:[D
 
     const/4 v7, 0x3
@@ -2943,7 +2712,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 187
     iget-object v6, v4, Lfnw;->a:[D
 
     const/4 v7, 0x4
@@ -2960,7 +2728,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 188
     iget-object v6, v4, Lfnw;->a:[D
 
     const/4 v7, 0x5
@@ -2977,7 +2744,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 189
     iget-object v6, v4, Lfnw;->a:[D
 
     const/4 v7, 0x6
@@ -2994,7 +2760,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 190
     iget-object v6, v4, Lfnw;->a:[D
 
     const/4 v7, 0x7
@@ -3011,7 +2776,6 @@
 
     aput-wide v8, v6, v7
 
-    .line 191
     iget-object v4, v4, Lfnw;->a:[D
 
     const/16 v6, 0x8
@@ -3028,7 +2792,6 @@
 
     aput-wide v8, v4, v6
 
-    .line 192
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfpk;->E:Lfnw;
@@ -3043,7 +2806,6 @@
 
     invoke-static {v4, v5, v6}, Lfnw;->a(Lfnw;Lfnw;Lfnw;)V
 
-    .line 193
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfpk;->e:Lfnw;
@@ -3054,7 +2816,6 @@
 
     invoke-virtual {v4, v5}, Lfnw;->a(Lfnw;)V
 
-    .line 194
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfpk;->p:Lfnz;
@@ -3065,7 +2826,6 @@
 
     invoke-static {v4, v5}, Lfsi;->a(Lfnz;Lfnw;)V
 
-    .line 195
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lfpk;->d:Lfnw;
@@ -3080,10 +2840,8 @@
 
     invoke-static {v4, v5, v6}, Lfnw;->a(Lfnw;Lfnw;Lfnw;)V
 
-    .line 196
     invoke-direct/range {p0 .. p0}, Lfpk;->c()V
 
-    .line 199
     :goto_2
     move-wide/from16 v0, p2
 
@@ -3093,12 +2851,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 200
     monitor-exit p0
 
     return-void
 
-    .line 198
     :cond_4
     :try_start_2
     move-object/from16 v0, p0

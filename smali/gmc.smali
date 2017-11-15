@@ -25,13 +25,9 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgmc;->a:Lglx;
 
-    .line 2
     invoke-virtual {v0}, Lglx;->c()V
 
-    .line 3
     return-void
 .end method

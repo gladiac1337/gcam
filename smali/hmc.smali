@@ -109,8 +109,6 @@
 .method protected final a(Lhmb;Landroid/content/ServiceConnection;)Z
     .locals 5
 
-    .prologue
-    .line 1
     const-string v0, "ServiceConnection must not be null"
 
     invoke-static {p2, v0}, Lhjg;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -142,16 +140,13 @@
 
     invoke-virtual {v2, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8
     :goto_0
     iget-boolean v0, v0, Lhmd;->c:Z
 
-    .line 9
     monitor-exit v1
 
     return v0
 
-    .line 1
     :cond_0
     iget-object v2, p0, Lhmc;->c:Landroid/os/Handler;
 
@@ -203,7 +198,6 @@
 
     throw v0
 
-    .line 9
     :catchall_0
     move-exception v0
 
@@ -213,27 +207,21 @@
 
     throw v0
 
-    .line 1
     :cond_1
     :try_start_1
     invoke-virtual {v0, p2}, Lhmd;->a(Landroid/content/ServiceConnection;)V
 
-    .line 2
     iget v2, v0, Lhmd;->b:I
 
-    .line 3
     packed-switch v2, :pswitch_data_0
 
     goto :goto_0
 
-    .line 4
     :pswitch_0
     iget-object v2, v0, Lhmd;->f:Landroid/content/ComponentName;
 
-    .line 6
     iget-object v3, v0, Lhmd;->d:Landroid/os/IBinder;
 
-    .line 7
     invoke-interface {p2, v2, v3}, Landroid/content/ServiceConnection;->onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
 
     goto :goto_0
@@ -245,7 +233,6 @@
 
     goto :goto_0
 
-    .line 3
     nop
 
     :pswitch_data_0
@@ -258,8 +245,6 @@
 .method protected final b(Lhmb;Landroid/content/ServiceConnection;)V
     .locals 6
 
-    .prologue
-    .line 10
     const-string v0, "ServiceConnection must not be null"
 
     invoke-static {p2, v0}, Lhjg;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -317,7 +302,6 @@
 
     throw v0
 
-    .line 13
     :catchall_0
     move-exception v0
 
@@ -327,7 +311,6 @@
 
     throw v0
 
-    .line 10
     :cond_0
     :try_start_1
     invoke-virtual {v0, p2}, Lhmd;->b(Landroid/content/ServiceConnection;)Z
@@ -374,7 +357,6 @@
 
     throw v0
 
-    .line 12
     :cond_1
     invoke-static {}, Lhmo;->c()V
 
@@ -382,7 +364,6 @@
 
     invoke-interface {v2, p2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 13
     invoke-virtual {v0}, Lhmd;->b()Z
 
     move-result v0
@@ -414,21 +395,17 @@
 .method public final handleMessage(Landroid/os/Message;)Z
     .locals 8
 
-    .prologue
     const/4 v0, 0x0
 
     const/4 v2, 0x1
 
-    .line 14
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 31
     :goto_0
     return v0
 
-    .line 14
     :pswitch_0
     iget-object v3, p0, Lhmc;->a:Ljava/util/HashMap;
 
@@ -455,32 +432,24 @@
 
     if-eqz v4, :cond_1
 
-    .line 15
     iget-boolean v4, v1, Lhmd;->c:Z
 
-    .line 16
     if-eqz v4, :cond_0
 
-    .line 17
     iget-object v4, v1, Lhmd;->g:Lhmc;
 
-    .line 18
     iget-object v4, v4, Lhmc;->c:Landroid/os/Handler;
 
-    .line 19
     const/4 v5, 0x1
 
     iget-object v6, v1, Lhmd;->e:Lhmb;
 
     invoke-virtual {v4, v5, v6}, Landroid/os/Handler;->removeMessages(ILjava/lang/Object;)V
 
-    .line 20
     iget-object v4, v1, Lhmd;->g:Lhmc;
 
-    .line 21
     iget-object v4, v4, Lhmc;->b:Landroid/content/Context;
 
-    .line 22
     invoke-static {v4, v1}, Lhmo;->a(Landroid/content/Context;Landroid/content/ServiceConnection;)V
 
     const/4 v4, 0x0
@@ -491,7 +460,6 @@
 
     iput v4, v1, Lhmd;->b:I
 
-    .line 23
     :cond_0
     iget-object v1, p0, Lhmc;->a:Ljava/util/HashMap;
 
@@ -533,10 +501,8 @@
 
     if-eqz v1, :cond_3
 
-    .line 24
     iget v3, v1, Lhmd;->b:I
 
-    .line 25
     const/4 v5, 0x3
 
     if-ne v3, v5, :cond_3
@@ -581,25 +547,19 @@
 
     invoke-static {v3, v5, v6}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 26
     iget-object v3, v1, Lhmd;->f:Landroid/content/ComponentName;
 
-    .line 27
     if-nez v3, :cond_2
 
-    .line 28
     const/4 v3, 0x0
 
-    .line 29
     :cond_2
     if-nez v3, :cond_4
 
     new-instance v3, Landroid/content/ComponentName;
 
-    .line 30
     iget-object v0, v0, Lhmb;->a:Ljava/lang/String;
 
-    .line 31
     const-string v5, "unknown"
 
     invoke-direct {v3, v0, v5}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
@@ -630,7 +590,6 @@
 
     goto :goto_1
 
-    .line 14
     nop
 
     :pswitch_data_0

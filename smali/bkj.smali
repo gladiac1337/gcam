@@ -29,15 +29,12 @@
 .method public final a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lbkj;->a:Lbli;
 
     iget-object v1, p0, Lbkj;->b:Lbku;
 
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 2
     invoke-virtual {v0, v1}, Lbli;->a(Lbku;)Z
 
     move-result v0
@@ -57,10 +54,8 @@
 
     move-result-object v0
 
-    .line 3
     return-object v0
 
-    .line 2
     :cond_0
     const/4 v0, 0x0
 

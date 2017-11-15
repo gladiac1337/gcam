@@ -15,8 +15,6 @@
 .method constructor <init>(Lcci;Lcce;Lcbd;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lccj;->c:Lcci;
 
     iput-object p2, p0, Lccj;->a:Lcce;
@@ -33,22 +31,16 @@
 .method public final a()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v1, p0, Lccj;->a:Lcce;
 
     iget-object v0, p0, Lccj;->b:Lcbd;
 
-    .line 3
     iget-object v0, v0, Lcbd;->a:Lcdw;
 
-    .line 4
     iget-object v2, p0, Lccj;->c:Lcci;
 
-    .line 5
     iget-object v2, v2, Lcci;->d:Ljig;
 
-    .line 6
     invoke-interface {v2}, Ljig;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -60,10 +52,8 @@
     :goto_0
     invoke-virtual {v1, v0}, Lcce;->c(Z)V
 
-    .line 7
     return-void
 
-    .line 6
     :cond_0
     const/4 v0, 0x0
 

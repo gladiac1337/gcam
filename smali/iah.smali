@@ -16,8 +16,6 @@
 .method constructor <init>(Liag;Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Liah;->b:Liag;
 
     iput-object p2, p0, Liah;->a:Ljava/lang/Object;
@@ -32,22 +30,16 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Liah;->b:Liag;
 
     iget-object v1, p0, Liah;->a:Ljava/lang/Object;
 
-    .line 3
     iput-object v1, v0, Liag;->c:Ljava/lang/Object;
 
-    .line 4
     iget-object v0, p0, Liah;->b:Liag;
 
-    .line 5
     iget-object v0, v0, Liag;->b:Ljava/util/Set;
 
-    .line 6
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -65,7 +57,6 @@
 
     check-cast v0, Licn;
 
-    .line 7
     :try_start_0
     iget-object v2, p0, Liah;->a:Ljava/lang/Object;
 
@@ -75,13 +66,11 @@
 
     goto :goto_0
 
-    .line 10
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 11
     :cond_0
     return-void
 .end method

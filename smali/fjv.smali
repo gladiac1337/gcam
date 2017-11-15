@@ -28,35 +28,24 @@
 .method public constructor <init>(Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lfjv;->a:Ljxn;
 
-    .line 3
     iput-object p2, p0, Lfjv;->b:Ljxn;
 
-    .line 4
     iput-object p3, p0, Lfjv;->c:Ljxn;
 
-    .line 5
     iput-object p4, p0, Lfjv;->d:Ljxn;
 
-    .line 6
     iput-object p5, p0, Lfjv;->e:Ljxn;
 
-    .line 7
     iput-object p6, p0, Lfjv;->f:Ljxn;
 
-    .line 8
     iput-object p7, p0, Lfjv;->g:Ljxn;
 
-    .line 9
     iput-object p8, p0, Lfjv;->h:Ljxn;
 
-    .line 10
     return-void
 .end method
 
@@ -65,16 +54,12 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 8
 
-    .prologue
-    .line 11
-    .line 12
     new-instance v0, Lfjt;
 
     iget-object v1, p0, Lfjv;->a:Ljxn;
 
     iget-object v2, p0, Lfjv;->b:Ljxn;
 
-    .line 13
     invoke-interface {v2}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v2
@@ -83,7 +68,6 @@
 
     iget-object v3, p0, Lfjv;->c:Ljxn;
 
-    .line 14
     invoke-interface {v3}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v3
@@ -92,7 +76,6 @@
 
     iget-object v4, p0, Lfjv;->d:Ljxn;
 
-    .line 15
     invoke-interface {v4}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v4
@@ -101,7 +84,6 @@
 
     iget-object v5, p0, Lfjv;->e:Ljxn;
 
-    .line 16
     invoke-interface {v5}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v5
@@ -110,7 +92,6 @@
 
     iget-object v6, p0, Lfjv;->f:Ljxn;
 
-    .line 17
     invoke-interface {v6}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -119,12 +100,10 @@
 
     iget-object v7, p0, Lfjv;->g:Ljxn;
 
-    .line 18
     invoke-interface {v7}, Ljxn;->a()Ljava/lang/Object;
 
     iget-object v7, p0, Lfjv;->h:Ljxn;
 
-    .line 19
     invoke-interface {v7}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v7
@@ -133,6 +112,5 @@
 
     invoke-direct/range {v0 .. v7}, Lfjt;-><init>(Ljxn;Landroid/content/Context;Lhdc;Lhda;Lbjf;Lhem;Lfge;)V
 
-    .line 20
     return-object v0
 .end method

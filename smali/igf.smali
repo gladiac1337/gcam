@@ -14,14 +14,10 @@
 .method public constructor <init>(Lify;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ligf;->e:Lify;
 
-    .line 3
     return-void
 .end method
 
@@ -30,8 +26,6 @@
 .method public final a(ILici;)J
     .locals 2
 
-    .prologue
-    .line 16
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0, p1, p2}, Lify;->a(ILici;)J
@@ -44,8 +38,6 @@
 .method public final a()Ligc;
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->a()Ligc;
@@ -58,8 +50,6 @@
 .method public final a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 33
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0, p1}, Lify;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
@@ -72,8 +62,6 @@
 .method public final a(Landroid/hardware/camera2/CameraCharacteristics$Key;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 35
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0, p1, p2}, Lify;->a(Landroid/hardware/camera2/CameraCharacteristics$Key;Ljava/lang/Object;)Ljava/lang/Object;
@@ -86,8 +74,6 @@
 .method public final a(I)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0, p1}, Lify;->a(I)Ljava/util/List;
@@ -100,8 +86,6 @@
 .method public final a_(Lici;)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0, p1}, Lify;->a_(Lici;)Ljava/util/List;
@@ -114,8 +98,6 @@
 .method public final b()Lige;
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->b()Lige;
@@ -128,8 +110,6 @@
 .method public final b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 34
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0, p1}, Lify;->b(Landroid/hardware/camera2/CameraCharacteristics$Key;)Ljava/lang/Object;
@@ -142,8 +122,6 @@
 .method public final b(I)Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 12
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0, p1}, Lify;->b(I)Ljava/util/List;
@@ -156,8 +134,6 @@
 .method public final c()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 11
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->c()Ljava/util/List;
@@ -170,8 +146,6 @@
 .method public final d()I
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->d()I
@@ -184,8 +158,6 @@
 .method public final e()Landroid/graphics/Rect;
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->e()Landroid/graphics/Rect;
@@ -198,8 +170,6 @@
 .method public final f()Z
     .locals 1
 
-    .prologue
-    .line 19
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->f()Z
@@ -212,8 +182,6 @@
 .method public final g()Z
     .locals 1
 
-    .prologue
-    .line 21
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->g()Z
@@ -226,8 +194,6 @@
 .method public final h()I
     .locals 1
 
-    .prologue
-    .line 30
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->h()I
@@ -240,8 +206,6 @@
 .method public final i()Ligd;
     .locals 1
 
-    .prologue
-    .line 29
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->i()Ligd;
@@ -254,8 +218,6 @@
 .method public final j()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 13
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->j()Ljava/util/List;
@@ -268,8 +230,6 @@
 .method public k()Z
     .locals 1
 
-    .prologue
-    .line 22
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->k()Z
@@ -282,8 +242,6 @@
 .method public final l()I
     .locals 1
 
-    .prologue
-    .line 25
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->l()I
@@ -296,8 +254,6 @@
 .method public final m()I
     .locals 1
 
-    .prologue
-    .line 26
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->m()I
@@ -310,8 +266,6 @@
 .method public final n()F
     .locals 1
 
-    .prologue
-    .line 27
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->n()F
@@ -324,8 +278,6 @@
 .method public final o()F
     .locals 1
 
-    .prologue
-    .line 28
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->o()F
@@ -338,8 +290,6 @@
 .method public final p()Z
     .locals 1
 
-    .prologue
-    .line 17
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->p()Z
@@ -352,8 +302,6 @@
 .method public final q()Z
     .locals 1
 
-    .prologue
-    .line 18
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->q()Z
@@ -366,8 +314,6 @@
 .method public final r()Z
     .locals 1
 
-    .prologue
-    .line 24
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->r()Z
@@ -380,8 +326,6 @@
 .method public final s()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->s()Ljava/util/List;
@@ -394,8 +338,6 @@
 .method public final t()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 14
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->t()Ljava/util/List;
@@ -408,8 +350,6 @@
 .method public final u()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 15
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->u()Ljava/util/List;
@@ -422,8 +362,6 @@
 .method public v()Z
     .locals 1
 
-    .prologue
-    .line 23
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->v()Z
@@ -436,8 +374,6 @@
 .method public final w()[B
     .locals 1
 
-    .prologue
-    .line 32
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->w()[B
@@ -450,8 +386,6 @@
 .method public final x()Z
     .locals 1
 
-    .prologue
-    .line 31
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->x()Z
@@ -464,8 +398,6 @@
 .method public final y()Z
     .locals 1
 
-    .prologue
-    .line 20
     iget-object v0, p0, Ligf;->e:Lify;
 
     invoke-interface {v0}, Lify;->y()Z

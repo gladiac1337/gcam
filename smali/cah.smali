@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,11 +20,8 @@
 .method public final a(Lcdc;)V
     .locals 4
 
-    .prologue
-    .line 2
     sget-object v0, Lcag;->a:Ljava/lang/String;
 
-    .line 3
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -65,9 +60,7 @@
 
     move-result-object v1
 
-    .line 4
     invoke-static {v0, v1}, Lbhz;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     return-void
 .end method

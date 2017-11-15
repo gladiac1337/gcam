@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 4
     new-instance v0, Lbku;
 
     const-string v1, "camera.debug.trace"
@@ -23,7 +21,6 @@
 
     sput-object v0, Lcgt;->a:Lbku;
 
-    .line 5
     new-instance v0, Lble;
 
     const-string v1, "camera.debug.trace"
@@ -36,8 +33,6 @@
 .method public static a(Lbli;)Licz;
     .locals 2
 
-    .prologue
-    .line 1
     sget-object v0, Lcgt;->a:Lbku;
 
     invoke-virtual {p0, v0}, Lbli;->a(Lbku;)Z
@@ -46,14 +41,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Licx;
 
     const-string v1, "GCA"
 
     invoke-direct {v0, v1}, Licx;-><init>(Ljava/lang/String;)V
 
-    .line 3
     :goto_0
     return-object v0
 

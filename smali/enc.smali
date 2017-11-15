@@ -29,21 +29,16 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lenc;->a:Lenb;
 
     iget-object v1, p0, Lenc;->b:Lgry;
 
-    .line 2
     iget-object v2, v0, Lenb;->e:Leon;
 
-    .line 3
     iget-object v3, v0, Lenb;->o:Leoa;
 
     iget-object v3, v3, Leoa;->b:Landroid/net/Uri;
 
-    .line 4
     iget-object v0, v0, Lenb;->p:Ljuw;
 
     invoke-static {v0}, Ljuh;->b(Ljava/util/concurrent/Future;)Ljava/lang/Object;
@@ -52,9 +47,7 @@
 
     check-cast v0, Lftv;
 
-    .line 5
     invoke-virtual {v2, v3, v1, v0}, Leon;->a(Landroid/net/Uri;Lgry;Lftv;)V
 
-    .line 6
     return-void
 .end method

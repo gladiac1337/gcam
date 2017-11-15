@@ -14,8 +14,6 @@
 .method public constructor <init>(B)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lhkh;-><init>()V
 
     return-void

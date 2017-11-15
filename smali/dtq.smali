@@ -18,8 +18,6 @@
 .method constructor <init>(Ldtn;Ljvi;Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldtq;->c:Ldtn;
 
     iput-object p2, p0, Ldtq;->a:Ljvi;
@@ -36,27 +34,20 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ldtq;->c:Ldtn;
 
     iget-object v1, p0, Ldtq;->a:Ljvi;
 
-    .line 3
     invoke-virtual {v0, p1, v1}, Ldtn;->b(Ljava/lang/Object;Ljvi;)V
 
-    .line 4
     return-void
 .end method
 
 .method public final a(Ljava/lang/Throwable;)V
     .locals 5
 
-    .prologue
-    .line 5
     sget-object v0, Ldtn;->a:Ljava/lang/String;
 
-    .line 6
     iget-object v1, p0, Ldtq;->c:Ldtn;
 
     invoke-static {v1}, Ldtn;->a(Ldtn;)Ldtm;
@@ -69,7 +60,6 @@
 
     iget-object v2, p0, Ldtq;->c:Ldtn;
 
-    .line 7
     invoke-static {v2}, Ldtn;->b(Ldtn;)Ldtm;
 
     move-result-object v2
@@ -126,19 +116,15 @@
 
     move-result-object v1
 
-    .line 8
     invoke-static {v0, v1, p1}, Lbhz;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 9
     iget-object v0, p0, Ldtq;->c:Ldtn;
 
     iget-object v1, p0, Ldtq;->b:Ljava/lang/Object;
 
     iget-object v2, p0, Ldtq;->a:Ljvi;
 
-    .line 10
     invoke-virtual {v0, v1, v2}, Ldtn;->a(Ljava/lang/Object;Ljvi;)V
 
-    .line 11
     return-void
 .end method

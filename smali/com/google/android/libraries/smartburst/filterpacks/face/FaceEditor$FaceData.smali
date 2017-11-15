@@ -25,18 +25,14 @@
 .method public constructor <init>(Landroid/graphics/Rect;Landroid/graphics/Rect;Lcom/google/android/vision/face/Face;F)V
     .locals 6
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     invoke-static {p3, p4}, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceUtils;->getScaledBoundingBoxF(Lcom/google/android/vision/face/Face;F)Landroid/graphics/RectF;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceEditor$FaceData;->boundingBox:Landroid/graphics/RectF;
 
-    .line 5
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceEditor$FaceData;->boundingBox:Landroid/graphics/RectF;
 
     iget v1, p1, Landroid/graphics/Rect;->left:I
@@ -61,14 +57,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/RectF;->offset(FF)V
 
-    .line 6
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceEditor$FaceData;->landmarks:Ljava/util/List;
 
-    .line 7
     invoke-virtual {p3}, Lcom/google/android/vision/face/Face;->getLandmarks()Ljava/util/List;
 
     move-result-object v0
@@ -90,12 +84,10 @@
 
     check-cast v0, Lcom/google/android/vision/face/Landmark;
 
-    .line 8
     invoke-static {v0, p4}, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceUtils;->getScaledLandmarkPosition(Lcom/google/android/vision/face/Landmark;F)Landroid/graphics/PointF;
 
     move-result-object v2
 
-    .line 9
     iget v3, p1, Landroid/graphics/Rect;->left:I
 
     neg-int v3, v3
@@ -118,7 +110,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/graphics/PointF;->offset(FF)V
 
-    .line 10
     iget-object v3, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceEditor$FaceData;->landmarks:Ljava/util/List;
 
     invoke-virtual {v0}, Lcom/google/android/vision/face/Landmark;->getCategory()I
@@ -137,7 +128,6 @@
 
     goto :goto_0
 
-    .line 12
     :cond_0
     invoke-virtual {p3}, Lcom/google/android/vision/face/Face;->getIsSmilingScore()F
 
@@ -145,52 +135,44 @@
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceEditor$FaceData;->isSmilingScore:F
 
-    .line 13
     invoke-virtual {p3}, Lcom/google/android/vision/face/Face;->getIsLeftEyeOpenScore()F
 
     move-result v0
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceEditor$FaceData;->isLeftEyeOpenScore:F
 
-    .line 14
     invoke-virtual {p3}, Lcom/google/android/vision/face/Face;->getIsRightEyeOpenScore()F
 
     move-result v0
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceEditor$FaceData;->isRightEyeOpenScore:F
 
-    .line 15
     invoke-virtual {p3}, Lcom/google/android/vision/face/Face;->getRollDegrees()F
 
     move-result v0
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceEditor$FaceData;->rollDegrees:F
 
-    .line 16
     invoke-virtual {p3}, Lcom/google/android/vision/face/Face;->getYawDegrees()F
 
     move-result v0
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceEditor$FaceData;->yawDegrees:F
 
-    .line 17
     invoke-virtual {p3}, Lcom/google/android/vision/face/Face;->getTrackId()I
 
     move-result v0
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceEditor$FaceData;->trackId:I
 
-    .line 18
     return-void
 .end method
 
 .method public constructor <init>(Lcom/google/android/vision/face/Face;F)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 1
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, v2, v2, v2, v2}, Landroid/graphics/Rect;-><init>(IIII)V
@@ -201,6 +183,5 @@
 
     invoke-direct {p0, v0, v1, p1, p2}, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceEditor$FaceData;-><init>(Landroid/graphics/Rect;Landroid/graphics/Rect;Lcom/google/android/vision/face/Face;F)V
 
-    .line 2
     return-void
 .end method

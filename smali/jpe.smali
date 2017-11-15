@@ -13,8 +13,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 3
     new-instance v0, Ljpe;
 
     const-string v1, "APPEND"
@@ -23,7 +21,6 @@
 
     sput-object v0, Ljpe;->a:Ljpe;
 
-    .line 4
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljpe;
@@ -42,8 +39,6 @@
 .method private constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 2
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
@@ -54,8 +49,6 @@
 .method public static values()[Ljpe;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Ljpe;->b:[Ljpe;
 
     invoke-virtual {v0}, [Ljpe;->clone()Ljava/lang/Object;

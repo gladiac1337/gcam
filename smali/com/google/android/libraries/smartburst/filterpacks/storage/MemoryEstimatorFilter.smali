@@ -27,11 +27,8 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/Filter;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
 
-    .line 2
     return-void
 .end method
 
@@ -40,24 +37,20 @@
 .method public getSignature()Lcom/google/android/libraries/smartburst/filterfw/Signature;
     .locals 5
 
-    .prologue
     const/4 v4, 0x2
 
-    .line 8
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->single(Ljava/lang/Class;)Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v0
 
-    .line 9
     new-instance v1, Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     invoke-direct {v1}, Lcom/google/android/libraries/smartburst/filterfw/Signature;-><init>()V
 
     const-string v2, "frame"
 
-    .line 10
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/FrameType;->any()Lcom/google/android/libraries/smartburst/filterfw/FrameType;
 
     move-result-object v3
@@ -68,25 +61,20 @@
 
     const-string v2, "bufferCount"
 
-    .line 11
     invoke-virtual {v1, v2, v4, v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->addOutputPort(Ljava/lang/String;ILcom/google/android/libraries/smartburst/filterfw/FrameType;)Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 12
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;->disallowOtherPorts()Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     move-result-object v0
 
-    .line 13
     return-object v0
 .end method
 
 .method protected onProcess()V
     .locals 5
 
-    .prologue
-    .line 14
     const-string v0, "frame"
 
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterpacks/storage/MemoryEstimatorFilter;->getConnectedInputPort(Ljava/lang/String;)Lcom/google/android/libraries/smartburst/filterfw/InputPort;
@@ -97,12 +85,10 @@
 
     move-result-object v0
 
-    .line 15
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterpacks/storage/MemoryEstimatorFilter;->mRingBufferSize:I
 
     if-nez v1, :cond_0
 
-    .line 16
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/Frame;->getElementCount()I
 
     move-result v1
@@ -117,27 +103,22 @@
 
     mul-int/2addr v0, v1
 
-    .line 17
     iget v1, p0, Lcom/google/android/libraries/smartburst/filterpacks/storage/MemoryEstimatorFilter;->mStorageBuffers:I
 
     mul-int/2addr v1, v0
 
-    .line 18
     iget v2, p0, Lcom/google/android/libraries/smartburst/filterpacks/storage/MemoryEstimatorFilter;->mMaxMemory:I
 
     sub-int v1, v2, v1
 
-    .line 19
     if-gez v1, :cond_1
 
-    .line 20
     const-string v0, "MemoryEstimatorFilter"
 
     const-string v2, "Warning: Frame store requirements exceed max memory!"
 
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 22
     :goto_0
     iget v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/storage/MemoryEstimatorFilter;->mRingBufferSize:I
 
@@ -155,7 +136,6 @@
 
     iput v0, p0, Lcom/google/android/libraries/smartburst/filterpacks/storage/MemoryEstimatorFilter;->mRingBufferSize:I
 
-    .line 23
     const-string v0, "MemoryEstimatorFilter"
 
     iget v2, p0, Lcom/google/android/libraries/smartburst/filterpacks/storage/MemoryEstimatorFilter;->mRingBufferSize:I
@@ -198,7 +178,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 24
     :cond_0
     const-string v0, "bufferCount"
 
@@ -206,7 +185,6 @@
 
     move-result-object v0
 
-    .line 25
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->fetchAvailableFrame([I)Lcom/google/android/libraries/smartburst/filterfw/Frame;
@@ -217,7 +195,6 @@
 
     move-result-object v1
 
-    .line 26
     iget v2, p0, Lcom/google/android/libraries/smartburst/filterpacks/storage/MemoryEstimatorFilter;->mRingBufferSize:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -226,13 +203,10 @@
 
     invoke-virtual {v1, v2}, Lcom/google/android/libraries/smartburst/filterfw/FrameValue;->setValue(Ljava/lang/Object;)V
 
-    .line 27
     invoke-virtual {v0, v1}, Lcom/google/android/libraries/smartburst/filterfw/OutputPort;->pushFrame(Lcom/google/android/libraries/smartburst/filterfw/Frame;)V
 
-    .line 28
     return-void
 
-    .line 21
     :cond_1
     div-int v0, v1, v0
 
@@ -244,19 +218,13 @@
 .method public setMemoryInfo(IIII)V
     .locals 0
 
-    .prologue
-    .line 3
     iput p1, p0, Lcom/google/android/libraries/smartburst/filterpacks/storage/MemoryEstimatorFilter;->mMaxMemory:I
 
-    .line 4
     iput p2, p0, Lcom/google/android/libraries/smartburst/filterpacks/storage/MemoryEstimatorFilter;->mStorageBuffers:I
 
-    .line 5
     iput p3, p0, Lcom/google/android/libraries/smartburst/filterpacks/storage/MemoryEstimatorFilter;->mMinBuffers:I
 
-    .line 6
     iput p4, p0, Lcom/google/android/libraries/smartburst/filterpacks/storage/MemoryEstimatorFilter;->mMaxBuffers:I
 
-    .line 7
     return-void
 .end method

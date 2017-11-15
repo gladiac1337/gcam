@@ -11,8 +11,6 @@
 .method constructor <init>(Lhbs;)V
     .locals 1
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhbt;->a:Lhbs;
 
     const/4 v0, 0x0
@@ -27,22 +25,16 @@
 .method public S()V
     .locals 0
 
-    .prologue
-    .line 2
     return-void
 .end method
 
 .method public final a()V
     .locals 4
 
-    .prologue
-    .line 3
     iget-object v0, p0, Lhbt;->a:Lhbs;
 
-    .line 4
     iget-object v0, v0, Lhbs;->a:Lhcs;
 
-    .line 6
     iget-object v1, v0, Lhcs;->n:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
@@ -71,16 +63,13 @@
 
     move-result-object v1
 
-    .line 7
     invoke-virtual {v1}, Landroid/view/ViewPropertyAnimator;->start()V
 
-    .line 8
     iget-object v0, v0, Lhcs;->e:Landroid/view/View;
 
     const/16 v1, 0xf06
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setSystemUiVisibility(I)V
 
-    .line 9
     return-void
 .end method

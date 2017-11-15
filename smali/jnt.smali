@@ -14,11 +14,8 @@
 .method public constructor <init>(Ljava/util/SortedMap;Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Ljno;-><init>(Ljava/util/Map;Ljava/lang/Object;)V
 
-    .line 2
     return-void
 .end method
 
@@ -27,8 +24,6 @@
 .method synthetic a()Ljava/util/Map;
     .locals 1
 
-    .prologue
-    .line 22
     invoke-virtual {p0}, Ljnt;->c()Ljava/util/SortedMap;
 
     move-result-object v0
@@ -39,8 +34,6 @@
 .method synthetic b()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 23
     invoke-virtual {p0}, Ljnt;->c()Ljava/util/SortedMap;
 
     move-result-object v0
@@ -51,8 +44,6 @@
 .method c()Ljava/util/SortedMap;
     .locals 1
 
-    .prologue
-    .line 3
     invoke-super {p0}, Ljno;->a()Ljava/util/Map;
 
     move-result-object v0
@@ -65,13 +56,10 @@
 .method public comparator()Ljava/util/Comparator;
     .locals 2
 
-    .prologue
-    .line 4
     iget-object v1, p0, Ljnt;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 5
     :try_start_0
     invoke-virtual {p0}, Ljnt;->c()Ljava/util/SortedMap;
 
@@ -85,7 +73,6 @@
 
     return-object v0
 
-    .line 6
     :catchall_0
     move-exception v0
 
@@ -99,13 +86,10 @@
 .method public firstKey()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 7
     iget-object v1, p0, Ljnt;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 8
     :try_start_0
     invoke-virtual {p0}, Ljnt;->c()Ljava/util/SortedMap;
 
@@ -119,7 +103,6 @@
 
     return-object v0
 
-    .line 9
     :catchall_0
     move-exception v0
 
@@ -133,13 +116,10 @@
 .method public headMap(Ljava/lang/Object;)Ljava/util/SortedMap;
     .locals 3
 
-    .prologue
-    .line 10
     iget-object v1, p0, Ljnt;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 11
     :try_start_0
     invoke-virtual {p0}, Ljnt;->c()Ljava/util/SortedMap;
 
@@ -159,7 +139,6 @@
 
     return-object v0
 
-    .line 12
     :catchall_0
     move-exception v0
 
@@ -173,13 +152,10 @@
 .method public lastKey()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 13
     iget-object v1, p0, Ljnt;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 14
     :try_start_0
     invoke-virtual {p0}, Ljnt;->c()Ljava/util/SortedMap;
 
@@ -193,7 +169,6 @@
 
     return-object v0
 
-    .line 15
     :catchall_0
     move-exception v0
 
@@ -207,13 +182,10 @@
 .method public subMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/SortedMap;
     .locals 3
 
-    .prologue
-    .line 16
     iget-object v1, p0, Ljnt;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 17
     :try_start_0
     invoke-virtual {p0}, Ljnt;->c()Ljava/util/SortedMap;
 
@@ -233,7 +205,6 @@
 
     return-object v0
 
-    .line 18
     :catchall_0
     move-exception v0
 
@@ -247,13 +218,10 @@
 .method public tailMap(Ljava/lang/Object;)Ljava/util/SortedMap;
     .locals 3
 
-    .prologue
-    .line 19
     iget-object v1, p0, Ljnt;->a:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 20
     :try_start_0
     invoke-virtual {p0}, Ljnt;->c()Ljava/util/SortedMap;
 
@@ -273,7 +241,6 @@
 
     return-object v0
 
-    .line 21
     :catchall_0
     move-exception v0
 

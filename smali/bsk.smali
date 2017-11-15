@@ -15,19 +15,13 @@
 .method constructor <init>(Lbsj;Lfqy;Lflj;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbsk;->c:Lbsj;
 
-    .line 3
     iput-object p2, p0, Lbsk;->a:Lfqy;
 
-    .line 4
     iput-object p3, p0, Lbsk;->b:Lflj;
 
-    .line 5
     return-void
 .end method

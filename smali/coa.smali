@@ -35,11 +35,8 @@
 .method public final a(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 1
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
@@ -48,11 +45,9 @@
 
     sget-object v0, Lcnv;->c:Lcnv;
 
-    .line 3
     :goto_0
     return-object v0
 
-    .line 2
     :cond_0
     sget-object v0, Lcnv;->b:Lcnv;
 

@@ -26,11 +26,8 @@
 .method public final a()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhvp;->a:Lhvt;
 
-    .line 2
     iget-object v1, v0, Lhvt;->a:Ljava/lang/Object;
 
     monitor-enter v1
@@ -50,10 +47,8 @@
 
     invoke-virtual {v1, v0}, Lhvs;->a(Lhvo;)V
 
-    .line 3
     return-void
 
-    .line 2
     :catchall_0
     move-exception v0
 

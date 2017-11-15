@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 11
     new-instance v0, Lvi;
 
     invoke-direct {v0}, Lvi;-><init>()V
@@ -29,14 +27,10 @@
 .method constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Lhg;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    .line 2
     if-eqz p2, :cond_0
 
-    .line 4
     :goto_0
     invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
@@ -44,14 +38,11 @@
 
     iput-object v0, p0, Lvh;->a:Landroid/os/Parcelable;
 
-    .line 5
     return-void
 
-    .line 2
     :cond_0
     const-class v0, Luv;
 
-    .line 3
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object p2
@@ -62,11 +53,8 @@
 .method public constructor <init>(Landroid/os/Parcelable;)V
     .locals 0
 
-    .prologue
-    .line 6
     invoke-direct {p0, p1}, Lhg;-><init>(Landroid/os/Parcelable;)V
 
-    .line 7
     return-void
 .end method
 
@@ -75,17 +63,13 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    .prologue
-    .line 8
     invoke-super {p0, p1, p2}, Lhg;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 9
     iget-object v0, p0, Lvh;->a:Landroid/os/Parcelable;
 
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 10
     return-void
 .end method

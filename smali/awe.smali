@@ -16,8 +16,6 @@
 .method public constructor <init>(Ljava/util/List;Laxr;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lawe;->a:Ljava/util/List;
 
     iput-object p2, p0, Lawe;->b:Laxr;
@@ -32,13 +30,10 @@
 .method public final run()V
     .locals 7
 
-    .prologue
     const/4 v2, 0x0
 
     const/4 v4, 0x1
 
-    .line 2
-    .line 4
     iget-object v0, p0, Lawe;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -62,28 +57,24 @@
 
     check-cast v0, Lawd;
 
-    .line 5
     invoke-interface {v0}, Lawd;->a()Z
 
     move-result v6
 
     and-int/2addr v3, v6
 
-    .line 6
     invoke-interface {v0}, Lawd;->a()Z
 
     move-result v6
 
     if-eqz v6, :cond_8
 
-    .line 7
     invoke-interface {v0}, Lawd;->c()Ljava/lang/Throwable;
 
     move-result-object v6
 
     if-eqz v6, :cond_8
 
-    .line 8
     iget-object v1, p0, Lawe;->b:Laxr;
 
     invoke-interface {v0}, Lawd;->c()Ljava/lang/Throwable;
@@ -97,10 +88,8 @@
     :goto_1
     move v1, v0
 
-    .line 10
     goto :goto_0
 
-    .line 11
     :cond_0
     if-nez v1, :cond_1
 
@@ -112,7 +101,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 12
     :cond_1
     iget-object v0, p0, Lawe;->a:Ljava/util/List;
 
@@ -133,27 +121,22 @@
 
     check-cast v0, Lawd;
 
-    .line 13
     invoke-interface {v0}, Lawd;->close()V
 
     goto :goto_2
 
-    .line 16
     :cond_2
     if-nez v3, :cond_4
 
-    .line 29
     :cond_3
     :goto_3
     return-void
 
-    .line 18
     :cond_4
     new-instance v3, Lawj;
 
     invoke-direct {v3}, Lawj;-><init>()V
 
-    .line 19
     :try_start_0
     iget-object v0, p0, Lawe;->a:Ljava/util/List;
 
@@ -174,14 +157,12 @@
 
     check-cast v0, Lawd;
 
-    .line 20
     invoke-interface {v0}, Lawd;->a()Z
 
     move-result v1
 
     invoke-static {v1}, Liya;->b(Z)V
 
-    .line 21
     invoke-interface {v0}, Lawd;->c()Ljava/lang/Throwable;
 
     move-result-object v1
@@ -193,18 +174,14 @@
     :goto_5
     invoke-static {v1}, Liya;->b(Z)V
 
-    .line 22
     invoke-interface {v0}, Lawd;->b()Lich;
 
     move-result-object v1
 
-    .line 23
     if-eqz v1, :cond_6
 
-    .line 24
     invoke-virtual {v3, v1}, Lawj;->add(Ljava/lang/Object;)Z
 
-    .line 26
     :goto_6
     invoke-interface {v0}, Lawd;->close()V
     :try_end_0
@@ -212,7 +189,6 @@
 
     goto :goto_4
 
-    .line 30
     :catchall_0
     move-exception v0
 
@@ -225,10 +201,8 @@
     :cond_5
     move v1, v2
 
-    .line 21
     goto :goto_5
 
-    .line 25
     :cond_6
     :try_start_1
     iget-object v1, p0, Lawe;->b:Laxr;
@@ -239,7 +213,6 @@
 
     goto :goto_6
 
-    .line 28
     :cond_7
     iget-object v0, p0, Lawe;->b:Laxr;
 

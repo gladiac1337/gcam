@@ -16,8 +16,6 @@
 .method constructor <init>(Ljava/util/EnumSet;)V
     .locals 1
 
-    .prologue
-    .line 1
     const/16 v0, 0xa
 
     iput v0, p0, Lisz;->a:I
@@ -34,16 +32,12 @@
 .method public final synthetic a(Litk;)Ljava/lang/Object;
     .locals 7
 
-    .prologue
     const/high16 v6, 0x41f00000    # 30.0f
 
-    .line 2
-    .line 3
     iget v0, p0, Lisz;->a:I
 
     iget-object v1, p0, Lisz;->b:Ljava/util/EnumSet;
 
-    .line 4
     sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     int-to-long v4, v0
@@ -60,11 +54,9 @@
 
     float-to-int v0, v0
 
-    .line 5
     new-instance v2, Lirr;
 
     invoke-direct {v2, v1, v0, v6}, Lirr;-><init>(Ljava/util/EnumSet;IF)V
 
-    .line 6
     return-object v2
 .end method

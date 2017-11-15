@@ -22,8 +22,6 @@
 .method public final getMessage()Ljava/lang/String;
     .locals 7
 
-    .prologue
-    .line 1
     const/4 v0, 0x1
 
     new-instance v3, Ljava/util/ArrayList;
@@ -71,14 +69,11 @@
 
     const/4 v2, 0x0
 
-    .line 2
     :cond_0
     iget-object v0, v0, Lhru;->a:Lhkc;
 
-    .line 3
     iget-object v0, v0, Lhkc;->a:Ljava/lang/String;
 
-    .line 4
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0

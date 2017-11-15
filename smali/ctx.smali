@@ -11,8 +11,6 @@
 .method constructor <init>(Lcsk;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lctx;->a:Lcsk;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

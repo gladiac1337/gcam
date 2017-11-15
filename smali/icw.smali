@@ -22,26 +22,20 @@
 .method public constructor <init>(Liau;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8
     iput-object p1, p0, Licw;->d:Liau;
 
-    .line 9
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Licw;->b:Ljava/lang/Object;
 
-    .line 10
     iput v2, p0, Licw;->c:I
 
-    .line 11
     new-instance v0, Licj;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -52,7 +46,6 @@
 
     iput-object v0, p0, Licw;->a:Licj;
 
-    .line 12
     const/4 v0, 0x2
 
     new-array v0, v0, [Liau;
@@ -67,7 +60,6 @@
 
     aput-object v2, v0, v1
 
-    .line 13
     invoke-static {v0}, Liav;->b([Liau;)Liau;
 
     move-result-object v0
@@ -76,22 +68,18 @@
 
     invoke-direct {v1}, Libi;-><init>()V
 
-    .line 14
     invoke-static {v0, v1}, Liav;->a(Liau;Ljhj;)Liau;
 
     move-result-object v0
 
     iput-object v0, p0, Licw;->e:Liau;
 
-    .line 15
     return-void
 .end method
 
 .method public static a()Ljava/lang/String;
     .locals 6
 
-    .prologue
-    .line 1
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -100,10 +88,8 @@
 
     move-result-object v2
 
-    .line 2
     const-string v1, ""
 
-    .line 3
     const/4 v0, 0x2
 
     :goto_0
@@ -111,7 +97,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 4
     aget-object v3, v2, v0
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -166,12 +151,10 @@
 
     move-result-object v1
 
-    .line 5
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 6
     :cond_0
     return-object v1
 .end method
@@ -181,8 +164,6 @@
 .method public final a(Licn;Ljava/util/concurrent/Executor;)Lich;
     .locals 1
 
-    .prologue
-    .line 16
     iget-object v0, p0, Licw;->e:Liau;
 
     invoke-interface {v0, p1, p2}, Liau;->a(Licn;Ljava/util/concurrent/Executor;)Lich;
@@ -195,8 +176,6 @@
 .method public final b()Ljava/lang/Object;
     .locals 1
 
-    .prologue
-    .line 17
     iget-object v0, p0, Licw;->e:Liau;
 
     invoke-interface {v0}, Liau;->b()Ljava/lang/Object;
@@ -209,14 +188,10 @@
 .method public final c()Lich;
     .locals 3
 
-    .prologue
-    .line 18
-    .line 19
     iget-object v1, p0, Licw;->b:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 20
     :try_start_0
     iget v0, p0, Licw;->c:I
 
@@ -224,7 +199,6 @@
 
     iput v0, p0, Licw;->c:I
 
-    .line 21
     iget-object v0, p0, Licw;->a:Licj;
 
     iget v2, p0, Licw;->c:I
@@ -233,30 +207,24 @@
 
     move-result-object v2
 
-    .line 22
     iput-object v2, v0, Licj;->b:Ljava/lang/Object;
 
-    .line 23
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 24
     iget-object v0, p0, Licw;->a:Licj;
 
-    .line 25
     iget-object v0, v0, Licj;->a:Licb;
 
     invoke-virtual {v0}, Licb;->a()V
 
-    .line 26
     new-instance v0, Libj;
 
     invoke-direct {v0, p0}, Libj;-><init>(Licw;)V
 
     return-object v0
 
-    .line 23
     :catchall_0
     move-exception v0
 

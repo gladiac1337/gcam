@@ -10,39 +10,32 @@
 .method constructor <init>(Landroid/content/Context;)V
     .locals 4
 
-    .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     if-eqz p1, :cond_1
 
-    .line 2
     sget-object v0, Lhjp;->a:Ljava/lang/Boolean;
 
     if-nez v0, :cond_0
 
-    .line 3
     sget-object v0, Lhpv;->a:Lhpv;
 
     invoke-virtual {v0, p1}, Lhpv;->a(Landroid/content/Context;)Lhpu;
 
     move-result-object v0
 
-    .line 4
     const-string v3, "com.google.android.providers.gsf.permission.READ_GSERVICES"
 
-    .line 5
     iget-object v0, v0, Lhpu;->a:Landroid/content/Context;
 
     invoke-virtual {v0, v3}, Landroid/content/Context;->checkCallingOrSelfPermission(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 6
     if-nez v0, :cond_2
 
     move v0, v1
@@ -61,7 +54,6 @@
 
     move-result v0
 
-    .line 7
     if-nez v0, :cond_3
 
     :cond_1
@@ -75,10 +67,8 @@
     :cond_2
     move v0, v2
 
-    .line 6
     goto :goto_0
 
-    .line 7
     :cond_3
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 

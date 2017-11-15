@@ -26,8 +26,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 20
     const-string v0, "HdrPVFMetaDataSaver"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -42,11 +40,8 @@
 .method public constructor <init>(Lege;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Liag;
 
     const/4 v1, 0x0
@@ -59,7 +54,6 @@
 
     iput-object v0, p0, Lcpr;->c:Liag;
 
-    .line 3
     return-void
 .end method
 
@@ -68,11 +62,8 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 4
     check-cast p1, Liic;
 
-    .line 5
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->COLOR_CORRECTION_GAINS:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p1, v0}, Liic;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -81,18 +72,15 @@
 
     if-nez v0, :cond_0
 
-    .line 6
     sget-object v0, Lcpr;->b:Ljava/lang/String;
 
     const-string v1, "skipping frame since cc gains were missing"
 
     invoke-static {v0, v1}, Lbhz;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 19
     :goto_0
     return-void
 
-    .line 8
     :cond_0
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->COLOR_CORRECTION_TRANSFORM:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -102,7 +90,6 @@
 
     if-nez v0, :cond_1
 
-    .line 9
     sget-object v0, Lcpr;->b:Ljava/lang/String;
 
     const-string v1, "skipping frame since cc transforms were missing"
@@ -111,7 +98,6 @@
 
     goto :goto_0
 
-    .line 11
     :cond_1
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_REGIONS:Landroid/hardware/camera2/CaptureResult$Key;
 
@@ -121,7 +107,6 @@
 
     if-nez v0, :cond_2
 
-    .line 12
     sget-object v0, Lcpr;->b:Ljava/lang/String;
 
     const-string v1, "skipping frame since aeRegions were missing"
@@ -130,7 +115,6 @@
 
     goto :goto_0
 
-    .line 14
     :cond_2
     invoke-static {p1}, Lege;->a(Liic;)Z
 
@@ -138,7 +122,6 @@
 
     if-nez v0, :cond_3
 
-    .line 15
     sget-object v0, Lcpr;->b:Ljava/lang/String;
 
     const-string v1, "skipping frame due to touch to expose / focus"
@@ -147,11 +130,9 @@
 
     goto :goto_0
 
-    .line 17
     :cond_3
     iput-object p1, p0, Lcpr;->a:Liic;
 
-    .line 18
     iget-object v0, p0, Lcpr;->c:Liag;
 
     const/4 v1, 0x1

@@ -31,18 +31,14 @@
 .method public constructor <init>(Liic;Z)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
     const-wide/16 v2, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lfzw;->i:Liic;
 
-    .line 3
     iget-object v0, p0, Lfzw;->i:Liic;
 
     sget-object v1, Landroid/hardware/camera2/CaptureResult;->SENSOR_TIMESTAMP:Landroid/hardware/camera2/CaptureResult$Key;
@@ -57,12 +53,10 @@
 
     move-result-object v1
 
-    .line 4
     if-nez v0, :cond_0
 
     move-object v0, v1
 
-    .line 5
     :cond_0
     check-cast v0, Ljava/lang/Long;
 
@@ -72,7 +66,6 @@
 
     iput-wide v0, p0, Lfzw;->a:J
 
-    .line 6
     iget-object v0, p0, Lfzw;->i:Liic;
 
     sget-object v1, Landroid/hardware/camera2/CaptureResult;->SENSOR_EXPOSURE_TIME:Landroid/hardware/camera2/CaptureResult$Key;
@@ -87,12 +80,10 @@
 
     move-result-object v1
 
-    .line 7
     if-nez v0, :cond_1
 
     move-object v0, v1
 
-    .line 8
     :cond_1
     check-cast v0, Ljava/lang/Long;
 
@@ -102,12 +93,10 @@
 
     iput-wide v0, p0, Lfzw;->b:J
 
-    .line 9
     iget-object v0, p0, Lfzw;->i:Liic;
 
     sget-object v1, Landroid/hardware/camera2/CaptureResult;->SENSOR_ROLLING_SHUTTER_SKEW:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 10
     invoke-interface {v0, v1}, Liic;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
@@ -118,12 +107,10 @@
 
     move-result-object v1
 
-    .line 11
     if-nez v0, :cond_2
 
     move-object v0, v1
 
-    .line 12
     :cond_2
     check-cast v0, Ljava/lang/Long;
 
@@ -133,7 +120,6 @@
 
     iput-wide v0, p0, Lfzw;->c:J
 
-    .line 13
     iget-object v0, p0, Lfzw;->i:Liic;
 
     sget-object v1, Landroid/hardware/camera2/CaptureResult;->SENSOR_SENSITIVITY:Landroid/hardware/camera2/CaptureResult$Key;
@@ -150,12 +136,10 @@
 
     move-result-object v1
 
-    .line 14
     if-nez v0, :cond_3
 
     move-object v0, v1
 
-    .line 15
     :cond_3
     check-cast v0, Ljava/lang/Integer;
 
@@ -165,7 +149,6 @@
 
     iput v0, p0, Lfzw;->d:I
 
-    .line 16
     iget-object v0, p0, Lfzw;->i:Liic;
 
     sget-object v1, Landroid/hardware/camera2/CaptureResult;->LENS_FOCAL_LENGTH:Landroid/hardware/camera2/CaptureResult$Key;
@@ -180,12 +163,10 @@
 
     move-result-object v1
 
-    .line 17
     if-nez v0, :cond_4
 
     move-object v0, v1
 
-    .line 18
     :cond_4
     check-cast v0, Ljava/lang/Float;
 
@@ -195,7 +176,6 @@
 
     iput v0, p0, Lfzw;->e:F
 
-    .line 19
     iget-object v0, p0, Lfzw;->i:Liic;
 
     sget-object v1, Landroid/hardware/camera2/CaptureResult;->LENS_FOCUS_DISTANCE:Landroid/hardware/camera2/CaptureResult$Key;
@@ -210,12 +190,10 @@
 
     move-result-object v1
 
-    .line 20
     if-nez v0, :cond_5
 
     move-object v0, v1
 
-    .line 21
     :cond_5
     check-cast v0, Ljava/lang/Float;
 
@@ -225,7 +203,6 @@
 
     iput v0, p0, Lfzw;->f:F
 
-    .line 22
     iget-object v0, p0, Lfzw;->i:Liic;
 
     sget-object v1, Landroid/hardware/camera2/CaptureResult;->SCALER_CROP_REGION:Landroid/hardware/camera2/CaptureResult$Key;
@@ -238,32 +215,26 @@
 
     iput-object v0, p0, Lfzw;->h:Landroid/graphics/Rect;
 
-    .line 23
     if-eqz p2, :cond_7
 
-    .line 24
     iget-object v0, p0, Lfzw;->i:Liic;
 
     sget-object v1, Lhit;->h:Landroid/hardware/camera2/CaptureResult$Key;
 
-    .line 25
     invoke-interface {v0, v1}, Liic;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Long;
 
-    .line 26
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
-    .line 28
     if-nez v0, :cond_6
 
     move-object v0, v1
 
-    .line 29
     :cond_6
     check-cast v0, Ljava/lang/Long;
 
@@ -273,11 +244,9 @@
 
     iput-wide v0, p0, Lfzw;->g:J
 
-    .line 31
     :goto_0
     return-void
 
-    .line 30
     :cond_7
     const-wide/16 v0, -0x1
 
@@ -291,36 +260,26 @@
 .method public final close()V
     .locals 0
 
-    .prologue
-    .line 33
     return-void
 .end method
 
 .method public final synthetic compareTo(Ljava/lang/Object;)I
     .locals 4
 
-    .prologue
-    .line 34
     check-cast p1, Lfzw;
 
-    .line 35
     iget-wide v0, p0, Lfzw;->a:J
 
-    .line 37
     iget-wide v2, p1, Lfzw;->a:J
 
-    .line 38
     cmp-long v0, v0, v2
 
-    .line 39
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 14
 
-    .prologue
-    .line 32
     iget-wide v0, p0, Lfzw;->a:J
 
     iget-wide v2, p0, Lfzw;->b:J

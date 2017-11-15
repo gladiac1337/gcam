@@ -15,11 +15,8 @@
 .method public constructor <init>(ILhhv;Landroid/support/v8/renderscript/RenderScript;)V
     .locals 22
 
-    .prologue
-    .line 1
     invoke-direct/range {p0 .. p3}, Lhhw;-><init>(ILhhv;Landroid/support/v8/renderscript/RenderScript;)V
 
-    .line 2
     move-object/from16 v0, p0
 
     iget v2, v0, Lhic;->b:I
@@ -30,7 +27,6 @@
 
     iput-object v2, v0, Lhic;->f:[F
 
-    .line 3
     move-object/from16 v0, p2
 
     move/from16 v1, p1
@@ -39,7 +35,6 @@
 
     move-result v8
 
-    .line 4
     invoke-static {}, Lhhv;->a()F
 
     move-result v2
@@ -48,7 +43,6 @@
 
     iput v2, v0, Lhic;->d:F
 
-    .line 5
     const/4 v2, 0x0
 
     move v7, v2
@@ -56,7 +50,6 @@
     :goto_0
     if-ge v7, v8, :cond_6
 
-    .line 6
     move-object/from16 v0, p2
 
     move/from16 v1, p1
@@ -65,41 +58,32 @@
 
     move-result v2
 
-    .line 7
     move-object/from16 v0, p2
 
     invoke-virtual {v0, v2}, Lhhv;->a(I)F
 
     move-result v9
 
-    .line 10
     float-to-int v2, v9
 
     add-int/lit8 v10, v2, 0x1
 
-    .line 13
     mul-int/lit8 v2, v10, 0x2
 
     add-int/lit8 v11, v2, 0x1
 
-    .line 14
     mul-int v12, v11, v11
 
-    .line 15
     new-array v13, v12, [F
 
-    .line 16
     const/4 v2, 0x0
 
     invoke-static {v13, v2}, Ljava/util/Arrays;->fill([FF)V
 
-    .line 17
     mul-float v14, v9, v9
 
-    .line 18
     const/4 v3, 0x0
 
-    .line 19
     const/4 v2, 0x0
 
     move v6, v2
@@ -109,7 +93,6 @@
 
     if-ge v6, v2, :cond_4
 
-    .line 20
     const v2, -0x41333333    # -0.4f
 
     int-to-float v4, v6
@@ -120,7 +103,6 @@
 
     add-float v15, v2, v4
 
-    .line 21
     const/4 v2, 0x0
 
     move v5, v2
@@ -130,7 +112,6 @@
 
     if-ge v5, v2, :cond_3
 
-    .line 22
     const v2, -0x41333333    # -0.4f
 
     int-to-float v4, v5
@@ -141,7 +122,6 @@
 
     add-float v16, v2, v4
 
-    .line 23
     const/4 v2, 0x0
 
     move v4, v2
@@ -149,14 +129,12 @@
     :goto_3
     if-ge v4, v11, :cond_2
 
-    .line 24
     sub-int v2, v4, v10
 
     int-to-float v2, v2
 
     add-float v17, v2, v15
 
-    .line 25
     const/4 v2, 0x0
 
     move/from16 v21, v2
@@ -168,7 +146,6 @@
     :goto_4
     if-ge v3, v11, :cond_1
 
-    .line 26
     sub-int v18, v3, v10
 
     move/from16 v0, v18
@@ -179,7 +156,6 @@
 
     add-float v18, v18, v16
 
-    .line 27
     mul-float v19, v17, v17
 
     mul-float v18, v18, v18
@@ -190,7 +166,6 @@
 
     if-gtz v18, :cond_0
 
-    .line 28
     mul-int v18, v4, v11
 
     add-int v18, v18, v3
@@ -203,18 +178,15 @@
 
     aput v19, v13, v18
 
-    .line 29
     const/high16 v18, 0x3f800000    # 1.0f
 
     add-float v2, v2, v18
 
-    .line 30
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_4
 
-    .line 31
     :cond_1
     add-int/lit8 v3, v4, 0x1
 
@@ -224,7 +196,6 @@
 
     goto :goto_3
 
-    .line 32
     :cond_2
     add-int/lit8 v2, v5, 0x1
 
@@ -232,7 +203,6 @@
 
     goto :goto_2
 
-    .line 33
     :cond_3
     add-int/lit8 v2, v6, 0x1
 
@@ -240,26 +210,22 @@
 
     goto :goto_1
 
-    .line 34
     :cond_4
     const/4 v2, 0x0
 
     :goto_5
     if-ge v2, v12, :cond_5
 
-    .line 35
     aget v4, v13, v2
 
     div-float/2addr v4, v3
 
     aput v4, v13, v2
 
-    .line 36
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_5
 
-    .line 39
     :cond_5
     const/4 v2, 0x0
 
@@ -279,7 +245,6 @@
 
     invoke-static {v13, v2, v3, v4, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 40
     move-object/from16 v0, p0
 
     iget v2, v0, Lhic;->d:F
@@ -292,14 +257,12 @@
 
     iput v2, v0, Lhic;->d:F
 
-    .line 41
     add-int/lit8 v2, v7, 0x1
 
     move v7, v2
 
     goto/16 :goto_0
 
-    .line 43
     :cond_6
     invoke-static/range {p3 .. p3}, Landroid/support/v8/renderscript/Element;->F32(Landroid/support/v8/renderscript/RenderScript;)Landroid/support/v8/renderscript/Element;
 
@@ -321,7 +284,6 @@
 
     iput-object v2, v0, Lhic;->e:Landroid/support/v8/renderscript/Allocation;
 
-    .line 44
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lhic;->e:Landroid/support/v8/renderscript/Allocation;
@@ -332,6 +294,5 @@
 
     invoke-virtual {v2, v3}, Landroid/support/v8/renderscript/Allocation;->copyFrom([F)V
 
-    .line 45
     return-void
 .end method

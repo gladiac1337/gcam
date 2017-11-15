@@ -11,8 +11,6 @@
 .method constructor <init>(Lgom;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgny;->a:Lgom;
 
     invoke-direct {p0}, Lcom/google/googlex/gcam/GoudaImageCallback;-><init>()V
@@ -25,11 +23,8 @@
 .method public final RgbReady(JLcom/google/googlex/gcam/InterleavedImageU8;ILjava/lang/String;)V
     .locals 7
 
-    .prologue
-    .line 2
     sget-object v0, Lgnq;->a:Ljava/lang/String;
 
-    .line 3
     invoke-static {p5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
@@ -68,29 +63,22 @@
 
     move-result-object v1
 
-    .line 4
     invoke-static {v0, v1}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5
     iget-object v0, p0, Lgny;->a:Lgom;
 
     if-eqz v0, :cond_0
 
-    .line 6
     iget-object v1, p0, Lgny;->a:Lgom;
 
-    .line 7
     iget-object v0, v1, Lgom;->b:Ldut;
 
-    .line 8
     iget-object v0, v0, Ldut;->b:Lhah;
 
-    .line 9
     invoke-virtual {v0}, Lhah;->a()Lhai;
 
     move-result-object v6
 
-    .line 10
     iget-object v0, v1, Lgom;->b:Ldut;
 
     iget-object v1, v1, Lgom;->b:Ldut;
@@ -109,7 +97,6 @@
 
     invoke-static/range {v0 .. v6}, Ldut;->a(Ldut;Lcom/google/googlex/gcam/InterleavedImageU8;IZLdus;Ljava/lang/String;Lhai;)V
 
-    .line 11
     :cond_0
     return-void
 .end method

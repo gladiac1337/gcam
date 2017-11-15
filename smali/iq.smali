@@ -7,8 +7,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method constructor <init>(B)V
     .locals 0
 
-    .prologue
-    .line 8
     invoke-direct {p0}, Liq;-><init>()V
 
     return-void
@@ -29,8 +25,6 @@
 .method public a(Landroid/view/ViewGroup;)Z
     .locals 1
 
-    .prologue
-    .line 2
     const v0, 0x7f0e0018
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getTag(I)Ljava/lang/Object;
@@ -39,7 +33,6 @@
 
     check-cast v0, Ljava/lang/Boolean;
 
-    .line 3
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -48,7 +41,6 @@
 
     if-nez v0, :cond_1
 
-    .line 4
     :cond_0
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getBackground()Landroid/graphics/drawable/Drawable;
 
@@ -56,14 +48,12 @@
 
     if-nez v0, :cond_1
 
-    .line 6
     sget-object v0, Lid;->a:Lim;
 
     invoke-virtual {v0, p1}, Lim;->t(Landroid/view/View;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 7
     if-eqz v0, :cond_2
 
     :cond_1

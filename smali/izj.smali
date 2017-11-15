@@ -11,11 +11,8 @@
 .method public constructor <init>(Ljan;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -24,15 +21,12 @@
 
     iput-object v0, p0, Lizj;->a:Ljan;
 
-    .line 3
     return-void
 .end method
 
 .method private static a(JLjava/util/List;)Z
     .locals 6
 
-    .prologue
-    .line 19
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -50,14 +44,12 @@
 
     check-cast v0, Lizk;
 
-    .line 20
     iget-wide v2, v0, Lizk;->a:J
 
     cmp-long v2, v2, p0
 
     if-nez v2, :cond_0
 
-    .line 21
     const-string v1, "ContentValueSegmentFilter"
 
     iget-wide v2, v0, Lizk;->a:J
@@ -90,10 +82,8 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 22
     const/4 v0, 0x1
 
-    .line 24
     :goto_0
     return v0
 
@@ -108,21 +98,16 @@
 .method final a(Ljaz;Ljava/util/List;)Lizk;
     .locals 12
 
-    .prologue
-    .line 4
     const-string v0, "ContentValueSegmentFilter"
 
     const-string v1, "CalcLeastValueFrame."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5
     const v2, 0x7f7fffff    # Float.MAX_VALUE
 
-    .line 6
     const-wide/16 v0, -0x1
 
-    .line 7
     invoke-virtual {p1}, Ljaz;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -151,7 +136,6 @@
 
     move-result-wide v4
 
-    .line 8
     const-string v0, "ContentValueSegmentFilter"
 
     const/16 v7, 0x27
@@ -176,14 +160,12 @@
 
     invoke-static {v0, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9
     invoke-static {v4, v5, p2}, Lizj;->a(JLjava/util/List;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 10
     iget-object v0, p0, Lizj;->a:Ljan;
 
     invoke-interface {v0, v4, v5}, Ljan;->a(J)Ljfx;
@@ -194,7 +176,6 @@
 
     move-result v0
 
-    .line 11
     const-string v7, "ContentValueSegmentFilter"
 
     const/16 v8, 0x18
@@ -219,7 +200,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12
     cmpg-float v7, v0, v1
 
     if-gez v7, :cond_3
@@ -235,10 +215,8 @@
 
     move-wide v2, v10
 
-    .line 15
     goto :goto_0
 
-    .line 16
     :cond_1
     const-wide/16 v4, -0x1
 
@@ -246,12 +224,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 17
     new-instance v0, Lizk;
 
     invoke-direct {v0, v2, v3, v1}, Lizk;-><init>(JF)V
 
-    .line 18
     :goto_2
     return-object v0
 

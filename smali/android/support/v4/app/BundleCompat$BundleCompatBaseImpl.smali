@@ -19,8 +19,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,17 +27,14 @@
 .method public static getBinder(Landroid/os/Bundle;Ljava/lang/String;)Landroid/os/IBinder;
     .locals 7
 
-    .prologue
     const/4 v1, 0x0
 
     const/4 v6, 0x1
 
-    .line 2
     sget-boolean v0, Landroid/support/v4/app/BundleCompat$BundleCompatBaseImpl;->sGetIBinderMethodFetched:Z
 
     if-nez v0, :cond_0
 
-    .line 3
     :try_start_0
     const-class v0, Landroid/os/Bundle;
 
@@ -59,7 +54,6 @@
 
     move-result-object v0
 
-    .line 4
     sput-object v0, Landroid/support/v4/app/BundleCompat$BundleCompatBaseImpl;->sGetIBinderMethod:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x1
@@ -68,17 +62,14 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8
     :goto_0
     sput-boolean v6, Landroid/support/v4/app/BundleCompat$BundleCompatBaseImpl;->sGetIBinderMethodFetched:Z
 
-    .line 9
     :cond_0
     sget-object v0, Landroid/support/v4/app/BundleCompat$BundleCompatBaseImpl;->sGetIBinderMethod:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_1
 
-    .line 10
     :try_start_1
     sget-object v0, Landroid/support/v4/app/BundleCompat$BundleCompatBaseImpl;->sGetIBinderMethod:Ljava/lang/reflect/Method;
 
@@ -100,15 +91,12 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 14
     :goto_1
     return-object v0
 
-    .line 6
     :catch_0
     move-exception v0
 
-    .line 7
     const-string v2, "BundleCompatBaseImpl"
 
     const-string v3, "Failed to retrieve getIBinder method"
@@ -117,11 +105,9 @@
 
     goto :goto_0
 
-    .line 11
     :catch_1
     move-exception v0
 
-    .line 12
     :goto_2
     const-string v2, "BundleCompatBaseImpl"
 
@@ -129,16 +115,13 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 13
     sput-object v1, Landroid/support/v4/app/BundleCompat$BundleCompatBaseImpl;->sGetIBinderMethod:Ljava/lang/reflect/Method;
 
     :cond_1
     move-object v0, v1
 
-    .line 14
     goto :goto_1
 
-    .line 11
     :catch_2
     move-exception v0
 
@@ -153,15 +136,12 @@
 .method public static putBinder(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
     .locals 6
 
-    .prologue
     const/4 v5, 0x1
 
-    .line 15
     sget-boolean v0, Landroid/support/v4/app/BundleCompat$BundleCompatBaseImpl;->sPutIBinderMethodFetched:Z
 
     if-nez v0, :cond_0
 
-    .line 16
     :try_start_0
     const-class v0, Landroid/os/Bundle;
 
@@ -183,12 +163,10 @@
 
     aput-object v4, v2, v3
 
-    .line 17
     invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    .line 18
     sput-object v0, Landroid/support/v4/app/BundleCompat$BundleCompatBaseImpl;->sPutIBinderMethod:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
@@ -197,17 +175,14 @@
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 22
     :goto_0
     sput-boolean v5, Landroid/support/v4/app/BundleCompat$BundleCompatBaseImpl;->sPutIBinderMethodFetched:Z
 
-    .line 23
     :cond_0
     sget-object v0, Landroid/support/v4/app/BundleCompat$BundleCompatBaseImpl;->sPutIBinderMethod:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_1
 
-    .line 24
     :try_start_1
     sget-object v0, Landroid/support/v4/app/BundleCompat$BundleCompatBaseImpl;->sPutIBinderMethod:Ljava/lang/reflect/Method;
 
@@ -229,16 +204,13 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 29
     :cond_1
     :goto_1
     return-void
 
-    .line 20
     :catch_0
     move-exception v0
 
-    .line 21
     const-string v1, "BundleCompatBaseImpl"
 
     const-string v2, "Failed to retrieve putIBinder method"
@@ -247,11 +219,9 @@
 
     goto :goto_0
 
-    .line 26
     :catch_1
     move-exception v0
 
-    .line 27
     :goto_2
     const-string v1, "BundleCompatBaseImpl"
 
@@ -259,14 +229,12 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 28
     const/4 v0, 0x0
 
     sput-object v0, Landroid/support/v4/app/BundleCompat$BundleCompatBaseImpl;->sPutIBinderMethod:Ljava/lang/reflect/Method;
 
     goto :goto_1
 
-    .line 26
     :catch_2
     move-exception v0
 

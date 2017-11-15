@@ -11,11 +11,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/TreeSet;
 
     invoke-virtual {p0}, Lipw;->a()Ljava/util/Comparator;
@@ -32,8 +29,6 @@
 .method public constructor <init>(B)V
     .locals 0
 
-    .prologue
-    .line 10
     invoke-direct {p0}, Lipw;-><init>()V
 
     return-void
@@ -44,8 +39,6 @@
 .method protected a()Ljava/util/Comparator;
     .locals 1
 
-    .prologue
-    .line 3
     new-instance v0, Lipx;
 
     invoke-direct {v0}, Lipx;-><init>()V
@@ -56,19 +49,15 @@
 .method public final a(Lipv;)V
     .locals 2
 
-    .prologue
-    .line 4
     iget-object v1, p0, Lipw;->a:Ljava/util/TreeSet;
 
     monitor-enter v1
 
-    .line 5
     :try_start_0
     iget-object v0, p0, Lipw;->a:Ljava/util/TreeSet;
 
     invoke-virtual {v0, p1}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
 
-    .line 6
     monitor-exit v1
 
     return-void
@@ -86,13 +75,10 @@
 .method public final c()Ljava/util/List;
     .locals 3
 
-    .prologue
-    .line 7
     iget-object v1, p0, Lipw;->a:Ljava/util/TreeSet;
 
     monitor-enter v1
 
-    .line 8
     :try_start_0
     new-instance v0, Ljava/util/ArrayList;
 
@@ -104,7 +90,6 @@
 
     return-object v0
 
-    .line 9
     :catchall_0
     move-exception v0
 

@@ -16,8 +16,6 @@
 .method constructor <init>(Lcbn;Landroid/net/Uri;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcbt;->b:Lcbn;
 
     iput-object p2, p0, Lcbt;->a:Landroid/net/Uri;
@@ -32,30 +30,22 @@
 .method public final onClick(Landroid/view/View;)V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcbt;->b:Lcbn;
 
-    .line 3
     iget-object v0, v0, Lcbn;->a:Lcbw;
 
-    .line 4
     iget-object v1, p0, Lcbt;->a:Landroid/net/Uri;
 
-    .line 5
     const-string v2, "android.intent.action.SEND"
 
-    .line 6
     invoke-static {v2}, Lcaq;->a(Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v2
 
-    .line 8
     const-string v3, "android.intent.extra.STREAM"
 
     invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 9
     :try_start_0
     iget-object v1, v0, Lcbw;->a:Lcaq;
 
@@ -63,11 +53,9 @@
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 15
     :goto_0
     return-void
 
-    .line 12
     :catch_0
     move-exception v1
 
@@ -75,7 +63,6 @@
 
     iget-object v0, v0, Lcbw;->a:Lcaq;
 
-    .line 13
     invoke-virtual {v0}, Lcaq;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -90,7 +77,6 @@
 
     move-result-object v0
 
-    .line 14
     invoke-virtual {v1, v0}, Lcaq;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0

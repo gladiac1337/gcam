@@ -10,8 +10,6 @@
 .method constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$FilterPriorityScheduler;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public compare(Lcom/google/android/libraries/smartburst/filterfw/Filter;Lcom/google/android/libraries/smartburst/filterfw/Filter;)I
     .locals 2
 
-    .prologue
-    .line 2
     invoke-virtual {p2}, Lcom/google/android/libraries/smartburst/filterfw/Filter;->getSchedulePriority()I
 
     move-result v0
@@ -40,8 +36,6 @@
 .method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
-    .prologue
-    .line 3
     check-cast p1, Lcom/google/android/libraries/smartburst/filterfw/Filter;
 
     check-cast p2, Lcom/google/android/libraries/smartburst/filterfw/Filter;

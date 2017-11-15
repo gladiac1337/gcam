@@ -66,8 +66,6 @@
 .method private final a(Z)V
     .locals 8
 
-    .prologue
-    .line 1
     sget-object v3, Lhrw;->a:Lhrw;
 
     monitor-enter v3
@@ -96,7 +94,6 @@
 
     check-cast v1, Lhrx;
 
-    .line 2
     iget-object v5, v1, Lhrx;->a:Lhtm;
 
     invoke-static {v5}, Lhtm;->a(Lhtm;)Landroid/os/Handler;
@@ -123,7 +120,6 @@
 
     goto :goto_0
 
-    .line 3
     :catchall_0
     move-exception v0
 

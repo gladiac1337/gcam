@@ -7,11 +7,8 @@
 .method public constructor <init>(Liin;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Liij;-><init>(Liin;)V
 
-    .line 2
     return-void
 .end method
 
@@ -20,8 +17,6 @@
 .method public final f()Liil;
     .locals 1
 
-    .prologue
-    .line 3
     :try_start_0
     invoke-super {p0}, Liij;->f()Liil;
     :try_end_0
@@ -29,7 +24,6 @@
 
     move-result-object v0
 
-    .line 5
     :goto_0
     return-object v0
 
@@ -44,8 +38,6 @@
 .method public final g()Liil;
     .locals 1
 
-    .prologue
-    .line 6
     :try_start_0
     invoke-super {p0}, Liij;->g()Liil;
     :try_end_0
@@ -53,7 +45,6 @@
 
     move-result-object v0
 
-    .line 8
     :goto_0
     return-object v0
 

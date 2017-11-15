@@ -23,21 +23,17 @@
 .method static constructor <clinit>()V
     .locals 4
 
-    .prologue
     const/16 v3, 0x700
 
-    .line 15
     new-array v0, v3, [B
 
     sput-object v0, Lge;->f:[B
 
-    .line 16
     const/4 v0, 0x0
 
     :goto_0
     if-ge v0, v3, :cond_0
 
-    .line 17
     sget-object v1, Lge;->f:[B
 
     invoke-static {v0}, Ljava/lang/Character;->getDirectionality(I)B
@@ -46,12 +42,10 @@
 
     aput-byte v2, v1, v0
 
-    .line 18
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 19
     :cond_0
     return-void
 .end method
@@ -59,34 +53,26 @@
 .method constructor <init>(Ljava/lang/CharSequence;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lge;->a:Ljava/lang/CharSequence;
 
-    .line 3
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lge;->b:Z
 
-    .line 4
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
 
     iput v0, p0, Lge;->c:I
 
-    .line 5
     return-void
 .end method
 
 .method static a(C)B
     .locals 1
 
-    .prologue
-    .line 6
     const/16 v0, 0x700
 
     if-ge p0, v0, :cond_0
@@ -111,8 +97,6 @@
 .method final a()B
     .locals 3
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lge;->a:Ljava/lang/CharSequence;
 
     iget v1, p0, Lge;->d:I
@@ -125,7 +109,6 @@
 
     iput-char v0, p0, Lge;->e:C
 
-    .line 8
     iget-char v0, p0, Lge;->e:C
 
     invoke-static {v0}, Ljava/lang/Character;->isLowSurrogate(C)Z
@@ -134,7 +117,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 9
     iget-object v0, p0, Lge;->a:Ljava/lang/CharSequence;
 
     iget v1, p0, Lge;->d:I
@@ -143,7 +125,6 @@
 
     move-result v0
 
-    .line 10
     iget v1, p0, Lge;->d:I
 
     invoke-static {v0}, Ljava/lang/Character;->charCount(I)I
@@ -154,16 +135,13 @@
 
     iput v1, p0, Lge;->d:I
 
-    .line 11
     invoke-static {v0}, Ljava/lang/Character;->getDirectionality(I)B
 
     move-result v0
 
-    .line 14
     :goto_0
     return v0
 
-    .line 12
     :cond_0
     iget v0, p0, Lge;->d:I
 
@@ -171,7 +149,6 @@
 
     iput v0, p0, Lge;->d:I
 
-    .line 13
     iget-char v0, p0, Lge;->e:C
 
     invoke-static {v0}, Lge;->a(C)B

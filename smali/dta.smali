@@ -11,11 +11,8 @@
 .method public constructor <init>(Liiq;Licv;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Liik;-><init>(Liiq;)V
 
-    .line 2
     const-string v0, "LoggingImageWriter"
 
     invoke-interface {p2, v0}, Licv;->a(Ljava/lang/String;)Licu;
@@ -24,7 +21,6 @@
 
     iput-object v0, p0, Ldta;->a:Licu;
 
-    .line 3
     return-void
 .end method
 
@@ -33,8 +29,6 @@
 .method public final a(J)Liih;
     .locals 5
 
-    .prologue
-    .line 8
     iget-object v0, p0, Ldta;->a:Licu;
 
     const/16 v1, 0x2d
@@ -65,12 +59,10 @@
 
     invoke-interface {v0, v1}, Licu;->e(Ljava/lang/String;)V
 
-    .line 9
     invoke-super {p0, p1, p2}, Liik;->a(J)Liih;
 
     move-result-object v0
 
-    .line 10
     iget-object v1, p0, Ldta;->a:Licu;
 
     const/16 v2, 0x2b
@@ -101,15 +93,12 @@
 
     invoke-interface {v1, v2}, Licu;->e(Ljava/lang/String;)V
 
-    .line 11
     return-object v0
 .end method
 
 .method public final a(Liih;)V
     .locals 4
 
-    .prologue
-    .line 12
     iget-object v0, p0, Ldta;->a:Licu;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -152,10 +141,8 @@
 
     invoke-interface {v0, v1}, Licu;->e(Ljava/lang/String;)V
 
-    .line 13
     invoke-super {p0, p1}, Liik;->a(Liih;)V
 
-    .line 14
     iget-object v0, p0, Ldta;->a:Licu;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -198,41 +185,31 @@
 
     invoke-interface {v0, v1}, Licu;->e(Ljava/lang/String;)V
 
-    .line 15
     return-void
 .end method
 
 .method public final a(Liis;Landroid/os/Handler;)V
     .locals 1
 
-    .prologue
-    .line 4
     new-instance v0, Ldtb;
 
-    .line 5
     invoke-direct {v0, p0, p1}, Ldtb;-><init>(Ldta;Liis;)V
 
-    .line 6
     invoke-super {p0, v0, p2}, Liik;->a(Liis;Landroid/os/Handler;)V
 
-    .line 7
     return-void
 .end method
 
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 16
     iget-object v0, p0, Ldta;->a:Licu;
 
     const-string v1, "close()"
 
     invoke-interface {v0, v1}, Licu;->e(Ljava/lang/String;)V
 
-    .line 17
     invoke-super {p0}, Liik;->close()V
 
-    .line 18
     return-void
 .end method

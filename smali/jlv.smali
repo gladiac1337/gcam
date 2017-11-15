@@ -18,8 +18,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 3
     new-instance v0, Ljlw;
 
     const-string v1, "KEY"
@@ -28,7 +26,6 @@
 
     sput-object v0, Ljlv;->a:Ljlv;
 
-    .line 4
     new-instance v0, Ljlx;
 
     const-string v1, "VALUE"
@@ -37,7 +34,6 @@
 
     sput-object v0, Ljlv;->b:Ljlv;
 
-    .line 5
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljlv;
@@ -62,8 +58,6 @@
 .method constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -72,8 +66,6 @@
 .method public static values()[Ljlv;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Ljlv;->c:[Ljlv;
 
     invoke-virtual {v0}, [Ljlv;->clone()Ljava/lang/Object;

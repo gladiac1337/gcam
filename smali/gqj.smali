@@ -17,8 +17,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 19
     const-string v0, "SecureActivityM"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -33,8 +31,6 @@
 .method public static a(Lhzt;Landroid/app/Activity;Lfrm;Ljxn;)Lgvb;
     .locals 1
 
-    .prologue
-    .line 1
     invoke-virtual {p1}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -45,7 +41,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     new-instance v0, Lgqk;
 
     invoke-direct {v0, p3, p0, p2}, Lgqk;-><init>(Ljxn;Lhzt;Lfrm;)V
@@ -54,11 +49,9 @@
 
     move-result-object v0
 
-    .line 4
     :goto_0
     return-object v0
 
-    .line 3
     :cond_0
     sget-object v0, Lgvd;->a:Lgvd;
 
@@ -68,22 +61,18 @@
 .method public static a(Landroid/app/Activity;Landroid/app/KeyguardManager;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 5
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
-    .line 6
     invoke-static {v1}, Lgqj;->a(Landroid/content/Intent;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 7
     invoke-virtual {p1}, Landroid/app/KeyguardManager;->isKeyguardLocked()Z
 
     move-result v1
@@ -96,19 +85,16 @@
 
     if-nez v1, :cond_1
 
-    .line 8
     sget-object v1, Lgqj;->a:Ljava/lang/String;
 
     const-string v2, "Warning: Overriding the secure camera intent because the keyguard is not currently locked. The camera will open in normal mode."
 
     invoke-static {v1, v2}, Lbhz;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 11
     :cond_0
     :goto_0
     return v0
 
-    .line 10
     :cond_1
     const/4 v0, 0x1
 
@@ -118,24 +104,19 @@
 .method private static a(Landroid/content/Intent;)Z
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 12
     if-nez p0, :cond_1
 
-    .line 18
     :cond_0
     :goto_0
     return v0
 
-    .line 14
     :cond_1
     invoke-virtual {p0}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 15
     const-string v2, "android.media.action.STILL_IMAGE_CAMERA_SECURE"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -146,7 +127,6 @@
 
     const-string v2, "android.media.action.IMAGE_CAPTURE_SECURE"
 
-    .line 16
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -155,7 +135,6 @@
 
     const-string v1, "secure_camera"
 
-    .line 17
     invoke-virtual {p0, v1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v1

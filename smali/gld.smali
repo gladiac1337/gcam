@@ -77,7 +77,6 @@
 .method static constructor <clinit>()V
     .locals 8
 
-    .prologue
     const/4 v7, 0x4
 
     const/4 v6, 0x3
@@ -88,7 +87,6 @@
 
     const/4 v3, 0x0
 
-    .line 3
     new-instance v0, Lgld;
 
     const-string v1, "UNKNOWN"
@@ -97,7 +95,6 @@
 
     sput-object v0, Lgld;->a:Lgld;
 
-    .line 4
     new-instance v0, Lgld;
 
     const-string v1, "TIMER_ZERO_SECONDS"
@@ -106,7 +103,6 @@
 
     sput-object v0, Lgld;->b:Lgld;
 
-    .line 5
     new-instance v0, Lgld;
 
     const-string v1, "TIMER_THREE_SECONDS"
@@ -115,7 +111,6 @@
 
     sput-object v0, Lgld;->c:Lgld;
 
-    .line 6
     new-instance v0, Lgld;
 
     const-string v1, "TIMER_TEN_SECONDS"
@@ -124,7 +119,6 @@
 
     sput-object v0, Lgld;->d:Lgld;
 
-    .line 7
     new-instance v0, Lgld;
 
     const-string v1, "HDR_AUTO"
@@ -133,7 +127,6 @@
 
     sput-object v0, Lgld;->e:Lgld;
 
-    .line 8
     new-instance v0, Lgld;
 
     const-string v1, "HDR_ON"
@@ -144,7 +137,6 @@
 
     sput-object v0, Lgld;->f:Lgld;
 
-    .line 9
     new-instance v0, Lgld;
 
     const-string v1, "HDR_OFF"
@@ -155,7 +147,6 @@
 
     sput-object v0, Lgld;->g:Lgld;
 
-    .line 10
     new-instance v0, Lgld;
 
     const-string v1, "HDR_READY"
@@ -166,7 +157,6 @@
 
     sput-object v0, Lgld;->h:Lgld;
 
-    .line 11
     new-instance v0, Lgld;
 
     const-string v1, "PHOTO_FLASH_ON"
@@ -177,7 +167,6 @@
 
     sput-object v0, Lgld;->i:Lgld;
 
-    .line 12
     new-instance v0, Lgld;
 
     const-string v1, "PHOTO_FLASH_OFF"
@@ -188,7 +177,6 @@
 
     sput-object v0, Lgld;->j:Lgld;
 
-    .line 13
     new-instance v0, Lgld;
 
     const-string v1, "PHOTO_FLASH_AUTO"
@@ -199,7 +187,6 @@
 
     sput-object v0, Lgld;->k:Lgld;
 
-    .line 14
     new-instance v0, Lgld;
 
     const-string v1, "PHOTO_FLASH_GRAYED"
@@ -210,7 +197,6 @@
 
     sput-object v0, Lgld;->F:Lgld;
 
-    .line 15
     new-instance v0, Lgld;
 
     const-string v1, "PHOTO_FLASH_UNGRAYED"
@@ -221,7 +207,6 @@
 
     sput-object v0, Lgld;->G:Lgld;
 
-    .line 16
     new-instance v0, Lgld;
 
     const-string v1, "VIDEO_FLASH_ON"
@@ -232,7 +217,6 @@
 
     sput-object v0, Lgld;->l:Lgld;
 
-    .line 17
     new-instance v0, Lgld;
 
     const-string v1, "VIDEO_FLASH_OFF"
@@ -243,7 +227,6 @@
 
     sput-object v0, Lgld;->m:Lgld;
 
-    .line 18
     new-instance v0, Lgld;
 
     const-string v1, "MICROVIDEO_ON"
@@ -254,7 +237,6 @@
 
     sput-object v0, Lgld;->n:Lgld;
 
-    .line 19
     new-instance v0, Lgld;
 
     const-string v1, "MICROVIDEO_AUTO"
@@ -265,7 +247,6 @@
 
     sput-object v0, Lgld;->o:Lgld;
 
-    .line 20
     new-instance v0, Lgld;
 
     const-string v1, "MICROVIDEO_OFF"
@@ -276,7 +257,6 @@
 
     sput-object v0, Lgld;->p:Lgld;
 
-    .line 21
     new-instance v0, Lgld;
 
     const-string v1, "FPS_30"
@@ -287,7 +267,6 @@
 
     sput-object v0, Lgld;->q:Lgld;
 
-    .line 22
     new-instance v0, Lgld;
 
     const-string v1, "FPS_60"
@@ -298,7 +277,6 @@
 
     sput-object v0, Lgld;->r:Lgld;
 
-    .line 23
     new-instance v0, Lgld;
 
     const-string v1, "WHITE_BALANCE_AUTO"
@@ -309,7 +287,6 @@
 
     sput-object v0, Lgld;->s:Lgld;
 
-    .line 24
     new-instance v0, Lgld;
 
     const-string v1, "WHITE_BALANCE_CLOUDY"
@@ -320,7 +297,6 @@
 
     sput-object v0, Lgld;->t:Lgld;
 
-    .line 25
     new-instance v0, Lgld;
 
     const-string v1, "WHITE_BALANCE_SUNNY"
@@ -331,7 +307,6 @@
 
     sput-object v0, Lgld;->u:Lgld;
 
-    .line 26
     new-instance v0, Lgld;
 
     const-string v1, "WHITE_BALANCE_INCANDESCENT"
@@ -342,7 +317,6 @@
 
     sput-object v0, Lgld;->v:Lgld;
 
-    .line 27
     new-instance v0, Lgld;
 
     const-string v1, "WHITE_BALANCE_FLUORESCENT"
@@ -353,7 +327,6 @@
 
     sput-object v0, Lgld;->w:Lgld;
 
-    .line 28
     new-instance v0, Lgld;
 
     const-string v1, "GRID_LINE_NONE"
@@ -364,7 +337,6 @@
 
     sput-object v0, Lgld;->x:Lgld;
 
-    .line 29
     new-instance v0, Lgld;
 
     const-string v1, "GRID_LINE_3X3"
@@ -375,7 +347,6 @@
 
     sput-object v0, Lgld;->y:Lgld;
 
-    .line 30
     new-instance v0, Lgld;
 
     const-string v1, "GRID_LINE_4X4"
@@ -386,7 +357,6 @@
 
     sput-object v0, Lgld;->z:Lgld;
 
-    .line 31
     new-instance v0, Lgld;
 
     const-string v1, "GRID_LINE_GOLDEN"
@@ -397,7 +367,6 @@
 
     sput-object v0, Lgld;->A:Lgld;
 
-    .line 32
     new-instance v0, Lgld;
 
     const-string v1, "VESPER_ON"
@@ -408,7 +377,6 @@
 
     sput-object v0, Lgld;->B:Lgld;
 
-    .line 33
     new-instance v0, Lgld;
 
     const-string v1, "VESPER_OFF"
@@ -419,7 +387,6 @@
 
     sput-object v0, Lgld;->C:Lgld;
 
-    .line 34
     new-instance v0, Lgld;
 
     const-string v1, "SELECTED"
@@ -430,7 +397,6 @@
 
     sput-object v0, Lgld;->D:Lgld;
 
-    .line 35
     new-instance v0, Lgld;
 
     const-string v1, "UNSELECTED"
@@ -441,7 +407,6 @@
 
     sput-object v0, Lgld;->E:Lgld;
 
-    .line 36
     const/16 v0, 0x21
 
     new-array v0, v0, [Lgld;
@@ -642,8 +607,6 @@
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -652,8 +615,6 @@
 .method public static values()[Lgld;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lgld;->H:[Lgld;
 
     invoke-virtual {v0}, [Lgld;->clone()Ljava/lang/Object;

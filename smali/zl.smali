@@ -29,8 +29,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 28
     new-instance v0, Lacv;
 
     const-string v1, "AndCamAgntImp"
@@ -39,7 +37,6 @@
 
     sput-object v0, Lzl;->a:Lacv;
 
-    .line 29
     new-instance v0, Lzm;
 
     invoke-direct {v0}, Lzm;-><init>()V
@@ -52,16 +49,12 @@
 .method constructor <init>()V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Laap;-><init>()V
 
-    .line 2
     sget-object v0, Lzl;->j:Lacf;
 
     iput-object v0, p0, Lzl;->g:Lacf;
 
-    .line 3
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "Camera Handler Thread"
@@ -70,12 +63,10 @@
 
     iput-object v0, p0, Lzl;->h:Landroid/os/HandlerThread;
 
-    .line 4
     iget-object v0, p0, Lzl;->h:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 5
     new-instance v0, Laac;
 
     iget-object v1, p0, Lzl;->h:Landroid/os/HandlerThread;
@@ -88,7 +79,6 @@
 
     iput-object v0, p0, Lzl;->d:Laac;
 
-    .line 6
     new-instance v0, Lacf;
 
     iget-object v1, p0, Lzl;->d:Laac;
@@ -97,7 +87,6 @@
 
     iput-object v0, p0, Lzl;->g:Lacf;
 
-    .line 7
     new-instance v0, Lacn;
 
     const/4 v1, 0x0
@@ -106,7 +95,6 @@
 
     iput-object v0, p0, Lzl;->e:Lacn;
 
-    .line 8
     new-instance v0, Lacp;
 
     iget-object v1, p0, Lzl;->d:Laac;
@@ -117,12 +105,10 @@
 
     iput-object v0, p0, Lzl;->f:Lacp;
 
-    .line 9
     iget-object v0, p0, Lzl;->f:Lacp;
 
     invoke-virtual {v0}, Lacp;->start()V
 
-    .line 10
     return-void
 .end method
 
@@ -131,21 +117,16 @@
 .method public final a()V
     .locals 3
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 11
     invoke-virtual {p0, v0}, Lzl;->a(Z)V
 
-    .line 12
     iget-object v0, p0, Lzl;->f:Lacp;
 
-    .line 13
     iget-object v1, v0, Lacp;->b:Ljava/lang/Boolean;
 
     monitor-enter v1
 
-    .line 14
     const/4 v2, 0x1
 
     :try_start_0
@@ -155,36 +136,29 @@
 
     iput-object v2, v0, Lacp;->b:Ljava/lang/Boolean;
 
-    .line 15
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 16
     iget-object v1, v0, Lacp;->a:Ljava/util/Queue;
 
     monitor-enter v1
 
-    .line 17
     :try_start_1
     iget-object v0, v0, Lacp;->a:Ljava/util/Queue;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 18
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 19
     iget-object v0, p0, Lzl;->e:Lacn;
 
     invoke-virtual {v0}, Lacn;->b()V
 
-    .line 20
     return-void
 
-    .line 15
     :catchall_0
     move-exception v0
 
@@ -195,7 +169,6 @@
 
     throw v0
 
-    .line 18
     :catchall_1
     move-exception v0
 
@@ -210,19 +183,14 @@
 .method public final a(Lacf;)V
     .locals 0
 
-    .prologue
-    .line 26
     iput-object p1, p0, Lzl;->g:Lacf;
 
-    .line 27
     return-void
 .end method
 
 .method public final b()Lacd;
     .locals 1
 
-    .prologue
-    .line 21
     invoke-static {}, Lzp;->b()Lzp;
 
     move-result-object v0
@@ -233,8 +201,6 @@
 .method protected final c()Landroid/os/Handler;
     .locals 1
 
-    .prologue
-    .line 22
     iget-object v0, p0, Lzl;->d:Laac;
 
     return-object v0
@@ -243,8 +209,6 @@
 .method protected final d()Lacp;
     .locals 1
 
-    .prologue
-    .line 23
     iget-object v0, p0, Lzl;->f:Lacp;
 
     return-object v0
@@ -253,8 +217,6 @@
 .method protected final e()Lacn;
     .locals 1
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lzl;->e:Lacn;
 
     return-object v0
@@ -263,8 +225,6 @@
 .method protected final f()Lacf;
     .locals 1
 
-    .prologue
-    .line 25
     iget-object v0, p0, Lzl;->g:Lacf;
 
     return-object v0

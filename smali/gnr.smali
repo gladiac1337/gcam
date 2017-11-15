@@ -16,8 +16,6 @@
 .method constructor <init>(Lgnq;Lgsp;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgnr;->b:Lgnq;
 
     iput-object p2, p0, Lgnr;->a:Lgsp;
@@ -32,30 +30,22 @@
 .method public final a()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgnr;->a:Lgsp;
 
     const-string v1, "gouda_tutorial_dismiss"
 
     invoke-virtual {v0, v1}, Lgsp;->b(Ljava/lang/String;)I
 
-    .line 3
     iget-object v0, p0, Lgnr;->b:Lgnq;
 
-    .line 4
     iget-object v0, v0, Lgnq;->e:Lgok;
 
-    .line 5
     if-eqz v0, :cond_0
 
-    .line 6
     iget-object v0, p0, Lgnr;->b:Lgnq;
 
-    .line 7
     iget-object v0, v0, Lgnq;->e:Lgok;
 
-    .line 9
     iget-object v1, v0, Lgok;->a:Liag;
 
     const/4 v2, 0x0
@@ -66,13 +56,10 @@
 
     invoke-virtual {v1, v2}, Liag;->a(Ljava/lang/Object;)V
 
-    .line 10
     iget-object v0, v0, Lgok;->b:Lgoe;
 
-    .line 11
     invoke-virtual {v0}, Lgoe;->c()V
 
-    .line 12
     :cond_0
     return-void
 .end method

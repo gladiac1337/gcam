@@ -16,8 +16,6 @@
 .method constructor <init>(Laaw;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Laay;->b:Laaw;
 
     iput p2, p0, Laay;->a:I
@@ -32,18 +30,13 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Laay;->b:Laaw;
 
-    .line 3
     iget-object v0, v0, Laaw;->a:Laav;
 
-    .line 4
     iget v1, p0, Laay;->a:I
 
     invoke-interface {v0, v1}, Laav;->a(I)V
 
-    .line 5
     return-void
 .end method

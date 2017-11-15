@@ -43,18 +43,14 @@
         value = 0xe
     .end annotation
 
-    .prologue
-    .line 1
     new-instance v0, Lcom/google/android/gms/feedback/FeedbackOptions;
 
     new-instance v1, Landroid/app/ApplicationErrorReport;
 
     invoke-direct {v1}, Landroid/app/ApplicationErrorReport;-><init>()V
 
-    .line 2
     invoke-direct {v0, v1}, Lcom/google/android/gms/feedback/FeedbackOptions;-><init>(Landroid/app/ApplicationErrorReport;)V
 
-    .line 3
     invoke-static {v0}, Lcom/google/android/gms/feedback/FeedbackOptions;->a(Lcom/google/android/gms/feedback/FeedbackOptions;)Lcom/google/android/gms/feedback/FeedbackOptions;
 
     move-result-object v0

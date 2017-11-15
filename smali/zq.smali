@@ -11,14 +11,10 @@
 .method constructor <init>(Landroid/hardware/Camera$CameraInfo;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lace;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lzq;->a:Landroid/hardware/Camera$CameraInfo;
 
-    .line 3
     return-void
 .end method
 
@@ -27,8 +23,6 @@
 .method public final a()Z
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lzq;->a:Landroid/hardware/Camera$CameraInfo;
 
     iget v0, v0, Landroid/hardware/Camera$CameraInfo;->facing:I
@@ -49,10 +43,8 @@
 .method public final b()Z
     .locals 2
 
-    .prologue
     const/4 v0, 0x1
 
-    .line 5
     iget-object v1, p0, Lzq;->a:Landroid/hardware/Camera$CameraInfo;
 
     iget v1, v1, Landroid/hardware/Camera$CameraInfo;->facing:I
@@ -71,8 +63,6 @@
 .method public final c()I
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lzq;->a:Landroid/hardware/Camera$CameraInfo;
 
     iget v0, v0, Landroid/hardware/Camera$CameraInfo;->orientation:I

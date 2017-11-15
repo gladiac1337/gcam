@@ -11,8 +11,6 @@
 .method public constructor <init>(Lpd;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lho;->a:Lpd;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

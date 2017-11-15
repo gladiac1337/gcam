@@ -14,8 +14,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 3
     new-instance v0, Lavz;
 
     invoke-direct {v0}, Lavz;-><init>()V
@@ -28,8 +26,6 @@
 .method private constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,8 +36,6 @@
 .method public final a()Ljuw;
     .locals 1
 
-    .prologue
-    .line 2
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;

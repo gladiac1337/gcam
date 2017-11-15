@@ -30,8 +30,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 21
     const-string v0, "ResOpenedCam"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -46,32 +44,22 @@
 .method public constructor <init>(Ldhi;Lige;Lgdq;Lici;Lgdp;Liau;Lhzr;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcwf;->b:Ldhi;
 
-    .line 3
     iput-object p2, p0, Lcwf;->c:Lige;
 
-    .line 4
     iput-object p3, p0, Lcwf;->d:Lgdq;
 
-    .line 5
     iput-object p4, p0, Lcwf;->e:Lici;
 
-    .line 6
     iput-object p5, p0, Lcwf;->f:Lgdp;
 
-    .line 7
     iput-object p6, p0, Lcwf;->g:Liau;
 
-    .line 8
     iput-object p7, p0, Lcwf;->h:Lhzr;
 
-    .line 9
     return-void
 .end method
 
@@ -80,8 +68,6 @@
 .method public final a()Ldhi;
     .locals 1
 
-    .prologue
-    .line 14
     iget-object v0, p0, Lcwf;->b:Ldhi;
 
     return-object v0
@@ -90,8 +76,6 @@
 .method public final b()Lige;
     .locals 1
 
-    .prologue
-    .line 15
     iget-object v0, p0, Lcwf;->c:Lige;
 
     return-object v0
@@ -100,8 +84,6 @@
 .method public final c()Lgdq;
     .locals 1
 
-    .prologue
-    .line 16
     iget-object v0, p0, Lcwf;->d:Lgdq;
 
     return-object v0
@@ -110,33 +92,26 @@
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 10
     sget-object v0, Lcwf;->a:Ljava/lang/String;
 
     const-string v1, "close"
 
     invoke-static {v0, v1}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 11
     iget-object v0, p0, Lcwf;->h:Lhzr;
 
     invoke-virtual {v0}, Lhzr;->close()V
 
-    .line 12
     iget-object v0, p0, Lcwf;->b:Ldhi;
 
     invoke-interface {v0}, Ldhi;->close()V
 
-    .line 13
     return-void
 .end method
 
 .method public final d()Lici;
     .locals 1
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lcwf;->e:Lici;
 
     return-object v0
@@ -145,8 +120,6 @@
 .method public final e()Lgdp;
     .locals 1
 
-    .prologue
-    .line 18
     iget-object v0, p0, Lcwf;->f:Lgdp;
 
     return-object v0
@@ -155,8 +128,6 @@
 .method public final f()Liau;
     .locals 1
 
-    .prologue
-    .line 19
     iget-object v0, p0, Lcwf;->g:Liau;
 
     return-object v0
@@ -165,8 +136,6 @@
 .method public final g()Ljuw;
     .locals 1
 
-    .prologue
-    .line 20
     iget-object v0, p0, Lcwf;->b:Ldhi;
 
     invoke-interface {v0}, Ldhi;->c()Ljuw;

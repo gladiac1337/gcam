@@ -16,28 +16,20 @@
 .method private constructor <init>(Lifz;)V
     .locals 0
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     iput-object p1, p0, Lgds;->a:Lifz;
 
-    .line 4
     return-void
 .end method
 
 .method public constructor <init>(Lifz;Lgzz;)V
     .locals 0
 
-    .prologue
-    .line 12
     invoke-direct {p0, p1}, Lgds;-><init>(Lifz;)V
 
-    .line 13
     iput-object p2, p0, Lgds;->b:Lgzz;
 
-    .line 14
     return-void
 .end method
 
@@ -46,8 +38,6 @@
 .method public final a(Ligc;)Lgdq;
     .locals 3
 
-    .prologue
-    .line 1
     new-instance v0, Lgdr;
 
     invoke-virtual {p0, p1}, Lgds;->b(Ligc;)Lify;
@@ -64,8 +54,6 @@
 .method public final a()Ligc;
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lgds;->a:Lifz;
 
     invoke-interface {v0}, Lifz;->a()Ligc;
@@ -78,8 +66,6 @@
 .method public final a(Lige;)Z
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lgds;->a:Lifz;
 
     invoke-interface {v0, p1}, Lifz;->a(Lige;)Z
@@ -92,8 +78,6 @@
 .method public final b(Ligc;)Lify;
     .locals 1
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lgds;->a:Lifz;
 
     invoke-interface {v0, p1}, Lifz;->b(Ligc;)Lify;
@@ -106,8 +90,6 @@
 .method public final b(Lige;)Ligc;
     .locals 1
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lgds;->a:Lifz;
 
     invoke-interface {v0, p1}, Lifz;->b(Lige;)Ligc;
@@ -120,8 +102,6 @@
 .method public final b()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lgds;->a:Lifz;
 
     invoke-interface {v0}, Lifz;->b()Ljava/util/List;
@@ -134,8 +114,6 @@
 .method public final c()Z
     .locals 1
 
-    .prologue
-    .line 10
     iget-object v0, p0, Lgds;->a:Lifz;
 
     invoke-interface {v0}, Lifz;->c()Z
@@ -148,8 +126,6 @@
 .method public final d()Z
     .locals 1
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lgds;->a:Lifz;
 
     invoke-interface {v0}, Lifz;->d()Z

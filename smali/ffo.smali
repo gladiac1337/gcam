@@ -18,8 +18,6 @@
 .method public constructor <init>(Lffm;II)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lffo;->c:Lffm;
 
     iput p2, p0, Lffo;->a:I
@@ -36,11 +34,8 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 2
     sget-object v0, Lffm;->a:Ljava/lang/String;
 
-    .line 3
     iget v1, p0, Lffo;->a:I
 
     iget v2, p0, Lffo;->b:I
@@ -83,22 +78,16 @@
 
     invoke-static {v0, v1}, Lbhz;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     iget-object v0, p0, Lffo;->c:Lffm;
 
-    .line 5
     iget-object v0, v0, Lffm;->b:Lffj;
 
-    .line 6
     invoke-interface {v0}, Lffj;->d()V
 
-    .line 7
     iget-object v0, p0, Lffo;->c:Lffm;
 
-    .line 8
     iget-object v0, v0, Lffm;->b:Lffj;
 
-    .line 9
     iget v1, p0, Lffo;->a:I
 
     int-to-float v1, v1
@@ -109,6 +98,5 @@
 
     invoke-interface {v0, v1, v2}, Lffj;->a(FF)V
 
-    .line 10
     return-void
 .end method

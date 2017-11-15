@@ -16,8 +16,6 @@
 .method constructor <init>(Liag;Lhze;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Liaj;->b:Liag;
 
     iput-object p2, p0, Liaj;->a:Lhze;
@@ -32,18 +30,13 @@
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Liaj;->b:Liag;
 
-    .line 3
     iget-object v0, v0, Liag;->b:Ljava/util/Set;
 
-    .line 4
     iget-object v1, p0, Liaj;->a:Lhze;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 5
     return-void
 .end method

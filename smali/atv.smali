@@ -29,13 +29,10 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Latv;->a:Ljuw;
 
     iget-object v1, p0, Latv;->b:Late;
 
-    .line 2
     invoke-interface {v0}, Ljuw;->isDone()Z
 
     move-result v2
@@ -54,11 +51,9 @@
 
     if-nez v0, :cond_1
 
-    .line 3
     :cond_0
     invoke-interface {v1}, Late;->d()V
 
-    .line 4
     :cond_1
     return-void
 .end method

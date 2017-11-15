@@ -21,11 +21,8 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lhrd;-><init>()V
 
-    .line 2
     sget-object v0, Lhrj;->d:[Ljava/lang/String;
 
     iput-object v0, p0, Lhrk;->a:[Ljava/lang/String;
@@ -54,7 +51,6 @@
 
     iput v0, p0, Lhrk;->p:I
 
-    .line 3
     return-void
 .end method
 
@@ -192,10 +188,8 @@
 .method protected final a()I
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 4
     invoke-super {p0}, Lhrd;->a()I
 
     move-result v4
@@ -372,12 +366,10 @@
 
     aget-wide v4, v4, v2
 
-    .line 5
     invoke-static {v4, v5}, Lhrc;->b(J)I
 
     move-result v4
 
-    .line 6
     add-int/2addr v3, v4
 
     add-int/lit8 v2, v2, 0x1
@@ -419,12 +411,10 @@
 
     aget-wide v4, v3, v1
 
-    .line 7
     invoke-static {v4, v5}, Lhrc;->b(J)I
 
     move-result v3
 
-    .line 8
     add-int/2addr v2, v3
 
     add-int/lit8 v1, v1, 0x1

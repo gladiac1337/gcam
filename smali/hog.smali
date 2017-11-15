@@ -35,9 +35,6 @@
 .method static synthetic a(Lhkl;Lcom/google/android/gms/googlehelp/GoogleHelp;Lhjg;Lhjg;Ljava/io/File;J)V
     .locals 7
 
-    .prologue
-    .line 1
-    .line 2
     if-eqz p2, :cond_0
 
     new-instance v0, Lhoy;
@@ -69,7 +66,6 @@
 
     invoke-static {v0}, Lhog;->a(Ljava/lang/Runnable;)V
 
-    .line 3
     :cond_1
     return-void
 .end method

@@ -17,43 +17,32 @@
 .method public constructor <init>(Ljee;)V
     .locals 1
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Ljbr;-><init>(Ljee;B)V
 
-    .line 2
     return-void
 .end method
 
 .method private constructor <init>(Ljee;B)V
     .locals 1
 
-    .prologue
     const/high16 v0, 0x3e800000    # 0.25f
 
-    .line 3
     invoke-direct {p0}, Ljbe;-><init>()V
 
-    .line 4
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     iput-object p1, p0, Ljbr;->a:Ljee;
 
-    .line 6
     iput v0, p0, Ljbr;->b:F
 
-    .line 7
     iput v0, p0, Ljbr;->c:F
 
-    .line 8
     const/high16 v0, 0x3f000000    # 0.5f
 
     iput v0, p0, Ljbr;->d:F
 
-    .line 9
     return-void
 .end method
 
@@ -62,28 +51,22 @@
 .method public final a(Ljaz;)Ljaz;
     .locals 10
 
-    .prologue
-    .line 10
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 11
     invoke-virtual {p1}, Ljaz;->d()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 29
     :goto_0
     return-object p1
 
-    .line 13
     :cond_0
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    .line 14
     invoke-virtual {p1}, Ljaz;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -105,7 +88,6 @@
 
     move-result-wide v4
 
-    .line 15
     iget-object v0, p0, Ljbr;->a:Ljee;
 
     invoke-virtual {v0, v4, v5}, Ljee;->a(J)Ljds;
@@ -120,7 +102,6 @@
 
     check-cast v0, Ljava/util/List;
 
-    .line 16
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -139,14 +120,12 @@
 
     check-cast v0, Lcom/google/android/vision/face/Face;
 
-    .line 17
     invoke-static {v0}, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceUtils;->hasAllProbabilities(Lcom/google/android/vision/face/Face;)Z
 
     move-result v6
 
     if-eqz v6, :cond_2
 
-    .line 18
     invoke-virtual {v0}, Lcom/google/android/vision/face/Face;->getTrackId()I
 
     move-result v6
@@ -155,7 +134,6 @@
 
     move-result-object v6
 
-    .line 19
     iget v7, p0, Ljbr;->b:F
 
     iget v8, p0, Ljbr;->c:F
@@ -166,14 +144,12 @@
 
     move-result v7
 
-    .line 20
     invoke-interface {v1, v6}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 21
     invoke-interface {v1, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -192,7 +168,6 @@
 
     if-lez v0, :cond_2
 
-    .line 22
     :cond_3
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -210,13 +185,11 @@
 
     goto :goto_1
 
-    .line 25
     :cond_4
     new-instance v2, Ljava/util/HashSet;
 
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
-    .line 26
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v0
@@ -238,7 +211,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 27
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -253,7 +225,6 @@
 
     goto :goto_2
 
-    .line 29
     :cond_5
     new-instance p1, Ljaz;
 
@@ -265,8 +236,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 6
 
-    .prologue
-    .line 30
     const-string v0, "MaxJoyFaceSegmentFilter[isLeftEyeOpenScoreWeight = "
 
     iget v1, p0, Ljbr;->b:F

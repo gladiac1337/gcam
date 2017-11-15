@@ -14,8 +14,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 8
     new-instance v0, Lexj;
 
     invoke-direct {v0}, Lexj;-><init>()V
@@ -28,8 +26,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,10 +36,8 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 10
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 2
     new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
 
     const-wide/16 v4, 0x1e
@@ -66,19 +60,15 @@
 
     invoke-direct/range {v1 .. v9}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;Ljava/util/concurrent/RejectedExecutionHandler;)V
 
-    .line 3
     invoke-virtual {v1, v2}, Ljava/util/concurrent/ThreadPoolExecutor;->allowCoreThreadTimeOut(Z)V
 
-    .line 5
     const-string v0, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 6
     invoke-static {v1, v0}, Ljwd;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/concurrent/Executor;
 
-    .line 7
     return-object v0
 .end method

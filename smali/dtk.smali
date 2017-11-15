@@ -13,14 +13,10 @@
 .method public constructor <init>(Lgih;Lgki;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Lgih;-><init>(Lgih;)V
 
-    .line 2
     iput-object p2, p0, Ldtk;->a:Lgki;
 
-    .line 3
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -29,7 +25,6 @@
 
     iput-object v0, p0, Ldtk;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 4
     return-void
 .end method
 
@@ -38,8 +33,6 @@
 .method public final close()V
     .locals 2
 
-    .prologue
-    .line 5
     iget-object v0, p0, Ldtk;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x1
@@ -50,15 +43,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 9
     :goto_0
     return-void
 
-    .line 7
     :cond_0
     invoke-super {p0}, Lgih;->close()V
 
-    .line 8
     iget-object v0, p0, Ldtk;->a:Lgki;
 
     invoke-interface {v0}, Lgki;->close()V

@@ -15,8 +15,6 @@
 .method constructor <init>(Lcom/google/android/apps/camera/bottombar/HfrButton;ZI)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/apps/camera/bottombar/HfrButton$2;->this$0:Lcom/google/android/apps/camera/bottombar/HfrButton;
 
     iput-boolean p2, p0, Lcom/google/android/apps/camera/bottombar/HfrButton$2;->val$callListener:Z
@@ -33,8 +31,6 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 3
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/HfrButton$2;->this$0:Lcom/google/android/apps/camera/bottombar/HfrButton;
 
     iget v1, p0, Lcom/google/android/apps/camera/bottombar/HfrButton$2;->val$state:I
@@ -43,7 +39,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/google/android/apps/camera/bottombar/HfrButton;->setState(IZ)V
 
-    .line 7
     iget-boolean v0, p0, Lcom/google/android/apps/camera/bottombar/HfrButton$2;->val$callListener:Z
 
     if-eqz v0, :cond_0
@@ -56,7 +51,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 8
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/HfrButton$2;->this$0:Lcom/google/android/apps/camera/bottombar/HfrButton;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/bottombar/HfrButton;->access$300(Lcom/google/android/apps/camera/bottombar/HfrButton;)Lcom/google/android/apps/camera/bottombar/OnStateChangeListener;
@@ -69,7 +63,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/google/android/apps/camera/bottombar/OnStateChangeListener;->stateChanged(Landroid/view/View;I)V
 
-    .line 9
     :cond_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/HfrButton$2;->this$0:Lcom/google/android/apps/camera/bottombar/HfrButton;
 
@@ -77,22 +70,18 @@
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/bottombar/HfrButton;->setClickable(Z)V
 
-    .line 10
     return-void
 .end method
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/HfrButton$2;->this$0:Lcom/google/android/apps/camera/bottombar/HfrButton;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/bottombar/HfrButton;->setClickable(Z)V
 
-    .line 3
     iget-boolean v0, p0, Lcom/google/android/apps/camera/bottombar/HfrButton$2;->val$callListener:Z
 
     if-eqz v0, :cond_0
@@ -105,7 +94,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/HfrButton$2;->this$0:Lcom/google/android/apps/camera/bottombar/HfrButton;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/bottombar/HfrButton;->access$200(Lcom/google/android/apps/camera/bottombar/HfrButton;)Lcom/google/android/apps/camera/bottombar/OnStateChangeListener;
@@ -122,7 +110,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/google/android/apps/camera/bottombar/OnStateChangeListener;->stateChanged(Landroid/view/View;I)V
 
-    .line 5
     :cond_0
     return-void
 .end method

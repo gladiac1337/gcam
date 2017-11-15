@@ -29,8 +29,6 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhtr;->a:Lcom/google/android/gms/common/ConnectionResult;
 
     invoke-virtual {v0}, Lcom/google/android/gms/common/ConnectionResult;->b()Z
@@ -41,18 +39,14 @@
 
     iget-object v0, p0, Lhtr;->b:Lhpm;
 
-    .line 2
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lhpm;->e:Z
 
-    .line 3
     iget-object v0, p0, Lhtr;->b:Lhpm;
 
-    .line 4
     iget-object v0, v0, Lhpm;->a:Lhkj;
 
-    .line 5
     invoke-interface {v0}, Lhkj;->f()Z
 
     move-result v0
@@ -61,21 +55,16 @@
 
     iget-object v0, p0, Lhtr;->b:Lhpm;
 
-    .line 6
     invoke-virtual {v0}, Lhpm;->a()V
 
-    .line 11
     :goto_0
     return-void
 
-    .line 7
     :cond_0
     iget-object v0, p0, Lhtr;->b:Lhpm;
 
-    .line 8
     iget-object v0, v0, Lhpm;->a:Lhkj;
 
-    .line 9
     const/4 v1, 0x0
 
     invoke-static {}, Ljava/util/Collections;->emptySet()Ljava/util/Set;
@@ -97,10 +86,8 @@
 
     iget-object v1, p0, Lhtr;->b:Lhpm;
 
-    .line 10
     iget-object v1, v1, Lhpm;->b:Lhru;
 
-    .line 11
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0

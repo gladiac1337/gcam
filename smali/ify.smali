@@ -17,25 +17,20 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     new-array v0, v1, [I
 
     sput-object v0, Lify;->a:[I
 
-    .line 2
     new-array v0, v1, [F
 
     sput-object v0, Lify;->b:[F
 
-    .line 3
     new-array v0, v1, [Landroid/util/Size;
 
     sput-object v0, Lify;->c:[Landroid/util/Size;
 
-    .line 4
     new-array v0, v1, [B
 
     sput-object v0, Lify;->d:[B

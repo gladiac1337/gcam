@@ -21,50 +21,40 @@
 .method constructor <init>(Ljava/util/concurrent/Executor;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9
     iput-object p1, p0, Lioo;->a:Ljava/util/concurrent/Executor;
 
-    .line 10
     invoke-static {v1}, Ljuh;->a(Ljava/lang/Object;)Ljuw;
 
     move-result-object v0
 
     iput-object v0, p0, Lioo;->c:Ljuw;
 
-    .line 11
     invoke-static {v1}, Ljuh;->a(Ljava/lang/Object;)Ljuw;
 
     move-result-object v0
 
     iput-object v0, p0, Lioo;->d:Ljuw;
 
-    .line 12
     invoke-static {v1}, Ljuh;->a(Ljava/lang/Object;)Ljuw;
 
     move-result-object v0
 
     iput-object v0, p0, Lioo;->e:Ljuw;
 
-    .line 13
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lioo;->f:Z
 
-    .line 14
     return-void
 .end method
 
 .method public synthetic constructor <init>(Ljava/util/concurrent/Executor;B)V
     .locals 0
 
-    .prologue
-    .line 15
     invoke-direct {p0, p1}, Lioo;-><init>(Ljava/util/concurrent/Executor;)V
 
     return-void
@@ -75,21 +65,16 @@
 .method public a()Lioo;
     .locals 1
 
-    .prologue
-    .line 5
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lioo;->f:Z
 
-    .line 6
     return-object p0
 .end method
 
 .method public a(I)Lioo;
     .locals 1
 
-    .prologue
-    .line 3
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
@@ -100,30 +85,24 @@
 
     iput-object v0, p0, Lioo;->e:Ljuw;
 
-    .line 4
     return-object p0
 .end method
 
 .method public a(Ljava/io/File;)Lioo;
     .locals 1
 
-    .prologue
-    .line 1
     invoke-static {p1}, Ljuh;->a(Ljava/lang/Object;)Ljuw;
 
     move-result-object v0
 
     iput-object v0, p0, Lioo;->b:Ljuw;
 
-    .line 2
     return-object p0
 .end method
 
 .method public b()Liod;
     .locals 7
 
-    .prologue
-    .line 7
     new-instance v0, Liof;
 
     iget-object v1, p0, Lioo;->b:Ljuw;

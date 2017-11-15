@@ -21,37 +21,26 @@
 .method private constructor <init>(Ljah;IIZFF)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljag;->a:Ljah;
 
-    .line 3
     iput p2, p0, Ljag;->b:I
 
-    .line 4
     iput p3, p0, Ljag;->c:I
 
-    .line 5
     iput-boolean p4, p0, Ljag;->d:Z
 
-    .line 6
     iput p5, p0, Ljag;->e:F
 
-    .line 7
     iput p6, p0, Ljag;->f:F
 
-    .line 8
     return-void
 .end method
 
 .method public static a(I)Ljag;
     .locals 7
 
-    .prologue
-    .line 11
     new-instance v0, Ljag;
 
     sget-object v1, Ljah;->c:Ljah;
@@ -74,8 +63,6 @@
 .method public static a(IFF)Ljag;
     .locals 7
 
-    .prologue
-    .line 10
     new-instance v0, Ljag;
 
     sget-object v1, Ljah;->b:Ljah;
@@ -98,8 +85,6 @@
 .method public static a(IIZ)Ljag;
     .locals 7
 
-    .prologue
-    .line 9
     new-instance v0, Ljag;
 
     sget-object v1, Ljah;->a:Ljah;
@@ -124,8 +109,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 9
 
-    .prologue
-    .line 12
     const-string v0, "FeatureTransform[transform="
 
     iget-object v1, p0, Ljag;->a:Ljah;

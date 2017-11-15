@@ -19,31 +19,24 @@
 .method public constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2}, Lcom/google/android/libraries/smartburst/filterfw/Filter;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/lang/String;)V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->mRunnableQueue:Ljava/util/Queue;
 
-    .line 3
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->mIsShutdown:Z
 
-    .line 4
     return-void
 .end method
 
 .method static synthetic access$000(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;)V
     .locals 0
 
-    .prologue
-    .line 39
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->requestClose()V
 
     return-void
@@ -52,8 +45,6 @@
 .method static synthetic access$100(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;)V
     .locals 0
 
-    .prologue
-    .line 40
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->requestClose()V
 
     return-void
@@ -62,8 +53,6 @@
 .method static synthetic access$200(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;)Ljava/util/Queue;
     .locals 1
 
-    .prologue
-    .line 41
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->mRunnableQueue:Ljava/util/Queue;
 
     return-object v0
@@ -74,15 +63,12 @@
 .method public execute(Ljava/lang/Runnable;)V
     .locals 2
 
-    .prologue
-    .line 19
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->isShutdown()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 20
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Attempting to post a command to an executor filter that has been shut down"
@@ -91,24 +77,19 @@
 
     throw v0
 
-    .line 21
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->mRunnableQueue:Ljava/util/Queue;
 
     invoke-interface {v0, p1}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
 
-    .line 22
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->wakeUp()V
 
-    .line 23
     return-void
 .end method
 
 .method public getExecutorService()Ljava/util/concurrent/ExecutorService;
     .locals 1
 
-    .prologue
-    .line 38
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter$3;
 
     invoke-direct {v0, p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter$3;-><init>(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;)V
@@ -119,8 +100,6 @@
 .method public getSignature()Lcom/google/android/libraries/smartburst/filterfw/Signature;
     .locals 1
 
-    .prologue
-    .line 5
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/Signature;
 
     invoke-direct {v0}, Lcom/google/android/libraries/smartburst/filterfw/Signature;-><init>()V
@@ -135,8 +114,6 @@
 .method public isShutdown()Z
     .locals 1
 
-    .prologue
-    .line 37
     iget-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->mIsShutdown:Z
 
     return v0
@@ -145,8 +122,6 @@
 .method protected onClose()V
     .locals 2
 
-    .prologue
-    .line 15
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->mRunnableQueue:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->isEmpty()Z
@@ -155,28 +130,23 @@
 
     if-eqz v0, :cond_0
 
-    .line 16
     const-string v0, "ExecutorFilter"
 
     const-string v1, "Closing filter with non-empty runnable set"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 17
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->mRunnableQueue:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->clear()V
 
-    .line 18
     return-void
 .end method
 
 .method protected onProcess()V
     .locals 5
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->mRunnableQueue:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->poll()Ljava/lang/Object;
@@ -185,24 +155,19 @@
 
     check-cast v0, Ljava/lang/Runnable;
 
-    .line 7
     if-eqz v0, :cond_0
 
-    .line 8
     :try_start_0
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 14
     :goto_0
     return-void
 
-    .line 10
     :catch_0
     move-exception v1
 
-    .line 11
     const-string v2, "ExecutorFilter"
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -241,7 +206,6 @@
 
     goto :goto_0
 
-    .line 13
     :cond_0
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->enterSleepState()V
 
@@ -251,13 +215,10 @@
 .method public shutdown()V
     .locals 2
 
-    .prologue
-    .line 24
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->mIsShutdown:Z
 
-    .line 25
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->mRunnableQueue:Ljava/util/Queue;
 
     new-instance v1, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter$1;
@@ -266,23 +227,18 @@
 
     invoke-interface {v0, v1}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
 
-    .line 26
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->wakeUp()V
 
-    .line 27
     return-void
 .end method
 
 .method public shutdownNow()Ljava/util/List;
     .locals 3
 
-    .prologue
-    .line 28
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->mIsShutdown:Z
 
-    .line 29
     new-instance v1, Ljava/util/ArrayList;
 
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->mRunnableQueue:Ljava/util/Queue;
@@ -293,7 +249,6 @@
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 30
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->mRunnableQueue:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->poll()Ljava/lang/Object;
@@ -302,14 +257,11 @@
 
     check-cast v0, Ljava/lang/Runnable;
 
-    .line 31
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 32
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 33
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->mRunnableQueue:Ljava/util/Queue;
 
     invoke-interface {v0}, Ljava/util/Queue;->poll()Ljava/lang/Object;
@@ -320,7 +272,6 @@
 
     goto :goto_0
 
-    .line 34
     :cond_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->mRunnableQueue:Ljava/util/Queue;
 
@@ -330,9 +281,7 @@
 
     invoke-interface {v0, v2}, Ljava/util/Queue;->add(Ljava/lang/Object;)Z
 
-    .line 35
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/base/ExecutorFilter;->wakeUp()V
 
-    .line 36
     return-object v1
 .end method

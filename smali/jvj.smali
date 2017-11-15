@@ -11,24 +11,18 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x0
 
     iput-object v0, p0, Ljvj;->a:Ljava/lang/String;
 
-    .line 3
     return-void
 .end method
 
 .method static varargs a(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
     .locals 1
 
-    .prologue
-    .line 7
     sget-object v0, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
     invoke-static {v0, p0, p1}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -43,10 +37,8 @@
 .method public final a(Ljava/lang/String;)Ljvj;
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 4
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -59,9 +51,7 @@
 
     invoke-static {p1, v0}, Ljvj;->a(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 5
     iput-object p1, p0, Ljvj;->a:Ljava/lang/String;
 
-    .line 6
     return-object p0
 .end method

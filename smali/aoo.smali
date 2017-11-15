@@ -16,32 +16,24 @@
 .method public constructor <init>()V
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
     invoke-direct {p0, v0}, Laoo;-><init>(Landroid/graphics/Bitmap$CompressFormat;)V
 
-    .line 2
     return-void
 .end method
 
 .method private constructor <init>(Landroid/graphics/Bitmap$CompressFormat;)V
     .locals 1
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     iput-object p1, p0, Laoo;->a:Landroid/graphics/Bitmap$CompressFormat;
 
-    .line 5
     const/16 v0, 0x64
 
     iput v0, p0, Laoo;->b:I
 
-    .line 6
     return-void
 .end method
 
@@ -50,13 +42,10 @@
 .method public final a(Lahg;)Lahg;
     .locals 4
 
-    .prologue
-    .line 7
     new-instance v1, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v1}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 8
     invoke-interface {p1}, Lahg;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -69,10 +58,8 @@
 
     invoke-virtual {v0, v2, v3, v1}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 9
     invoke-interface {p1}, Lahg;->d()V
 
-    .line 10
     new-instance v0, Lanx;
 
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B

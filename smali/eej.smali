@@ -18,8 +18,6 @@
 .method constructor <init>(Leeh;Landroid/graphics/Bitmap;I)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leej;->c:Leeh;
 
     iput-object p2, p0, Leej;->a:Landroid/graphics/Bitmap;
@@ -36,8 +34,6 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Leej;->c:Leeh;
 
     invoke-static {v0}, Leeh;->a(Leeh;)Leou;
@@ -50,6 +46,5 @@
 
     invoke-interface {v0, v1, v2}, Leou;->a(Landroid/graphics/Bitmap;I)V
 
-    .line 3
     return-void
 .end method

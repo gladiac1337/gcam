@@ -36,8 +36,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 102
     const-string v0, "FSListBuilder"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -52,17 +50,12 @@
 .method public constructor <init>(JLcfp;Lcga;Landroid/content/ContentResolver;Lcdz;Lgvz;)V
     .locals 7
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-wide p1, p0, Lcgk;->g:J
 
-    .line 3
     iput-wide p1, p0, Lcgk;->h:J
 
-    .line 4
     invoke-static {p3}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -71,7 +64,6 @@
 
     iput-object v0, p0, Lcgk;->c:Lcfp;
 
-    .line 5
     invoke-static {p4}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -80,7 +72,6 @@
 
     iput-object v0, p0, Lcgk;->d:Lcga;
 
-    .line 6
     invoke-static {p5}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -89,7 +80,6 @@
 
     iput-object v0, p0, Lcgk;->e:Landroid/content/ContentResolver;
 
-    .line 7
     invoke-static {p6}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -98,7 +88,6 @@
 
     iput-object v0, p0, Lcgk;->f:Lcdz;
 
-    .line 8
     invoke-interface {p7}, Lgvz;->c()Ljava/lang/String;
 
     move-result-object v0
@@ -115,7 +104,6 @@
 
     iput-object v0, p0, Lcgk;->b:Ljava/lang/String;
 
-    .line 9
     sget-object v0, Lcgk;->a:Ljava/lang/String;
 
     iget-wide v2, p0, Lcgk;->g:J
@@ -154,36 +142,30 @@
 
     invoke-static {v0, v1}, Lbhz;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10
     return-void
 .end method
 
 .method private final a(Landroid/database/Cursor;)Lfvf;
     .locals 9
 
-    .prologue
     const/4 v8, 0x0
 
     const/4 v7, 0x0
 
-    .line 54
     iget-object v0, p0, Lcgk;->c:Lcfp;
 
     invoke-static {p1, v0}, Lcgk;->a(Landroid/database/Cursor;Lcer;)Lfvf;
 
     move-result-object v0
 
-    .line 55
     if-nez v0, :cond_1
 
     move-object v0, v7
 
-    .line 97
     :cond_0
     :goto_0
     return-object v0
 
-    .line 57
     :cond_1
     invoke-static {v0}, Lcdz;->a(Lfvf;)Z
 
@@ -191,7 +173,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 59
     invoke-interface {v0}, Lfvf;->f()Lfvj;
 
     move-result-object v1
@@ -200,12 +181,10 @@
 
     move-result-object v1
 
-    .line 60
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 61
     new-instance v2, Lcdw;
 
     check-cast v0, Lcfo;
@@ -214,7 +193,6 @@
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 62
     :goto_1
     invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -222,24 +200,20 @@
 
     if-eqz v0, :cond_3
 
-    .line 63
     iget-object v0, p0, Lcgk;->c:Lcfp;
 
     invoke-virtual {v0, p1}, Lcfp;->b(Landroid/database/Cursor;)Lcfo;
 
     move-result-object v0
 
-    .line 64
     invoke-static {v0}, Lcdz;->a(Lfvf;)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 65
     iget-object v2, v0, Lcfb;->e:Lfvj;
 
-    .line 66
     invoke-static {v2}, Lcgk;->a(Lfvj;)Ljava/lang/String;
 
     move-result-object v2
@@ -250,7 +224,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 67
     new-instance v2, Lcdw;
 
     invoke-direct {v2, v0}, Lcdw;-><init>(Lcfo;)V
@@ -259,15 +232,12 @@
 
     goto :goto_1
 
-    .line 68
     :cond_2
     invoke-interface {p1}, Landroid/database/Cursor;->moveToPrevious()Z
 
-    .line 69
     :cond_3
     iget-object v6, p0, Lcgk;->f:Lcdz;
 
-    .line 70
     new-instance v0, Lcdx;
 
     iget-object v1, v6, Lcdz;->e:Lgow;
@@ -278,7 +248,6 @@
 
     iget-object v4, v6, Lcdz;->d:Lcfe;
 
-    .line 71
     invoke-static {v5}, Lcdy;->a(Ljava/util/List;)Lcdy;
 
     move-result-object v5
@@ -287,12 +256,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcdx;-><init>(Lgow;Lgrw;Landroid/content/Context;Lcfe;Lcdy;Lgvx;)V
 
-    .line 73
     iget-object v1, v0, Lcdx;->e:Lfvj;
 
     check-cast v1, Lcdy;
 
-    .line 74
     invoke-virtual {v1}, Lcdy;->b()Ljava/util/List;
 
     move-result-object v1
@@ -303,26 +270,20 @@
 
     check-cast v1, Lcdw;
 
-    .line 75
     iget-object v1, v1, Lcfq;->c:Lcfo;
 
-    .line 76
     iget-object v1, v1, Lcfb;->e:Lfvj;
 
-    .line 78
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 80
     iget-object v4, v1, Lfvj;->f:Ljava/util/Date;
 
-    .line 81
     invoke-virtual {v4}, Ljava/util/Date;->getTime()J
 
     move-result-wide v4
 
-    .line 82
     sub-long/2addr v2, v4
 
     const-wide/32 v4, 0xea60
@@ -331,15 +292,12 @@
 
     if-gtz v2, :cond_5
 
-    .line 83
     new-instance v2, Lbzk;
 
     new-instance v3, Ljava/io/File;
 
-    .line 84
     iget-object v1, v1, Lfvj;->g:Ljava/lang/String;
 
-    .line 85
     invoke-direct {v3, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v3}, Ljava/io/File;->getParentFile()Ljava/io/File;
@@ -348,7 +306,6 @@
 
     invoke-direct {v2, v1}, Lbzk;-><init>(Ljava/io/File;)V
 
-    .line 86
     invoke-virtual {v2}, Lbzk;->c()Z
 
     move-result v1
@@ -357,11 +314,9 @@
 
     const/4 v1, 0x1
 
-    .line 87
     :goto_2
     if-eqz v1, :cond_4
 
-    .line 88
     sget-object v0, Lcdz;->a:Ljava/lang/String;
 
     const-string v1, "Burst creation failed because saving is in progress"
@@ -370,25 +325,20 @@
 
     move-object v0, v7
 
-    .line 92
     :cond_4
     if-nez v0, :cond_6
 
-    .line 93
     invoke-direct {p0, p1}, Lcgk;->a(Landroid/database/Cursor;)Lfvf;
 
     move-object v0, v7
 
-    .line 94
     goto/16 :goto_0
 
     :cond_5
     move v1, v8
 
-    .line 86
     goto :goto_2
 
-    .line 95
     :cond_6
     sget-object v1, Lcgk;->a:Ljava/lang/String;
 
@@ -424,10 +374,8 @@
 .method private static a(Landroid/database/Cursor;Lcer;)Lfvf;
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 46
     if-eqz p0, :cond_0
 
     invoke-interface {p0}, Landroid/database/Cursor;->getColumnCount()I
@@ -436,11 +384,9 @@
 
     if-nez v1, :cond_1
 
-    .line 53
     :cond_0
     return-object v0
 
-    .line 49
     :cond_1
     :goto_0
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
@@ -449,15 +395,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 50
     invoke-interface {p1, p0}, Lcer;->a(Landroid/database/Cursor;)Lfvf;
 
     move-result-object v0
 
-    .line 51
     if-nez v0, :cond_0
 
-    .line 52
     sget-object v1, Lcgk;->a:Ljava/lang/String;
 
     const-string v2, "Skipping item because failed to load."
@@ -470,14 +413,10 @@
 .method private static a(Lfvj;)Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 99
     new-instance v0, Ljava/io/File;
 
-    .line 100
     iget-object v1, p0, Lfvj;->g:Ljava/lang/String;
 
-    .line 101
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/io/File;->getParent()Ljava/lang/String;
@@ -490,8 +429,6 @@
 .method private final b(Landroid/database/Cursor;)Lcfv;
     .locals 1
 
-    .prologue
-    .line 98
     iget-object v0, p0, Lcgk;->d:Lcga;
 
     invoke-static {p1, v0}, Lcgk;->a(Landroid/database/Cursor;Lcer;)Lfvf;
@@ -508,21 +445,17 @@
 .method public final a(I)Ljava/util/List;
     .locals 14
 
-    .prologue
     const/4 v6, 0x0
 
     const/16 v12, 0x44
 
-    .line 11
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 13
     :try_start_0
     const-string v3, "_data LIKE ? AND datetaken <= ?"
 
-    .line 14
     const/4 v0, 0x2
 
     new-array v4, v0, [Ljava/lang/String;
@@ -543,7 +476,6 @@
 
     aput-object v1, v4, v0
 
-    .line 15
     iget-object v0, p0, Lcgk;->e:Landroid/content/ContentResolver;
 
     sget-object v1, Lcfn;->a:Landroid/net/Uri;
@@ -558,11 +490,9 @@
 
     move-result-object v8
 
-    .line 18
     :try_start_1
     const-string v3, "_data LIKE ? AND datetaken <= ?"
 
-    .line 19
     const/4 v0, 0x2
 
     new-array v4, v0, [Ljava/lang/String;
@@ -583,7 +513,6 @@
 
     aput-object v1, v4, v0
 
-    .line 20
     iget-object v0, p0, Lcgk;->e:Landroid/content/ContentResolver;
 
     sget-object v1, Lcfu;->a:Landroid/net/Uri;
@@ -599,7 +528,6 @@
 
     move-result-object v2
 
-    .line 23
     :try_start_2
     sget-object v0, Lcgk;->a:Ljava/lang/String;
 
@@ -639,31 +567,26 @@
 
     invoke-static {v0, v1}, Lbhz;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 24
     invoke-direct {p0, v8}, Lcgk;->a(Landroid/database/Cursor;)Lfvf;
 
     move-result-object v1
 
-    .line 25
     invoke-direct {p0, v2}, Lcgk;->b(Landroid/database/Cursor;)Lcfv;
 
     move-result-object v0
 
-    .line 26
     invoke-static {v1}, Lcfb;->a(Lfvf;)J
 
     move-result-wide v4
 
     iput-wide v4, p0, Lcgk;->g:J
 
-    .line 27
     invoke-static {v0}, Lcfb;->a(Lfvf;)J
 
     move-result-wide v4
 
     iput-wide v4, p0, Lcgk;->h:J
 
-    .line 28
     :goto_0
     if-nez v1, :cond_0
 
@@ -672,7 +595,6 @@
     :cond_0
     if-lez p1, :cond_5
 
-    .line 29
     if-eqz v1, :cond_2
 
     if-eqz v0, :cond_1
@@ -685,38 +607,31 @@
 
     if-ltz v3, :cond_2
 
-    .line 30
     :cond_1
     invoke-virtual {v7, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 31
     invoke-direct {p0, v8}, Lcgk;->a(Landroid/database/Cursor;)Lfvf;
 
     move-result-object v1
 
-    .line 32
     invoke-static {v1}, Lcfb;->a(Lfvf;)J
 
     move-result-wide v4
 
     iput-wide v4, p0, Lcgk;->g:J
 
-    .line 36
     :goto_1
     add-int/lit8 p1, p1, -0x1
 
     goto :goto_0
 
-    .line 33
     :cond_2
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 34
     invoke-direct {p0, v2}, Lcgk;->b(Landroid/database/Cursor;)Lcfv;
 
     move-result-object v0
 
-    .line 35
     invoke-static {v0}, Lcfb;->a(Lfvf;)J
 
     move-result-wide v4
@@ -728,7 +643,6 @@
 
     goto :goto_1
 
-    .line 38
     :catch_0
     move-exception v0
 
@@ -737,7 +651,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 39
     :catchall_0
     move-exception v1
 
@@ -766,7 +679,6 @@
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_3
 
-    .line 40
     :catch_1
     move-exception v0
 
@@ -775,7 +687,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 41
     :catchall_1
     move-exception v1
 
@@ -801,7 +712,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 44
     :catchall_2
     move-exception v0
 
@@ -843,7 +753,6 @@
 
     throw v0
 
-    .line 37
     :cond_5
     if-eqz v2, :cond_6
 
@@ -853,7 +762,6 @@
     .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_1
     .catchall {:try_start_9 .. :try_end_9} :catchall_3
 
-    .line 39
     :cond_6
     if-eqz v8, :cond_7
 
@@ -862,7 +770,6 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_2
 
-    .line 42
     :cond_7
     sget-object v0, Lcgk;->a:Ljava/lang/String;
 
@@ -900,10 +807,8 @@
 
     invoke-static {v0, v1}, Lbhz;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 45
     return-object v7
 
-    .line 39
     :catch_2
     move-exception v2
 
@@ -912,13 +817,11 @@
 
     goto :goto_3
 
-    .line 41
     :catchall_3
     move-exception v0
 
     goto :goto_4
 
-    .line 39
     :cond_8
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
     :try_end_b
@@ -927,7 +830,6 @@
 
     goto :goto_3
 
-    .line 41
     :catch_3
     move-exception v1
 
@@ -943,7 +845,6 @@
 
     goto :goto_5
 
-    .line 39
     :catchall_4
     move-exception v0
 

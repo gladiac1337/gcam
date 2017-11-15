@@ -10,8 +10,6 @@
 .method constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -22,8 +20,6 @@
 .method public final c()Liau;
     .locals 1
 
-    .prologue
-    .line 2
     sget-object v0, Leal;->a:Leal;
 
     invoke-static {v0}, Liav;->a(Ljava/lang/Object;)Liau;

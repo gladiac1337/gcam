@@ -16,8 +16,6 @@
 .method constructor <init>(Lghr;Lgfz;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lghu;->b:Lghr;
 
     iput-object p2, p0, Lghu;->a:Lgfz;
@@ -32,18 +30,14 @@
 .method public final a(Ljava/lang/Object;)Ljuw;
     .locals 6
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lghu;->b:Lghr;
 
     iget-object v1, p0, Lghu;->a:Lgfz;
 
-    .line 4
     iget-object v2, v0, Lghr;->b:Licu;
 
     iget-object v3, v0, Lghr;->a:Liin;
 
-    .line 5
     invoke-interface {v3}, Liin;->c()I
 
     move-result v3
@@ -54,7 +48,6 @@
 
     iget-object v0, v0, Lghr;->a:Liin;
 
-    .line 6
     invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
@@ -135,29 +128,23 @@
 
     move-result-object v0
 
-    .line 7
     invoke-interface {v2, v0}, Licu;->f(Ljava/lang/String;)V
 
-    .line 8
     iget-object v0, p0, Lghu;->b:Lghr;
 
     new-instance v1, Ligi;
 
     iget-object v2, p0, Lghu;->a:Lgfz;
 
-    .line 9
     iget-wide v2, v2, Lgfz;->a:J
 
-    .line 10
     invoke-direct {v1, v2, v3}, Ligi;-><init>(J)V
 
     iget-object v2, p0, Lghu;->a:Lgfz;
 
-    .line 12
     invoke-virtual {v0, v1, v2}, Lghr;->a(Liil;Lgfz;)Ljuw;
 
     move-result-object v0
 
-    .line 13
     return-object v0
 .end method

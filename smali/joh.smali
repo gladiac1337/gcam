@@ -11,11 +11,8 @@
 .method constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljol;-><init>()V
 
-    .line 2
     const/16 v0, 0x8
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
@@ -36,8 +33,6 @@
 .method private final b()Ljol;
     .locals 2
 
-    .prologue
-    .line 9
     :try_start_0
     iget-object v0, p0, Ljoh;->a:Ljava/nio/ByteBuffer;
 
@@ -49,15 +44,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10
     iget-object v0, p0, Ljoh;->a:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    .line 13
     return-object p0
 
-    .line 12
     :catchall_0
     move-exception v0
 
@@ -73,13 +65,10 @@
 .method public final a(C)Ljol;
     .locals 1
 
-    .prologue
-    .line 14
     iget-object v0, p0, Ljoh;->a:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->putChar(C)Ljava/nio/ByteBuffer;
 
-    .line 15
     invoke-direct {p0}, Ljoh;->b()Ljol;
 
     move-result-object v0
@@ -93,8 +82,6 @@
 .method protected a([B)V
     .locals 2
 
-    .prologue
-    .line 3
     const/4 v0, 0x0
 
     :goto_0
@@ -102,17 +89,14 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 4
     aget-byte v1, p1, v0
 
     invoke-virtual {p0, v1}, Ljoh;->a(B)V
 
-    .line 5
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 6
     :cond_0
     return-void
 .end method
@@ -120,10 +104,7 @@
 .method public final b(B)Ljol;
     .locals 0
 
-    .prologue
-    .line 7
     invoke-virtual {p0, p1}, Ljoh;->a(B)V
 
-    .line 8
     return-object p0
 .end method

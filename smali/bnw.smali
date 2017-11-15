@@ -21,8 +21,6 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 18
     const-string v0, "SpecTypeDb"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -31,7 +29,6 @@
 
     sput-object v0, Lbnw;->a:Ljava/lang/String;
 
-    .line 19
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;
@@ -50,30 +47,22 @@
 .method public constructor <init>(Lbob;Ljava/util/concurrent/Executor;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
     new-instance v0, Ljvi;
 
     invoke-direct {v0}, Ljvi;-><init>()V
 
-    .line 4
     iput-object v0, p0, Lbnw;->b:Ljvi;
 
-    .line 6
     new-instance v0, Ljvi;
 
     invoke-direct {v0}, Ljvi;-><init>()V
 
-    .line 7
     iput-object v0, p0, Lbnw;->c:Ljvi;
 
-    .line 8
     iput-object p2, p0, Lbnw;->d:Ljava/util/concurrent/Executor;
 
-    .line 9
     iget-object v0, p0, Lbnw;->d:Ljava/util/concurrent/Executor;
 
     new-instance v1, Lbnx;
@@ -82,7 +71,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 10
     return-void
 .end method
 
@@ -91,8 +79,6 @@
 .method public final a(J)Ljht;
     .locals 3
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lbnw;->b:Ljvi;
 
     new-instance v1, Lbny;
@@ -101,12 +87,10 @@
 
     iget-object v2, p0, Lbnw;->d:Ljava/util/concurrent/Executor;
 
-    .line 12
     invoke-static {v0, v1, v2}, Ljuh;->a(Ljuw;Ljhj;Ljava/util/concurrent/Executor;)Ljuw;
 
     move-result-object v0
 
-    .line 13
     :try_start_0
     invoke-interface {v0}, Ljuw;->get()Ljava/lang/Object;
 
@@ -117,11 +101,9 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 17
     :goto_0
     return-object v0
 
-    .line 16
     :catch_0
     move-exception v0
 

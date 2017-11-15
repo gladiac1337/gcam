@@ -11,8 +11,6 @@
 .method constructor <init>(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$4;->this$0:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -25,8 +23,6 @@
 .method public onAnimationEnd(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$4;->this$0:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->access$600(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;)Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
@@ -35,7 +31,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$4;->this$0:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->access$600(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;)Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;
@@ -44,12 +39,10 @@
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$RevealRequest;->finishThumbnailAnimation()V
 
-    .line 4
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$4;->this$0:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;
 
     invoke-static {v0}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->access$700(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;)V
 
-    .line 5
     :cond_0
     iget-object v0, p0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView$4;->this$0:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;
 
@@ -57,6 +50,5 @@
 
     invoke-static {v0, v1}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->access$802(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 6
     return-void
 .end method

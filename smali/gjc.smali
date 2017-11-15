@@ -11,16 +11,12 @@
 .method public constructor <init>()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Liag;
 
-    .line 3
     invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v1
@@ -45,6 +41,5 @@
 
     iput-object v0, p0, Lgjc;->a:Liag;
 
-    .line 4
     return-void
 .end method

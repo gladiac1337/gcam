@@ -14,8 +14,6 @@
 .method constructor <init>(Leeh;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leeo;->a:Leeh;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final run()V
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Leeo;->a:Leeh;
 
     invoke-static {v0}, Leeh;->a(Leeh;)Leou;
@@ -38,6 +34,5 @@
 
     invoke-interface {v0}, Leou;->f()V
 
-    .line 3
     return-void
 .end method

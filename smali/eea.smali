@@ -33,15 +33,12 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Leea;->a:Lhzr;
 
     iget-object v1, p0, Leea;->b:Leai;
 
     iget-object v2, p0, Leea;->c:Licu;
 
-    .line 3
     invoke-interface {v1}, Leai;->a()Liau;
 
     move-result-object v1
@@ -50,14 +47,11 @@
 
     invoke-direct {v3, v2}, Leeb;-><init>(Licu;)V
 
-    .line 4
     invoke-static {v1, v3}, Liav;->a(Liau;Licn;)Lich;
 
     move-result-object v1
 
-    .line 5
     invoke-virtual {v0, v1}, Lhzr;->a(Lich;)Lich;
 
-    .line 6
     return-void
 .end method

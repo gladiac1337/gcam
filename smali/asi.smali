@@ -25,17 +25,13 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lasi;->a:Lasf;
 
     check-cast p1, Lgep;
 
-    .line 2
     iget-object v0, v0, Lasf;->a:Lass;
 
     invoke-interface {v0, p1}, Lass;->a(Ljava/lang/Object;)V
 
-    .line 3
     return-void
 .end method

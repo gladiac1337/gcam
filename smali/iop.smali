@@ -15,20 +15,14 @@
 .method constructor <init>(Ljava/lang/Object;JJ)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Liop;->a:Ljava/lang/Object;
 
-    .line 3
     iput-wide p2, p0, Liop;->b:J
 
-    .line 4
     iput-wide p4, p0, Liop;->c:J
 
-    .line 5
     return-void
 .end method
 
@@ -37,8 +31,6 @@
 .method public final a(J)Z
     .locals 3
 
-    .prologue
-    .line 6
     iget-wide v0, p0, Liop;->c:J
 
     cmp-long v0, p1, v0

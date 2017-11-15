@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 6
 
-    .prologue
-    .line 1
     new-instance v0, Lbku;
 
     const-string v1, "camcorder.h265"
@@ -27,7 +25,6 @@
 
     sput-object v0, Lbdo;->a:Lbku;
 
-    .line 2
     new-instance v0, Lbku;
 
     const-string v1, "camcorder.fastswitch"
@@ -38,14 +35,12 @@
 
     sput-object v0, Lbdo;->b:Lbku;
 
-    .line 3
     new-instance v0, Lbkx;
 
     const-string v1, "camcorder.capture_rate"
 
     const/16 v2, 0x1e
 
-    .line 4
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
@@ -76,6 +71,5 @@
 
     sput-object v0, Lbdo;->c:Lbkx;
 
-    .line 5
     return-void
 .end method

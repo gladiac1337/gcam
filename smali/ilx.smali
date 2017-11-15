@@ -16,8 +16,6 @@
 .method constructor <init>(Lilv;Likf;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lilx;->b:Lilv;
 
     iput-object p2, p0, Lilx;->a:Likf;
@@ -32,28 +30,20 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lilx;->b:Lilv;
 
-    .line 3
     iget-object v0, v0, Lilv;->a:Ljava/lang/Object;
 
-    .line 4
     if-nez v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lilx;->a:Likf;
 
     iget-object v1, p0, Lilx;->b:Lilv;
 
-    .line 6
     iget-object v1, v1, Lilv;->b:Lilh;
 
-    .line 7
     invoke-interface {v0, v1}, Likf;->a(Ljava/lang/Throwable;)V
 
-    .line 8
     :cond_0
     return-void
 .end method
@@ -61,8 +51,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 9
     iget-object v0, p0, Lilx;->b:Lilv;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

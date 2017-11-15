@@ -13,8 +13,6 @@
 .method public constructor <init>(Lfiw;Lcom/google/android/apps/camera/optionsbar/OptionsBarView;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgmg;->b:Lfiw;
 
     iput-object p2, p0, Lgmg;->a:Lcom/google/android/apps/camera/optionsbar/OptionsBarView;

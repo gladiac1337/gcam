@@ -31,7 +31,6 @@
 .method static constructor <clinit>()V
     .locals 10
 
-    .prologue
     const/4 v9, 0x4
 
     const/4 v8, 0x3
@@ -42,7 +41,6 @@
 
     const/4 v0, 0x0
 
-    .line 10
     new-instance v1, Lgqd;
 
     const-string v2, "AAC"
@@ -53,7 +51,6 @@
 
     sput-object v1, Lgqd;->c:Lgqd;
 
-    .line 11
     new-instance v1, Lgqd;
 
     const-string v2, "AAC_ELD"
@@ -66,7 +63,6 @@
 
     sput-object v1, Lgqd;->d:Lgqd;
 
-    .line 12
     new-instance v1, Lgqd;
 
     const-string v2, "HE_AAC"
@@ -77,7 +73,6 @@
 
     sput-object v1, Lgqd;->e:Lgqd;
 
-    .line 13
     new-instance v1, Lgqd;
 
     const-string v2, "AMR_NB"
@@ -88,7 +83,6 @@
 
     sput-object v1, Lgqd;->f:Lgqd;
 
-    .line 14
     new-instance v1, Lgqd;
 
     const-string v2, "AMR_WB"
@@ -99,7 +93,6 @@
 
     sput-object v1, Lgqd;->g:Lgqd;
 
-    .line 15
     new-instance v1, Lgqd;
 
     const-string v2, "VORBIS"
@@ -114,7 +107,6 @@
 
     sput-object v1, Lgqd;->h:Lgqd;
 
-    .line 16
     const/4 v1, 0x6
 
     new-array v1, v1, [Lgqd;
@@ -147,14 +139,12 @@
 
     sput-object v1, Lgqd;->j:[Lgqd;
 
-    .line 17
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     sput-object v1, Lgqd;->i:Ljava/util/Map;
 
-    .line 18
     invoke-static {}, Lgqd;->values()[Lgqd;
 
     move-result-object v1
@@ -166,7 +156,6 @@
 
     aget-object v3, v1, v0
 
-    .line 19
     sget-object v4, Lgqd;->i:Ljava/util/Map;
 
     iget v5, v3, Lgqd;->a:I
@@ -177,12 +166,10 @@
 
     invoke-interface {v4, v5, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 20
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 21
     :cond_0
     return-void
 .end method
@@ -190,25 +177,18 @@
 .method private constructor <init>(Ljava/lang/String;IILgqe;)V
     .locals 0
 
-    .prologue
-    .line 6
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 7
     iput p3, p0, Lgqd;->a:I
 
-    .line 8
     iput-object p4, p0, Lgqd;->b:Lgqe;
 
-    .line 9
     return-void
 .end method
 
 .method public static a(I)Lgqd;
     .locals 3
 
-    .prologue
-    .line 2
     sget-object v0, Lgqd;->i:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -221,10 +201,8 @@
 
     check-cast v0, Lgqd;
 
-    .line 3
     if-nez v0, :cond_0
 
-    .line 4
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const/16 v1, 0x2b
@@ -251,7 +229,6 @@
 
     throw v0
 
-    .line 5
     :cond_0
     return-object v0
 .end method
@@ -259,8 +236,6 @@
 .method public static values()[Lgqd;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lgqd;->j:[Lgqd;
 
     invoke-virtual {v0}, [Lgqd;->clone()Ljava/lang/Object;

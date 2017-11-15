@@ -13,8 +13,6 @@
 .method constructor <init>(Landroid/content/Context;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Laip;->a:Landroid/content/Context;
 
     iput-object p2, p0, Laip;->b:Ljava/lang/String;

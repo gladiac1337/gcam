@@ -9,8 +9,6 @@
 .method public final a(Lhks;)V
     .locals 1
 
-    .prologue
-    .line 1
     new-instance v0, Ljava/lang/NoSuchMethodError;
 
     invoke-direct {v0}, Ljava/lang/NoSuchMethodError;-><init>()V

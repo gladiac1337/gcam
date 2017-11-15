@@ -17,22 +17,18 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    .prologue
-    .line 18
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x16
 
     if-lt v0, v1, :cond_0
 
-    .line 19
     new-instance v0, Ldk;
 
     invoke-direct {v0}, Ldk;-><init>()V
 
     sput-object v0, Lde;->a:Ldl;
 
-    .line 27
     :goto_0
     new-instance v0, Ldf;
 
@@ -44,7 +40,6 @@
 
     sput-object v0, Lde;->b:Landroid/util/Property;
 
-    .line 28
     new-instance v0, Ldg;
 
     const-class v1, Landroid/graphics/Rect;
@@ -55,7 +50,6 @@
 
     return-void
 
-    .line 20
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -63,7 +57,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 21
     new-instance v0, Ldj;
 
     invoke-direct {v0}, Ldj;-><init>()V
@@ -72,7 +65,6 @@
 
     goto :goto_0
 
-    .line 22
     :cond_1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -80,7 +72,6 @@
 
     if-lt v0, v1, :cond_2
 
-    .line 23
     new-instance v0, Ldi;
 
     invoke-direct {v0}, Ldi;-><init>()V
@@ -89,7 +80,6 @@
 
     goto :goto_0
 
-    .line 24
     :cond_2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -97,7 +87,6 @@
 
     if-lt v0, v1, :cond_3
 
-    .line 25
     new-instance v0, Ldh;
 
     invoke-direct {v0}, Ldh;-><init>()V
@@ -106,7 +95,6 @@
 
     goto :goto_0
 
-    .line 26
     :cond_3
     new-instance v0, Ldl;
 
@@ -120,28 +108,22 @@
 .method static a(Landroid/view/View;F)V
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lde;->a:Ldl;
 
     invoke-virtual {v0, p0, p1}, Ldl;->a(Landroid/view/View;F)V
 
-    .line 2
     return-void
 .end method
 
 .method static a(Landroid/view/View;I)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x1
 
-    .line 3
     sget-boolean v0, Lde;->d:Z
 
     if-nez v0, :cond_0
 
-    .line 4
     :try_start_0
     const-class v0, Landroid/view/View;
 
@@ -151,7 +133,6 @@
 
     move-result-object v0
 
-    .line 5
     sput-object v0, Lde;->c:Ljava/lang/reflect/Field;
 
     const/4 v1, 0x1
@@ -160,17 +141,14 @@
     :try_end_0
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 9
     :goto_0
     sput-boolean v2, Lde;->d:Z
 
-    .line 10
     :cond_0
     sget-object v0, Lde;->c:Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_1
 
-    .line 11
     :try_start_1
     sget-object v0, Lde;->c:Ljava/lang/reflect/Field;
 
@@ -178,7 +156,6 @@
 
     move-result v0
 
-    .line 12
     sget-object v1, Lde;->c:Ljava/lang/reflect/Field;
 
     and-int/lit8 v0, v0, -0xd
@@ -189,12 +166,10 @@
     :try_end_1
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 15
     :cond_1
     :goto_1
     return-void
 
-    .line 8
     :catch_0
     move-exception v0
 
@@ -215,8 +190,6 @@
 .method static a(Landroid/view/View;IIII)V
     .locals 6
 
-    .prologue
-    .line 16
     sget-object v0, Lde;->a:Ldl;
 
     move-object v1, p0
@@ -231,6 +204,5 @@
 
     invoke-virtual/range {v0 .. v5}, Ldl;->a(Landroid/view/View;IIII)V
 
-    .line 17
     return-void
 .end method

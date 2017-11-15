@@ -20,11 +20,8 @@
 .method public constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
     new-instance v0, Lhb;
 
     const/16 v1, 0xa
@@ -33,21 +30,18 @@
 
     iput-object v0, p0, Lnj;->a:Lha;
 
-    .line 5
     new-instance v0, Lhd;
 
     invoke-direct {v0}, Lhd;-><init>()V
 
     iput-object v0, p0, Lnj;->b:Lhd;
 
-    .line 6
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lnj;->c:Ljava/util/ArrayList;
 
-    .line 7
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -60,19 +54,15 @@
 .method private final a(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/HashSet;)V
     .locals 4
 
-    .prologue
-    .line 17
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 29
     :goto_0
     return-void
 
-    .line 19
     :cond_0
     invoke-virtual {p3, p1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
@@ -80,7 +70,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 20
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "This graph contains cyclic dependencies"
@@ -89,11 +78,9 @@
 
     throw v0
 
-    .line 21
     :cond_1
     invoke-virtual {p3, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 22
     iget-object v0, p0, Lnj;->b:Lhd;
 
     invoke-virtual {v0, p1}, Lhd;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -102,10 +89,8 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
-    .line 23
     if-eqz v0, :cond_2
 
-    .line 24
     const/4 v1, 0x0
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -115,23 +100,19 @@
     :goto_1
     if-ge v1, v2, :cond_2
 
-    .line 25
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     invoke-direct {p0, v3, p2, p3}, Lnj;->a(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/HashSet;)V
 
-    .line 26
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 27
     :cond_2
     invoke-virtual {p3, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 28
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -142,18 +123,14 @@
 .method public final a()Ljava/util/ArrayList;
     .locals 5
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lnj;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 12
     iget-object v0, p0, Lnj;->d:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
-    .line 13
     const/4 v0, 0x0
 
     iget-object v1, p0, Lnj;->b:Lhd;
@@ -165,7 +142,6 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 14
     iget-object v2, p0, Lnj;->b:Lhd;
 
     invoke-virtual {v2, v0}, Lhd;->b(I)Ljava/lang/Object;
@@ -178,12 +154,10 @@
 
     invoke-direct {p0, v2, v3, v4}, Lnj;->a(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/HashSet;)V
 
-    .line 15
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 16
     :cond_0
     iget-object v0, p0, Lnj;->c:Ljava/util/ArrayList;
 
@@ -193,8 +167,6 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 8
     iget-object v0, p0, Lnj;->b:Lhd;
 
     invoke-virtual {v0, p1}, Lhd;->containsKey(Ljava/lang/Object;)Z
@@ -203,14 +175,12 @@
 
     if-nez v0, :cond_0
 
-    .line 9
     iget-object v0, p0, Lnj;->b:Lhd;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, p1, v1}, Lhd;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10
     :cond_0
     return-void
 .end method
@@ -218,8 +188,6 @@
 .method public final a(Loz;Landroid/view/MenuItem;)Z
     .locals 1
 
-    .prologue
-    .line 1
     const/4 v0, 0x0
 
     return v0
@@ -228,7 +196,5 @@
 .method public final n()V
     .locals 0
 
-    .prologue
-    .line 2
     return-void
 .end method

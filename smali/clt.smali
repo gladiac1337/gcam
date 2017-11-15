@@ -35,49 +35,33 @@
 .method public constructor <init>(Lclq;Lclm;Lcjv;Lcjk;Lcjh;Lcjz;Lckd;Lcll;Landroid/app/ActionBar;Landroid/content/res/Resources;Landroid/view/Window;Lgwr;Landroid/content/Context;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lclt;->a:Lclq;
 
-    .line 3
     iput-object p2, p0, Lclt;->b:Lclm;
 
-    .line 4
     iput-object p3, p0, Lclt;->c:Lcjv;
 
-    .line 5
     iput-object p4, p0, Lclt;->d:Lcjk;
 
-    .line 6
     iput-object p5, p0, Lclt;->e:Lcjh;
 
-    .line 7
     iput-object p6, p0, Lclt;->f:Lcjz;
 
-    .line 8
     iput-object p7, p0, Lclt;->g:Lckd;
 
-    .line 9
     iput-object p8, p0, Lclt;->h:Lcll;
 
-    .line 10
     iput-object p9, p0, Lclt;->i:Landroid/app/ActionBar;
 
-    .line 11
     iput-object p10, p0, Lclt;->j:Landroid/content/res/Resources;
 
-    .line 12
     iput-object p11, p0, Lclt;->k:Landroid/view/Window;
 
-    .line 13
     iput-object p12, p0, Lclt;->l:Lgwr;
 
-    .line 14
     iput-object p13, p0, Lclt;->m:Landroid/content/Context;
 
-    .line 15
     return-void
 .end method

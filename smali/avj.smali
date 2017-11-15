@@ -20,8 +20,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 14
     const-string v0, "UncaughtExHndlrBase"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -36,21 +34,16 @@
 .method public constructor <init>(Ljava/lang/Thread$UncaughtExceptionHandler;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lhzt;
 
     invoke-direct {v0}, Lhzt;-><init>()V
 
     iput-object v0, p0, Lavj;->c:Lhzt;
 
-    .line 3
     iput-object p1, p0, Lavj;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
 
-    .line 4
     return-void
 .end method
 
@@ -59,18 +52,14 @@
 .method final a(Ljava/lang/Thread;Ljava/lang/Throwable;)V
     .locals 1
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lavj;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
 
     if-eqz v0, :cond_0
 
-    .line 12
     iget-object v0, p0, Lavj;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
 
     invoke-interface {v0, p1, p2}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
 
-    .line 13
     :cond_0
     return-void
 .end method
@@ -81,18 +70,14 @@
 .method public uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
     .locals 4
 
-    .prologue
-    .line 5
     invoke-virtual {p0, p2}, Lavj;->a(Ljava/lang/Throwable;)V
 
-    .line 6
     invoke-static {}, Lhzt;->b()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 7
     sget-object v0, Lavj;->a:Ljava/lang/String;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -129,7 +114,6 @@
 
     invoke-static {v0, v1, p2}, Lbhz;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 8
     iget-object v0, p0, Lavj;->c:Lhzt;
 
     new-instance v1, Lavk;
@@ -138,11 +122,9 @@
 
     invoke-virtual {v0, v1}, Lhzt;->execute(Ljava/lang/Runnable;)V
 
-    .line 10
     :goto_0
     return-void
 
-    .line 9
     :cond_0
     invoke-virtual {p0, p1, p2}, Lavj;->a(Ljava/lang/Thread;Ljava/lang/Throwable;)V
 

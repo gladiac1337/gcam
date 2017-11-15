@@ -20,20 +20,14 @@
 .method constructor <init>(Licn;Ljava/util/concurrent/Executor;Lhzr;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lial;->a:Licn;
 
-    .line 3
     iput-object p2, p0, Lial;->b:Ljava/util/concurrent/Executor;
 
-    .line 4
     iput-object p3, p0, Lial;->c:Lhzr;
 
-    .line 5
     iget-object v0, p0, Lial;->c:Lhzr;
 
     invoke-virtual {v0}, Lhzr;->g()Lhzr;
@@ -42,7 +36,6 @@
 
     iput-object v0, p0, Lial;->d:Lhzr;
 
-    .line 6
     return-void
 .end method
 
@@ -51,14 +44,10 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 4
 
-    .prologue
-    .line 7
     check-cast p1, Liau;
 
-    .line 8
     iget-object v0, p0, Lial;->d:Lhzr;
 
-    .line 9
     iget-object v1, p0, Lial;->c:Lhzr;
 
     invoke-virtual {v1}, Lhzr;->g()Lhzr;
@@ -67,7 +56,6 @@
 
     iput-object v1, p0, Lial;->d:Lhzr;
 
-    .line 10
     iget-object v1, p0, Lial;->d:Lhzr;
 
     iget-object v2, p0, Lial;->a:Licn;
@@ -80,9 +68,7 @@
 
     invoke-virtual {v1, v2}, Lhzr;->a(Lich;)Lich;
 
-    .line 11
     invoke-virtual {v0}, Lhzr;->close()V
 
-    .line 12
     return-void
 .end method

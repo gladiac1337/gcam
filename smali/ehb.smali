@@ -26,40 +26,28 @@
 .method private constructor <init>(Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lehb;->a:Ljxn;
 
-    .line 3
     iput-object p2, p0, Lehb;->b:Ljxn;
 
-    .line 4
     iput-object p3, p0, Lehb;->c:Ljxn;
 
-    .line 5
     iput-object p4, p0, Lehb;->d:Ljxn;
 
-    .line 6
     iput-object p5, p0, Lehb;->e:Ljxn;
 
-    .line 7
     iput-object p6, p0, Lehb;->f:Ljxn;
 
-    .line 8
     iput-object p7, p0, Lehb;->g:Ljxn;
 
-    .line 9
     return-void
 .end method
 
 .method public static a(Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;Ljxn;)Ljxn;
     .locals 8
 
-    .prologue
-    .line 10
     new-instance v0, Lehb;
 
     move-object v1, p0
@@ -86,14 +74,10 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 11
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 11
-    .line 12
     iget-object v0, p0, Lehb;->a:Ljxn;
 
-    .line 13
     invoke-interface {v0}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -104,7 +88,6 @@
 
     iget-object v0, p0, Lehb;->b:Ljxn;
 
-    .line 14
     invoke-interface {v0}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v5
@@ -113,7 +96,6 @@
 
     iget-object v0, p0, Lehb;->c:Ljxn;
 
-    .line 15
     invoke-interface {v0}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v6
@@ -122,7 +104,6 @@
 
     iget-object v0, p0, Lehb;->d:Ljxn;
 
-    .line 16
     invoke-interface {v0}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v7
@@ -131,7 +112,6 @@
 
     iget-object v0, p0, Lehb;->e:Ljxn;
 
-    .line 17
     invoke-interface {v0}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v8
@@ -140,7 +120,6 @@
 
     iget-object v0, p0, Lehb;->f:Ljxn;
 
-    .line 18
     invoke-interface {v0}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -151,22 +130,18 @@
 
     iget-object v0, p0, Lehb;->g:Ljxn;
 
-    .line 19
     invoke-interface {v0}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lbhn;
 
-    .line 21
     new-instance v0, Legb;
 
-    .line 22
     invoke-interface {v3}, Lgdq;->f()Z
 
     move-result v2
 
-    .line 23
     invoke-interface {v3}, Lgdq;->b()Lige;
 
     move-result-object v3
@@ -177,29 +152,23 @@
 
     const/4 v3, 0x1
 
-    .line 24
     :goto_0
     iget-object v9, v9, Legk;->a:Liag;
 
-    .line 25
     invoke-direct/range {v0 .. v9}, Legb;-><init>(Lbhn;ZZZLiau;Liau;Liau;Liau;Liau;)V
 
-    .line 26
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 27
     invoke-static {v0, v1}, Ljwd;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Liau;
 
-    .line 28
     return-object v0
 
     :cond_0
     move v3, v4
 
-    .line 23
     goto :goto_0
 .end method

@@ -25,10 +25,7 @@
 .method public final run()V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Leje;->a:Ljava/lang/Exception;
 
-    .line 2
     throw v0
 .end method

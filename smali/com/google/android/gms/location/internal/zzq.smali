@@ -36,10 +36,8 @@
 .method public constructor <init>(ILcom/google/android/gms/location/internal/zzo;Landroid/os/IBinder;Landroid/app/PendingIntent;Landroid/os/IBinder;Landroid/os/IBinder;)V
     .locals 3
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0}, Lcom/google/android/gms/common/internal/safeparcel/zza;-><init>()V
 
     iput p1, p0, Lcom/google/android/gms/location/internal/zzq;->a:I
@@ -50,7 +48,6 @@
 
     move-object v0, v1
 
-    .line 3
     :goto_0
     iput-object v0, p0, Lcom/google/android/gms/location/internal/zzq;->c:Lhvf;
 
@@ -60,20 +57,17 @@
 
     move-object v0, v1
 
-    .line 5
     :goto_1
     iput-object v0, p0, Lcom/google/android/gms/location/internal/zzq;->e:Lhvc;
 
     if-nez p6, :cond_7
 
-    .line 7
     :cond_0
     :goto_2
     iput-object v1, p0, Lcom/google/android/gms/location/internal/zzq;->f:Lhuq;
 
     return-void
 
-    .line 2
     :cond_1
     if-nez p3, :cond_2
 
@@ -105,7 +99,6 @@
 
     goto :goto_0
 
-    .line 4
     :cond_4
     if-nez p5, :cond_5
 
@@ -137,7 +130,6 @@
 
     goto :goto_1
 
-    .line 6
     :cond_7
     if-eqz p6, :cond_0
 
@@ -206,18 +198,14 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 4
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 8
-    .line 10
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lhjg;->m(Landroid/os/Parcel;I)I
 
     move-result v2
 
-    .line 11
     const/4 v0, 0x1
 
     iget v3, p0, Lcom/google/android/gms/location/internal/zzq;->a:I
@@ -232,14 +220,12 @@
 
     const/4 v3, 0x3
 
-    .line 12
     iget-object v0, p0, Lcom/google/android/gms/location/internal/zzq;->c:Lhvf;
 
     if-nez v0, :cond_0
 
     move-object v0, v1
 
-    .line 13
     :goto_0
     invoke-static {p1, v3, v0}, Lhjg;->a(Landroid/os/Parcel;ILandroid/os/IBinder;)V
 
@@ -251,35 +237,28 @@
 
     const/4 v3, 0x5
 
-    .line 14
     iget-object v0, p0, Lcom/google/android/gms/location/internal/zzq;->e:Lhvc;
 
     if-nez v0, :cond_1
 
     move-object v0, v1
 
-    .line 15
     :goto_1
     invoke-static {p1, v3, v0}, Lhjg;->a(Landroid/os/Parcel;ILandroid/os/IBinder;)V
 
     const/4 v0, 0x6
 
-    .line 16
     iget-object v3, p0, Lcom/google/android/gms/location/internal/zzq;->f:Lhuq;
 
     if-nez v3, :cond_2
 
-    .line 17
     :goto_2
     invoke-static {p1, v0, v1}, Lhjg;->a(Landroid/os/Parcel;ILandroid/os/IBinder;)V
 
-    .line 18
     invoke-static {p1, v2}, Lhjg;->n(Landroid/os/Parcel;I)V
 
-    .line 19
     return-void
 
-    .line 12
     :cond_0
     iget-object v0, p0, Lcom/google/android/gms/location/internal/zzq;->c:Lhvf;
 
@@ -289,7 +268,6 @@
 
     goto :goto_0
 
-    .line 14
     :cond_1
     iget-object v0, p0, Lcom/google/android/gms/location/internal/zzq;->e:Lhvc;
 
@@ -299,7 +277,6 @@
 
     goto :goto_1
 
-    .line 16
     :cond_2
     iget-object v1, p0, Lcom/google/android/gms/location/internal/zzq;->f:Lhuq;
 

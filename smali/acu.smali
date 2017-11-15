@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 26
     new-instance v0, Lacv;
 
     const-string v1, "Log"
@@ -27,8 +25,6 @@
 .method public static a(Lacv;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 1
     const/4 v0, 0x3
 
     invoke-static {p0, v0}, Lacu;->a(Lacv;I)Z
@@ -37,14 +33,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2
     invoke-virtual {p0}, Lacv;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :cond_0
     return-void
 .end method
@@ -52,8 +46,6 @@
 .method public static a(Lacv;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .prologue
-    .line 7
     const/4 v0, 0x6
 
     invoke-static {p0, v0}, Lacu;->a(Lacv;I)Z
@@ -62,14 +54,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 8
     invoke-virtual {p0}, Lacv;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0, p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 9
     :cond_0
     return-void
 .end method
@@ -77,10 +67,8 @@
 .method private static a(Lacv;I)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 22
     :try_start_0
     const-string v1, "CAM2PORT_"
 
@@ -105,12 +93,10 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 25
     :cond_1
     :goto_0
     return v0
 
-    .line 24
     :catch_0
     move-exception v1
 
@@ -138,8 +124,6 @@
 .method public static b(Lacv;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 4
     const/4 v0, 0x6
 
     invoke-static {p0, v0}, Lacu;->a(Lacv;I)Z
@@ -148,14 +132,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 5
     invoke-virtual {p0}, Lacv;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6
     :cond_0
     return-void
 .end method
@@ -163,8 +145,6 @@
 .method public static b(Lacv;Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 1
 
-    .prologue
-    .line 19
     const/4 v0, 0x5
 
     invoke-static {p0, v0}, Lacu;->a(Lacv;I)Z
@@ -173,14 +153,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 20
     invoke-virtual {p0}, Lacv;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0, p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 21
     :cond_0
     return-void
 .end method
@@ -188,8 +166,6 @@
 .method public static c(Lacv;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 10
     const/4 v0, 0x4
 
     invoke-static {p0, v0}, Lacu;->a(Lacv;I)Z
@@ -198,14 +174,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 11
     invoke-virtual {p0}, Lacv;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12
     :cond_0
     return-void
 .end method
@@ -213,8 +187,6 @@
 .method public static d(Lacv;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 13
     const/4 v0, 0x2
 
     invoke-static {p0, v0}, Lacu;->a(Lacv;I)Z
@@ -223,14 +195,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 14
     invoke-virtual {p0}, Lacv;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15
     :cond_0
     return-void
 .end method
@@ -238,8 +208,6 @@
 .method public static e(Lacv;Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 16
     const/4 v0, 0x5
 
     invoke-static {p0, v0}, Lacu;->a(Lacv;I)Z
@@ -248,14 +216,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 17
     invoke-virtual {p0}, Lacv;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 18
     :cond_0
     return-void
 .end method

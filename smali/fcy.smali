@@ -7,8 +7,6 @@
 .method constructor <init>(Lfcx;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Lfen;-><init>(Lfem;)V
 
     return-void

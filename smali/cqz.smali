@@ -16,8 +16,6 @@
 .method constructor <init>(Lcqy;Liau;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcqz;->b:Lcqy;
 
     iput-object p2, p0, Lcqz;->a:Liau;
@@ -32,39 +30,28 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lcqz;->b:Lcqy;
 
-    .line 3
     iget-boolean v0, v0, Lcqy;->h:Z
 
-    .line 4
     if-nez v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lcqz;->a:Liau;
 
     invoke-static {v0}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     iget-object v0, p0, Lcqz;->b:Lcqy;
 
-    .line 7
     iget-object v0, v0, Lcqy;->f:Lich;
 
-    .line 8
     invoke-interface {v0}, Lich;->close()V
 
-    .line 9
     iget-object v0, p0, Lcqz;->b:Lcqy;
 
     iget-object v1, p0, Lcqz;->a:Liau;
 
-    .line 10
     invoke-virtual {v0, v1}, Lcqy;->b(Liau;)V
 
-    .line 11
     :cond_0
     return-void
 .end method

@@ -11,18 +11,14 @@
 .method public constructor <init>(Lgvg;Ljava/util/Set;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Lgvo;
 
     invoke-direct {v0, p1, p2}, Lgvo;-><init>(Lgvg;Ljava/util/Set;)V
 
     iput-object v0, p0, Lgvm;->a:Lgvo;
 
-    .line 3
     return-void
 .end method
 
@@ -31,18 +27,14 @@
 .method public final a()Z
     .locals 2
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lgvm;->a:Lgvo;
 
-    .line 5
     iget-object v0, v0, Lgvo;->a:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object v0
 
-    .line 6
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -60,17 +52,14 @@
 
     check-cast v0, Ljava/lang/Boolean;
 
-    .line 7
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 8
     const/4 v0, 0x0
 
-    .line 10
     :goto_0
     return v0
 

@@ -41,8 +41,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 51
     const-string v0, "ProgressOverlay"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -53,41 +51,32 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 1
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 2
     sget v0, Leh;->av:I
 
     iput v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->f:I
 
-    .line 3
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->i:I
 
-    .line 4
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->p:Landroid/graphics/RectF;
 
-    .line 5
     iput-object v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->j:Landroid/animation/AnimatorSet;
 
-    .line 6
     iput-object v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->k:Landroid/animation/AnimatorSet;
 
-    .line 7
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->setVisibility(I)V
 
-    .line 9
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -100,7 +89,6 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->a:I
 
-    .line 11
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -113,7 +101,6 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->b:I
 
-    .line 13
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -126,14 +113,12 @@
 
     iput v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->c:I
 
-    .line 14
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->m:Landroid/view/animation/Interpolator;
 
-    .line 16
     invoke-virtual {p0}, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -146,42 +131,36 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->e:Landroid/view/animation/Interpolator;
 
-    .line 17
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->d:Landroid/graphics/Paint;
 
-    .line 18
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->d:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 19
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->d:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 20
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->d:Landroid/graphics/Paint;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 21
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->d:Landroid/graphics/Paint;
 
     const/16 v1, 0x33
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 22
     new-instance v0, Landroid/graphics/Paint;
 
     iget-object v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->d:Landroid/graphics/Paint;
@@ -190,22 +169,18 @@
 
     iput-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->l:Landroid/graphics/Paint;
 
-    .line 23
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->l:Landroid/graphics/Paint;
 
     const/16 v1, 0xff
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 24
     return-void
 .end method
 
 .method public static synthetic a(Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;I)I
     .locals 0
 
-    .prologue
-    .line 50
     iput p1, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->f:I
 
     return p1
@@ -216,8 +191,6 @@
 .method public final a()V
     .locals 4
 
-    .prologue
-    .line 39
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->k:Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_0
@@ -230,12 +203,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 40
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->k:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 41
     :cond_0
     const/4 v0, 0x2
 
@@ -259,36 +230,30 @@
 
     move-result-object v0
 
-    .line 42
     const-wide/16 v2, 0x85
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    .line 43
     iget-object v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->m:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 44
     new-instance v1, Levf;
 
     invoke-direct {v1, p0}, Levf;-><init>(Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    .line 45
     new-instance v1, Landroid/animation/AnimatorSet;
 
     invoke-direct {v1}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->k:Landroid/animation/AnimatorSet;
 
-    .line 46
     iget-object v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->k:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v1, v0}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 47
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->k:Landroid/animation/AnimatorSet;
 
     new-instance v1, Levg;
@@ -297,32 +262,26 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 48
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->k:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 49
     return-void
 .end method
 
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 6
 
-    .prologue
-    .line 30
     iget v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->f:I
 
     sget v1, Leh;->av:I
 
     if-ne v0, v1, :cond_1
 
-    .line 38
     :cond_0
     :goto_0
     return-void
 
-    .line 32
     :cond_1
     iget v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->n:I
 
@@ -340,7 +299,6 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 33
     iget v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->f:I
 
     sget v1, Leh;->ay:I
@@ -353,7 +311,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 34
     :cond_2
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->d:Landroid/graphics/Paint;
 
@@ -361,14 +318,12 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 35
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->l:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->h:F
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 36
     iget-object v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->p:Landroid/graphics/RectF;
 
     iget v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->n:I
@@ -405,7 +360,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 37
     iget-object v1, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->p:Landroid/graphics/RectF;
 
     const/high16 v2, -0x3d4c0000    # -90.0f
@@ -428,28 +382,22 @@
 .method public onLayout(ZIIII)V
     .locals 1
 
-    .prologue
-    .line 25
     invoke-super/range {p0 .. p5}, Landroid/view/View;->onLayout(ZIIII)V
 
-    .line 26
     if-eqz p1, :cond_0
 
-    .line 27
     sub-int v0, p4, p2
 
     div-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->n:I
 
-    .line 28
     sub-int v0, p5, p3
 
     div-int/lit8 v0, v0, 0x2
 
     iput v0, p0, Lcom/google/android/apps/camera/legacy/app/ui/DeterministicProgressOverlay;->o:I
 
-    .line 29
     :cond_0
     return-void
 .end method

@@ -13,16 +13,12 @@
 .method public constructor <init>(Liqc;Liqg;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Liqd;->b:Liqc;
 
     invoke-direct {p0}, Likn;-><init>()V
 
-    .line 2
     iput-object p2, p0, Liqd;->a:Liqg;
 
-    .line 3
     return-void
 .end method
 
@@ -31,38 +27,28 @@
 .method public final synthetic a_(Ljava/lang/Object;)V
     .locals 17
 
-    .prologue
-    .line 4
     check-cast p1, Lixk;
 
-    .line 5
     invoke-static/range {p1 .. p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6
     move-object/from16 v0, p0
 
     iget-object v2, v0, Liqd;->b:Liqc;
 
-    .line 7
     iget-object v2, v2, Liqc;->b:Lixg;
 
-    .line 8
     move-object/from16 v0, p0
 
     iget-object v3, v0, Liqd;->b:Liqc;
 
-    .line 9
     iget-object v3, v3, Liqc;->d:Ljgh;
 
-    .line 10
     const-string v4, "all-smiles canvas"
 
-    .line 11
     invoke-static {v2, v3, v4}, Lixh;->a(Lixg;Ljgh;Ljava/lang/String;)Lixj;
 
     move-result-object v5
 
-    .line 12
     move-object/from16 v0, p0
 
     iget-object v2, v0, Liqd;->b:Liqc;
@@ -73,15 +59,12 @@
 
     iget-object v3, v0, Liqd;->b:Liqc;
 
-    .line 13
     iget-object v3, v3, Liqc;->a:Lixy;
 
-    .line 14
     invoke-virtual {v2, v3}, Liqb;->b(Lixy;)F
 
     move-result v2
 
-    .line 16
     move-object/from16 v0, p0
 
     iget-object v3, v0, Liqd;->a:Liqg;
@@ -98,7 +81,6 @@
 
     move-result-object v6
 
-    .line 17
     new-instance v7, Landroid/graphics/Canvas;
 
     invoke-interface {v5}, Lixj;->e()Ljava/lang/Object;
@@ -109,12 +91,10 @@
 
     invoke-direct {v7, v2}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 18
     new-instance v8, Landroid/graphics/Paint;
 
     invoke-direct {v8}, Landroid/graphics/Paint;-><init>()V
 
-    .line 19
     move-object/from16 v0, p0
 
     iget-object v2, v0, Liqd;->a:Liqg;
@@ -139,25 +119,20 @@
 
     check-cast v2, Landroid/util/Pair;
 
-    .line 20
     iget-object v3, v2, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v3, Landroid/graphics/Rect;
 
-    .line 21
     iget-object v2, v2, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v2, Landroid/graphics/Rect;
 
-    .line 22
     move-object/from16 v0, p0
 
     iget-object v4, v0, Liqd;->b:Liqc;
 
-    .line 23
     iget-object v4, v4, Liqc;->b:Lixg;
 
-    .line 24
     move-object/from16 v0, p1
 
     invoke-interface {v0, v3, v4}, Lixk;->a(Landroid/graphics/Rect;Lixg;)Lixj;
@@ -166,7 +141,6 @@
 
     const/4 v4, 0x0
 
-    .line 25
     :try_start_0
     invoke-interface {v10}, Lixj;->e()Ljava/lang/Object;
 
@@ -180,7 +154,6 @@
 
     if-nez v3, :cond_1
 
-    .line 26
     invoke-interface {v10}, Lixj;->e()Ljava/lang/Object;
 
     move-result-object v3
@@ -191,7 +164,6 @@
 
     invoke-virtual {v3, v11}, Landroid/graphics/Bitmap;->setPremultiplied(Z)V
 
-    .line 28
     :cond_1
     invoke-interface {v10}, Lixj;->e()Ljava/lang/Object;
 
@@ -205,7 +177,6 @@
 
     const/4 v13, 0x0
 
-    .line 29
     invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
 
     move-result v14
@@ -216,20 +187,17 @@
 
     invoke-direct {v11, v12, v13, v14, v15}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 30
     invoke-virtual {v7, v3, v11, v2, v8}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 31
     if-eqz v10, :cond_0
 
     invoke-interface {v10}, Lixj;->close()V
 
     goto :goto_0
 
-    .line 32
     :catch_0
     move-exception v2
 
@@ -238,7 +206,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 33
     :catchall_0
     move-exception v3
 
@@ -274,21 +241,17 @@
 
     goto :goto_2
 
-    .line 35
     :cond_4
     const/4 v2, 0x0
 
     invoke-virtual {v7, v2}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 36
     move-object/from16 v0, p0
 
     iget-object v2, v0, Liqd;->b:Liqc;
 
-    .line 37
     iget-object v2, v2, Liqc;->c:Lcom/google/android/libraries/smartburst/filterpacks/face/FaceEditor;
 
-    .line 38
     move-object/from16 v0, p0
 
     iget-object v3, v0, Liqd;->a:Liqg;
@@ -297,10 +260,8 @@
 
     invoke-virtual {v2, v5, v6, v8, v9}, Lcom/google/android/libraries/smartburst/filterpacks/face/FaceEditor;->addPhoto(Lixj;Ljava/util/List;J)V
 
-    .line 39
     return-void
 
-    .line 33
     :catchall_1
     move-exception v2
 

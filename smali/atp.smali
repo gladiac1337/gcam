@@ -25,13 +25,10 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v1, p0, Latp;->a:Lass;
 
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
@@ -43,10 +40,8 @@
     :goto_0
     invoke-interface {v1, v0}, Lass;->a(Z)V
 
-    .line 3
     return-void
 
-    .line 2
     :cond_0
     const/4 v0, 0x0
 

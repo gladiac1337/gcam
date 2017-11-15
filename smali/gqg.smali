@@ -11,8 +11,6 @@
 .method constructor <init>(Lgqf;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgqg;->a:Lgqf;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -25,17 +23,12 @@
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lgqg;->a:Lgqf;
 
-    .line 3
     iget-boolean v0, v0, Lgqf;->c:Z
 
-    .line 4
     if-nez v0, :cond_0
 
-    .line 5
     iget-object v0, p0, Lgqg;->a:Lgqf;
 
     invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -70,26 +63,20 @@
 
     move-result-object v1
 
-    .line 7
     invoke-virtual {v0}, Lgqf;->e()V
 
-    .line 8
     iget-object v0, v0, Lgqf;->a:Lham;
 
     invoke-virtual {v0, v1}, Lham;->a(Ljava/lang/String;)V
 
-    .line 13
     :goto_0
     return-void
 
-    .line 10
     :cond_0
     iget-object v0, p0, Lgqg;->a:Lgqf;
 
-    .line 11
     iget-object v0, v0, Lgqf;->b:Licu;
 
-    .line 12
     const-string v1, "Ignoring ScreenOff shutdown behavior, the activity is still started."
 
     invoke-interface {v0, v1}, Licu;->d(Ljava/lang/String;)V

@@ -13,8 +13,6 @@
 .method public constructor <init>(Lfmi;Lfpu;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lfpw;->b:Lfmi;
 
     iput-object p2, p0, Lfpw;->a:Lfpu;

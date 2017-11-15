@@ -33,9 +33,6 @@
 .method public final synthetic call()Ljava/lang/Object;
     .locals 3
 
-    .prologue
-    .line 1
-    .line 2
     iget-object v0, p0, Lhny;->a:Landroid/content/SharedPreferences;
 
     iget-object v1, p0, Lhny;->b:Ljava/lang/String;
@@ -46,6 +43,5 @@
 
     move-result-object v0
 
-    .line 3
     return-object v0
 .end method

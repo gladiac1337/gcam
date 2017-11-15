@@ -29,13 +29,10 @@
 .method public final a(Lcom/google/android/apps/camera/burstchip/BurstChip;)V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lbyt;->a:Lbyo;
 
     iget-object v0, p0, Lbyt;->b:Lgyr;
 
-    .line 2
     invoke-virtual {p1}, Lcom/google/android/apps/camera/burstchip/BurstChip;->getContext()Landroid/content/Context;
 
     move-result-object v2
@@ -44,30 +41,25 @@
 
     move-result-object v2
 
-    .line 3
     iget-object v0, v1, Lbyo;->d:Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;
 
-    .line 4
     invoke-static {v0}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;
 
-    .line 5
     new-instance v3, Lbyw;
 
     invoke-direct {v3, v2}, Lbyw;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, v3}, Lbyo;->a(Lbzb;)V
 
-    .line 6
     new-instance v1, Lbyx;
 
     invoke-direct {v1, v0}, Lbyx;-><init>(Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;)V
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/bottombar/RoundedThumbnailView;->post(Ljava/lang/Runnable;)Z
 
-    .line 7
     return-void
 .end method

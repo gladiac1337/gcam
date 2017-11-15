@@ -14,23 +14,16 @@
 .method public constructor <init>(Lizl;Ljava/lang/String;Ljava/io/Writer;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3
     invoke-static {p2}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4
     invoke-static {p3}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5
     iput-object p1, p0, Lizn;->a:Lizl;
 
-    .line 6
     return-void
 .end method
 
@@ -39,8 +32,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 7
     const-string v0, "%s[metric=%s]"
 
     const/4 v1, 0x2

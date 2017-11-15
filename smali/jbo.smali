@@ -13,17 +13,12 @@
 .method public constructor <init>(Ljcs;I)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljbe;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljbo;->a:Ljcs;
 
-    .line 3
     iput p2, p0, Ljbo;->b:I
 
-    .line 4
     return-void
 .end method
 
@@ -32,18 +27,14 @@
 .method public final a(Ljaz;)Ljaz;
     .locals 6
 
-    .prologue
-    .line 5
     invoke-static {p1}, Liui;->d(Ljava/lang/Iterable;)Ljava/util/HashSet;
 
     move-result-object v1
 
-    .line 6
     iget-object v0, p0, Ljbo;->a:Ljcs;
 
     invoke-interface {v0}, Ljcs;->b()V
 
-    .line 7
     invoke-virtual {p1}, Ljaz;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -65,14 +56,12 @@
 
     move-result-wide v4
 
-    .line 8
     iget-object v0, p0, Ljbo;->a:Ljcs;
 
     invoke-interface {v0, v4, v5}, Ljcs;->b(J)V
 
     goto :goto_0
 
-    .line 10
     :cond_0
     :goto_1
     invoke-interface {v1}, Ljava/util/Set;->size()I
@@ -83,35 +72,29 @@
 
     if-le v0, v2, :cond_1
 
-    .line 11
     iget-object v0, p0, Ljbo;->a:Ljcs;
 
     invoke-interface {v0}, Ljcs;->a()J
 
     move-result-wide v2
 
-    .line 12
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
     invoke-interface {v1, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 13
     iget-object v0, p0, Ljbo;->a:Ljcs;
 
     invoke-interface {v0, v2, v3}, Ljcs;->a(J)V
 
     goto :goto_1
 
-    .line 15
     :cond_1
     new-instance v0, Ljaz;
 
-    .line 16
     iget-object v2, p1, Ljaz;->b:Ljava/util/Set;
 
-    .line 17
     invoke-direct {v0, v1, v2}, Ljaz;-><init>(Ljava/util/Collection;Ljava/util/Set;)V
 
     return-object v0
@@ -120,8 +103,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 18
     const-string v0, "FrameDropperSegmentFilter[size="
 
     iget v1, p0, Ljbo;->b:I

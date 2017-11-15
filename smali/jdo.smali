@@ -16,17 +16,12 @@
 .method public constructor <init>(Ljfs;Ljdg;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljdo;->a:Ljfs;
 
-    .line 3
     iput-object p2, p0, Ljdo;->b:Ljdg;
 
-    .line 4
     return-void
 .end method
 
@@ -35,8 +30,6 @@
 .method public final a(Lirs;Lirs;)F
     .locals 3
 
-    .prologue
-    .line 5
     iget-object v0, p0, Ljdo;->b:Ljdg;
 
     iget-object v1, p0, Ljdo;->a:Ljfs;

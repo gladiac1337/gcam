@@ -18,28 +18,20 @@
 .method private constructor <init>(Ljxn;Ljxn;Ljxn;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldmu;->a:Ljxn;
 
-    .line 3
     iput-object p2, p0, Ldmu;->b:Ljxn;
 
-    .line 4
     iput-object p3, p0, Ldmu;->c:Ljxn;
 
-    .line 5
     return-void
 .end method
 
 .method public static a(Ljxn;Ljxn;Ljxn;)Ljxn;
     .locals 1
 
-    .prologue
-    .line 6
     new-instance v0, Ldmu;
 
     invoke-direct {v0, p0, p1, p2}, Ldmu;-><init>(Ljxn;Ljxn;Ljxn;)V
@@ -52,14 +44,10 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 9
 
-    .prologue
     const/4 v8, 0x0
 
-    .line 7
-    .line 8
     iget-object v0, p0, Ldmu;->a:Ljxn;
 
-    .line 9
     invoke-interface {v0}, Ljxn;->a()Ljava/lang/Object;
 
     iget-object v0, p0, Ldmu;->b:Ljxn;
@@ -78,55 +66,43 @@
 
     check-cast v1, Lgzz;
 
-    .line 12
     iget-object v1, v1, Lgzz;->b:Lihk;
 
-    .line 13
     iget-boolean v1, v1, Lihk;->b:Z
 
-    .line 14
     if-eqz v1, :cond_0
 
-    .line 15
     invoke-static {}, Lfsp;->d()Lggq;
 
     move-result-object v0
 
-    .line 39
     :goto_0
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 40
     invoke-static {v0, v1}, Ljwd;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lggq;
 
-    .line 41
     return-object v0
 
-    .line 19
     :cond_0
     iget-object v1, v0, Ldng;->a:Lici;
 
     if-nez v1, :cond_1
 
-    .line 20
     const/4 v0, 0x0
 
-    .line 33
     :goto_1
     if-nez v0, :cond_4
 
-    .line 34
     invoke-static {}, Lfsp;->d()Lggq;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 21
     :cond_1
     iget-object v1, v0, Ldng;->a:Lici;
 
@@ -134,15 +110,12 @@
 
     move-result-object v1
 
-    .line 22
     iget-object v0, v0, Ldng;->b:Ljava/util/List;
 
-    .line 23
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 24
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -161,7 +134,6 @@
 
     check-cast v0, Lici;
 
-    .line 25
     invoke-virtual {v0}, Lici;->b()J
 
     move-result-wide v4
@@ -172,7 +144,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 26
     invoke-static {v0}, Libs;->a(Lici;)Libs;
 
     move-result-object v4
@@ -187,12 +158,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 27
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    .line 29
     :cond_3
     new-instance v0, Lici;
 
@@ -200,7 +169,6 @@
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 31
     sget-object v0, Lick;->a:Lick;
 
     invoke-static {v2, v0}, Ljava/util/Collections;->max(Ljava/util/Collection;Ljava/util/Comparator;)Ljava/lang/Object;
@@ -211,7 +179,6 @@
 
     goto :goto_1
 
-    .line 35
     :cond_4
     const/4 v1, 0x2
 
@@ -223,7 +190,6 @@
 
     const/16 v4, 0x5a
 
-    .line 36
     invoke-static {v4}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
 
     move-result-object v4
@@ -238,7 +204,6 @@
 
     sget-object v4, Landroid/hardware/camera2/CaptureRequest;->JPEG_THUMBNAIL_SIZE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    .line 37
     invoke-static {v0}, Licj;->b(Lici;)Landroid/util/Size;
 
     move-result-object v0
@@ -247,7 +212,6 @@
 
     aput-object v3, v1, v2
 
-    .line 38
     invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0

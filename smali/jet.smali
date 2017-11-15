@@ -16,24 +16,18 @@
 .method public constructor <init>(Ljeq;Ljava/util/List;)V
     .locals 1
 
-    .prologue
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
     iput-object p1, p0, Ljet;->a:Ljeq;
 
-    .line 16
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     iput-object v0, p0, Ljet;->b:Ljava/util/List;
 
-    .line 17
     invoke-static {p2}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 18
     return-void
 .end method
 
@@ -42,8 +36,6 @@
 .method public final a(Ljava/io/File;)J
     .locals 7
 
-    .prologue
-    .line 4
     :try_start_0
     iget-object v0, p0, Ljet;->a:Ljeq;
 
@@ -53,17 +45,14 @@
 
     move-result-wide v0
 
-    .line 6
     :goto_0
     return-wide v0
 
-    .line 5
     :catch_0
     move-exception v0
 
     move-object v1, v0
 
-    .line 6
     :try_start_1
     iget-object v0, p0, Ljet;->b:Ljava/util/List;
 
@@ -87,11 +76,9 @@
 
     goto :goto_0
 
-    .line 7
     :catch_1
     move-exception v0
 
-    .line 8
     new-instance v2, Ljes;
 
     sget-object v3, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -104,7 +91,6 @@
 
     const/4 v6, 0x0
 
-    .line 9
     invoke-virtual {v1}, Ljes;->getMessage()Ljava/lang/String;
 
     move-result-object v1
@@ -119,7 +105,6 @@
 
     aput-object v0, v5, v1
 
-    .line 10
     invoke-static {v3, v4, v5}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -132,8 +117,6 @@
 .method public final b(Ljava/io/File;)I
     .locals 1
 
-    .prologue
-    .line 11
     iget-object v0, p0, Ljet;->a:Ljeq;
 
     invoke-interface {v0, p1}, Ljeq;->b(Ljava/io/File;)I
@@ -146,8 +129,6 @@
 .method public final c(Ljava/io/File;)Z
     .locals 1
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ljet;->a:Ljeq;
 
     invoke-interface {v0, p1}, Ljeq;->c(Ljava/io/File;)Z
@@ -160,8 +141,6 @@
 .method public final d(Ljava/io/File;)Z
     .locals 1
 
-    .prologue
-    .line 3
     iget-object v0, p0, Ljet;->a:Ljeq;
 
     invoke-interface {v0, p1}, Ljeq;->d(Ljava/io/File;)Z
@@ -174,8 +153,6 @@
 .method public final e(Ljava/io/File;)[Ljava/io/File;
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Ljet;->a:Ljeq;
 
     invoke-interface {v0, p1}, Ljeq;->e(Ljava/io/File;)[Ljava/io/File;
@@ -188,8 +165,6 @@
 .method public final f(Ljava/io/File;)Z
     .locals 1
 
-    .prologue
-    .line 12
     iget-object v0, p0, Ljet;->a:Ljeq;
 
     invoke-interface {v0, p1}, Ljeq;->f(Ljava/io/File;)Z
@@ -202,8 +177,6 @@
 .method public final g(Ljava/io/File;)Z
     .locals 1
 
-    .prologue
-    .line 13
     iget-object v0, p0, Ljet;->a:Ljeq;
 
     invoke-interface {v0, p1}, Ljeq;->g(Ljava/io/File;)Z

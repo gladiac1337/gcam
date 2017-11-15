@@ -18,8 +18,6 @@
 .method constructor <init>(Lhte;)V
     .locals 1
 
-    .prologue
-    .line 2
     invoke-direct {p0}, Lhtu;-><init>()V
 
     new-instance v0, Ljava/lang/ref/WeakReference;
@@ -36,8 +34,6 @@
 .method public a()V
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lhtu;->a:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;

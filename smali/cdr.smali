@@ -11,11 +11,8 @@
 .method public constructor <init>(Ljava/util/UUID;Z)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     sget-object v0, Lbnv;->e:Lbnv;
 
     invoke-virtual {v0}, Lbnv;->name()Ljava/lang/String;
@@ -30,6 +27,5 @@
 
     iput-object v0, p0, Lcdr;->a:Lxb;
 
-    .line 3
     return-void
 .end method

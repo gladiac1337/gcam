@@ -14,14 +14,10 @@
 .method public constructor <init>(Lfyo;)V
     .locals 0
 
-    .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     iput-object p1, p0, Lgcf;->a:Lfyo;
 
-    .line 19
     return-void
 .end method
 
@@ -30,8 +26,6 @@
 .method public final a()Z
     .locals 1
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgcf;->a:Lfyo;
 
     iget-object v0, v0, Lfyo;->d:Ljvi;
@@ -46,7 +40,6 @@
 
     iget-object v0, v0, Lfyo;->e:Ljvi;
 
-    .line 2
     invoke-virtual {v0}, Ljsw;->isDone()Z
 
     move-result v0
@@ -61,31 +54,24 @@
 
     const/4 v0, 0x1
 
-    .line 3
     :goto_0
     return v0
 
-    .line 2
     :cond_0
     const/4 v0, 0x0
 
-    .line 3
     goto :goto_0
 .end method
 
 .method public final a(Lgcf;)Z
     .locals 6
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 4
-    .line 5
     iget-object v0, p1, Lgcf;->a:Lfyo;
 
     iget-wide v2, v0, Lfyo;->c:J
 
-    .line 6
     iget-object v0, p0, Lgcf;->a:Lfyo;
 
     iget-wide v4, v0, Lfyo;->c:J
@@ -94,13 +80,10 @@
 
     if-lez v0, :cond_1
 
-    .line 9
     iget-object v0, p1, Lgcf;->a:Lfyo;
 
-    .line 10
     check-cast v0, Lfyo;
 
-    .line 11
     iget-object v0, v0, Lfyo;->d:Ljvi;
 
     invoke-virtual {v0}, Ljsw;->isDone()Z
@@ -121,58 +104,48 @@
 
     const/4 v0, 0x1
 
-    .line 12
     :goto_0
     return v0
 
     :cond_0
     move v0, v1
 
-    .line 11
     goto :goto_0
 
     :cond_1
     move v0, v1
 
-    .line 12
     goto :goto_0
 .end method
 
 .method public final b()V
     .locals 2
 
-    .prologue
     const/4 v1, 0x0
 
-    .line 13
     iget-object v0, p0, Lgcf;->a:Lfyo;
 
     iget-object v0, v0, Lfyo;->d:Ljvi;
 
     invoke-virtual {v0, v1}, Ljsw;->cancel(Z)Z
 
-    .line 14
     iget-object v0, p0, Lgcf;->a:Lfyo;
 
     iget-object v0, v0, Lfyo;->f:Ljvi;
 
     invoke-virtual {v0, v1}, Ljsw;->cancel(Z)Z
 
-    .line 15
     iget-object v0, p0, Lgcf;->a:Lfyo;
 
     iget-object v0, v0, Lfyo;->e:Ljvi;
 
     invoke-virtual {v0, v1}, Ljsw;->cancel(Z)Z
 
-    .line 16
     return-void
 .end method
 
 .method public final close()V
     .locals 0
 
-    .prologue
-    .line 20
     return-void
 .end method

@@ -11,14 +11,10 @@
 .method public constructor <init>(I)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljbf;-><init>()V
 
-    .line 2
     iput p1, p0, Ljcg;->a:I
 
-    .line 3
     return-void
 .end method
 
@@ -27,8 +23,6 @@
 .method public final a(Ljaz;)Z
     .locals 2
 
-    .prologue
-    .line 4
     invoke-virtual {p1}, Ljaz;->a()I
 
     move-result v0
@@ -51,8 +45,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 5
     const-string v0, "MinCountSegmentSelector[minCount="
 
     iget v1, p0, Ljcg;->a:I

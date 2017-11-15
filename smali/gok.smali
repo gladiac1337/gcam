@@ -13,8 +13,6 @@
 .method constructor <init>(Lgoe;Liag;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lgok;->b:Lgoe;
 
     iput-object p2, p0, Lgok;->a:Liag;

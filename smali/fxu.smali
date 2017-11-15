@@ -25,11 +25,8 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lfxu;->a:Lfxt;
 
-    .line 2
     iget-object v1, v0, Lfxt;->e:Landroid/os/Handler;
 
     invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -38,7 +35,6 @@
 
     invoke-virtual {v1}, Landroid/os/Looper;->quitSafely()V
 
-    .line 3
     iget-object v0, v0, Lfxt;->g:Landroid/os/Handler;
 
     invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -47,6 +43,5 @@
 
     invoke-virtual {v0}, Landroid/os/Looper;->quitSafely()V
 
-    .line 4
     return-void
 .end method

@@ -15,8 +15,6 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    .prologue
-    .line 25
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
@@ -39,18 +37,14 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1, p2, p3, p4}, Landroid/widget/PopupWindow;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    .line 3
     sget-object v0, Lnr;->bO:[I
 
     invoke-static {p1, p2, v0, p3, p4}, Lvy;->a(Landroid/content/Context;Landroid/util/AttributeSet;[III)Lvy;
 
     move-result-object v0
 
-    .line 4
     sget v1, Lnr;->bQ:I
 
     invoke-virtual {v0, v1}, Lvy;->f(I)Z
@@ -59,7 +53,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 5
     sget v1, Lnr;->bQ:I
 
     const/4 v2, 0x0
@@ -68,15 +61,12 @@
 
     move-result v1
 
-    .line 6
     sget-boolean v2, Lrl;->a:Z
 
     if-eqz v2, :cond_1
 
-    .line 7
     iput-boolean v1, p0, Lrl;->b:Z
 
-    .line 9
     :cond_0
     :goto_0
     sget v1, Lnr;->bP:I
@@ -87,15 +77,12 @@
 
     invoke-virtual {p0, v1}, Lrl;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 11
     iget-object v0, v0, Lvy;->b:Landroid/content/res/TypedArray;
 
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 12
     return-void
 
-    .line 8
     :cond_1
     invoke-static {p0, v1}, Lle;->a(Landroid/widget/PopupWindow;Z)V
 
@@ -107,8 +94,6 @@
 .method public final showAsDropDown(Landroid/view/View;II)V
     .locals 1
 
-    .prologue
-    .line 13
     sget-boolean v0, Lrl;->a:Z
 
     if-eqz v0, :cond_0
@@ -117,26 +102,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 14
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result v0
 
     sub-int/2addr p3, v0
 
-    .line 15
     :cond_0
     invoke-super {p0, p1, p2, p3}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;II)V
 
-    .line 16
     return-void
 .end method
 
 .method public final showAsDropDown(Landroid/view/View;III)V
     .locals 1
 
-    .prologue
-    .line 17
     sget-boolean v0, Lrl;->a:Z
 
     if-eqz v0, :cond_0
@@ -145,26 +125,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 18
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result v0
 
     sub-int/2addr p3, v0
 
-    .line 19
     :cond_0
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/PopupWindow;->showAsDropDown(Landroid/view/View;III)V
 
-    .line 20
     return-void
 .end method
 
 .method public final update(Landroid/view/View;IIII)V
     .locals 6
 
-    .prologue
-    .line 21
     sget-boolean v0, Lrl;->a:Z
 
     if-eqz v0, :cond_0
@@ -173,7 +148,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 22
     invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
     move-result v0
@@ -193,10 +167,8 @@
 
     move v5, p5
 
-    .line 23
     invoke-super/range {v0 .. v5}, Landroid/widget/PopupWindow;->update(Landroid/view/View;IIII)V
 
-    .line 24
     return-void
 
     :cond_0

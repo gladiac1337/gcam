@@ -14,14 +14,10 @@
 .method public constructor <init>(Lici;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbxa;->a:Lici;
 
-    .line 3
     return-void
 .end method
 
@@ -30,13 +26,10 @@
 .method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 6
 
-    .prologue
-    .line 4
     check-cast p1, Lici;
 
     check-cast p2, Lici;
 
-    .line 6
     invoke-virtual {p1}, Lici;->b()J
 
     move-result-wide v0
@@ -69,9 +62,7 @@
 
     move-result-wide v2
 
-    .line 7
     cmp-long v0, v0, v2
 
-    .line 8
     return v0
 .end method

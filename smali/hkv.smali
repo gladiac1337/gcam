@@ -26,10 +26,8 @@
 .method private constructor <init>(Landroid/content/Context;Lhkc;Lhkw;)V
     .locals 3
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const-string v0, "Null context is not permitted."
@@ -60,12 +58,10 @@
 
     iget-object v0, p0, Lhkv;->a:Lhkc;
 
-    .line 2
     new-instance v1, Lhru;
 
     invoke-direct {v1, v0, v2}, Lhru;-><init>(Lhkc;Lhkd;)V
 
-    .line 3
     iput-object v1, p0, Lhkv;->b:Lhru;
 
     new-instance v0, Lhts;
@@ -84,14 +80,12 @@
 
     iget-object v0, p0, Lhkv;->i:Lhtm;
 
-    .line 4
     iget-object v0, v0, Lhtm;->e:Ljava/util/concurrent/atomic/AtomicInteger;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
     move-result v0
 
-    .line 5
     iput v0, p0, Lhkv;->d:I
 
     iget-object v0, p3, Lhkw;->a:Lhpn;
@@ -102,7 +96,6 @@
 
     iget-object v0, p0, Lhkv;->i:Lhtm;
 
-    .line 6
     iget-object v1, v0, Lhtm;->h:Landroid/os/Handler;
 
     iget-object v0, v0, Lhtm;->h:Landroid/os/Handler;
@@ -115,7 +108,6 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 7
     return-void
 .end method
 
@@ -124,20 +116,16 @@
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 
-    .prologue
-    .line 8
     new-instance v0, Lhkx;
 
     invoke-direct {v0}, Lhkx;-><init>()V
 
-    .line 9
     const-string v1, "StatusExceptionMapper must not be null."
 
     invoke-static {p3, v1}, Lhjg;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     iput-object p3, v0, Lhkx;->a:Lhpn;
 
-    .line 10
     invoke-virtual {v0}, Lhkx;->a()Lhkw;
 
     move-result-object v0
@@ -152,8 +140,6 @@
 .method public a(Landroid/os/Looper;Lhtn;)Lhkj;
     .locals 7
 
-    .prologue
-    .line 14
     new-instance v0, Lhkm;
 
     iget-object v1, p0, Lhkv;->f:Landroid/content/Context;
@@ -162,10 +148,8 @@
 
     iget-object v1, p0, Lhkv;->h:Landroid/accounts/Account;
 
-    .line 15
     iput-object v1, v0, Lhkm;->a:Landroid/accounts/Account;
 
-    .line 16
     invoke-virtual {v0}, Lhkm;->a()Lhls;
 
     move-result-object v3
@@ -206,13 +190,10 @@
 .method public final a(ILhry;)Lhry;
     .locals 6
 
-    .prologue
-    .line 11
     invoke-virtual {p2}, Lhry;->d()V
 
     iget-object v0, p0, Lhkv;->i:Lhtm;
 
-    .line 12
     new-instance v1, Lhrs;
 
     invoke-direct {v1, p2}, Lhrs;-><init>(Lhry;)V
@@ -239,6 +220,5 @@
 
     invoke-virtual {v2, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 13
     return-object p2
 .end method

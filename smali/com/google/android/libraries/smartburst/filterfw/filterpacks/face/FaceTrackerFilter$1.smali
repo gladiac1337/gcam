@@ -14,8 +14,6 @@
 .method constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/face/FaceTrackerFilter;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/face/FaceTrackerFilter$1;->this$0:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/face/FaceTrackerFilter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,13 +26,10 @@
 .method public onEffectUpdated(Landroid/media/effect/Effect;Ljava/lang/Object;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/face/FaceTrackerFilter$1;->this$0:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/face/FaceTrackerFilter;
 
     monitor-enter v1
 
-    .line 3
     :try_start_0
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/face/FaceTrackerFilter$1;->this$0:Lcom/google/android/libraries/smartburst/filterfw/filterpacks/face/FaceTrackerFilter;
 
@@ -42,7 +37,6 @@
 
     invoke-static {v0, p2}, Lcom/google/android/libraries/smartburst/filterfw/filterpacks/face/FaceTrackerFilter;->access$002(Lcom/google/android/libraries/smartburst/filterfw/filterpacks/face/FaceTrackerFilter;[Landroid/hardware/Camera$Face;)[Landroid/hardware/Camera$Face;
 
-    .line 4
     monitor-exit v1
 
     return-void

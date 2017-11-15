@@ -209,43 +209,31 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 1
-    .line 3
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lhjg;->m(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 4
     const/4 v1, 0x2
 
-    .line 5
     iget-byte v2, p0, Lcom/google/android/gms/wearable/internal/zzh;->a:B
 
-    .line 6
     invoke-static {p1, v1, v2}, Lhjg;->a(Landroid/os/Parcel;IB)V
 
     const/4 v1, 0x3
 
-    .line 7
     iget-byte v2, p0, Lcom/google/android/gms/wearable/internal/zzh;->b:B
 
-    .line 8
     invoke-static {p1, v1, v2}, Lhjg;->a(Landroid/os/Parcel;IB)V
 
     const/4 v1, 0x4
 
-    .line 9
     iget-object v2, p0, Lcom/google/android/gms/wearable/internal/zzh;->c:Ljava/lang/String;
 
-    .line 10
     invoke-static {p1, v1, v2}, Lhjg;->a(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    .line 11
     invoke-static {p1, v0}, Lhjg;->n(Landroid/os/Parcel;I)V
 
-    .line 12
     return-void
 .end method

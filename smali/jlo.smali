@@ -13,8 +13,6 @@
 .method public constructor <init>(Ljava/util/Iterator;Ljhw;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljlo;->a:Ljava/util/Iterator;
 
     iput-object p2, p0, Ljlo;->b:Ljhw;
@@ -29,8 +27,6 @@
 .method protected final a()Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 2
     :cond_0
     iget-object v0, p0, Ljlo;->a:Ljava/util/Iterator;
 
@@ -40,14 +36,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 3
     iget-object v0, p0, Ljlo;->a:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 4
     iget-object v1, p0, Ljlo;->b:Ljhw;
 
     invoke-interface {v1, v0}, Ljhw;->a(Ljava/lang/Object;)Z
@@ -56,7 +50,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 7
     :goto_0
     return-object v0
 

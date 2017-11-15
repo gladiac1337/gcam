@@ -13,14 +13,10 @@
 .method constructor <init>(Lcqk;Licv;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lcts;->a:Lcqk;
 
-    .line 3
     const-string v0, "CptModuleCfgBldr"
 
     invoke-interface {p2, v0}, Licv;->a(Ljava/lang/String;)Licu;
@@ -29,7 +25,6 @@
 
     iput-object v0, p0, Lcts;->b:Licu;
 
-    .line 4
     return-void
 .end method
 
@@ -38,15 +33,12 @@
 .method public final a(Ligc;)Lcqr;
     .locals 6
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lcts;->a:Lcqk;
 
     invoke-virtual {v0, p1}, Lcqk;->a(Ligc;)Lcqr;
 
     move-result-object v0
 
-    .line 6
     iget-object v1, p0, Lcts;->b:Licu;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -107,6 +99,5 @@
 
     invoke-interface {v1, v2}, Licu;->d(Ljava/lang/String;)V
 
-    .line 7
     return-object v0
 .end method

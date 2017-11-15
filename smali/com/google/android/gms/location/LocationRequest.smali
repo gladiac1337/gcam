@@ -264,8 +264,6 @@
 .method public final hashCode()I
     .locals 4
 
-    .prologue
-    .line 12
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -310,20 +308,16 @@
 
     aput-object v2, v0, v1
 
-    .line 13
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 14
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 6
 
-    .prologue
-    .line 9
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -336,13 +330,11 @@
 
     iget v0, p0, Lcom/google/android/gms/location/LocationRequest;->a:I
 
-    .line 10
     packed-switch v0, :pswitch_data_0
 
     :pswitch_0
     const-string v0, "???"
 
-    .line 11
     :goto_0
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -483,7 +475,6 @@
 
     return-object v0
 
-    .line 10
     :pswitch_1
     const-string v0, "PRIORITY_HIGH_ACCURACY"
 
@@ -518,18 +509,14 @@
 .method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x4
 
-    .line 1
-    .line 3
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lhjg;->m(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 4
     const/4 v1, 0x1
 
     iget v2, p0, Lcom/google/android/gms/location/LocationRequest;->a:I
@@ -566,23 +553,19 @@
 
     iget v1, p0, Lcom/google/android/gms/location/LocationRequest;->g:F
 
-    .line 5
     const/4 v2, 0x7
 
     invoke-static {p1, v2, v4}, Lhjg;->b(Landroid/os/Parcel;II)V
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 6
     const/16 v1, 0x8
 
     iget-wide v2, p0, Lcom/google/android/gms/location/LocationRequest;->h:J
 
     invoke-static {p1, v1, v2, v3}, Lhjg;->a(Landroid/os/Parcel;IJ)V
 
-    .line 7
     invoke-static {p1, v0}, Lhjg;->n(Landroid/os/Parcel;I)V
 
-    .line 8
     return-void
 .end method

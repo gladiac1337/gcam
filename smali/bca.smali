@@ -24,20 +24,14 @@
 .method public constructor <init>(Landroid/util/Range;Ljht;Z)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lbca;->a:Landroid/util/Range;
 
-    .line 3
     iput-object p2, p0, Lbca;->b:Ljht;
 
-    .line 4
     iput-boolean p3, p0, Lbca;->c:Z
 
-    .line 5
     return-void
 .end method
 
@@ -46,8 +40,6 @@
 .method public final a()Landroid/util/Range;
     .locals 1
 
-    .prologue
-    .line 6
     iget-boolean v0, p0, Lbca;->c:Z
 
     if-eqz v0, :cond_0
@@ -60,7 +52,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 7
     iget-object v0, p0, Lbca;->b:Ljht;
 
     invoke-virtual {v0}, Ljht;->b()Ljava/lang/Object;
@@ -69,7 +60,6 @@
 
     check-cast v0, Landroid/util/Range;
 
-    .line 8
     :goto_0
     return-object v0
 
@@ -82,8 +72,6 @@
 .method public final b()Landroid/util/Range;
     .locals 1
 
-    .prologue
-    .line 9
     iget-boolean v0, p0, Lbca;->c:Z
 
     if-eqz v0, :cond_0
@@ -96,7 +84,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 10
     iget-object v0, p0, Lbca;->b:Ljht;
 
     invoke-virtual {v0}, Ljht;->b()Ljava/lang/Object;
@@ -105,7 +92,6 @@
 
     check-cast v0, Landroid/util/Range;
 
-    .line 11
     :goto_0
     return-object v0
 

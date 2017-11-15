@@ -13,8 +13,6 @@
 .method public constructor <init>()V
     .locals 3
 
-    .prologue
-    .line 53
     invoke-static {}, Lcom/google/googlex/gcam/GcamModuleJNI;->new_GoudaRequest()J
 
     move-result-wide v0
@@ -23,32 +21,24 @@
 
     invoke-direct {p0, v0, v1, v2}, Lcom/google/googlex/gcam/GoudaRequest;-><init>(JZ)V
 
-    .line 54
     return-void
 .end method
 
 .method protected constructor <init>(JZ)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-boolean p3, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCMemOwn:Z
 
-    .line 3
     iput-wide p1, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
-    .line 4
     return-void
 .end method
 
 .method protected static getCPtr(Lcom/google/googlex/gcam/GoudaRequest;)J
     .locals 2
 
-    .prologue
-    .line 5
     if-nez p0, :cond_0
 
     const-wide/16 v0, 0x0
@@ -67,10 +57,8 @@
 .method public declared-synchronized delete()V
     .locals 4
 
-    .prologue
     const-wide/16 v2, 0x0
 
-    .line 8
     monitor-enter p0
 
     :try_start_0
@@ -80,22 +68,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 9
     iget-boolean v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCMemOwn:Z
 
     if-eqz v0, :cond_0
 
-    .line 10
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCMemOwn:Z
 
-    .line 11
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1}, Lcom/google/googlex/gcam/GcamModuleJNI;->delete_GoudaRequest(J)V
 
-    .line 12
     :cond_0
     const-wide/16 v0, 0x0
 
@@ -103,13 +87,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 13
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 8
     :catchall_0
     move-exception v0
 
@@ -121,26 +103,20 @@
 .method protected finalize()V
     .locals 0
 
-    .prologue
-    .line 6
     invoke-virtual {p0}, Lcom/google/googlex/gcam/GoudaRequest;->delete()V
 
-    .line 7
     return-void
 .end method
 
 .method public getFaces()Lcom/google/googlex/gcam/PixelRectVector;
     .locals 4
 
-    .prologue
-    .line 34
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_faces_get(JLcom/google/googlex/gcam/GoudaRequest;)J
 
     move-result-wide v2
 
-    .line 35
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -165,15 +141,12 @@
 .method public getFrame_metadata()Lcom/google/googlex/gcam/FrameMetadata;
     .locals 4
 
-    .prologue
-    .line 38
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_frame_metadata_get(JLcom/google/googlex/gcam/GoudaRequest;)J
 
     move-result-wide v2
 
-    .line 39
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -198,8 +171,6 @@
 .method public getId()J
     .locals 2
 
-    .prologue
-    .line 16
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_id_get(JLcom/google/googlex/gcam/GoudaRequest;)J
@@ -212,8 +183,6 @@
 .method public getImage_rotation()I
     .locals 2
 
-    .prologue
-    .line 31
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_image_rotation_get(JLcom/google/googlex/gcam/GoudaRequest;)I
@@ -226,8 +195,6 @@
 .method public getOutput_format_primary()I
     .locals 2
 
-    .prologue
-    .line 25
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_output_format_primary_get(JLcom/google/googlex/gcam/GoudaRequest;)I
@@ -240,8 +207,6 @@
 .method public getOutput_height()I
     .locals 2
 
-    .prologue
-    .line 22
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_output_height_get(JLcom/google/googlex/gcam/GoudaRequest;)I
@@ -254,8 +219,6 @@
 .method public getOutput_width()I
     .locals 2
 
-    .prologue
-    .line 19
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_output_width_get(JLcom/google/googlex/gcam/GoudaRequest;)I
@@ -268,8 +231,6 @@
 .method public getPd_version()I
     .locals 2
 
-    .prologue
-    .line 46
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_pd_version_get(JLcom/google/googlex/gcam/GoudaRequest;)I
@@ -282,8 +243,6 @@
 .method public getPortrait_raw_path()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 49
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_portrait_raw_path_get(JLcom/google/googlex/gcam/GoudaRequest;)Ljava/lang/String;
@@ -296,8 +255,6 @@
 .method public getPost_resample_sharpening()F
     .locals 2
 
-    .prologue
-    .line 28
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_post_resample_sharpening_get(JLcom/google/googlex/gcam/GoudaRequest;)F
@@ -310,8 +267,6 @@
 .method public getShot_prefix()Ljava/lang/String;
     .locals 2
 
-    .prologue
-    .line 52
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_shot_prefix_get(JLcom/google/googlex/gcam/GoudaRequest;)Ljava/lang/String;
@@ -324,15 +279,12 @@
 .method public getStatic_metadata()Lcom/google/googlex/gcam/StaticMetadata;
     .locals 4
 
-    .prologue
-    .line 42
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_static_metadata_get(JLcom/google/googlex/gcam/GoudaRequest;)J
 
     move-result-wide v2
 
-    .line 43
     const-wide/16 v0, 0x0
 
     cmp-long v0, v2, v0
@@ -357,8 +309,6 @@
 .method public setFaces(Lcom/google/googlex/gcam/PixelRectVector;)V
     .locals 6
 
-    .prologue
-    .line 32
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/PixelRectVector;->getCPtr(Lcom/google/googlex/gcam/PixelRectVector;)J
@@ -371,15 +321,12 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_faces_set(JLcom/google/googlex/gcam/GoudaRequest;JLcom/google/googlex/gcam/PixelRectVector;)V
 
-    .line 33
     return-void
 .end method
 
 .method public setFrame_metadata(Lcom/google/googlex/gcam/FrameMetadata;)V
     .locals 6
 
-    .prologue
-    .line 36
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/FrameMetadata;->getCPtr(Lcom/google/googlex/gcam/FrameMetadata;)J
@@ -392,132 +339,102 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_frame_metadata_set(JLcom/google/googlex/gcam/GoudaRequest;JLcom/google/googlex/gcam/FrameMetadata;)V
 
-    .line 37
     return-void
 .end method
 
 .method public setId(J)V
     .locals 3
 
-    .prologue
-    .line 14
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1, p2}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_id_set(JLcom/google/googlex/gcam/GoudaRequest;J)V
 
-    .line 15
     return-void
 .end method
 
 .method public setImage_rotation(I)V
     .locals 2
 
-    .prologue
-    .line 29
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_image_rotation_set(JLcom/google/googlex/gcam/GoudaRequest;I)V
 
-    .line 30
     return-void
 .end method
 
 .method public setOutput_format_primary(I)V
     .locals 2
 
-    .prologue
-    .line 23
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_output_format_primary_set(JLcom/google/googlex/gcam/GoudaRequest;I)V
 
-    .line 24
     return-void
 .end method
 
 .method public setOutput_height(I)V
     .locals 2
 
-    .prologue
-    .line 20
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_output_height_set(JLcom/google/googlex/gcam/GoudaRequest;I)V
 
-    .line 21
     return-void
 .end method
 
 .method public setOutput_width(I)V
     .locals 2
 
-    .prologue
-    .line 17
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_output_width_set(JLcom/google/googlex/gcam/GoudaRequest;I)V
 
-    .line 18
     return-void
 .end method
 
 .method public setPd_version(I)V
     .locals 2
 
-    .prologue
-    .line 44
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_pd_version_set(JLcom/google/googlex/gcam/GoudaRequest;I)V
 
-    .line 45
     return-void
 .end method
 
 .method public setPortrait_raw_path(Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 47
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_portrait_raw_path_set(JLcom/google/googlex/gcam/GoudaRequest;Ljava/lang/String;)V
 
-    .line 48
     return-void
 .end method
 
 .method public setPost_resample_sharpening(F)V
     .locals 2
 
-    .prologue
-    .line 26
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_post_resample_sharpening_set(JLcom/google/googlex/gcam/GoudaRequest;F)V
 
-    .line 27
     return-void
 .end method
 
 .method public setShot_prefix(Ljava/lang/String;)V
     .locals 2
 
-    .prologue
-    .line 50
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {v0, v1, p0, p1}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_shot_prefix_set(JLcom/google/googlex/gcam/GoudaRequest;Ljava/lang/String;)V
 
-    .line 51
     return-void
 .end method
 
 .method public setStatic_metadata(Lcom/google/googlex/gcam/StaticMetadata;)V
     .locals 6
 
-    .prologue
-    .line 40
     iget-wide v0, p0, Lcom/google/googlex/gcam/GoudaRequest;->swigCPtr:J
 
     invoke-static {p1}, Lcom/google/googlex/gcam/StaticMetadata;->getCPtr(Lcom/google/googlex/gcam/StaticMetadata;)J
@@ -530,6 +447,5 @@
 
     invoke-static/range {v0 .. v5}, Lcom/google/googlex/gcam/GcamModuleJNI;->GoudaRequest_static_metadata_set(JLcom/google/googlex/gcam/GoudaRequest;JLcom/google/googlex/gcam/StaticMetadata;)V
 
-    .line 41
     return-void
 .end method

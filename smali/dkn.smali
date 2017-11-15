@@ -16,14 +16,10 @@
 .method constructor <init>(Licz;Licv;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldkn;->b:Licz;
 
-    .line 3
     const-string v0, "Simple3A"
 
     invoke-interface {p2, v0}, Licv;->a(Ljava/lang/String;)Licu;
@@ -32,7 +28,6 @@
 
     iput-object v0, p0, Ldkn;->a:Licu;
 
-    .line 4
     return-void
 .end method
 
@@ -41,8 +36,6 @@
 .method public final a(Lggn;Ldjo;Lggk;)Ldjn;
     .locals 6
 
-    .prologue
-    .line 5
     new-instance v0, Ldkp;
 
     new-instance v3, Lggm;
@@ -59,47 +52,39 @@
 
     invoke-direct/range {v0 .. v5}, Ldkp;-><init>(Lggn;Ldjo;Lggm;Licz;Licu;)V
 
-    .line 7
     :try_start_0
     iget-object v1, p2, Ldjo;->b:Ldjp;
 
-    .line 8
     invoke-virtual {v1}, Ldjp;->ordinal()I
 
     move-result v1
 
     packed-switch v1, :pswitch_data_0
 
-    .line 25
     :goto_0
     :pswitch_0
     iget-object v1, p2, Ldjo;->a:Ldjp;
 
-    .line 26
     invoke-virtual {v1}, Ldjp;->ordinal()I
 
     move-result v1
 
     packed-switch v1, :pswitch_data_1
 
-    .line 44
     :goto_1
     :pswitch_1
     iget-object v1, p2, Ldjo;->c:Ldjp;
 
-    .line 45
     invoke-virtual {v1}, Ldjp;->ordinal()I
 
     move-result v1
 
     packed-switch v1, :pswitch_data_2
 
-    .line 61
     :goto_2
     :pswitch_2
     return-object v0
 
-    .line 11
     :pswitch_3
     new-instance v1, Lggm;
 
@@ -107,25 +92,20 @@
 
     invoke-direct {v1, v2}, Lggm;-><init>(Lggm;)V
 
-    .line 12
     new-instance v2, Lggm;
 
     iget-object v3, v0, Ldkp;->e:Lggm;
 
     invoke-direct {v2, v3}, Lggm;-><init>(Lggm;)V
 
-    .line 13
     iget-object v3, v0, Ldkp;->c:Ldjo;
 
-    .line 14
     iget-object v3, v3, Ldjo;->b:Ldjp;
 
-    .line 16
     invoke-virtual {v0, v3, v1, v2}, Ldkp;->a(Ldjp;Lggm;Lggm;)Lgfg;
 
     move-result-object v3
 
-    .line 17
     iget-object v4, v0, Ldkp;->d:Lggn;
 
     invoke-virtual {v2}, Lggm;->c()Lggk;
@@ -140,7 +120,6 @@
 
     invoke-interface {v4, v2, v5}, Lggn;->a(Ljava/util/List;Lggt;)V
 
-    .line 18
     iget-object v2, v0, Ldkp;->d:Lggn;
 
     invoke-virtual {v1}, Lggm;->c()Lggk;
@@ -155,15 +134,12 @@
 
     invoke-interface {v2, v1, v4}, Lggn;->a(Ljava/util/List;Lggt;)V
 
-    .line 19
     iget-object v1, v0, Ldkp;->a:Licz;
 
     iget-object v2, v0, Ldkp;->c:Ldjo;
 
-    .line 20
     iget-object v2, v2, Ldjo;->b:Ldjp;
 
-    .line 21
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -198,7 +174,6 @@
 
     invoke-interface {v1, v2}, Licz;->a(Ljava/lang/String;)V
 
-    .line 22
     invoke-interface {v3}, Lgfg;->a()Liic;
 
     move-result-object v1
@@ -209,7 +184,6 @@
 
     iput-wide v2, v0, Ldkp;->f:J
 
-    .line 23
     iget-object v1, v0, Ldkp;->a:Licz;
 
     invoke-interface {v1}, Licz;->a()V
@@ -218,16 +192,13 @@
 
     goto :goto_0
 
-    .line 59
     :catchall_0
     move-exception v1
 
-    .line 60
     invoke-virtual {v0}, Ldkp;->close()V
 
     throw v1
 
-    .line 30
     :pswitch_4
     :try_start_1
     new-instance v1, Lggm;
@@ -236,25 +207,20 @@
 
     invoke-direct {v1, v2}, Lggm;-><init>(Lggm;)V
 
-    .line 31
     new-instance v2, Lggm;
 
     iget-object v3, v0, Ldkp;->e:Lggm;
 
     invoke-direct {v2, v3}, Lggm;-><init>(Lggm;)V
 
-    .line 32
     iget-object v3, v0, Ldkp;->c:Ldjo;
 
-    .line 33
     iget-object v3, v3, Ldjo;->a:Ldjp;
 
-    .line 35
     invoke-virtual {v0, v3, v1, v2}, Ldkp;->b(Ldjp;Lggm;Lggm;)Lgfg;
 
     move-result-object v3
 
-    .line 36
     iget-object v4, v0, Ldkp;->d:Lggn;
 
     invoke-virtual {v2}, Lggm;->c()Lggk;
@@ -269,7 +235,6 @@
 
     invoke-interface {v4, v2, v5}, Lggn;->a(Ljava/util/List;Lggt;)V
 
-    .line 37
     iget-object v2, v0, Ldkp;->d:Lggn;
 
     invoke-virtual {v1}, Lggm;->c()Lggk;
@@ -284,15 +249,12 @@
 
     invoke-interface {v2, v1, v4}, Lggn;->a(Ljava/util/List;Lggt;)V
 
-    .line 38
     iget-object v1, v0, Ldkp;->a:Licz;
 
     iget-object v2, v0, Ldkp;->c:Ldjo;
 
-    .line 39
     iget-object v2, v2, Ldjo;->a:Ldjp;
 
-    .line 40
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -327,7 +289,6 @@
 
     invoke-interface {v1, v2}, Licz;->a(Ljava/lang/String;)V
 
-    .line 41
     invoke-interface {v3}, Lgfg;->a()Liic;
 
     move-result-object v1
@@ -338,14 +299,12 @@
 
     iput-wide v2, v0, Ldkp;->f:J
 
-    .line 42
     iget-object v1, v0, Ldkp;->a:Licz;
 
     invoke-interface {v1}, Licz;->a()V
 
     goto/16 :goto_1
 
-    .line 49
     :pswitch_5
     new-instance v1, Lggm;
 
@@ -353,15 +312,12 @@
 
     invoke-direct {v1, v2}, Lggm;-><init>(Lggm;)V
 
-    .line 50
     const/4 v2, 0x0
 
-    .line 51
     invoke-static {v2, v1}, Ldkp;->a(Lggm;Lggm;)Lgfg;
 
     move-result-object v2
 
-    .line 52
     iget-object v3, v0, Ldkp;->d:Lggn;
 
     invoke-virtual {v1}, Lggm;->c()Lggk;
@@ -376,15 +332,12 @@
 
     invoke-interface {v3, v1, v4}, Lggn;->a(Ljava/util/List;Lggt;)V
 
-    .line 53
     iget-object v1, v0, Ldkp;->a:Licz;
 
     iget-object v3, v0, Ldkp;->c:Ldjo;
 
-    .line 54
     iget-object v3, v3, Ldjo;->c:Ldjp;
 
-    .line 55
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
@@ -419,7 +372,6 @@
 
     invoke-interface {v1, v3}, Licz;->a(Ljava/lang/String;)V
 
-    .line 56
     invoke-interface {v2}, Lgfg;->a()Liic;
 
     move-result-object v1
@@ -430,7 +382,6 @@
 
     iput-wide v2, v0, Ldkp;->f:J
 
-    .line 57
     iget-object v1, v0, Ldkp;->a:Licz;
 
     invoke-interface {v1}, Licz;->a()V
@@ -439,7 +390,6 @@
 
     goto/16 :goto_2
 
-    .line 8
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -447,7 +397,6 @@
         :pswitch_3
     .end packed-switch
 
-    .line 26
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_1
@@ -455,7 +404,6 @@
         :pswitch_4
     .end packed-switch
 
-    .line 45
     :pswitch_data_2
     .packed-switch 0x0
         :pswitch_2

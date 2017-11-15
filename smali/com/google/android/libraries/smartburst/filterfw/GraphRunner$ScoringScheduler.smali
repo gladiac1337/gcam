@@ -10,8 +10,6 @@
 .method private constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,8 +18,6 @@
 .method synthetic constructor <init>(Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$1;)V
     .locals 0
 
-    .prologue
-    .line 13
     invoke-direct {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$ScoringScheduler;-><init>(Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;)V
 
     return-void
@@ -32,18 +28,14 @@
 .method public nextFilter([Lcom/google/android/libraries/smartburst/filterfw/Filter;Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$ScheduleResult;)V
     .locals 9
 
-    .prologue
-    .line 2
     invoke-static {}, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner;->access$1300()I
 
     move-result v0
 
     int-to-long v4, v0
 
-    .line 3
     const/4 v1, 0x0
 
-    .line 4
     array-length v7, p1
 
     const/4 v0, 0x0
@@ -55,17 +47,14 @@
 
     aget-object v0, p1, v6
 
-    .line 5
     invoke-virtual {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$ScoringScheduler;->priorityForFilter(Lcom/google/android/libraries/smartburst/filterfw/Filter;)J
 
     move-result-wide v2
 
-    .line 6
     cmp-long v8, v2, v4
 
     if-lez v8, :cond_1
 
-    .line 9
     :goto_1
     add-int/lit8 v1, v6, 0x1
 
@@ -77,14 +66,11 @@
 
     goto :goto_0
 
-    .line 10
     :cond_0
     iput-object v1, p2, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$ScheduleResult;->filter:Lcom/google/android/libraries/smartburst/filterfw/Filter;
 
-    .line 11
     iput-wide v4, p2, Lcom/google/android/libraries/smartburst/filterfw/GraphRunner$ScheduleResult;->priority:J
 
-    .line 12
     return-void
 
     :cond_1

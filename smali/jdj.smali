@@ -14,11 +14,8 @@
 .method public constructor <init>(Ljava/util/Map;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0, p1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
@@ -29,7 +26,6 @@
 
     iput-object v0, p0, Ljdj;->a:Ljava/util/Map;
 
-    .line 3
     return-void
 .end method
 
@@ -38,11 +34,8 @@
 .method public final a(Lirs;Lirs;)F
     .locals 4
 
-    .prologue
-    .line 4
     const/4 v0, 0x0
 
-    .line 5
     iget-object v1, p0, Ljdj;->a:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -68,7 +61,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 6
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v1
@@ -95,10 +87,8 @@
 
     move v2, v0
 
-    .line 7
     goto :goto_0
 
-    .line 8
     :cond_0
     return v2
 .end method

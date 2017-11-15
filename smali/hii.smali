@@ -31,40 +31,32 @@
 .method public constructor <init>(Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;Landroid/content/Context;)V
     .locals 6
 
-    .prologue
     const/4 v5, 0x0
 
-    .line 1
     iput-object p1, p0, Lhii;->i:Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;
 
-    .line 2
     invoke-direct {p0, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 3
     new-instance v0, Landroid/graphics/Path;
 
     invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
 
     iput-object v0, p0, Lhii;->d:Landroid/graphics/Path;
 
-    .line 4
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lhii;->e:Landroid/graphics/Paint;
 
-    .line 5
     const/4 v0, 0x0
 
     iput v0, p0, Lhii;->g:I
 
-    .line 6
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lhii;->h:Z
 
-    .line 7
     invoke-virtual {p0}, Lhii;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -77,7 +69,6 @@
 
     iput-object v0, p0, Lhii;->c:Landroid/graphics/drawable/Drawable;
 
-    .line 9
     invoke-virtual {p0}, Lhii;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -90,7 +81,6 @@
 
     iput v0, p0, Lhii;->a:I
 
-    .line 11
     invoke-virtual {p0}, Lhii;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -103,7 +93,6 @@
 
     iput v0, p0, Lhii;->b:I
 
-    .line 12
     invoke-virtual {p0}, Lhii;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -116,12 +105,10 @@
 
     iput v0, p0, Lhii;->f:I
 
-    .line 13
     const v0, 0x7f1102c4
 
     invoke-virtual {p0, v0}, Lhii;->setText(I)V
 
-    .line 14
     iget v0, p0, Lhii;->f:I
 
     iget v1, p0, Lhii;->f:I
@@ -136,12 +123,10 @@
 
     invoke-virtual {p0, v0, v1, v2, v3}, Lhii;->setPadding(IIII)V
 
-    .line 15
     const v0, 0x7f12020a
 
     invoke-virtual {p0, v0}, Lhii;->setTextAppearance(I)V
 
-    .line 16
     iget-object v0, p0, Lhii;->e:Landroid/graphics/Paint;
 
     invoke-virtual {p0}, Lhii;->getResources()Landroid/content/res/Resources;
@@ -156,14 +141,12 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 17
     iget-object v0, p0, Lhii;->e:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 18
     return-void
 .end method
 
@@ -172,55 +155,40 @@
 .method public final a(I)V
     .locals 5
 
-    .prologue
-    .line 31
     iget-object v0, p0, Lhii;->i:Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;
 
-    .line 32
     iget-boolean v0, v0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->h:Z
 
-    .line 33
     if-eqz v0, :cond_0
 
-    .line 34
     const/16 v0, 0x8
 
     invoke-virtual {p0, v0}, Lhii;->setVisibility(I)V
 
-    .line 35
     invoke-virtual {p0}, Lhii;->invalidate()V
 
-    .line 58
     :goto_0
     return-void
 
-    .line 37
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lhii;->h:Z
 
-    .line 39
     iget-object v0, p0, Lhii;->i:Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;
 
-    .line 40
     iget v0, v0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->c:I
 
-    .line 41
     div-int/lit8 v0, v0, 0x2
 
     iget-object v1, p0, Lhii;->i:Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;
 
-    .line 42
     iget v1, v1, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->d:I
 
-    .line 43
     iget-object v2, p0, Lhii;->i:Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;
 
-    .line 44
     iget v2, v2, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->c:I
 
-    .line 45
     div-int/lit8 v2, v2, 0x2
 
     sub-int/2addr v1, v2
@@ -229,13 +197,10 @@
 
     move-result v0
 
-    .line 46
     iget-object v1, p0, Lhii;->i:Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;
 
-    .line 47
     iget v1, v1, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->c:I
 
-    .line 48
     div-int/lit8 v1, v1, 0x2
 
     sub-int/2addr v0, v1
@@ -244,7 +209,6 @@
 
     invoke-virtual {p0, v0}, Lhii;->setTranslationX(F)V
 
-    .line 49
     int-to-float v0, p1
 
     invoke-virtual {p0}, Lhii;->getTranslationX()F
@@ -255,12 +219,10 @@
 
     float-to-int v0, v0
 
-    .line 50
     iget-object v1, p0, Lhii;->d:Landroid/graphics/Path;
 
     invoke-virtual {v1}, Landroid/graphics/Path;->reset()V
 
-    .line 51
     iget-object v1, p0, Lhii;->d:Landroid/graphics/Path;
 
     int-to-float v2, v0
@@ -271,7 +233,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Path;->moveTo(FF)V
 
-    .line 52
     iget-object v1, p0, Lhii;->d:Landroid/graphics/Path;
 
     iget v2, p0, Lhii;->b:I
@@ -292,7 +253,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 53
     iget-object v1, p0, Lhii;->d:Landroid/graphics/Path;
 
     iget v2, p0, Lhii;->b:I
@@ -313,7 +273,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 54
     iget-object v1, p0, Lhii;->d:Landroid/graphics/Path;
 
     int-to-float v0, v0
@@ -324,13 +283,10 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/graphics/Path;->lineTo(FF)V
 
-    .line 55
     invoke-virtual {p0}, Lhii;->invalidate()V
 
-    .line 56
     iget-object v0, p0, Lhii;->i:Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;
 
-    .line 57
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/google/android/apps/refocus/viewer/RGBZFocusControls;->h:Z
@@ -341,26 +297,20 @@
 .method public final onDraw(Landroid/graphics/Canvas;)V
     .locals 2
 
-    .prologue
-    .line 25
     iget-boolean v0, p0, Lhii;->h:Z
 
     if-eqz v0, :cond_0
 
-    .line 30
     :goto_0
     return-void
 
-    .line 27
     :cond_0
     iget-object v0, p0, Lhii;->c:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 28
     invoke-super {p0, p1}, Landroid/widget/TextView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 29
     iget-object v0, p0, Lhii;->d:Landroid/graphics/Path;
 
     iget-object v1, p0, Lhii;->e:Landroid/graphics/Paint;
@@ -373,19 +323,14 @@
 .method public final onLayout(ZIIII)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
-    .line 19
     invoke-super/range {p0 .. p5}, Landroid/widget/TextView;->onLayout(ZIIII)V
 
-    .line 20
     sub-int v0, p4, p2
 
-    .line 21
     sub-int v1, p5, p3
 
-    .line 22
     iget-object v2, p0, Lhii;->c:Landroid/graphics/drawable/Drawable;
 
     iget v3, p0, Lhii;->a:I
@@ -394,9 +339,7 @@
 
     invoke-virtual {v2, v4, v4, v0, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 23
     iput v1, p0, Lhii;->g:I
 
-    .line 24
     return-void
 .end method

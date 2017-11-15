@@ -16,8 +16,6 @@
 .method constructor <init>(Leeh;F)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leem;->b:Leeh;
 
     iput p2, p0, Leem;->a:F
@@ -32,8 +30,6 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Leem;->b:Leeh;
 
     invoke-static {v0}, Leeh;->a(Leeh;)Leou;
@@ -50,6 +46,5 @@
 
     invoke-interface {v0, v1}, Leou;->a(I)V
 
-    .line 3
     return-void
 .end method

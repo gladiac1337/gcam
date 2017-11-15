@@ -18,20 +18,14 @@
 .method public constructor <init>(Ljxn;Ljxn;Ljxn;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ldsd;->a:Ljxn;
 
-    .line 3
     iput-object p2, p0, Ldsd;->b:Ljxn;
 
-    .line 4
     iput-object p3, p0, Ldsd;->c:Ljxn;
 
-    .line 5
     return-void
 .end method
 
@@ -40,12 +34,8 @@
 .method public final synthetic a()Ljava/lang/Object;
     .locals 8
 
-    .prologue
-    .line 6
-    .line 7
     iget-object v0, p0, Ldsd;->a:Ljxn;
 
-    .line 8
     invoke-interface {v0}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -54,7 +44,6 @@
 
     iget-object v1, p0, Ldsd;->b:Ljxn;
 
-    .line 9
     invoke-interface {v1}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v1
@@ -63,27 +52,22 @@
 
     iget-object v2, p0, Ldsd;->c:Ljxn;
 
-    .line 10
     invoke-interface {v2}, Ljxn;->a()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lghp;
 
-    .line 13
     new-instance v3, Lghr;
 
     iget-object v2, v2, Lghp;->a:Licv;
 
     invoke-direct {v3, v1, v2}, Lghr;-><init>(Liin;Licv;)V
 
-    .line 14
     invoke-virtual {v0, v3}, Lhzr;->a(Lich;)Lich;
 
-    .line 15
     const-string v4, "IR-"
 
-    .line 17
     invoke-interface {v1}, Liin;->c()I
 
     move-result v2
@@ -92,7 +76,6 @@
 
     move-result-object v2
 
-    .line 18
     invoke-interface {v1}, Liin;->a()I
 
     move-result v5
@@ -129,7 +112,6 @@
 
     move-result-object v2
 
-    .line 19
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
@@ -149,14 +131,12 @@
 
     move-result-object v0
 
-    .line 20
     new-instance v2, Lghx;
 
     invoke-direct {v2, v3}, Lghx;-><init>(Lghr;)V
 
     invoke-interface {v1, v2, v0}, Liin;->a(Liip;Landroid/os/Handler;)V
 
-    .line 21
     new-instance v0, Lghy;
 
     new-instance v1, Lgic;
@@ -165,20 +145,16 @@
 
     invoke-direct {v0, v1}, Lghy;-><init>(Lghn;)V
 
-    .line 22
     const-string v1, "Cannot return null from a non-@Nullable @Provides method"
 
-    .line 23
     invoke-static {v0, v1}, Ljwd;->a(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lghn;
 
-    .line 24
     return-object v0
 
-    .line 19
     :cond_0
     new-instance v2, Ljava/lang/String;
 

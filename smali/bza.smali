@@ -29,15 +29,11 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lbza;->a:Lbzb;
 
     iget-object v1, p0, Lbza;->b:Lcom/google/android/apps/camera/burstchip/BurstChip;
 
-    .line 2
     invoke-interface {v0, v1}, Lbzb;->a(Lcom/google/android/apps/camera/burstchip/BurstChip;)V
 
-    .line 3
     return-void
 .end method

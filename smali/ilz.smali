@@ -22,8 +22,6 @@
 .method constructor <init>(Lilv;Lilj;Ljava/util/concurrent/Executor;Lilv;Liml;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lilz;->e:Lilv;
 
     iput-object p2, p0, Lilz;->a:Lilj;
@@ -44,17 +42,12 @@
 .method public final run()V
     .locals 5
 
-    .prologue
-    .line 2
     iget-object v0, p0, Lilz;->e:Lilv;
 
-    .line 3
     iget-object v0, v0, Lilv;->a:Ljava/lang/Object;
 
-    .line 5
     if-eqz v0, :cond_0
 
-    .line 6
     iget-object v1, p0, Lilz;->a:Lilj;
 
     iget-object v2, p0, Lilz;->b:Ljava/util/concurrent/Executor;
@@ -65,20 +58,16 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lilv;->a(Ljava/lang/Object;Lilj;Ljava/util/concurrent/Executor;Lilv;Liml;)V
 
-    .line 10
     :goto_0
     return-void
 
-    .line 7
     :cond_0
     iget-object v0, p0, Lilz;->c:Lilv;
 
     iget-object v1, p0, Lilz;->e:Lilv;
 
-    .line 8
     iget-object v1, v1, Lilv;->b:Lilh;
 
-    .line 9
     invoke-virtual {v0, v1}, Lilv;->a(Lilh;)Z
 
     goto :goto_0
@@ -87,8 +76,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 11
     iget-object v0, p0, Lilz;->e:Lilv;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

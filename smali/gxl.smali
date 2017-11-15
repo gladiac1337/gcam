@@ -17,22 +17,16 @@
 .method public constructor <init>(FF)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lgxl;->a:F
 
-    .line 3
     iput p1, p0, Lgxl;->b:F
 
-    .line 4
     iput p2, p0, Lgxl;->d:F
 
-    .line 5
     iget v0, p0, Lgxl;->d:F
 
     iget v1, p0, Lgxl;->b:F
@@ -43,7 +37,6 @@
 
     div-float/2addr v0, v1
 
-    .line 6
     invoke-static {v0}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v1
@@ -55,7 +48,6 @@
     :cond_0
     iput v0, p0, Lgxl;->c:F
 
-    .line 7
     return-void
 .end method
 
@@ -64,8 +56,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    .prologue
-    .line 8
     iget v0, p0, Lgxl;->a:F
 
     iget v1, p0, Lgxl;->b:F

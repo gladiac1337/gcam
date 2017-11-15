@@ -26,9 +26,6 @@
 .method public static a(Landroid/content/Context;)I
     .locals 4
 
-    .prologue
-    .line 1
-    .line 2
     sget-object v1, Lhmn;->a:Ljava/lang/Object;
 
     monitor-enter v1
@@ -42,13 +39,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5
     :goto_0
     sget v0, Lhmn;->c:I
 
     return v0
 
-    .line 2
     :cond_0
     const/4 v0, 0x1
 
@@ -59,7 +54,6 @@
 
     move-result-object v0
 
-    .line 3
     sget-object v2, Lhpv;->a:Lhpv;
 
     invoke-virtual {v2, p0}, Lhpv;->a(Landroid/content/Context;)Lhpu;
@@ -68,7 +62,6 @@
 
     move-result-object v2
 
-    .line 4
     const/16 v3, 0x80
 
     :try_start_2

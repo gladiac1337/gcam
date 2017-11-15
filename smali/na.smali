@@ -16,16 +16,12 @@
 .method public constructor <init>(Lmt;Lny;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lna;->a:Lmt;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p2, p0, Lna;->b:Lny;
 
-    .line 3
     return-void
 .end method
 
@@ -34,20 +30,16 @@
 .method public final a(Lnx;)V
     .locals 3
 
-    .prologue
-    .line 7
     iget-object v0, p0, Lna;->b:Lny;
 
     invoke-interface {v0, p1}, Lny;->a(Lnx;)V
 
-    .line 8
     iget-object v0, p0, Lna;->a:Lmt;
 
     iget-object v0, v0, Lmt;->r:Landroid/widget/PopupWindow;
 
     if-eqz v0, :cond_0
 
-    .line 9
     iget-object v0, p0, Lna;->a:Lmt;
 
     iget-object v0, v0, Lmt;->c:Landroid/view/Window;
@@ -62,7 +54,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 10
     :cond_0
     iget-object v0, p0, Lna;->a:Lmt;
 
@@ -70,12 +61,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 11
     iget-object v0, p0, Lna;->a:Lmt;
 
     invoke-virtual {v0}, Lmt;->p()V
 
-    .line 12
     iget-object v0, p0, Lna;->a:Lmt;
 
     iget-object v1, p0, Lna;->a:Lmt;
@@ -94,7 +83,6 @@
 
     iput-object v1, v0, Lmt;->t:Lji;
 
-    .line 13
     iget-object v0, p0, Lna;->a:Lmt;
 
     iget-object v0, v0, Lmt;->t:Lji;
@@ -105,7 +93,6 @@
 
     invoke-virtual {v0, v1}, Lji;->a(Ljm;)Lji;
 
-    .line 14
     :cond_1
     iget-object v0, p0, Lna;->a:Lmt;
 
@@ -113,7 +100,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 15
     iget-object v0, p0, Lna;->a:Lmt;
 
     iget-object v0, v0, Lmt;->e:Lmf;
@@ -122,7 +108,6 @@
 
     iget-object v0, v0, Lmt;->p:Lnx;
 
-    .line 16
     :cond_2
     iget-object v0, p0, Lna;->a:Lmt;
 
@@ -130,15 +115,12 @@
 
     iput-object v1, v0, Lmt;->p:Lnx;
 
-    .line 17
     return-void
 .end method
 
 .method public final a(Lnx;Landroid/view/Menu;)Z
     .locals 1
 
-    .prologue
-    .line 4
     iget-object v0, p0, Lna;->b:Lny;
 
     invoke-interface {v0, p1, p2}, Lny;->a(Lnx;Landroid/view/Menu;)Z
@@ -151,8 +133,6 @@
 .method public final a(Lnx;Landroid/view/MenuItem;)Z
     .locals 1
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lna;->b:Lny;
 
     invoke-interface {v0, p1, p2}, Lny;->a(Lnx;Landroid/view/MenuItem;)Z
@@ -165,8 +145,6 @@
 .method public final b(Lnx;Landroid/view/Menu;)Z
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Lna;->b:Lny;
 
     invoke-interface {v0, p1, p2}, Lny;->b(Lnx;Landroid/view/Menu;)Z

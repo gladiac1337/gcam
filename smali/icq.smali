@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Lico;-><init>()V
 
     return-void
@@ -19,8 +17,6 @@
 .method protected final a(Ljava/lang/String;)Licp;
     .locals 1
 
-    .prologue
-    .line 2
     new-instance v0, Licp;
 
     invoke-direct {v0, p1, p0}, Licp;-><init>(Ljava/lang/String;Lico;)V

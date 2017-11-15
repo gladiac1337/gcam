@@ -14,8 +14,6 @@
 .method constructor <init>(Lhdz;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lhea;->a:Lhdz;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,20 +26,15 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 10
 
-    .prologue
-    .line 5
     check-cast p1, Lhae;
 
-    .line 6
     :try_start_0
     iget-object v0, p0, Lhea;->a:Lhdz;
 
     iget-object v2, v0, Lhdz;->a:Lhwh;
 
-    .line 8
     iget-object v0, v2, Lhwh;->b:Lhwc;
 
-    .line 9
     new-instance v1, Lhqw;
 
     invoke-direct {v1}, Lhqw;-><init>()V
@@ -60,7 +53,6 @@
 
     invoke-direct {v4, v1, v3}, Lhqv;-><init>(Lhqw;Ljava/util/List;)V
 
-    .line 10
     iget-object v0, v2, Lhwh;->a:Lcom/google/android/gms/wearable/PutDataRequest;
 
     iget-object v1, v4, Lhqv;->a:Lhqw;
@@ -69,10 +61,8 @@
 
     move-result-object v1
 
-    .line 11
     iput-object v1, v0, Lcom/google/android/gms/wearable/PutDataRequest;->b:[B
 
-    .line 12
     iget-object v0, v4, Lhqv;->b:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -140,24 +130,19 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 21
     :catch_0
     move-exception v0
 
-    .line 22
     sget-object v1, Lhdt;->a:Ljava/lang/String;
 
-    .line 23
     const-string v2, "Error setting data item"
 
     invoke-static {v1, v2, v0}, Lbhz;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 24
     :cond_0
     :goto_1
     return-void
 
-    .line 12
     :cond_1
     if-nez v0, :cond_3
 
@@ -273,27 +258,22 @@
     :cond_5
     iget-object v0, v2, Lhwh;->a:Lcom/google/android/gms/wearable/PutDataRequest;
 
-    .line 14
     iget-object v1, p1, Lhae;->a:Lhac;
 
-    .line 15
     iget-object v1, v1, Lhac;->a:Lhkl;
 
-    .line 17
     new-instance v2, Lhwq;
 
     invoke-direct {v2, v1, v0}, Lhwq;-><init>(Lhkl;Lcom/google/android/gms/wearable/PutDataRequest;)V
 
     invoke-virtual {v1, v2}, Lhkl;->a(Lhry;)Lhry;
 
-    .line 18
     iget-object v0, p0, Lhea;->a:Lhdz;
 
     iget-object v0, v0, Lhdz;->b:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 19
     iget-object v0, p0, Lhea;->a:Lhdz;
 
     iget-object v0, v0, Lhdz;->b:Ljava/lang/Runnable;
@@ -308,15 +288,11 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 2
 
-    .prologue
-    .line 2
     sget-object v0, Lhdt;->a:Ljava/lang/String;
 
-    .line 3
     const-string v1, "Fail to connect to GoogleApiClient"
 
     invoke-static {v0, v1}, Lbhz;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     return-void
 .end method

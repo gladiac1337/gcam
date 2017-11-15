@@ -29,21 +29,15 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgxu;->a:Lgxr;
 
     iget-object v1, p0, Lgxu;->b:Lgxp;
 
-    .line 2
     iget-object v0, v0, Lgxr;->k:Lgxq;
 
-    .line 3
     iget-object v0, v0, Lgxq;->b:Ljava/util/Set;
 
-    .line 4
     invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 5
     return-void
 .end method

@@ -39,7 +39,6 @@
 .method static constructor <clinit>()V
     .locals 10
 
-    .prologue
     const/4 v9, 0x4
 
     const/4 v8, 0x3
@@ -50,7 +49,6 @@
 
     const/4 v0, 0x0
 
-    .line 14
     new-instance v1, Lgvw;
 
     const-string v2, "DNG"
@@ -63,7 +61,6 @@
 
     sput-object v1, Lgvw;->a:Lgvw;
 
-    .line 15
     new-instance v1, Lgvw;
 
     const-string v2, "GIF"
@@ -76,7 +73,6 @@
 
     sput-object v1, Lgvw;->b:Lgvw;
 
-    .line 16
     new-instance v1, Lgvw;
 
     const-string v2, "JPEG"
@@ -89,7 +85,6 @@
 
     sput-object v1, Lgvw;->c:Lgvw;
 
-    .line 17
     new-instance v1, Lgvw;
 
     const-string v2, "PHOTOSPHERE"
@@ -102,7 +97,6 @@
 
     sput-object v1, Lgvw;->d:Lgvw;
 
-    .line 18
     new-instance v1, Lgvw;
 
     const-string v2, "MPEG4"
@@ -115,7 +109,6 @@
 
     sput-object v1, Lgvw;->e:Lgvw;
 
-    .line 19
     new-instance v1, Lgvw;
 
     const-string v2, "THREE_GPP"
@@ -130,7 +123,6 @@
 
     sput-object v1, Lgvw;->f:Lgvw;
 
-    .line 20
     new-instance v1, Lgvw;
 
     const-string v2, "WEBM"
@@ -145,7 +137,6 @@
 
     sput-object v1, Lgvw;->g:Lgvw;
 
-    .line 21
     new-instance v1, Lgvw;
 
     const-string v2, "OTHER"
@@ -154,7 +145,6 @@
 
     sput-object v1, Lgvw;->k:Lgvw;
 
-    .line 22
     const/16 v1, 0x8
 
     new-array v1, v1, [Lgvw;
@@ -199,12 +189,10 @@
 
     sput-object v1, Lgvw;->n:[Lgvw;
 
-    .line 23
     new-instance v1, Ljlc;
 
     invoke-direct {v1}, Ljlc;-><init>()V
 
-    .line 24
     invoke-static {}, Lgvw;->values()[Lgvw;
 
     move-result-object v2
@@ -216,17 +204,14 @@
 
     aget-object v4, v2, v0
 
-    .line 25
     iget-object v5, v4, Lgvw;->i:Ljava/lang/String;
 
     invoke-virtual {v1, v5, v4}, Ljlc;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljlc;
 
-    .line 26
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 27
     :cond_0
     invoke-virtual {v1}, Ljlc;->a()Ljlb;
 
@@ -234,7 +219,6 @@
 
     sput-object v0, Lgvw;->l:Ljava/util/Map;
 
-    .line 28
     sget-object v0, Lgvw;->a:Lgvw;
 
     sget-object v1, Lgvw;->b:Lgvw;
@@ -249,7 +233,6 @@
 
     sput-object v0, Lgvw;->h:Ljava/util/Set;
 
-    .line 29
     sget-object v0, Lgvw;->e:Lgvw;
 
     sget-object v1, Lgvw;->f:Lgvw;
@@ -260,55 +243,42 @@
 
     sput-object v0, Lgvw;->m:Ljava/util/Set;
 
-    .line 30
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    .prologue
-    .line 9
     const/4 v0, 0x7
 
     invoke-direct {p0, p1, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 10
     const-string v0, ""
 
     iput-object v0, p0, Lgvw;->i:Ljava/lang/String;
 
-    .line 11
     const-string v0, ""
 
     iput-object v0, p0, Lgvw;->j:Ljava/lang/String;
 
-    .line 12
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    .prologue
-    .line 5
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 6
     iput-object p3, p0, Lgvw;->i:Ljava/lang/String;
 
-    .line 7
     iput-object p4, p0, Lgvw;->j:Ljava/lang/String;
 
-    .line 8
     return-void
 .end method
 
 .method public static a(Ljava/lang/String;)Lgvw;
     .locals 1
 
-    .prologue
-    .line 2
     sget-object v0, Lgvw;->l:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -317,10 +287,8 @@
 
     if-nez v0, :cond_0
 
-    .line 3
     sget-object v0, Lgvw;->k:Lgvw;
 
-    .line 4
     :goto_0
     return-object v0
 
@@ -339,8 +307,6 @@
 .method public static values()[Lgvw;
     .locals 1
 
-    .prologue
-    .line 1
     sget-object v0, Lgvw;->n:[Lgvw;
 
     invoke-virtual {v0}, [Lgvw;->clone()Ljava/lang/Object;
@@ -357,8 +323,6 @@
 .method public final a()Z
     .locals 1
 
-    .prologue
-    .line 13
     sget-object v0, Lgvw;->m:Ljava/util/Set;
 
     invoke-interface {v0, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z

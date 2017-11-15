@@ -11,8 +11,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 5
     const-string v0, "FileNamerModule"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -27,8 +25,6 @@
 .method public static a(Lgwc;Lgvz;)Lgwb;
     .locals 5
 
-    .prologue
-    .line 1
     :try_start_0
     invoke-virtual {p0, p1}, Lgwc;->a(Lgvz;)Lgwb;
     :try_end_0
@@ -38,11 +34,9 @@
 
     return-object v0
 
-    .line 2
     :catch_0
     move-exception v0
 
-    .line 3
     sget-object v1, Lgwe;->a:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -79,7 +73,6 @@
 
     invoke-static {v1, v2}, Lbhz;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4
     new-instance v1, Ljava/lang/AssertionError;
 
     invoke-direct {v1, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V

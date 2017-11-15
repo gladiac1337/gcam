@@ -25,73 +25,56 @@
 .method private constructor <init>(FFFFFFFF)V
     .locals 1
 
-    .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0, p1, p2}, Landroid/graphics/PointF;-><init>(FF)V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mTopLeft:Landroid/graphics/PointF;
 
-    .line 60
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0, p3, p4}, Landroid/graphics/PointF;-><init>(FF)V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mTopRight:Landroid/graphics/PointF;
 
-    .line 61
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0, p5, p6}, Landroid/graphics/PointF;-><init>(FF)V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mBottomLeft:Landroid/graphics/PointF;
 
-    .line 62
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0, p7, p8}, Landroid/graphics/PointF;-><init>(FF)V
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mBottomRight:Landroid/graphics/PointF;
 
-    .line 63
     return-void
 .end method
 
 .method private constructor <init>(Landroid/graphics/PointF;Landroid/graphics/PointF;Landroid/graphics/PointF;Landroid/graphics/PointF;)V
     .locals 0
 
-    .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     iput-object p1, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mTopLeft:Landroid/graphics/PointF;
 
-    .line 54
     iput-object p2, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mTopRight:Landroid/graphics/PointF;
 
-    .line 55
     iput-object p3, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mBottomLeft:Landroid/graphics/PointF;
 
-    .line 56
     iput-object p4, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mBottomRight:Landroid/graphics/PointF;
 
-    .line 57
     return-void
 .end method
 
 .method private constructor <init>([F)V
     .locals 3
 
-    .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     new-instance v0, Landroid/graphics/PointF;
 
     const/4 v1, 0x0
@@ -106,7 +89,6 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mTopLeft:Landroid/graphics/PointF;
 
-    .line 66
     new-instance v0, Landroid/graphics/PointF;
 
     const/4 v1, 0x2
@@ -121,7 +103,6 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mTopRight:Landroid/graphics/PointF;
 
-    .line 67
     new-instance v0, Landroid/graphics/PointF;
 
     const/4 v1, 0x4
@@ -136,7 +117,6 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mBottomLeft:Landroid/graphics/PointF;
 
-    .line 68
     new-instance v0, Landroid/graphics/PointF;
 
     const/4 v1, 0x6
@@ -151,15 +131,12 @@
 
     iput-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mBottomRight:Landroid/graphics/PointF;
 
-    .line 69
     return-void
 .end method
 
 .method public static fromLineAndHeight(Landroid/graphics/PointF;Landroid/graphics/PointF;F)Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
     .locals 5
 
-    .prologue
-    .line 4
     new-instance v0, Landroid/graphics/PointF;
 
     iget v1, p1, Landroid/graphics/PointF;->x:F
@@ -176,12 +153,10 @@
 
     invoke-direct {v0, v1, v2}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 5
     invoke-virtual {v0}, Landroid/graphics/PointF;->length()F
 
     move-result v1
 
-    .line 6
     new-instance v2, Landroid/graphics/PointF;
 
     iget v3, v0, Landroid/graphics/PointF;->y:F
@@ -198,7 +173,6 @@
 
     invoke-direct {v2, v3, v0}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 7
     new-instance v0, Landroid/graphics/PointF;
 
     iget v1, p0, Landroid/graphics/PointF;->x:F
@@ -215,7 +189,6 @@
 
     invoke-direct {v0, v1, v3}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 8
     new-instance v1, Landroid/graphics/PointF;
 
     iget v3, p1, Landroid/graphics/PointF;->x:F
@@ -232,7 +205,6 @@
 
     invoke-direct {v1, v3, v2}, Landroid/graphics/PointF;-><init>(FF)V
 
-    .line 9
     new-instance v2, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
     invoke-direct {v2, p0, p1, v0, v1}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;-><init>(Landroid/graphics/PointF;Landroid/graphics/PointF;Landroid/graphics/PointF;Landroid/graphics/PointF;)V
@@ -243,8 +215,6 @@
 .method public static fromRect(FFFF)Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
     .locals 7
 
-    .prologue
-    .line 3
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
     new-instance v1, Landroid/graphics/PointF;
@@ -279,8 +249,6 @@
 .method public static fromRect(Landroid/graphics/RectF;)Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
     .locals 7
 
-    .prologue
-    .line 2
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
     new-instance v1, Landroid/graphics/PointF;
@@ -323,8 +291,6 @@
 .method public static fromRotatedRect(Landroid/graphics/RectF;F)Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
     .locals 1
 
-    .prologue
-    .line 10
     invoke-static {p0}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->fromRect(Landroid/graphics/RectF;)Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
     move-result-object v0
@@ -339,8 +305,6 @@
 .method public static fromTransformedRect(Landroid/graphics/RectF;Landroid/graphics/Matrix;)Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
     .locals 1
 
-    .prologue
-    .line 11
     invoke-static {p0}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->fromRect(Landroid/graphics/RectF;)Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
     move-result-object v0
@@ -355,15 +319,12 @@
 .method public static getTransform(Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;)Landroid/graphics/Matrix;
     .locals 6
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 12
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 13
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->asCoords()[F
 
     move-result-object v1
@@ -378,15 +339,12 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Matrix;->setPolyToPoly([FI[FII)Z
 
-    .line 14
     return-object v0
 .end method
 
 .method private static rotatePoint(Landroid/graphics/PointF;Landroid/graphics/PointF;FF)Landroid/graphics/PointF;
     .locals 4
 
-    .prologue
-    .line 70
     iget v0, p0, Landroid/graphics/PointF;->x:F
 
     iget v1, p1, Landroid/graphics/PointF;->x:F
@@ -409,7 +367,6 @@
 
     add-float/2addr v0, v1
 
-    .line 71
     iget v1, p0, Landroid/graphics/PointF;->x:F
 
     iget v2, p1, Landroid/graphics/PointF;->x:F
@@ -432,7 +389,6 @@
 
     add-float/2addr v1, v2
 
-    .line 72
     new-instance v2, Landroid/graphics/PointF;
 
     invoke-direct {v2, v0, v1}, Landroid/graphics/PointF;-><init>(FF)V
@@ -443,12 +399,10 @@
 .method public static unitQuad()Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
     .locals 9
 
-    .prologue
     const/high16 v3, 0x3f800000    # 1.0f
 
     const/4 v1, 0x0
 
-    .line 1
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
     move v2, v1
@@ -473,8 +427,6 @@
 .method public asCoords()[F
     .locals 3
 
-    .prologue
-    .line 31
     const/16 v0, 0x8
 
     new-array v0, v0, [F
@@ -549,8 +501,6 @@
 .method public bottomLeft()Landroid/graphics/PointF;
     .locals 1
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mBottomLeft:Landroid/graphics/PointF;
 
     return-object v0
@@ -559,8 +509,6 @@
 .method public bottomRight()Landroid/graphics/PointF;
     .locals 1
 
-    .prologue
-    .line 18
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mBottomRight:Landroid/graphics/PointF;
 
     return-object v0
@@ -569,10 +517,8 @@
 .method public center()Landroid/graphics/PointF;
     .locals 5
 
-    .prologue
     const/high16 v4, 0x40000000    # 2.0f
 
-    .line 30
     new-instance v0, Landroid/graphics/PointF;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mTopLeft:Landroid/graphics/PointF;
@@ -607,8 +553,6 @@
 .method public getEnclosingRectF()Landroid/graphics/RectF;
     .locals 6
 
-    .prologue
-    .line 38
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mTopLeft:Landroid/graphics/PointF;
 
     iget v0, v0, Landroid/graphics/PointF;->x:F
@@ -617,7 +561,6 @@
 
     iget v1, v1, Landroid/graphics/PointF;->x:F
 
-    .line 39
     invoke-static {v0, v1}, Ljava/lang/Math;->min(FF)F
 
     move-result v0
@@ -634,12 +577,10 @@
 
     move-result v1
 
-    .line 40
     invoke-static {v0, v1}, Ljava/lang/Math;->min(FF)F
 
     move-result v0
 
-    .line 41
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mTopLeft:Landroid/graphics/PointF;
 
     iget v1, v1, Landroid/graphics/PointF;->y:F
@@ -648,7 +589,6 @@
 
     iget v2, v2, Landroid/graphics/PointF;->y:F
 
-    .line 42
     invoke-static {v1, v2}, Ljava/lang/Math;->min(FF)F
 
     move-result v1
@@ -665,12 +605,10 @@
 
     move-result v2
 
-    .line 43
     invoke-static {v1, v2}, Ljava/lang/Math;->min(FF)F
 
     move-result v1
 
-    .line 44
     iget-object v2, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mTopLeft:Landroid/graphics/PointF;
 
     iget v2, v2, Landroid/graphics/PointF;->x:F
@@ -679,7 +617,6 @@
 
     iget v3, v3, Landroid/graphics/PointF;->x:F
 
-    .line 45
     invoke-static {v2, v3}, Ljava/lang/Math;->max(FF)F
 
     move-result v2
@@ -696,12 +633,10 @@
 
     move-result v3
 
-    .line 46
     invoke-static {v2, v3}, Ljava/lang/Math;->max(FF)F
 
     move-result v2
 
-    .line 47
     iget-object v3, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mTopLeft:Landroid/graphics/PointF;
 
     iget v3, v3, Landroid/graphics/PointF;->y:F
@@ -710,7 +645,6 @@
 
     iget v4, v4, Landroid/graphics/PointF;->y:F
 
-    .line 48
     invoke-static {v3, v4}, Ljava/lang/Math;->max(FF)F
 
     move-result v3
@@ -727,12 +661,10 @@
 
     move-result v4
 
-    .line 49
     invoke-static {v3, v4}, Ljava/lang/Math;->max(FF)F
 
     move-result v3
 
-    .line 50
     new-instance v4, Landroid/graphics/RectF;
 
     invoke-direct {v4, v0, v1, v2, v3}, Landroid/graphics/RectF;-><init>(FFFF)V
@@ -743,13 +675,10 @@
 .method public grow(F)Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
     .locals 11
 
-    .prologue
-    .line 32
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->center()Landroid/graphics/PointF;
 
     move-result-object v8
 
-    .line 33
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mTopLeft:Landroid/graphics/PointF;
@@ -872,13 +801,10 @@
 .method public rotated(F)Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
     .locals 7
 
-    .prologue
-    .line 19
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->center()Landroid/graphics/PointF;
 
     move-result-object v0
 
-    .line 20
     float-to-double v2, p1
 
     invoke-static {v2, v3}, Ljava/lang/Math;->cos(D)D
@@ -887,7 +813,6 @@
 
     double-to-float v1, v2
 
-    .line 21
     float-to-double v2, p1
 
     invoke-static {v2, v3}, Ljava/lang/Math;->sin(D)D
@@ -896,7 +821,6 @@
 
     double-to-float v2, v2
 
-    .line 22
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->topLeft()Landroid/graphics/PointF;
 
     move-result-object v3
@@ -905,7 +829,6 @@
 
     move-result-object v3
 
-    .line 23
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->topRight()Landroid/graphics/PointF;
 
     move-result-object v4
@@ -914,7 +837,6 @@
 
     move-result-object v4
 
-    .line 24
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->bottomLeft()Landroid/graphics/PointF;
 
     move-result-object v5
@@ -923,7 +845,6 @@
 
     move-result-object v5
 
-    .line 25
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->bottomRight()Landroid/graphics/PointF;
 
     move-result-object v6
@@ -932,7 +853,6 @@
 
     move-result-object v0
 
-    .line 26
     new-instance v1, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
     invoke-direct {v1, v3, v4, v5, v0}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;-><init>(Landroid/graphics/PointF;Landroid/graphics/PointF;Landroid/graphics/PointF;Landroid/graphics/PointF;)V
@@ -943,8 +863,6 @@
 .method public scale(F)Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
     .locals 9
 
-    .prologue
-    .line 34
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mTopLeft:Landroid/graphics/PointF;
@@ -1003,8 +921,6 @@
 .method public scale2(FF)Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
     .locals 9
 
-    .prologue
-    .line 35
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mTopLeft:Landroid/graphics/PointF;
@@ -1063,8 +979,6 @@
 .method public toString()Ljava/lang/String;
     .locals 10
 
-    .prologue
-    .line 51
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mTopLeft:Landroid/graphics/PointF;
 
     iget v0, v0, Landroid/graphics/PointF;->x:F
@@ -1199,8 +1113,6 @@
 .method public topLeft()Landroid/graphics/PointF;
     .locals 1
 
-    .prologue
-    .line 15
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mTopLeft:Landroid/graphics/PointF;
 
     return-object v0
@@ -1209,8 +1121,6 @@
 .method public topRight()Landroid/graphics/PointF;
     .locals 1
 
-    .prologue
-    .line 16
     iget-object v0, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mTopRight:Landroid/graphics/PointF;
 
     return-object v0
@@ -1219,16 +1129,12 @@
 .method public transformed(Landroid/graphics/Matrix;)Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
     .locals 2
 
-    .prologue
-    .line 27
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->asCoords()[F
 
     move-result-object v0
 
-    .line 28
     invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->mapPoints([F)V
 
-    .line 29
     new-instance v1, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;
 
     invoke-direct {v1, v0}, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;-><init>([F)V
@@ -1239,8 +1145,6 @@
 .method public xEdge()Landroid/graphics/PointF;
     .locals 4
 
-    .prologue
-    .line 36
     new-instance v0, Landroid/graphics/PointF;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mTopRight:Landroid/graphics/PointF;
@@ -1271,8 +1175,6 @@
 .method public yEdge()Landroid/graphics/PointF;
     .locals 4
 
-    .prologue
-    .line 37
     new-instance v0, Landroid/graphics/PointF;
 
     iget-object v1, p0, Lcom/google/android/libraries/smartburst/filterfw/geometry/Quad;->mBottomLeft:Landroid/graphics/PointF;

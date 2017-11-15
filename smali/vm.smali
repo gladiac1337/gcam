@@ -49,8 +49,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 122
     sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
     sput-object v0, Lvm;->p:Ljava/util/List;
@@ -61,64 +59,46 @@
 .method public constructor <init>(Landroid/view/View;)V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
     const/4 v3, 0x0
 
     const/4 v2, -0x1
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput v2, p0, Lvm;->c:I
 
-    .line 3
     iput v2, p0, Lvm;->d:I
 
-    .line 4
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lvm;->e:J
 
-    .line 5
     iput v2, p0, Lvm;->f:I
 
-    .line 6
     iput v2, p0, Lvm;->g:I
 
-    .line 7
     iput-object v3, p0, Lvm;->h:Lvm;
 
-    .line 8
     iput-object v3, p0, Lvm;->i:Lvm;
 
-    .line 9
     iput-object v3, p0, Lvm;->q:Ljava/util/List;
 
-    .line 10
     iput-object v3, p0, Lvm;->r:Ljava/util/List;
 
-    .line 11
     iput v4, p0, Lvm;->s:I
 
-    .line 12
     iput-object v3, p0, Lvm;->k:Lve;
 
-    .line 13
     iput-boolean v4, p0, Lvm;->l:Z
 
-    .line 14
     iput v4, p0, Lvm;->m:I
 
-    .line 15
     iput v2, p0, Lvm;->n:I
 
-    .line 16
     if-nez p1, :cond_0
 
-    .line 17
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "itemView may not be null"
@@ -127,11 +107,9 @@
 
     throw v0
 
-    .line 18
     :cond_0
     iput-object p1, p0, Lvm;->a:Landroid/view/View;
 
-    .line 19
     return-void
 .end method
 
@@ -140,24 +118,18 @@
 .method public final a()V
     .locals 1
 
-    .prologue
     const/4 v0, -0x1
 
-    .line 30
     iput v0, p0, Lvm;->d:I
 
-    .line 31
     iput v0, p0, Lvm;->g:I
 
-    .line 32
     return-void
 .end method
 
 .method public final a(II)V
     .locals 2
 
-    .prologue
-    .line 55
     iget v0, p0, Lvm;->j:I
 
     xor-int/lit8 v1, p2, -0x1
@@ -170,49 +142,40 @@
 
     iput v0, p0, Lvm;->j:I
 
-    .line 56
     return-void
 .end method
 
 .method public final a(IZ)V
     .locals 2
 
-    .prologue
     const/4 v1, -0x1
 
-    .line 20
     iget v0, p0, Lvm;->d:I
 
     if-ne v0, v1, :cond_0
 
-    .line 21
     iget v0, p0, Lvm;->c:I
 
     iput v0, p0, Lvm;->d:I
 
-    .line 22
     :cond_0
     iget v0, p0, Lvm;->g:I
 
     if-ne v0, v1, :cond_1
 
-    .line 23
     iget v0, p0, Lvm;->c:I
 
     iput v0, p0, Lvm;->g:I
 
-    .line 24
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 25
     iget v0, p0, Lvm;->g:I
 
     add-int/2addr v0, p1
 
     iput v0, p0, Lvm;->g:I
 
-    .line 26
     :cond_2
     iget v0, p0, Lvm;->c:I
 
@@ -220,7 +183,6 @@
 
     iput v0, p0, Lvm;->c:I
 
-    .line 27
     iget-object v0, p0, Lvm;->a:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -229,7 +191,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 28
     iget-object v0, p0, Lvm;->a:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -242,7 +203,6 @@
 
     iput-boolean v1, v0, Luz;->e:Z
 
-    .line 29
     :cond_3
     return-void
 .end method
@@ -250,21 +210,16 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 1
 
-    .prologue
-    .line 59
     if-nez p1, :cond_1
 
-    .line 60
     const/16 v0, 0x400
 
     invoke-virtual {p0, v0}, Lvm;->b(I)V
 
-    .line 67
     :cond_0
     :goto_0
     return-void
 
-    .line 61
     :cond_1
     iget v0, p0, Lvm;->j:I
 
@@ -272,19 +227,16 @@
 
     if-nez v0, :cond_0
 
-    .line 63
     iget-object v0, p0, Lvm;->q:Ljava/util/List;
 
     if-nez v0, :cond_2
 
-    .line 64
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lvm;->q:Ljava/util/List;
 
-    .line 65
     iget-object v0, p0, Lvm;->q:Ljava/util/List;
 
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
@@ -293,7 +245,6 @@
 
     iput-object v0, p0, Lvm;->r:Ljava/util/List;
 
-    .line 66
     :cond_2
     iget-object v0, p0, Lvm;->q:Ljava/util/List;
 
@@ -305,22 +256,16 @@
 .method final a(Lve;Z)V
     .locals 0
 
-    .prologue
-    .line 46
     iput-object p1, p0, Lvm;->k:Lve;
 
-    .line 47
     iput-boolean p2, p0, Lvm;->l:Z
 
-    .line 48
     return-void
 .end method
 
 .method public final a(Z)V
     .locals 3
 
-    .prologue
-    .line 108
     if-eqz p1, :cond_1
 
     iget v0, p0, Lvm;->s:I
@@ -330,17 +275,14 @@
     :goto_0
     iput v0, p0, Lvm;->s:I
 
-    .line 109
     iget v0, p0, Lvm;->s:I
 
     if-gez v0, :cond_2
 
-    .line 110
     const/4 v0, 0x0
 
     iput v0, p0, Lvm;->s:I
 
-    .line 111
     const-string v0, "View"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -359,12 +301,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     :cond_0
     :goto_1
     return-void
 
-    .line 108
     :cond_1
     iget v0, p0, Lvm;->s:I
 
@@ -372,7 +312,6 @@
 
     goto :goto_0
 
-    .line 112
     :cond_2
     if-nez p1, :cond_3
 
@@ -382,7 +321,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 113
     iget v0, p0, Lvm;->j:I
 
     or-int/lit8 v0, v0, 0x10
@@ -391,7 +329,6 @@
 
     goto :goto_1
 
-    .line 114
     :cond_3
     if-eqz p1, :cond_0
 
@@ -399,7 +336,6 @@
 
     if-nez v0, :cond_0
 
-    .line 115
     iget v0, p0, Lvm;->j:I
 
     and-int/lit8 v0, v0, -0x11
@@ -412,8 +348,6 @@
 .method public final a(I)Z
     .locals 1
 
-    .prologue
-    .line 53
     iget v0, p0, Lvm;->j:I
 
     and-int/2addr v0, p1
@@ -434,23 +368,18 @@
 .method public final b(I)V
     .locals 1
 
-    .prologue
-    .line 57
     iget v0, p0, Lvm;->j:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Lvm;->j:I
 
-    .line 58
     return-void
 .end method
 
 .method public final b()Z
     .locals 1
 
-    .prologue
-    .line 33
     iget v0, p0, Lvm;->j:I
 
     and-int/lit16 v0, v0, 0x80
@@ -471,8 +400,6 @@
 .method public final c()I
     .locals 2
 
-    .prologue
-    .line 34
     iget v0, p0, Lvm;->g:I
 
     const/4 v1, -0x1
@@ -493,16 +420,12 @@
 .method public final d()I
     .locals 1
 
-    .prologue
-    .line 35
     iget-object v0, p0, Lvm;->o:Landroid/support/v7/widget/RecyclerView;
 
     if-nez v0, :cond_0
 
-    .line 36
     const/4 v0, -0x1
 
-    .line 37
     :goto_0
     return v0
 
@@ -519,8 +442,6 @@
 .method final e()Z
     .locals 1
 
-    .prologue
-    .line 38
     iget-object v0, p0, Lvm;->k:Lve;
 
     if-eqz v0, :cond_0
@@ -539,21 +460,16 @@
 .method final f()V
     .locals 1
 
-    .prologue
-    .line 39
     iget-object v0, p0, Lvm;->k:Lve;
 
     invoke-virtual {v0, p0}, Lve;->b(Lvm;)V
 
-    .line 40
     return-void
 .end method
 
 .method final g()Z
     .locals 1
 
-    .prologue
-    .line 41
     iget v0, p0, Lvm;->j:I
 
     and-int/lit8 v0, v0, 0x20
@@ -574,38 +490,30 @@
 .method final h()V
     .locals 1
 
-    .prologue
-    .line 42
     iget v0, p0, Lvm;->j:I
 
     and-int/lit8 v0, v0, -0x21
 
     iput v0, p0, Lvm;->j:I
 
-    .line 43
     return-void
 .end method
 
 .method public final i()V
     .locals 1
 
-    .prologue
-    .line 44
     iget v0, p0, Lvm;->j:I
 
     and-int/lit16 v0, v0, -0x101
 
     iput v0, p0, Lvm;->j:I
 
-    .line 45
     return-void
 .end method
 
 .method public final j()Z
     .locals 1
 
-    .prologue
-    .line 49
     iget v0, p0, Lvm;->j:I
 
     and-int/lit8 v0, v0, 0x4
@@ -626,8 +534,6 @@
 .method final k()Z
     .locals 1
 
-    .prologue
-    .line 50
     iget v0, p0, Lvm;->j:I
 
     and-int/lit8 v0, v0, 0x2
@@ -648,8 +554,6 @@
 .method public final l()Z
     .locals 1
 
-    .prologue
-    .line 51
     iget v0, p0, Lvm;->j:I
 
     and-int/lit8 v0, v0, 0x1
@@ -670,8 +574,6 @@
 .method public final m()Z
     .locals 1
 
-    .prologue
-    .line 52
     iget v0, p0, Lvm;->j:I
 
     and-int/lit8 v0, v0, 0x8
@@ -692,8 +594,6 @@
 .method public final n()Z
     .locals 1
 
-    .prologue
-    .line 54
     iget v0, p0, Lvm;->j:I
 
     and-int/lit16 v0, v0, 0x100
@@ -714,18 +614,14 @@
 .method final o()V
     .locals 1
 
-    .prologue
-    .line 68
     iget-object v0, p0, Lvm;->q:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 69
     iget-object v0, p0, Lvm;->q:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 70
     :cond_0
     iget v0, p0, Lvm;->j:I
 
@@ -733,22 +629,18 @@
 
     iput v0, p0, Lvm;->j:I
 
-    .line 71
     return-void
 .end method
 
 .method public final p()Ljava/util/List;
     .locals 1
 
-    .prologue
-    .line 72
     iget v0, p0, Lvm;->j:I
 
     and-int/lit16 v0, v0, 0x400
 
     if-nez v0, :cond_2
 
-    .line 73
     iget-object v0, p0, Lvm;->q:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -761,21 +653,17 @@
 
     if-nez v0, :cond_1
 
-    .line 74
     :cond_0
     sget-object v0, Lvm;->p:Ljava/util/List;
 
-    .line 76
     :goto_0
     return-object v0
 
-    .line 75
     :cond_1
     iget-object v0, p0, Lvm;->r:Ljava/util/List;
 
     goto :goto_0
 
-    .line 76
     :cond_2
     sget-object v0, Lvm;->p:Ljava/util/List;
 
@@ -785,60 +673,44 @@
 .method final q()V
     .locals 5
 
-    .prologue
     const/4 v4, 0x0
 
     const/4 v3, 0x0
 
     const/4 v2, -0x1
 
-    .line 77
     iput v3, p0, Lvm;->j:I
 
-    .line 78
     iput v2, p0, Lvm;->c:I
 
-    .line 79
     iput v2, p0, Lvm;->d:I
 
-    .line 80
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lvm;->e:J
 
-    .line 81
     iput v2, p0, Lvm;->g:I
 
-    .line 82
     iput v3, p0, Lvm;->s:I
 
-    .line 83
     iput-object v4, p0, Lvm;->h:Lvm;
 
-    .line 84
     iput-object v4, p0, Lvm;->i:Lvm;
 
-    .line 85
     invoke-virtual {p0}, Lvm;->o()V
 
-    .line 86
     iput v3, p0, Lvm;->m:I
 
-    .line 87
     iput v2, p0, Lvm;->n:I
 
-    .line 88
     invoke-static {p0}, Landroid/support/v7/widget/RecyclerView;->b(Lvm;)V
 
-    .line 89
     return-void
 .end method
 
 .method public final r()Z
     .locals 2
 
-    .prologue
-    .line 117
     iget v0, p0, Lvm;->j:I
 
     and-int/lit8 v0, v0, 0x10
@@ -847,14 +719,12 @@
 
     iget-object v0, p0, Lvm;->a:Landroid/view/View;
 
-    .line 119
     sget-object v1, Lid;->a:Lim;
 
     invoke-virtual {v1, v0}, Lim;->b(Landroid/view/View;)Z
 
     move-result v0
 
-    .line 120
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
@@ -871,8 +741,6 @@
 .method public final s()Z
     .locals 1
 
-    .prologue
-    .line 121
     iget v0, p0, Lvm;->j:I
 
     and-int/lit8 v0, v0, 0x2
@@ -893,8 +761,6 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 90
     new-instance v1, Ljava/lang/StringBuilder;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -903,7 +769,6 @@
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 91
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result v2
@@ -970,14 +835,12 @@
 
     invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 92
     invoke-virtual {p0}, Lvm;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 93
     const-string v0, " scrap "
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -990,11 +853,9 @@
 
     const-string v0, "[changeScrap]"
 
-    .line 94
     :goto_0
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 95
     :cond_0
     invoke-virtual {p0}, Lvm;->j()Z
 
@@ -1006,7 +867,6 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 96
     :cond_1
     invoke-virtual {p0}, Lvm;->l()Z
 
@@ -1018,7 +878,6 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 97
     :cond_2
     invoke-virtual {p0}, Lvm;->k()Z
 
@@ -1030,7 +889,6 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 98
     :cond_3
     invoke-virtual {p0}, Lvm;->m()Z
 
@@ -1042,7 +900,6 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 99
     :cond_4
     invoke-virtual {p0}, Lvm;->b()Z
 
@@ -1054,7 +911,6 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 100
     :cond_5
     invoke-virtual {p0}, Lvm;->n()Z
 
@@ -1066,7 +922,6 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 101
     :cond_6
     invoke-virtual {p0}, Lvm;->r()Z
 
@@ -1098,7 +953,6 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 103
     :cond_7
     iget v0, p0, Lvm;->j:I
 
@@ -1115,7 +969,6 @@
     :cond_8
     const/4 v0, 0x1
 
-    .line 104
     :goto_1
     if-eqz v0, :cond_9
 
@@ -1123,7 +976,6 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 105
     :cond_9
     iget-object v0, p0, Lvm;->a:Landroid/view/View;
 
@@ -1137,26 +989,22 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 106
     :cond_a
     const-string v0, "}"
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 107
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 
-    .line 93
     :cond_b
     const-string v0, "[attachedScrap]"
 
     goto/16 :goto_0
 
-    .line 103
     :cond_c
     const/4 v0, 0x0
 

@@ -25,20 +25,16 @@
 .method public final a(Ljava/lang/Object;)V
     .locals 4
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgct;->a:Lgdj;
 
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 2
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 3
     iget-object v1, v0, Lgdj;->c:Landroid/os/Handler;
 
     iget-object v0, v0, Lgdj;->e:Ljava/lang/Runnable;
@@ -47,11 +43,9 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 6
     :goto_0
     return-void
 
-    .line 4
     :cond_0
     iget-object v1, v0, Lgdj;->c:Landroid/os/Handler;
 
@@ -59,7 +53,6 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 5
     iget-object v1, v0, Lgdj;->a:Lgdm;
 
     iget-object v0, v0, Lgdj;->b:Lgdk;

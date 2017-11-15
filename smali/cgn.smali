@@ -29,13 +29,10 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lcgn;->a:Lcgm;
 
     iget-object v2, p0, Lcgn;->b:Ljvi;
 
-    .line 2
     iget-object v0, v1, Lcgm;->c:Ljxn;
 
     invoke-interface {v0}, Ljxn;->a()Ljava/lang/Object;
@@ -46,9 +43,7 @@
 
     iput-object v0, v1, Lcgm;->d:Lcgj;
 
-    .line 3
     invoke-virtual {v1, v2}, Lcgm;->a(Ljvi;)V
 
-    .line 4
     return-void
 .end method

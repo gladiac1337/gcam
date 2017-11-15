@@ -13,8 +13,6 @@
 .method public constructor <init>(Lcom/google/android/apps/camera/legacy/app/ui/CaptureAnimationOverlay;Landroid/animation/ValueAnimator;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leuq;->b:Lcom/google/android/apps/camera/legacy/app/ui/CaptureAnimationOverlay;
 
     iput-object p2, p0, Leuq;->a:Landroid/animation/ValueAnimator;
@@ -29,34 +27,27 @@
 .method public final onAnimationEnd(Landroid/animation/Animator;)V
     .locals 1
 
-    .prologue
-    .line 5
     iget-object v0, p0, Leuq;->a:Landroid/animation/ValueAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    .line 6
     return-void
 .end method
 
 .method public final onAnimationStart(Landroid/animation/Animator;)V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Leuq;->b:Lcom/google/android/apps/camera/legacy/app/ui/CaptureAnimationOverlay;
 
     sget v1, Leh;->at:I
 
     invoke-static {v0, v1}, Lcom/google/android/apps/camera/legacy/app/ui/CaptureAnimationOverlay;->a(Lcom/google/android/apps/camera/legacy/app/ui/CaptureAnimationOverlay;I)I
 
-    .line 3
     iget-object v0, p0, Leuq;->b:Lcom/google/android/apps/camera/legacy/app/ui/CaptureAnimationOverlay;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/google/android/apps/camera/legacy/app/ui/CaptureAnimationOverlay;->setVisibility(I)V
 
-    .line 4
     return-void
 .end method

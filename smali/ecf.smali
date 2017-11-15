@@ -19,8 +19,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 16
     const-string v0, "ZslHdrPSelect"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -31,26 +29,18 @@
 .method public constructor <init>(Liau;Leai;Leai;Leai;Leai;Leai;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0, p1}, Libk;-><init>(Liau;)V
 
-    .line 2
     iput-object p2, p0, Lecf;->b:Leai;
 
-    .line 3
     iput-object p3, p0, Lecf;->c:Leai;
 
-    .line 4
     iput-object p4, p0, Lecf;->d:Leai;
 
-    .line 5
     iput-object p5, p0, Lecf;->e:Leai;
 
-    .line 6
     iput-object p6, p0, Lecf;->f:Leai;
 
-    .line 7
     return-void
 .end method
 
@@ -59,18 +49,14 @@
 .method protected final synthetic b(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 4
 
-    .prologue
-    .line 8
     check-cast p1, Lefy;
 
-    .line 9
     invoke-virtual {p1}, Lefy;->ordinal()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 15
     new-instance v0, Ljava/lang/AssertionError;
 
     invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -109,39 +95,32 @@
 
     throw v0
 
-    .line 10
     :pswitch_0
     iget-object v0, p0, Lecf;->b:Leai;
 
-    .line 14
     :goto_0
     return-object v0
 
-    .line 11
     :pswitch_1
     iget-object v0, p0, Lecf;->c:Leai;
 
     goto :goto_0
 
-    .line 12
     :pswitch_2
     iget-object v0, p0, Lecf;->d:Leai;
 
     goto :goto_0
 
-    .line 13
     :pswitch_3
     iget-object v0, p0, Lecf;->e:Leai;
 
     goto :goto_0
 
-    .line 14
     :pswitch_4
     iget-object v0, p0, Lecf;->f:Leai;
 
     goto :goto_0
 
-    .line 9
     nop
 
     :pswitch_data_0

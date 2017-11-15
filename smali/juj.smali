@@ -16,17 +16,12 @@
 .method constructor <init>(Ljava/util/concurrent/Future;Ljug;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Ljuj;->a:Ljava/util/concurrent/Future;
 
-    .line 3
     iput-object p2, p0, Ljuj;->b:Ljug;
 
-    .line 4
     return-void
 .end method
 
@@ -35,8 +30,6 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 5
     :try_start_0
     iget-object v0, p0, Ljuj;->a:Ljava/util/concurrent/Future;
 
@@ -48,20 +41,16 @@
 
     move-result-object v0
 
-    .line 13
     iget-object v1, p0, Ljuj;->b:Ljug;
 
     invoke-interface {v1, v0}, Ljug;->a(Ljava/lang/Object;)V
 
-    .line 14
     :goto_0
     return-void
 
-    .line 7
     :catch_0
     move-exception v0
 
-    .line 8
     iget-object v1, p0, Ljuj;->b:Ljug;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
@@ -72,11 +61,9 @@
 
     goto :goto_0
 
-    .line 10
     :catch_1
     move-exception v0
 
-    .line 11
     :goto_1
     iget-object v1, p0, Ljuj;->b:Ljug;
 
@@ -84,7 +71,6 @@
 
     goto :goto_0
 
-    .line 10
     :catch_2
     move-exception v0
 
@@ -94,23 +80,18 @@
 .method public final toString()Ljava/lang/String;
     .locals 3
 
-    .prologue
-    .line 15
     invoke-static {p0}, Liui;->a(Ljava/lang/Object;)Ljhq;
 
     move-result-object v0
 
     iget-object v1, p0, Ljuj;->b:Ljug;
 
-    .line 17
     invoke-virtual {v0}, Ljhq;->a()Ljhr;
 
     move-result-object v2
 
-    .line 18
     iput-object v1, v2, Ljhr;->b:Ljava/lang/Object;
 
-    .line 20
     invoke-virtual {v0}, Ljhq;->toString()Ljava/lang/String;
 
     move-result-object v0

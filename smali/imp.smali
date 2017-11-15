@@ -15,14 +15,10 @@
 .method constructor <init>(Ljava/nio/ByteBuffer;IJ)V
     .locals 3
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Limn;-><init>()V
 
-    .line 2
     if-nez p1, :cond_0
 
-    .line 3
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "Null buffer"
@@ -31,17 +27,13 @@
 
     throw v0
 
-    .line 4
     :cond_0
     iput-object p1, p0, Limp;->a:Ljava/nio/ByteBuffer;
 
-    .line 5
     iput p2, p0, Limp;->b:I
 
-    .line 6
     iput-wide p3, p0, Limp;->c:J
 
-    .line 7
     return-void
 .end method
 
@@ -50,8 +42,6 @@
 .method public final a()Ljava/nio/ByteBuffer;
     .locals 1
 
-    .prologue
-    .line 8
     iget-object v0, p0, Limp;->a:Ljava/nio/ByteBuffer;
 
     return-object v0
@@ -60,8 +50,6 @@
 .method public final b()I
     .locals 1
 
-    .prologue
-    .line 9
     iget v0, p0, Limp;->b:I
 
     return v0
@@ -70,8 +58,6 @@
 .method public final c()J
     .locals 2
 
-    .prologue
-    .line 10
     iget-wide v0, p0, Limp;->c:J
 
     return-wide v0
@@ -80,29 +66,23 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 6
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 12
     if-ne p1, p0, :cond_1
 
-    .line 20
     :cond_0
     :goto_0
     return v0
 
-    .line 14
     :cond_1
     instance-of v2, p1, Limn;
 
     if-eqz v2, :cond_3
 
-    .line 15
     check-cast p1, Limn;
 
-    .line 16
     iget-object v2, p0, Limp;->a:Ljava/nio/ByteBuffer;
 
     invoke-virtual {p1}, Limn;->a()Ljava/nio/ByteBuffer;
@@ -117,7 +97,6 @@
 
     iget v2, p0, Limp;->b:I
 
-    .line 17
     invoke-virtual {p1}, Limn;->b()I
 
     move-result v3
@@ -126,7 +105,6 @@
 
     iget-wide v2, p0, Limp;->c:J
 
-    .line 18
     invoke-virtual {p1}, Limn;->c()J
 
     move-result-wide v4
@@ -138,23 +116,19 @@
     :cond_2
     move v0, v1
 
-    .line 19
     goto :goto_0
 
     :cond_3
     move v0, v1
 
-    .line 20
     goto :goto_0
 .end method
 
 .method public final hashCode()I
     .locals 6
 
-    .prologue
     const v2, 0xf4243
 
-    .line 21
     iget-object v0, p0, Limp;->a:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->hashCode()I
@@ -163,18 +137,14 @@
 
     xor-int/2addr v0, v2
 
-    .line 22
     mul-int/2addr v0, v2
 
-    .line 23
     iget v1, p0, Limp;->b:I
 
     xor-int/2addr v0, v1
 
-    .line 24
     mul-int/2addr v0, v2
 
-    .line 25
     iget-wide v2, p0, Limp;->c:J
 
     const/16 v1, 0x20
@@ -189,15 +159,12 @@
 
     xor-int/2addr v0, v1
 
-    .line 26
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 6
 
-    .prologue
-    .line 11
     iget-object v0, p0, Limp;->a:Ljava/nio/ByteBuffer;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

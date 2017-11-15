@@ -29,18 +29,14 @@
 .method public final run()V
     .locals 6
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgyl;->a:Lgyh;
 
     iget-object v1, p0, Lgyl;->b:Landroid/app/Activity;
 
-    .line 2
     iget-object v2, v0, Lgyh;->n:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 3
     :try_start_0
     iget-boolean v3, v0, Lgyh;->m:Z
 
@@ -60,7 +56,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 4
     iget-object v1, v0, Lgyh;->e:Landroid/widget/PopupWindow;
 
     iget-object v0, v0, Lgyh;->i:Landroid/view/View;
@@ -73,7 +68,6 @@
 
     invoke-virtual {v1, v0, v3, v4, v5}, Landroid/widget/PopupWindow;->showAtLocation(Landroid/view/View;III)V
 
-    .line 5
     :cond_0
     monitor-exit v2
 

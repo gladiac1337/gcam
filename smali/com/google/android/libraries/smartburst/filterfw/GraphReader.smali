@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method static synthetic access$100(Lcom/google/android/libraries/smartburst/filterfw/MffContext;I)Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;
     .locals 1
 
-    .prologue
-    .line 17
     invoke-static {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader;->getCommandForXmlResource(Lcom/google/android/libraries/smartburst/filterfw/MffContext;I)Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;
 
     move-result-object v0
@@ -29,38 +25,30 @@
 .method public static compileXmlGraphResource(Lcom/google/android/libraries/smartburst/filterfw/MffContext;ILjava/lang/String;Ljava/lang/String;Ljava/io/Writer;)V
     .locals 1
 
-    .prologue
-    .line 8
     invoke-static {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader;->getCommandForXmlResource(Lcom/google/android/libraries/smartburst/filterfw/MffContext;I)Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;
 
     move-result-object v0
 
     invoke-virtual {v0, p2, p3, p4}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->compileToJava(Ljava/lang/String;Ljava/lang/String;Ljava/io/Writer;)V
 
-    .line 9
     return-void
 .end method
 
 .method public static compileXmlGraphStream(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/io/InputStream;Ljava/lang/String;Ljava/lang/String;Ljava/io/Writer;)V
     .locals 1
 
-    .prologue
-    .line 6
     invoke-static {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader;->getCommandForXmlStream(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/io/InputStream;)Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;
 
     move-result-object v0
 
     invoke-virtual {v0, p2, p3, p4}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;->compileToJava(Ljava/lang/String;Ljava/lang/String;Ljava/io/Writer;)V
 
-    .line 7
     return-void
 .end method
 
 .method private static getCommandForXmlResource(Lcom/google/android/libraries/smartburst/filterfw/MffContext;I)Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;
     .locals 1
 
-    .prologue
-    .line 14
     invoke-virtual {p0}, Lcom/google/android/libraries/smartburst/filterfw/MffContext;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -69,12 +57,10 @@
 
     move-result-object v0
 
-    .line 15
     invoke-virtual {v0, p1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
     move-result-object v0
 
-    .line 16
     invoke-static {p0, v0}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader;->getCommandForXmlStream(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/io/InputStream;)Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;
 
     move-result-object v0
@@ -85,29 +71,22 @@
 .method private static getCommandForXmlStream(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/io/InputStream;)Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;
     .locals 2
 
-    .prologue
-    .line 10
     new-instance v0, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$XmlGraphReader;
 
     invoke-direct {v0}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$XmlGraphReader;-><init>()V
 
-    .line 11
     new-instance v1, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;
 
     invoke-direct {v1, p0}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;-><init>(Lcom/google/android/libraries/smartburst/filterfw/MffContext;)V
 
-    .line 12
     invoke-virtual {v0, p1, v1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader$XmlGraphReader;->parseInput(Ljava/io/InputStream;Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;)V
 
-    .line 13
     return-object v1
 .end method
 
 .method public static readXmlGraph(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/io/InputStream;)Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
     .locals 2
 
-    .prologue
-    .line 2
     invoke-static {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader;->getCommandForXmlStream(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/io/InputStream;)Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;
 
     move-result-object v0
@@ -124,8 +103,6 @@
 .method public static readXmlGraphResource(Lcom/google/android/libraries/smartburst/filterfw/MffContext;I)Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
     .locals 2
 
-    .prologue
-    .line 4
     invoke-static {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader;->getCommandForXmlResource(Lcom/google/android/libraries/smartburst/filterfw/MffContext;I)Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;
 
     move-result-object v0
@@ -142,8 +119,6 @@
 .method public static readXmlSubGraph(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/io/InputStream;Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;)Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
     .locals 1
 
-    .prologue
-    .line 3
     invoke-static {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader;->getCommandForXmlStream(Lcom/google/android/libraries/smartburst/filterfw/MffContext;Ljava/io/InputStream;)Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;
 
     move-result-object v0
@@ -158,8 +133,6 @@
 .method public static readXmlSubGraphResource(Lcom/google/android/libraries/smartburst/filterfw/MffContext;ILcom/google/android/libraries/smartburst/filterfw/FilterGraph;)Lcom/google/android/libraries/smartburst/filterfw/FilterGraph;
     .locals 1
 
-    .prologue
-    .line 5
     invoke-static {p0, p1}, Lcom/google/android/libraries/smartburst/filterfw/GraphReader;->getCommandForXmlResource(Lcom/google/android/libraries/smartburst/filterfw/MffContext;I)Lcom/google/android/libraries/smartburst/filterfw/GraphReader$CommandStack;
 
     move-result-object v0

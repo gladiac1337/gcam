@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,16 +15,13 @@
 .method private static a(Ljava/lang/String;Ljava/lang/Class;)Landroid/hardware/camera2/CaptureResult$Key;
     .locals 8
 
-    .prologue
     const/4 v7, 0x2
 
     const/4 v0, 0x0
 
-    .line 13
     :try_start_0
     const-string v1, "android.hardware.camera2.CaptureResult$Key"
 
-    .line 14
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -35,10 +30,8 @@
 
     move-result-object v3
 
-    .line 15
     const/4 v1, 0x0
 
-    .line 16
     array-length v4, v3
 
     move v2, v0
@@ -48,7 +41,6 @@
 
     aget-object v0, v3, v2
 
-    .line 17
     invoke-virtual {v0}, Ljava/lang/reflect/Constructor;->getParameterTypes()[Ljava/lang/Class;
 
     move-result-object v5
@@ -57,7 +49,6 @@
 
     if-ne v5, v7, :cond_1
 
-    .line 18
     invoke-virtual {v0}, Ljava/lang/reflect/Constructor;->getParameterTypes()[Ljava/lang/Class;
 
     move-result-object v5
@@ -78,7 +69,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 19
     invoke-virtual {v0}, Ljava/lang/reflect/Constructor;->getParameterTypes()[Ljava/lang/Class;
 
     move-result-object v5
@@ -99,7 +89,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 21
     :goto_1
     add-int/lit8 v1, v2, 0x1
 
@@ -109,13 +98,11 @@
 
     goto :goto_0
 
-    .line 22
     :cond_0
     const-string v0, "Constructor not found for CaptureResult.Key.<init>(java.lang.String)"
 
     invoke-static {v1, v0}, Liya;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 23
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -141,11 +128,9 @@
 
     return-object v0
 
-    .line 24
     :catch_0
     move-exception v0
 
-    .line 25
     :goto_2
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -153,7 +138,6 @@
 
     throw v1
 
-    .line 24
     :catch_1
     move-exception v0
 
@@ -178,10 +162,8 @@
 .method public static a(Liic;)[B
     .locals 3
 
-    .prologue
     const/4 v0, 0x0
 
-    .line 2
     :try_start_0
     const-string v1, "org.codeaurora.qcamera3.tuning_meta_data.tuning_meta_data_blob"
 
@@ -197,34 +179,28 @@
 
     move-result-object v1
 
-    .line 6
     if-nez v1, :cond_0
 
-    .line 12
     :goto_0
     return-object v0
 
     :cond_0
     move-object v0, v1
 
-    .line 8
     check-cast v0, [I
 
     array-length v0, v0
 
     shl-int/lit8 v0, v0, 0x2
 
-    .line 9
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 10
     sget-object v2, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-virtual {v0, v2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 11
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->asIntBuffer()Ljava/nio/IntBuffer;
 
     move-result-object v2
@@ -233,14 +209,12 @@
 
     invoke-virtual {v2, v1}, Ljava/nio/IntBuffer;->put([I)Ljava/nio/IntBuffer;
 
-    .line 12
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 5
     :catch_0
     move-exception v1
 

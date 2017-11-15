@@ -14,8 +14,6 @@
 .method public constructor <init>(Liyb;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljfp;->a:Liyb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,10 +26,8 @@
 .method public final a(Ljava/io/Writer;)V
     .locals 8
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 2
     iget-object v0, p0, Ljfp;->a:Liyb;
 
     invoke-virtual {v0}, Liyb;->a()Lixy;
@@ -42,7 +38,6 @@
 
     move-result-object v0
 
-    .line 4
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -66,7 +61,6 @@
 
     move-result-wide v4
 
-    .line 5
     const-string v0, "%d,%d%n"
 
     const/4 v6, 0x2
@@ -93,15 +87,12 @@
 
     invoke-virtual {p1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
 
-    .line 6
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
-    .line 7
     goto :goto_0
 
-    .line 8
     :cond_0
     return-void
 .end method

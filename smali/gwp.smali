@@ -26,8 +26,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 12
     const-string v0, "StorageSpaceCheck"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -42,30 +40,22 @@
 .method public constructor <init>(Lgvz;Ljava/util/concurrent/Executor;Lgwk;)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const-wide/32 v0, 0xa00000
 
     iput-wide v0, p0, Lgwp;->b:J
 
-    .line 3
     const-wide/32 v0, 0x3200000
 
     iput-wide v0, p0, Lgwp;->c:J
 
-    .line 4
     iput-object p1, p0, Lgwp;->d:Lgvz;
 
-    .line 5
     iput-object p2, p0, Lgwp;->f:Ljava/util/concurrent/Executor;
 
-    .line 6
     iput-object p3, p0, Lgwp;->e:Lgwk;
 
-    .line 7
     return-void
 .end method
 
@@ -74,13 +64,10 @@
 .method public final a(Z)Ljuw;
     .locals 3
 
-    .prologue
-    .line 8
     new-instance v0, Ljvi;
 
     invoke-direct {v0}, Ljvi;-><init>()V
 
-    .line 10
     iget-object v1, p0, Lgwp;->f:Ljava/util/concurrent/Executor;
 
     new-instance v2, Lgwq;
@@ -89,6 +76,5 @@
 
     invoke-interface {v1, v2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 11
     return-object v0
 .end method

@@ -18,15 +18,12 @@
 .method public constructor <init>(Leao;Ljvi;)V
     .locals 2
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leaj;->c:Leao;
 
     iput-object p2, p0, Leaj;->b:Ljvi;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -43,10 +40,8 @@
 .method public final close()V
     .locals 3
 
-    .prologue
     const/4 v1, 0x1
 
-    .line 3
     iget-object v0, p0, Leaj;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
@@ -55,24 +50,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 14
     :goto_0
     return-void
 
-    .line 5
     :cond_0
     iget-object v0, p0, Leaj;->c:Leao;
 
-    .line 6
     iget-object v2, v0, Leao;->e:Liag;
 
-    .line 7
     iget-object v0, p0, Leaj;->c:Leao;
 
-    .line 8
     iget-object v0, v0, Leao;->f:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    .line 9
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
 
     move-result v0
@@ -88,16 +77,12 @@
 
     invoke-virtual {v2, v0}, Liag;->a(Ljava/lang/Object;)V
 
-    .line 10
     iget-object v0, p0, Leaj;->c:Leao;
 
-    .line 11
     iget-object v0, v0, Leao;->d:Licb;
 
-    .line 12
     invoke-virtual {v0}, Licb;->a()V
 
-    .line 13
     iget-object v0, p0, Leaj;->b:Ljvi;
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -108,7 +93,6 @@
 
     goto :goto_0
 
-    .line 9
     :cond_1
     const/4 v0, 0x0
 

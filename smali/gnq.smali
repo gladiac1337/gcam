@@ -36,8 +36,6 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    .prologue
-    .line 62
     const-string v0, "GoudaCtrlr"
 
     invoke-static {v0}, Lbhz;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -52,16 +50,12 @@
 .method public constructor <init>(Lcom/google/googlex/gcam/GoudaSwigWrapper;Lgik;Ljava/util/concurrent/Executor;Lgsp;Lbli;Landroid/content/Context;)V
     .locals 4
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lgnq;->i:Z
 
-    .line 3
     new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
     const-wide/16 v2, 0x0
@@ -70,22 +64,16 @@
 
     iput-object v0, p0, Lgnq;->j:Ljava/util/concurrent/atomic/AtomicLong;
 
-    .line 4
     iput-object p1, p0, Lgnq;->d:Lcom/google/googlex/gcam/GoudaSwigWrapper;
 
-    .line 5
     iput-object p2, p0, Lgnq;->f:Lgik;
 
-    .line 6
     iput-object p3, p0, Lgnq;->b:Ljava/util/concurrent/Executor;
 
-    .line 7
     iput-object p4, p0, Lgnq;->g:Lgsp;
 
-    .line 8
     iput-object p5, p0, Lgnq;->c:Lbli;
 
-    .line 9
     new-instance v0, Lgoa;
 
     new-instance v1, Lgnr;
@@ -96,7 +84,6 @@
 
     iput-object v0, p0, Lgnq;->h:Lgoa;
 
-    .line 10
     return-void
 .end method
 
@@ -105,13 +92,10 @@
 .method public final a(Lcom/google/googlex/gcam/InterleavedImageU8;Lcom/google/googlex/gcam/InterleavedImageU16;Lcom/google/googlex/gcam/GoudaRequest;Lgom;)Ljuw;
     .locals 9
 
-    .prologue
-    .line 17
     iget-object v0, p0, Lgnq;->d:Lcom/google/googlex/gcam/GoudaSwigWrapper;
 
     if-nez v0, :cond_0
 
-    .line 18
     new-instance v0, Lief;
 
     const-string v1, "Controller hasn\'t been initialized"
@@ -122,11 +106,9 @@
 
     move-result-object v0
 
-    .line 23
     :goto_0
     return-object v0
 
-    .line 19
     :cond_0
     iget-object v0, p0, Lgnq;->j:Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -134,15 +116,12 @@
 
     move-result-wide v2
 
-    .line 20
     sget-object v0, Lgnq;->a:Ljava/lang/String;
 
     iget-object v1, p0, Lgnq;->f:Lgik;
 
-    .line 21
     iget-object v1, v1, Lgik;->a:Laxv;
 
-    .line 22
     invoke-interface {v1}, Liau;->b()Ljava/lang/Object;
 
     move-result-object v1
@@ -191,7 +170,6 @@
 
     invoke-static {v0, v1}, Lbhz;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 23
     iget-object v8, p0, Lgnq;->f:Lgik;
 
     new-instance v0, Lgns;
@@ -218,29 +196,23 @@
 .method public final a()V
     .locals 1
 
-    .prologue
-    .line 11
     iget-boolean v0, p0, Lgnq;->i:Z
 
     if-eqz v0, :cond_1
 
-    .line 16
     :cond_0
     :goto_0
     return-void
 
-    .line 13
     :cond_1
     iget-object v0, p0, Lgnq;->d:Lcom/google/googlex/gcam/GoudaSwigWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 14
     iget-object v0, p0, Lgnq;->d:Lcom/google/googlex/gcam/GoudaSwigWrapper;
 
     invoke-virtual {v0}, Lcom/google/googlex/gcam/GoudaSwigWrapper;->Init()Z
 
-    .line 15
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lgnq;->i:Z
@@ -251,30 +223,22 @@
 .method public final a(Lgok;)V
     .locals 0
 
-    .prologue
-    .line 56
     iput-object p1, p0, Lgnq;->e:Lgok;
 
-    .line 57
     return-void
 .end method
 
 .method public final a(Lgol;)V
     .locals 0
 
-    .prologue
-    .line 58
     iput-object p1, p0, Lgnq;->k:Lgol;
 
-    .line 59
     return-void
 .end method
 
 .method public final b()V
     .locals 4
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lgnq;->g:Lgsp;
 
     const-string v1, "gouda_tutorial_dismiss"
@@ -283,80 +247,62 @@
 
     move-result v0
 
-    .line 25
     if-lez v0, :cond_1
 
-    .line 45
     :cond_0
     :goto_0
     return-void
 
-    .line 28
     :cond_1
     iget-object v0, p0, Lgnq;->k:Lgol;
 
     if-eqz v0, :cond_0
 
-    .line 29
     iget-object v0, p0, Lgnq;->k:Lgol;
 
     iget-object v1, p0, Lgnq;->h:Lgoa;
 
-    .line 30
     iget-object v2, v0, Lgol;->a:Lczt;
 
-    .line 31
     iget-object v2, v2, Lczt;->d:Lbtx;
 
-    .line 32
     invoke-interface {v2}, Lbtx;->t()Leug;
 
     move-result-object v2
 
     iget-object v0, v0, Lgol;->a:Lczt;
 
-    .line 33
     iget-object v0, v0, Lczt;->o:Landroid/content/Context;
 
-    .line 34
     invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
     invoke-virtual {v2, v1, v0}, Leug;->a(Lgyo;Landroid/view/LayoutInflater;)Z
 
-    .line 35
     iget-object v0, p0, Lgnq;->e:Lgok;
 
     if-eqz v0, :cond_0
 
-    .line 36
     iget-object v0, p0, Lgnq;->e:Lgok;
 
-    .line 37
     iget-object v1, v0, Lgok;->b:Lgoe;
 
-    .line 38
     iget-object v1, v1, Lgoe;->d:Ljava/lang/Object;
 
-    .line 39
     monitor-enter v1
 
-    .line 40
     :try_start_0
     iget-object v2, v0, Lgok;->b:Lgoe;
 
     invoke-virtual {v2}, Lgoe;->b()V
 
-    .line 41
     iget-object v2, v0, Lgok;->b:Lgoe;
 
-    .line 42
     const/4 v3, 0x0
 
     iput-boolean v3, v2, Lgoe;->e:Z
 
-    .line 43
     iget-object v0, v0, Lgok;->a:Liag;
 
     const/4 v2, 0x1
@@ -367,7 +313,6 @@
 
     invoke-virtual {v0, v2}, Liag;->a(Ljava/lang/Object;)V
 
-    .line 44
     monitor-exit v1
 
     goto :goto_0
@@ -385,30 +330,22 @@
 .method public final c()V
     .locals 3
 
-    .prologue
-    .line 46
     iget-object v0, p0, Lgnq;->h:Lgoa;
 
-    .line 47
     iget-boolean v0, v0, Lgyo;->h:Z
 
-    .line 48
     if-eqz v0, :cond_0
 
-    .line 49
     iget-object v0, p0, Lgnq;->h:Lgoa;
 
     invoke-virtual {v0}, Lgoa;->b()V
 
-    .line 50
     iget-object v0, p0, Lgnq;->e:Lgok;
 
     if-eqz v0, :cond_0
 
-    .line 51
     iget-object v0, p0, Lgnq;->e:Lgok;
 
-    .line 52
     iget-object v1, v0, Lgok;->a:Liag;
 
     const/4 v2, 0x0
@@ -419,13 +356,10 @@
 
     invoke-virtual {v1, v2}, Liag;->a(Ljava/lang/Object;)V
 
-    .line 53
     iget-object v0, v0, Lgok;->b:Lgoe;
 
-    .line 54
     invoke-virtual {v0}, Lgoe;->c()V
 
-    .line 55
     :cond_0
     return-void
 .end method
@@ -433,12 +367,9 @@
 .method public final d()V
     .locals 1
 
-    .prologue
-    .line 60
     iget-object v0, p0, Lgnq;->h:Lgoa;
 
     invoke-virtual {v0}, Lgoa;->a()V
 
-    .line 61
     return-void
 .end method

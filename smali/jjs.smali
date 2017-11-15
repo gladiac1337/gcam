@@ -20,11 +20,8 @@
 .method public constructor <init>(Ljhj;Ljmn;)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljmn;-><init>()V
 
-    .line 2
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -33,7 +30,6 @@
 
     iput-object v0, p0, Ljjs;->a:Ljhj;
 
-    .line 3
     invoke-static {p2}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -42,7 +38,6 @@
 
     iput-object v0, p0, Ljjs;->b:Ljmn;
 
-    .line 4
     return-void
 .end method
 
@@ -51,8 +46,6 @@
 .method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 3
 
-    .prologue
-    .line 5
     iget-object v0, p0, Ljjs;->b:Ljmn;
 
     iget-object v1, p0, Ljjs;->a:Ljhj;
@@ -77,29 +70,23 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 6
     if-ne p1, p0, :cond_1
 
-    .line 11
     :cond_0
     :goto_0
     return v0
 
-    .line 8
     :cond_1
     instance-of v2, p1, Ljjs;
 
     if-eqz v2, :cond_3
 
-    .line 9
     check-cast p1, Ljjs;
 
-    .line 10
     iget-object v2, p0, Ljjs;->a:Ljhj;
 
     iget-object v3, p1, Ljjs;->a:Ljhj;
@@ -128,15 +115,12 @@
     :cond_3
     move v0, v1
 
-    .line 11
     goto :goto_0
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    .prologue
-    .line 12
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Object;
@@ -153,20 +137,16 @@
 
     aput-object v2, v0, v1
 
-    .line 13
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 14
     return v0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    .prologue
-    .line 15
     iget-object v0, p0, Ljjs;->b:Ljmn;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;

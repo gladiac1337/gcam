@@ -16,11 +16,8 @@
 .method public final synthetic a(Landroid/content/Context;Landroid/os/Looper;Lhls;Ljava/lang/Object;Lhkn;Lhko;)Lhkj;
     .locals 6
 
-    .prologue
-    .line 1
     check-cast p4, Lhwl;
 
-    .line 2
     if-nez p4, :cond_0
 
     new-instance v0, Lhwl;
@@ -29,10 +26,8 @@
 
     invoke-direct {v1}, Lhwm;-><init>()V
 
-    .line 3
     invoke-direct {v0}, Lhwl;-><init>()V
 
-    .line 4
     :cond_0
     new-instance v0, Lhyg;
 
@@ -48,6 +43,5 @@
 
     invoke-direct/range {v0 .. v5}, Lhyg;-><init>(Landroid/content/Context;Landroid/os/Looper;Lhkn;Lhko;Lhls;)V
 
-    .line 5
     return-object v0
 .end method

@@ -16,8 +16,6 @@
 .method constructor <init>(Lchq;Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lchr;->b:Lchq;
 
     iput-object p2, p0, Lchr;->a:Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;
@@ -32,11 +30,8 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 5
 
-    .prologue
-    .line 4
     check-cast p1, Liic;
 
-    .line 5
     sget-object v0, Landroid/hardware/camera2/CaptureResult;->SENSOR_TIMESTAMP:Landroid/hardware/camera2/CaptureResult$Key;
 
     invoke-interface {p1, v0}, Liic;->a(Landroid/hardware/camera2/CaptureResult$Key;)Ljava/lang/Object;
@@ -49,47 +44,37 @@
 
     move-result-wide v0
 
-    .line 6
     iget-object v2, p0, Lchr;->b:Lchq;
 
     iget-object v2, v2, Lchq;->b:Lchl;
 
-    .line 7
     iget-object v2, v2, Lchl;->i:Lijc;
 
-    .line 8
     invoke-interface {v2, p1}, Lijc;->a(Liic;)F
 
     move-result v2
 
-    .line 9
     invoke-static {v2}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 10
     iget-object v3, p0, Lchr;->b:Lchq;
 
     iget-object v3, v3, Lchq;->b:Lchl;
 
-    .line 11
     iget-object v3, v3, Lchl;->j:Lijh;
 
-    .line 12
     invoke-virtual {v3, v2, v0, v1}, Lijh;->a(FJ)V
 
-    .line 14
     :goto_0
     iget-object v0, p0, Lchr;->a:Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;
 
     invoke-virtual {v0}, Lcom/google/android/apps/camera/legacy/app/stats/BurstSessionStatistics;->i()V
 
-    .line 15
     return-void
 
-    .line 13
     :cond_0
     const-string v2, "BurstController"
 
@@ -127,14 +112,11 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 2
 
-    .prologue
-    .line 2
     const-string v0, "BurstController"
 
     const-string v1, "Could not score a frame because metadata is missing!"
 
     invoke-static {v0, v1}, Lbhz;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3
     return-void
 .end method

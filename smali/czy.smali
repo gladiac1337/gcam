@@ -25,16 +25,12 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v1, p0, Lczy;->a:Lczt;
 
-    .line 2
     iget-object v0, v1, Lczt;->B:Lcqw;
 
     if-eqz v0, :cond_0
 
-    .line 3
     iget-object v0, v1, Lczt;->B:Lcqw;
 
     invoke-virtual {v0}, Lcqw;->a()Liau;
@@ -53,7 +49,6 @@
 
     invoke-virtual {v1, v0}, Lczt;->a(Z)V
 
-    .line 4
     :cond_0
     return-void
 .end method

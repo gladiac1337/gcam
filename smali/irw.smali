@@ -16,18 +16,14 @@
 .method public constructor <init>()V
     .locals 4
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     new-instance v0, Landroid/util/LongSparseArray;
 
     invoke-direct {v0}, Landroid/util/LongSparseArray;-><init>()V
 
     iput-object v0, p0, Lirw;->a:Landroid/util/LongSparseArray;
 
-    .line 3
     new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
     const-wide/16 v2, 0x0
@@ -44,25 +40,18 @@
 .method public final a()V
     .locals 0
 
-    .prologue
-    .line 22
     invoke-virtual {p0}, Lirw;->d()V
 
-    .line 23
     invoke-virtual {p0}, Lirw;->c()V
 
-    .line 24
     return-void
 .end method
 
 .method public final a(J)V
     .locals 3
 
-    .prologue
-    .line 16
     invoke-virtual {p0}, Lirw;->d()V
 
-    .line 17
     iget-object v0, p0, Lirw;->a:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
@@ -71,18 +60,14 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;
 
-    .line 18
     if-eqz v0, :cond_0
 
-    .line 19
     iget-object v1, p0, Lirw;->a:Landroid/util/LongSparseArray;
 
     invoke-virtual {v1, p1, p2}, Landroid/util/LongSparseArray;->remove(J)V
 
-    .line 20
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->release()Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
-    .line 21
     :cond_0
     return-void
 .end method
@@ -90,19 +75,14 @@
 .method public final a(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)V
     .locals 5
 
-    .prologue
-    .line 8
     invoke-virtual {p0}, Lirw;->d()V
 
-    .line 9
     invoke-static {p1}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->getTimestamp()J
 
     move-result-wide v0
 
-    .line 11
     iget-object v2, p0, Lirw;->a:Landroid/util/LongSparseArray;
 
     invoke-virtual {v2, v0, v1}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
@@ -111,19 +91,15 @@
 
     if-nez v2, :cond_0
 
-    .line 12
     iget-object v2, p0, Lirw;->a:Landroid/util/LongSparseArray;
 
     invoke-virtual {v2, v0, v1, p1}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
 
-    .line 13
     invoke-virtual {p1}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->retain()Lcom/google/android/libraries/smartburst/filterfw/Frame;
 
-    .line 15
     :goto_0
     return-void
 
-    .line 14
     :cond_0
     const-string v2, "FrameImageBuffer"
 
@@ -155,8 +131,6 @@
 .method public final bridge synthetic a(Ljava/lang/Object;)V
     .locals 0
 
-    .prologue
-    .line 44
     check-cast p1, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;
 
     invoke-virtual {p0, p1}, Lirw;->a(Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;)V
@@ -167,15 +141,12 @@
 .method public final a(Ljava/util/Set;Ljava/util/Set;Lixl;)V
     .locals 6
 
-    .prologue
     const/4 v2, 0x0
 
-    .line 25
     invoke-virtual {p0}, Lirw;->d()V
 
     move v1, v2
 
-    .line 26
     :goto_0
     iget-object v0, p0, Lirw;->a:Landroid/util/LongSparseArray;
 
@@ -185,14 +156,12 @@
 
     if-ge v1, v0, :cond_2
 
-    .line 27
     iget-object v0, p0, Lirw;->a:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/LongSparseArray;->keyAt(I)J
 
     move-result-wide v4
 
-    .line 28
     iget-object v0, p0, Lirw;->a:Landroid/util/LongSparseArray;
 
     invoke-virtual {v0, v4, v5}, Landroid/util/LongSparseArray;->get(J)Ljava/lang/Object;
@@ -201,7 +170,6 @@
 
     check-cast v0, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;
 
-    .line 29
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
@@ -212,7 +180,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 30
     invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
@@ -225,7 +192,6 @@
 
     const/4 v3, 0x1
 
-    .line 31
     :goto_1
     invoke-virtual {v0}, Lcom/google/android/libraries/smartburst/filterfw/FrameImage2D;->toBitmap()Landroid/graphics/Bitmap;
 
@@ -233,7 +199,6 @@
 
     invoke-interface {p3, v4, v5, v0, v3}, Lixl;->a(JLandroid/graphics/Bitmap;Z)V
 
-    .line 32
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -244,10 +209,8 @@
     :cond_1
     move v3, v2
 
-    .line 30
     goto :goto_1
 
-    .line 33
     :cond_2
     return-void
 .end method
@@ -255,19 +218,14 @@
 .method public final b()Ljava/util/List;
     .locals 2
 
-    .prologue
-    .line 4
     invoke-virtual {p0}, Lirw;->d()V
 
-    .line 5
     iget-object v0, p0, Lirw;->a:Landroid/util/LongSparseArray;
 
-    .line 6
     new-instance v1, Ljgi;
 
     invoke-direct {v1, v0}, Ljgi;-><init>(Landroid/util/LongSparseArray;)V
 
-    .line 7
     invoke-static {v1}, Ljkv;->a(Ljava/util/Collection;)Ljkv;
 
     move-result-object v0
@@ -278,11 +236,8 @@
 .method public final c()V
     .locals 2
 
-    .prologue
-    .line 34
     invoke-virtual {p0}, Lirw;->d()V
 
-    .line 35
     :goto_0
     iget-object v0, p0, Lirw;->a:Landroid/util/LongSparseArray;
 
@@ -292,7 +247,6 @@
 
     if-lez v0, :cond_0
 
-    .line 36
     iget-object v0, p0, Lirw;->a:Landroid/util/LongSparseArray;
 
     const/4 v1, 0x0
@@ -305,7 +259,6 @@
 
     goto :goto_0
 
-    .line 37
     :cond_0
     return-void
 .end method
@@ -313,8 +266,6 @@
 .method final declared-synchronized d()V
     .locals 6
 
-    .prologue
-    .line 38
     monitor-enter p0
 
     :try_start_0
@@ -324,7 +275,6 @@
 
     if-nez v0, :cond_0
 
-    .line 39
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Called from a thread with no graph runner."
@@ -335,7 +285,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 38
     :catchall_0
     move-exception v0
 
@@ -343,7 +292,6 @@
 
     throw v0
 
-    .line 40
     :cond_0
     :try_start_1
     iget-object v0, p0, Lirw;->b:Ljava/util/concurrent/atomic/AtomicLong;
@@ -364,7 +312,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 41
     iget-object v0, p0, Lirw;->b:Ljava/util/concurrent/atomic/AtomicLong;
 
     const-wide/16 v2, 0x0
@@ -383,7 +330,6 @@
 
     if-nez v0, :cond_1
 
-    .line 42
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Called from a different graph runner thread."
@@ -394,7 +340,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 43
     :cond_1
     monitor-exit p0
 

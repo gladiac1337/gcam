@@ -16,8 +16,6 @@
 .method constructor <init>(Ldby;Lhbn;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ldcc;->b:Ldby;
 
     iput-object p2, p0, Ldcc;->a:Lhbn;
@@ -32,15 +30,11 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ldcc;->b:Ldby;
 
     iget-object v1, p0, Ldcc;->a:Lhbn;
 
-    .line 3
     invoke-virtual {v0, v1}, Ldby;->a(Lhbn;)V
 
-    .line 4
     return-void
 .end method

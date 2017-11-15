@@ -7,8 +7,6 @@
 .method public constructor <init>()V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -17,8 +15,6 @@
 .method public static a(Ljava/io/FileDescriptor;I)Landroid/media/MediaMuxer;
     .locals 4
 
-    .prologue
-    .line 6
     const-string v0, "MediaMuxerFac"
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -65,7 +61,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7
     :try_start_0
     new-instance v0, Landroid/media/MediaMuxer;
 
@@ -75,11 +70,9 @@
 
     return-object v0
 
-    .line 8
     :catch_0
     move-exception v0
 
-    .line 9
     new-instance v1, Lbgl;
 
     const-string v2, "Unable to create MediaMuxer"
@@ -94,8 +87,6 @@
 .method public static a(Ljava/lang/String;I)Landroid/media/MediaMuxer;
     .locals 3
 
-    .prologue
-    .line 2
     const-string v0, "MediaMuxerFac"
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -138,7 +129,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3
     :try_start_0
     new-instance v0, Landroid/media/MediaMuxer;
 
@@ -148,11 +138,9 @@
 
     return-object v0
 
-    .line 4
     :catch_0
     move-exception v0
 
-    .line 5
     new-instance v1, Lbgl;
 
     const-string v2, "Unable to create MediaMuxer"

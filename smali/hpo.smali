@@ -18,8 +18,5 @@
 .method protected final synthetic a(Lcom/google/android/gms/common/api/Status;)Lhks;
     .locals 0
 
-    .prologue
-    .line 1
-    .line 2
     return-object p1
 .end method

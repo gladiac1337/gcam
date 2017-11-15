@@ -29,24 +29,19 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lbvi;->a:Lbvg;
 
     iget v1, p0, Lbvi;->b:I
 
-    .line 2
     const-string v2, "Acquiring semaphore"
 
     invoke-virtual {v0, v1, v2}, Lbvg;->a(ILjava/lang/String;)V
 
-    .line 3
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
-    .line 4
     return-void
 .end method

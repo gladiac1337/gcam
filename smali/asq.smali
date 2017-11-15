@@ -18,8 +18,6 @@
 .method constructor <init>(Laso;Landroid/graphics/PointF;Landroid/graphics/RectF;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Lasq;->c:Laso;
 
     iput-object p2, p0, Lasq;->a:Landroid/graphics/PointF;
@@ -36,17 +34,12 @@
 .method public final synthetic a(Ljava/lang/Object;)V
     .locals 5
 
-    .prologue
-    .line 3
     check-cast p1, Ljava/lang/Boolean;
 
-    .line 4
     iget-object v0, p0, Lasq;->c:Laso;
 
-    .line 5
     iget-object v0, v0, Laso;->c:Liau;
 
-    .line 6
     invoke-interface {v0}, Liau;->b()Ljava/lang/Object;
 
     move-result-object v0
@@ -63,7 +56,6 @@
 
     if-nez v0, :cond_0
 
-    .line 7
     new-instance v0, Lgzh;
 
     iget-object v1, p0, Lasq;->a:Landroid/graphics/PointF;
@@ -88,27 +80,22 @@
 
     iget-object v3, p0, Lasq;->b:Landroid/graphics/RectF;
 
-    .line 8
     invoke-virtual {v3}, Landroid/graphics/RectF;->width()F
 
     move-result v3
 
     iget-object v4, p0, Lasq;->b:Landroid/graphics/RectF;
 
-    .line 9
     invoke-virtual {v4}, Landroid/graphics/RectF;->height()F
 
     move-result v4
 
     invoke-direct {v0, v1, v2, v3, v4}, Lgzh;-><init>(FFFF)V
 
-    .line 10
     iget-object v1, p0, Lasq;->c:Laso;
 
-    .line 11
     iget-object v1, v1, Laso;->d:Lidm;
 
-    .line 12
     const/4 v2, 0x0
 
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -117,7 +104,6 @@
 
     invoke-interface {v1, v0, v2, v3}, Lidm;->a(Lgzh;Ljava/lang/Float;Z)V
 
-    .line 13
     :cond_0
     return-void
 .end method
@@ -125,7 +111,5 @@
 .method public final a(Ljava/lang/Throwable;)V
     .locals 0
 
-    .prologue
-    .line 2
     return-void
 .end method

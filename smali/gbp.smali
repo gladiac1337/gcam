@@ -11,11 +11,8 @@
 .method private constructor <init>([F)V
     .locals 2
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     array-length v0, p1
 
     const/16 v1, 0x9
@@ -27,13 +24,10 @@
     :goto_0
     invoke-static {v0}, Liya;->a(Z)V
 
-    .line 3
     iput-object p1, p0, Lgbp;->a:[F
 
-    .line 4
     return-void
 
-    .line 2
     :cond_0
     const/4 v0, 0x0
 
@@ -43,8 +37,6 @@
 .method public static a([F)Lgbp;
     .locals 2
 
-    .prologue
-    .line 5
     new-instance v0, Lgbp;
 
     array-length v1, p0
@@ -63,40 +55,33 @@
 .method public final a(Lgbp;)Lgbp;
     .locals 11
 
-    .prologue
     const/4 v10, 0x3
 
     const/4 v1, 0x0
 
-    .line 7
     invoke-virtual {p1}, Lgbp;->a()[F
 
     move-result-object v4
 
-    .line 8
     const/16 v0, 0x9
 
     new-array v5, v0, [F
 
     move v3, v1
 
-    .line 9
     :goto_0
     if-ge v3, v10, :cond_2
 
     move v2, v1
 
-    .line 10
     :goto_1
     if-ge v2, v10, :cond_1
 
     move v0, v1
 
-    .line 11
     :goto_2
     if-ge v0, v10, :cond_0
 
-    .line 12
     mul-int/lit8 v6, v3, 0x3
 
     add-int/2addr v6, v2
@@ -123,12 +108,10 @@
 
     aput v7, v5, v6
 
-    .line 13
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 14
     :cond_0
     add-int/lit8 v0, v2, 0x1
 
@@ -136,7 +119,6 @@
 
     goto :goto_1
 
-    .line 15
     :cond_1
     add-int/lit8 v0, v3, 0x1
 
@@ -144,7 +126,6 @@
 
     goto :goto_0
 
-    .line 16
     :cond_2
     invoke-static {v5}, Lgbp;->a([F)Lgbp;
 
@@ -156,8 +137,6 @@
 .method public final a()[F
     .locals 2
 
-    .prologue
-    .line 6
     iget-object v0, p0, Lgbp;->a:[F
 
     iget-object v1, p0, Lgbp;->a:[F
@@ -174,33 +153,25 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    .prologue
-    .line 17
     if-ne p1, p0, :cond_0
 
-    .line 18
     const/4 v0, 0x1
 
-    .line 22
     :goto_0
     return v0
 
-    .line 19
     :cond_0
     instance-of v0, p1, Lgbp;
 
     if-nez v0, :cond_1
 
-    .line 20
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 21
     :cond_1
     check-cast p1, Lgbp;
 
-    .line 22
     iget-object v0, p0, Lgbp;->a:[F
 
     iget-object v1, p1, Lgbp;->a:[F
@@ -215,8 +186,6 @@
 .method public final hashCode()I
     .locals 1
 
-    .prologue
-    .line 23
     iget-object v0, p0, Lgbp;->a:[F
 
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([F)I
@@ -229,8 +198,6 @@
 .method public final toString()Ljava/lang/String;
     .locals 11
 
-    .prologue
-    .line 24
     iget-object v0, p0, Lgbp;->a:[F
 
     const/4 v1, 0x0

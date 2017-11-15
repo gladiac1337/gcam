@@ -33,20 +33,15 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lfwo;->a:Lfwl;
 
     iget-object v1, p0, Lfwo;->b:Landroid/view/View;
 
     iget-object v2, p0, Lfwo;->c:Landroid/view/View$OnLayoutChangeListener;
 
-    .line 2
     invoke-virtual {v0}, Lfwl;->g()V
 
-    .line 3
     invoke-virtual {v1, v2}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
-    .line 4
     return-void
 .end method

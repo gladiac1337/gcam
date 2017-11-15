@@ -18,8 +18,6 @@
 .method public constructor <init>(Lcom/google/android/libraries/social/licenses/LicenseActivity;ILandroid/widget/ScrollView;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ljhd;->c:Lcom/google/android/libraries/social/licenses/LicenseActivity;
 
     iput p2, p0, Ljhd;->a:I
@@ -36,8 +34,6 @@
 .method public final run()V
     .locals 3
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ljhd;->c:Lcom/google/android/libraries/social/licenses/LicenseActivity;
 
     const v1, 0x7f0e0159
@@ -48,7 +44,6 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 3
     invoke-virtual {v0}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 
     move-result-object v1
@@ -59,7 +54,6 @@
 
     move-result v1
 
-    .line 4
     invoke-virtual {v0}, Landroid/widget/TextView;->getLayout()Landroid/text/Layout;
 
     move-result-object v0
@@ -68,13 +62,11 @@
 
     move-result v0
 
-    .line 5
     iget-object v1, p0, Ljhd;->b:Landroid/widget/ScrollView;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2, v0}, Landroid/widget/ScrollView;->scrollTo(II)V
 
-    .line 6
     return-void
 .end method

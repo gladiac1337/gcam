@@ -14,8 +14,6 @@
 .method constructor <init>(Litj;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Litb;->a:Litj;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,9 +26,6 @@
 .method public final synthetic a(Litk;)Ljava/lang/Object;
     .locals 2
 
-    .prologue
-    .line 2
-    .line 3
     iget-object v0, p0, Litb;->a:Litj;
 
     invoke-virtual {v0}, Litj;->a()Z
@@ -39,7 +34,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4
     const-class v0, Liza;
 
     const-string v1, "med-res-acquisition-pipeline"
@@ -50,11 +44,9 @@
 
     check-cast v0, Liyz;
 
-    .line 6
     :goto_0
     return-object v0
 
-    .line 5
     :cond_0
     const-class v0, Liyz;
 

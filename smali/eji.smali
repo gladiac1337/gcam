@@ -16,8 +16,6 @@
 .method constructor <init>(Lejh;Lejt;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Leji;->b:Lejh;
 
     iput-object p2, p0, Leji;->a:Lejt;
@@ -32,22 +30,16 @@
 .method public final run()V
     .locals 4
 
-    .prologue
-    .line 2
     iget-object v0, p0, Leji;->b:Lejh;
 
-    .line 3
     iget-object v0, v0, Lejh;->f:Leju;
 
-    .line 4
     iget-object v1, p0, Leji;->a:Lejt;
 
-    .line 5
     iget-object v2, v0, Leju;->a:Ljava/util/List;
 
     monitor-enter v2
 
-    .line 6
     :try_start_0
     iget-object v3, v0, Leju;->a:Ljava/util/List;
 
@@ -57,28 +49,23 @@
 
     if-eqz v3, :cond_0
 
-    .line 7
     iget-object v3, v0, Leju;->a:Ljava/util/List;
 
     invoke-interface {v3, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 8
     iget-object v3, v0, Leju;->b:Ljava/util/HashMap;
 
     invoke-virtual {v3, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9
     new-instance v1, Lejx;
 
     invoke-direct {v1, v0}, Lejx;-><init>(Leju;)V
 
-    .line 11
     :goto_0
     monitor-exit v2
 
     return-void
 
-    .line 10
     :cond_0
     new-instance v1, Lejy;
 
@@ -86,7 +73,6 @@
 
     goto :goto_0
 
-    .line 11
     :catchall_0
     move-exception v0
 

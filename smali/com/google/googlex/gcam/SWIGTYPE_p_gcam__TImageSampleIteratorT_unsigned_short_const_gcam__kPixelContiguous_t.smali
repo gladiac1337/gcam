@@ -11,38 +11,28 @@
 .method protected constructor <init>()V
     .locals 2
 
-    .prologue
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__TImageSampleIteratorT_unsigned_short_const_gcam__kPixelContiguous_t;->swigCPtr:J
 
-    .line 6
     return-void
 .end method
 
 .method protected constructor <init>(JZ)V
     .locals 1
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-wide p1, p0, Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__TImageSampleIteratorT_unsigned_short_const_gcam__kPixelContiguous_t;->swigCPtr:J
 
-    .line 3
     return-void
 .end method
 
 .method protected static getCPtr(Lcom/google/googlex/gcam/SWIGTYPE_p_gcam__TImageSampleIteratorT_unsigned_short_const_gcam__kPixelContiguous_t;)J
     .locals 2
 
-    .prologue
-    .line 7
     if-nez p0, :cond_0
 
     const-wide/16 v0, 0x0

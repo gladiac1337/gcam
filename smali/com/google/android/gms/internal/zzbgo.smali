@@ -52,16 +52,12 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    .prologue
-    .line 1
-    .line 3
     const/16 v0, 0x4f45
 
     invoke-static {p1, v0}, Lhjg;->m(Landroid/os/Parcel;I)I
 
     move-result v0
 
-    .line 4
     const/4 v1, 0x1
 
     iget v2, p0, Lcom/google/android/gms/internal/zzbgo;->a:I
@@ -70,15 +66,11 @@
 
     const/4 v1, 0x2
 
-    .line 5
     iget-object v2, p0, Lcom/google/android/gms/internal/zzbgo;->b:Lcom/google/android/gms/common/internal/zzad;
 
-    .line 6
     invoke-static {p1, v1, v2, p2}, Lhjg;->a(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    .line 7
     invoke-static {p1, v0}, Lhjg;->n(Landroid/os/Parcel;I)V
 
-    .line 8
     return-void
 .end method

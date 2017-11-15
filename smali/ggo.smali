@@ -15,20 +15,14 @@
 .method public constructor <init>(Licv;Licz;Lihd;)V
     .locals 0
 
-    .prologue
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
     iput-object p1, p0, Lggo;->a:Licv;
 
-    .line 3
     iput-object p2, p0, Lggo;->b:Licz;
 
-    .line 4
     iput-object p3, p0, Lggo;->c:Lihd;
 
-    .line 5
     return-void
 .end method
 
@@ -37,8 +31,6 @@
 .method public final a(Liht;Landroid/os/Handler;)Lggn;
     .locals 3
 
-    .prologue
-    .line 6
     new-instance v0, Lgfx;
 
     iget-object v1, p0, Lggo;->c:Lihd;

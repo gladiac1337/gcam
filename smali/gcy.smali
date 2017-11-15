@@ -29,21 +29,15 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 1
     iget-object v0, p0, Lgcy;->a:Lgcx;
 
     iget-object v1, p0, Lgcy;->b:Lgdk;
 
-    .line 2
     iget-object v0, v0, Lgcx;->c:Landroid/widget/TextView;
 
-    .line 3
     iget-object v1, v1, Lgdk;->e:Ljava/lang/String;
 
-    .line 4
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 5
     return-void
 .end method

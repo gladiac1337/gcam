@@ -14,8 +14,6 @@
 .method constructor <init>(Ladj;)V
     .locals 0
 
-    .prologue
-    .line 1
     iput-object p1, p0, Ladk;->a:Ladj;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,8 +26,6 @@
 .method public final run()V
     .locals 2
 
-    .prologue
-    .line 2
     iget-object v0, p0, Ladk;->a:Ladj;
 
     iget-object v0, v0, Ladj;->b:Lapc;
@@ -38,6 +34,5 @@
 
     invoke-interface {v0, v1}, Lapc;->a(Lapd;)V
 
-    .line 3
     return-void
 .end method
