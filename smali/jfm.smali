@@ -1,0 +1,43 @@
+.class final Ljfm;
+.super Ljava/lang/Object;
+.source "PG"
+
+# interfaces
+.implements Ljfn;
+
+
+# instance fields
+.field private synthetic a:Ljava/io/StringWriter;
+
+
+# direct methods
+.method constructor <init>(Ljava/io/StringWriter;)V
+    .locals 0
+
+    .prologue
+    .line 1
+    iput-object p1, p0, Ljfm;->a:Ljava/io/StringWriter;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/io/Writer;)V
+    .locals 1
+
+    .prologue
+    .line 2
+    iget-object v0, p0, Ljfm;->a:Ljava/io/StringWriter;
+
+    invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/io/Writer;->write(Ljava/lang/String;)V
+
+    .line 3
+    return-void
+.end method
