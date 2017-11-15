@@ -363,6 +363,10 @@
     throw v0
 
     :cond_1
+    monitor-exit v1
+
+    return-void
+
     :try_start_1
     new-instance v0, Ljava/lang/RuntimeException;
 

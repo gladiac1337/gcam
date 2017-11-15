@@ -10,7 +10,7 @@
 # instance fields
 .field private A:Lfun;
 
-.field private B:Lbhn;
+.field public final B:Lbhn;
 
 .field private C:Lhab;
 
@@ -376,6 +376,37 @@
 
     invoke-virtual {v0, v2}, Lcom/google/googlex/gcam/InitParams;->setMin_payload_frames(I)V
 
+    const/4 v4, 0x3
+
+    iget-object v2, p0, Lcpb;->D:Lcnu;
+
+    iget-object v2, v2, Lcnu;->e:Lbhn;
+
+    invoke-virtual {v2}, Lbhn;->cpc()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    if-le v2, v3, :cond_3
+
+    const/4 v3, 0x1
+
+    if-eq v2, v3, :cond_4
+
+    const/4 v3, 0x2
+
+    if-eq v2, v3, :cond_5
+
+    const/4 v3, 0x3
+
+    if-eq v2, v3, :cond_6
+
+    const/4 v3, 0x4
+
+    if-ge v2, v3, :cond_7
+
+    :goto_1
     iget-object v2, p0, Lcpb;->D:Lcnu;
 
     iget-object v3, v2, Lcnu;->e:Lbhn;
@@ -383,8 +414,6 @@
     invoke-virtual {v3}, Lbhn;->f()I
 
     move-result v3
-
-    const/4 v4, 0x3
 
     iget-object v2, v2, Lcnu;->f:Lihp;
 
@@ -465,6 +494,31 @@
     monitor-exit v1
 
     goto/16 :goto_0
+
+    :cond_3
+    const/4 v4, 0x3
+
+    goto/16 :goto_1
+
+    :cond_4
+    const/16 v4, 0xe
+
+    goto/16 :goto_1
+
+    :cond_5
+    const/16 v4, 0x18
+
+    goto/16 :goto_1
+
+    :cond_6
+    const/16 v4, 0x23
+
+    goto/16 :goto_1
+
+    :cond_7
+    const/16 v4, 0x2e
+
+    goto/16 :goto_1
 
     :catchall_0
     move-exception v0

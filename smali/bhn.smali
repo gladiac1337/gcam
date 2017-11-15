@@ -36,6 +36,38 @@
 
 
 # virtual methods
+.method public MenuValue(Ljava/lang/String;)I
+    .locals 3
+
+    iget-object v1, p0, Lbhn;->d:Landroid/content/SharedPreferences;
+
+    invoke-interface {v1, p1}, Landroid/content/SharedPreferences;->contains(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v2, 0x0
+
+    iget-object v1, p0, Lbhn;->d:Landroid/content/SharedPreferences;
+
+    invoke-interface {v1, p1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public final a()Ljava/lang/String;
     .locals 3
 
@@ -146,6 +178,18 @@
     goto :goto_0
 .end method
 
+.method public blp()I
+    .locals 1
+
+    const-string v0, "pref_blp_key"
+
+    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public final c()Z
     .locals 3
 
@@ -193,6 +237,42 @@
     goto :goto_0
 .end method
 
+.method public cdng()I
+    .locals 1
+
+    const-string v0, "pref_compress_dng_key"
+
+    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public cgc()I
+    .locals 1
+
+    const-string v0, "pref_config_camera_key"
+
+    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public cpc()I
+    .locals 1
+
+    const-string v0, "pref_parameters_camera_key"
+
+    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public final d()Z
     .locals 3
 
@@ -200,160 +280,41 @@
 
     const-string v2, "camera:gcam_enabled"
 
-    iget-object v0, p0, Lbhn;->b:Lgzz;
-
-    iget-object v0, v0, Lgzz;->b:Lihk;
-
-    iget-boolean v0, v0, Lihk;->a:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lbhn;->b:Lgzz;
-
-    iget-object v0, v0, Lgzz;->b:Lihk;
-
-    iget-boolean v0, v0, Lihk;->c:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lbhn;->b:Lgzz;
-
-    iget-object v0, v0, Lgzz;->b:Lihk;
-
-    iget-boolean v0, v0, Lihk;->d:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lbhn;->b:Lgzz;
-
-    iget-object v0, v0, Lgzz;->b:Lihk;
-
-    iget-boolean v0, v0, Lihk;->b:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lbhn;->b:Lgzz;
-
-    iget-object v0, v0, Lgzz;->b:Lihk;
-
-    iget-boolean v0, v0, Lihk;->f:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lbhn;->b:Lgzz;
-
-    iget-object v0, v0, Lgzz;->b:Lihk;
-
-    iget-boolean v0, v0, Lihk;->g:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lbhn;->b:Lgzz;
-
-    invoke-virtual {v0}, Lgzz;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
     const/4 v0, 0x1
 
-    :goto_0
     invoke-virtual {p0, v1, v2, v0}, Lbhn;->a(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
     move-result v0
 
     return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 .method public final e()I
-    .locals 4
+    .locals 3
 
-    const/16 v1, 0x9
+    const/16 v2, 0xf
 
-    const/4 v2, 0x1
-
-    const/16 v0, 0xf
-
-    iget-object v3, p0, Lbhn;->b:Lgzz;
-
-    iget-object v3, v3, Lgzz;->b:Lihk;
-
-    iget-boolean v3, v3, Lihk;->c:Z
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {p0}, Lbhn;->i()Z
+    invoke-virtual {p0}, Lbhn;->cpc()I
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    const/4 v1, 0x1
 
-    move v0, v1
+    if-eq v0, v1, :cond_0
 
-    :cond_0
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_1
+
+    const/4 v1, 0x3
+
+    if-eq v0, v1, :cond_2
+
+    const/4 v1, 0x4
+
+    if-eq v0, v1, :cond_3
+
     :goto_0
-    iget-object v3, p0, Lbhn;->b:Lgzz;
-
-    iget-object v3, v3, Lgzz;->b:Lihk;
-
-    iget-boolean v3, v3, Lihk;->d:Z
-
-    if-eqz v3, :cond_6
-
-    :goto_1
-    iget-object v0, p0, Lbhn;->b:Lgzz;
-
-    iget-object v0, v0, Lgzz;->b:Lihk;
-
-    iget-boolean v0, v0, Lihk;->f:Z
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lbhn;->b:Lgzz;
-
-    iget-object v0, v0, Lgzz;->b:Lihk;
-
-    iget-boolean v0, v0, Lihk;->g:Z
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lbhn;->b:Lgzz;
-
-    invoke-virtual {v0}, Lgzz;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    :cond_1
-    const/16 v1, 0xe
-
-    :cond_2
-    iget-object v0, p0, Lbhn;->b:Lgzz;
-
-    iget-object v0, v0, Lgzz;->b:Lihk;
-
-    iget-boolean v0, v0, Lihk;->b:Z
-
-    if-eqz v0, :cond_5
-
-    invoke-virtual {p0}, Lbhn;->h()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    const/4 v2, 0x3
-
-    :cond_3
-    :goto_2
     add-int/lit8 v0, v2, 0x6
 
     iget-object v1, p0, Lbhn;->a:Landroid/content/ContentResolver;
@@ -366,40 +327,52 @@
 
     return v0
 
-    :cond_4
-    move v0, v2
+    :cond_0
+    const/16 v2, 0xe
 
     goto :goto_0
 
-    :cond_5
-    move v2, v1
+    :cond_1
+    const/16 v2, 0x18
 
-    goto :goto_2
+    goto :goto_0
 
-    :cond_6
-    move v1, v0
+    :cond_2
+    const/16 v2, 0x23
 
-    goto :goto_1
+    goto :goto_0
+
+    :cond_3
+    const/16 v2, 0x2e
+
+    goto :goto_0
 .end method
 
 .method public final f()I
     .locals 3
 
-    const/4 v0, 0x7
+    const/16 v0, 0x8
 
-    const/16 v1, 0x8
+    invoke-virtual {p0}, Lbhn;->cpc()I
 
-    iget-object v2, p0, Lbhn;->b:Lgzz;
+    move-result v1
 
-    iget-object v2, v2, Lgzz;->b:Lihk;
+    const/4 v2, 0x1
 
-    iget-boolean v2, v2, Lihk;->b:Z
+    if-eq v1, v2, :cond_0
 
-    if-eqz v2, :cond_1
+    const/4 v2, 0x2
 
-    const/4 v0, 0x5
+    if-eq v1, v2, :cond_1
 
-    :cond_0
+    const/4 v2, 0x3
+
+    if-eq v1, v2, :cond_2
+
+    const/4 v2, 0x4
+
+    if-eq v1, v2, :cond_3
+
     :goto_0
     iget-object v1, p0, Lbhn;->a:Landroid/content/ContentResolver;
 
@@ -411,40 +384,23 @@
 
     return v0
 
+    :cond_0
+    const/16 v0, 0x9
+
+    goto :goto_0
+
     :cond_1
-    iget-object v2, p0, Lbhn;->b:Lgzz;
+    const/16 v0, 0xa
 
-    iget-object v2, v2, Lgzz;->b:Lihk;
+    goto :goto_0
 
-    iget-boolean v2, v2, Lihk;->d:Z
+    :cond_2
+    const/16 v0, 0xb
 
-    if-nez v2, :cond_0
+    goto :goto_0
 
-    iget-object v2, p0, Lbhn;->b:Lgzz;
-
-    iget-object v2, v2, Lgzz;->b:Lihk;
-
-    iget-boolean v2, v2, Lihk;->f:Z
-
-    if-nez v2, :cond_0
-
-    iget-object v2, p0, Lbhn;->b:Lgzz;
-
-    iget-object v2, v2, Lgzz;->b:Lihk;
-
-    iget-boolean v2, v2, Lihk;->g:Z
-
-    if-nez v2, :cond_0
-
-    iget-object v2, p0, Lbhn;->b:Lgzz;
-
-    invoke-virtual {v2}, Lgzz;->c()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    move v0, v1
+    :cond_3
+    const/16 v0, 0xc
 
     goto :goto_0
 .end method
@@ -456,18 +412,8 @@
 
     move-result v0
 
-    iget-object v1, p0, Lbhn;->b:Lgzz;
+    shl-int/lit8 v0, v0, 0x2
 
-    iget-object v1, v1, Lgzz;->b:Lihk;
-
-    iget-boolean v1, v1, Lihk;->b:Z
-
-    if-eqz v1, :cond_1
-
-    shl-int/lit8 v0, v0, 0x1
-
-    :cond_0
-    :goto_0
     iget-object v1, p0, Lbhn;->a:Landroid/content/ContentResolver;
 
     const-string v2, "camera:max_hdr_plus_imagereader_image_count"
@@ -477,54 +423,6 @@
     move-result v0
 
     return v0
-
-    :cond_1
-    iget-object v1, p0, Lbhn;->b:Lgzz;
-
-    iget-object v1, v1, Lgzz;->b:Lihk;
-
-    iget-boolean v1, v1, Lihk;->d:Z
-
-    if-eqz v1, :cond_2
-
-    mul-int/lit8 v0, v0, 0x3
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v1, p0, Lbhn;->b:Lgzz;
-
-    iget-object v1, v1, Lgzz;->b:Lihk;
-
-    iget-boolean v1, v1, Lihk;->f:Z
-
-    if-nez v1, :cond_3
-
-    iget-object v1, p0, Lbhn;->b:Lgzz;
-
-    iget-object v1, v1, Lgzz;->b:Lihk;
-
-    iget-boolean v1, v1, Lihk;->g:Z
-
-    if-eqz v1, :cond_4
-
-    :cond_3
-    mul-int/lit8 v0, v0, 0x5
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v1, p0, Lbhn;->b:Lgzz;
-
-    invoke-virtual {v1}, Lgzz;->c()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    shl-int/lit8 v0, v0, 0x2
-
-    goto :goto_0
 .end method
 
 .method public final h()Z
@@ -553,6 +451,30 @@
     const/4 v2, 0x1
 
     invoke-virtual {p0, v0, v1, v2}, Lbhn;->a(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public ims()I
+    .locals 1
+
+    const-string v0, "pref_input_model_key"
+
+    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public qjpg()I
+    .locals 1
+
+    const-string v0, "pref_qjpg_key"
+
+    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
 
     move-result v0
 

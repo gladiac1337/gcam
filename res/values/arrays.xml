@@ -304,4 +304,62 @@
         <item>@string/torch_on_desc</item>
         <item>@string/torch_off_desc</item>
     </string-array>
+    <string-array name="pref_input_model_entries">
+        <item>@string/pref_input_model_PxlXLTai</item>
+        <item>@string/pref_input_model_Tai</item>
+        <item>@string/pref_input_model_N6P</item>
+        <item>@string/pref_input_model_N5X</item>
+    </string-array>
+    <string-array name="pref_input_model_entryvalues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pref_config_camera_entries">
+        <item>@string/pref_config_camera_0</item>
+        <item>@string/pref_config_camera_1</item>
+        <item>@string/pref_config_camera_2</item>
+        <item>@string/pref_config_camera_3</item>
+    </string-array>
+    <string-array name="pref_config_camera_entryvalues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="pref_parameters_camera_entries">
+        <item>@string/pref_parameters_camera_0</item>
+        <item>@string/pref_parameters_camera_1</item>
+        <item>@string/pref_parameters_camera_2</item>
+        <item>@string/pref_parameters_camera_3</item>
+        <item>@string/pref_parameters_camera_4</item>
+    </string-array>
+    <string-array name="pref_parameters_camera_entryvalues">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="pref_qjpg_entries">
+        <item>@string/pref_qjpg_80</item>
+        <item>@string/pref_qjpg_90</item>
+        <item>@string/pref_qjpg_95</item>
+        <item>@string/pref_qjpg_96</item>
+        <item>@string/pref_qjpg_97</item>
+        <item>@string/pref_qjpg_98</item>
+        <item>@string/pref_qjpg_99</item>
+        <item>@string/pref_qjpg_100</item>
+    </string-array>
+    <string-array name="pref_qjpg_entryvalues">
+        <item>80</item>
+        <item>90</item>
+        <item>95</item>
+        <item>96</item>
+        <item>97</item>
+        <item>98</item>
+        <item>99</item>
+        <item>100</item>
+    </string-array>
 </resources>

@@ -102,7 +102,7 @@
 
 
 # virtual methods
-.method public final a(Liic;)V
+.method public final a(Liic;Lhis;)V
     .locals 6
 
     const/4 v1, 0x1

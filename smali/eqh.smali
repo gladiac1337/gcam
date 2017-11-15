@@ -984,11 +984,15 @@
 
     move-result v4
 
+    const/4 v4, 0x1
+
     const-string v0, "is_experiemental_supported"
 
     invoke-virtual {v10, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v3
+
+    const/4 v3, 0x1
 
     const-string v0, "is_smartburst_supported"
 
@@ -1009,6 +1013,8 @@
     invoke-virtual {v10, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v0
+
+    const/4 v0, 0x1
 
     move v7, v4
 
@@ -1730,6 +1736,8 @@
     invoke-virtual {v1}, Lgds;->d()Z
 
     move-result v1
+
+    const/4 v1, 0x1
 
     if-nez v1, :cond_16
 
