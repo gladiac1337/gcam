@@ -591,7 +591,7 @@
 
     sget-object v6, Lige;->b:Lige;
 
-    if-ne v0, v6, :cond_6
+    if-ne v0, v6, :cond_7
 
     iget-object v0, p0, Ldil;->d:Lbhn;
 
@@ -601,7 +601,7 @@
 
     const/4 v6, 0x0
 
-    if-eq v0, v6, :cond_6
+    if-eq v0, v6, :cond_7
 
     iget-object v0, p0, Ldil;->d:Lbhn;
 
@@ -781,9 +781,60 @@
 
     move-result v0
 
-    const/4 v6, 0x4
+    const/16 v6, 0x8
 
     if-ne v0, v6, :cond_3
+
+    invoke-static {p4}, Ldil;->a(Ldii;)I
+
+    move-result v0
+
+    invoke-static {p2}, Lcns;->a(Lgdq;)Ligq;
+
+    move-result-object v3
+
+    new-instance v4, Ldql;
+
+    iget-object v5, v3, Ligq;->b:Lici;
+
+    iget v3, v3, Ligq;->a:I
+
+    invoke-direct {v4, v0, v5, v3}, Ldql;-><init>(ILici;I)V
+
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0}, Ldil;->a(Z)Legu;
+
+    move-result-object v3
+
+    iget-object v0, p0, Ldil;->d:Lbhn;
+
+    invoke-virtual {v0}, Lbhn;->i()Z
+
+    move-result v0
+
+    sget-object v0, Ldil;->a:Ljava/lang/String;
+
+    const-string v5, "Selected Nexus6HdrPlusAutoNoZsl OneCamera configuration."
+
+    invoke-static {v0, v5}, Lbhz;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Ldnw;
+
+    invoke-direct {v0, v1, v2, v4, v3}, Ldnw;-><init>(Ldoc;Ldpz;Ldql;Legu;)V
+
+    goto/16 :goto_0
+
+    :cond_3
+    iget-object v0, p0, Ldil;->d:Lbhn;
+
+    invoke-virtual {v0}, Lbhn;->cgc()I
+
+    move-result v0
+
+    const/4 v6, 0x4
+
+    if-ne v0, v6, :cond_4
 
     sget-object v0, Ldil;->a:Ljava/lang/String;
 
@@ -813,7 +864,7 @@
 
     goto/16 :goto_0
 
-    :cond_3
+    :cond_4
     iget-object v0, p0, Ldil;->d:Lbhn;
 
     invoke-virtual {v0}, Lbhn;->cgc()I
@@ -822,7 +873,7 @@
 
     const/4 v6, 0x5
 
-    if-ne v0, v6, :cond_4
+    if-ne v0, v6, :cond_5
 
     sget-object v0, Ldil;->a:Ljava/lang/String;
 
@@ -846,7 +897,7 @@
 
     goto/16 :goto_0
 
-    :cond_4
+    :cond_5
     iget-object v0, p0, Ldil;->d:Lbhn;
 
     invoke-virtual {v0}, Lbhn;->cgc()I
@@ -855,7 +906,7 @@
 
     const/4 v6, 0x6
 
-    if-ne v0, v6, :cond_5
+    if-ne v0, v6, :cond_6
 
     sget-object v0, Ldil;->a:Ljava/lang/String;
 
@@ -879,7 +930,7 @@
 
     goto/16 :goto_0
 
-    :cond_5
+    :cond_6
     iget-object v0, p0, Ldil;->d:Lbhn;
 
     invoke-virtual {v0}, Lbhn;->cgc()I
@@ -888,7 +939,7 @@
 
     const/4 v6, 0x7
 
-    if-ne v0, v6, :cond_6
+    if-ne v0, v6, :cond_7
 
     invoke-interface {p2}, Lgdq;->x()Z
 
@@ -914,7 +965,7 @@
 
     goto/16 :goto_0
 
-    :cond_6
+    :cond_7
     invoke-virtual {v3}, Ldij;->ordinal()I
 
     move-result v0

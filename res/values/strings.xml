@@ -885,6 +885,7 @@ It is necessary to completely close the application, the changes will take effec
     <string name="pref_config_camera_5">Nexus 6P</string>
     <string name="pref_config_camera_6">Pixel 2016 Zsl Hdr</string>
     <string name="pref_config_camera_7">Pixel 2017 Zsl Hdr+</string>
+    <string name="pref_config_camera_8">Nexus 6 Hdr Plus Auto No Zsl</string>
     <string name="pref_parameters_camera_title">HDR+ parameters</string>
     <string name="pref_parameters_camera_default">0</string>
     <string name="pref_parameters_camera_0">Default</string>
@@ -905,6 +906,5 @@ It is necessary to completely close the application, the changes will take effec
     <string name="mod_settings">B-S-G Mod settings</string>
     <string name="pref_compress_dng_title">Compress RAW(*.DNG)</string>
     <string name="pref_blp_title">OmniVision module</string>
-    <item type="string" name="APKTOOL_DUMMY_367">false</item>
     <item type="string" name="APKTOOL_DUMMY_368">false</item>
 </resources>
