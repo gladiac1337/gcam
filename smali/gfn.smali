@@ -26,7 +26,7 @@
 
 
 # virtual methods
-.method public final a(Liic;Leqd;)V
+.method public final a(Liic;)V
     .locals 6
 
     const/16 v4, 0x23
@@ -163,6 +163,8 @@
 
     move-result-object v0
 
+    if-eqz v0, :cond_2
+
     check-cast v0, Ljava/lang/Float;
 
     invoke-static {v0}, Liya;->b(Ljava/lang/Object;)Ljava/lang/Object;
@@ -193,6 +195,7 @@
 
     invoke-virtual {v1, v0}, Lgem;->a(Ljava/lang/Object;)V
 
+    :cond_2
     return-void
 .end method
 
