@@ -3632,6 +3632,7 @@
     <public type="string" name="pref_config_camera_6" id="0x7f110365" />
     <public type="string" name="pref_config_camera_7" id="0x7f110366" />
     <public type="string" name="pref_config_camera_8" id="0x7f110367" />
+    <public type="string" name="pref_config_camera_9" id="0x7f110368" />
     <public type="string" name="pref_parameters_camera_title" id="0x7f110369" />
     <public type="string" name="pref_parameters_camera_default" id="0x7f11036a" />
     <public type="string" name="pref_parameters_camera_0" id="0x7f11036b" />
@@ -3652,7 +3653,6 @@
     <public type="string" name="mod_settings" id="0x7f11037a" />
     <public type="string" name="pref_compress_dng_title" id="0x7f11037b" />
     <public type="string" name="pref_blp_title" id="0x7f11037c" />
-    <public type="string" name="APKTOOL_DUMMY_368" id="0x7f110368" />
     <public type="style" name="AlertDialog.AppCompat" id="0x7f120000" />
     <public type="style" name="AlertDialog.AppCompat.Light" id="0x7f120001" />
     <public type="style" name="Animation.AppCompat.Dialog" id="0x7f120002" />

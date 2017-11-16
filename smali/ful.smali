@@ -31,7 +31,7 @@
 .end method
 
 .method public constructor <init>(Lbhn;Lgzz;Lbqn;)V
-    .locals 6
+    .locals 7
 
     const-wide/16 v4, 0x3e8
 
@@ -140,6 +140,8 @@
 
     iget-boolean v2, v2, Lihk;->c:Z
 
+    const/4 v2, 0x0
+
     if-eqz v2, :cond_3
 
     const/16 v0, 0x244
@@ -153,36 +155,30 @@
 
     iget-boolean v2, v2, Lihk;->d:Z
 
-    if-nez v2, :cond_1
+    invoke-virtual {p1}, Lbhn;->ims()I
 
-    iget-object v2, p0, Lful;->c:Lgzz;
+    move-result v2
 
-    iget-object v2, v2, Lgzz;->b:Lihk;
+    const/4 v6, 0x2
 
-    iget-boolean v2, v2, Lihk;->b:Z
+    if-eq v2, v6, :cond_1
 
-    if-eqz v2, :cond_4
+    const/4 v6, 0x3
+
+    if-ne v2, v6, :cond_4
 
     const/16 v0, 0x172
 
     goto :goto_1
 
     :cond_4
-    iget-object v2, p0, Lful;->c:Lgzz;
+    invoke-virtual {p1}, Lbhn;->ims()I
 
-    iget-object v2, v2, Lgzz;->b:Lihk;
+    move-result v2
 
-    iget-boolean v2, v2, Lihk;->f:Z
+    const/4 v6, 0x2
 
-    if-nez v2, :cond_1
-
-    iget-object v2, p0, Lful;->c:Lgzz;
-
-    iget-object v2, v2, Lgzz;->b:Lihk;
-
-    iget-boolean v2, v2, Lihk;->g:Z
-
-    if-nez v2, :cond_1
+    if-lt v2, v6, :cond_1
 
     iget-object v2, p0, Lful;->c:Lgzz;
 

@@ -470,26 +470,26 @@
     goto :goto_0
 
     :cond_2
-    iget-object v2, p7, Lbhn;->b:Lgzz;
+    invoke-virtual {p7}, Lbhn;->ims()I
 
-    iget-object v2, v2, Lgzz;->b:Lihk;
+    move-result v2
 
-    iget-boolean v2, v2, Lihk;->d:Z
+    const/4 v3, 0x2
 
-    if-eqz v2, :cond_3
+    if-ne v2, v3, :cond_3
 
     const/4 v1, 0x6
 
     goto :goto_0
 
     :cond_3
-    iget-object v2, p7, Lbhn;->b:Lgzz;
+    invoke-virtual {p7}, Lbhn;->ims()I
 
-    iget-object v2, v2, Lgzz;->b:Lihk;
+    move-result v2
 
-    iget-boolean v2, v2, Lihk;->b:Z
+    const/4 v3, 0x3
 
-    if-eqz v2, :cond_0
+    if-ne v2, v3, :cond_0
 
     const/4 v1, 0x3
 
@@ -1179,7 +1179,7 @@
 .end method
 
 .method public final a(Labe;)V
-    .locals 6
+    .locals 8
 
     const/4 v5, 0x0
 
@@ -1253,6 +1253,18 @@
 
     :cond_0
     const/4 v0, 0x5
+
+    sget-object v6, Landroid/os/Build;->DEVICE:Ljava/lang/String;
+
+    const-string v7, "capricorn"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
+    const/16 v0, 0x1c
 
     :cond_1
     iget-object v1, v1, Lbhn;->a:Landroid/content/ContentResolver;

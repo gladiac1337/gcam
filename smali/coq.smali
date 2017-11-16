@@ -1506,6 +1506,8 @@
 
     iget-boolean v1, v1, Lihk;->c:Z
 
+    const/4 v1, 0x0
+
     if-eqz v1, :cond_0
 
     iget-object v1, p0, Lcoq;->m:Libs;

@@ -94,21 +94,19 @@
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Ldia;->b:Lgzz;
+    iget-object v0, p0, Ldia;->a:Lbhn;
 
-    iget-object v0, v0, Lgzz;->b:Lihk;
+    invoke-virtual {v0}, Lbhn;->ims()I
 
-    iget-boolean v0, v0, Lihk;->d:Z
+    move-result v0
 
-    if-nez v0, :cond_2
+    const/4 v1, 0x2
 
-    iget-object v0, p0, Ldia;->b:Lgzz;
+    if-eq v0, v1, :cond_2
 
-    iget-object v0, v0, Lgzz;->b:Lihk;
+    const/4 v1, 0x3
 
-    iget-boolean v0, v0, Lihk;->b:Z
-
-    if-eqz v0, :cond_3
+    if-eq v0, v1, :cond_3
 
     :cond_2
     sget-object v0, Ldij;->e:Ldij;
@@ -116,21 +114,19 @@
     goto :goto_1
 
     :cond_3
-    iget-object v0, p0, Ldia;->b:Lgzz;
+    iget-object v0, p0, Ldia;->a:Lbhn;
 
-    iget-object v0, v0, Lgzz;->b:Lihk;
+    invoke-virtual {v0}, Lbhn;->ims()I
 
-    iget-boolean v0, v0, Lihk;->f:Z
+    move-result v0
 
-    if-nez v0, :cond_4
+    const/4 v1, 0x1
 
-    iget-object v0, p0, Ldia;->b:Lgzz;
+    if-eq v0, v1, :cond_4
 
-    iget-object v0, v0, Lgzz;->b:Lihk;
+    const/4 v1, 0x2
 
-    iget-boolean v0, v0, Lihk;->g:Z
-
-    if-eqz v0, :cond_5
+    if-eq v0, v1, :cond_5
 
     :cond_4
     sget-object v0, Ldij;->e:Ldij;
@@ -201,24 +197,26 @@
 
     if-nez v1, :cond_9
 
-    iget-object v1, p0, Ldia;->b:Lgzz;
+    iget-object v1, p0, Ldia;->a:Lbhn;
 
-    iget-object v1, v1, Lgzz;->b:Lihk;
-
-    iget-boolean v1, v1, Lihk;->c:Z
-
-    if-nez v1, :cond_a
-
-    :cond_9
-    iget-object v1, p0, Ldia;->b:Lgzz;
-
-    iget-object v1, v1, Lgzz;->b:Lihk;
-
-    invoke-virtual {v1}, Lihk;->b()Z
+    invoke-virtual {v1}, Lbhn;->ims()I
 
     move-result v1
 
-    if-eqz v1, :cond_b
+    const/4 v2, 0x2
+
+    if-eq v1, v2, :cond_a
+
+    :cond_9
+    iget-object v1, p0, Ldia;->a:Lbhn;
+
+    invoke-virtual {v1}, Lbhn;->ims()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    if-eq v1, v2, :cond_b
 
     :cond_a
     sget-object v0, Ldij;->c:Ldij;
