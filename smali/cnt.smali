@@ -103,7 +103,7 @@
 
     invoke-static {v1, v0}, Lbhz;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     goto :goto_0
 

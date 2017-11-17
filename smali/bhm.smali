@@ -35,7 +35,7 @@
 
     const-string v1, "ENG"
 
-    const-string v2, "com.google.android.apps.camera.specialtypes.SpecialTypesProviderEng"
+    const-string v2, "com.google.android.apps.camera.specialtypes.SpecialTypesProvixnbEng"
 
     invoke-direct {v0, v1, v3, v2}, Lbhm;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
@@ -45,7 +45,7 @@
 
     const-string v1, "FISHFOOD"
 
-    const-string v2, "com.google.android.apps.camera.specialtypes.SpecialTypesProviderNext"
+    const-string v2, "com.google.android.apps.camera.specialtypes.SpecialTypesProvixnbNext"
 
     invoke-direct {v0, v1, v4, v2}, Lbhm;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
@@ -55,7 +55,7 @@
 
     const-string v1, "DOGFOOD"
 
-    const-string v2, "com.google.android.apps.camera.specialtypes.SpecialTypesProvider"
+    const-string v2, "com.google.android.apps.camera.specialtypes.SpecialTypesProvixnb"
 
     invoke-direct {v0, v1, v5, v2}, Lbhm;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
@@ -65,7 +65,7 @@
 
     const-string v1, "RELEASE"
 
-    const-string v2, "com.google.android.apps.camera.specialtypes.SpecialTypesProvider"
+    const-string v2, "com.google.android.apps.camera.specialtypes.SpecialTypesProvixnb"
 
     invoke-direct {v0, v1, v6, v2}, Lbhm;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 

@@ -69,7 +69,7 @@
 
     iget-object v0, p0, Lee;->a:Lec;
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lec;->b(Ljava/lang/Object;)V
 

@@ -444,11 +444,22 @@
 .method public final i()Z
     .locals 3
 
+    const/4 v2, 0x0
+
+    const-string v0, "pref_zsl_key"
+
+    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v2, 0x1
+
+    :cond_0
     iget-object v0, p0, Lbhn;->a:Landroid/content/ContentResolver;
 
     const-string v1, "camera:zsl_enabled"
-
-    const/4 v2, 0x1
 
     invoke-virtual {p0, v0, v1, v2}, Lbhn;->a(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
@@ -473,6 +484,18 @@
     .locals 1
 
     const-string v0, "pref_qjpg_key"
+
+    invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public qpink()I
+    .locals 1
+
+    const-string v0, "pref_qpink_key"
 
     invoke-virtual {p0, v0}, Lbhn;->MenuValue(Ljava/lang/String;)I
 

@@ -11,7 +11,7 @@
 
     const-string v1, "camera.enable_imax"
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     invoke-direct {v0, v1, v2}, Lble;-><init>(Ljava/lang/String;Z)V
 

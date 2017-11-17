@@ -609,7 +609,7 @@
 
     if-eqz v0, :cond_0
 
-    const-wide/high16 v0, 0x3fe0000000000000L    # 0.5
+    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
     :goto_0
     return-wide v0

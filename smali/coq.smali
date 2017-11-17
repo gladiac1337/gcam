@@ -1211,7 +1211,7 @@
 
     iget-object v5, v5, Lcpb;->B:Lbhn;
 
-    invoke-virtual {v5}, Lbhn;->blp()I
+    invoke-virtual {v5}, Lbhn;->qpink()I
 
     move-result v5
 
@@ -1989,7 +1989,7 @@
 
     iget-object v0, v0, Lcpb;->B:Lbhn;
 
-    invoke-virtual {v0}, Lbhn;->blp()I
+    invoke-virtual {v0}, Lbhn;->qpink()I
 
     move-result v0
 

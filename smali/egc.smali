@@ -123,6 +123,14 @@
 
     iget-object v9, v9, Lgzz;->b:Lihk;
 
+    iget-boolean v9, v9, Lihk;->b:Z
+
+    if-nez v9, :cond_0
+
+    iget-object v9, v0, Lbhq;->a:Lgzz;
+
+    iget-object v9, v9, Lgzz;->b:Lihk;
+
     iget-boolean v9, v9, Lihk;->g:Z
 
     if-nez v9, :cond_0
@@ -158,6 +166,14 @@
     iget-object v9, v9, Lgzz;->b:Lihk;
 
     iget-boolean v9, v9, Lihk;->d:Z
+
+    if-nez v9, :cond_1
+
+    iget-object v9, v0, Lbhq;->a:Lgzz;
+
+    iget-object v9, v9, Lgzz;->b:Lihk;
+
+    iget-boolean v9, v9, Lihk;->b:Z
 
     if-nez v9, :cond_1
 
@@ -212,7 +228,7 @@
 
     move v3, v0
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_4
     iget-object v0, p0, Legc;->c:Lbhn;
@@ -235,7 +251,7 @@
 
     move v2, v0
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_5
     iget-object v0, p0, Legc;->c:Lbhn;
@@ -251,6 +267,14 @@
     iget-object v9, v9, Lgzz;->b:Lihk;
 
     iget-boolean v9, v9, Lihk;->d:Z
+
+    if-nez v9, :cond_6
+
+    iget-object v9, v0, Lbhq;->a:Lgzz;
+
+    iget-object v9, v9, Lgzz;->b:Lihk;
+
+    iget-boolean v9, v9, Lihk;->b:Z
 
     if-nez v9, :cond_6
 
@@ -277,7 +301,7 @@
 
     move v1, v0
 
-    goto :goto_2
+    goto/16 :goto_2
 
     :cond_7
     iget-object v0, p0, Legc;->c:Lbhn;
@@ -293,6 +317,14 @@
     iget-object v9, v9, Lgzz;->b:Lihk;
 
     iget-boolean v9, v9, Lihk;->d:Z
+
+    if-nez v9, :cond_8
+
+    iget-object v9, v0, Lbhq;->a:Lgzz;
+
+    iget-object v9, v9, Lgzz;->b:Lihk;
+
+    iget-boolean v9, v9, Lihk;->b:Z
 
     if-nez v9, :cond_8
 
@@ -317,7 +349,7 @@
 
     move-result v0
 
-    goto :goto_3
+    goto/16 :goto_3
 
     :cond_9
     cmpg-float v1, v4, v1
@@ -330,12 +362,12 @@
 
     sget-object v0, Lefy;->d:Lefy;
 
-    goto :goto_4
+    goto/16 :goto_4
 
     :cond_a
     sget-object v0, Lefy;->c:Lefy;
 
-    goto :goto_4
+    goto/16 :goto_4
 
     :cond_b
     cmpl-float v0, v4, v2
@@ -351,10 +383,10 @@
     :cond_c
     sget-object v0, Lefy;->a:Lefy;
 
-    goto :goto_4
+    goto/16 :goto_4
 
     :cond_d
     sget-object v0, Lefy;->c:Lefy;
 
-    goto :goto_4
+    goto/16 :goto_4
 .end method

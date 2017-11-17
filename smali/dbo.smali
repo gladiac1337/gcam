@@ -117,6 +117,16 @@
 
     move-result v1
 
+    iget-object v10, v15, Ldbn;->A:Lbbw;
+
+    invoke-virtual {v10}, Lbbw;->isRFPS()Z
+
+    move-result v10
+
+    if-eqz v10, :cond_0
+
+    const/4 v1, 0x0
+
     :cond_0
     sget-object v2, Ldbn;->a:Ljava/lang/String;
 
@@ -237,8 +247,6 @@
     iget-object v10, v10, Lgzz;->b:Lihk;
 
     iget-boolean v10, v10, Lihk;->f:Z
-
-    const/4 v10, 0x1
 
     if-nez v10, :cond_4
 

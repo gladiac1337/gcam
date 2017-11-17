@@ -11,7 +11,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     new-instance v0, Lble;
 

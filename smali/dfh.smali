@@ -702,6 +702,14 @@
 
     move-result v7
 
+    invoke-virtual {v10}, Lbbw;->isRFPS()Z
+
+    move-result v15
+
+    if-eqz v15, :cond_a
+
+    const/4 v7, 0x0
+
     :cond_a
     const-string v9, "LightCycle-debug"
 

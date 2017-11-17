@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private a:Landroid/hardware/camera2/CameraDevice;
+.field public a:Landroid/hardware/camera2/CameraDevice;
 
 
 # direct methods

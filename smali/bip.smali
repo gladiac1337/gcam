@@ -215,7 +215,7 @@
 
     const-string v1, "camera.optbar.hdr"
 
-    invoke-direct {v0, v1, v2}, Lbku;-><init>(Ljava/lang/String;Z)V
+    invoke-direct {v0, v1, v3}, Lbku;-><init>(Ljava/lang/String;Z)V
 
     sput-object v0, Lbip;->t:Lbku;
 
@@ -237,7 +237,7 @@
 
     const-string v1, "camera.use_photos"
 
-    invoke-virtual {p2}, Lgzz;->c()Z
+    invoke-virtual {p2}, Lgzz;->g()Z
 
     move-result v2
 
@@ -249,7 +249,7 @@
 
     const-string v1, "camera.diet_burst"
 
-    invoke-virtual {p2}, Lgzz;->c()Z
+    invoke-virtual {p2}, Lgzz;->g()Z
 
     move-result v2
 
@@ -292,6 +292,8 @@
     invoke-virtual {v0}, Lbmy;->a()Z
 
     move-result v0
+
+    const/4 v0, 0x1
 
     if-eqz v0, :cond_0
 

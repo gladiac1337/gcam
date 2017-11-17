@@ -97,8 +97,6 @@
 
     iget-boolean v2, v2, Lihk;->g:Z
 
-    const/4 v2, 0x1
-
     if-nez v2, :cond_0
 
     move-object/from16 v0, p0
@@ -118,6 +116,8 @@
     invoke-virtual {v2}, Lgzz;->c()Z
 
     move-result v2
+
+    const/4 v2, 0x1
 
     if-eqz v2, :cond_1
 

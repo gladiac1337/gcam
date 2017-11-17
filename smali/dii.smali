@@ -57,6 +57,8 @@
 
     if-eqz v2, :cond_1
 
+    move v0, v1
+
     :cond_0
     :goto_0
     return v0

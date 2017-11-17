@@ -36,7 +36,7 @@
 
     const-string v1, "pref_mode_vesper_enabled"
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Lgsl;->a(Ljava/lang/String;Z)Liau;
 

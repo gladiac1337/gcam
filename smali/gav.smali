@@ -75,6 +75,14 @@
 
     if-nez v0, :cond_1
 
+    iget-object v0, p0, Lgav;->f:Lgzz;
+
+    iget-object v0, v0, Lgzz;->b:Lihk;
+
+    iget-boolean v0, v0, Lihk;->f:Z
+
+    if-nez v0, :cond_1
+
     const-string v0, "GyroCaptureInitializer"
 
     const-string v1, "One of several gyro sensor properties is null. No gyro available for microvideo"
@@ -298,6 +306,8 @@
     iget-object v0, v0, Lgzz;->c:Lihj;
 
     iget-boolean v0, v0, Lihj;->e:Z
+
+    const/4 v0, 0x1
 
     if-nez v0, :cond_0
 

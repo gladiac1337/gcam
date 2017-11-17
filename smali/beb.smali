@@ -376,10 +376,34 @@
 .end method
 
 .method public final l()I
-    .locals 1
+    .locals 4
 
     iget v0, p0, Lbeb;->l:I
 
+    const/16 v1, 0x78
+
+    const/16 v2, 0xf0
+
+    if-ne v0, v1, :cond_0
+
+    move v0, v2
+
+    :cond_0
+    const/16 v1, 0x1e
+
+    const/16 v2, 0x3c
+
+    if-ne v1, v0, :cond_1
+
+    iget v3, p0, Lbeb;->k:I
+
+    const v1, 0x870
+
+    if-eq v1, v3, :cond_1
+
+    move v0, v2
+
+    :cond_1
     return v0
 .end method
 
