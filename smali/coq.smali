@@ -1217,17 +1217,46 @@
 
     const/4 v4, 0x0
 
+    if-eq v5, v4, :cond_2
+
+    iget-object v5, p0, Lcoq;->b:Lcpb;
+
+    iget-object v5, v5, Lcpb;->B:Lbhn;
+
+    invoke-virtual {v5}, Lbhn;->ims()I
+
+    move-result v5
+
+    const/4 v4, 0x2
+
+    if-eq v5, v4, :cond_1
+
+    const/4 v4, 0x3
+
     if-eq v5, v4, :cond_1
 
     move v5, p4
 
-    invoke-static/range {v0 .. v5}, Lcok;->aa(Liic;Lgdq;Lcnx;Ljava/lang/String;ZF)Lcom/google/googlex/gcam/FrameMetadata;
+    const/4 v4, 0x0
+
+    invoke-static/range {v0 .. v5}, Lcok;->ap(Liic;Lgdq;Lcnx;Ljava/lang/String;ZF)Lcom/google/googlex/gcam/FrameMetadata;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_1
+    move v5, p4
+
+    const/4 v4, 0x0
+
+    invoke-static/range {v0 .. v5}, Lcok;->an(Liic;Lgdq;Lcnx;Ljava/lang/String;ZF)Lcom/google/googlex/gcam/FrameMetadata;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_2
     move v5, p4
 
     invoke-static/range {v0 .. v5}, Lcok;->a(Liic;Lgdq;Lcnx;Ljava/lang/String;ZF)Lcom/google/googlex/gcam/FrameMetadata;
@@ -1241,7 +1270,7 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
     new-instance v0, Lcom/google/googlex/gcam/SpatialGainMap;
 
@@ -1292,7 +1321,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     sget-object v0, Lcoq;->a:Ljava/lang/String;
 
@@ -1333,12 +1362,12 @@
     :goto_2
     return-object v2
 
-    :cond_2
+    :cond_3
     iput-object v0, v6, Lcpq;->d:Lcom/google/googlex/gcam/SpatialGainMap;
 
     goto :goto_1
 
-    :cond_3
+    :cond_4
     iget-object v0, v6, Lcpq;->e:Lcom/google/googlex/gcam/AeShotParams;
 
     sget-object v2, Landroid/hardware/camera2/CaptureResult;->CONTROL_AE_REGIONS:Landroid/hardware/camera2/CaptureResult$Key;
@@ -1980,7 +2009,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_e
 
     const/4 v4, 0x1
 
@@ -2017,6 +2046,35 @@
     goto :goto_2
 
     :cond_5
+    iget-object v0, p0, Lcoq;->b:Lcpb;
+
+    iget-object v0, v0, Lcpb;->B:Lbhn;
+
+    invoke-virtual {v0}, Lbhn;->ims()I
+
+    move-result v0
+
+    const/4 v5, 0x0
+
+    if-eq v0, v5, :cond_6
+
+    const/4 v5, 0x1
+
+    if-eq v0, v5, :cond_7
+
+    const/4 v5, 0x2
+
+    if-eq v0, v5, :cond_8
+
+    const/4 v5, 0x3
+
+    if-eq v0, v5, :cond_9
+
+    const/4 v5, 0x4
+
+    if-eq v0, v5, :cond_a
+
+    :cond_6
     invoke-direct {p0}, Lcoq;->c()F
 
     move-result v5
@@ -2025,7 +2083,67 @@
 
     move-object/from16 v6, p6
 
-    invoke-static/range {v0 .. v7}, Lcok;->aa(Liic;Lgdq;Lcnx;Ljava/lang/String;ZF[Landroid/hardware/camera2/params/Face;Lcom/google/googlex/gcam/GyroSampleVector;)Lcom/google/googlex/gcam/FrameMetadata;
+    invoke-static/range {v0 .. v7}, Lcok;->ap(Liic;Lgdq;Lcnx;Ljava/lang/String;ZF[Landroid/hardware/camera2/params/Face;Lcom/google/googlex/gcam/GyroSampleVector;)Lcom/google/googlex/gcam/FrameMetadata;
+
+    move-result-object v1
+
+    goto :goto_2
+
+    :cond_7
+    invoke-direct {p0}, Lcoq;->c()F
+
+    move-result v5
+
+    move-object v0, p3
+
+    move-object/from16 v6, p6
+
+    invoke-static/range {v0 .. v7}, Lcok;->ap(Liic;Lgdq;Lcnx;Ljava/lang/String;ZF[Landroid/hardware/camera2/params/Face;Lcom/google/googlex/gcam/GyroSampleVector;)Lcom/google/googlex/gcam/FrameMetadata;
+
+    move-result-object v1
+
+    goto :goto_2
+
+    :cond_8
+    invoke-direct {p0}, Lcoq;->c()F
+
+    move-result v5
+
+    move-object v0, p3
+
+    move-object/from16 v6, p6
+
+    invoke-static/range {v0 .. v7}, Lcok;->an(Liic;Lgdq;Lcnx;Ljava/lang/String;ZF[Landroid/hardware/camera2/params/Face;Lcom/google/googlex/gcam/GyroSampleVector;)Lcom/google/googlex/gcam/FrameMetadata;
+
+    move-result-object v1
+
+    goto :goto_2
+
+    :cond_9
+    invoke-direct {p0}, Lcoq;->c()F
+
+    move-result v5
+
+    move-object v0, p3
+
+    move-object/from16 v6, p6
+
+    invoke-static/range {v0 .. v7}, Lcok;->an(Liic;Lgdq;Lcnx;Ljava/lang/String;ZF[Landroid/hardware/camera2/params/Face;Lcom/google/googlex/gcam/GyroSampleVector;)Lcom/google/googlex/gcam/FrameMetadata;
+
+    move-result-object v1
+
+    goto :goto_2
+
+    :cond_a
+    invoke-direct {p0}, Lcoq;->c()F
+
+    move-result v5
+
+    move-object v0, p3
+
+    move-object/from16 v6, p6
+
+    invoke-static/range {v0 .. v7}, Lcok;->ap(Liic;Lgdq;Lcnx;Ljava/lang/String;ZF[Landroid/hardware/camera2/params/Face;Lcom/google/googlex/gcam/GyroSampleVector;)Lcom/google/googlex/gcam/FrameMetadata;
 
     move-result-object v1
 
@@ -2036,18 +2154,18 @@
 
     move-result-object v8
 
-    if-nez v8, :cond_6
+    if-nez v8, :cond_b
 
     new-instance v8, Lcom/google/googlex/gcam/SpatialGainMap;
 
     invoke-direct {v8}, Lcom/google/googlex/gcam/SpatialGainMap;-><init>()V
 
-    :cond_6
+    :cond_b
     invoke-direct {p0, p4}, Lcoq;->a(Liil;)Landroid/util/Pair;
 
     move-result-object v4
 
-    if-nez p5, :cond_a
+    if-nez p5, :cond_f
 
     sget-wide v2, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->a:J
 
@@ -2096,7 +2214,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_d
 
     sget-object v0, Lcoq;->a:Ljava/lang/String;
 
@@ -2142,19 +2260,19 @@
 
     invoke-virtual {p1}, Lcpa;->b()Z
 
-    if-eqz p4, :cond_7
+    if-eqz p4, :cond_c
 
     invoke-interface {p4}, Liil;->close()V
 
-    :cond_7
-    if-eqz p5, :cond_8
+    :cond_c
+    if-eqz p5, :cond_d
 
     invoke-interface {p5}, Liil;->close()V
 
-    :cond_8
+    :cond_d
     iget-object v2, p1, Lcpa;->a:Lcps;
 
-    if-nez p4, :cond_c
+    if-nez p4, :cond_11
 
     const-wide/16 v0, -0x1
 
@@ -2175,12 +2293,12 @@
 
     goto/16 :goto_0
 
-    :cond_9
+    :cond_e
     const/4 v4, 0x0
 
     goto/16 :goto_1
 
-    :cond_a
+    :cond_f
     invoke-interface {p5}, Liil;->l_()I
 
     move-result v0
@@ -2223,7 +2341,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_b
+    if-eqz v2, :cond_10
 
     iget-object v2, p0, Lcoq;->b:Lcpb;
 
@@ -2251,7 +2369,7 @@
 
     goto/16 :goto_3
 
-    :cond_b
+    :cond_10
     sget-wide v2, Lcom/google/android/apps/camera/legacy/app/hdrplus/HdrPlusInFlightImages;->a:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -2270,7 +2388,7 @@
 
     goto/16 :goto_3
 
-    :cond_c
+    :cond_11
     invoke-interface {p4}, Liil;->e()J
 
     move-result-wide v0

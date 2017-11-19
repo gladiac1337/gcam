@@ -669,6 +669,10 @@
 
     if-lt v0, v6, :cond_0
 
+    const/4 v6, 0x4
+
+    if-eq v0, v6, :cond_0
+
     const/4 v0, 0x0
 
     goto :goto_0
@@ -736,6 +740,10 @@
     const/4 v6, 0x3
 
     if-lt v0, v6, :cond_2
+
+    const/4 v6, 0x4
+
+    if-eq v0, v6, :cond_2
 
     const/4 v0, 0x0
 
@@ -894,6 +902,10 @@
 
     if-lt v0, v6, :cond_6
 
+    const/4 v6, 0x4
+
+    if-eq v0, v6, :cond_6
+
     const/4 v0, 0x0
 
     goto :goto_3
@@ -948,6 +960,10 @@
     const/4 v6, 0x3
 
     if-lt v0, v6, :cond_8
+
+    const/4 v6, 0x4
+
+    if-eq v0, v6, :cond_8
 
     const/4 v0, 0x0
 
@@ -1031,6 +1047,10 @@
 
     if-lt v0, v6, :cond_b
 
+    const/4 v6, 0x4
+
+    if-eq v0, v6, :cond_b
+
     const/4 v0, 0x0
 
     goto :goto_5
@@ -1081,6 +1101,10 @@
     const/4 v6, 0x3
 
     if-lt v0, v6, :cond_d
+
+    const/4 v6, 0x4
+
+    if-eq v0, v6, :cond_d
 
     const/4 v0, 0x0
 

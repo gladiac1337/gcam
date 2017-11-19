@@ -906,5 +906,7 @@ It is necessary to completely close the application, the changes will take effec
     <string name="pref_qjpg_90">90%</string>
     <string name="mod_settings">B-S-G Mod settings</string>
     <string name="pref_compress_dng_title">Compress RAW(*.DNG)</string>
-    <string name="pref_blp_title">OmniVision module</string>
+    <string name="pref_blp_title">Manual fixed black level offset</string>
+    <string name="pref_input_model_Wall">Pixel 2</string>
+    <string name="pref_all_title_summary_blp">Required for OmniVision module</string>
 </resources>

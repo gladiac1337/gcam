@@ -182,7 +182,7 @@
     goto :goto_1
 
     :cond_2
-    move v0, v2
+    move v0, v1
 
     goto :goto_2
 
@@ -237,11 +237,7 @@
 
     sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
-    const-string v0, "motorola"
-
     sget-object v1, Landroid/os/Build;->DEVICE:Ljava/lang/String;
-
-    const-string v1, "shamu"
 
     sget-object v2, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 

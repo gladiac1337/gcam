@@ -385,12 +385,6 @@
 .method public final g()Z
     .locals 1
 
-    invoke-virtual {p0}, Lgzz;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
     iget-object v0, p0, Lgzz;->c:Lihj;
 
     iget-boolean v0, v0, Lihj;->e:Z

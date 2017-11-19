@@ -2138,40 +2138,6 @@
     invoke-direct {p0, v0}, Leqh;->a(Landroid/preference/PreferenceScreen;)V
 
     :cond_2
-    const-string v0, "pref_launch_help"
-
-    invoke-virtual {p0, v0}, Leqh;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
-
-    move-result-object v0
-
-    new-instance v2, Leqj;
-
-    invoke-direct {v2, v1}, Leqj;-><init>(Landroid/app/Activity;)V
-
-    invoke-virtual {v0, v2}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
-
-    const-string v0, "pref_launch_feedback"
-
-    invoke-virtual {p0, v0}, Leqh;->findPreference(Ljava/lang/CharSequence;)Landroid/preference/Preference;
-
-    move-result-object v0
-
-    new-instance v2, Leqk;
-
-    invoke-direct {v2, v1}, Leqk;-><init>(Landroid/app/Activity;)V
-
-    invoke-virtual {v0, v2}, Landroid/preference/Preference;->setOnPreferenceClickListener(Landroid/preference/Preference$OnPreferenceClickListener;)V
-
-    invoke-virtual {p0}, Leqh;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/preference/PreferenceScreen;->getSharedPreferences()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    invoke-interface {v0, p0}, Landroid/content/SharedPreferences;->registerOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
-
     invoke-virtual {p0}, Leqh;->b()Z
 
     move-result v0

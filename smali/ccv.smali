@@ -667,6 +667,10 @@
 
     if-eq v3, v7, :cond_b
 
+    const/4 v7, 0x4
+
+    if-eq v3, v7, :cond_c
+
     if-gt v3, v7, :cond_8
 
     :cond_1
@@ -1046,6 +1050,15 @@
 
     :cond_b
     invoke-static {v6}, Lcok;->ad(Lgdq;)Lcom/google/googlex/gcam/StaticMetadata;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Lcom/google/googlex/gcam/StaticMetadataVector;->add(Lcom/google/googlex/gcam/StaticMetadata;)V
+
+    goto/16 :goto_1
+
+    :cond_c
+    invoke-static {v6}, Lcok;->ae(Lgdq;)Lcom/google/googlex/gcam/StaticMetadata;
 
     move-result-object v6
 

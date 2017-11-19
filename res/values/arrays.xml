@@ -307,12 +307,14 @@
     <string-array name="pref_input_model_entries">
         <item>@string/pref_input_model_PxlXLTai</item>
         <item>@string/pref_input_model_Tai</item>
+        <item>@string/pref_input_model_Wall</item>
         <item>@string/pref_input_model_N6P</item>
         <item>@string/pref_input_model_N5X</item>
     </string-array>
     <string-array name="pref_input_model_entryvalues">
         <item>0</item>
         <item>1</item>
+        <item>4</item>
         <item>2</item>
         <item>3</item>
     </string-array>

@@ -5,7 +5,7 @@
         <ListPreference android:entries="@array/pref_input_model_entries" android:layout="@layout/preference_with_margin" android:title="@string/pref_input_model_title" android:key="pref_input_model_key" android:summary="@string/pref_all_title_summary" android:defaultValue="@string/pref_input_model_default" android:entryValues="@array/pref_input_model_entryvalues" />
         <ListPreference android:entries="@array/pref_config_camera_entries" android:layout="@layout/preference_with_margin" android:title="@string/pref_config_camera_title" android:key="pref_config_camera_key" android:summary="%s" android:defaultValue="@string/pref_config_camera_default" android:entryValues="@array/pref_config_camera_entryvalues" />
         <ListPreference android:entries="@array/pref_parameters_camera_entries" android:layout="@layout/preference_with_margin" android:title="@string/pref_parameters_camera_title" android:key="pref_parameters_camera_key" android:summary="@string/pref_all_title_summary" android:defaultValue="@string/pref_parameters_camera_default" android:entryValues="@array/pref_parameters_camera_entryvalues" />
-        <com.google.android.apps.camera.legacy.app.settings.ManagedSwitchPreference android:layout="@layout/preference_with_margin" android:title="@string/pref_blp_title" android:key="pref_blp_key" android:defaultValue="false" />
+        <com.google.android.apps.camera.legacy.app.settings.ManagedSwitchPreference android:layout="@layout/preference_with_margin" android:title="@string/pref_blp_title" android:key="pref_blp_key" android:summary="@string/pref_all_title_summary_blp" android:defaultValue="false" />
         <ListPreference android:entries="@array/pref_qjpg_entries" android:layout="@layout/preference_with_margin" android:title="@string/pref_qjpg_title" android:key="pref_qjpg_key" android:summary="%s" android:defaultValue="@string/pref_qjpg_default" android:entryValues="@array/pref_qjpg_entryvalues" />
         <com.google.android.apps.camera.legacy.app.settings.ManagedSwitchPreference android:layout="@layout/preference_with_margin" android:title="@string/pref_compress_dng_title" android:key="pref_compress_dng_key" android:defaultValue="true" />
     </PreferenceCategory>
@@ -38,8 +38,6 @@
         <com.google.android.apps.camera.legacy.app.settings.ManagedSwitchPreference android:layout="@layout/preference_with_margin" android:title="@string/pref_video_stabilization" android:key="pref_video_stabilization_key" android:defaultValue="true" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/setting_google_help_and_feedback" android:key="pref_category_help_and_feedback">
-        <Preference android:layout="@layout/preference_with_margin" android:title="@string/setting_google_feedback" android:key="pref_launch_feedback" />
-        <Preference android:layout="@layout/preference_with_margin" android:title="@string/setting_google_help" android:key="pref_launch_help" />
         <PreferenceScreen android:layout="@layout/preference_with_margin" android:title="@string/pref_developer_settings" android:key="pref_category_developer" />
     </PreferenceCategory>
 </PreferenceScreen>
