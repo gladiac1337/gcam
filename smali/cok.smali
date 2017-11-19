@@ -7847,26 +7847,24 @@
     if-eq v5, v3, :cond_15
 
     :cond_12
-    const/16 v5, 0x41
+    const v5, 0x427f1eb8    # 63.78f
 
     goto :goto_a
 
     :cond_13
-    const/16 v5, 0x40
+    const v5, 0x427f1eb8    # 63.78f
 
     goto :goto_a
 
     :cond_14
-    const/16 v5, 0x41
+    const v5, 0x427f1eb8    # 63.78f
 
     goto :goto_a
 
     :cond_15
-    const/16 v5, 0x40
+    const v5, 0x427f1eb8    # 63.78f
 
     :goto_a
-    int-to-float v5, v5
-
     aput v5, v4, v3
 
     add-int/lit8 v3, v3, 0x1
@@ -8172,8 +8170,6 @@
     const-string v2, "payload_burst_actual_hal3.txt"
 
     goto/16 :goto_c
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -9301,26 +9297,24 @@
     if-eq v5, v3, :cond_15
 
     :cond_12
-    const/16 v5, 0x40
+    const v5, 0x427f3333    # 63.8f
 
     goto :goto_a
 
     :cond_13
-    const/16 v5, 0x40
+    const v5, 0x427f3333    # 63.8f
 
     goto :goto_a
 
     :cond_14
-    const/16 v5, 0x40
+    const v5, 0x427f3333    # 63.8f
 
     goto :goto_a
 
     :cond_15
-    const/16 v5, 0x40
+    const v5, 0x427f3333    # 63.8f
 
     :goto_a
-    int-to-float v5, v5
-
     aput v5, v4, v3
 
     add-int/lit8 v3, v3, 0x1
@@ -9626,8 +9620,6 @@
     const-string v2, "payload_burst_actual_hal3.txt"
 
     goto/16 :goto_c
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0

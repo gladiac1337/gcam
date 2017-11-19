@@ -623,14 +623,6 @@
 
     move-result v0
 
-    iget-object v0, p0, Ldil;->f:Lbiv;
-
-    const-string v3, "EXPERIMENTAL CONFIG: Pixel2016 Tuning"
-
-    const/4 v6, 0x1
-
-    invoke-virtual {v0, v3, v6}, Lbiv;->a(Ljava/lang/String;I)V
-
     sget-object v0, Ldil;->a:Ljava/lang/String;
 
     const-string v3, "Selected nexus2016Tuning OneCamera configuration."
@@ -712,14 +704,6 @@
     invoke-virtual {v0, v6, v7}, Ldig;->a(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
-
-    iget-object v0, p0, Ldil;->f:Lbiv;
-
-    const-string v3, "EXPERIMENTAL CONFIG: Experimental Features (Pixel)"
-
-    const/4 v6, 0x1
-
-    invoke-virtual {v0, v3, v6}, Lbiv;->a(Ljava/lang/String;I)V
 
     sget-object v0, Ldil;->a:Ljava/lang/String;
 
